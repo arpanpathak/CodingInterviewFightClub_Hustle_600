@@ -5,10 +5,10 @@ chapter_number: 7
 chapter_title: "Bit Manipulation"
 toc: true
 prev_chapter:
-  url: "/chapters/06-graphs"
+  url: "/chapters/06-graphs.html"
   title: "Graphs"
 next_chapter:
-  url: "/chapters/08-heaps"
+  url: "/chapters/08-heaps.html"
   title: "Heaps"
 ---
 

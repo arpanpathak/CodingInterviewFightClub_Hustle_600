@@ -5,10 +5,10 @@ chapter_number: 11
 chapter_title: "Backtracking"
 toc: true
 prev_chapter:
-  url: "/chapters/10-string-matching"
+  url: "/chapters/10-string-matching.html"
   title: "String Matching"
 next_chapter:
-  url: "/chapters/12-caches"
+  url: "/chapters/12-caches.html"
   title: "Caches"
 ---
 

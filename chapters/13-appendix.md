@@ -5,7 +5,7 @@ chapter_number: 13
 chapter_title: "Appendix"
 toc: true
 prev_chapter:
-  url: "/chapters/12-caches"
+  url: "/chapters/12-caches.html"
   title: "Caches - LRU, LFU & Memory Management"
 ---
 

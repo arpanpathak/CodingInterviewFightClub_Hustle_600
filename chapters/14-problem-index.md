@@ -5,7 +5,7 @@ chapter_number: 14
 chapter_title: "Master Problem Index"
 toc: true
 prev_chapter:
-  url: "/chapters/13-appendix"
+  url: "/chapters/13-appendix.html"
   title: "Appendix - The Gigachad Toolkit"
 ---
 
@@ -22,19 +22,19 @@ prev_chapter:
 
 | Chapter | Topic | Problems |
 |---------|-------|----------|
-| [01 →](../chapters/01-binary-search) | Binary Search | 21 |
-| [02 →](../chapters/02-dynamic-programming) | Dynamic Programming | 30+ |
-| [03 →](../chapters/03-arrays-two-pointers) | Arrays & Two Pointers | 100+ |
-| [04 →](../chapters/04-linked-lists) | Linked Lists | 18 |
-| [05 →](../chapters/05-trees) | Trees | 45+ |
-| [06 →](../chapters/06-graphs) | Graphs | 18+ |
-| [07 →](../chapters/07-bit-manipulation) | Bit Manipulation | 9 |
-| [08 →](../chapters/08-heaps) | Heaps & Priority Queues | 11 |
-| [09 →](../chapters/09-disjoint-set-union) | Disjoint Set Union | 3 |
-| [10 →](../chapters/10-string-matching) | String Matching | 45+ |
-| [11 →](../chapters/11-backtracking) | Backtracking | 13+ |
-| [12 →](../chapters/12-caches) | Caches | 3 |
-| [A →](../chapters/13-appendix) | Appendix & Toolkit | Reference |
+| [01 →](../chapters/01-binary-search.html) | Binary Search | 21 |
+| [02 →](../chapters/02-dynamic-programming.html) | Dynamic Programming | 30+ |
+| [03 →](../chapters/03-arrays-two-pointers.html) | Arrays & Two Pointers | 100+ |
+| [04 →](../chapters/04-linked-lists.html) | Linked Lists | 18 |
+| [05 →](../chapters/05-trees.html) | Trees | 45+ |
+| [06 →](../chapters/06-graphs.html) | Graphs | 18+ |
+| [07 →](../chapters/07-bit-manipulation.html) | Bit Manipulation | 9 |
+| [08 →](../chapters/08-heaps.html) | Heaps & Priority Queues | 11 |
+| [09 →](../chapters/09-disjoint-set-union.html) | Disjoint Set Union | 3 |
+| [10 →](../chapters/10-string-matching.html) | String Matching | 45+ |
+| [11 →](../chapters/11-backtracking.html) | Backtracking | 13+ |
+| [12 →](../chapters/12-caches.html) | Caches | 3 |
+| [A →](../chapters/13-appendix.html) | Appendix & Toolkit | Reference |
 
 ---
 

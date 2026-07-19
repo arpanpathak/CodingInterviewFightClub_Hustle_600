@@ -17,51 +17,51 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 
 | # | Chapter | Problems | Links |
 |---|---------|----------|-------|
-| [1](./chapters/01-binary-search) | 🔍 **Binary Search** | 21 problems | [Jump →](#1-binary-search) |
-| [2](./chapters/02-dynamic-programming) | 🧠 **Dynamic Programming** | 30+ problems | [Jump →](#2-dynamic-programming) |
-| [3](./chapters/03-arrays-two-pointers) | 📊 **Arrays & Two Pointers** | 100+ problems | [Jump →](#3-arrays--two-pointers) |
-| [4](./chapters/04-linked-lists) | 🔗 **Linked Lists** | 18 problems | [Jump →](#4-linked-lists) |
-| [5](./chapters/05-trees) | 🌳 **Trees** | 49+ problems | [Jump →](#5-trees) |
-| [6](./chapters/06-graphs) | 🕸️ **Graphs** | 25+ problems | [Jump →](#6-graphs) |
-| [7](./chapters/07-bit-manipulation) | 💡 **Bit Manipulation** | 9 problems | [Jump →](#7-bit-manipulation) |
-| [8](./chapters/08-heaps) | 📊 **Heaps & Priority Queues** | 11 problems | [Jump →](#8-heaps) |
-| [9](./chapters/09-disjoint-set-union) | 🔗 **Disjoint Set Union** | 3 problems | [Jump →](#9-disjoint-set-union) |
-| [10](./chapters/10-string-matching) | 🔤 **String Matching** | 56 problems | [Jump →](#10-string-matching) |
-| [11](./chapters/11-backtracking) | 🔙 **Backtracking** | 10 problems | [Jump →](#11-backtracking) |
-| [12](./chapters/12-caches) | 💾 **Caches** | 3 problems | [Jump →](#12-caches) |
-| [A](./chapters/13-appendix) | 📚 **Appendix & Toolkit** | Reference | [Jump →](#13-appendix) |
-| [📍](./chapters/14-problem-index) | 🗺️ **Full Problem Index** | 465+ cataloged | [Jump →](#14-full-problem-index) |
+| [1](./chapters/01-binary-search.html) | 🔍 **Binary Search** | 21 problems | [Jump →](#1-binary-search) |
+| [2](./chapters/02-dynamic-programming.html) | 🧠 **Dynamic Programming** | 30+ problems | [Jump →](#2-dynamic-programming) |
+| [3](./chapters/03-arrays-two-pointers.html) | 📊 **Arrays & Two Pointers** | 100+ problems | [Jump →](#3-arrays--two-pointers) |
+| [4](./chapters/04-linked-lists.html) | 🔗 **Linked Lists** | 18 problems | [Jump →](#4-linked-lists) |
+| [5](./chapters/05-trees.html) | 🌳 **Trees** | 49+ problems | [Jump →](#5-trees) |
+| [6](./chapters/06-graphs.html) | 🕸️ **Graphs** | 25+ problems | [Jump →](#6-graphs) |
+| [7](./chapters/07-bit-manipulation.html) | 💡 **Bit Manipulation** | 9 problems | [Jump →](#7-bit-manipulation) |
+| [8](./chapters/08-heaps.html) | 📊 **Heaps & Priority Queues** | 11 problems | [Jump →](#8-heaps) |
+| [9](./chapters/09-disjoint-set-union.html) | 🔗 **Disjoint Set Union** | 3 problems | [Jump →](#9-disjoint-set-union) |
+| [10](./chapters/10-string-matching.html) | 🔤 **String Matching** | 56 problems | [Jump →](#10-string-matching) |
+| [11](./chapters/11-backtracking.html) | 🔙 **Backtracking** | 10 problems | [Jump →](#11-backtracking) |
+| [12](./chapters/12-caches.html) | 💾 **Caches** | 3 problems | [Jump →](#12-caches) |
+| [A](./chapters/13-appendix.html) | 📚 **Appendix & Toolkit** | Reference | [Jump →](#13-appendix) |
+| [📍](./chapters/14-problem-index.html) | 🗺️ **Full Problem Index** | 465+ cataloged | [Jump →](#14-full-problem-index) |
 
 ---
 
 <details open>
 <summary><h2 style="display:inline">1️⃣ Binary Search</h2></summary>
 
-**Chapter:** [`chapters/01-binary-search`](./chapters/01-binary-search)
+**Chapter:** [`chapters/01-binary-search`](./chapters/01-binary-search.html)
 
 | # | Problem | Difficulty |
 |---|---------|-----------|
-| 1 | [ApartmentHunting](./chapters/01-binary-search#apartmenthunting) | 🟠 Medium |
-| 2 | [CapacityToShipPackageWithinDDays](./chapters/01-binary-search#capacitytoshippackagewithinddays) | 🟠 Medium |
-| 3 | [ClosestSebsequenceSum](./chapters/01-binary-search#closestsebsequencesum) | 🔴 Hard |
-| 4 | [FindFirstAndLastPosition](./chapters/01-binary-search#findfirstandlastposition) | 🟠 Medium |
-| 5 | [FindKClosestElements](./chapters/01-binary-search#findkclosestelements) | 🟠 Medium |
-| 6 | [FindMinimumInRotatedSortedArray](./chapters/01-binary-search#findminimuminrotatedsortedarray) | 🟠 Medium |
-| 7 | [FindPeakElement](./chapters/01-binary-search#findpeakelement) | 🟠 Medium |
-| 8 | [FindPeakElementBetterSolution](./chapters/01-binary-search#findpeakelementbettersolution) | 🟠 Medium |
-| 9 | [FirstBadVersion](./chapters/01-binary-search#firstbadversion) | 🟢 Easy |
-| 10 | [GuessNumberHigherOrLower](./chapters/01-binary-search#guessnumberhigherorlower) | 🟢 Easy |
-| 11 | [HouseRobber_IV](./chapters/01-binary-search#houserobber_iv) | 🟠 Medium |
-| 12 | [KThMissingPositiveNumber](./chapters/01-binary-search#kthmissingpositivenumber) | 🟢 Easy |
-| 13 | [KokoEatingBanana](./chapters/01-binary-search#kokoeatingbanana) | 🟠 Medium |
-| 14 | [MedianOfTwoSortedARrays](./chapters/01-binary-search#medianoftwosortedarrays) | 🔴 Hard |
-| 15 | [RandomPickWithWeight](./chapters/01-binary-search#randompickwithweight) | 🟠 Medium |
-| 16 | [SearchA2dMatrix](./chapters/01-binary-search#searcha2dmatrix) | 🟠 Medium |
-| 17 | [SearchInRotatedArray_II](./chapters/01-binary-search#searchinrotatedarray_ii) | 🟠 Medium |
-| 18 | [SearchInRotatedSortedArray](./chapters/01-binary-search#searchinrotatedsortedarray) | 🟠 Medium |
-| 19 | [SearchInsertionPosition](./chapters/01-binary-search#searchinsertionposition) | 🟢 Easy |
-| 20 | [SingleElementInASortedArray](./chapters/01-binary-search#singleelementinasortedarray) | 🟠 Medium |
-| 21 | [ValleyElement](./chapters/01-binary-search#valleyelement) | 🟢 Easy |
+| 1 | [ApartmentHunting](./chapters/01-binary-search.html#apartmenthunting) | <span class="badge badge-medium">Medium</span> |
+| 2 | [CapacityToShipPackageWithinDDays](./chapters/01-binary-search.html#capacitytoshippackagewithinddays) | <span class="badge badge-medium">Medium</span> |
+| 3 | [ClosestSebsequenceSum](./chapters/01-binary-search.html#closestsebsequencesum) | <span class="badge badge-hard">Hard</span> |
+| 4 | [FindFirstAndLastPosition](./chapters/01-binary-search.html#findfirstandlastposition) | <span class="badge badge-medium">Medium</span> |
+| 5 | [FindKClosestElements](./chapters/01-binary-search.html#findkclosestelements) | <span class="badge badge-medium">Medium</span> |
+| 6 | [FindMinimumInRotatedSortedArray](./chapters/01-binary-search.html#findminimuminrotatedsortedarray) | <span class="badge badge-medium">Medium</span> |
+| 7 | [FindPeakElement](./chapters/01-binary-search.html#findpeakelement) | <span class="badge badge-medium">Medium</span> |
+| 8 | [FindPeakElementBetterSolution](./chapters/01-binary-search.html#findpeakelementbettersolution) | <span class="badge badge-medium">Medium</span> |
+| 9 | [FirstBadVersion](./chapters/01-binary-search.html#firstbadversion) | <span class="badge badge-easy">Easy</span> |
+| 10 | [GuessNumberHigherOrLower](./chapters/01-binary-search.html#guessnumberhigherorlower) | <span class="badge badge-easy">Easy</span> |
+| 11 | [HouseRobber_IV](./chapters/01-binary-search.html#houserobber_iv) | <span class="badge badge-medium">Medium</span> |
+| 12 | [KThMissingPositiveNumber](./chapters/01-binary-search.html#kthmissingpositivenumber) | <span class="badge badge-easy">Easy</span> |
+| 13 | [KokoEatingBanana](./chapters/01-binary-search.html#kokoeatingbanana) | <span class="badge badge-medium">Medium</span> |
+| 14 | [MedianOfTwoSortedARrays](./chapters/01-binary-search.html#medianoftwosortedarrays) | <span class="badge badge-hard">Hard</span> |
+| 15 | [RandomPickWithWeight](./chapters/01-binary-search.html#randompickwithweight) | <span class="badge badge-medium">Medium</span> |
+| 16 | [SearchA2dMatrix](./chapters/01-binary-search.html#searcha2dmatrix) | <span class="badge badge-medium">Medium</span> |
+| 17 | [SearchInRotatedArray_II](./chapters/01-binary-search.html#searchinrotatedarray_ii) | <span class="badge badge-medium">Medium</span> |
+| 18 | [SearchInRotatedSortedArray](./chapters/01-binary-search.html#searchinrotatedsortedarray) | <span class="badge badge-medium">Medium</span> |
+| 19 | [SearchInsertionPosition](./chapters/01-binary-search.html#searchinsertionposition) | <span class="badge badge-easy">Easy</span> |
+| 20 | [SingleElementInASortedArray](./chapters/01-binary-search.html#singleelementinasortedarray) | <span class="badge badge-medium">Medium</span> |
+| 21 | [ValleyElement](./chapters/01-binary-search.html#valleyelement) | <span class="badge badge-easy">Easy</span> |
 
 </details>
 
@@ -70,23 +70,23 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">2️⃣ Dynamic Programming</h2></summary>
 
-**Chapter:** [`chapters/02-dynamic-programming`](./chapters/02-dynamic-programming)
+**Chapter:** [`chapters/02-dynamic-programming`](./chapters/02-dynamic-programming.html)
 
 | # | Problem | Sub-topic | Difficulty |
 |---|---------|-----------|-----------|
-| 1 | [ClosestSubsequenceSum](./chapters/02-dynamic-programming#closestsubsequencesum) | General DP | 🔴 Hard |
-| 2 | [MaximumProductSubarray](./chapters/02-dynamic-programming#maximumproductsubarray) | Array DP | 🟠 Medium |
-| 3 | [MaximumProfitInJobScheduling](./chapters/02-dynamic-programming#maximumprofitinjobscheduling) | Interval DP | 🔴 Hard |
-| 4 | [PartitionEqualSubsetSum](./chapters/02-dynamic-programming#partitionequalsubsetsum) | Subset DP | 🟠 Medium |
-| 5 | [SuperEggDropping](./chapters/02-dynamic-programming#supereggdropping) | Math DP | 🔴 Hard |
-| 6 | [HouseRobber](./chapters/02-dynamic-programming#houserobber) | Array DP | 🟠 Medium |
-| 7 | [HouseRobber_II](./chapters/02-dynamic-programming#houserobber_ii) | Array DP | 🟠 Medium |
-| 8 | [CoinChange](./chapters/02-dynamic-programming#coinchange) | Unbounded Knapsack | 🟠 Medium |
-| 9 | [CoinChange_II](./chapters/02-dynamic-programming#coinchange_ii) | Unbounded Knapsack | 🟠 Medium |
-| 10 | [BurstBaloons](./chapters/02-dynamic-programming#burstbaloons) | Interval DP | 🔴 Hard |
+| 1 | [ClosestSubsequenceSum](./chapters/02-dynamic-programming.html#closestsubsequencesum) | General DP | <span class="badge badge-hard">Hard</span> |
+| 2 | [MaximumProductSubarray](./chapters/02-dynamic-programming.html#maximumproductsubarray) | Array DP | <span class="badge badge-medium">Medium</span> |
+| 3 | [MaximumProfitInJobScheduling](./chapters/02-dynamic-programming.html#maximumprofitinjobscheduling) | Interval DP | <span class="badge badge-hard">Hard</span> |
+| 4 | [PartitionEqualSubsetSum](./chapters/02-dynamic-programming.html#partitionequalsubsetsum) | Subset DP | <span class="badge badge-medium">Medium</span> |
+| 5 | [SuperEggDropping](./chapters/02-dynamic-programming.html#supereggdropping) | Math DP | <span class="badge badge-hard">Hard</span> |
+| 6 | [HouseRobber](./chapters/02-dynamic-programming.html#houserobber) | Array DP | <span class="badge badge-medium">Medium</span> |
+| 7 | [HouseRobber_II](./chapters/02-dynamic-programming.html#houserobber_ii) | Array DP | <span class="badge badge-medium">Medium</span> |
+| 8 | [CoinChange](./chapters/02-dynamic-programming.html#coinchange) | Unbounded Knapsack | <span class="badge badge-medium">Medium</span> |
+| 9 | [CoinChange_II](./chapters/02-dynamic-programming.html#coinchange_ii) | Unbounded Knapsack | <span class="badge badge-medium">Medium</span> |
+| 10 | [BurstBaloons](./chapters/02-dynamic-programming.html#burstbaloons) | Interval DP | <span class="badge badge-hard">Hard</span> |
 | 11+ | *And many more...* | | |
 
-**➡️ [Full chapter →](./chapters/02-dynamic-programming)**
+**➡️ [Full chapter →](./chapters/02-dynamic-programming.html)**
 
 </details>
 
@@ -95,32 +95,32 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">3️⃣ Arrays & Two Pointers</h2></summary>
 
-**Chapter:** [`chapters/03-arrays-two-pointers`](./chapters/03-arrays-two-pointers)
+**Chapter:** [`chapters/03-arrays-two-pointers`](./chapters/03-arrays-two-pointers.html)
 
 | # | Problem | Sub-topic | Difficulty |
 |---|---------|-----------|-----------|
-| 1 | [PalindromeNumber](./chapters/03-arrays-two-pointers#palindromenumber) | Math | 🟢 Easy |
-| 2 | [InsertDeleteGetRandomAtO1](./chapters/03-arrays-two-pointers#insertdeletegetrandomato1) | Probability | 🟠 Medium |
-| 3 | [LinkedListRandomNode](./chapters/03-arrays-two-pointers#linkedlistrandomnode) | Probability | 🟠 Medium |
-| 4 | [ReservoirSampling](./chapters/03-arrays-two-pointers#reservoirsampling) | Probability | 🟠 Medium |
-| 5 | [DiagonalTraverse](./chapters/03-arrays-two-pointers#diagonaltraverse) | Matrix | 🟠 Medium |
-| 6 | [DiagonalTraverse_II](./chapters/03-arrays-two-pointers#diagonaltraverse_ii) | Matrix | 🟠 Medium |
-| 7 | [MergeIntervals](./chapters/03-arrays-two-pointers#mergeintervals) | Intervals | 🟠 Medium |
-| 8 | [MergeSortedArray](./chapters/03-arrays-two-pointers#mergesortedarray) | Two Pointers | 🟢 Easy |
-| 9 | [MissingRanges](./chapters/03-arrays-two-pointers#missingranges) | Array | 🟢 Easy |
-| 10 | [MoveZeroes](./chapters/03-arrays-two-pointers#movezeroes) | Two Pointers | 🟢 Easy |
-| 11 | [RemoveElement](./chapters/03-arrays-two-pointers#removeelement) | Two Pointers | 🟢 Easy |
-| 12 | [RotateImage](./chapters/03-arrays-two-pointers#rotateimage) | Matrix | 🟠 Medium |
-| 13 | [SearchA2dMatrix_II](./chapters/03-arrays-two-pointers#searcha2dmatrix_ii) | Matrix | 🟠 Medium |
-| 14 | [ShortestPathInBinaryMatrix](./chapters/03-arrays-two-pointers#shortestpathinbinarymatrix) | Matrix BFS | 🟠 Medium |
-| 15 | [SignOfTheProductOfAnArray](./chapters/03-arrays-two-pointers#signoftheproductofanarray) | Array | 🟢 Easy |
-| 16 | [SpiralMatrix](./chapters/03-arrays-two-pointers#spiralmatrix) | Matrix | 🟠 Medium |
-| 17 | [SpiralMatrix_II](./chapters/03-arrays-two-pointers#spiralmatrix_ii) | Matrix | 🟠 Medium |
-| 18 | [ToeplitzMatrix](./chapters/03-arrays-two-pointers#toeplitzmatrix) | Matrix | 🟢 Easy |
-| 19 | [TransposeMatrix](./chapters/03-arrays-two-pointers#transposematrix) | Matrix | 🟢 Easy |
-| 20 | [NestedListWeightedSum](./chapters/03-arrays-two-pointers#nestedlistweightedsum) | DFS | 🟠 Medium |
+| 1 | [PalindromeNumber](./chapters/03-arrays-two-pointers.html#palindromenumber) | Math | <span class="badge badge-easy">Easy</span> |
+| 2 | [InsertDeleteGetRandomAtO1](./chapters/03-arrays-two-pointers.html#insertdeletegetrandomato1) | Probability | <span class="badge badge-medium">Medium</span> |
+| 3 | [LinkedListRandomNode](./chapters/03-arrays-two-pointers.html#linkedlistrandomnode) | Probability | <span class="badge badge-medium">Medium</span> |
+| 4 | [ReservoirSampling](./chapters/03-arrays-two-pointers.html#reservoirsampling) | Probability | <span class="badge badge-medium">Medium</span> |
+| 5 | [DiagonalTraverse](./chapters/03-arrays-two-pointers.html#diagonaltraverse) | Matrix | <span class="badge badge-medium">Medium</span> |
+| 6 | [DiagonalTraverse_II](./chapters/03-arrays-two-pointers.html#diagonaltraverse_ii) | Matrix | <span class="badge badge-medium">Medium</span> |
+| 7 | [MergeIntervals](./chapters/03-arrays-two-pointers.html#mergeintervals) | Intervals | <span class="badge badge-medium">Medium</span> |
+| 8 | [MergeSortedArray](./chapters/03-arrays-two-pointers.html#mergesortedarray) | Two Pointers | <span class="badge badge-easy">Easy</span> |
+| 9 | [MissingRanges](./chapters/03-arrays-two-pointers.html#missingranges) | Array | <span class="badge badge-easy">Easy</span> |
+| 10 | [MoveZeroes](./chapters/03-arrays-two-pointers.html#movezeroes) | Two Pointers | <span class="badge badge-easy">Easy</span> |
+| 11 | [RemoveElement](./chapters/03-arrays-two-pointers.html#removeelement) | Two Pointers | <span class="badge badge-easy">Easy</span> |
+| 12 | [RotateImage](./chapters/03-arrays-two-pointers.html#rotateimage) | Matrix | <span class="badge badge-medium">Medium</span> |
+| 13 | [SearchA2dMatrix_II](./chapters/03-arrays-two-pointers.html#searcha2dmatrix_ii) | Matrix | <span class="badge badge-medium">Medium</span> |
+| 14 | [ShortestPathInBinaryMatrix](./chapters/03-arrays-two-pointers.html#shortestpathinbinarymatrix) | Matrix BFS | <span class="badge badge-medium">Medium</span> |
+| 15 | [SignOfTheProductOfAnArray](./chapters/03-arrays-two-pointers.html#signoftheproductofanarray) | Array | <span class="badge badge-easy">Easy</span> |
+| 16 | [SpiralMatrix](./chapters/03-arrays-two-pointers.html#spiralmatrix) | Matrix | <span class="badge badge-medium">Medium</span> |
+| 17 | [SpiralMatrix_II](./chapters/03-arrays-two-pointers.html#spiralmatrix_ii) | Matrix | <span class="badge badge-medium">Medium</span> |
+| 18 | [ToeplitzMatrix](./chapters/03-arrays-two-pointers.html#toeplitzmatrix) | Matrix | <span class="badge badge-easy">Easy</span> |
+| 19 | [TransposeMatrix](./chapters/03-arrays-two-pointers.html#transposematrix) | Matrix | <span class="badge badge-easy">Easy</span> |
+| 20 | [NestedListWeightedSum](./chapters/03-arrays-two-pointers.html#nestedlistweightedsum) | DFS | <span class="badge badge-medium">Medium</span> |
 
-**➡️ [Full chapter →](./chapters/03-arrays-two-pointers)**
+**➡️ [Full chapter →](./chapters/03-arrays-two-pointers.html)**
 
 </details>
 
@@ -129,27 +129,27 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">4️⃣ Linked Lists</h2></summary>
 
-**Chapter:** [`chapters/04-linked-lists`](./chapters/04-linked-lists)
+**Chapter:** [`chapters/04-linked-lists`](./chapters/04-linked-lists.html)
 
 | # | Problem | Difficulty |
 |---|---------|-----------|
-| 1 | [AddTwoNumbers](./chapters/04-linked-lists#addtwonumbers) | 🟠 Medium |
-| 2 | [CopyLinkedListWithRandomPointer](./chapters/04-linked-lists#copylinkedlistwithrandompointer) | 🟠 Medium |
-| 3 | [DeleteMiddleNodeOfLinkedList](./chapters/04-linked-lists#deletemiddlenodeoflinkedlist) | 🟠 Medium |
-| 4 | [InsertIntoASortedCircularLinkedList](./chapters/04-linked-lists#insertintoasortedcircularlinkedlist) | 🟠 Medium |
-| 5 | [IntersectionOfTwoLinkedList](./chapters/04-linked-lists#intersectionoftwolinkedlist) | 🟢 Easy |
-| 6 | [LinkedListCycle](./chapters/04-linked-lists#linkedlistcycle) | 🟢 Easy |
-| 7 | [LinkedListCycle_II](./chapters/04-linked-lists#linkedlistcycle_ii) | 🟠 Medium |
-| 8 | [MergeKSortedList](./chapters/04-linked-lists#mergeksortedlist) | 🔴 Hard |
-| 9 | [MergeTwoSortedLIst](./chapters/04-linked-lists#mergetwosortedlist) | 🟢 Easy |
-| 10 | [OddEvenLinkedList](./chapters/04-linked-lists#oddevenlinkedlist) | 🟠 Medium |
-| 11 | [PalindromeLinkedList](./chapters/04-linked-lists#palindromelinkedlist) | 🟢 Easy |
-| 12 | [RemoveNthNodeFromEndOfList](./chapters/04-linked-lists#removenthnodefromendoflist) | 🟠 Medium |
-| 13 | [ReverseLinkedList](./chapters/04-linked-lists#reverselinkedlist) | 🟢 Easy |
-| 14 | [ReverseNodesInKGroups](./chapters/04-linked-lists#reversenodesinkgroups) | 🔴 Hard |
+| 1 | [AddTwoNumbers](./chapters/04-linked-lists.html#addtwonumbers) | <span class="badge badge-medium">Medium</span> |
+| 2 | [CopyLinkedListWithRandomPointer](./chapters/04-linked-lists.html#copylinkedlistwithrandompointer) | <span class="badge badge-medium">Medium</span> |
+| 3 | [DeleteMiddleNodeOfLinkedList](./chapters/04-linked-lists.html#deletemiddlenodeoflinkedlist) | <span class="badge badge-medium">Medium</span> |
+| 4 | [InsertIntoASortedCircularLinkedList](./chapters/04-linked-lists.html#insertintoasortedcircularlinkedlist) | <span class="badge badge-medium">Medium</span> |
+| 5 | [IntersectionOfTwoLinkedList](./chapters/04-linked-lists.html#intersectionoftwolinkedlist) | <span class="badge badge-easy">Easy</span> |
+| 6 | [LinkedListCycle](./chapters/04-linked-lists.html#linkedlistcycle) | <span class="badge badge-easy">Easy</span> |
+| 7 | [LinkedListCycle_II](./chapters/04-linked-lists.html#linkedlistcycle_ii) | <span class="badge badge-medium">Medium</span> |
+| 8 | [MergeKSortedList](./chapters/04-linked-lists.html#mergeksortedlist) | <span class="badge badge-hard">Hard</span> |
+| 9 | [MergeTwoSortedLIst](./chapters/04-linked-lists.html#mergetwosortedlist) | <span class="badge badge-easy">Easy</span> |
+| 10 | [OddEvenLinkedList](./chapters/04-linked-lists.html#oddevenlinkedlist) | <span class="badge badge-medium">Medium</span> |
+| 11 | [PalindromeLinkedList](./chapters/04-linked-lists.html#palindromelinkedlist) | <span class="badge badge-easy">Easy</span> |
+| 12 | [RemoveNthNodeFromEndOfList](./chapters/04-linked-lists.html#removenthnodefromendoflist) | <span class="badge badge-medium">Medium</span> |
+| 13 | [ReverseLinkedList](./chapters/04-linked-lists.html#reverselinkedlist) | <span class="badge badge-easy">Easy</span> |
+| 14 | [ReverseNodesInKGroups](./chapters/04-linked-lists.html#reversenodesinkgroups) | <span class="badge badge-hard">Hard</span> |
 | 15+ | *And more...* | |
 
-**➡️ [Full chapter →](./chapters/04-linked-lists)**
+**➡️ [Full chapter →](./chapters/04-linked-lists.html)**
 
 </details>
 
@@ -158,29 +158,29 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">5️⃣ Trees</h2></summary>
 
-**Chapter:** [`chapters/05-trees`](./chapters/05-trees)
+**Chapter:** [`chapters/05-trees`](./chapters/05-trees.html)
 
 | # | Problem | Sub-topic | Difficulty |
 |---|---------|-----------|-----------|
-| 1 | [AllNodesDistanceKinBinaryTree](./chapters/05-trees#allnodesdistancekinbinarytree) | General | 🟠 Medium |
-| 2 | [BalancedBinaryTree](./chapters/05-trees#balancedbinarytree) | General | 🟢 Easy |
-| 3 | [BinaryTreeInOrderTraversalIterative](./chapters/05-trees#binarytreeinordertraversaliterative) | General | 🟠 Medium |
-| 4 | [BinaryTreeLevelOrderTraversal](./chapters/05-trees#binarytreelevelordertraversal) | BFS | 🟠 Medium |
-| 5 | [BinaryTreeMaximumPathSum](./chapters/05-trees#binarytreemaximumpathsum) | General | 🔴 Hard |
-| 6 | [BinaryTreeRightSideView](./chapters/05-trees#binarytreerightsideview) | General | 🟠 Medium |
-| 7 | [BinaryTreeVerticalOrderTraversal](./chapters/05-trees#binarytreeverticalordertraversal) | BFS | 🟠 Medium |
-| 8 | [BinaryTreeZigZagLevelOrderTraversal](./chapters/05-trees#binarytreezigzaglevelordertraversal) | BFS | 🟠 Medium |
-| 9 | [BoundaryOfBinaryTree](./chapters/05-trees#boundaryofbinarytree) | General | 🟠 Medium |
-| 10 | [ConstructBinaryTreeFromPreorderAndInOrderTraversal](./chapters/05-trees#constructbinarytreefrompreorderandinordertraversal) | General | 🟠 Medium |
-| 11 | [CountGoodNodeInBInaryTree](./chapters/05-trees#countgoodnodeinbinarytree) | General | 🟠 Medium |
-| 12 | [LowestCommonAncestor](./chapters/05-trees#lowestcommonancestor) | General | 🟠 Medium |
-| 13 | [MaximumDepthOfBinaryTree](./chapters/05-trees#maximumdepthofbinarytree) | General | 🟢 Easy |
-| 14 | [PathSum](./chapters/05-trees#pathsum) | General | 🟢 Easy |
-| 15 | [SerializeAndDeserializeABinaryTree](./chapters/05-trees#serializeanddeserializeabinarytree) | General | 🔴 Hard |
+| 1 | [AllNodesDistanceKinBinaryTree](./chapters/05-trees.html#allnodesdistancekinbinarytree) | General | <span class="badge badge-medium">Medium</span> |
+| 2 | [BalancedBinaryTree](./chapters/05-trees.html#balancedbinarytree) | General | <span class="badge badge-easy">Easy</span> |
+| 3 | [BinaryTreeInOrderTraversalIterative](./chapters/05-trees.html#binarytreeinordertraversaliterative) | General | <span class="badge badge-medium">Medium</span> |
+| 4 | [BinaryTreeLevelOrderTraversal](./chapters/05-trees.html#binarytreelevelordertraversal) | BFS | <span class="badge badge-medium">Medium</span> |
+| 5 | [BinaryTreeMaximumPathSum](./chapters/05-trees.html#binarytreemaximumpathsum) | General | <span class="badge badge-hard">Hard</span> |
+| 6 | [BinaryTreeRightSideView](./chapters/05-trees.html#binarytreerightsideview) | General | <span class="badge badge-medium">Medium</span> |
+| 7 | [BinaryTreeVerticalOrderTraversal](./chapters/05-trees.html#binarytreeverticalordertraversal) | BFS | <span class="badge badge-medium">Medium</span> |
+| 8 | [BinaryTreeZigZagLevelOrderTraversal](./chapters/05-trees.html#binarytreezigzaglevelordertraversal) | BFS | <span class="badge badge-medium">Medium</span> |
+| 9 | [BoundaryOfBinaryTree](./chapters/05-trees.html#boundaryofbinarytree) | General | <span class="badge badge-medium">Medium</span> |
+| 10 | [ConstructBinaryTreeFromPreorderAndInOrderTraversal](./chapters/05-trees.html#constructbinarytreefrompreorderandinordertraversal) | General | <span class="badge badge-medium">Medium</span> |
+| 11 | [CountGoodNodeInBInaryTree](./chapters/05-trees.html#countgoodnodeinbinarytree) | General | <span class="badge badge-medium">Medium</span> |
+| 12 | [LowestCommonAncestor](./chapters/05-trees.html#lowestcommonancestor) | General | <span class="badge badge-medium">Medium</span> |
+| 13 | [MaximumDepthOfBinaryTree](./chapters/05-trees.html#maximumdepthofbinarytree) | General | <span class="badge badge-easy">Easy</span> |
+| 14 | [PathSum](./chapters/05-trees.html#pathsum) | General | <span class="badge badge-easy">Easy</span> |
+| 15 | [SerializeAndDeserializeABinaryTree](./chapters/05-trees.html#serializeanddeserializeabinarytree) | General | <span class="badge badge-hard">Hard</span> |
 | 16 | *BST: BSTIterator, ClosestBSTValue, InorderSuccessor...* | BST | varies |
 | 17+ | *And many more (49+ total)...* | | |
 
-**➡️ [Full chapter →](./chapters/05-trees)**
+**➡️ [Full chapter →](./chapters/05-trees.html)**
 
 </details>
 
@@ -189,22 +189,22 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">6️⃣ Graphs</h2></summary>
 
-**Chapter:** [`chapters/06-graphs`](./chapters/06-graphs)
+**Chapter:** [`chapters/06-graphs`](./chapters/06-graphs.html)
 
 | # | Problem | Sub-topic | Difficulty |
 |---|---------|-----------|-----------|
-| 1 | [BusRoutes](./chapters/06-graphs#busroutes) | BFS | 🔴 Hard |
-| 2 | [CloneGraph](./chapters/06-graphs#clonegraph) | DFS | 🟠 Medium |
-| 3 | [CourseSchedule](./chapters/06-graphs#courseschedule) | Cycle Detection | 🟠 Medium |
-| 4 | [CourseSchedule_II](./chapters/06-graphs#courseschedule_ii) | Topological Sort | 🠠 Medium |
-| 5 | [AlienDictionary](./chapters/06-graphs#aliendictionary) | Topological Sort | 🔴 Hard |
-| 6 | [WordLadder](./chapters/06-graphs#wordladder) | BFS | 🔴 Hard |
-| 7 | [CriticalConnectionsInANetwork](./chapters/06-graphs#criticalconnectionsinanetwork) | Articulation | 🔴 Hard |
-| 8 | [CheapestFlightsWithinKStops](./chapters/06-graphs#cheapestflightswithinkstops) | Dijkstra | 🠠 Medium |
-| 9 | [FindRedundentConnections](./chapters/06-graphs#findredundentconnections) | Union-Find | 🠠 Medium |
+| 1 | [BusRoutes](./chapters/06-graphs.html#busroutes) | BFS | <span class="badge badge-hard">Hard</span> |
+| 2 | [CloneGraph](./chapters/06-graphs.html#clonegraph) | DFS | <span class="badge badge-medium">Medium</span> |
+| 3 | [CourseSchedule](./chapters/06-graphs.html#courseschedule) | Cycle Detection | <span class="badge badge-medium">Medium</span> |
+| 4 | [CourseSchedule_II](./chapters/06-graphs.html#courseschedule_ii) | Topological Sort | <span class="badge badge-medium">Medium</span> |
+| 5 | [AlienDictionary](./chapters/06-graphs.html#aliendictionary) | Topological Sort | <span class="badge badge-hard">Hard</span> |
+| 6 | [WordLadder](./chapters/06-graphs.html#wordladder) | BFS | <span class="badge badge-hard">Hard</span> |
+| 7 | [CriticalConnectionsInANetwork](./chapters/06-graphs.html#criticalconnectionsinanetwork) | Articulation | <span class="badge badge-hard">Hard</span> |
+| 8 | [CheapestFlightsWithinKStops](./chapters/06-graphs.html#cheapestflightswithinkstops) | Dijkstra | <span class="badge badge-medium">Medium</span> |
+| 9 | [FindRedundentConnections](./chapters/06-graphs.html#findredundentconnections) | Union-Find | <span class="badge badge-medium">Medium</span> |
 | 10+ | *And more...* | | |
 
-**➡️ [Full chapter →](./chapters/06-graphs)**
+**➡️ [Full chapter →](./chapters/06-graphs.html)**
 
 </details>
 
@@ -213,21 +213,21 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">7️⃣ Bit Manipulation</h2></summary>
 
-**Chapter:** [`chapters/07-bit-manipulation`](./chapters/07-bit-manipulation)
+**Chapter:** [`chapters/07-bit-manipulation`](./chapters/07-bit-manipulation.html)
 
 | # | Problem | Difficulty |
 |---|---------|-----------|
-| 1 | [FirstLetterToAppearTwice](./chapters/07-bit-manipulation#firstlettertoappeartwice) | 🟢 Easy |
-| 2 | [LongestNiceSubarray](./chapters/07-bit-manipulation#longestnicesubarray) | 🠠 Medium |
-| 3 | [MaximumXorOfTwoNumsInArray](./chapters/07-bit-manipulation#maximumxoroftwonumsinarray) | 🠠 Medium |
-| 4 | [Number of Steps to Reduce a Number In Binary...](./chapters/07-bit-manipulation#number_of_steps_to_reduceaanumberinbinaryrepresentationtoone) | 🠠 Medium |
-| 5 | [NumberOfOneBits](./chapters/07-bit-manipulation#numberofonebits) | 🟢 Easy |
-| 6 | [ReverseBits](./chapters/07-bit-manipulation#reversebits) | 🟢 Easy |
-| 7 | [SingleNumber](./chapters/07-bit-manipulation#singlenumber) | 🟢 Easy |
-| 8 | [SingleNumber3](./chapters/07-bit-manipulation#singlenumber3) | 🠠 Medium |
-| 9 | [SumOfAllSubsetXorTotal](./chapters/07-bit-manipulation#sumofallsubsetxortotal) | 🟢 Easy |
+| 1 | [FirstLetterToAppearTwice](./chapters/07-bit-manipulation.html#firstlettertoappeartwice) | <span class="badge badge-easy">Easy</span> |
+| 2 | [LongestNiceSubarray](./chapters/07-bit-manipulation.html#longestnicesubarray) | <span class="badge badge-medium">Medium</span> |
+| 3 | [MaximumXorOfTwoNumsInArray](./chapters/07-bit-manipulation.html#maximumxoroftwonumsinarray) | <span class="badge badge-medium">Medium</span> |
+| 4 | [Number of Steps to Reduce a Number In Binary...](./chapters/07-bit-manipulation.html#number_of_steps_to_reduceaanumberinbinaryrepresentationtoone) | <span class="badge badge-medium">Medium</span> |
+| 5 | [NumberOfOneBits](./chapters/07-bit-manipulation.html#numberofonebits) | <span class="badge badge-easy">Easy</span> |
+| 6 | [ReverseBits](./chapters/07-bit-manipulation.html#reversebits) | <span class="badge badge-easy">Easy</span> |
+| 7 | [SingleNumber](./chapters/07-bit-manipulation.html#singlenumber) | <span class="badge badge-easy">Easy</span> |
+| 8 | [SingleNumber3](./chapters/07-bit-manipulation.html#singlenumber3) | <span class="badge badge-medium">Medium</span> |
+| 9 | [SumOfAllSubsetXorTotal](./chapters/07-bit-manipulation.html#sumofallsubsetxortotal) | <span class="badge badge-easy">Easy</span> |
 
-**➡️ [Full chapter →](./chapters/07-bit-manipulation)**
+**➡️ [Full chapter →](./chapters/07-bit-manipulation.html)**
 
 </details>
 
@@ -236,23 +236,23 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">8️⃣ Heaps & Priority Queues</h2></summary>
 
-**Chapter:** [`chapters/08-heaps`](./chapters/08-heaps)
+**Chapter:** [`chapters/08-heaps`](./chapters/08-heaps.html)
 
 | # | Problem | Difficulty |
 |---|---------|-----------|
-| 1 | [DualBalancedHeap](./chapters/08-heaps#dualbalancedheap) | 🔴 Hard |
-| 2 | [FindingMKAverage](./chapters/08-heaps#findingmkaverage) | 🔴 Hard |
-| 3 | [FindKClosestElements](./chapters/08-heaps#findkclosestelements) | 🠠 Medium |
-| 4 | [FindScoreOfAnArrayAfterMarkingAllElements](./chapters/08-heaps#findscoreofanarrayaftermarkingallelements) | 🠠 Medium |
-| 5 | [IPO](./chapters/08-heaps#ipo) | 🔴 Hard |
-| 6 | [LongestHappyString](./chapters/08-heaps#longesthappystring) | 🠠 Medium |
-| 7 | [MedianFromRunningStream](./chapters/08-heaps#medianfromrunningstream) | 🔴 Hard |
-| 8 | [MeetingRoom_III](./chapters/08-heaps#meetingroom_iii) | 🔴 Hard |
-| 9 | [SingleThreadedCPU](./chapters/08-heaps#singlethreadedcpu) | 🠠 Medium |
-| 10 | [SlidingWindowMedian](./chapters/08-heaps#slidingwindowmedian) | 🔴 Hard |
-| 11 | [TopKFrequentElements](./chapters/08-heaps#topkfrequentelements) | 🠠 Medium |
+| 1 | [DualBalancedHeap](./chapters/08-heaps.html#dualbalancedheap) | <span class="badge badge-hard">Hard</span> |
+| 2 | [FindingMKAverage](./chapters/08-heaps.html#findingmkaverage) | <span class="badge badge-hard">Hard</span> |
+| 3 | [FindKClosestElements](./chapters/08-heaps.html#findkclosestelements) | <span class="badge badge-medium">Medium</span> |
+| 4 | [FindScoreOfAnArrayAfterMarkingAllElements](./chapters/08-heaps.html#findscoreofanarrayaftermarkingallelements) | <span class="badge badge-medium">Medium</span> |
+| 5 | [IPO](./chapters/08-heaps.html#ipo) | <span class="badge badge-hard">Hard</span> |
+| 6 | [LongestHappyString](./chapters/08-heaps.html#longesthappystring) | <span class="badge badge-medium">Medium</span> |
+| 7 | [MedianFromRunningStream](./chapters/08-heaps.html#medianfromrunningstream) | <span class="badge badge-hard">Hard</span> |
+| 8 | [MeetingRoom_III](./chapters/08-heaps.html#meetingroom_iii) | <span class="badge badge-hard">Hard</span> |
+| 9 | [SingleThreadedCPU](./chapters/08-heaps.html#singlethreadedcpu) | <span class="badge badge-medium">Medium</span> |
+| 10 | [SlidingWindowMedian](./chapters/08-heaps.html#slidingwindowmedian) | <span class="badge badge-hard">Hard</span> |
+| 11 | [TopKFrequentElements](./chapters/08-heaps.html#topkfrequentelements) | <span class="badge badge-medium">Medium</span> |
 
-**➡️ [Full chapter →](./chapters/08-heaps)**
+**➡️ [Full chapter →](./chapters/08-heaps.html)**
 
 </details>
 
@@ -261,15 +261,15 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">9️⃣ Disjoint Set Union</h2></summary>
 
-**Chapter:** [`chapters/09-disjoint-set-union`](./chapters/09-disjoint-set-union)
+**Chapter:** [`chapters/09-disjoint-set-union`](./chapters/09-disjoint-set-union.html)
 
 | # | Problem | Difficulty |
 |---|---------|-----------|
-| 1 | [AccountMerge](./chapters/09-disjoint-set-union#accountmerge) | 🠠 Medium |
-| 2 | [NumberOfIsland_II](./chapters/09-disjoint-set-union#numberofisland_ii) | 🔴 Hard |
-| 3 | [UnionFind](./chapters/09-disjoint-set-union#unionfind) | 🠠 Medium |
+| 1 | [AccountMerge](./chapters/09-disjoint-set-union.html#accountmerge) | <span class="badge badge-medium">Medium</span> |
+| 2 | [NumberOfIsland_II](./chapters/09-disjoint-set-union.html#numberofisland_ii) | <span class="badge badge-hard">Hard</span> |
+| 3 | [UnionFind](./chapters/09-disjoint-set-union.html#unionfind) | <span class="badge badge-medium">Medium</span> |
 
-**➡️ [Full chapter →](./chapters/09-disjoint-set-union)**
+**➡️ [Full chapter →](./chapters/09-disjoint-set-union.html)**
 
 </details>
 
@@ -278,23 +278,23 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">🔟 String Matching</h2></summary>
 
-**Chapter:** [`chapters/10-string-matching`](./chapters/10-string-matching)
+**Chapter:** [`chapters/10-string-matching`](./chapters/10-string-matching.html)
 
 | # | Problem | Sub-topic | Difficulty |
 |---|---------|-----------|-----------|
-| 1 | [ApplySubstitutions](./chapters/10-string-matching#applysubstitutions) | General | 🠠 Medium |
-| 2 | [CheckifaParenthesesStringCanBeValid](./chapters/10-string-matching#checkifaparenthesesstringcanbevalid) | Stack | 🠠 Medium |
-| 3 | [CountAndSay](./chapters/10-string-matching#countandsay) | General | 🠠 Medium |
-| 4 | [GroupAnagrams](./chapters/10-string-matching#groupanagrams) | Hash Table | 🠠 Medium |
-| 5 | [LongestPalidnromicSubstring](./chapters/10-string-matching#longestpalidnromicsubstring) | General | 🠠 Medium |
-| 6 | [ValidAnagram](./chapters/10-string-matching#validanagram) | Hash Table | 🟢 Easy |
-| 7 | [ValidPalindrome](./chapters/10-string-matching#validpalindrome) | Two Pointers | 🟢 Easy |
-| 8 | [EditDistance](./chapters/10-string-matching#editdistance) | DP | 🠠 Medium |
-| 9 | [LongestCommonSubsequence](./chapters/10-string-matching#longestcommonsubsequence) | DP | 🠠 Medium |
-| 10 | [RegularExpressionMatching](./chapters/10-string-matching#regularexpressionmatching) | DP | 🔴 Hard |
+| 1 | [ApplySubstitutions](./chapters/10-string-matching.html#applysubstitutions) | General | <span class="badge badge-medium">Medium</span> |
+| 2 | [CheckifaParenthesesStringCanBeValid](./chapters/10-string-matching.html#checkifaparenthesesstringcanbevalid) | Stack | <span class="badge badge-medium">Medium</span> |
+| 3 | [CountAndSay](./chapters/10-string-matching.html#countandsay) | General | <span class="badge badge-medium">Medium</span> |
+| 4 | [GroupAnagrams](./chapters/10-string-matching.html#groupanagrams) | Hash Table | <span class="badge badge-medium">Medium</span> |
+| 5 | [LongestPalidnromicSubstring](./chapters/10-string-matching.html#longestpalidnromicsubstring) | General | <span class="badge badge-medium">Medium</span> |
+| 6 | [ValidAnagram](./chapters/10-string-matching.html#validanagram) | Hash Table | <span class="badge badge-easy">Easy</span> |
+| 7 | [ValidPalindrome](./chapters/10-string-matching.html#validpalindrome) | Two Pointers | <span class="badge badge-easy">Easy</span> |
+| 8 | [EditDistance](./chapters/10-string-matching.html#editdistance) | DP | <span class="badge badge-medium">Medium</span> |
+| 9 | [LongestCommonSubsequence](./chapters/10-string-matching.html#longestcommonsubsequence) | DP | <span class="badge badge-medium">Medium</span> |
+| 10 | [RegularExpressionMatching](./chapters/10-string-matching.html#regularexpressionmatching) | DP | <span class="badge badge-hard">Hard</span> |
 | 11+ | *And many more (56 total)...* | | |
 
-**➡️ [Full chapter →](./chapters/10-string-matching)**
+**➡️ [Full chapter →](./chapters/10-string-matching.html)**
 
 </details>
 
@@ -303,22 +303,22 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">1️⃣1️⃣ Backtracking</h2></summary>
 
-**Chapter:** [`chapters/11-backtracking`](./chapters/11-backtracking)
+**Chapter:** [`chapters/11-backtracking`](./chapters/11-backtracking.html)
 
 | # | Problem | Difficulty |
 |---|---------|-----------|
-| 1 | [ExpressionAndAddOperators](./chapters/11-backtracking#expressionandaddoperators) | 🔴 Hard |
-| 2 | [NQueen](./chapters/11-backtracking#nqueen) | 🔴 Hard |
-| 3 | [NQueen_II](./chapters/11-backtracking#nqueen_ii) | 🔴 Hard |
-| 4 | [PalindromePartitioning](./chapters/11-backtracking#palindromepartitioning) | 🠠 Medium |
-| 5 | [PartitionToKEqualSumSubsets](./chapters/11-backtracking#partitiontokequalsumsubsets) | 🠠 Medium |
-| 6 | [RestoreIPAddresses](./chapters/11-backtracking#restoreipaddresses) | 🠠 Medium |
-| 7 | [Strobogrammatic Number II](./chapters/11-backtracking#strobogrammatic_number_ii) | 🠠 Medium |
-| 8 | [SudokuSolver](./chapters/11-backtracking#sudokusolver) | 🔴 Hard |
-| 9 | [Combinations](./chapters/11-backtracking#combinations) | 🠠 Medium |
-| 10 | [Permutations](./chapters/11-backtracking#permutations) | 🠠 Medium |
+| 1 | [ExpressionAndAddOperators](./chapters/11-backtracking.html#expressionandaddoperators) | <span class="badge badge-hard">Hard</span> |
+| 2 | [NQueen](./chapters/11-backtracking.html#nqueen) | <span class="badge badge-hard">Hard</span> |
+| 3 | [NQueen_II](./chapters/11-backtracking.html#nqueen_ii) | <span class="badge badge-hard">Hard</span> |
+| 4 | [PalindromePartitioning](./chapters/11-backtracking.html#palindromepartitioning) | <span class="badge badge-medium">Medium</span> |
+| 5 | [PartitionToKEqualSumSubsets](./chapters/11-backtracking.html#partitiontokequalsumsubsets) | <span class="badge badge-medium">Medium</span> |
+| 6 | [RestoreIPAddresses](./chapters/11-backtracking.html#restoreipaddresses) | <span class="badge badge-medium">Medium</span> |
+| 7 | [Strobogrammatic Number II](./chapters/11-backtracking.html#strobogrammatic_number_ii) | <span class="badge badge-medium">Medium</span> |
+| 8 | [SudokuSolver](./chapters/11-backtracking.html#sudokusolver) | <span class="badge badge-hard">Hard</span> |
+| 9 | [Combinations](./chapters/11-backtracking.html#combinations) | <span class="badge badge-medium">Medium</span> |
+| 10 | [Permutations](./chapters/11-backtracking.html#permutations) | <span class="badge badge-medium">Medium</span> |
 
-**➡️ [Full chapter →](./chapters/11-backtracking)**
+**➡️ [Full chapter →](./chapters/11-backtracking.html)**
 
 </details>
 
@@ -327,15 +327,15 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">1️⃣2️⃣ Caches</h2></summary>
 
-**Chapter:** [`chapters/12-caches`](./chapters/12-caches)
+**Chapter:** [`chapters/12-caches`](./chapters/12-caches.html)
 
 | # | Problem | Difficulty |
 |---|---------|-----------|
-| 1 | [LFUCache](./chapters/12-caches#lfucache) | 🔴 Hard |
-| 2 | [LRUCache](./chapters/12-caches#lrucache) | 🠠 Medium |
-| 3 | [LRUCacheLinkedList](./chapters/12-caches#lrucachelinkedlist) | 🠠 Medium |
+| 1 | [LFUCache](./chapters/12-caches.html#lfucache) | <span class="badge badge-hard">Hard</span> |
+| 2 | [LRUCache](./chapters/12-caches.html#lrucache) | <span class="badge badge-medium">Medium</span> |
+| 3 | [LRUCacheLinkedList](./chapters/12-caches.html#lrucachelinkedlist) | <span class="badge badge-medium">Medium</span> |
 
-**➡️ [Full chapter →](./chapters/12-caches)**
+**➡️ [Full chapter →](./chapters/12-caches.html)**
 
 </details>
 
@@ -344,11 +344,11 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 <details>
 <summary><h2 style="display:inline">1️⃣3️⃣ Appendix</h2></summary>
 
-**Chapter:** [`chapters/13-appendix`](./chapters/13-appendix)
+**Chapter:** [`chapters/13-appendix`](./chapters/13-appendix.html)
 
 The Gigachad Toolkit — narratives, system design, math essentials, and more.
 
-**➡️ [Full chapter →](./chapters/13-appendix)**
+**➡️ [Full chapter →](./chapters/13-appendix.html)**
 
 </details>
 
@@ -357,11 +357,11 @@ The Gigachad Toolkit — narratives, system design, math essentials, and more.
 <details>
 <summary><h2 style="display:inline">1️⃣4️⃣ Full Problem Index</h2></summary>
 
-**Chapter:** [`chapters/14-problem-index`](./chapters/14-problem-index)
+**Chapter:** [`chapters/14-problem-index`](./chapters/14-problem-index.html)
 
 Complete catalog of all 465+ problems organized by sub-topic with source file references. Every problem indexed with its original repository location.
 
-**➡️ [Full chapter →](./chapters/14-problem-index)**
+**➡️ [Full chapter →](./chapters/14-problem-index.html)**
 
 </details>
 
@@ -397,4 +397,4 @@ This book is designed with **you** in mind. Whether you navigate ADHD, Autism, P
 
 ---
 
-[📖 Start Reading →](./chapters/01-binary-search) · [🗺️ Full Index →](./chapters/14-problem-index)
+[📖 Start Reading →](./chapters/01-binary-search.html) · [🗺️ Full Index →](./chapters/14-problem-index.html)

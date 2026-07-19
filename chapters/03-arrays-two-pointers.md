@@ -5,10 +5,10 @@ chapter_number: 3
 chapter_title: "Arrays & Two Pointers"
 toc: true
 prev_chapter:
-  url: "/chapters/02-dynamic-programming"
+  url: "/chapters/02-dynamic-programming.html"
   title: "Dynamic Programming"
 next_chapter:
-  url: "/chapters/04-linked-lists"
+  url: "/chapters/04-linked-lists.html"
   title: "Linked Lists"
 ---
 

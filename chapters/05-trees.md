@@ -5,10 +5,10 @@ chapter_number: 5
 chapter_title: "Trees"
 toc: true
 prev_chapter:
-  url: "/chapters/04-linked-lists"
+  url: "/chapters/04-linked-lists.html"
   title: "Linked Lists"
 next_chapter:
-  url: "/chapters/06-graphs"
+  url: "/chapters/06-graphs.html"
   title: "Graphs"
 ---
 

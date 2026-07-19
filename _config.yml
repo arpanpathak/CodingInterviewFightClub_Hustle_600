@@ -1,26 +1,18 @@
 # Coding Interview Fight Club - Book
 # GitHub Pages Configuration
-title: "🥊 Coding Interview Fight Club"
+title: "Coding Interview Fight Club"
 description: "The complete guide to dominating technical interviews at top-tier companies. From poverty to TC - one algorithm at a time. Covers 465+ problems across 14 chapters in 5 languages."
 url: "https://arpanpathak.github.io"
 baseurl: "/CodingInterviewFightClub_Hustle_600"
 markdown: kramdown
 highlighter: rouge
-permalink: pretty
 
-# Night Owl Theme — custom CSS, no remote theme
+# Night Owl Theme — custom CSS
 plugins:
   - jemoji
 
 # Custom settings
 show_downloads: false
-show_back_to_top: true
-
-# Collections
-collections:
-  chapters:
-    output: true
-    permalink: /:name/
 
 defaults:
   - scope:
@@ -31,4 +23,3 @@ defaults:
       path: "chapters"
     values:
       layout: "chapter"
-      has_children: true

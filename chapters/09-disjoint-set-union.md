@@ -5,10 +5,10 @@ chapter_number: 9
 chapter_title: "Disjoint Set Union"
 toc: true
 prev_chapter:
-  url: "/chapters/08-heaps"
+  url: "/chapters/08-heaps.html"
   title: "Heaps"
 next_chapter:
-  url: "/chapters/10-string-matching"
+  url: "/chapters/10-string-matching.html"
   title: "String Matching"
 ---
 

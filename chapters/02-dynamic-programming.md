@@ -5,10 +5,10 @@ chapter_number: 2
 chapter_title: "Dynamic Programming"
 toc: true
 prev_chapter:
-  url: "/chapters/01-binary-search"
+  url: "/chapters/01-binary-search.html"
   title: "Binary Search"
 next_chapter:
-  url: "/chapters/03-arrays-two-pointers"
+  url: "/chapters/03-arrays-two-pointers.html"
   title: "Arrays & Two Pointers"
 ---
 

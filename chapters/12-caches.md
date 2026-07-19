@@ -5,7 +5,7 @@ chapter_number: 12
 chapter_title: "Caches"
 toc: true
 prev_chapter:
-  url: "/chapters/11-backtracking"
+  url: "/chapters/11-backtracking.html"
   title: "Backtracking"
 ---
 

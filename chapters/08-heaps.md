@@ -5,10 +5,10 @@ chapter_number: 8
 chapter_title: "Heaps"
 toc: true
 prev_chapter:
-  url: "/chapters/07-bit-manipulation"
+  url: "/chapters/07-bit-manipulation.html"
   title: "Bit Manipulation"
 next_chapter:
-  url: "/chapters/09-disjoint-set-union"
+  url: "/chapters/09-disjoint-set-union.html"
   title: "Disjoint Set Union"
 ---
 

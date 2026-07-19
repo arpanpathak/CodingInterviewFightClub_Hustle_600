@@ -5,10 +5,10 @@ chapter_number: 4
 chapter_title: "Linked Lists"
 toc: true
 prev_chapter:
-  url: "/chapters/03-arrays-two-pointers"
+  url: "/chapters/03-arrays-two-pointers.html"
   title: "Arrays & Two Pointers"
 next_chapter:
-  url: "/chapters/05-trees"
+  url: "/chapters/05-trees.html"
   title: "Trees"
 ---
 

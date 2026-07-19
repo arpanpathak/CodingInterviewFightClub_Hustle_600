@@ -5,7 +5,7 @@ chapter_number: 1
 chapter_title: "Binary Search"
 toc: true
 next_chapter:
-  url: "/chapters/02-dynamic-programming"
+  url: "/chapters/02-dynamic-programming.html"
   title: "Dynamic Programming"
 ---
 
