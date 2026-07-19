@@ -3,42 +3,6 @@ package heap
 import java.util.*
 
 class LongestHappyString {
-    /**
-    * Solves the Longest Happy String problem.
-    * Takes `a` (integer), `b` (integer), `c` (integer).
-    *
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @param c The integer parameter representing c.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Longest Happy String problem.
-    * Takes `a` (integer), `b` (integer), `c` (integer).
-    *
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @param c The integer parameter representing c.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Longest Happy String problem.
-    * Takes `a` (integer), `b` (integer), `c` (integer).
-    *
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @param c The integer parameter representing c.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Longest Happy String problem.
-    * Takes `a` (integer), `b` (integer), `c` (integer).
-    *
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @param c The integer parameter representing c.
-    * @return The resulting string.
-    */
     fun longestDiverseString(a: Int, b: Int, c: Int): String {
         // Use a priority queue to always get the character with highest remaining count
         val pq = PriorityQueue<Pair<Char, Int>> { p1, p2 -> p2.second - p1.second }

@@ -5,34 +5,6 @@ class OnlineStockSpan {
 
     private val stack = mutableListOf<Stock>()
 
-    /**
-    * Solves the Online Stock Span problem.
-    * Takes `price` (integer).
-    *
-    * @param price The integer parameter representing price.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Online Stock Span problem.
-    * Takes `price` (integer).
-    *
-    * @param price The integer parameter representing price.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Online Stock Span problem.
-    * Takes `price` (integer).
-    *
-    * @param price The integer parameter representing price.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Online Stock Span problem.
-    * Takes `price` (integer).
-    *
-    * @param price The integer parameter representing price.
-    * @return The computed integer result.
-    */
     fun next(price: Int): Int {
         var spanDays = 1
 

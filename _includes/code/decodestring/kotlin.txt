@@ -3,34 +3,6 @@ package string.stack
 class DecodeString {
     private var index = 0
 
-    /**
-    * Solves the Decode String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Decode String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Decode String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Decode String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
     fun decodeString(s: String): String {
         val result = StringBuilder()
 
@@ -61,56 +33,8 @@ class DecodeString {
     }
 
     // Short code
-    /**
-    * Solves the Decode String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Decode String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Decode String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Decode String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
     fun decodeString1(s: String): String {
         var index = 0
-        /**
-        * Solves the Decode String problem.
-        *
-        * @return The resulting string.
-        */
-        /**
-        * Solves the Decode String problem.
-        *
-        * @return The resulting string.
-        */
-        /**
-        * Solves the Decode String problem.
-        *
-        * @return The resulting string.
-        */
-        /**
-        * Solves the Decode String problem.
-        *
-        * @return The resulting string.
-        */
         fun decode(): String {
             val result = StringBuilder()
             var num = 0

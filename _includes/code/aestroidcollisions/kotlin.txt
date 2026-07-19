@@ -1,34 +1,6 @@
 package stack
 
 class AestroidCollisions {
-    /**
-    * Solves the Aestroid Collisions problem.
-    * Takes `asteroids` (array of integers).
-    *
-    * @param asteroids The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Aestroid Collisions problem.
-    * Takes `asteroids` (array of integers).
-    *
-    * @param asteroids The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Aestroid Collisions problem.
-    * Takes `asteroids` (array of integers).
-    *
-    * @param asteroids The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Aestroid Collisions problem.
-    * Takes `asteroids` (array of integers).
-    *
-    * @param asteroids The input array of integers.
-    * @return The computed integer result.
-    */
     fun asteroidCollision(asteroids: IntArray): IntArray {
         val stack = mutableListOf<Int>()
 

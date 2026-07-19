@@ -1,38 +1,6 @@
 package array.dp
 
 class SplitArrayLargestSum {
-    /**
-    * Solves the Split Array Largest Sum problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Split Array Largest Sum problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Split Array Largest Sum problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Split Array Largest Sum problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
     fun splitArray(nums: IntArray, k: Int): Int {
         val n = nums.size
         val prefixSum = IntArray(n + 1)
@@ -42,38 +10,6 @@ class SplitArrayLargestSum {
 
         val memo = mutableMapOf<Pair<Int, Int>, Int>()
 
-        /**
-        * Solves the Split Array Largest Sum problem.
-        * Takes `i` (integer), `splitsLeft` (integer).
-        *
-        * @param i The integer parameter representing i.
-        * @param splitsLeft The integer parameter representing splitsLeft.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Split Array Largest Sum problem.
-        * Takes `i` (integer), `splitsLeft` (integer).
-        *
-        * @param i The integer parameter representing i.
-        * @param splitsLeft The integer parameter representing splitsLeft.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Split Array Largest Sum problem.
-        * Takes `i` (integer), `splitsLeft` (integer).
-        *
-        * @param i The integer parameter representing i.
-        * @param splitsLeft The integer parameter representing splitsLeft.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Split Array Largest Sum problem.
-        * Takes `i` (integer), `splitsLeft` (integer).
-        *
-        * @param i The integer parameter representing i.
-        * @param splitsLeft The integer parameter representing splitsLeft.
-        * @return The computed integer result.
-        */
         fun dfs(i: Int, splitsLeft: Int): Int {
             if (splitsLeft == 1) return prefixSum[n] - prefixSum[i] // Last split takes remaining sum
             if (i == n) return Int.MAX_VALUE

@@ -1,37 +1,5 @@
 package binarysearch
 
-/**
-* Solves the apartmenthunting problem.
-* Takes `blocks` (List<Map<String), `requirements` (list of strings).
-*
-* @param blocks The input List<Map<String.
-* @param requirements The input list of strings.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blocks` (List<Map<String), `requirements` (list of strings).
-*
-* @param blocks The input List<Map<String.
-* @param requirements The input list of strings.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blocks` (List<Map<String), `requirements` (list of strings).
-*
-* @param blocks The input List<Map<String.
-* @param requirements The input list of strings.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blocks` (List<Map<String), `requirements` (list of strings).
-*
-* @param blocks The input List<Map<String.
-* @param requirements The input list of strings.
-* @return The computed integer result.
-*/
 fun findBestBlock(blocks: List<Map<String, Boolean>>, requirements: List<String>): Int {
     // Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
     val amenityMap = mutableMapOf<String, MutableList<Int>>()
@@ -69,38 +37,6 @@ fun findBestBlock(blocks: List<Map<String, Boolean>>, requirements: List<String>
 }
 
 // Function to find the minimum distance to the closest block with the given amenity
-/**
-* Solves the apartmenthunting problem.
-* Takes `blockIndex` (integer), `blocksWithAmenity` (list of integers).
-*
-* @param blockIndex The integer parameter representing blockIndex.
-* @param blocksWithAmenity The input list of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blockIndex` (integer), `blocksWithAmenity` (list of integers).
-*
-* @param blockIndex The integer parameter representing blockIndex.
-* @param blocksWithAmenity The input list of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blockIndex` (integer), `blocksWithAmenity` (list of integers).
-*
-* @param blockIndex The integer parameter representing blockIndex.
-* @param blocksWithAmenity The input list of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blockIndex` (integer), `blocksWithAmenity` (list of integers).
-*
-* @param blockIndex The integer parameter representing blockIndex.
-* @param blocksWithAmenity The input list of integers.
-* @return The computed integer result.
-*/
 fun closestDistance(blockIndex: Int, blocksWithAmenity: List<Int>): Int {
     val pos = blocksWithAmenity.binarySearch(blockIndex)
     return if (pos >= 0) 0
@@ -113,38 +49,6 @@ fun closestDistance(blockIndex: Int, blocksWithAmenity: List<Int>): Int {
 }
 
 // Custom Binary Search implementation
-/**
-* Solves the apartmenthunting problem.
-* Takes `arr` (list of integers), `target` (integer).
-*
-* @param arr The input list of integers.
-* @param target The integer parameter representing target.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `arr` (list of integers), `target` (integer).
-*
-* @param arr The input list of integers.
-* @param target The integer parameter representing target.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `arr` (list of integers), `target` (integer).
-*
-* @param arr The input list of integers.
-* @param target The integer parameter representing target.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `arr` (list of integers), `target` (integer).
-*
-* @param arr The input list of integers.
-* @param target The integer parameter representing target.
-* @return The computed integer result.
-*/
 fun binarySearch(arr: List<Int>, target: Int): Int {
     var (low, high) = listOf(0, arr.lastIndex)
 
@@ -162,26 +66,6 @@ fun binarySearch(arr: List<Int>, target: Int): Int {
 
 
 
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() {
     val blocks = listOf(
         mapOf("gym" to false, "school" to true, "store" to false),

@@ -1,69 +1,9 @@
 package tree
 
 class SumRootToLeafNumbers {
-    /**
-    * Solves the Sum Root To Leaf Numbers problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Sum Root To Leaf Numbers problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Sum Root To Leaf Numbers problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Sum Root To Leaf Numbers problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
     fun sumNumbers(root: TreeNode?): Int {
         var sum = 0
 
-        /**
-        * Solves the Sum Root To Leaf Numbers problem.
-        * Takes `node` (binary tree node reference), `sumSoFar` (integer).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @param sumSoFar The integer parameter representing sumSoFar.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Sum Root To Leaf Numbers problem.
-        * Takes `node` (binary tree node reference), `sumSoFar` (integer).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @param sumSoFar The integer parameter representing sumSoFar.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Sum Root To Leaf Numbers problem.
-        * Takes `node` (binary tree node reference), `sumSoFar` (integer).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @param sumSoFar The integer parameter representing sumSoFar.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Sum Root To Leaf Numbers problem.
-        * Takes `node` (binary tree node reference), `sumSoFar` (integer).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @param sumSoFar The integer parameter representing sumSoFar.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun dfs(node: TreeNode?, sumSoFar: Int) {
             if (node == null) return
             val newSum = (sumSoFar * 10 + node.`val` )

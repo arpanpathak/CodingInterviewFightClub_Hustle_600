@@ -81,34 +81,6 @@ class ErectTheFence_ConvexHull {
 
     data class Point(val x: Int, val y: Int)
 
-    /**
-    * Solves the Erect The Fence_Convex Hull problem.
-    * Takes `points` (2D matrix of integers).
-    *
-    * @param points The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Erect The Fence_Convex Hull problem.
-    * Takes `points` (2D matrix of integers).
-    *
-    * @param points The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Erect The Fence_Convex Hull problem.
-    * Takes `points` (2D matrix of integers).
-    *
-    * @param points The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Erect The Fence_Convex Hull problem.
-    * Takes `points` (2D matrix of integers).
-    *
-    * @param points The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun outerTrees(points: Array<IntArray>): Array<IntArray> {
         // Convert input to Point objects
         val pointList = points.map { Point(it[0], it[1]) }.toList()
@@ -136,42 +108,6 @@ class ErectTheFence_ConvexHull {
     }
 
     // Helper function to calculate the cross product of three points
-    /**
-    * Solves the Erect The Fence_Convex Hull problem.
-    * Takes `a` (Point), `b` (Point), `c` (Point).
-    *
-    * @param a The Point.
-    * @param b The Point.
-    * @param c The Point.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Erect The Fence_Convex Hull problem.
-    * Takes `a` (Point), `b` (Point), `c` (Point).
-    *
-    * @param a The Point.
-    * @param b The Point.
-    * @param c The Point.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Erect The Fence_Convex Hull problem.
-    * Takes `a` (Point), `b` (Point), `c` (Point).
-    *
-    * @param a The Point.
-    * @param b The Point.
-    * @param c The Point.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Erect The Fence_Convex Hull problem.
-    * Takes `a` (Point), `b` (Point), `c` (Point).
-    *
-    * @param a The Point.
-    * @param b The Point.
-    * @param c The Point.
-    * @return The computed integer result.
-    */
     fun crossProduct(a: Point, b: Point, c: Point): Int {
         return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x)
     }

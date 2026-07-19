@@ -3,42 +3,6 @@ package quicksort
 import kotlin.random.Random
 
 class KThLargestElementInArray {
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `nums` (array of integers), `left` (integer), `right` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param left The integer parameter representing left.
-    * @param right The integer parameter representing right.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `nums` (array of integers), `left` (integer), `right` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param left The integer parameter representing left.
-    * @param right The integer parameter representing right.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `nums` (array of integers), `left` (integer), `right` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param left The integer parameter representing left.
-    * @param right The integer parameter representing right.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `nums` (array of integers), `left` (integer), `right` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param left The integer parameter representing left.
-    * @param right The integer parameter representing right.
-    * @return The computed integer result.
-    */
     fun partition(nums: IntArray, left: Int, right: Int): Int {
         // Randomly select pivot index and swap with the last element
         val pivotIndex = Random.nextInt(left, right + 1)
@@ -57,38 +21,6 @@ class KThLargestElementInArray {
         return i
     }
 
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
     fun findKthLargest(nums: IntArray, k: Int): Int {
         var left = 0
         var right = nums.size - 1
@@ -105,34 +37,6 @@ class KThLargestElementInArray {
         return -1 // If k is out of range of the array, handle accordingly
     }
 
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `arr` (array of integers).
-    *
-    * @param arr The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `arr` (array of integers).
-    *
-    * @param arr The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `arr` (array of integers).
-    *
-    * @param arr The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the KTh Largest Element In Array problem.
-    * Takes `arr` (array of integers).
-    *
-    * @param arr The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun uniqueOccurrences(arr: IntArray): Boolean {
         val map = mutableMapOf<Int, Int>()
 

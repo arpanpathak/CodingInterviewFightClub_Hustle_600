@@ -1,34 +1,6 @@
 package array.dp
 
 class MinimumPathSum {
-    /**
-    * Solves the Minimum Path Sum problem.
-    * Takes `grid` (nullable 2D matrix).
-    *
-    * @param grid The input nullable 2D matrix.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Minimum Path Sum problem.
-    * Takes `grid` (nullable 2D matrix).
-    *
-    * @param grid The input nullable 2D matrix.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Minimum Path Sum problem.
-    * Takes `grid` (nullable 2D matrix).
-    *
-    * @param grid The input nullable 2D matrix.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Minimum Path Sum problem.
-    * Takes `grid` (nullable 2D matrix).
-    *
-    * @param grid The input nullable 2D matrix.
-    * @return The computed integer result.
-    */
     fun minPathSum(grid: Array<IntArray>?): Int {
         if (grid.isNullOrEmpty()) return 0
 

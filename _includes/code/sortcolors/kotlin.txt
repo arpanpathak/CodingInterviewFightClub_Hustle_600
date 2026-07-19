@@ -1,67 +1,7 @@
 package array.sorting
 
 class SortColors {
-    /**
-    * Solves the Sort Colors problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sort Colors problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sort Colors problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sort Colors problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun sortColors(nums: IntArray): Unit {
-        /**
-        * Solves the Sort Colors problem.
-        * Takes `i` (integer), `j` (integer).
-        *
-        * @param i The integer parameter representing i.
-        * @param j The integer parameter representing j.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Sort Colors problem.
-        * Takes `i` (integer), `j` (integer).
-        *
-        * @param i The integer parameter representing i.
-        * @param j The integer parameter representing j.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Sort Colors problem.
-        * Takes `i` (integer), `j` (integer).
-        *
-        * @param i The integer parameter representing i.
-        * @param j The integer parameter representing j.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Sort Colors problem.
-        * Takes `i` (integer), `j` (integer).
-        *
-        * @param i The integer parameter representing i.
-        * @param j The integer parameter representing j.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun swap(i: Int, j: Int) {
             nums[i] = nums[j].also { nums[j] = nums[i] }
         }

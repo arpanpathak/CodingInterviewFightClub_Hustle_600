@@ -8,34 +8,6 @@ class ConsistentHash<T : Node>(
     private val ring: SortedMap<Long, T> = TreeMap()
     private val dataStore: MutableMap<String, MutableMap<String, Any>> = HashMap()
 
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `node` (T).
-    *
-    * @param node The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `node` (T).
-    *
-    * @param node The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `node` (T).
-    *
-    * @param node The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `node` (T).
-    *
-    * @param node The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun addNode(node: T) {
         val primaryHash = node.id.hashCode().toLong()
         ring[primaryHash] = node
@@ -49,34 +21,6 @@ class ConsistentHash<T : Node>(
         dataStore[node.id] = HashMap()
     }
 
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `node` (T).
-    *
-    * @param node The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `node` (T).
-    *
-    * @param node The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `node` (T).
-    *
-    * @param node The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `node` (T).
-    *
-    * @param node The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun removeNode(node: T) {
         ring.entries.removeAll { it.value.id == node.id }
         dataStore.remove(node.id)
@@ -85,105 +29,17 @@ class ConsistentHash<T : Node>(
         println("Warning: Data from ${node.id} is now unavailable!")
     }
 
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string), `value` (Any).
-    *
-    * @param key The input string.
-    * @param value The Any.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string), `value` (Any).
-    *
-    * @param key The input string.
-    * @param value The Any.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string), `value` (Any).
-    *
-    * @param key The input string.
-    * @param value The Any.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string), `value` (Any).
-    *
-    * @param key The input string.
-    * @param value The Any.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun put(key: String, value: Any): Boolean {
         val node = getNode(key) ?: return false
         dataStore[node.id]?.put(key, value)
         return true
     }
 
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The result, or `null` if not found.
-    */
     fun get(key: String): Any? {
         val node = getNode(key) ?: return null
         return dataStore[node.id]?.get(key)
     }
 
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The result, or `null` if not found.
-    */
     fun getNode(key: String): T? {
         if (ring.isEmpty()) return null
         val hash = key.hashCode().toLong()
@@ -191,34 +47,6 @@ class ConsistentHash<T : Node>(
         return if (tailMap.isEmpty()) ring[ring.firstKey()] else ring[tailMap.firstKey()]
     }
 
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The resulting collection (List<T>).
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The resulting collection (List<T>).
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The resulting collection (List<T>).
-    */
-    /**
-    * Solves the Consistent Hash problem.
-    * Takes `key` (string).
-    *
-    * @param key The input string.
-    * @return The resulting collection (List<T>).
-    */
     fun getReplicas(key: String): List<T> {
         if (ring.isEmpty()) return emptyList()
         val hash = key.hashCode().toLong()
@@ -238,26 +66,6 @@ interface Node {
 
 data class Server(override val id: String) : Node
 
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() {
     val ring = ConsistentHash<Server>(replicas = 2)
 

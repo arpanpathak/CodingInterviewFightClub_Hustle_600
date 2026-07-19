@@ -3,34 +3,6 @@ package stock_market.dp
 class BestTimeToBuyAndSellStock {
     // The constraint is we can buy a stock in single day and sell in different day. There is no buyback
     // Stock must be bought once and sold once
-    /**
-    * Solves the Best Time To Buy And Sell Stock problem.
-    * Takes `prices` (array of integers).
-    *
-    * @param prices The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Best Time To Buy And Sell Stock problem.
-    * Takes `prices` (array of integers).
-    *
-    * @param prices The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Best Time To Buy And Sell Stock problem.
-    * Takes `prices` (array of integers).
-    *
-    * @param prices The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Best Time To Buy And Sell Stock problem.
-    * Takes `prices` (array of integers).
-    *
-    * @param prices The input array of integers.
-    * @return The computed integer result.
-    */
     fun maxProfit(prices: IntArray): Int {
         if (prices.isEmpty())
             return 0

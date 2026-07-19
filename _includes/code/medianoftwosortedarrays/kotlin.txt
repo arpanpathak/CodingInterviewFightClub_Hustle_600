@@ -2,38 +2,6 @@ package binarysearch
 
 // These are the challenges that I need to somewhoe solve to get
 class MedianOfTwoSortedARrays {
-    /**
-    * Solves the Median Of Two Sorted ARrays problem.
-    * Takes `nums1` (array of integers), `nums2` (array of integers).
-    *
-    * @param nums1 The input array of integers.
-    * @param nums2 The input array of integers.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the Median Of Two Sorted ARrays problem.
-    * Takes `nums1` (array of integers), `nums2` (array of integers).
-    *
-    * @param nums1 The input array of integers.
-    * @param nums2 The input array of integers.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the Median Of Two Sorted ARrays problem.
-    * Takes `nums1` (array of integers), `nums2` (array of integers).
-    *
-    * @param nums1 The input array of integers.
-    * @param nums2 The input array of integers.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the Median Of Two Sorted ARrays problem.
-    * Takes `nums1` (array of integers), `nums2` (array of integers).
-    *
-    * @param nums1 The input array of integers.
-    * @param nums2 The input array of integers.
-    * @return The computed floating-point result.
-    */
     fun findMedianSortedArrays(nums1: IntArray, nums2: IntArray): Double {
 
         if (nums1.size > nums2.size ) {

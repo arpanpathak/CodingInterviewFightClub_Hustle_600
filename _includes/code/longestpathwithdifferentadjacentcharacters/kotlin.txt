@@ -1,38 +1,6 @@
 package tree
 
 class LongestPathWithDifferentAdjacentCharacters {
-    /**
-    * Solves the Longest Path With Different Adjacent Characters problem.
-    * Takes `parent` (array of integers), `s` (string).
-    *
-    * @param parent The input array of integers.
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Path With Different Adjacent Characters problem.
-    * Takes `parent` (array of integers), `s` (string).
-    *
-    * @param parent The input array of integers.
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Path With Different Adjacent Characters problem.
-    * Takes `parent` (array of integers), `s` (string).
-    *
-    * @param parent The input array of integers.
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Path With Different Adjacent Characters problem.
-    * Takes `parent` (array of integers), `s` (string).
-    *
-    * @param parent The input array of integers.
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun longestPath(parent: IntArray, s: String): Int {
         val children = Array(parent.size) { mutableListOf<Int>() }
         for (i in 1 until parent.size) {
@@ -41,34 +9,6 @@ class LongestPathWithDifferentAdjacentCharacters {
 
         var maxLength = 1
 
-        /**
-        * Solves the Longest Path With Different Adjacent Characters problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Longest Path With Different Adjacent Characters problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Longest Path With Different Adjacent Characters problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Longest Path With Different Adjacent Characters problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return The computed integer result.
-        */
         fun dfs(node: Int): Int {
             var maxDepth = 1 // At least the node itself
 

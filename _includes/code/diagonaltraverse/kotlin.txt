@@ -6,34 +6,6 @@ class DiagonalTraverse {
         UP, DOWN
     }
 
-    /**
-    * Solves the Diagonal Traverse problem.
-    * Takes `mat` (2D matrix of integers).
-    *
-    * @param mat The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Diagonal Traverse problem.
-    * Takes `mat` (2D matrix of integers).
-    *
-    * @param mat The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Diagonal Traverse problem.
-    * Takes `mat` (2D matrix of integers).
-    *
-    * @param mat The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Diagonal Traverse problem.
-    * Takes `mat` (2D matrix of integers).
-    *
-    * @param mat The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun findDiagonalOrder(mat: Array<IntArray>): IntArray {
         val m = mat.size        // Number of rows in the matrix
         val n = mat[0].size     // Number of columns in the matrix

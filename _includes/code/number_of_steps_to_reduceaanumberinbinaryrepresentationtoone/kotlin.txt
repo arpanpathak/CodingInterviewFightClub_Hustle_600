@@ -1,34 +1,6 @@
 package bitset
 
 class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
-    /**
-    * Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun numSteps(s: String): Int {
         var steps = 0
         var carry = 0

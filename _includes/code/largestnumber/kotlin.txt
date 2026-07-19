@@ -1,34 +1,6 @@
 package sorting
 
 class LargestNumber {
-    /**
-    * Solves the Largest Number problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Largest Number problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Largest Number problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Largest Number problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The resulting string.
-    */
     fun largestNumber(nums: IntArray): String {
         val strNums = nums.map { it.toString() }.toTypedArray()
         strNums.sortWith { a, b -> (b + a).compareTo(a + b) }

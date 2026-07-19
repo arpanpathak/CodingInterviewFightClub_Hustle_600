@@ -1,38 +1,6 @@
 package string.hashtable
 
 class DetermineIfStringsAreClose {
-    /**
-    * Solves the Determine If Strings Are Close problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Determine If Strings Are Close problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Determine If Strings Are Close problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Determine If Strings Are Close problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun closeStrings(word1: String, word2: String): Boolean {
         if (word1.length != word2.length)
             return false

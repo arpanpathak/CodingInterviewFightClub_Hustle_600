@@ -1,69 +1,9 @@
 package string.dynamic_programming
 
 class LongestPalindromicSubsequence {
-    /**
-    * Solves the Longest Palindromic Subsequence problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Palindromic Subsequence problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Palindromic Subsequence problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Palindromic Subsequence problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun longestPalindromeSubseq(s: String): Int {
         val dp = Array(s.length) { IntArray(s.length) }
 
-        /**
-        * Solves the Longest Palindromic Subsequence problem.
-        * Takes `start` (integer), `length` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param length The integer parameter representing length.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Longest Palindromic Subsequence problem.
-        * Takes `start` (integer), `length` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param length The integer parameter representing length.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Longest Palindromic Subsequence problem.
-        * Takes `start` (integer), `length` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param length The integer parameter representing length.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Longest Palindromic Subsequence problem.
-        * Takes `start` (integer), `length` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param length The integer parameter representing length.
-        * @return The computed integer result.
-        */
         fun lps(start: Int, length: Int): Int {
             if (length <= 1) return length
             val end = start + length - 1

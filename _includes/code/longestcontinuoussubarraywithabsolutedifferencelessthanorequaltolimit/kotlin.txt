@@ -1,38 +1,6 @@
 package sliding_window
 
 class LongestContinuousSubarrayWithAbsoluteDifferenceLessThanOrEqualToLimit {
-    /**
-    * Solves the Longest Continuous Subarray With Absolute Difference Less Than Or Equal To Limit problem.
-    * Takes `nums` (array of integers), `limit` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param limit The integer parameter representing limit.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Continuous Subarray With Absolute Difference Less Than Or Equal To Limit problem.
-    * Takes `nums` (array of integers), `limit` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param limit The integer parameter representing limit.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Continuous Subarray With Absolute Difference Less Than Or Equal To Limit problem.
-    * Takes `nums` (array of integers), `limit` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param limit The integer parameter representing limit.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Continuous Subarray With Absolute Difference Less Than Or Equal To Limit problem.
-    * Takes `nums` (array of integers), `limit` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param limit The integer parameter representing limit.
-    * @return The computed integer result.
-    */
     fun longestSubarray(nums: IntArray, limit: Int): Int {
         val maxQueue = ArrayDeque<Int>()
         val minQueue = ArrayDeque<Int>()

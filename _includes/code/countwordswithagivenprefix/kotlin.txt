@@ -1,38 +1,6 @@
 package string
 
 class CountWordsWithAGivenPrefix {
-    /**
-    * Solves the Count Words With AGiven Prefix problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         var count = 0
 

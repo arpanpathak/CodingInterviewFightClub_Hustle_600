@@ -3,42 +3,6 @@ package graph
 import java.util.*
 
 class WordLadder {
-    /**
-    * Solves the Word Ladder problem.
-    * Takes `beginWord` (string), `endWord` (string), `wordList` (list of strings).
-    *
-    * @param beginWord The input string.
-    * @param endWord The input string.
-    * @param wordList The input list of strings.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Word Ladder problem.
-    * Takes `beginWord` (string), `endWord` (string), `wordList` (list of strings).
-    *
-    * @param beginWord The input string.
-    * @param endWord The input string.
-    * @param wordList The input list of strings.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Word Ladder problem.
-    * Takes `beginWord` (string), `endWord` (string), `wordList` (list of strings).
-    *
-    * @param beginWord The input string.
-    * @param endWord The input string.
-    * @param wordList The input list of strings.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Word Ladder problem.
-    * Takes `beginWord` (string), `endWord` (string), `wordList` (list of strings).
-    *
-    * @param beginWord The input string.
-    * @param endWord The input string.
-    * @param wordList The input list of strings.
-    * @return The computed integer result.
-    */
     fun ladderLength(beginWord: String, endWord: String, wordList: List<String>): Int {
         if (endWord !in wordList) return 0 // if end word is not word bank then it's not possible
 

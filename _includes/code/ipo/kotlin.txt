@@ -5,46 +5,6 @@ import java.util.*
 class IPO {
     data class Project(val capital: Int, val profit: Int)
 
-    /**
-    * Solves the IPO problem.
-    * Takes `k` (integer), `w` (integer), `profits` (array of integers), `capital` (array of integers).
-    *
-    * @param k The integer parameter representing k.
-    * @param w The integer parameter representing w.
-    * @param profits The input array of integers.
-    * @param capital The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the IPO problem.
-    * Takes `k` (integer), `w` (integer), `profits` (array of integers), `capital` (array of integers).
-    *
-    * @param k The integer parameter representing k.
-    * @param w The integer parameter representing w.
-    * @param profits The input array of integers.
-    * @param capital The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the IPO problem.
-    * Takes `k` (integer), `w` (integer), `profits` (array of integers), `capital` (array of integers).
-    *
-    * @param k The integer parameter representing k.
-    * @param w The integer parameter representing w.
-    * @param profits The input array of integers.
-    * @param capital The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the IPO problem.
-    * Takes `k` (integer), `w` (integer), `profits` (array of integers), `capital` (array of integers).
-    *
-    * @param k The integer parameter representing k.
-    * @param w The integer parameter representing w.
-    * @param profits The input array of integers.
-    * @param capital The input array of integers.
-    * @return The computed integer result.
-    */
     fun findMaximizedCapital(k: Int, w: Int, profits: IntArray, capital: IntArray): Int {
         val projects = capital.indices
             .map { Project(capital[it], profits[it]) }

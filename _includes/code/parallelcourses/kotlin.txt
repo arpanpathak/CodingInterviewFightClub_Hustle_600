@@ -1,38 +1,6 @@
 package graph.cycle
 
 class ParallelCourses {
-    /**
-    * Solves the Parallel Courses problem.
-    * Takes `n` (integer), `relations` (2D matrix of integers).
-    *
-    * @param n The integer parameter representing n.
-    * @param relations The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Parallel Courses problem.
-    * Takes `n` (integer), `relations` (2D matrix of integers).
-    *
-    * @param n The integer parameter representing n.
-    * @param relations The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Parallel Courses problem.
-    * Takes `n` (integer), `relations` (2D matrix of integers).
-    *
-    * @param n The integer parameter representing n.
-    * @param relations The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Parallel Courses problem.
-    * Takes `n` (integer), `relations` (2D matrix of integers).
-    *
-    * @param n The integer parameter representing n.
-    * @param relations The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun minimumSemesters(n: Int, relations: Array<IntArray>): Int {
         val inDegree = IntArray(n + 1) // One-based index
         val graph = Array(n + 1) { mutableListOf<Int>() }

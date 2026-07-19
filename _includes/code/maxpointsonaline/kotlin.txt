@@ -1,34 +1,6 @@
 package math.geometry
 
 class MaxPointsOnALine {
-    /**
-    * Solves the Max Points On ALine problem.
-    * Takes `points` (2D matrix of integers).
-    *
-    * @param points The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Max Points On ALine problem.
-    * Takes `points` (2D matrix of integers).
-    *
-    * @param points The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Max Points On ALine problem.
-    * Takes `points` (2D matrix of integers).
-    *
-    * @param points The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Max Points On ALine problem.
-    * Takes `points` (2D matrix of integers).
-    *
-    * @param points The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun maxPoints(points: Array<IntArray>): Int {
         if (points.size <= 2) return points.size
 

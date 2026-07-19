@@ -6,26 +6,6 @@ class DualBalancedHeap<T : Comparable<T>> {
     private val minHeap = PriorityQueue<T>() // Min-heap for the larger half
     private val maxHeap = PriorityQueue<T>(compareByDescending { it }) // Max-heap for the smaller half
 
-    /**
-    * Helper: balance heaps.
-    *
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: balance heaps.
-    *
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: balance heaps.
-    *
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: balance heaps.
-    *
-    * @return Unit (no return value, modifies state in-place).
-    */
     private fun balanceHeaps() {
         if (maxHeap.size > minHeap.size + 1) {
             minHeap.add(maxHeap.poll())
@@ -34,34 +14,6 @@ class DualBalancedHeap<T : Comparable<T>> {
         }
     }
 
-    /**
-    * Solves the Dual Balanced Heap problem.
-    * Takes `num` (T).
-    *
-    * @param num The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    * Takes `num` (T).
-    *
-    * @param num The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    * Takes `num` (T).
-    *
-    * @param num The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    * Takes `num` (T).
-    *
-    * @param num The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun add(num: T) {
         if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
             maxHeap.add(num)
@@ -71,34 +23,6 @@ class DualBalancedHeap<T : Comparable<T>> {
         balanceHeaps()
     }
 
-    /**
-    * Solves the Dual Balanced Heap problem.
-    * Takes `num` (T).
-    *
-    * @param num The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    * Takes `num` (T).
-    *
-    * @param num The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    * Takes `num` (T).
-    *
-    * @param num The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    * Takes `num` (T).
-    *
-    * @param num The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun remove(num: T) {
         if (maxHeap.contains(num)) {
             maxHeap.remove(num)
@@ -108,26 +32,6 @@ class DualBalancedHeap<T : Comparable<T>> {
         balanceHeaps()
     }
 
-    /**
-    * Solves the Dual Balanced Heap problem.
-    *
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    *
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    *
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    *
-    * @return The result, or `null` if not found.
-    */
     fun getMedian(): T? {
         return if (maxHeap.size == minHeap.size) {
             // Handling generic types requires a custom approach for averaging or choosing one of the elements.
@@ -138,26 +42,6 @@ class DualBalancedHeap<T : Comparable<T>> {
         }
     }
 
-    /**
-    * Solves the Dual Balanced Heap problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Dual Balanced Heap problem.
-    *
-    * @return The computed integer result.
-    */
     fun size(): Int {
         return maxHeap.size + minHeap.size
     }

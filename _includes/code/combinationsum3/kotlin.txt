@@ -1,88 +1,12 @@
 package array.backtracking
 
 class CombinationSum3 {
-    /**
-    * Solves the Combination Sum3 problem.
-    * Takes `k` (integer), `n` (integer).
-    *
-    * @param k The integer parameter representing k.
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Combination Sum3 problem.
-    * Takes `k` (integer), `n` (integer).
-    *
-    * @param k The integer parameter representing k.
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Combination Sum3 problem.
-    * Takes `k` (integer), `n` (integer).
-    *
-    * @param k The integer parameter representing k.
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Combination Sum3 problem.
-    * Takes `k` (integer), `n` (integer).
-    *
-    * @param k The integer parameter representing k.
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
     fun combinationSum3(k: Int, n: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         dfs(k,n, 1, result)
         return result
     }
 
-    /**
-    * Solves the Combination Sum3 problem.
-    * Takes `k` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf().
-    *
-    * @param k The integer parameter representing k.
-    * @param remaining The integer parameter representing remaining.
-    * @param start The integer parameter representing start.
-    * @param result The input MutableList<List<Int>>.
-    * @param curr The input MutableList<Int> = mutableListOf(.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Combination Sum3 problem.
-    * Takes `k` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf().
-    *
-    * @param k The integer parameter representing k.
-    * @param remaining The integer parameter representing remaining.
-    * @param start The integer parameter representing start.
-    * @param result The input MutableList<List<Int>>.
-    * @param curr The input MutableList<Int> = mutableListOf(.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Combination Sum3 problem.
-    * Takes `k` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf().
-    *
-    * @param k The integer parameter representing k.
-    * @param remaining The integer parameter representing remaining.
-    * @param start The integer parameter representing start.
-    * @param result The input MutableList<List<Int>>.
-    * @param curr The input MutableList<Int> = mutableListOf(.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Combination Sum3 problem.
-    * Takes `k` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf().
-    *
-    * @param k The integer parameter representing k.
-    * @param remaining The integer parameter representing remaining.
-    * @param start The integer parameter representing start.
-    * @param result The input MutableList<List<Int>>.
-    * @param curr The input MutableList<Int> = mutableListOf(.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun dfs(
         k: Int,
         remaining: Int,

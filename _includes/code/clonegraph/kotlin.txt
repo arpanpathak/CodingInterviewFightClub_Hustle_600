@@ -5,34 +5,6 @@ data class Node(val `val`: Int, val neighbors: MutableList<Node?> = mutableListO
 class CloneGraph {
     val map = mutableMapOf<Node, Node>()
 
-    /**
-    * Solves the Node problem.
-    * Takes `node` (Node?).
-    *
-    * @param node The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Node problem.
-    * Takes `node` (Node?).
-    *
-    * @param node The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Node problem.
-    * Takes `node` (Node?).
-    *
-    * @param node The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Node problem.
-    * Takes `node` (Node?).
-    *
-    * @param node The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
     fun cloneGraph(node: Node?): Node? {
 
         if (node == null) return null

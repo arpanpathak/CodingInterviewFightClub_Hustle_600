@@ -1,33 +1,5 @@
 package sliding_window
 
-/**
-* Solves the programmerstring problem.
-* Takes `t` (string).
-*
-* @param t The input string.
-* @return The computed integer result.
-*/
-/**
-* Solves the programmerstring problem.
-* Takes `t` (string).
-*
-* @param t The input string.
-* @return The computed integer result.
-*/
-/**
-* Solves the programmerstring problem.
-* Takes `t` (string).
-*
-* @param t The input string.
-* @return The computed integer result.
-*/
-/**
-* Solves the programmerstring problem.
-* Takes `t` (string).
-*
-* @param t The input string.
-* @return The computed integer result.
-*/
 fun findNonProgrammerStringSections(t: String): Int {
     val targetFreq = "programmer".groupingBy { it }.eachCount()
     val windowFreq = mutableMapOf<Char, Int>()
@@ -71,38 +43,6 @@ fun findNonProgrammerStringSections(t: String): Int {
     return t.length - sum
 }
 
-/**
-* Solves the programmerstring problem.
-* Takes `target` (Map<Char), `window` (Map<Char).
-*
-* @param target The input Map<Char.
-* @param window The input Map<Char.
-* @return `true` if the condition is met, `false` otherwise.
-*/
-/**
-* Solves the programmerstring problem.
-* Takes `target` (Map<Char), `window` (Map<Char).
-*
-* @param target The input Map<Char.
-* @param window The input Map<Char.
-* @return `true` if the condition is met, `false` otherwise.
-*/
-/**
-* Solves the programmerstring problem.
-* Takes `target` (Map<Char), `window` (Map<Char).
-*
-* @param target The input Map<Char.
-* @param window The input Map<Char.
-* @return `true` if the condition is met, `false` otherwise.
-*/
-/**
-* Solves the programmerstring problem.
-* Takes `target` (Map<Char), `window` (Map<Char).
-*
-* @param target The input Map<Char.
-* @param window The input Map<Char.
-* @return `true` if the condition is met, `false` otherwise.
-*/
 fun isMatched(target: Map<Char, Int>, window: Map<Char, Int>): Boolean {
     for ((char, count) in target) {
         if (char !in window.keys || window[char]!! < count) {
@@ -112,26 +52,6 @@ fun isMatched(target: Map<Char, Int>, window: Map<Char, Int>): Boolean {
     return true
 }
 
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() {
     // Test case: expected output 8 (3 + 3 + 2 = 8)
     println(findNonProgrammerStringSections("xyzprogrammexxrabcprogrammermn"))

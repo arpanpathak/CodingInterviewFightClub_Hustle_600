@@ -1,81 +1,9 @@
 package backtracking
 
 class ExpressionAndAddOperatorsOptimized {
-    /**
-    * Solves the Expression And Add Operators Optimized problem.
-    * Takes `num` (string), `target` (integer).
-    *
-    * @param num The input string.
-    * @param target The integer parameter representing target.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Expression And Add Operators Optimized problem.
-    * Takes `num` (string), `target` (integer).
-    *
-    * @param num The input string.
-    * @param target The integer parameter representing target.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Expression And Add Operators Optimized problem.
-    * Takes `num` (string), `target` (integer).
-    *
-    * @param num The input string.
-    * @param target The integer parameter representing target.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Expression And Add Operators Optimized problem.
-    * Takes `num` (string), `target` (integer).
-    *
-    * @param num The input string.
-    * @param target The integer parameter representing target.
-    * @return The resulting collection (list of strings).
-    */
     fun addOperators(num: String, target: Int): List<String> {
         val res = ArrayList<String>()
 
-        /**
-        * Solves the Expression And Add Operators Optimized problem.
-        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input string.
-        * @param sum The long integer parameter representing sum.
-        * @param prev The long integer parameter representing prev.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Expression And Add Operators Optimized problem.
-        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input string.
-        * @param sum The long integer parameter representing sum.
-        * @param prev The long integer parameter representing prev.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Expression And Add Operators Optimized problem.
-        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input string.
-        * @param sum The long integer parameter representing sum.
-        * @param prev The long integer parameter representing prev.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Expression And Add Operators Optimized problem.
-        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input string.
-        * @param sum The long integer parameter representing sum.
-        * @param prev The long integer parameter representing prev.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun partition(start: Int, path: StringBuilder, sum: Long, prev: Long) {
             if (start == num.length) {
                 if (sum == target.toLong()) {

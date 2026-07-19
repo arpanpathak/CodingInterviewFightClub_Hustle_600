@@ -1,34 +1,6 @@
 package array
 
 class MergeIntervals {
-    /**
-    * Solves the Merge Intervals problem.
-    * Takes `intervals` (2D matrix of integers).
-    *
-    * @param intervals The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Merge Intervals problem.
-    * Takes `intervals` (2D matrix of integers).
-    *
-    * @param intervals The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Merge Intervals problem.
-    * Takes `intervals` (2D matrix of integers).
-    *
-    * @param intervals The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Merge Intervals problem.
-    * Takes `intervals` (2D matrix of integers).
-    *
-    * @param intervals The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun merge(intervals: Array<IntArray>): Array<IntArray> {
         // Sort the internals by start
         intervals.sortWith(compareBy { it[0] })

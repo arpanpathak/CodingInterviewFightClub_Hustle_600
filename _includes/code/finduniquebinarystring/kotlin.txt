@@ -2,34 +2,6 @@ package string
 
 // Cantor’s Diagonalization Trick
 class FindUniqueBinaryString {
-    /**
-    * Solves the Find Unique Binary String problem.
-    * Takes `nums` (Array<String>).
-    *
-    * @param nums The input Array<String>.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Find Unique Binary String problem.
-    * Takes `nums` (Array<String>).
-    *
-    * @param nums The input Array<String>.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Find Unique Binary String problem.
-    * Takes `nums` (Array<String>).
-    *
-    * @param nums The input Array<String>.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Find Unique Binary String problem.
-    * Takes `nums` (Array<String>).
-    *
-    * @param nums The input Array<String>.
-    * @return The resulting string.
-    */
     fun findDifferentBinaryString(nums: Array<String>): String {
         val n = nums.size
         val sb = StringBuilder()

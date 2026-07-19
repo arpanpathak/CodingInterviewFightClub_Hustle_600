@@ -1,34 +1,6 @@
 package array.dp
 
 class MinCostClimbingStaris {
-    /**
-    * Solves the Min Cost Climbing Staris problem.
-    * Takes `cost` (array of integers).
-    *
-    * @param cost The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Min Cost Climbing Staris problem.
-    * Takes `cost` (array of integers).
-    *
-    * @param cost The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Min Cost Climbing Staris problem.
-    * Takes `cost` (array of integers).
-    *
-    * @param cost The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Min Cost Climbing Staris problem.
-    * Takes `cost` (array of integers).
-    *
-    * @param cost The input array of integers.
-    * @return The computed integer result.
-    */
     fun minCostClimbingStairs_iterative(cost: IntArray): Int {
         // Handle base cases
         if (cost.size <= 2) return cost.min()
@@ -86,38 +58,6 @@ class MinCostClimbingStaris {
         // We can start from step 0 or step 1, hence we take the minimum of both
         return minOf(minCost(cost, n - 1, memo), minCost(cost, n - 2, memo))
     }
-    /**
-    * Helper: min cost.
-    *
-    * @param cost The input array of integers.
-    * @param i The integer parameter representing i.
-    * @param memo The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: min cost.
-    *
-    * @param cost The input array of integers.
-    * @param i The integer parameter representing i.
-    * @param memo The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: min cost.
-    *
-    * @param cost The input array of integers.
-    * @param i The integer parameter representing i.
-    * @param memo The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: min cost.
-    *
-    * @param cost The input array of integers.
-    * @param i The integer parameter representing i.
-    * @param memo The input array of integers.
-    * @return The computed integer result.
-    */
     private fun minCost(cost: IntArray, i: Int, memo: IntArray): Int {
         // Base cases
         if (i < 0) return 0

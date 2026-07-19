@@ -1,38 +1,6 @@
 package string
 
 class CheckifaParenthesesStringCanBeValid {
-    /**
-    * Solves the Checkifa Parentheses String Can Be Valid problem.
-    * Takes `s` (string), `locked` (string).
-    *
-    * @param s The input string.
-    * @param locked The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Checkifa Parentheses String Can Be Valid problem.
-    * Takes `s` (string), `locked` (string).
-    *
-    * @param s The input string.
-    * @param locked The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Checkifa Parentheses String Can Be Valid problem.
-    * Takes `s` (string), `locked` (string).
-    *
-    * @param s The input string.
-    * @param locked The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Checkifa Parentheses String Can Be Valid problem.
-    * Takes `s` (string), `locked` (string).
-    *
-    * @param s The input string.
-    * @param locked The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun canBeValid(s: String, locked: String): Boolean {
         // Odd number of brackets
         if (s.length % 2 !=0) return false

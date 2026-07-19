@@ -5,26 +5,6 @@ import java.util.PriorityQueue
 data class DateCandidate(val name: String, val compatibilityScore: Int)
 
 
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() {
     val datingQueue = PriorityQueue<DateCandidate>(compareByDescending { it.compatibilityScore })
 

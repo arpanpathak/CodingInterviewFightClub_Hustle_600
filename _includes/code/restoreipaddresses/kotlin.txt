@@ -1,69 +1,9 @@
 package backtracking
 
 class RestoreIPAddresses {
-    /**
-    * Solves the Restore IPAddresses problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Restore IPAddresses problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Restore IPAddresses problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Restore IPAddresses problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting collection (list of strings).
-    */
     fun restoreIpAddresses(s: String): List<String> {
         val result = mutableListOf<String>()
 
-        /**
-        * Solves the Restore IPAddresses problem.
-        * Takes `i` (integer), `path` (MutableList<String>).
-        *
-        * @param i The integer parameter representing i.
-        * @param path The input MutableList<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Restore IPAddresses problem.
-        * Takes `i` (integer), `path` (MutableList<String>).
-        *
-        * @param i The integer parameter representing i.
-        * @param path The input MutableList<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Restore IPAddresses problem.
-        * Takes `i` (integer), `path` (MutableList<String>).
-        *
-        * @param i The integer parameter representing i.
-        * @param path The input MutableList<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Restore IPAddresses problem.
-        * Takes `i` (integer), `path` (MutableList<String>).
-        *
-        * @param i The integer parameter representing i.
-        * @param path The input MutableList<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun dfs(i: Int, path: MutableList<String>) {
             if (path.size == 4) {
                 if (i == s.length) {

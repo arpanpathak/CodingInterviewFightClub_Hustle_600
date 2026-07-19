@@ -1,38 +1,6 @@
 package string
 
 class GreatestCommonDivisorOfStrings {
-    /**
-    * Solves the Greatest Common Divisor Of Strings problem.
-    * Takes `a` (integer), `b` (integer).
-    *
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Greatest Common Divisor Of Strings problem.
-    * Takes `a` (integer), `b` (integer).
-    *
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Greatest Common Divisor Of Strings problem.
-    * Takes `a` (integer), `b` (integer).
-    *
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Greatest Common Divisor Of Strings problem.
-    * Takes `a` (integer), `b` (integer).
-    *
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @return The computed integer result.
-    */
     fun gcd(a: Int, b: Int): Int {
         return when {
             a == b -> a
@@ -41,38 +9,6 @@ class GreatestCommonDivisorOfStrings {
         }
     }
 
-    /**
-    * Solves the Greatest Common Divisor Of Strings problem.
-    * Takes `str1` (string), `str2` (string).
-    *
-    * @param str1 The input string.
-    * @param str2 The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Greatest Common Divisor Of Strings problem.
-    * Takes `str1` (string), `str2` (string).
-    *
-    * @param str1 The input string.
-    * @param str2 The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Greatest Common Divisor Of Strings problem.
-    * Takes `str1` (string), `str2` (string).
-    *
-    * @param str1 The input string.
-    * @param str2 The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Greatest Common Divisor Of Strings problem.
-    * Takes `str1` (string), `str2` (string).
-    *
-    * @param str1 The input string.
-    * @param str2 The input string.
-    * @return The resulting string.
-    */
     fun gcdOfStrings(str1: String, str2: String): String {
         // Dhoyasha Foggy I didn't understand.
         if ((str1 + str2) != (str2 + str1))

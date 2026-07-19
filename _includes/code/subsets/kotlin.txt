@@ -1,67 +1,11 @@
 package array.Combinatorics
 
 class Subsets {
-    /**
-    * Solves the Subsets problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Subsets problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Subsets problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Subsets problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun subsets(nums: IntArray): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         val currentSubset = mutableListOf<Int>()
 
         // Backtracking helper function
-        /**
-        * Solves the Subsets problem.
-        * Takes `start` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Subsets problem.
-        * Takes `start` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Subsets problem.
-        * Takes `start` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Subsets problem.
-        * Takes `start` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun backtrack(start: Int) {
             result.add(ArrayList(currentSubset))  // Add the current subset to the result
 

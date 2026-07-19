@@ -1,38 +1,6 @@
 package array
 
 class RemoveElement {
-    /**
-    * Solves the Remove Element problem.
-    * Takes `nums` (array of integers), ``val`` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param `val` The integer parameter representing `val`.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Remove Element problem.
-    * Takes `nums` (array of integers), ``val`` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param `val` The integer parameter representing `val`.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Remove Element problem.
-    * Takes `nums` (array of integers), ``val`` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param `val` The integer parameter representing `val`.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Remove Element problem.
-    * Takes `nums` (array of integers), ``val`` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param `val` The integer parameter representing `val`.
-    * @return The computed integer result.
-    */
     fun removeElement(nums: IntArray, `val`: Int): Int {
         var i = 0
 

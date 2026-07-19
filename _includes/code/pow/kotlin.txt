@@ -1,71 +1,7 @@
 package math
 
 class pow {
-    /**
-    * Solves the pow problem.
-    * Takes `x` (double-precision floating point), `n` (integer).
-    *
-    * @param x The double-precision floating point parameter representing x.
-    * @param n The integer parameter representing n.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the pow problem.
-    * Takes `x` (double-precision floating point), `n` (integer).
-    *
-    * @param x The double-precision floating point parameter representing x.
-    * @param n The integer parameter representing n.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the pow problem.
-    * Takes `x` (double-precision floating point), `n` (integer).
-    *
-    * @param x The double-precision floating point parameter representing x.
-    * @param n The integer parameter representing n.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the pow problem.
-    * Takes `x` (double-precision floating point), `n` (integer).
-    *
-    * @param x The double-precision floating point parameter representing x.
-    * @param n The integer parameter representing n.
-    * @return The computed floating-point result.
-    */
     fun myPow(x: Double, n: Int): Double {
-        /**
-        * Solves the pow problem.
-        * Takes `x` (double-precision floating point), `n` (long integer).
-        *
-        * @param x The double-precision floating point parameter representing x.
-        * @param n The long integer parameter representing n.
-        * @return The computed floating-point result.
-        */
-        /**
-        * Solves the pow problem.
-        * Takes `x` (double-precision floating point), `n` (long integer).
-        *
-        * @param x The double-precision floating point parameter representing x.
-        * @param n The long integer parameter representing n.
-        * @return The computed floating-point result.
-        */
-        /**
-        * Solves the pow problem.
-        * Takes `x` (double-precision floating point), `n` (long integer).
-        *
-        * @param x The double-precision floating point parameter representing x.
-        * @param n The long integer parameter representing n.
-        * @return The computed floating-point result.
-        */
-        /**
-        * Solves the pow problem.
-        * Takes `x` (double-precision floating point), `n` (long integer).
-        *
-        * @param x The double-precision floating point parameter representing x.
-        * @param n The long integer parameter representing n.
-        * @return The computed floating-point result.
-        */
         fun pow(x: Double, n: Long): Double {
             if (n == 0L) return 1.0
 
@@ -78,38 +14,6 @@ class pow {
         return if (n >=0) pow(x, n.toLong()) else 1 / pow(x, n.toLong())
     }
 
-    /**
-    * Solves the pow problem.
-    * Takes `x` (double-precision floating point), `n` (integer).
-    *
-    * @param x The double-precision floating point parameter representing x.
-    * @param n The integer parameter representing n.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the pow problem.
-    * Takes `x` (double-precision floating point), `n` (integer).
-    *
-    * @param x The double-precision floating point parameter representing x.
-    * @param n The integer parameter representing n.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the pow problem.
-    * Takes `x` (double-precision floating point), `n` (integer).
-    *
-    * @param x The double-precision floating point parameter representing x.
-    * @param n The integer parameter representing n.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the pow problem.
-    * Takes `x` (double-precision floating point), `n` (integer).
-    *
-    * @param x The double-precision floating point parameter representing x.
-    * @param n The integer parameter representing n.
-    * @return The computed floating-point result.
-    */
     fun myPowIterative(x: Double, n: Int): Double {
         var base = x
         var exponent = n.toLong()

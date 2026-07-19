@@ -7,26 +7,6 @@ class SlidingWindowMedian {
     private val maxHeap = PriorityQueue<Double> ( compareBy{-it} ) // Max-heap for the smaller half
     private val delayedRemoval = TreeMap<Double, Int>() // TreeMap to track delayed removals
 
-    /**
-    * Helper: balance heaps.
-    *
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: balance heaps.
-    *
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: balance heaps.
-    *
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: balance heaps.
-    *
-    * @return Unit (no return value, modifies state in-place).
-    */
     private fun balanceHeaps() {
         if (maxHeap.size > minHeap.size + 1) {
             minHeap.add(maxHeap.poll())
@@ -35,30 +15,6 @@ class SlidingWindowMedian {
         }
     }
 
-    /**
-    * Helper: add.
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: add.
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: add.
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: add.
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
     private fun add(num: Int) {
         if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
             maxHeap.add(num.toDouble())
@@ -68,30 +24,6 @@ class SlidingWindowMedian {
         balanceHeaps()
     }
 
-    /**
-    * Helper: remove.
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: remove.
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: remove.
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: remove.
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
     private fun remove(num: Int) {
         if (num <= maxHeap.peek()) {
             maxHeap.remove(num.toDouble())
@@ -101,26 +33,6 @@ class SlidingWindowMedian {
         balanceHeaps()
     }
 
-    /**
-    * Helper: get median.
-    *
-    * @return The computed floating-point result.
-    */
-    /**
-    * Helper: get median.
-    *
-    * @return The computed floating-point result.
-    */
-    /**
-    * Helper: get median.
-    *
-    * @return The computed floating-point result.
-    */
-    /**
-    * Helper: get median.
-    *
-    * @return The computed floating-point result.
-    */
     private fun getMedian(): Double {
         return if (maxHeap.size == minHeap.size) {
             (maxHeap.peek().toDouble() + minHeap.peek().toDouble()) / 2.0
@@ -129,38 +41,6 @@ class SlidingWindowMedian {
         }
     }
 
-    /**
-    * Solves the Sliding Window Median problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the Sliding Window Median problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the Sliding Window Median problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the Sliding Window Median problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed floating-point result.
-    */
     fun medianSlidingWindow(nums: IntArray, k: Int): DoubleArray {
         val result = DoubleArray(nums.size - k + 1)
 

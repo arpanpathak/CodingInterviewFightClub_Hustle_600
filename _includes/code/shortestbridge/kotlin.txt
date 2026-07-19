@@ -1,72 +1,12 @@
 package grid
 
 class ShortestBridge {
-    /**
-    * Solves the Shortest Bridge problem.
-    * Takes `grid` (2D matrix of integers).
-    *
-    * @param grid The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Shortest Bridge problem.
-    * Takes `grid` (2D matrix of integers).
-    *
-    * @param grid The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Shortest Bridge problem.
-    * Takes `grid` (2D matrix of integers).
-    *
-    * @param grid The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Shortest Bridge problem.
-    * Takes `grid` (2D matrix of integers).
-    *
-    * @param grid The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun shortestBridge(grid: Array<IntArray>): Int {
         val directions = listOf(0 to 1, 1 to 0, 0 to -1, -1 to 0)
         val queue = ArrayDeque<Pair<Int, Int>>()
         val n = grid.size
 
         // Helper function to perform DFS
-        /**
-        * Solves the Shortest Bridge problem.
-        * Takes `x` (integer), `y` (integer).
-        *
-        * @param x The integer parameter representing x.
-        * @param y The integer parameter representing y.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Shortest Bridge problem.
-        * Takes `x` (integer), `y` (integer).
-        *
-        * @param x The integer parameter representing x.
-        * @param y The integer parameter representing y.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Shortest Bridge problem.
-        * Takes `x` (integer), `y` (integer).
-        *
-        * @param x The integer parameter representing x.
-        * @param y The integer parameter representing y.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Shortest Bridge problem.
-        * Takes `x` (integer), `y` (integer).
-        *
-        * @param x The integer parameter representing x.
-        * @param y The integer parameter representing y.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun dfs(x: Int, y: Int) {
             if (x !in 0 until n || y !in 0 until n || grid[x][y] != 1) return
             grid[x][y] = 2 // Mark as visited

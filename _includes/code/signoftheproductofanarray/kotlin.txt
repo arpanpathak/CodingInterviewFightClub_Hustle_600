@@ -1,34 +1,6 @@
 package array
 
 class SignOfTheProductOfAnArray {
-    /**
-    * Solves the Sign Of The Product Of An Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Sign Of The Product Of An Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Sign Of The Product Of An Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Sign Of The Product Of An Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun arraySign(nums: IntArray): Int {
         var negativeCount = 0
 

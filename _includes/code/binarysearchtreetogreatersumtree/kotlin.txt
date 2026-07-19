@@ -7,34 +7,6 @@ class TreeNode(var `val`: Int) {
 
 class BinarySearchTreeToGreaterSumTree {
 
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The result, or `null` if not found.
-    */
     fun bstToGst(root: TreeNode?): TreeNode? {
         var sum = 0
 

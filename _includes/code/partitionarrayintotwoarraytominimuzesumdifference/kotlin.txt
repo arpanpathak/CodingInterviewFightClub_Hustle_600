@@ -3,34 +3,6 @@ package array.dp
 import kotlin.math.abs
 
 class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
-    /**
-    * Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun minimumDifference(nums: IntArray): Int {
         val n = nums.size
         val totalSum = nums.sum()
@@ -62,38 +34,6 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
         return minDiff
     }
 
-    /**
-    * Helper: generate subsets by size.
-    *
-    * @param nums The input array of integers.
-    * @param start The integer parameter representing start.
-    * @param end The integer parameter representing end.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: generate subsets by size.
-    *
-    * @param nums The input array of integers.
-    * @param start The integer parameter representing start.
-    * @param end The integer parameter representing end.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: generate subsets by size.
-    *
-    * @param nums The input array of integers.
-    * @param start The integer parameter representing start.
-    * @param end The integer parameter representing end.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: generate subsets by size.
-    *
-    * @param nums The input array of integers.
-    * @param start The integer parameter representing start.
-    * @param end The integer parameter representing end.
-    * @return The computed integer result.
-    */
     private fun generateSubsetsBySize(nums: IntArray, start: Int, end: Int): Array<MutableList<Int>?> {
         val size = end - start
         val subsets = Array<MutableList<Int>?>(size + 1) { mutableListOf() }
@@ -113,34 +53,6 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
         return subsets
     }
 
-    /**
-    * Helper: find closest values.
-    *
-    * @param sortedList The input list of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: find closest values.
-    *
-    * @param sortedList The input list of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: find closest values.
-    *
-    * @param sortedList The input list of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: find closest values.
-    *
-    * @param sortedList The input list of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
     private fun findClosestValues(sortedList: List<Int>, target: Int): List<Int> {
         val index = sortedList.binarySearch(target)
         if (index >= 0) return listOf(sortedList[index])  // Exact match

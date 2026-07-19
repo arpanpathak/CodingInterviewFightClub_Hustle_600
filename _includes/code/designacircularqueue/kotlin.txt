@@ -8,34 +8,6 @@ class DesignACircularQueue {
         private var size = 0
         private val capacity = k
 
-        /**
-        * Solves the Design ACircular Queue problem.
-        * Takes `value` (integer).
-        *
-        * @param value The integer parameter representing value.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        * Takes `value` (integer).
-        *
-        * @param value The integer parameter representing value.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        * Takes `value` (integer).
-        *
-        * @param value The integer parameter representing value.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        * Takes `value` (integer).
-        *
-        * @param value The integer parameter representing value.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
         fun enQueue(value: Int): Boolean {
             if (isFull()) {
                 return false
@@ -46,26 +18,6 @@ class DesignACircularQueue {
             return true
         }
 
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
         fun deQueue(): Boolean {
             if (isEmpty()) {
                 return false
@@ -75,26 +27,6 @@ class DesignACircularQueue {
             return true
         }
 
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return The computed integer result.
-        */
         fun Front(): Int {
             if (isEmpty()) {
                 return -1
@@ -102,26 +34,6 @@ class DesignACircularQueue {
             return queue[front]
         }
 
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return The computed integer result.
-        */
         fun Rear(): Int {
             if (isEmpty()) {
                 return -1
@@ -129,50 +41,10 @@ class DesignACircularQueue {
             return queue[(rear - 1 + capacity) % capacity]
         }
 
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
         fun isEmpty(): Boolean {
             return size == 0
         }
 
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Design ACircular Queue problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
         fun isFull(): Boolean {
             return size == capacity
         }

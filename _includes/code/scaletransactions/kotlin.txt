@@ -3,91 +3,15 @@ import kotlin.system.measureTimeMillis
 import java.util.concurrent.Executors
 
 // Function to simulate the transaction data (subTotal values)
-/**
-* Solves the scaletransactions problem.
-* Takes `numTransactions` (integer).
-*
-* @param numTransactions The integer parameter representing numTransactions.
-* @return The computed floating-point result.
-*/
-/**
-* Solves the scaletransactions problem.
-* Takes `numTransactions` (integer).
-*
-* @param numTransactions The integer parameter representing numTransactions.
-* @return The computed floating-point result.
-*/
-/**
-* Solves the scaletransactions problem.
-* Takes `numTransactions` (integer).
-*
-* @param numTransactions The integer parameter representing numTransactions.
-* @return The computed floating-point result.
-*/
-/**
-* Solves the scaletransactions problem.
-* Takes `numTransactions` (integer).
-*
-* @param numTransactions The integer parameter representing numTransactions.
-* @return The computed floating-point result.
-*/
 fun generateTransactions(numTransactions: Int): List<Double> {
     return List(numTransactions) { Math.random() * 1000 } // Random transactions between 0 to 1000
 }
 
 // Function to process each batch and sum the results
-/**
-* Solves the scaletransactions problem.
-* Takes `transactions` (List<Double>).
-*
-* @param transactions The input List<Double>.
-* @return The computed floating-point result.
-*/
-/**
-* Solves the scaletransactions problem.
-* Takes `transactions` (List<Double>).
-*
-* @param transactions The input List<Double>.
-* @return The computed floating-point result.
-*/
-/**
-* Solves the scaletransactions problem.
-* Takes `transactions` (List<Double>).
-*
-* @param transactions The input List<Double>.
-* @return The computed floating-point result.
-*/
-/**
-* Solves the scaletransactions problem.
-* Takes `transactions` (List<Double>).
-*
-* @param transactions The input List<Double>.
-* @return The computed floating-point result.
-*/
 fun sumTransactions(transactions: List<Double>): Double {
     return transactions.sum()
 }
 
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() {
     val totalTransactions = 100_000_000  // 100 million transactions for large-scale test
     val transactions = generateTransactions(totalTransactions)

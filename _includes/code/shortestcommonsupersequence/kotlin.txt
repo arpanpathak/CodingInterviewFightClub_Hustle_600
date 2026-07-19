@@ -1,38 +1,6 @@
 package string.dynamic_programming
 
 class ShortestCommonSupersequence {
-    /**
-    * Solves the Shortest Common Supersequence problem.
-    * Takes `X` (string), `Y` (string).
-    *
-    * @param X The input string.
-    * @param Y The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Shortest Common Supersequence problem.
-    * Takes `X` (string), `Y` (string).
-    *
-    * @param X The input string.
-    * @param Y The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Shortest Common Supersequence problem.
-    * Takes `X` (string), `Y` (string).
-    *
-    * @param X The input string.
-    * @param Y The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Shortest Common Supersequence problem.
-    * Takes `X` (string), `Y` (string).
-    *
-    * @param X The input string.
-    * @param Y The input string.
-    * @return The resulting string.
-    */
     fun shortestCommonSupersequence(X: String, Y: String): String? {
         val (m, n) = X.length to Y.length
         val dp = Array(m + 1) { IntArray(n + 1) }
@@ -69,3 +37,5 @@ class ShortestCommonSupersequence {
 // a -> x -> y -> x -> (a -> b -> c)
 
 // y -> z -> m -> n -> b -> c
+
+

@@ -3,34 +3,6 @@ package sorting
 import java.util.*
 
 class RussianDollEnvelope {
-    /**
-    * Solves the Russian Doll Envelope problem.
-    * Takes `envelopes` (2D matrix of integers).
-    *
-    * @param envelopes The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Russian Doll Envelope problem.
-    * Takes `envelopes` (2D matrix of integers).
-    *
-    * @param envelopes The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Russian Doll Envelope problem.
-    * Takes `envelopes` (2D matrix of integers).
-    *
-    * @param envelopes The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Russian Doll Envelope problem.
-    * Takes `envelopes` (2D matrix of integers).
-    *
-    * @param envelopes The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun maxEnvelopes(envelopes: Array<IntArray>): Int {
         // Step 1: Sort envelopes by width ascending and height descending
         envelopes.sortWith { a, b ->

@@ -1,73 +1,9 @@
 package backtracking
 
 class PalindromePartitioning {
-    /**
-    * Solves the Palindrome Partitioning problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting collection (List<List<String>).
-    */
-    /**
-    * Solves the Palindrome Partitioning problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting collection (List<List<String>).
-    */
-    /**
-    * Solves the Palindrome Partitioning problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting collection (List<List<String>).
-    */
-    /**
-    * Solves the Palindrome Partitioning problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting collection (List<List<String>).
-    */
     fun partition(s: String): List<List<String>> {
         val result = mutableListOf<List<String>>()
 
-        /**
-        * Solves the Palindrome Partitioning problem.
-        * Takes `s` (string), `left` (integer), `right` (integer).
-        *
-        * @param s The input string.
-        * @param left The integer parameter representing left.
-        * @param right The integer parameter representing right.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Palindrome Partitioning problem.
-        * Takes `s` (string), `left` (integer), `right` (integer).
-        *
-        * @param s The input string.
-        * @param left The integer parameter representing left.
-        * @param right The integer parameter representing right.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Palindrome Partitioning problem.
-        * Takes `s` (string), `left` (integer), `right` (integer).
-        *
-        * @param s The input string.
-        * @param left The integer parameter representing left.
-        * @param right The integer parameter representing right.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Palindrome Partitioning problem.
-        * Takes `s` (string), `left` (integer), `right` (integer).
-        *
-        * @param s The input string.
-        * @param left The integer parameter representing left.
-        * @param right The integer parameter representing right.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
         fun isPalindrome(s: String, left: Int, right: Int): Boolean {
             var (l, r) = left to right
             while (l < r) {
@@ -76,38 +12,6 @@ class PalindromePartitioning {
             return true
         }
 
-        /**
-        * Solves the Palindrome Partitioning problem.
-        * Takes `start` (integer), `path` (MutableList<String>).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input MutableList<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Palindrome Partitioning problem.
-        * Takes `start` (integer), `path` (MutableList<String>).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input MutableList<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Palindrome Partitioning problem.
-        * Takes `start` (integer), `path` (MutableList<String>).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input MutableList<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Palindrome Partitioning problem.
-        * Takes `start` (integer), `path` (MutableList<String>).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input MutableList<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun dfs(start: Int, path: MutableList<String>) {
             if (start == s.length) {
                 result.add(ArrayList(path))

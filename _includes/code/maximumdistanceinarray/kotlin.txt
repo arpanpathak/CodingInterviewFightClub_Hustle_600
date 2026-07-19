@@ -3,34 +3,6 @@ package array.greedy
 import kotlin.math.abs
 
 class MaximumDistanceInArray {
-    /**
-    * Solves the Maximum Distance In Array problem.
-    * Takes `arrays` (2D list of integers).
-    *
-    * @param arrays The input 2D list of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Distance In Array problem.
-    * Takes `arrays` (2D list of integers).
-    *
-    * @param arrays The input 2D list of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Distance In Array problem.
-    * Takes `arrays` (2D list of integers).
-    *
-    * @param arrays The input 2D list of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Distance In Array problem.
-    * Takes `arrays` (2D list of integers).
-    *
-    * @param arrays The input 2D list of integers.
-    * @return The computed integer result.
-    */
     fun maxDistance(arrays: List<List<Int>>): Int {
         var (max, min, maxDistance) = Triple( arrays[0].first(), arrays[0].last(), 0)
 
@@ -48,30 +20,6 @@ class MaximumDistanceInArray {
 
     companion object {
         @JvmStatic
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun main(args: Array<String>) {
             val test = MaximumDistanceInArray()
 

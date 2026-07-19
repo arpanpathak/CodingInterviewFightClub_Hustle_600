@@ -4,34 +4,6 @@ class ProductOfLastKNumbers {
     private val numbers = mutableListOf<Int>()
     private val prefixProducts = mutableListOf(1)
 
-    /**
-    * Solves the Product Of Last KNumbers problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Product Of Last KNumbers problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Product Of Last KNumbers problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Product Of Last KNumbers problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun add(num: Int) {
         numbers.add(num)
         // Reset the prefix product list if the current number is 0
@@ -44,34 +16,6 @@ class ProductOfLastKNumbers {
         }
     }
 
-    /**
-    * Solves the Product Of Last KNumbers problem.
-    * Takes `k` (integer).
-    *
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Product Of Last KNumbers problem.
-    * Takes `k` (integer).
-    *
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Product Of Last KNumbers problem.
-    * Takes `k` (integer).
-    *
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Product Of Last KNumbers problem.
-    * Takes `k` (integer).
-    *
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
     fun getProduct(k: Int): Int {
         val n = prefixProducts.size - 1  // The size of the prefixProducts list is n + 1
         if (k > n) return 0

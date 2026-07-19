@@ -8,34 +8,6 @@ import kotlin.system.measureTimeMillis
 val memo = ConcurrentHashMap<Int, Long>()
 
 // Iterative method to calculate Fibonacci numbers
-/**
-* Solves the parallelfibonacci problem.
-* Takes `n` (integer).
-*
-* @param n The integer parameter representing n.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelfibonacci problem.
-* Takes `n` (integer).
-*
-* @param n The integer parameter representing n.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelfibonacci problem.
-* Takes `n` (integer).
-*
-* @param n The integer parameter representing n.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelfibonacci problem.
-* Takes `n` (integer).
-*
-* @param n The integer parameter representing n.
-* @return The computed integer result.
-*/
 fun fibonacciIterative(n: Int): Long {
     if (n <= 1) return n.toLong()
     var a = 0L
@@ -49,34 +21,6 @@ fun fibonacciIterative(n: Int): Long {
 }
 
 // Parallel recursive Fibonacci function using coroutines
-/**
-* Solves the parallelfibonacci problem.
-* Takes `n` (integer).
-*
-* @param n The integer parameter representing n.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelfibonacci problem.
-* Takes `n` (integer).
-*
-* @param n The integer parameter representing n.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelfibonacci problem.
-* Takes `n` (integer).
-*
-* @param n The integer parameter representing n.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelfibonacci problem.
-* Takes `n` (integer).
-*
-* @param n The integer parameter representing n.
-* @return The computed integer result.
-*/
 suspend fun fibonacciParallel(n: Int): Long {
     if (n <= 1) return n.toLong()
     memo[n]?.let { return it }
@@ -93,26 +37,6 @@ suspend fun fibonacciParallel(n: Int): Long {
     return result
 }
 
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() = runBlocking {
     val n = 100
 

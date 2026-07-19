@@ -5,34 +5,6 @@ import java.util.*
 class VerticalOrderTraversalOfABinaryTree {
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
-    /**
-    * Solves the Vertical Order Traversal Of ABinary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Vertical Order Traversal Of ABinary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Vertical Order Traversal Of ABinary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Vertical Order Traversal Of ABinary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
     fun verticalTraversal(root: TreeNode?): List<List<Int>> {
         if (root == null) return emptyList()
 

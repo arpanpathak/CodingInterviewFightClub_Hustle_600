@@ -3,34 +3,6 @@ package stack
 class EvaluateReversePolishNotation {
     private val SYMBOLS = setOf("+", "-", "*", "/")
 
-    /**
-    * Solves the Evaluate Reverse Polish Notation problem.
-    * Takes `tokens` (Array<String>).
-    *
-    * @param tokens The input Array<String>.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Evaluate Reverse Polish Notation problem.
-    * Takes `tokens` (Array<String>).
-    *
-    * @param tokens The input Array<String>.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Evaluate Reverse Polish Notation problem.
-    * Takes `tokens` (Array<String>).
-    *
-    * @param tokens The input Array<String>.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Evaluate Reverse Polish Notation problem.
-    * Takes `tokens` (Array<String>).
-    *
-    * @param tokens The input Array<String>.
-    * @return The computed integer result.
-    */
     fun evalRPN(tokens: Array<String>): Int {
         val stack = mutableListOf<Int>()
         for (token in tokens) {
@@ -44,42 +16,6 @@ class EvaluateReversePolishNotation {
         return stack.removeLast()
     }
 
-    /**
-    * Solves the Evaluate Reverse Polish Notation problem.
-    * Takes `symbol` (character), `a` (integer), `b` (integer).
-    *
-    * @param symbol The character.
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Evaluate Reverse Polish Notation problem.
-    * Takes `symbol` (character), `a` (integer), `b` (integer).
-    *
-    * @param symbol The character.
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Evaluate Reverse Polish Notation problem.
-    * Takes `symbol` (character), `a` (integer), `b` (integer).
-    *
-    * @param symbol The character.
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Evaluate Reverse Polish Notation problem.
-    * Takes `symbol` (character), `a` (integer), `b` (integer).
-    *
-    * @param symbol The character.
-    * @param a The integer parameter representing a.
-    * @param b The integer parameter representing b.
-    * @return The computed integer result.
-    */
     fun operate(symbol: Char, a: Int, b: Int): Int {
         return when(symbol) {
             '+' -> a + b

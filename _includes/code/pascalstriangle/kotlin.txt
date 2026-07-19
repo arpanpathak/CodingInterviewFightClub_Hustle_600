@@ -1,34 +1,6 @@
 package math.dp
 
 class PascalsTriangle {
-    /**
-    * Solves the Pascals Triangle problem.
-    * Takes `numRows` (integer).
-    *
-    * @param numRows The integer parameter representing numRows.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Pascals Triangle problem.
-    * Takes `numRows` (integer).
-    *
-    * @param numRows The integer parameter representing numRows.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Pascals Triangle problem.
-    * Takes `numRows` (integer).
-    *
-    * @param numRows The integer parameter representing numRows.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Pascals Triangle problem.
-    * Takes `numRows` (integer).
-    *
-    * @param numRows The integer parameter representing numRows.
-    * @return The computed integer result.
-    */
     fun generate(numRows: Int): List<List<Int>> {
         val result = MutableList(numRows) { MutableList(it + 1) { 1 } }
 

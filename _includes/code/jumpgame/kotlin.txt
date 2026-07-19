@@ -1,34 +1,6 @@
 package greedy
 
 class JumpGame {
-    /**
-    * Solves the Jump Game problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Jump Game problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Jump Game problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Jump Game problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun canJump(nums: IntArray): Boolean {
         var maxIndex = 0
         var i = 0

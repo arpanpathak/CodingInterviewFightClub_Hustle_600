@@ -1,34 +1,6 @@
 package math.stack
 
 class BasicCalculator_II {
-    /**
-    * Solves the Basic Calculator_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun calculate(s: String): Int {
         val stack = mutableListOf<Int>()
         var currentNumber = 0
@@ -56,34 +28,6 @@ class BasicCalculator_II {
     }
 
     // O(1) Space solution
-    /**
-    * Solves the Basic Calculator_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun calculate_o1(s: String): Int {
         var currentNumber = 0
         var result = 0

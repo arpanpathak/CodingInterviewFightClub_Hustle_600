@@ -3,34 +3,6 @@ package tree
 import java.util.*
 
 class PopulateNextRightPointersInEachNode_II_Constant {
-    /**
-    * Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
-    * Takes `root` (Node?).
-    *
-    * @param root The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
-    * Takes `root` (Node?).
-    *
-    * @param root The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
-    * Takes `root` (Node?).
-    *
-    * @param root The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
-    * Takes `root` (Node?).
-    *
-    * @param root The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
     fun connect(root: Node?): Node? {
         var current: Node? = root
 

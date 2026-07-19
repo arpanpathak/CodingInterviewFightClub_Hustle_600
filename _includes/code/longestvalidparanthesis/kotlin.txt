@@ -1,34 +1,6 @@
 package stack
 
 class LongestValidParanthesis {
-    /**
-    * Solves the Longest Valid Paranthesis problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Valid Paranthesis problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Valid Paranthesis problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Valid Paranthesis problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun longestValidParentheses(s: String): Int {
         val stack = ArrayDeque<Int>()
         stack.addLast(-1)  // Initialize stack with -1 to handle edge cases

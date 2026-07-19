@@ -9,34 +9,6 @@ class MaximumSwap {
         this[j] = temp
     }
 
-    /**
-    * Solves the Maximum Swap problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Swap problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Swap problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Swap problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return The computed integer result.
-    */
     fun maximumSwap(num: Int): Int {
         var digits = num.toString().toCharArray()
         var maxIndex = digits.lastIndex

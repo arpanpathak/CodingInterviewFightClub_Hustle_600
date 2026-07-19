@@ -1,38 +1,6 @@
 package sliding_window
 
 class LongestRepeatingCharacterReplacement {
-    /**
-    * Solves the Longest Repeating Character Replacement problem.
-    * Takes `s` (string), `k` (integer).
-    *
-    * @param s The input string.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Repeating Character Replacement problem.
-    * Takes `s` (string), `k` (integer).
-    *
-    * @param s The input string.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Repeating Character Replacement problem.
-    * Takes `s` (string), `k` (integer).
-    *
-    * @param s The input string.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Repeating Character Replacement problem.
-    * Takes `s` (string), `k` (integer).
-    *
-    * @param s The input string.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
     fun characterReplacement(s: String, k: Int): Int {
         val count = IntArray(26)
         var maxLength = 0

@@ -3,71 +3,11 @@ package hashtable
 class MyHashMap() {
     private val map = Array<Pair<Int, Int>?>(1000000) { null }
 
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun put(key: Int, value: Int) {
         val index = key % map.size
         map[index] = Pair(key, value)
     }
 
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
     fun get(key: Int): Int {
         val index = key % map.size
 
@@ -78,34 +18,6 @@ class MyHashMap() {
         }
     }
 
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the My Hash Map problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun remove(key: Int) {
         val index = key % map.size
         if (map[index]?.first == key) {

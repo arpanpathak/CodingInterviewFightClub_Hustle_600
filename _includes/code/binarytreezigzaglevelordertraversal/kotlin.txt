@@ -5,34 +5,6 @@ import java.util.*
 class BinaryTreeZigZagLevelOrderTraversal {
     data class IndexedNode(var node: TreeNode?, var index: Int)
 
-    /**
-    * Solves the Binary Tree Zig Zag Level Order Traversal problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Binary Tree Zig Zag Level Order Traversal problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Binary Tree Zig Zag Level Order Traversal problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Binary Tree Zig Zag Level Order Traversal problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
     fun zigzagLevelOrder(root: TreeNode?): List<List<Int>> {
         val result = mutableListOf<MutableList<Int>>()
         if (root == null) return result

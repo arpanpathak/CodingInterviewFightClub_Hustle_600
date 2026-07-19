@@ -1,34 +1,6 @@
 package math
 
 class Sqrt {
-    /**
-    * Solves the Sqrt problem.
-    * Takes `x` (integer).
-    *
-    * @param x The integer parameter representing x.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Sqrt problem.
-    * Takes `x` (integer).
-    *
-    * @param x The integer parameter representing x.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Sqrt problem.
-    * Takes `x` (integer).
-    *
-    * @param x The integer parameter representing x.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Sqrt problem.
-    * Takes `x` (integer).
-    *
-    * @param x The integer parameter representing x.
-    * @return The computed integer result.
-    */
     fun mySqrt(x: Int): Int {
         if ( x < 2) return x
         var (left, right) = 1 to x

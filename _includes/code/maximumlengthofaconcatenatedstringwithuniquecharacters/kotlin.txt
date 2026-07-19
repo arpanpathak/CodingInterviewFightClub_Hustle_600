@@ -1,74 +1,10 @@
 package string
 
 class MaximumLengthofaConcatenatedStringwithUniqueCharacters {
-    /**
-    * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
-    * Takes `arr` (list of strings).
-    *
-    * @param arr The input list of strings.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
-    * Takes `arr` (list of strings).
-    *
-    * @param arr The input list of strings.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
-    * Takes `arr` (list of strings).
-    *
-    * @param arr The input list of strings.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
-    * Takes `arr` (list of strings).
-    *
-    * @param arr The input list of strings.
-    * @return The computed integer result.
-    */
     fun maxLength(arr: List<String>): Int {
         var maxLen = 0
         val uniqueStrings = arr.filter { it.toCharArray().toSet().size == it.length }
 
-        /**
-        * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
-        * Takes `index` (integer), `currentMask` (integer), `currentLength` (integer).
-        *
-        * @param index The integer parameter representing index.
-        * @param currentMask The integer parameter representing currentMask.
-        * @param currentLength The integer parameter representing currentLength.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
-        * Takes `index` (integer), `currentMask` (integer), `currentLength` (integer).
-        *
-        * @param index The integer parameter representing index.
-        * @param currentMask The integer parameter representing currentMask.
-        * @param currentLength The integer parameter representing currentLength.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
-        * Takes `index` (integer), `currentMask` (integer), `currentLength` (integer).
-        *
-        * @param index The integer parameter representing index.
-        * @param currentMask The integer parameter representing currentMask.
-        * @param currentLength The integer parameter representing currentLength.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
-        * Takes `index` (integer), `currentMask` (integer), `currentLength` (integer).
-        *
-        * @param index The integer parameter representing index.
-        * @param currentMask The integer parameter representing currentMask.
-        * @param currentLength The integer parameter representing currentLength.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun backtrack(index: Int, currentMask: Int, currentLength: Int) {
             if (index == uniqueStrings.size) {
                 if (currentLength > maxLen) {

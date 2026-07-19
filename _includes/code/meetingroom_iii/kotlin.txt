@@ -5,38 +5,6 @@ import java.util.*
 class MeetingRoom_III {
     data class Room(val endTime: Long, val index: Int)
 
-    /**
-    * Solves the Meeting Room_III problem.
-    * Takes `n` (integer), `meetings` (2D matrix of integers).
-    *
-    * @param n The integer parameter representing n.
-    * @param meetings The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Meeting Room_III problem.
-    * Takes `n` (integer), `meetings` (2D matrix of integers).
-    *
-    * @param n The integer parameter representing n.
-    * @param meetings The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Meeting Room_III problem.
-    * Takes `n` (integer), `meetings` (2D matrix of integers).
-    *
-    * @param n The integer parameter representing n.
-    * @param meetings The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Meeting Room_III problem.
-    * Takes `n` (integer), `meetings` (2D matrix of integers).
-    *
-    * @param n The integer parameter representing n.
-    * @param meetings The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun mostBooked(n: Int, meetings: Array<IntArray>): Int {
         // Sort meetings by start time
         meetings.sortWith(compareBy { it[0] })

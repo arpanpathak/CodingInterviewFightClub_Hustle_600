@@ -7,42 +7,6 @@ import java.util.*
 class BusRoutes {
     data class Node(val stop: Int, val busCount: Int)
 
-    /**
-    * Solves the Bus Routes problem.
-    * Takes `routes` (2D matrix of integers), `source` (integer), `target` (integer).
-    *
-    * @param routes The input 2D matrix of integers.
-    * @param source The integer parameter representing source.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Bus Routes problem.
-    * Takes `routes` (2D matrix of integers), `source` (integer), `target` (integer).
-    *
-    * @param routes The input 2D matrix of integers.
-    * @param source The integer parameter representing source.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Bus Routes problem.
-    * Takes `routes` (2D matrix of integers), `source` (integer), `target` (integer).
-    *
-    * @param routes The input 2D matrix of integers.
-    * @param source The integer parameter representing source.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Bus Routes problem.
-    * Takes `routes` (2D matrix of integers), `source` (integer), `target` (integer).
-    *
-    * @param routes The input 2D matrix of integers.
-    * @param source The integer parameter representing source.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
     fun numBusesToDestination(routes: Array<IntArray>, source: Int, target: Int): Int {
         if (source == target) return 0
 

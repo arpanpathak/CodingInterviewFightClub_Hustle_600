@@ -1,38 +1,6 @@
 package linkedlist
 
 class MergeKSortedList {
-    /**
-    * Solves the Merge KSorted List problem.
-    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
-    *
-    * @param list1 The input linked list node reference.
-    * @param list2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List problem.
-    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
-    *
-    * @param list1 The input linked list node reference.
-    * @param list2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List problem.
-    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
-    *
-    * @param list1 The input linked list node reference.
-    * @param list2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List problem.
-    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
-    *
-    * @param list1 The input linked list node reference.
-    * @param list2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         val head = ListNode(0) // dummy node
         var ptr = head
@@ -56,69 +24,9 @@ class MergeKSortedList {
         return head.next
     }
 
-    /**
-    * Solves the Merge KSorted List problem.
-    * Takes `lists` (Array<ListNode?>).
-    *
-    * @param lists The input Array<ListNode?>.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List problem.
-    * Takes `lists` (Array<ListNode?>).
-    *
-    * @param lists The input Array<ListNode?>.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List problem.
-    * Takes `lists` (Array<ListNode?>).
-    *
-    * @param lists The input Array<ListNode?>.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List problem.
-    * Takes `lists` (Array<ListNode?>).
-    *
-    * @param lists The input Array<ListNode?>.
-    * @return The resulting collection (linked list node reference).
-    */
     fun mergeKLists(lists: Array<ListNode?>): ListNode? {
         if (lists.isEmpty())
             return null
-        /**
-        * Solves the Merge KSorted List problem.
-        * Takes `start` (integer), `end` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param end The integer parameter representing end.
-        * @return The resulting collection (linked list node reference).
-        */
-        /**
-        * Solves the Merge KSorted List problem.
-        * Takes `start` (integer), `end` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param end The integer parameter representing end.
-        * @return The resulting collection (linked list node reference).
-        */
-        /**
-        * Solves the Merge KSorted List problem.
-        * Takes `start` (integer), `end` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param end The integer parameter representing end.
-        * @return The resulting collection (linked list node reference).
-        */
-        /**
-        * Solves the Merge KSorted List problem.
-        * Takes `start` (integer), `end` (integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param end The integer parameter representing end.
-        * @return The resulting collection (linked list node reference).
-        */
         fun merge(start: Int, end: Int): ListNode? {
             if (start == end)
                 return lists[start]

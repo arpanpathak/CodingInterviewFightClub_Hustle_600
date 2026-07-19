@@ -12,26 +12,6 @@ import java.net.URL
 
 
 // Concurrency /Async I/O
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() = runBlocking<Unit> {
     launch { // launch a new coroutine in the background
 //        delay(1000L)
@@ -64,46 +44,6 @@ class ApiManager {
 
     private val coroutineScope = CoroutineScope(Dispatchers.IO)
 
-    /**
-    * Solves the Api Manager problem.
-    * Takes `url` (string), `method` (String = "GET"), `body` (String? = null), `onResult` ((String?).
-    *
-    * @param url The input string.
-    * @param method The input string.
-    * @param body The input string.
-    * @param onResult The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Api Manager problem.
-    * Takes `url` (string), `method` (String = "GET"), `body` (String? = null), `onResult` ((String?).
-    *
-    * @param url The input string.
-    * @param method The input string.
-    * @param body The input string.
-    * @param onResult The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Api Manager problem.
-    * Takes `url` (string), `method` (String = "GET"), `body` (String? = null), `onResult` ((String?).
-    *
-    * @param url The input string.
-    * @param method The input string.
-    * @param body The input string.
-    * @param onResult The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Api Manager problem.
-    * Takes `url` (string), `method` (String = "GET"), `body` (String? = null), `onResult` ((String?).
-    *
-    * @param url The input string.
-    * @param method The input string.
-    * @param body The input string.
-    * @param onResult The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun makeRequest(
         url: String,
         method: String = "GET",
@@ -118,38 +58,6 @@ class ApiManager {
         }
     }
 
-    /**
-    * Helper: perform request.
-    *
-    * @param urlString The input string.
-    * @param method The input string.
-    * @param body The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: perform request.
-    *
-    * @param urlString The input string.
-    * @param method The input string.
-    * @param body The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: perform request.
-    *
-    * @param urlString The input string.
-    * @param method The input string.
-    * @param body The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: perform request.
-    *
-    * @param urlString The input string.
-    * @param method The input string.
-    * @param body The input string.
-    * @return The resulting string.
-    */
     private fun performRequest(urlString: String, method: String, body: String?): String? {
         val url = URL(urlString)
         var urlConnection: HttpURLConnection? = null
@@ -181,26 +89,6 @@ class ApiManager {
     }
 }
 
-/**
-* Solves the Api Manager problem.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the Api Manager problem.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the Api Manager problem.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the Api Manager problem.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 suspend fun testApis() {
 //    val apiManager = ApiManager()
 //    val apiUrl = "https://real-api.com/api/users"  // Change to your actual API URL

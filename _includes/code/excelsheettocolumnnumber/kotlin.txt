@@ -1,34 +1,6 @@
 package string
 
 class ExcelSheetToColumnNumber {
-    /**
-    * Solves the Excel Sheet To Column Number problem.
-    * Takes `columnTitle` (string).
-    *
-    * @param columnTitle The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Excel Sheet To Column Number problem.
-    * Takes `columnTitle` (string).
-    *
-    * @param columnTitle The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Excel Sheet To Column Number problem.
-    * Takes `columnTitle` (string).
-    *
-    * @param columnTitle The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Excel Sheet To Column Number problem.
-    * Takes `columnTitle` (string).
-    *
-    * @param columnTitle The input string.
-    * @return The computed integer result.
-    */
     fun titleToNumber(columnTitle: String): Int {
         var base = 1
         var sum = 0

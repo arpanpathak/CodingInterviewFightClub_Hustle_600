@@ -10,26 +10,6 @@ const val MANDATORY_DAILY_SLEEPING_HOURS = 8L
 var windowStart = Instant.now()
 var windowEnd = windowStart.plus(Duration.ofDays(DAYS_TO_SURVIVE)) // 60 days window
 
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun autoPilot() {
     while (true) {
         // Generate a random event using when
@@ -44,34 +24,6 @@ fun autoPilot() {
     }
 }
 
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-* Takes `uncertainEvent` (EventType).
-*
-* @param uncertainEvent The EventType.
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-* Takes `uncertainEvent` (EventType).
-*
-* @param uncertainEvent The EventType.
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-* Takes `uncertainEvent` (EventType).
-*
-* @param uncertainEvent The EventType.
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-* Takes `uncertainEvent` (EventType).
-*
-* @param uncertainEvent The EventType.
-* @return Unit (no return value, modifies state in-place).
-*/
 fun dailyTriggerOfAnxiety(uncertainEvent: EventType) {
     val now = Instant.now()
     println("Uncertain event happened : $uncertainEvent")
@@ -88,26 +40,6 @@ fun dailyTriggerOfAnxiety(uncertainEvent: EventType) {
     }
 }
 
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-*
-* @return The computed result (EventType).
-*/
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-*
-* @return The computed result (EventType).
-*/
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-*
-* @return The computed result (EventType).
-*/
-/**
-* Solves the h1bautopilotstressanxietyalgorithm problem.
-*
-* @return The computed result (EventType).
-*/
 fun generateRandomEvent(): EventType {
     return when (Random.nextBoolean()) {
         true -> EventType.PROMOTED_TO_CUSTOMER
@@ -116,26 +48,6 @@ fun generateRandomEvent(): EventType {
 }
 
 // Start the autopilot
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() {
     autoPilot()
 }

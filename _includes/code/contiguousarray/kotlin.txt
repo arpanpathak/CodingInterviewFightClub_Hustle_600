@@ -1,34 +1,6 @@
 package array.prefixsum
 
 class ContiguousArray {
-    /**
-    * Solves the Contiguous Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Contiguous Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Contiguous Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Contiguous Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun findMaxLength(nums: IntArray): Int {
         val map = mutableMapOf<Int, Int>()
         var sum = 0

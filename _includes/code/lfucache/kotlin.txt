@@ -13,34 +13,6 @@ class LFUCache(capacity: Int) {
         lists[1] = LinkedHashSet()
     }
 
-    /**
-    * Solves the LFUCache problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the LFUCache problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the LFUCache problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the LFUCache problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
     fun get(key: Int): Int {
         if (!vals.containsKey(key))
             return -1
@@ -61,38 +33,6 @@ class LFUCache(capacity: Int) {
         return vals[key]!!
     }
 
-    /**
-    * Solves the LFUCache problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the LFUCache problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the LFUCache problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the LFUCache problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun put(key: Int, value: Int) {
         if (MAX_SIZE <= 0)
             return ;

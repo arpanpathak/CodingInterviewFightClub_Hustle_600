@@ -1,46 +1,6 @@
 package greedy
 
 class RescheduleMeetingsforMaximumFreeTime_I {
-    /**
-    * Solves the Reschedule Meetingsfor Maximum Free Time_I problem.
-    * Takes `eventTime` (integer), `k` (integer), `startTime` (array of integers), `endTime` (array of integers).
-    *
-    * @param eventTime The integer parameter representing eventTime.
-    * @param k The integer parameter representing k.
-    * @param startTime The input array of integers.
-    * @param endTime The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Reschedule Meetingsfor Maximum Free Time_I problem.
-    * Takes `eventTime` (integer), `k` (integer), `startTime` (array of integers), `endTime` (array of integers).
-    *
-    * @param eventTime The integer parameter representing eventTime.
-    * @param k The integer parameter representing k.
-    * @param startTime The input array of integers.
-    * @param endTime The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Reschedule Meetingsfor Maximum Free Time_I problem.
-    * Takes `eventTime` (integer), `k` (integer), `startTime` (array of integers), `endTime` (array of integers).
-    *
-    * @param eventTime The integer parameter representing eventTime.
-    * @param k The integer parameter representing k.
-    * @param startTime The input array of integers.
-    * @param endTime The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Reschedule Meetingsfor Maximum Free Time_I problem.
-    * Takes `eventTime` (integer), `k` (integer), `startTime` (array of integers), `endTime` (array of integers).
-    *
-    * @param eventTime The integer parameter representing eventTime.
-    * @param k The integer parameter representing k.
-    * @param startTime The input array of integers.
-    * @param endTime The input array of integers.
-    * @return The computed integer result.
-    */
     fun maxFreeTime(eventTime: Int, k: Int, startTime: IntArray, endTime: IntArray): Int {
         val n = startTime.size
         val gaps = mutableListOf<Int>()

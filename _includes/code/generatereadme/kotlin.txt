@@ -1,25 +1,6 @@
+
 import java.io.File
 
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() {
     // Define the directory of the GitHub project
     val projectDir = File("/Users/arpanpathak/Projects/data_science/CrackGoogle/src/main/kotlin")
@@ -39,38 +20,6 @@ fun main() {
     content.append("## Files and Directories\n\n")
 
     // Recursively list all files and directories
-    /**
-    * Solves the generatereadme problem.
-    * Takes `dir` (File), `indent` (String = "").
-    *
-    * @param dir The File.
-    * @param indent The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the generatereadme problem.
-    * Takes `dir` (File), `indent` (String = "").
-    *
-    * @param dir The File.
-    * @param indent The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the generatereadme problem.
-    * Takes `dir` (File), `indent` (String = "").
-    *
-    * @param dir The File.
-    * @param indent The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the generatereadme problem.
-    * Takes `dir` (File), `indent` (String = "").
-    *
-    * @param dir The File.
-    * @param indent The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun listFiles(dir: File, indent: String = "") {
         val files = dir.listFiles()?.sorted() ?: return
         for (file in files) {

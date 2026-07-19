@@ -1,38 +1,6 @@
 package tree
 
 class LeafSimilar {
-    /**
-    * Solves the Leaf Similar problem.
-    * Takes `root1` (binary tree node reference), `root2` (binary tree node reference).
-    *
-    * @param root1 The binary tree node reference (nullable).
-    * @param root2 The binary tree node reference (nullable).
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Leaf Similar problem.
-    * Takes `root1` (binary tree node reference), `root2` (binary tree node reference).
-    *
-    * @param root1 The binary tree node reference (nullable).
-    * @param root2 The binary tree node reference (nullable).
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Leaf Similar problem.
-    * Takes `root1` (binary tree node reference), `root2` (binary tree node reference).
-    *
-    * @param root1 The binary tree node reference (nullable).
-    * @param root2 The binary tree node reference (nullable).
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Leaf Similar problem.
-    * Takes `root1` (binary tree node reference), `root2` (binary tree node reference).
-    *
-    * @param root1 The binary tree node reference (nullable).
-    * @param root2 The binary tree node reference (nullable).
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun leafSimilar(root1: TreeNode?, root2: TreeNode?): Boolean {
         val leaves1 = mutableListOf<Int>()
         val leaves2 = mutableListOf<Int>()
@@ -43,38 +11,6 @@ class LeafSimilar {
         return leaves1 == leaves2
     }
 
-    /**
-    * Solves the Leaf Similar problem.
-    * Takes `node` (binary tree node reference), `leafValues` (mutable list of integers).
-    *
-    * @param node The binary tree node reference (nullable).
-    * @param leafValues The input mutable list of integers.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Leaf Similar problem.
-    * Takes `node` (binary tree node reference), `leafValues` (mutable list of integers).
-    *
-    * @param node The binary tree node reference (nullable).
-    * @param leafValues The input mutable list of integers.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Leaf Similar problem.
-    * Takes `node` (binary tree node reference), `leafValues` (mutable list of integers).
-    *
-    * @param node The binary tree node reference (nullable).
-    * @param leafValues The input mutable list of integers.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Leaf Similar problem.
-    * Takes `node` (binary tree node reference), `leafValues` (mutable list of integers).
-    *
-    * @param node The binary tree node reference (nullable).
-    * @param leafValues The input mutable list of integers.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun dfs(node: TreeNode?, leafValues: MutableList<Int>) {
         if (node != null) {
             if (node.left == null && node.right == null) {

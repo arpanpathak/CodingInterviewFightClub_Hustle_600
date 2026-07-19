@@ -1,34 +1,6 @@
 package array.hashtable
 
 class RankTransformOfAnArray {
-    /**
-    * Solves the Rank Transform Of An Array problem.
-    * Takes `arr` (array of integers).
-    *
-    * @param arr The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Rank Transform Of An Array problem.
-    * Takes `arr` (array of integers).
-    *
-    * @param arr The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Rank Transform Of An Array problem.
-    * Takes `arr` (array of integers).
-    *
-    * @param arr The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Rank Transform Of An Array problem.
-    * Takes `arr` (array of integers).
-    *
-    * @param arr The input array of integers.
-    * @return The computed integer result.
-    */
     fun arrayRankTransform(arr: IntArray): IntArray {
         // Step 1: Sort the array and remove duplicates
         val sortedArr = arr.sorted()

@@ -8,34 +8,6 @@ class TreeNode(var `val`: Int) {
 }
 
 class HouseRobber3 {
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
     fun rob(root: TreeNode?): Int {
         fun dfs (node: TreeNode?): IntArray {
             if (node == null)

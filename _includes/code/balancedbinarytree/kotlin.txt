@@ -3,63 +3,7 @@ package tree
 import kotlin.math.abs
 
 class BalancedBinaryTree {
-    /**
-    * Solves the Balanced Binary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Balanced Binary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Balanced Binary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Balanced Binary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun isBalanced(root: TreeNode?): Boolean {
-        /**
-        * Solves the Balanced Binary Tree problem.
-        * Takes `node` (binary tree node reference).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Balanced Binary Tree problem.
-        * Takes `node` (binary tree node reference).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Balanced Binary Tree problem.
-        * Takes `node` (binary tree node reference).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Balanced Binary Tree problem.
-        * Takes `node` (binary tree node reference).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @return The computed integer result.
-        */
         fun checkHeight(node: TreeNode?): Int {
             if (node == null) return 0
 

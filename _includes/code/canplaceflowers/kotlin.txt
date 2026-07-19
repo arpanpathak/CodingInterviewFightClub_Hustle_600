@@ -1,38 +1,6 @@
 package array.greedy
 
 class CanPlaceFlowers {
-    /**
-    * Solves the Can Place Flowers problem.
-    * Takes `flowerbed` (array of integers), `n` (integer).
-    *
-    * @param flowerbed The input array of integers.
-    * @param n The integer parameter representing n.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Can Place Flowers problem.
-    * Takes `flowerbed` (array of integers), `n` (integer).
-    *
-    * @param flowerbed The input array of integers.
-    * @param n The integer parameter representing n.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Can Place Flowers problem.
-    * Takes `flowerbed` (array of integers), `n` (integer).
-    *
-    * @param flowerbed The input array of integers.
-    * @param n The integer parameter representing n.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Can Place Flowers problem.
-    * Takes `flowerbed` (array of integers), `n` (integer).
-    *
-    * @param flowerbed The input array of integers.
-    * @param n The integer parameter representing n.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun canPlaceFlowers(flowerbed: IntArray, n: Int): Boolean {
         var flowers = 0
         for (i in 0 until flowerbed.size) {

@@ -3,42 +3,6 @@ package dynamic_programming
 class MaximumProfitInJobScheduling {
     data class Job(val start: Int, val end: Int, val profit: Int)
 
-    /**
-    * Solves the Maximum Profit In Job Scheduling problem.
-    * Takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers).
-    *
-    * @param startTime The input array of integers.
-    * @param endTime The input array of integers.
-    * @param profit The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Profit In Job Scheduling problem.
-    * Takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers).
-    *
-    * @param startTime The input array of integers.
-    * @param endTime The input array of integers.
-    * @param profit The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Profit In Job Scheduling problem.
-    * Takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers).
-    *
-    * @param startTime The input array of integers.
-    * @param endTime The input array of integers.
-    * @param profit The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Profit In Job Scheduling problem.
-    * Takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers).
-    *
-    * @param startTime The input array of integers.
-    * @param endTime The input array of integers.
-    * @param profit The input array of integers.
-    * @return The computed integer result.
-    */
     fun jobScheduling(startTime: IntArray, endTime: IntArray, profit: IntArray): Int {
         // Create a list of jobs and sort them by end time
         val jobs = startTime.indices.map { Job(startTime[it], endTime[it], profit[it]) }
@@ -65,34 +29,6 @@ class MaximumProfitInJobScheduling {
         return dp[dp.size - 1]
     }
 
-    /**
-    * Helper: find last non overlapping job.
-    *
-    * @param jobs The input List<Job>.
-    * @param currentIndex The integer parameter representing currentIndex.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: find last non overlapping job.
-    *
-    * @param jobs The input List<Job>.
-    * @param currentIndex The integer parameter representing currentIndex.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: find last non overlapping job.
-    *
-    * @param jobs The input List<Job>.
-    * @param currentIndex The integer parameter representing currentIndex.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: find last non overlapping job.
-    *
-    * @param jobs The input List<Job>.
-    * @param currentIndex The integer parameter representing currentIndex.
-    * @return The computed integer result.
-    */
     private fun findLastNonOverlappingJob(jobs: List<Job>, currentIndex: Int): Int {
         val currentJob = jobs[currentIndex]
         var low = 0

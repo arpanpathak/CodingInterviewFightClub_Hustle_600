@@ -1,82 +1,18 @@
 package tree
 
+/**
  * Definition for a binary tree node.
  * class TreeNode(var `val`: Int) {
  *     var left: TreeNode? = null
  *     var right: TreeNode? = null
  * }
+ */
 
 class Codec() {
     // Encodes a URL to a shortened URL.
-    * Solves the Codec problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The resulting string.
-    /**
-    * Solves the Codec problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Codec problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Codec problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Codec problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The resulting string.
-    */
     fun serialize(root: TreeNode?): String {
         val serializedTree = StringBuilder()
 
-        * Solves the Codec problem.
-        * Takes `node` (binary tree node reference).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @return Unit (no return value, modifies state in-place).
-        /**
-        * Solves the Codec problem.
-        * Takes `node` (binary tree node reference).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Codec problem.
-        * Takes `node` (binary tree node reference).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Codec problem.
-        * Takes `node` (binary tree node reference).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Codec problem.
-        * Takes `node` (binary tree node reference).
-        *
-        * @param node The binary tree node reference (nullable).
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun dfs(node: TreeNode?) {
             if (node == null) {
                 serializedTree.append("null,")
@@ -93,65 +29,9 @@ class Codec() {
     }
 
     // Decodes the encoded string to tree using a recursive approach.
-    * Solves the Codec problem.
-    * Takes `data` (string).
-    *
-    * @param data The input string.
-    * @return The result, or `null` if not found.
-    /**
-    * Solves the Codec problem.
-    * Takes `data` (string).
-    *
-    * @param data The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Codec problem.
-    * Takes `data` (string).
-    *
-    * @param data The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Codec problem.
-    * Takes `data` (string).
-    *
-    * @param data The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Codec problem.
-    * Takes `data` (string).
-    *
-    * @param data The input string.
-    * @return The result, or `null` if not found.
-    */
     fun deserialize(data: String): TreeNode? {
         val nodes = data.split(",").toMutableList()
 
-        * Solves the Codec problem.
-        *
-        * @return The result, or `null` if not found.
-        /**
-        * Solves the Codec problem.
-        *
-        * @return The result, or `null` if not found.
-        */
-        /**
-        * Solves the Codec problem.
-        *
-        * @return The result, or `null` if not found.
-        */
-        /**
-        * Solves the Codec problem.
-        *
-        * @return The result, or `null` if not found.
-        */
-        /**
-        * Solves the Codec problem.
-        *
-        * @return The result, or `null` if not found.
-        */
         fun dfsDeserialize(): TreeNode? {
             if (nodes.isEmpty()) return null
             val value = nodes.removeAt(0)
@@ -169,8 +49,10 @@ class Codec() {
     }
 }
 
+/**
  * Your Codec object will be instantiated and called as such:
  * var ser = Codec()
  * var deser = Codec()
  * var data = ser.serialize(longUrl)
  * var ans = deser.deserialize(data)
+ */

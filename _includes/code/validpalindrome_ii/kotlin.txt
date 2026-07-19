@@ -1,34 +1,6 @@
 package string
 
 class ValidPalindrome_II {
-    /**
-    * Solves the Valid Palindrome_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Valid Palindrome_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Valid Palindrome_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Valid Palindrome_II problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun validPalindrome(s: String): Boolean {
         var left = 0
         var right = s.lastIndex
@@ -45,42 +17,6 @@ class ValidPalindrome_II {
         return true
     }
 
-    /**
-    * Solves the Valid Palindrome_II problem.
-    * Takes `s` (string), `i` (integer), `j` (integer).
-    *
-    * @param s The input string.
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Valid Palindrome_II problem.
-    * Takes `s` (string), `i` (integer), `j` (integer).
-    *
-    * @param s The input string.
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Valid Palindrome_II problem.
-    * Takes `s` (string), `i` (integer), `j` (integer).
-    *
-    * @param s The input string.
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Valid Palindrome_II problem.
-    * Takes `s` (string), `i` (integer), `j` (integer).
-    *
-    * @param s The input string.
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun isPalindrome(s: String, i: Int, j: Int): Boolean {
         var left = i
         var right = j

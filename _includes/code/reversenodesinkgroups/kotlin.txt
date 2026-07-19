@@ -1,38 +1,6 @@
 package linkedlist
 
 class ReverseNodesInKGroups {
-    /**
-    * Solves the Reverse Nodes In KGroups problem.
-    * Takes `head` (linked list node reference), `k` (integer).
-    *
-    * @param head The input linked list node reference.
-    * @param k The integer parameter representing k.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Reverse Nodes In KGroups problem.
-    * Takes `head` (linked list node reference), `k` (integer).
-    *
-    * @param head The input linked list node reference.
-    * @param k The integer parameter representing k.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Reverse Nodes In KGroups problem.
-    * Takes `head` (linked list node reference), `k` (integer).
-    *
-    * @param head The input linked list node reference.
-    * @param k The integer parameter representing k.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Reverse Nodes In KGroups problem.
-    * Takes `head` (linked list node reference), `k` (integer).
-    *
-    * @param head The input linked list node reference.
-    * @param k The integer parameter representing k.
-    * @return The resulting collection (linked list node reference).
-    */
     fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
         if (head == null || k == 1) return head
 
@@ -67,34 +35,6 @@ class ReverseNodesInKGroups {
         return dummy.next
     }
 
-    /**
-    * Helper: reverse.
-    *
-    * @param start The input linked list node reference.
-    * @param end The input linked list node reference.
-    * @return The resulting collection (Pair<ListNode?, ListNode?>).
-    */
-    /**
-    * Helper: reverse.
-    *
-    * @param start The input linked list node reference.
-    * @param end The input linked list node reference.
-    * @return The resulting collection (Pair<ListNode?, ListNode?>).
-    */
-    /**
-    * Helper: reverse.
-    *
-    * @param start The input linked list node reference.
-    * @param end The input linked list node reference.
-    * @return The resulting collection (Pair<ListNode?, ListNode?>).
-    */
-    /**
-    * Helper: reverse.
-    *
-    * @param start The input linked list node reference.
-    * @param end The input linked list node reference.
-    * @return The resulting collection (Pair<ListNode?, ListNode?>).
-    */
     private fun reverse(start: ListNode?, end: ListNode?): Pair<ListNode?, ListNode?> {
         var prev: ListNode? = null
         var current = start

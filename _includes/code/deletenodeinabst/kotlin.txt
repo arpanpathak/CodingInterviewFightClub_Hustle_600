@@ -6,38 +6,6 @@ class TreeNode(var `val`: Int) {
 }
 
 class DeleteNodeinABST {
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference), `key` (integer).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @param key The integer parameter representing key.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference), `key` (integer).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @param key The integer parameter representing key.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference), `key` (integer).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @param key The integer parameter representing key.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `root` (binary tree node reference), `key` (integer).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @param key The integer parameter representing key.
-    * @return The result, or `null` if not found.
-    */
     fun deleteNode(root: TreeNode?, key: Int): TreeNode? {
         when {
             root == null -> return null
@@ -58,34 +26,6 @@ class DeleteNodeinABST {
         return root
     }
 
-    /**
-    * Solves the Tree Node problem.
-    * Takes `node` (TreeNode).
-    *
-    * @param node The TreeNode.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `node` (TreeNode).
-    *
-    * @param node The TreeNode.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `node` (TreeNode).
-    *
-    * @param node The TreeNode.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Tree Node problem.
-    * Takes `node` (TreeNode).
-    *
-    * @param node The TreeNode.
-    * @return The computed integer result.
-    */
     fun minValue(node: TreeNode): Int {
         var current = node
         while (current.left != null) {

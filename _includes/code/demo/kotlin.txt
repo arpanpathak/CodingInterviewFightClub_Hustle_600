@@ -1,34 +1,6 @@
 package microsoft
 
 
-/**
-* Solves the demo problem.
-* Takes `A` (array of integers).
-*
-* @param A The input array of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the demo problem.
-* Takes `A` (array of integers).
-*
-* @param A The input array of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the demo problem.
-* Takes `A` (array of integers).
-*
-* @param A The input array of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the demo problem.
-* Takes `A` (array of integers).
-*
-* @param A The input array of integers.
-* @return The computed integer result.
-*/
 fun solution(A: IntArray): Int {
     // Implement your solution here
     var max = A.max()

@@ -1,82 +1,10 @@
 package grid
 
 class FloodFill {
-    /**
-    * Solves the Flood Fill problem.
-    * Takes `image` (2D matrix of integers), `sr` (integer), `sc` (integer), `color` (integer).
-    *
-    * @param image The input 2D matrix of integers.
-    * @param sr The integer parameter representing sr.
-    * @param sc The integer parameter representing sc.
-    * @param color The integer parameter representing color.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Flood Fill problem.
-    * Takes `image` (2D matrix of integers), `sr` (integer), `sc` (integer), `color` (integer).
-    *
-    * @param image The input 2D matrix of integers.
-    * @param sr The integer parameter representing sr.
-    * @param sc The integer parameter representing sc.
-    * @param color The integer parameter representing color.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Flood Fill problem.
-    * Takes `image` (2D matrix of integers), `sr` (integer), `sc` (integer), `color` (integer).
-    *
-    * @param image The input 2D matrix of integers.
-    * @param sr The integer parameter representing sr.
-    * @param sc The integer parameter representing sc.
-    * @param color The integer parameter representing color.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Flood Fill problem.
-    * Takes `image` (2D matrix of integers), `sr` (integer), `sc` (integer), `color` (integer).
-    *
-    * @param image The input 2D matrix of integers.
-    * @param sr The integer parameter representing sr.
-    * @param sc The integer parameter representing sc.
-    * @param color The integer parameter representing color.
-    * @return The computed integer result.
-    */
     fun floodFill(image: Array<IntArray>, sr: Int, sc: Int, color: Int): Array<IntArray> {
         val initialColor = image[sr][sc]
         if (initialColor == color) return image // Avoid infinite recursion
 
-        /**
-        * Solves the Flood Fill problem.
-        * Takes `row` (integer), `col` (integer).
-        *
-        * @param row The integer parameter representing row.
-        * @param col The integer parameter representing col.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Flood Fill problem.
-        * Takes `row` (integer), `col` (integer).
-        *
-        * @param row The integer parameter representing row.
-        * @param col The integer parameter representing col.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Flood Fill problem.
-        * Takes `row` (integer), `col` (integer).
-        *
-        * @param row The integer parameter representing row.
-        * @param col The integer parameter representing col.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Flood Fill problem.
-        * Takes `row` (integer), `col` (integer).
-        *
-        * @param row The integer parameter representing row.
-        * @param col The integer parameter representing col.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun dfs(row: Int, col: Int) {
             if (row !in 0 until image.size || col !in 0 until image[0].size || image[row][col] != initialColor)
                 return

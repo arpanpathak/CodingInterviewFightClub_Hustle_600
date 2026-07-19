@@ -1,34 +1,6 @@
 package math
 
 class PlusOne {
-    /**
-    * Solves the Plus One problem.
-    * Takes `digits` (array of integers).
-    *
-    * @param digits The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Plus One problem.
-    * Takes `digits` (array of integers).
-    *
-    * @param digits The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Plus One problem.
-    * Takes `digits` (array of integers).
-    *
-    * @param digits The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Plus One problem.
-    * Takes `digits` (array of integers).
-    *
-    * @param digits The input array of integers.
-    * @return The computed integer result.
-    */
     fun plusOne(digits: IntArray): IntArray {
         for (i in digits.lastIndex downTo 0) {
             if (digits[i] < 9) {

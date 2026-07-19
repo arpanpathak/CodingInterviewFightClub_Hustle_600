@@ -3,80 +3,12 @@ package string.backtracking
 import java.lang.StringBuilder
 
 class GenerateParantheses {
-    /**
-    * Solves the Generate Parantheses problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Generate Parantheses problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Generate Parantheses problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Generate Parantheses problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The resulting collection (list of strings).
-    */
     fun generateParenthesis(n: Int): List<String> {
         val result = mutableListOf<String>()
         generate(n, n, StringBuilder(), result)
         return result
     }
 
-    /**
-    * Solves the Generate Parantheses problem.
-    * Takes `open` (integer), `close` (integer), `current` (StringBuilder), `result` (MutableList<String>).
-    *
-    * @param open The integer parameter representing open.
-    * @param close The integer parameter representing close.
-    * @param current The input string.
-    * @param result The input MutableList<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Generate Parantheses problem.
-    * Takes `open` (integer), `close` (integer), `current` (StringBuilder), `result` (MutableList<String>).
-    *
-    * @param open The integer parameter representing open.
-    * @param close The integer parameter representing close.
-    * @param current The input string.
-    * @param result The input MutableList<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Generate Parantheses problem.
-    * Takes `open` (integer), `close` (integer), `current` (StringBuilder), `result` (MutableList<String>).
-    *
-    * @param open The integer parameter representing open.
-    * @param close The integer parameter representing close.
-    * @param current The input string.
-    * @param result The input MutableList<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Generate Parantheses problem.
-    * Takes `open` (integer), `close` (integer), `current` (StringBuilder), `result` (MutableList<String>).
-    *
-    * @param open The integer parameter representing open.
-    * @param close The integer parameter representing close.
-    * @param current The input string.
-    * @param result The input MutableList<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun generate(open: Int, close: Int, current: StringBuilder, result: MutableList<String>) {
         if (open == 0 && close == 0) {
             result.add(current.toString())

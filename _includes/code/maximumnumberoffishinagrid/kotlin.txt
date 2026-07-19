@@ -1,70 +1,10 @@
 package grid
 
 class MaximumNumberOfFishInAGrid {
-    /**
-    * Solves the Maximum Number Of Fish In AGrid problem.
-    * Takes `grid` (2D matrix of integers).
-    *
-    * @param grid The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Number Of Fish In AGrid problem.
-    * Takes `grid` (2D matrix of integers).
-    *
-    * @param grid The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Number Of Fish In AGrid problem.
-    * Takes `grid` (2D matrix of integers).
-    *
-    * @param grid The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Number Of Fish In AGrid problem.
-    * Takes `grid` (2D matrix of integers).
-    *
-    * @param grid The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun findMaxFish(grid: Array<IntArray>): Int {
         val directions = arrayOf(1 to 0, 0 to 1, -1 to 0, 0 to -1)
         var maxFishes = 0
 
-        /**
-        * Solves the Maximum Number Of Fish In AGrid problem.
-        * Takes `row` (integer), `col` (integer).
-        *
-        * @param row The integer parameter representing row.
-        * @param col The integer parameter representing col.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Maximum Number Of Fish In AGrid problem.
-        * Takes `row` (integer), `col` (integer).
-        *
-        * @param row The integer parameter representing row.
-        * @param col The integer parameter representing col.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Maximum Number Of Fish In AGrid problem.
-        * Takes `row` (integer), `col` (integer).
-        *
-        * @param row The integer parameter representing row.
-        * @param col The integer parameter representing col.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Maximum Number Of Fish In AGrid problem.
-        * Takes `row` (integer), `col` (integer).
-        *
-        * @param row The integer parameter representing row.
-        * @param col The integer parameter representing col.
-        * @return The computed integer result.
-        */
         fun bfs(row: Int, col: Int): Int {
             val queue = ArrayDeque<Pair<Int, Int>>()
             queue.add(Pair(row, col))

@@ -1,38 +1,6 @@
 package string.hashtable
 
 class PermutationsInString {
-    /**
-    * Solves the Permutations In String problem.
-    * Takes `s1` (string), `s2` (string).
-    *
-    * @param s1 The input string.
-    * @param s2 The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Permutations In String problem.
-    * Takes `s1` (string), `s2` (string).
-    *
-    * @param s1 The input string.
-    * @param s2 The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Permutations In String problem.
-    * Takes `s1` (string), `s2` (string).
-    *
-    * @param s1 The input string.
-    * @param s2 The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Permutations In String problem.
-    * Takes `s1` (string), `s2` (string).
-    *
-    * @param s1 The input string.
-    * @param s2 The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun checkInclusion(s1: String, s2: String): Boolean {
         val targetFreq = IntArray(26)
         val windowFreq = IntArray(26)

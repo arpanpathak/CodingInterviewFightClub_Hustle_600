@@ -5,65 +5,9 @@ class DiameterOfNArrayTree {
         val children: List<Node?> = listOf()
     }
 
-    /**
-    * Solves the Diameter Of NArray Tree problem.
-    * Takes `root` (Node?).
-    *
-    * @param root The Node? (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Diameter Of NArray Tree problem.
-    * Takes `root` (Node?).
-    *
-    * @param root The Node? (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Diameter Of NArray Tree problem.
-    * Takes `root` (Node?).
-    *
-    * @param root The Node? (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Diameter Of NArray Tree problem.
-    * Takes `root` (Node?).
-    *
-    * @param root The Node? (nullable).
-    * @return The computed integer result.
-    */
     fun diameter(root: Node?): Int {
         var maxDiameter = 0
 
-        /**
-        * Solves the Diameter Of NArray Tree problem.
-        * Takes `node` (Node?).
-        *
-        * @param node The Node? (nullable).
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Diameter Of NArray Tree problem.
-        * Takes `node` (Node?).
-        *
-        * @param node The Node? (nullable).
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Diameter Of NArray Tree problem.
-        * Takes `node` (Node?).
-        *
-        * @param node The Node? (nullable).
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Diameter Of NArray Tree problem.
-        * Takes `node` (Node?).
-        *
-        * @param node The Node? (nullable).
-        * @return The computed integer result.
-        */
         fun dfs(node: Node?): Int {
             if (node == null) return 0
             var maxDepth = 0

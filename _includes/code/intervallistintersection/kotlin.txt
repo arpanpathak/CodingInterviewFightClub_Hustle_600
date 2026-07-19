@@ -1,38 +1,6 @@
 package array.twopointer
 
 class IntervalListIntersection {
-    /**
-    * Solves the Interval List Intersection problem.
-    * Takes `firstList` (2D matrix of integers), `secondList` (2D matrix of integers).
-    *
-    * @param firstList The input 2D matrix of integers.
-    * @param secondList The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Interval List Intersection problem.
-    * Takes `firstList` (2D matrix of integers), `secondList` (2D matrix of integers).
-    *
-    * @param firstList The input 2D matrix of integers.
-    * @param secondList The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Interval List Intersection problem.
-    * Takes `firstList` (2D matrix of integers), `secondList` (2D matrix of integers).
-    *
-    * @param firstList The input 2D matrix of integers.
-    * @param secondList The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Interval List Intersection problem.
-    * Takes `firstList` (2D matrix of integers), `secondList` (2D matrix of integers).
-    *
-    * @param firstList The input 2D matrix of integers.
-    * @param secondList The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun intervalIntersection(firstList: Array<IntArray>, secondList: Array<IntArray>): Array<IntArray> {
         val result = mutableListOf<IntArray>()
 

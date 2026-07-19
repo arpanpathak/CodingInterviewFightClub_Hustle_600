@@ -1,34 +1,6 @@
 package hashtable
 
 class RomanToInteger {
-    /**
-    * Solves the Roman To Integer problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Roman To Integer problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Roman To Integer problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Roman To Integer problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun romanToInt(s: String): Int {
         val romanMap = mapOf(
             'I' to 1,

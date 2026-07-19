@@ -1,38 +1,6 @@
 package linkedlist
 
 class IntersectionOfTwoLinkedList {
-    /**
-    * Solves the Intersection Of Two Linked List problem.
-    * Takes `headA` (linked list node reference), `headB` (linked list node reference).
-    *
-    * @param headA The input linked list node reference.
-    * @param headB The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Intersection Of Two Linked List problem.
-    * Takes `headA` (linked list node reference), `headB` (linked list node reference).
-    *
-    * @param headA The input linked list node reference.
-    * @param headB The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Intersection Of Two Linked List problem.
-    * Takes `headA` (linked list node reference), `headB` (linked list node reference).
-    *
-    * @param headA The input linked list node reference.
-    * @param headB The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Intersection Of Two Linked List problem.
-    * Takes `headA` (linked list node reference), `headB` (linked list node reference).
-    *
-    * @param headA The input linked list node reference.
-    * @param headB The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
     fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
         if (headA == null || headB == null) return null
 

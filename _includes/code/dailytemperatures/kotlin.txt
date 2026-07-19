@@ -1,34 +1,6 @@
 package stack
 
 class DailyTemperatures {
-    /**
-    * Solves the Daily Temperatures problem.
-    * Takes `temperatures` (array of integers).
-    *
-    * @param temperatures The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Daily Temperatures problem.
-    * Takes `temperatures` (array of integers).
-    *
-    * @param temperatures The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Daily Temperatures problem.
-    * Takes `temperatures` (array of integers).
-    *
-    * @param temperatures The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Daily Temperatures problem.
-    * Takes `temperatures` (array of integers).
-    *
-    * @param temperatures The input array of integers.
-    * @return The computed integer result.
-    */
     fun dailyTemperatures(temperatures: IntArray): IntArray {
         val result = IntArray(temperatures.size) { 0 }
         val stack = mutableListOf<Int>()

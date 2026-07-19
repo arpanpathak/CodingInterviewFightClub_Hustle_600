@@ -12,51 +12,11 @@ class NestedIterator(nestedList: List<NestedInteger>) {
         }
     }
 
-    /**
-    * Solves the Nested Iterator problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Nested Iterator problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Nested Iterator problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Nested Iterator problem.
-    *
-    * @return The computed integer result.
-    */
     fun next(): Int {
         // hasNext guarantees that the next item will be an integer
         return stack.removeLast().getInteger()!!
     }
 
-    /**
-    * Solves the Nested Iterator problem.
-    *
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Nested Iterator problem.
-    *
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Nested Iterator problem.
-    *
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Nested Iterator problem.
-    *
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun hasNext(): Boolean {
         // Make sure the top of the stack is an integer, if not, pop the nested list
         while (stack.isNotEmpty() && !stack.last().isInteger()) {

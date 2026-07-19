@@ -4,34 +4,6 @@ class LRUCache(private val capacity: Int) {
 
     private val cache: LinkedHashMap<Int, Int> = LinkedHashMap()
 
-    /**
-    * Solves the LRUCache problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the LRUCache problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the LRUCache problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the LRUCache problem.
-    * Takes `key` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @return The computed integer result.
-    */
     fun get(key: Int): Int {
         val data = cache[key] ?: -1
 
@@ -41,38 +13,6 @@ class LRUCache(private val capacity: Int) {
         return data
     }
 
-    /**
-    * Solves the LRUCache problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the LRUCache problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the LRUCache problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the LRUCache problem.
-    * Takes `key` (integer), `value` (integer).
-    *
-    * @param key The integer parameter representing key.
-    * @param value The integer parameter representing value.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun put(key: Int, value: Int) {
         if (cache.containsKey(key)) {
             cache.remove(key)

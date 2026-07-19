@@ -7,38 +7,6 @@ class LowestCommonAncestor_III {
         var parent: Node? = null
     }
 
-    /**
-    * Solves the Lowest Common Ancestor_III problem.
-    * Takes `p` (Node?), `q` (Node?).
-    *
-    * @param p The Node? (nullable).
-    * @param q The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Lowest Common Ancestor_III problem.
-    * Takes `p` (Node?), `q` (Node?).
-    *
-    * @param p The Node? (nullable).
-    * @param q The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Lowest Common Ancestor_III problem.
-    * Takes `p` (Node?), `q` (Node?).
-    *
-    * @param p The Node? (nullable).
-    * @param q The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Solves the Lowest Common Ancestor_III problem.
-    * Takes `p` (Node?), `q` (Node?).
-    *
-    * @param p The Node? (nullable).
-    * @param q The Node? (nullable).
-    * @return The result, or `null` if not found.
-    */
     fun lowestCommonAncestor(p: Node?, q: Node?): Node? {
         var parent1 = p
         var parent2 = q

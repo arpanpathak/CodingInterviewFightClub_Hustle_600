@@ -1,34 +1,6 @@
 package hashtable
 
 class FirstUniqueCharacter {
-    /**
-    * Solves the First Unique Character problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the First Unique Character problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the First Unique Character problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the First Unique Character problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun firstUniqChar(s: String): Int {
         val count = s.groupingBy { it }.eachCount()
         return s.indexOfFirst { count[it] == 1 }

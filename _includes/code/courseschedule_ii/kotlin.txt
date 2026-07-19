@@ -8,38 +8,6 @@ class CourseSchedule_II {
 
     private enum class NodeStatus { UNVISITED, EXPLORING, DONE }
 
-    /**
-    * Solves the Course Schedule_II problem.
-    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @param prerequisites The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Course Schedule_II problem.
-    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @param prerequisites The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Course Schedule_II problem.
-    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @param prerequisites The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Course Schedule_II problem.
-    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @param prerequisites The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
         // Initialize graph, status, and result array
         status = Array(numCourses) { NodeStatus.UNVISITED }
@@ -59,60 +27,8 @@ class CourseSchedule_II {
         return result
     }
 
-    /**
-    * Helper: has cycle.
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: has cycle.
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: has cycle.
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: has cycle.
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     private fun hasCycle(numCourses: Int): Boolean {
         // Nested DFS function for checking cycles and building the result
-        /**
-        * Solves the Course Schedule_II problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Course Schedule_II problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Course Schedule_II problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Course Schedule_II problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
         fun dfs(node: Int): Boolean {
             when (status[node]) {
                 // If an already visited node re-appears then it means we looped back to an exploring node

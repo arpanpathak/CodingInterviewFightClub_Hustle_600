@@ -1,34 +1,6 @@
 package linkedlist
 
 class ReverseLinkedList {
-    /**
-    * Solves the Reverse Linked List problem.
-    * Takes `head` (linked list node reference).
-    *
-    * @param head The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Reverse Linked List problem.
-    * Takes `head` (linked list node reference).
-    *
-    * @param head The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Reverse Linked List problem.
-    * Takes `head` (linked list node reference).
-    *
-    * @param head The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Reverse Linked List problem.
-    * Takes `head` (linked list node reference).
-    *
-    * @param head The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
     fun reverseList(head: ListNode?): ListNode? {
         if (head?.next == null) {
             return head

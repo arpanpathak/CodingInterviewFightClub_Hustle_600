@@ -4,68 +4,12 @@ class WordSearch_II {
 
     data class Trie(val children: Map<Char, Trie>, val isWord: Boolean)
 
-    /**
-    * Solves the Word Search_II problem.
-    * Takes `board` (Array<CharArray>), `words` (Array<String>).
-    *
-    * @param board The input Array<CharArray>.
-    * @param words The input Array<String>.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Word Search_II problem.
-    * Takes `board` (Array<CharArray>), `words` (Array<String>).
-    *
-    * @param board The input Array<CharArray>.
-    * @param words The input Array<String>.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Word Search_II problem.
-    * Takes `board` (Array<CharArray>), `words` (Array<String>).
-    *
-    * @param board The input Array<CharArray>.
-    * @param words The input Array<String>.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Word Search_II problem.
-    * Takes `board` (Array<CharArray>), `words` (Array<String>).
-    *
-    * @param board The input Array<CharArray>.
-    * @param words The input Array<String>.
-    * @return The resulting collection (list of strings).
-    */
     fun findWords(board: Array<CharArray>, words: Array<String>): List<String> {
         TODO()
     }
 
     companion object {
         @JvmStatic
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun main(args: Array<String>) {
 
         }

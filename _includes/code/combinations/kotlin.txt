@@ -1,73 +1,9 @@
 package array.Combinatorics
 
 class Combinations {
-    /**
-    * Solves the Combinations problem.
-    * Takes `n` (integer), `k` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Combinations problem.
-    * Takes `n` (integer), `k` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Combinations problem.
-    * Takes `n` (integer), `k` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Combinations problem.
-    * Takes `n` (integer), `k` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
     fun combine(n: Int, k: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
-        /**
-        * Solves the Combinations problem.
-        * Takes `n` (integer), `k` (integer).
-        *
-        * @param n The integer parameter representing n.
-        * @param k The integer parameter representing k.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Combinations problem.
-        * Takes `n` (integer), `k` (integer).
-        *
-        * @param n The integer parameter representing n.
-        * @param k The integer parameter representing k.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Combinations problem.
-        * Takes `n` (integer), `k` (integer).
-        *
-        * @param n The integer parameter representing n.
-        * @param k The integer parameter representing k.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Combinations problem.
-        * Takes `n` (integer), `k` (integer).
-        *
-        * @param n The integer parameter representing n.
-        * @param k The integer parameter representing k.
-        * @return The computed integer result.
-        */
         fun combine(start: Int, n: Int, k: Int, current: MutableList<Int> = mutableListOf()) {
             if (current.size == k) {
                 result.add(current.toList())

@@ -3,38 +3,6 @@ package tree.bst
 import kotlin.math.abs
 
 class ClosestBinarySearchTreeValue {
-    /**
-    * Solves the Closest Binary Search Tree Value problem.
-    * Takes `root` (binary tree node reference), `target` (double-precision floating point).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @param target The double-precision floating point parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Closest Binary Search Tree Value problem.
-    * Takes `root` (binary tree node reference), `target` (double-precision floating point).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @param target The double-precision floating point parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Closest Binary Search Tree Value problem.
-    * Takes `root` (binary tree node reference), `target` (double-precision floating point).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @param target The double-precision floating point parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Closest Binary Search Tree Value problem.
-    * Takes `root` (binary tree node reference), `target` (double-precision floating point).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @param target The double-precision floating point parameter representing target.
-    * @return The computed integer result.
-    */
     fun closestValue(root: TreeNode?, target: Double): Int {
         var closest = root?.`val` ?: 0
         var current = root

@@ -4,34 +4,6 @@ import kotlinx.coroutines.*
 import kotlin.random.Random
 import kotlin.system.measureTimeMillis
 
-/**
-* Solves the parallelmatrixmultiplication problem.
-* Takes `size` (integer).
-*
-* @param size The integer parameter representing size.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelmatrixmultiplication problem.
-* Takes `size` (integer).
-*
-* @param size The integer parameter representing size.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelmatrixmultiplication problem.
-* Takes `size` (integer).
-*
-* @param size The integer parameter representing size.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelmatrixmultiplication problem.
-* Takes `size` (integer).
-*
-* @param size The integer parameter representing size.
-* @return The computed integer result.
-*/
 fun generateRandomMatrix(size: Int): Array<IntArray> =
     Array(size) { IntArray(size) { Random.nextInt(100) } }
 
@@ -50,38 +22,6 @@ fun matrixMultiplySequential(a: Array<IntArray>, b: Array<IntArray>): Array<IntA
     return result
 }
 
-/**
-* Solves the parallelmatrixmultiplication problem.
-* Takes `a` (2D matrix of integers), `b` (2D matrix of integers).
-*
-* @param a The input 2D matrix of integers.
-* @param b The input 2D matrix of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelmatrixmultiplication problem.
-* Takes `a` (2D matrix of integers), `b` (2D matrix of integers).
-*
-* @param a The input 2D matrix of integers.
-* @param b The input 2D matrix of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelmatrixmultiplication problem.
-* Takes `a` (2D matrix of integers), `b` (2D matrix of integers).
-*
-* @param a The input 2D matrix of integers.
-* @param b The input 2D matrix of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the parallelmatrixmultiplication problem.
-* Takes `a` (2D matrix of integers), `b` (2D matrix of integers).
-*
-* @param a The input 2D matrix of integers.
-* @param b The input 2D matrix of integers.
-* @return The computed integer result.
-*/
 suspend fun matrixMultiplyParallel(a: Array<IntArray>, b: Array<IntArray>): Array<IntArray> = coroutineScope {
     val result = Array(a.size) { IntArray(b[0].size) }
     val numCoroutines = Runtime.getRuntime().availableProcessors()
@@ -104,26 +44,6 @@ suspend fun matrixMultiplyParallel(a: Array<IntArray>, b: Array<IntArray>): Arra
     result
 }
 
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() {
     val size = 2000
     val a = generateRandomMatrix(size)

@@ -1,57 +1,9 @@
 package math.stack
 
 class BasicCalculator_III {
-    /**
-    * Solves the Basic Calculator_III problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_III problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_III problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_III problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun calculate1(s: String): Int {
         var index = 0
 
-        /**
-        * Solves the Basic Calculator_III problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Basic Calculator_III problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Basic Calculator_III problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Basic Calculator_III problem.
-        *
-        * @return The computed integer result.
-        */
         fun evaluate(): Int {
             val stack = ArrayDeque<Int>()
             var num = 0
@@ -90,57 +42,9 @@ class BasicCalculator_III {
         return evaluate()
     }
 
-    /**
-    * Solves the Basic Calculator_III problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_III problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_III problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_III problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun calculate(s: String): Int {
         var index = 0
 
-        /**
-        * Solves the Basic Calculator_III problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Basic Calculator_III problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Basic Calculator_III problem.
-        *
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Basic Calculator_III problem.
-        *
-        * @return The computed integer result.
-        */
         fun evaluate(): Int {
             var total = 0
             var current = 0

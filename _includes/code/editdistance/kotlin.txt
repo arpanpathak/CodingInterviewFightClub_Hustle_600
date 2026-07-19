@@ -3,74 +3,10 @@ package string.dynamic_programming
 class EditDistance {
     private var dp = mutableMapOf<String,Int>()
 
-    /**
-    * Solves the Edit Distance problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Edit Distance problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Edit Distance problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Edit Distance problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return The computed integer result.
-    */
     fun minDistance(word1: String, word2: String): Int {
         return minDistance(word1, word2, word1.length, word2.length)
     }
 
-    /**
-    * Solves the Edit Distance problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Edit Distance problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Edit Distance problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Edit Distance problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return The computed integer result.
-    */
     fun minDistance(word1: String, word2: String, m: Int, n: Int): Int {
         val state = "$m.$n"
 
@@ -90,30 +26,6 @@ class EditDistance {
 
     companion object {
         @JvmStatic
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Entry point for the program.
-        *
-        * @param args The input Array<String>.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun main(args: Array<String>) {
         }
     }

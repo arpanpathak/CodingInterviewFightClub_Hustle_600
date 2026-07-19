@@ -5,34 +5,6 @@ import java.util.LinkedList
 class NumberOfRecentCalls {
     val deque = LinkedList<Int>()
     val TIME_WINDOW_MS = 3000
-    /**
-    * Solves the Number Of Recent Calls problem.
-    * Takes `t` (integer).
-    *
-    * @param t The integer parameter representing t.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Number Of Recent Calls problem.
-    * Takes `t` (integer).
-    *
-    * @param t The integer parameter representing t.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Number Of Recent Calls problem.
-    * Takes `t` (integer).
-    *
-    * @param t The integer parameter representing t.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Number Of Recent Calls problem.
-    * Takes `t` (integer).
-    *
-    * @param t The integer parameter representing t.
-    * @return The computed integer result.
-    */
     fun ping(t: Int): Int {
         while (deque.isNotEmpty() && ( t - deque.first()) > TIME_WINDOW_MS)
             deque.removeFirst()

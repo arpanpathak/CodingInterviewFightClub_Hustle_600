@@ -18,96 +18,16 @@ class RequestBuilder {
     private var body: RequestBody? = null
     private val headers = mutableMapOf<String, String>()
 
-    /**
-    * Solves the Request Builder problem.
-    * Takes `vararg headers` (Pair<String).
-    *
-    * @param vararg headers The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Request Builder problem.
-    * Takes `vararg headers` (Pair<String).
-    *
-    * @param vararg headers The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Request Builder problem.
-    * Takes `vararg headers` (Pair<String).
-    *
-    * @param vararg headers The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Request Builder problem.
-    * Takes `vararg headers` (Pair<String).
-    *
-    * @param vararg headers The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun headers(vararg headers: Pair<String, String>) {
         headers.forEach {
             this.headers[it.first] = it.second
         }
     }
 
-    /**
-    * Solves the Request Builder problem.
-    * Takes `content` (string), `contentType` (String = "application/json").
-    *
-    * @param content The input string.
-    * @param contentType The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Request Builder problem.
-    * Takes `content` (string), `contentType` (String = "application/json").
-    *
-    * @param content The input string.
-    * @param contentType The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Request Builder problem.
-    * Takes `content` (string), `contentType` (String = "application/json").
-    *
-    * @param content The input string.
-    * @param contentType The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Request Builder problem.
-    * Takes `content` (string), `contentType` (String = "application/json").
-    *
-    * @param content The input string.
-    * @param contentType The input string.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun body(content: String, contentType: String = "application/json") {
         body = content.toRequestBody(contentType.toMediaType())
     }
 
-    /**
-    * Solves the Request Builder problem.
-    *
-    * @return The computed result (Request).
-    */
-    /**
-    * Solves the Request Builder problem.
-    *
-    * @return The computed result (Request).
-    */
-    /**
-    * Solves the Request Builder problem.
-    *
-    * @return The computed result (Request).
-    */
-    /**
-    * Solves the Request Builder problem.
-    *
-    * @return The computed result (Request).
-    */
     fun build(): Request = Request.Builder()
         .url(url)
         .method(method, body)
@@ -133,26 +53,6 @@ fun Response.prettyPrintJson(): String {
     return "No content to display"
 }
 
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 suspend fun main() {
     val client = OkHttpClient()
 

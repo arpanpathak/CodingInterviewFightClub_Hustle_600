@@ -1,38 +1,6 @@
 package simulation
 
 class TextJustification {
-    /**
-    * Solves the Text Justification problem.
-    * Takes `words` (Array<String>), `maxWidth` (integer).
-    *
-    * @param words The input Array<String>.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Text Justification problem.
-    * Takes `words` (Array<String>), `maxWidth` (integer).
-    *
-    * @param words The input Array<String>.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Text Justification problem.
-    * Takes `words` (Array<String>), `maxWidth` (integer).
-    *
-    * @param words The input Array<String>.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Text Justification problem.
-    * Takes `words` (Array<String>), `maxWidth` (integer).
-    *
-    * @param words The input Array<String>.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting collection (list of strings).
-    */
     fun fullJustify(words: Array<String>, maxWidth: Int): List<String> {
         val result = mutableListOf<String>()
         var currentLine = mutableListOf<String>()
@@ -54,38 +22,6 @@ class TextJustification {
         return result
     }
 
-    /**
-    * Helper: justify line.
-    *
-    * @param words The input list of strings.
-    * @param currentLength The integer parameter representing currentLength.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: justify line.
-    *
-    * @param words The input list of strings.
-    * @param currentLength The integer parameter representing currentLength.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: justify line.
-    *
-    * @param words The input list of strings.
-    * @param currentLength The integer parameter representing currentLength.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: justify line.
-    *
-    * @param words The input list of strings.
-    * @param currentLength The integer parameter representing currentLength.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
     private fun justifyLine(words: List<String>, currentLength: Int, maxWidth: Int): String {
         if (words.size == 1) {
             return buildString(words[0], maxWidth)
@@ -112,34 +48,6 @@ class TextJustification {
         return sb.toString()
     }
 
-    /**
-    * Helper: justify last line.
-    *
-    * @param words The input list of strings.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: justify last line.
-    *
-    * @param words The input list of strings.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: justify last line.
-    *
-    * @param words The input list of strings.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: justify last line.
-    *
-    * @param words The input list of strings.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
     private fun justifyLastLine(words: List<String>, maxWidth: Int): String {
         val sb = StringBuilder()
         for (i in words.indices) {
@@ -156,34 +64,6 @@ class TextJustification {
         return sb.toString()
     }
 
-    /**
-    * Helper: build string.
-    *
-    * @param word The input string.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: build string.
-    *
-    * @param word The input string.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: build string.
-    *
-    * @param word The input string.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
-    /**
-    * Helper: build string.
-    *
-    * @param word The input string.
-    * @param maxWidth The integer parameter representing maxWidth.
-    * @return The resulting string.
-    */
     private fun buildString(word: String, maxWidth: Int): String {
         val sb = StringBuilder(word)
         while (sb.length < maxWidth) {

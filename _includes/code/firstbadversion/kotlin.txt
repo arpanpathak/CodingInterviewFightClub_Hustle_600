@@ -1,93 +1,13 @@
 package binarysearch
 
 abstract class VersionControl {
-    /**
-    * Solves the Version Control problem.
-    * Takes `mid` (integer).
-    *
-    * @param mid The integer parameter representing mid.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `mid` (integer).
-    *
-    * @param mid The integer parameter representing mid.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `mid` (integer).
-    *
-    * @param mid The integer parameter representing mid.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `mid` (integer).
-    *
-    * @param mid The integer parameter representing mid.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun isBadVersion(mid: Int): Boolean {
         return false // Return dummy value
     }
 
-    /**
-    * Solves the Version Control problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
     abstract fun firstBadVersion(n: Int) : Int
 }
 class FirstBadVersion: VersionControl() {
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
     override fun firstBadVersion(n: Int) : Int {
         var start = 1
         var end = n

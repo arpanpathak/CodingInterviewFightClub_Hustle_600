@@ -1,38 +1,6 @@
 package string.sliding_window
 
 class MinimumWindowSubstring {
-    /**
-    * Solves the Minimum Window Substring problem.
-    * Takes `s` (string), `t` (string).
-    *
-    * @param s The input string.
-    * @param t The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Minimum Window Substring problem.
-    * Takes `s` (string), `t` (string).
-    *
-    * @param s The input string.
-    * @param t The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Minimum Window Substring problem.
-    * Takes `s` (string), `t` (string).
-    *
-    * @param s The input string.
-    * @param t The input string.
-    * @return The resulting string.
-    */
-    /**
-    * Solves the Minimum Window Substring problem.
-    * Takes `s` (string), `t` (string).
-    *
-    * @param s The input string.
-    * @param t The input string.
-    * @return The resulting string.
-    */
     fun minWindow(s: String, t: String): String {
         // Return early if either string is empty
         if (s.isEmpty() || t.isEmpty()) return ""

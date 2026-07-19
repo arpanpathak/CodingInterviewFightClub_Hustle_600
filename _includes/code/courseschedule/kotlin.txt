@@ -5,60 +5,8 @@ class CourseSchedule {
     private lateinit var status: Array<NodeStatus>
     private enum class NodeStatus { UNVISITED, EXPLORING, DONE }
 
-    /**
-    * Helper: has cycle.
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: has cycle.
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: has cycle.
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: has cycle.
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     private fun hasCycle(numCourses: Int): Boolean {
         // Define dfs function inside hasCycle to limit its scope
-        /**
-        * Solves the Course Schedule problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Course Schedule problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Course Schedule problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Course Schedule problem.
-        * Takes `node` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
         fun dfs(node: Int): Boolean = when (status[node]) {
             NodeStatus.EXPLORING -> true
             NodeStatus.DONE -> false
@@ -80,38 +28,6 @@ class CourseSchedule {
         return false
     }
 
-    /**
-    * Solves the Course Schedule problem.
-    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @param prerequisites The input 2D matrix of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Course Schedule problem.
-    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @param prerequisites The input 2D matrix of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Course Schedule problem.
-    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @param prerequisites The input 2D matrix of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Course Schedule problem.
-    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
-    *
-    * @param numCourses The integer parameter representing numCourses.
-    * @param prerequisites The input 2D matrix of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
         // Reset graph for each invocation to handle multiple calls
         graph = mutableMapOf()

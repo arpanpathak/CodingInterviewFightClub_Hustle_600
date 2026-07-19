@@ -5,34 +5,6 @@ import kotlin.system.measureTimeMillis
 import kotlin.random.Random
 
 // Non-parallel function to find the maximum value in the entire array
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers).
-*
-* @param array The input array of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers).
-*
-* @param array The input array of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers).
-*
-* @param array The input array of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers).
-*
-* @param array The input array of integers.
-* @return The computed integer result.
-*/
 fun findMaxNonParallel(array: IntArray): Int {
     var max = array[0]
     for (num in array) {
@@ -44,42 +16,6 @@ fun findMaxNonParallel(array: IntArray): Int {
 }
 
 // Function to find the maximum in a part of the array (used in the parallel approach)
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers), `start` (integer), `end` (integer).
-*
-* @param array The input array of integers.
-* @param start The integer parameter representing start.
-* @param end The integer parameter representing end.
-* @return The computed integer result.
-*/
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers), `start` (integer), `end` (integer).
-*
-* @param array The input array of integers.
-* @param start The integer parameter representing start.
-* @param end The integer parameter representing end.
-* @return The computed integer result.
-*/
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers), `start` (integer), `end` (integer).
-*
-* @param array The input array of integers.
-* @param start The integer parameter representing start.
-* @param end The integer parameter representing end.
-* @return The computed integer result.
-*/
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers), `start` (integer), `end` (integer).
-*
-* @param array The input array of integers.
-* @param start The integer parameter representing start.
-* @param end The integer parameter representing end.
-* @return The computed integer result.
-*/
 suspend fun findMaxInSegment(array: IntArray, start: Int, end: Int): Int {
     var max = array[start]
     for (i in start + 1 until end) {
@@ -91,38 +27,6 @@ suspend fun findMaxInSegment(array: IntArray, start: Int, end: Int): Int {
 }
 
 // Parallel function to find the maximum using coroutines
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers), `numCoroutines` (Int = Runtime.getRuntime().
-*
-* @param array The input array of integers.
-* @param numCoroutines The Int = Runtime.getRuntime(.
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers), `numCoroutines` (Int = Runtime.getRuntime().
-*
-* @param array The input array of integers.
-* @param numCoroutines The Int = Runtime.getRuntime(.
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers), `numCoroutines` (Int = Runtime.getRuntime().
-*
-* @param array The input array of integers.
-* @param numCoroutines The Int = Runtime.getRuntime(.
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Solves the findmaxinarray problem.
-* Takes `array` (array of integers), `numCoroutines` (Int = Runtime.getRuntime().
-*
-* @param array The input array of integers.
-* @param numCoroutines The Int = Runtime.getRuntime(.
-* @return Unit (no return value, modifies state in-place).
-*/
 suspend fun findMaxParallel(array: IntArray, numCoroutines: Int = Runtime.getRuntime().availableProcessors()): Int = coroutineScope {
     val segmentSize = array.size / numCoroutines
     val deferredResults = (0 until numCoroutines).map { index ->
@@ -135,26 +39,6 @@ suspend fun findMaxParallel(array: IntArray, numCoroutines: Int = Runtime.getRun
     deferredResults.awaitAll().maxOrNull() ?: Int.MIN_VALUE
 }
 
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() {
     // Generate a large array with random values
     val size = 1_000_000

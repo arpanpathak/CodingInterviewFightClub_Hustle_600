@@ -1,42 +1,6 @@
 package tree
 
 class MinimumTimeToCollectAllApplesInATree {
-    /**
-    * Solves the Minimum Time To Collect All Apples In ATree problem.
-    * Takes `n` (integer), `edges` (2D matrix of integers), `hasApple` (List<Boolean>).
-    *
-    * @param n The integer parameter representing n.
-    * @param edges The input 2D matrix of integers.
-    * @param hasApple The input List<Boolean>.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Minimum Time To Collect All Apples In ATree problem.
-    * Takes `n` (integer), `edges` (2D matrix of integers), `hasApple` (List<Boolean>).
-    *
-    * @param n The integer parameter representing n.
-    * @param edges The input 2D matrix of integers.
-    * @param hasApple The input List<Boolean>.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Minimum Time To Collect All Apples In ATree problem.
-    * Takes `n` (integer), `edges` (2D matrix of integers), `hasApple` (List<Boolean>).
-    *
-    * @param n The integer parameter representing n.
-    * @param edges The input 2D matrix of integers.
-    * @param hasApple The input List<Boolean>.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Minimum Time To Collect All Apples In ATree problem.
-    * Takes `n` (integer), `edges` (2D matrix of integers), `hasApple` (List<Boolean>).
-    *
-    * @param n The integer parameter representing n.
-    * @param edges The input 2D matrix of integers.
-    * @param hasApple The input List<Boolean>.
-    * @return The computed integer result.
-    */
     fun minTime(n: Int, edges: Array<IntArray>, hasApple: List<Boolean>): Int {
         // Build the graph as a list of lists (adjacency list representation)
         val graph = Array(n) { mutableListOf<Int>() }
@@ -46,38 +10,6 @@ class MinimumTimeToCollectAllApplesInATree {
         }
 
         // DFS function to calculate the total time
-        /**
-        * Solves the Minimum Time To Collect All Apples In ATree problem.
-        * Takes `node` (integer), `parent` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @param parent The integer parameter representing parent.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Minimum Time To Collect All Apples In ATree problem.
-        * Takes `node` (integer), `parent` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @param parent The integer parameter representing parent.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Minimum Time To Collect All Apples In ATree problem.
-        * Takes `node` (integer), `parent` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @param parent The integer parameter representing parent.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Minimum Time To Collect All Apples In ATree problem.
-        * Takes `node` (integer), `parent` (integer).
-        *
-        * @param node The integer parameter representing node.
-        * @param parent The integer parameter representing parent.
-        * @return The computed integer result.
-        */
         fun dfs(node: Int, parent: Int): Int {
             var totalTime = 0
             // Use forEach to iterate over each neighbor

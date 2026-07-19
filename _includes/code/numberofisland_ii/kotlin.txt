@@ -6,34 +6,6 @@ class NumberOfIsland_II {
         val rank = mutableMapOf<Pair<Int, Int>, Int>()
         var count = 0
 
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `x` (Pair<Int).
-        *
-        * @param x The Pair<Int.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `x` (Pair<Int).
-        *
-        * @param x The Pair<Int.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `x` (Pair<Int).
-        *
-        * @param x The Pair<Int.
-        * @return The computed integer result.
-        */
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `x` (Pair<Int).
-        *
-        * @param x The Pair<Int.
-        * @return The computed integer result.
-        */
         fun find(x: Pair<Int, Int>): Pair<Int, Int> {
             if (parent[x] != x) {
                 parent[x] = find(parent[x]!!) // Path compression
@@ -41,38 +13,6 @@ class NumberOfIsland_II {
             return parent[x]!!
         }
 
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `x` (Pair<Int), `y` (Pair<Int).
-        *
-        * @param x The Pair<Int.
-        * @param y The Pair<Int.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `x` (Pair<Int), `y` (Pair<Int).
-        *
-        * @param x The Pair<Int.
-        * @param y The Pair<Int.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `x` (Pair<Int), `y` (Pair<Int).
-        *
-        * @param x The Pair<Int.
-        * @param y The Pair<Int.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `x` (Pair<Int), `y` (Pair<Int).
-        *
-        * @param x The Pair<Int.
-        * @param y The Pair<Int.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun union(x: Pair<Int, Int>, y: Pair<Int, Int>) {
             val rootX = find(x)
             val rootY = find(y)
@@ -89,34 +29,6 @@ class NumberOfIsland_II {
             count--
         }
 
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `position` (Pair<Int).
-        *
-        * @param position The Pair<Int.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `position` (Pair<Int).
-        *
-        * @param position The Pair<Int.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `position` (Pair<Int).
-        *
-        * @param position The Pair<Int.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Number Of Island_II problem.
-        * Takes `position` (Pair<Int).
-        *
-        * @param position The Pair<Int.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun addLand(position: Pair<Int, Int>) {
             if (parent.containsKey(position)) return
             parent[position] = position
@@ -125,42 +37,6 @@ class NumberOfIsland_II {
         }
     }
 
-    /**
-    * Solves the Number Of Island_II problem.
-    * Takes `m` (integer), `n` (integer), `positions` (2D matrix of integers).
-    *
-    * @param m The integer parameter representing m.
-    * @param n The integer parameter representing n.
-    * @param positions The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Number Of Island_II problem.
-    * Takes `m` (integer), `n` (integer), `positions` (2D matrix of integers).
-    *
-    * @param m The integer parameter representing m.
-    * @param n The integer parameter representing n.
-    * @param positions The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Number Of Island_II problem.
-    * Takes `m` (integer), `n` (integer), `positions` (2D matrix of integers).
-    *
-    * @param m The integer parameter representing m.
-    * @param n The integer parameter representing n.
-    * @param positions The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Number Of Island_II problem.
-    * Takes `m` (integer), `n` (integer), `positions` (2D matrix of integers).
-    *
-    * @param m The integer parameter representing m.
-    * @param n The integer parameter representing n.
-    * @param positions The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
     fun numIslands2(m: Int, n: Int, positions: Array<IntArray>): List<Int> {
         val uf = UnionFind()
         val result = mutableListOf<Int>()

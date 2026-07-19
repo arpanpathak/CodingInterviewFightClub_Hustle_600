@@ -5,66 +5,10 @@ class UnionFind<T> {
 
     private val nodes = mutableMapOf<T, Node<T>>()
 
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T).
-    *
-    * @param x The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T).
-    *
-    * @param x The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T).
-    *
-    * @param x The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T).
-    *
-    * @param x The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun add(x: T) {
         nodes.putIfAbsent(x, Node(x, 0))
     }
 
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T).
-    *
-    * @param x The T.
-    * @return The computed result (T).
-    */
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T).
-    *
-    * @param x The T.
-    * @return The computed result (T).
-    */
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T).
-    *
-    * @param x The T.
-    * @return The computed result (T).
-    */
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T).
-    *
-    * @param x The T.
-    * @return The computed result (T).
-    */
     fun find(x: T): T {
         val node = nodes[x] ?: throw IllegalAccessException("Value $x not found")
 
@@ -74,38 +18,6 @@ class UnionFind<T> {
         return node.parent
     }
 
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T), `y` (T).
-    *
-    * @param x The T.
-    * @param y The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T), `y` (T).
-    *
-    * @param x The T.
-    * @param y The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T), `y` (T).
-    *
-    * @param x The T.
-    * @param y The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Union Find problem.
-    * Takes `x` (T), `y` (T).
-    *
-    * @param x The T.
-    * @param y The T.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun union(x: T, y: T) {
         val rootX = find(x)
         val rootY = find(y)

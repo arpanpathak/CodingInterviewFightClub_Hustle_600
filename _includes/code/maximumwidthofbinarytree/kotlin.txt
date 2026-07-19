@@ -5,34 +5,6 @@ import java.util.*
 class MaximumWidthOfBinaryTree {
     data class Node(var node: TreeNode?, var index: Int)
 
-    /**
-    * Solves the Maximum Width Of Binary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Width Of Binary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Width Of Binary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Width Of Binary Tree problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
     fun widthOfBinaryTree(root: TreeNode?): Int {
         val queue: Queue<Node> = LinkedList<Node>()
         var max = 0

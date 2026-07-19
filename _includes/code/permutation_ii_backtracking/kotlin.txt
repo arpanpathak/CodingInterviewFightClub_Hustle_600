@@ -2,66 +2,10 @@ package array.Combinatorics
 
 // Warning wrong answer ,  fixing the algorithm
 class Permutation_II_Backtracking {
-    /**
-    * Solves the Permutation_II_Backtracking problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Permutation_II_Backtracking problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Permutation_II_Backtracking problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Permutation_II_Backtracking problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun permuteUnique(nums: IntArray): List<List<Int>> {
         val res = ArrayList<List<Int>>()
         val seen = BooleanArray(nums.size)
 
-        /**
-        * Solves the Permutation_II_Backtracking problem.
-        * Takes `path` (ArrayList<Int>).
-        *
-        * @param path The input ArrayList<Int>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Permutation_II_Backtracking problem.
-        * Takes `path` (ArrayList<Int>).
-        *
-        * @param path The input ArrayList<Int>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Permutation_II_Backtracking problem.
-        * Takes `path` (ArrayList<Int>).
-        *
-        * @param path The input ArrayList<Int>.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Permutation_II_Backtracking problem.
-        * Takes `path` (ArrayList<Int>).
-        *
-        * @param path The input ArrayList<Int>.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun dfs(path: ArrayList<Int>) {
             if (path.size == nums.size) {
                 res.add(path.toList())

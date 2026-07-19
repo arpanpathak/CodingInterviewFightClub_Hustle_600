@@ -1,34 +1,6 @@
 package bitset
 
 class ReverseBits {
-    /**
-    * Solves the Reverse Bits problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Reverse Bits problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Reverse Bits problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Reverse Bits problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
     fun reverseBits(n: Int): Int {
         var num = n
         var result = 0

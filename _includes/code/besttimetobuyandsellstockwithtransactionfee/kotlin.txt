@@ -2,38 +2,6 @@ package stock_market.dp
 
 class BestTimeToBuyAndSellStockWithTransactionFee {
 
-    /**
-    * Solves the Best Time To Buy And Sell Stock With Transaction Fee problem.
-    * Takes `prices` (array of integers), `fee` (integer).
-    *
-    * @param prices The input array of integers.
-    * @param fee The integer parameter representing fee.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Best Time To Buy And Sell Stock With Transaction Fee problem.
-    * Takes `prices` (array of integers), `fee` (integer).
-    *
-    * @param prices The input array of integers.
-    * @param fee The integer parameter representing fee.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Best Time To Buy And Sell Stock With Transaction Fee problem.
-    * Takes `prices` (array of integers), `fee` (integer).
-    *
-    * @param prices The input array of integers.
-    * @param fee The integer parameter representing fee.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Best Time To Buy And Sell Stock With Transaction Fee problem.
-    * Takes `prices` (array of integers), `fee` (integer).
-    *
-    * @param prices The input array of integers.
-    * @param fee The integer parameter representing fee.
-    * @return The computed integer result.
-    */
     fun maxProfit(prices: IntArray, fee: Int): Int {
         if (prices.isEmpty()) return 0
 

@@ -1,34 +1,6 @@
 package math.stack
 
 class BasicCalculator_I {
-    /**
-    * Solves the Basic Calculator_I problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_I problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_I problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Basic Calculator_I problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
     fun calculate(s: String): Int {
         val stack = mutableListOf<Int>()
         var result = 0

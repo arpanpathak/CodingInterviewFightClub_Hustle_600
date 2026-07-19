@@ -1,34 +1,6 @@
 package array.hashtable
 
 class LongestConsecutiveSequence {
-    /**
-    * Solves the Longest Consecutive Sequence problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Consecutive Sequence problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Consecutive Sequence problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Longest Consecutive Sequence problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun longestConsecutive(nums: IntArray): Int {
         val set = nums.toSet()
         var maxLength = 0

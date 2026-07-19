@@ -3,34 +3,6 @@ package dynamic_programming
 import dynamic_programming.MaximumProductSubarray.maxProduct
 
 object MaximumProductSubarray {
-    /**
-    * Solves the Maximum Product Subarray problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Product Subarray problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Product Subarray problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Maximum Product Subarray problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun maxProduct(nums: IntArray): Int {
         // Edge case: empty array
         if (nums.isEmpty()) return 0
@@ -70,30 +42,6 @@ object MaximumProductSubarray {
     }
 
     @JvmStatic
-    /**
-    * Entry point for the program.
-    *
-    * @param args The input Array<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Entry point for the program.
-    *
-    * @param args The input Array<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Entry point for the program.
-    *
-    * @param args The input Array<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Entry point for the program.
-    *
-    * @param args The input Array<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
     fun main(args: Array<String>) {
         val tests = listOf(
             intArrayOf(2, 3, -2, 4) to 6,     // Regular case

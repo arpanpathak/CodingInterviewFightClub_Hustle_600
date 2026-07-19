@@ -14,26 +14,6 @@ class RandomPickWithWeight (w: IntArray) {
         totalSum = prefixSum.last()
     }
 
-    /**
-    * Solves the Random Pick With Weight problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Random Pick With Weight problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Random Pick With Weight problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Random Pick With Weight problem.
-    *
-    * @return The computed integer result.
-    */
     fun pickIndex(): Int {
         val randomPick = Random.nextInt(totalSum)
         var (start, end) = 0 to w.size
