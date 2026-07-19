@@ -11,93 +11,45 @@ next_chapter:
 
 # Binary Search
 
-> **21 problems**
+> **21 problems** — Master the art of divide-and-conquer searching. Binary search finds elements in sorted arrays in O(log n) time.
 
 ## The Pattern
 
-_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
+Sorted array + search → Binary Search. The key insight: find a predicate that splits the search space into 'yes' and 'no', then binary search finds the transition point.
 
-## Problems
+## Complete Problem Set
 
-1. [Apartmenthunting](#apartmenthunting)
-2. [Capacity To Ship Package Within D Days](#capacitytoshippackagewithinddays)
-3. [Closest Sebsequence Sum](#closestsebsequencesum)
-4. [Find First And Last Position](#findfirstandlastposition)
-5. [Find K Closest Elements](#findkclosestelements)
-6. [Find Minimum In Rotated Sorted Array](#findminimuminrotatedsortedarray)
-7. [Find Peak Element](#findpeakelement)
-8. [Find Peak Element Better Solution](#findpeakelementbettersolution)
-9. [Version Control](#firstbadversion)
-10. [Solution](#guessnumberhigherorlower)
-11. [House Robber_IV](#houserobber_iv)
-12. [K Th Missing Positive Number](#kthmissingpositivenumber)
-13. [Koko Eating Banana](#kokoeatingbanana)
-14. [Median Of Two Sorted A Rrays](#medianoftwosortedarrays)
-15. [Random Pick With Weight](#randompickwithweight)
-16. [Search A2d Matrix](#searcha2dmatrix)
-17. [Search In Rotated Array_II](#searchinrotatedarray_ii)
-18. [Search In Rotated Sorted Array](#searchinrotatedsortedarray)
-19. [Search Insertion Position](#searchinsertionposition)
-20. [Single Element In A Sorted Array](#singleelementinasortedarray)
-21. [Valley Element](#valleyelement)
+| # | Problem | Pattern | Difficulty |
+|---|---------|-----------|------------|
+| 1 | [Apartmenthunting](#apartmenthunting) | — | <span class="badge badge-medium">Medium</span> |
+| 2 | [Capacity To Ship Package Within D Days](#capacitytoshippackagewithinddays) | — | <span class="badge badge-medium">Medium</span> |
+| 3 | [Closest Sebsequence Sum](#closestsebsequencesum) | — | <span class="badge badge-medium">Medium</span> |
+| 4 | [Find First And Last Position](#findfirstandlastposition) | — | <span class="badge badge-medium">Medium</span> |
+| 5 | [Find K Closest Elements](#findkclosestelements) | — | <span class="badge badge-medium">Medium</span> |
+| 6 | [Find Minimum In Rotated Sorted Array](#findminimuminrotatedsortedarray) | — | <span class="badge badge-medium">Medium</span> |
+| 7 | [Find Peak Element](#findpeakelement) | — | <span class="badge badge-medium">Medium</span> |
+| 8 | [Find Peak Element Better Solution](#findpeakelementbettersolution) | — | <span class="badge badge-medium">Medium</span> |
+| 9 | [Version Control](#firstbadversion) | — | <span class="badge badge-medium">Medium</span> |
+| 10 | [Solution](#guessnumberhigherorlower) | — | <span class="badge badge-medium">Medium</span> |
+| 11 | [House Robber_IV](#houserobber_iv) | — | <span class="badge badge-medium">Medium</span> |
+| 12 | [K Th Missing Positive Number](#kthmissingpositivenumber) | — | <span class="badge badge-medium">Medium</span> |
+| 13 | [Koko Eating Banana](#kokoeatingbanana) | — | <span class="badge badge-medium">Medium</span> |
+| 14 | [Median Of Two Sorted A Rrays](#medianoftwosortedarrays) | — | <span class="badge badge-medium">Medium</span> |
+| 15 | [Random Pick With Weight](#randompickwithweight) | — | <span class="badge badge-medium">Medium</span> |
+| 16 | [Search A2d Matrix](#searcha2dmatrix) | — | <span class="badge badge-medium">Medium</span> |
+| 17 | [Search In Rotated Array_II](#searchinrotatedarray_ii) | — | <span class="badge badge-medium">Medium</span> |
+| 18 | [Search In Rotated Sorted Array](#searchinrotatedsortedarray) | — | <span class="badge badge-medium">Medium</span> |
+| 19 | [Search Insertion Position](#searchinsertionposition) | — | <span class="badge badge-medium">Medium</span> |
+| 20 | [Single Element In A Sorted Array](#singleelementinasortedarray) | — | <span class="badge badge-medium">Medium</span> |
+| 21 | [Valley Element](#valleyelement) | — | <span class="badge badge-medium">Medium</span> |
 
 ---
 
 ## Apartmenthunting
-
-### Problem
-
-Given `blocks` (List<Map<String), `requirements` (List<String>), `blockIndex` (integer), `blocksWithAmenity` (list of integers), `arr` (list of integers), `target` (integer), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: blocks = input_value, requirements = input_value, blockIndex = 5, blocksWithAmenity = [1, 2, 3, 4, 5], arr = [1, 2, 3, 4, 5], target = 5
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
-/**
-* Solves the apartmenthunting problem.
-* Takes `blocks` (List<Map<String), `requirements` (list of strings).
-*
-* @param blocks The input List<Map<String.
-* @param requirements The input list of strings.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blocks` (List<Map<String), `requirements` (list of strings).
-*
-* @param blocks The input List<Map<String.
-* @param requirements The input list of strings.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blocks` (List<Map<String), `requirements` (list of strings).
-*
-* @param blocks The input List<Map<String.
-* @param requirements The input list of strings.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blocks` (List<Map<String), `requirements` (list of strings).
-*
-* @param blocks The input List<Map<String.
-* @param requirements The input list of strings.
-* @return The computed integer result.
-*/
 fun findBestBlock(blocks: List<Map<String, Boolean>>, requirements: List<String>): Int {
     // Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
     val amenityMap = mutableMapOf<String, MutableList<Int>>()
@@ -135,38 +87,6 @@ fun findBestBlock(blocks: List<Map<String, Boolean>>, requirements: List<String>
 }
 
 // Function to find the minimum distance to the closest block with the given amenity
-/**
-* Solves the apartmenthunting problem.
-* Takes `blockIndex` (integer), `blocksWithAmenity` (list of integers).
-*
-* @param blockIndex The integer parameter representing blockIndex.
-* @param blocksWithAmenity The input list of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blockIndex` (integer), `blocksWithAmenity` (list of integers).
-*
-* @param blockIndex The integer parameter representing blockIndex.
-* @param blocksWithAmenity The input list of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blockIndex` (integer), `blocksWithAmenity` (list of integers).
-*
-* @param blockIndex The integer parameter representing blockIndex.
-* @param blocksWithAmenity The input list of integers.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `blockIndex` (integer), `blocksWithAmenity` (list of integers).
-*
-* @param blockIndex The integer parameter representing blockIndex.
-* @param blocksWithAmenity The input list of integers.
-* @return The computed integer result.
-*/
 fun closestDistance(blockIndex: Int, blocksWithAmenity: List<Int>): Int {
     val pos = blocksWithAmenity.binarySearch(blockIndex)
     return if (pos >= 0) 0
@@ -179,38 +99,6 @@ fun closestDistance(blockIndex: Int, blocksWithAmenity: List<Int>): Int {
 }
 
 // Custom Binary Search implementation
-/**
-* Solves the apartmenthunting problem.
-* Takes `arr` (list of integers), `target` (integer).
-*
-* @param arr The input list of integers.
-* @param target The integer parameter representing target.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `arr` (list of integers), `target` (integer).
-*
-* @param arr The input list of integers.
-* @param target The integer parameter representing target.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `arr` (list of integers), `target` (integer).
-*
-* @param arr The input list of integers.
-* @param target The integer parameter representing target.
-* @return The computed integer result.
-*/
-/**
-* Solves the apartmenthunting problem.
-* Takes `arr` (list of integers), `target` (integer).
-*
-* @param arr The input list of integers.
-* @param target The integer parameter representing target.
-* @return The computed integer result.
-*/
 fun binarySearch(arr: List<Int>, target: Int): Int {
     var (low, high) = listOf(0, arr.lastIndex)
 
@@ -226,28 +114,6 @@ fun binarySearch(arr: List<Int>, target: Int): Int {
     return -(low + 1)
 }
 
-
-
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
-/**
-* Entry point for the program.
-*
-* @return Unit (no return value, modifies state in-place).
-*/
 fun main() {
     val blocks = listOf(
         mapOf("gym" to false, "school" to true, "store" to false),
@@ -258,93 +124,21 @@ fun main() {
     )
     val requirements = listOf("gym", "school", "store")
 
-
     val bestBlock = findBestBlock(blocks, requirements)
     println("The best block to choose is: $bestBlock")
 }
 ```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input size is much larger — can you optimize?
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty input, single element, duplicates)?
-1. What if constraints change (positive only, sorted input, distinct values)?
-1. Can this be solved with a different algorithmic paradigm?
-
 ---
-
 ## Capacity To Ship Package Within D Days
-
-### Problem
-
-Given `weights` (array of integers), `mid` (integer), `days` (integer), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: weights = [1, 2, 3, 4, 5], mid = 5, days = 5
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class CapacityToShipPackageWithinDDays {
-    /**
-    * Solves the Capacity To Ship Package Within DDays problem.
-    * Takes `weights` (array of integers), `mid` (integer), `days` (integer).
-    *
-    * @param weights The input array of integers.
-    * @param mid The integer parameter representing mid.
-    * @param days The integer parameter representing days.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Capacity To Ship Package Within DDays problem.
-    * Takes `weights` (array of integers), `mid` (integer), `days` (integer).
-    *
-    * @param weights The input array of integers.
-    * @param mid The integer parameter representing mid.
-    * @param days The integer parameter representing days.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Capacity To Ship Package Within DDays problem.
-    * Takes `weights` (array of integers), `mid` (integer), `days` (integer).
-    *
-    * @param weights The input array of integers.
-    * @param mid The integer parameter representing mid.
-    * @param days The integer parameter representing days.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Capacity To Ship Package Within DDays problem.
-    * Takes `weights` (array of integers), `mid` (integer), `days` (integer).
-    *
-    * @param weights The input array of integers.
-    * @param mid The integer parameter representing mid.
-    * @param days The integer parameter representing days.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun feasible(weights: IntArray, mid:Int, days: Int): Boolean {
         var (daysNeeded, currentLoad) = 1 to 0
         weights.forEach { weight ->
@@ -358,38 +152,6 @@ class CapacityToShipPackageWithinDDays {
         return daysNeeded <= days
     }
 
-    /**
-    * Solves the Capacity To Ship Package Within DDays problem.
-    * Takes `weights` (array of integers), `days` (integer).
-    *
-    * @param weights The input array of integers.
-    * @param days The integer parameter representing days.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Capacity To Ship Package Within DDays problem.
-    * Takes `weights` (array of integers), `days` (integer).
-    *
-    * @param weights The input array of integers.
-    * @param days The integer parameter representing days.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Capacity To Ship Package Within DDays problem.
-    * Takes `weights` (array of integers), `days` (integer).
-    *
-    * @param weights The input array of integers.
-    * @param days The integer parameter representing days.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Capacity To Ship Package Within DDays problem.
-    * Takes `weights` (array of integers), `days` (integer).
-    *
-    * @param weights The input array of integers.
-    * @param days The integer parameter representing days.
-    * @return The computed integer result.
-    */
     fun shipWithinDays(weights: IntArray, days: Int): Int {
         var (sum, max) = 0 to 0
 
@@ -412,132 +174,25 @@ class CapacityToShipPackageWithinDDays {
     }
 }
 ```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input size is much larger — can you optimize?
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty input, single element, duplicates)?
-1. What if constraints change (positive only, sorted input, distinct values)?
-1. Can this be solved with a different algorithmic paradigm?
-
 ---
-
 ## Closest Sebsequence Sum
-
-### Problem
-
-Given `nums` (array of integers), `goal` (integer), `start` (integer), `end` (integer), `currentSum` (integer), `result` (list of integers), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5], goal = 5, start = 5, end = 5, currentSum = 5, result = [1, 2, 3, 4, 5]
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 import kotlin.math.abs
 
 class ClosestSebsequenceSum {
-    /**
-    * Solves the Closest Sebsequence Sum problem.
-    * Takes `nums` (array of integers), `goal` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param goal The integer parameter representing goal.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Closest Sebsequence Sum problem.
-    * Takes `nums` (array of integers), `goal` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param goal The integer parameter representing goal.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Closest Sebsequence Sum problem.
-    * Takes `nums` (array of integers), `goal` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param goal The integer parameter representing goal.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Closest Sebsequence Sum problem.
-    * Takes `nums` (array of integers), `goal` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param goal The integer parameter representing goal.
-    * @return The computed integer result.
-    */
     fun minAbsDifference(nums: IntArray, goal: Int): Int {
         val leftSums = mutableListOf<Int>()
         val rightSums = mutableListOf<Int>()
         val n = nums.size
         val mid = n / 2
 
-        /**
-        * Solves the Closest Sebsequence Sum problem.
-        * Takes `start` (integer), `end` (integer), `currentSum` (integer), `result` (mutable list of integers).
-        *
-        * @param start The integer parameter representing start.
-        * @param end The integer parameter representing end.
-        * @param currentSum The integer parameter representing currentSum.
-        * @param result The input mutable list of integers.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Closest Sebsequence Sum problem.
-        * Takes `start` (integer), `end` (integer), `currentSum` (integer), `result` (mutable list of integers).
-        *
-        * @param start The integer parameter representing start.
-        * @param end The integer parameter representing end.
-        * @param currentSum The integer parameter representing currentSum.
-        * @param result The input mutable list of integers.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Closest Sebsequence Sum problem.
-        * Takes `start` (integer), `end` (integer), `currentSum` (integer), `result` (mutable list of integers).
-        *
-        * @param start The integer parameter representing start.
-        * @param end The integer parameter representing end.
-        * @param currentSum The integer parameter representing currentSum.
-        * @param result The input mutable list of integers.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Closest Sebsequence Sum problem.
-        * Takes `start` (integer), `end` (integer), `currentSum` (integer), `result` (mutable list of integers).
-        *
-        * @param start The integer parameter representing start.
-        * @param end The integer parameter representing end.
-        * @param currentSum The integer parameter representing currentSum.
-        * @param result The input mutable list of integers.
-        * @return Unit (no return value, modifies state in-place).
-        */
         fun dfs(start: Int, end: Int, currentSum: Int, result: MutableList<Int>) {
             if (start == end) {
                 result.add(currentSum)
@@ -569,85 +224,18 @@ class ClosestSebsequenceSum {
     }
 }
 ```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input size is much larger — can you optimize?
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty input, single element, duplicates)?
-1. What if constraints change (positive only, sorted input, distinct values)?
-1. Can this be solved with a different algorithmic paradigm?
-
 ---
-
 ## Find First And Last Position
-
-### Problem
-
-Given `nums` (array of integers), `target` (integer), `findFirst` (boolean), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5], target = 5, findFirst = true
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class FindFirstAndLastPosition {
 
-    /**
-    * Solves the Find First And Last Position problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find First And Last Position problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find First And Last Position problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find First And Last Position problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
     fun searchRange(nums: IntArray, target: Int): IntArray {
         val result = intArrayOf(-1, -1)
 
@@ -663,38 +251,6 @@ class FindFirstAndLastPosition {
         return result
     }
 
-    /**
-    * Helper: binary search.
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @param findFirst A boolean flag: findFirst.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: binary search.
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @param findFirst A boolean flag: findFirst.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: binary search.
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @param findFirst A boolean flag: findFirst.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: binary search.
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @param findFirst A boolean flag: findFirst.
-    * @return The computed integer result.
-    */
     private fun binarySearch(nums: IntArray, target: Int, findFirst: Boolean): Int {
         var left = 0
         var right = nums.lastIndex
@@ -721,48 +277,13 @@ class FindFirstAndLastPosition {
     }
 }
 ```
-
-### Pattern Insight
-
-**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
 | **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input is not sorted? Can you sort it first?
-1. What if there are duplicates — need first vs last occurrence?
-1. What if the search space is a range of values, not array indices?
-1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic?
-
 ---
-
 ## Find K Closest Elements
-
-### Problem
-
-Given `arr` (Array<Int>), `k` (integer), `x` (integer), `args` (Array<String>), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: arr = input_value, k = 5, x = 5, args = input_value
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
-
 ### Code
-
 ```kotlin
 package heap
 
@@ -808,30 +329,6 @@ class FindKClosestElements {
 
         companion object {
             @JvmStatic
-            /**
-            * Entry point for the program.
-            *
-            * @param args The input Array<String>.
-            * @return Unit (no return value, modifies state in-place).
-            */
-            /**
-            * Entry point for the program.
-            *
-            * @param args The input Array<String>.
-            * @return Unit (no return value, modifies state in-place).
-            */
-            /**
-            * Entry point for the program.
-            *
-            * @param args The input Array<String>.
-            * @return Unit (no return value, modifies state in-place).
-            */
-            /**
-            * Entry point for the program.
-            *
-            * @param args The input Array<String>.
-            * @return Unit (no return value, modifies state in-place).
-            */
             fun main(args: Array<String>) {
                 val testClass = FindKClosestElements()
 
@@ -841,80 +338,17 @@ class FindKClosestElements {
     }
 }
 ```
-
-### Pattern Insight
-
-**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(log n) |
-| **Space** | O(1) |
-
-### Variations
-
-1. What if the input is not sorted? Can you sort it first?
-1. What if there are duplicates — need first vs last occurrence?
-1. What if the search space is a range of values, not array indices?
-1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic?
-
+| **Time** | O(n log k) |
+| **Space** | O(k) |
 ---
-
 ## Find Minimum In Rotated Sorted Array
-
-### Problem
-
-Given `nums` (array of integers), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5]
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class FindMinimumInRotatedSortedArray {
-    /**
-    * Solves the Find Minimum In Rotated Sorted Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find Minimum In Rotated Sorted Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find Minimum In Rotated Sorted Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find Minimum In Rotated Sorted Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun findMin(nums: IntArray): Int {
         var (left, right) = 0 to nums.size - 1
         while (left < right) {
@@ -929,80 +363,17 @@ class FindMinimumInRotatedSortedArray {
     }
 }
 ```
-
-### Pattern Insight
-
-**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
 | **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input is not sorted? Can you sort it first?
-1. What if there are duplicates — need first vs last occurrence?
-1. What if the search space is a range of values, not array indices?
-1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic?
-
 ---
-
 ## Find Peak Element
-
-### Problem
-
-Given `nums` (array of integers), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5]
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class FindPeakElement {
-    /**
-    * Solves the Find Peak Element problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find Peak Element problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find Peak Element problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find Peak Element problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun findPeakElement(nums: IntArray): Int {
         var left = 0
         var right = nums.lastIndex
@@ -1021,80 +392,17 @@ class FindPeakElement {
     }
 }
 ```
-
-### Pattern Insight
-
-**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
 | **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input is not sorted? Can you sort it first?
-1. What if there are duplicates — need first vs last occurrence?
-1. What if the search space is a range of values, not array indices?
-1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic?
-
 ---
-
 ## Find Peak Element Better Solution
-
-### Problem
-
-Given `nums` (array of integers), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5]
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class FindPeakElementBetterSolution {
-    /**
-    * Solves the Find Peak Element Better Solution problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find Peak Element Better Solution problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find Peak Element Better Solution problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find Peak Element Better Solution problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun findPeakElement(nums: IntArray): Int? {
         if (nums.isEmpty()) return null
 
@@ -1118,139 +426,24 @@ class FindPeakElementBetterSolution {
     }
 }
 ```
-
-### Pattern Insight
-
-**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
 | **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input is not sorted? Can you sort it first?
-1. What if there are duplicates — need first vs last occurrence?
-1. What if the search space is a range of values, not array indices?
-1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic?
-
 ---
-
 ## Version Control
-
-### Problem
-
-Given `mid` (integer), `n` (integer), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: mid = 5, n = 5
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 abstract class VersionControl {
-    /**
-    * Solves the Version Control problem.
-    * Takes `mid` (integer).
-    *
-    * @param mid The integer parameter representing mid.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `mid` (integer).
-    *
-    * @param mid The integer parameter representing mid.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `mid` (integer).
-    *
-    * @param mid The integer parameter representing mid.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `mid` (integer).
-    *
-    * @param mid The integer parameter representing mid.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun isBadVersion(mid: Int): Boolean {
         return false // Return dummy value
     }
 
-    /**
-    * Solves the Version Control problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Version Control problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
     abstract fun firstBadVersion(n: Int) : Int
 }
 class FirstBadVersion: VersionControl() {
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
     override fun firstBadVersion(n: Int) : Int {
         var start = 1
         var end = n
@@ -1267,48 +460,13 @@ class FirstBadVersion: VersionControl() {
     }
 }
 ```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input size is much larger — can you optimize?
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty input, single element, duplicates)?
-1. What if constraints change (positive only, sorted input, distinct values)?
-1. Can this be solved with a different algorithmic paradigm?
-
 ---
-
 ## Solution
-
-### Problem
-
-Given `num` (integer), `n` (integer), `mid` (integer), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: num = 5, n = 5, mid = 5
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
@@ -1318,62 +476,10 @@ package binarysearch
  * @return 	     -1 if num is higher than the picked number
  *			      1 if num is lower than the picked number
  *               otherwise return 0
- /**
- * Solves the Solution problem.
- * Takes `num` (integer).
- *
- * @param num The integer parameter representing num.
- * @return The computed integer result.
- */
- /**
- * Solves the Solution problem.
- * Takes `num` (integer).
- *
- * @param num The integer parameter representing num.
- * @return The computed integer result.
- */
- /**
- * Solves the Solution problem.
- * Takes `num` (integer).
- *
- * @param num The integer parameter representing num.
- * @return The computed integer result.
- */
- /**
- * Solves the Solution problem.
- * Takes `num` (integer).
- *
- * @param num The integer parameter representing num.
- * @return The computed integer result.
- */
  * fun guess(num:Int):Int {}
  */
 
 class Solution:GuessGame() {
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Implements/overrides the base class method.
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
     override fun guessNumber(n:Int):Int {
         var start = 1
         var end = n
@@ -1382,7 +488,6 @@ class Solution:GuessGame() {
             val mid = start + (end-start) / 2
 
             val distance = guess(mid)
-
 
             when {
                 distance == 0 -> return mid
@@ -1394,186 +499,34 @@ class Solution:GuessGame() {
         return -1
     }
 
-
 }
 
 open class GuessGame {
 
-    /**
-    * Solves the Solution problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Solution problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Solution problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Solution problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
     open fun guessNumber(n: Int): Int {
         TODO("Not yet implemented")
     }
 
-    /**
-    * Solves the Solution problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Solution problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Solution problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Solution problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return The computed integer result.
-    */
     fun guess(mid: Int): Int {
         return 0
     }
 }
 ```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input size is much larger — can you optimize?
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty input, single element, duplicates)?
-1. What if constraints change (positive only, sorted input, distinct values)?
-1. Can this be solved with a different algorithmic paradigm?
-
 ---
-
 ## House Robber_IV
-
-### Problem
-
-Given `nums` (array of integers), `k` (integer), `cap` (integer), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5], k = 5, cap = 5
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class HouseRobber_IV {
-    /**
-    * Solves the House Robber_IV problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the House Robber_IV problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the House Robber_IV problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the House Robber_IV problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
     fun minCapability(nums: IntArray, k: Int): Int {
         var left = nums.minOrNull() ?: 0
         var right = nums.maxOrNull() ?: 0
 
-        /**
-        * Solves the House Robber_IV problem.
-        * Takes `cap` (integer).
-        *
-        * @param cap The integer parameter representing cap.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the House Robber_IV problem.
-        * Takes `cap` (integer).
-        *
-        * @param cap The integer parameter representing cap.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the House Robber_IV problem.
-        * Takes `cap` (integer).
-        *
-        * @param cap The integer parameter representing cap.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the House Robber_IV problem.
-        * Takes `cap` (integer).
-        *
-        * @param cap The integer parameter representing cap.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
         fun canRob(cap: Int): Boolean {
             var robbed = 0
             var i = 0
@@ -1601,84 +554,17 @@ class HouseRobber_IV {
     }
 }
 ```
-
-### Pattern Insight
-
-**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(n²) |
-
-### Variations
-
-1. Can you optimize space to O(1) by keeping only the previous row?
-1. What if the input size is 10x larger — does the DP table still fit?
-1. Can you reconstruct the optimal path, not just the optimal value?
-1. What changes if constraints go from unlimited to limited (or vice versa)?
-1. Is there a greedy solution? When would greedy fail?
-
+| **Time** | O(log n) |
+| **Space** | O(1) |
 ---
-
 ## K Th Missing Positive Number
-
-### Problem
-
-Given `arr` (array of integers), `k` (integer), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: arr = [1, 2, 3, 4, 5], k = 5
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses a **heap/priority queue** to maintain a dynamic ordering of elements. Heaps provide O(log n) insertion and O(1) access to the min or max element, making them ideal for streaming/online algorithms and k-th order statistics.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class KThMissingPositiveNumber {
-    /**
-    * Solves the KTh Missing Positive Number problem.
-    * Takes `arr` (array of integers), `k` (integer).
-    *
-    * @param arr The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the KTh Missing Positive Number problem.
-    * Takes `arr` (array of integers), `k` (integer).
-    *
-    * @param arr The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the KTh Missing Positive Number problem.
-    * Takes `arr` (array of integers), `k` (integer).
-    *
-    * @param arr The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the KTh Missing Positive Number problem.
-    * Takes `arr` (array of integers), `k` (integer).
-    *
-    * @param arr The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
     fun findKthPositive(arr: IntArray, k: Int): Int {
         var (left, right) = 0 to arr.size
 
@@ -1696,45 +582,65 @@ class KThMissingPositiveNumber {
     }
 }
 ```
-
-### Pattern Insight
-
-**Heap Pattern.** Use a min-heap to keep the k largest elements, max-heap for k smallest. Dual heaps (min + max) track median in O(1) with O(log n) insert. Each heap operation is O(log k).
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n log k) |
-| **Space** | O(k) |
-
-### Variations
-
-1. What if you need the k-th smallest instead of largest?
-1. What if elements are added/removed dynamically over time?
-1. Sorting vs heap — compare O(n log n) vs O(n log k) tradeoffs.
-1. What if k is very large (close to n) — different approach needed?
-1. How to handle ties in priority ordering?
-
+| **Time** | O(log n) |
+| **Space** | O(1) |
 ---
-
 ## Koko Eating Banana
 
-### Problem
+**Problem:** Koko loves bananas. There are `n` piles, the `i`-th pile has `piles[i]` bananas. The guards have gone and will return in `h` hours.
 
-Given `piles` (array of integers), `h` (integer), `k` (integer), compute the computed result efficiently.
+Koko can decide her eating speed `k` (bananas per hour). Each hour, she chooses one pile and eats `k` bananas from it. If the pile has fewer than `k` bananas, she eats the entire pile and cannot eat more that hour.
+
+Return the **minimum integer `k`** such that Koko can eat all bananas within `h` hours.
+
+**Input constraints:**
+- `1 <= piles.length <= 10^4`
+- `piles.length <= h <= 10^9`
+- `1 <= piles[i] <= 10^9`
 
 **Example:**
-
 ```
-Input: piles = [1, 2, 3, 4, 5], h = 5, k = 5
-Output: 42 (expected result)
+Input: piles = [3, 6, 7, 11], h = 8
+Output: 4
 
+Explanation:
+- At k = 4:  pile 0: ceil(3/4)=1h, pile 1: ceil(6/4)=2h, pile 2: ceil(7/4)=2h, pile 3: ceil(11/4)=3h. Total = 1+2+2+3 = 8h  ✅
+- At k = 3:  ceil(3/3)=1h + ceil(6/3)=2h + ceil(7/3)=3h + ceil(11/3)=4h = 10h > 8h  ❌
+So the minimum k is 4.
 ```
 
-### Why This Approach
+**Why binary search?** The eating speed `k` is a positive integer. If speed `k` works (Koko finishes in ≤ h hours), then any speed larger than `k` also works (she eats faster, finishes earlier). This **monotonic property** — feasibility increases with `k` — means we can binary search for the minimum feasible speed.
 
-This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
+**The search space:**
+- **Lower bound:** `1` (she must eat at least 1 banana per hour)
+- **Upper bound:** `max(piles)` (eating faster than the largest pile doesn't help because the bottleneck is the biggest single pile)
+- **Feasibility function:** `canEatAllBananas(k)` computes whether speed `k` lets Koko finish in ≤ `h` hours
+
+**Dry run:**
+```
+piles = [3, 6, 7, 11], h = 8
+Binary search on k in [1, 11]:
+
+  Step 1: left=1, right=11, mid = 1 + (11-1)/2 = 6
+    canEatAllBananas(6): ceil(3/6)+ceil(6/6)+ceil(7/6)+ceil(11/6) = 1+1+2+2 = 6 ≤ 8 ✅
+    → Too fast, try slower: right = 6
+
+  Step 2: left=1, right=6, mid = 1 + (6-1)/2 = 3
+    canEatAllBananas(3): ceil(3/3)+ceil(6/3)+ceil(7/3)+ceil(11/3) = 1+2+3+4 = 10 > 8 ❌
+    → Too slow, need faster: left = 4
+
+  Step 3: left=4, right=6, mid = 4 + (6-4)/2 = 5
+    canEatAllBananas(5): ceil(3/5)+ceil(6/5)+ceil(7/5)+ceil(11/5) = 1+2+2+3 = 8 ≤ 8 ✅
+    → Still fast enough: right = 5
+
+  Step 4: left=4, right=5, mid = 4 + (5-4)/2 = 4
+    canEatAllBananas(4): ceil(3/4)+ceil(6/4)+ceil(7/4)+ceil(11/4) = 1+2+2+3 = 8 ≤ 8 ✅
+    → Fast enough: right = 4
+
+  Step 5: left=4, right=4, loop exits. Return 4.
+```
 
 ### Code
 
@@ -1764,65 +670,31 @@ class KokoEatingBanana {
      *                           piles.length <= h <= 10^9
      *                           1 <= piles[i] <= 10^9
      * @param h     Hours available before guards return
-     *              Constraints: h >= piles.length (must be able to eat at least
-     *              one pile per hour in worst case)
+     *              Constraints: h >= piles.length
      * @return      Minimum integer eating speed k
      *
      * Time  Complexity: O(n log m) where n = piles.size, m = max(piles)
      * Space Complexity: O(1)
      */
-    /**
-    * Solves the Koko Eating Banana problem.
-    * Takes `piles` (array of integers), `h` (integer).
-    *
-    * @param piles The input array of integers.
-    * @param h The integer parameter representing h.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Koko Eating Banana problem.
-    * Takes `piles` (array of integers), `h` (integer).
-    *
-    * @param piles The input array of integers.
-    * @param h The integer parameter representing h.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Koko Eating Banana problem.
-    * Takes `piles` (array of integers), `h` (integer).
-    *
-    * @param piles The input array of integers.
-    * @param h The integer parameter representing h.
-    * @return The computed integer result.
-    */
     fun minEatingSpeed(piles: IntArray, h: Int): Int {
-        // ── Step 1: Define binary search bounds ──
         // Left: slowest possible speed (1 banana/hour)
         var left = 1
         // Right: fastest useful speed = largest pile
-        // (eating faster doesn't reduce total hours because
-        //  the bottleneck is always the biggest pile)
         var right = piles.maxOrNull()!!
 
-        // ── Step 2: Binary search for minimum feasible speed ──
-        // Loop invariant: answer is always in [left, right]
+        // Binary search: answer is always in [left, right]
         while (left < right) {
             // Safe midpoint: avoids overflow from (left + right)
             val mid = left + (right - left) / 2
 
             if (canEatAllBananas(piles, h, mid)) {
-                // Speed `mid` works — we can finish in ≤ h hours.
-                // Try an even slower speed by bringing right bound down.
-                // We keep mid in range because it might be the answer.
+                // Speed mid works — try slower speed
                 right = mid
             } else {
-                // Speed `mid` is too slow — cannot finish in time.
-                // Need to eat faster, so move left bound past mid.
+                // Speed mid too slow — need faster
                 left = mid + 1
             }
         }
-
-        // left == right == the minimum feasible speed
         return left
     }
 
@@ -1830,142 +702,57 @@ class KokoEatingBanana {
      * Checks whether eating speed `k` lets Koko finish all piles
      * within `h` hours.
      *
-     * For each pile, the hours needed = ceil(pile / k).
+     * Hours per pile = ceil(pile / k).
      * Total hours = sum of ceil(pile / k) for all piles.
      * Feasible if total hours <= h.
      *
-     * Why ceil(pile / k)?
-     *   Koko eats k bananas per hour from one pile.
-     *   If pile has 7 bananas and k=4:
-     *     Hour 1: eats 4, pile left = 3
-     *     Hour 2: eats 3 (the rest), pile done
-     *     Total: 2 hours = ceil(7/4) = ceil(1.75) = 2 ✓
-     *
      * Integer ceil trick: (pile + k - 1) / k
-     *   (7 + 4 - 1) / 4 = 10 / 4 = 2 ✓ (integer division truncates)
+     *   (7 + 4 - 1) / 4 = 10 / 4 = 2 (integer division truncates)
      *
      * @param piles Array of banana piles
-     * @param h     Hours available (piles.size <= h)
+     * @param h     Hours available
      * @param k     Eating speed in bananas per hour
      * @return      True if total hours needed <= h
      */
-    /**
-    * Helper: can eat all bananas.
-    *
-    * @param piles The input array of integers.
-    * @param h The integer parameter representing h.
-    * @param k The integer parameter representing k.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: can eat all bananas.
-    *
-    * @param piles The input array of integers.
-    * @param h The integer parameter representing h.
-    * @param k The integer parameter representing k.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: can eat all bananas.
-    *
-    * @param piles The input array of integers.
-    * @param h The integer parameter representing h.
-    * @param k The integer parameter representing k.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     private fun canEatAllBananas(piles: IntArray, h: Int, k: Int): Boolean {
         var totalHours = 0
         for (pile in piles) {
-            // Integer ceil division: (pile + k - 1) / k
             totalHours += (pile + k - 1) / k
-            
-            // Early exit optimization: if we've already exceeded h,
-            // no need to process remaining piles
-            if (totalHours > h) return false
+            if (totalHours > h) return false  // early exit
         }
         return totalHours <= h
     }
 }
 ```
 
-### Pattern Insight
-
-**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
-
-### Complexity
+### Complexity Analysis
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(n log m) — binary search over [1, max(piles)] takes log₂m iterations. Each iteration scans n piles. Total = O(n) × O(log m) = O(n log m) |
+| **Space** | O(1) — only integer variables regardless of input size |
+
+### Pattern Insight
+
+This is a **"minimize X such that predicate(X) is true"** problem. The predicate `canEatAllBananas(k)` is monotonic (once true at k, true for all larger k). We binary search for the first k where the predicate becomes true.
 
 ### Variations
 
-1. What if the input size is much larger — can you optimize?
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty input, single element, duplicates)?
-1. What if constraints change (positive only, sorted input, distinct values)?
-1. Can this be solved with a different algorithmic paradigm?
+1. What if Koko can eat from multiple piles simultaneously?
+2. What if piles are refilled at a constant rate?
+3. What if there's a maximum speed limit enforced?
+4. What if Koko can skip hours but must meet a minimum daily consumption?
+5. What if each pile has a spoilage time?
 
 ---
 
 ## Median Of Two Sorted A Rrays
-
-### Problem
-
-Given `nums1` (array of integers), `nums2` (array of integers), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums1 = [1, 2, 3, 4, 5], nums2 = [1, 2, 3, 4, 5]
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses a **heap/priority queue** to maintain a dynamic ordering of elements. Heaps provide O(log n) insertion and O(1) access to the min or max element, making them ideal for streaming/online algorithms and k-th order statistics.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 // These are the challenges that I need to somewhoe solve to get
 class MedianOfTwoSortedARrays {
-    /**
-    * Solves the Median Of Two Sorted ARrays problem.
-    * Takes `nums1` (array of integers), `nums2` (array of integers).
-    *
-    * @param nums1 The input array of integers.
-    * @param nums2 The input array of integers.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the Median Of Two Sorted ARrays problem.
-    * Takes `nums1` (array of integers), `nums2` (array of integers).
-    *
-    * @param nums1 The input array of integers.
-    * @param nums2 The input array of integers.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the Median Of Two Sorted ARrays problem.
-    * Takes `nums1` (array of integers), `nums2` (array of integers).
-    *
-    * @param nums1 The input array of integers.
-    * @param nums2 The input array of integers.
-    * @return The computed floating-point result.
-    */
-    /**
-    * Solves the Median Of Two Sorted ARrays problem.
-    * Takes `nums1` (array of integers), `nums2` (array of integers).
-    *
-    * @param nums1 The input array of integers.
-    * @param nums2 The input array of integers.
-    * @return The computed floating-point result.
-    */
     fun findMedianSortedArrays(nums1: IntArray, nums2: IntArray): Double {
 
         if (nums1.size > nums2.size ) {
@@ -2005,48 +792,13 @@ class MedianOfTwoSortedARrays {
     }
 }
 ```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n log k) |
-| **Space** | O(k) |
-
-### Variations
-
-1. What if the input size is much larger — can you optimize?
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty input, single element, duplicates)?
-1. What if constraints change (positive only, sorted input, distinct values)?
-1. Can this be solved with a different algorithmic paradigm?
-
+| **Time** | O(log n) |
+| **Space** | O(1) |
 ---
-
 ## Random Pick With Weight
-
-### Problem
-
-Given the input, compute the result efficiently.
-
-**Example:**
-
-```
-Input: 
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
@@ -2064,26 +816,6 @@ class RandomPickWithWeight (w: IntArray) {
         totalSum = prefixSum.last()
     }
 
-    /**
-    * Solves the Random Pick With Weight problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Random Pick With Weight problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Random Pick With Weight problem.
-    *
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Random Pick With Weight problem.
-    *
-    * @return The computed integer result.
-    */
     fun pickIndex(): Int {
         val randomPick = Random.nextInt(totalSum)
         var (start, end) = 0 to w.size
@@ -2101,84 +833,17 @@ class RandomPickWithWeight (w: IntArray) {
     }
 }
 ```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input size is much larger — can you optimize?
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty input, single element, duplicates)?
-1. What if constraints change (positive only, sorted input, distinct values)?
-1. Can this be solved with a different algorithmic paradigm?
-
 ---
-
 ## Search A2d Matrix
-
-### Problem
-
-Given `matrix` (2D matrix), `target` (integer), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: matrix = [1, 2, 3, 4, 5], target = 5
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class SearchA2dMatrix {
-    /**
-    * Solves the Search A2d Matrix problem.
-    * Takes `matrix` (2D matrix of integers), `target` (integer).
-    *
-    * @param matrix The input 2D matrix of integers.
-    * @param target The integer parameter representing target.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Search A2d Matrix problem.
-    * Takes `matrix` (2D matrix of integers), `target` (integer).
-    *
-    * @param matrix The input 2D matrix of integers.
-    * @param target The integer parameter representing target.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Search A2d Matrix problem.
-    * Takes `matrix` (2D matrix of integers), `target` (integer).
-    *
-    * @param matrix The input 2D matrix of integers.
-    * @param target The integer parameter representing target.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Search A2d Matrix problem.
-    * Takes `matrix` (2D matrix of integers), `target` (integer).
-    *
-    * @param matrix The input 2D matrix of integers.
-    * @param target The integer parameter representing target.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
         if (matrix.isEmpty() || matrix[0].isEmpty()) return false
 
@@ -2201,84 +866,17 @@ class SearchA2dMatrix {
     }
 }
 ```
-
-### Pattern Insight
-
-**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
 | **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input is not sorted? Can you sort it first?
-1. What if there are duplicates — need first vs last occurrence?
-1. What if the search space is a range of values, not array indices?
-1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic?
-
 ---
-
 ## Search In Rotated Array_II
-
-### Problem
-
-Given `nums` (array of integers), `target` (integer), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5], target = 5
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class SearchInRotatedArray_II {
-    /**
-    * Solves the Search In Rotated Array_II problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Search In Rotated Array_II problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Search In Rotated Array_II problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Solves the Search In Rotated Array_II problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
     fun search(nums: IntArray, target: Int): Boolean {
         var left = 0
         var right = nums.lastIndex
@@ -2318,84 +916,17 @@ class SearchInRotatedArray_II {
     }
 }
 ```
-
-### Pattern Insight
-
-**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
 | **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input is not sorted? Can you sort it first?
-1. What if there are duplicates — need first vs last occurrence?
-1. What if the search space is a range of values, not array indices?
-1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic?
-
 ---
-
 ## Search In Rotated Sorted Array
-
-### Problem
-
-Given `nums` (array of integers), `target` (integer), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5], target = 5
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class SearchInRotatedSortedArray {
-    /**
-    * Solves the Search In Rotated Sorted Array problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Search In Rotated Sorted Array problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Search In Rotated Sorted Array problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Search In Rotated Sorted Array problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
     fun search(nums: IntArray, target: Int): Int {
         var (start, end) = listOf(0, nums.lastIndex)
 
@@ -2426,84 +957,17 @@ class SearchInRotatedSortedArray {
     }
 }
 ```
-
-### Pattern Insight
-
-**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
 | **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input is not sorted? Can you sort it first?
-1. What if there are duplicates — need first vs last occurrence?
-1. What if the search space is a range of values, not array indices?
-1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic?
-
 ---
-
 ## Search Insertion Position
-
-### Problem
-
-Given `nums` (array of integers), `target` (integer), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5], target = 5
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class SearchInsertionPosition {
-    /**
-    * Solves the Search Insertion Position problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Search Insertion Position problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Search Insertion Position problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Search Insertion Position problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
     fun searchInsert(nums: IntArray, target: Int): Int {
         var start = 0
         var end = nums.size - 1
@@ -2522,80 +986,17 @@ class SearchInsertionPosition {
     }
 }
 ```
-
-### Pattern Insight
-
-**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
 | **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input is not sorted? Can you sort it first?
-1. What if there are duplicates — need first vs last occurrence?
-1. What if the search space is a range of values, not array indices?
-1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic?
-
 ---
-
 ## Single Element In A Sorted Array
-
-### Problem
-
-Given `nums` (array of integers), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5]
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class SingleElementInASortedArray {
-    /**
-    * Solves the Single Element In ASorted Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Single Element In ASorted Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Single Element In ASorted Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Single Element In ASorted Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun singleNonDuplicate(nums: IntArray): Int {
         var low = 0
         var high = nums.size - 1
@@ -2619,80 +1020,17 @@ class SingleElementInASortedArray {
     }
 }
 ```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
-
-### Variations
-
-1. What if the input size is much larger — can you optimize?
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty input, single element, duplicates)?
-1. What if constraints change (positive only, sorted input, distinct values)?
-1. Can this be solved with a different algorithmic paradigm?
-
 ---
-
 ## Valley Element
-
-### Problem
-
-Given `nums` (array of integers), compute the computed result efficiently.
-
-**Example:**
-
-```
-Input: nums = [1, 2, 3, 4, 5]
-Output: 42 (expected result)
-
-```
-
-### Why This Approach
-
-This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
-
 ### Code
-
 ```kotlin
 package binarysearch
 
 class ValleyElement {
-    /**
-    * Solves the Valley Element problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Valley Element problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Valley Element problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Valley Element problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
     fun findValleyElementBinary(nums: IntArray): Int? {
         if (nums.isEmpty()) return null
 
@@ -2716,24 +1054,15 @@ class ValleyElement {
     }
 }
 ```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
-
 ### Complexity
-
 | Metric | Value |
-|--------|-------|
-| **Time** | O(n) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
+---
+## Key Takeaways
 
-### Variations
-
-1. What if the input size is much larger — can you optimize?
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty input, single element, duplicates)?
-1. What if constraints change (positive only, sorted input, distinct values)?
-1. Can this be solved with a different algorithmic paradigm?
+1. **Core pattern recognition** — Sorted array + search → Binary Search. The key insight: find a predicate that splits the search space into 'yes' and 'no', then binary search finds the transition point.
+2. **Practice systematically** — Work through each problem to internalize the patterns
+3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

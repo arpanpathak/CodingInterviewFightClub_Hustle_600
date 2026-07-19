@@ -15,6 +15,8 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 
 ## 📑 Master Navigation
 
+| # | Chapter | Problems | Links |
+|---|---------|----------|-------|
 | # | Chapter | Problems | Difficulty |
 |---|---------|----------|------------|
 | 1 | [Binary Search →](./chapters/01-binary-search.html) | 21 problems | <span class="badge badge-easy">Easy</span> <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
