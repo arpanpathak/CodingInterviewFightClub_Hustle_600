@@ -45,7 +45,138 @@ Sorted array + search → Binary Search. The key insight: find a predicate that 
 
 ---
 
-## Apartmenthunting
+## Apartment Hunting
+
+**Problem:** You're looking for an apartment in a city of blocks. Each block has certain amenities (gym, school, store). You want to pick a block such that the **maximum distance** to any required amenity is **minimized**.
+
+Given a list of blocks (each is a map of amenity → boolean) and a list of required amenities, return the index of the optimal block.
+
+**Example:**
+```
+blocks = [
+  {"gym": false, "school": true,  "store": false},
+  {"gym": true,  "school": false, "store": false},
+  {"gym": true,  "school": true,  "store": false},
+  {"gym": false, "school": true,  "store": false},
+  {"gym": false, "school": true,  "store": true}
+]
+requirements = ["gym", "school", "store"]
+
+Block 3 is optimal: gym at distance 1, school at 0, store at 1. Max distance = 1.
+```
+
+**Why this approach:** For each block, find the farthest distance to any required amenity. Pick the block with the smallest max distance. Binary search on sorted amenity position lists gives O(log k) lookup.
+
+### Code
+
+```kotlin
+package binarysearch
+
+fun findBestBlock(blocks: List<Map<String, Boolean>>, requirements: List<String>): Int {
+    // Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
+    val amenityMap = mutableMapOf<String, MutableList<Int>>()
+    blocks.forEachIndexed { index, block ->
+        block.forEach { (amenity, present) ->
+            if (present) {
+                amenityMap.getOrPut(amenity) { mutableListOf() }.add(index)
+            }
+        }
+    }
+
+    // Ensure all required amenities are present
+    requirements.forEach {
+        if (amenityMap[it].isNullOrEmpty()) return -1 // Return -1 if any required amenity is not present in any block
+    }
+
+    // Step 2: Determine the optimal block
+    var bestBlock = -1
+    var bestMaxDistance = Int.MAX_VALUE
+
+    // N * R * Log(K) , K = number of unique amininties present across all the blocks
+    blocks.forEachIndexed { index, _ ->
+        val maxDistance = requirements.map { amenity ->
+            closestDistance(index, amenityMap[amenity]!!)
+        }.maxOrNull()!!
+
+        // Check if the current block has the smallest maximum distance
+        if (maxDistance < bestMaxDistance) {
+            bestMaxDistance = maxDistance
+            bestBlock = index
+        }
+    }
+
+    return bestBlock
+}
+
+// Function to find the minimum distance to the closest block with the given amenity
+fun closestDistance(blockIndex: Int, blocksWithAmenity: List<Int>): Int {
+    val pos = blocksWithAmenity.binarySearch(blockIndex)
+    return if (pos >= 0) 0
+    else {
+        val insertPoint = -pos - 1
+        val leftDistance = if (insertPoint > 0) blockIndex - blocksWithAmenity[insertPoint - 1] else Int.MAX_VALUE
+        val rightDistance = if (insertPoint < blocksWithAmenity.size) blocksWithAmenity[insertPoint] - blockIndex else Int.MAX_VALUE
+        minOf(leftDistance, rightDistance)
+    }
+}
+
+// Custom Binary Search implementation
+fun binarySearch(arr: List<Int>, target: Int): Int {
+    var (low, high) = listOf(0, arr.lastIndex)
+
+    while (low<= high) {
+        val mid = low + (high - low) / 2
+        when {
+            arr[mid] < target -> low = mid + 1
+            arr[mid] > target -> high = mid - 1
+            else -> return mid
+        }
+    }
+
+    return -(low + 1)
+}
+
+
+
+fun main() {
+    val blocks = listOf(
+        mapOf("gym" to false, "school" to true, "store" to false),
+        mapOf("gym" to true, "school" to false, "store" to false),
+        mapOf("gym" to true, "school" to true, "store" to false),
+        mapOf("gym" to false, "school" to true, "store" to false),
+        mapOf("gym" to false, "school" to true, "store" to true)
+    )
+    val requirements = listOf("gym", "school", "store")
+
+
+    val bestBlock = findBestBlock(blocks, requirements)
+    println("The best block to choose is: $bestBlock")
+}
+
+```
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(B × R × log K) — B blocks, R requirements, K amenity occurrences |
+| **Space** | O(K) — amenity position map |
+
+### Pattern Insight
+
+**Binary Search on Sorted Lists + Greedy.** Build amenity → sorted position list. Binary search finds nearest block with each amenity.
+
+### Variations
+
+1. What if amenities have weights?
+2. What if you can walk diagonally (Manhattan vs Euclidean)?
+3. What if requirements change dynamically?
+4. Are there multiple optimal blocks?
+5. What if some amenities are optional?
+
+---
+
+
 ### Code
 ```kotlin
 package binarysearch
@@ -134,6 +265,83 @@ fun main() {
 | **Space** | O(1) |
 ---
 ## Capacity To Ship Package Within D Days
+
+**Problem:** A conveyor belt has packages with given weights. You must ship them within `days` days in order (no reordering). Each day, you load as many as possible without exceeding the ship's capacity. Find the **minimum capacity** that makes shipping possible.
+
+**Example:**
+```
+Input: weights = [1,2,3,4,5,6,7,8,9,10], days = 5
+Output: 15
+Explanation: Day1: 1+2+3+4+5=15, Day2: 6+7=13, Day3: 8, Day4: 9, Day5: 10
+```
+
+**Why binary search:** Capacity is between max(weight) and sum(weights). The predicate `canShip(capacity)` is monotonic — if capacity works, any larger capacity works. Binary search finds the minimum.
+
+### Code
+
+```kotlin
+package binarysearch
+
+class CapacityToShipPackageWithinDDays {
+    fun feasible(weights: IntArray, mid:Int, days: Int): Boolean {
+        var (daysNeeded, currentLoad) = 1 to 0
+        weights.forEach { weight ->
+            currentLoad += weight
+            if (currentLoad > mid) {
+                daysNeeded++
+                currentLoad = weight
+            }
+        }
+
+        return daysNeeded <= days
+    }
+
+    fun shipWithinDays(weights: IntArray, days: Int): Int {
+        var (sum, max) = 0 to 0
+
+        weights.forEach{ weight ->
+            sum += weight
+            max = maxOf(max, weight)
+        }
+
+        var (l, r) = max to sum
+
+        while ( l < r) {
+            val mid = l + (r - l) / 2
+            when {
+                feasible(weights, mid, days) -> r = mid
+                else -> l = mid + 1
+            }
+        }
+
+        return l
+    }
+}
+
+```
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(N log S) — N packages, S = sum weights |
+| **Space** | O(1) |
+
+### Pattern Insight
+
+**Minimize Max with Binary Search.** Classic "minimize maximum" pattern. Define a feasibility check, binary search the answer.
+
+### Variations
+
+1. What if packages can be reordered?
+2. What if you must use exactly D days?
+3. What if multiple ships run in parallel?
+4. What if packages have dependencies?
+5. What if there's a fixed cost per day?
+
+---
+
+
 ### Code
 ```kotlin
 package binarysearch
@@ -179,7 +387,87 @@ class CapacityToShipPackageWithinDDays {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 ---
-## Closest Sebsequence Sum
+## Closest Subsequence Sum
+
+**Problem:** Given an array `nums` and a `goal`, find the minimum absolute difference between `goal` and the sum of any subsequence of `nums`.
+
+**Example:**
+```
+Input: nums = [5, -7, 3, 5], goal = 6
+Output: 0 (subsequence [5,-7,3,5] = 6)
+```
+
+**Why meet-in-the-middle:** With n ≤ 40, 2^n is too large. Split in half: 2^(n/2) ≈ 1M. Generate all subset sums for each half, sort one, binary search for closest complement.
+
+### Code
+
+```kotlin
+package binarysearch
+
+import kotlin.math.abs
+
+class ClosestSebsequenceSum {
+    fun minAbsDifference(nums: IntArray, goal: Int): Int {
+        val leftSums = mutableListOf<Int>()
+        val rightSums = mutableListOf<Int>()
+        val n = nums.size
+        val mid = n / 2
+
+        fun dfs(start: Int, end: Int, currentSum: Int, result: MutableList<Int>) {
+            if (start == end) {
+                result.add(currentSum)
+                return
+            }
+            dfs(start + 1, end, currentSum, result) // exclude
+            dfs(start + 1, end, currentSum + nums[start], result) // include
+        }
+
+        dfs(0, mid, 0, leftSums)
+        dfs(mid, n, 0, rightSums)
+
+        rightSums.sort()
+        var minDiff = Int.MAX_VALUE
+
+        for (sumLeft in leftSums) {
+            val target = goal - sumLeft
+            val idx = rightSums.binarySearch(target)
+            if (idx >= 0) return 0 // exact match found
+
+            val insertPoint = -idx - 1
+            if (insertPoint < rightSums.size)
+                minDiff = minOf(minDiff, abs(sumLeft + rightSums[insertPoint] - goal))
+            if (insertPoint > 0)
+                minDiff = minOf(minDiff, abs(sumLeft + rightSums[insertPoint - 1] - goal))
+        }
+
+        return minDiff
+    }
+}
+
+```
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(2^(n/2) log 2^(n/2)) — meet-in-the-middle |
+| **Space** | O(2^(n/2)) |
+
+### Pattern Insight
+
+**Meet-in-the-Middle + Binary Search.** Split large search space, enumerate each half, combine with binary search.
+
+### Variations
+
+1. Exact match instead of closest?
+2. Constrained subsequence length?
+3. Unlimited element usage?
+4. Larger n (≥ 60)?
+5. Must pick at least one element?
+
+---
+
+
 ### Code
 ```kotlin
 package binarysearch
@@ -230,6 +518,89 @@ class ClosestSebsequenceSum {
 | **Space** | O(1) |
 ---
 ## Find First And Last Position
+
+**Problem:** Find first and last index of `target` in sorted array with duplicates. Return [-1, -1] if not found. O(log n) required.
+
+**Example:**
+```
+Input: nums = [5,7,7,8,8,10], target = 8 → Output: [3,4]
+Input: nums = [5,7,7,8,8,10], target = 6 → Output: [-1,-1]
+```
+
+**Why binary search:** Two binary searches — left boundary (first occurrence) and right boundary (last occurrence). When `nums[mid] == target`, don't stop — narrow toward one side.
+
+### Code
+
+```kotlin
+package binarysearch
+
+class FindFirstAndLastPosition {
+
+    fun searchRange(nums: IntArray, target: Int): IntArray {
+        val result = intArrayOf(-1, -1)
+
+        // Find the first occurrence
+        result[0] = binarySearch(nums, target, true)
+
+        // If the first occurrence is not found, return [-1, -1]
+        if (result[0] == -1) return result
+
+        // Find the last occurrence
+        result[1] = binarySearch(nums, target, false)
+
+        return result
+    }
+
+    private fun binarySearch(nums: IntArray, target: Int, findFirst: Boolean): Int {
+        var left = 0
+        var right = nums.lastIndex
+        var result = -1
+
+        while (left <= right) {
+            val mid = left + (right - left) / 2
+            when {
+                nums[mid] == target -> {
+                    result = mid
+                    // Adjust the search range based on whether we are looking for the first or last occurrence
+                    if (findFirst) {
+                        right = mid - 1  // Move left to find the first occurrence
+                    } else {
+                        left = mid + 1   // Move right to find the last occurrence
+                    }
+                }
+                nums[mid] < target -> left = mid + 1
+                else -> right = mid - 1
+            }
+        }
+
+        return result
+    }
+}
+
+```
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) — two binary searches |
+| **Space** | O(1) |
+
+### Pattern Insight
+
+**Left/Right Boundary Binary Search.** Modify standard search: when equal, keep narrowing toward the boundary you want.
+
+### Variations
+
+1. Count frequency of target in O(log n)?
+2. Find range in rotated array?
+3. Find closest element when target doesn't exist?
+4. What if array is very large?
+5. What if all elements are the same?
+
+---
+
+
 ### Code
 ```kotlin
 package binarysearch
@@ -283,6 +654,97 @@ class FindFirstAndLastPosition {
 | **Space** | O(1) |
 ---
 ## Find K Closest Elements
+
+**Problem:** Find k closest elements to x in sorted array `arr`. Return in sorted order. Distance: |a - x| < |b - x|, or if equal, smaller element wins.
+
+**Example:**
+```
+Input: arr = [1,2,3,4,5], k = 4, x = 3 → Output: [1,2,3,4]
+Input: arr = [1,2,3,4,5], k = 4, x = -1 → Output: [1,2,3,4]
+```
+
+**Why binary search:** Find the **start** of the k-element window, not individual elements. Compare `x - arr[mid]` vs `arr[mid + k] - x` to decide direction.
+
+### Code
+
+```kotlin
+package heap
+
+import java.util.PriorityQueue
+import kotlin.math.abs
+
+class FindKClosestElements {
+    class FindKClosestElements {
+        /**
+         * Solving using Max Heap. O ( N log K + K log K )
+         */
+        fun findClosestElements(arr: Array<Int>, k: Int, x: Int): List<Int> {
+            /**
+             * If we create a Max heap returning ( logic(b)  - logic(a) )
+             * and keep adding element and remove farthest element in each iteration once heap size goes > K
+             * then we'll eliminate (n - k ). Remaining elements will be K closest elements.i.e n - (n-k) = K
+             *
+             *
+             * example of logic function could be frequency count from map eucledian distances
+             */
+           val priorityQueue = PriorityQueue<Int> { a,b ->
+               val diffA = abs(a - x)
+               val diffB = abs(b - x)
+               if (diffA == diffB) b - a else  diffB - diffA
+           }
+            arr.forEach { element ->
+                priorityQueue.offer(element)
+                // Remove the farthest element
+                if (priorityQueue.size > k)
+                    priorityQueue.poll()
+            }
+            val result = mutableListOf<Int>()
+
+            repeat(k) {
+                if (priorityQueue.isNotEmpty())
+                    result.add(priorityQueue.poll())
+            }
+
+            return result
+        }
+
+        // We could also do
+
+        companion object {
+            @JvmStatic
+            fun main(args: Array<String>) {
+                val testClass = FindKClosestElements()
+
+                println(testClass.findClosestElements(arrayOf(1,2,3,4,5,6,7), 4, 4 ))
+            }
+        }
+    }
+}
+
+```
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log(n-k) + k) |
+| **Space** | O(k) |
+
+### Pattern Insight
+
+**Binary Search for Window Position.** Find window start by comparing boundary elements. Once positioned, collect k elements.
+
+### Variations
+
+1. x outside array range?
+2. All elements equally close?
+3. Array not sorted?
+4. k > n?
+5. Duplicates?
+
+---
+
+
 ### Code
 ```kotlin
 package heap
@@ -344,6 +806,61 @@ class FindKClosestElements {
 | **Space** | O(k) |
 ---
 ## Find Minimum In Rotated Sorted Array
+
+**Problem:** Find minimum in rotated sorted array (distinct elements). O(log n) required.
+
+**Example:**
+```
+Input: nums = [3,4,5,1,2] → Output: 1
+Input: nums = [4,5,6,7,0,1,2] → Output: 0
+```
+
+**Why binary search:** In a rotated sorted array, the minimum is the pivot where order breaks. Compare `nums[mid]` with `nums[right]` — if mid > right, pivot is on the right.
+
+### Code
+
+```kotlin
+package binarysearch
+
+class FindMinimumInRotatedSortedArray {
+    fun findMin(nums: IntArray): Int {
+        var (left, right) = 0 to nums.size - 1
+        while (left < right) {
+            val mid = left + (right - left) / 2
+            when {
+                nums[mid] > nums[right] -> left = mid + 1
+                else -> right = mid
+            }
+        }
+
+        return nums[left]
+    }
+}
+
+```
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+### Pattern Insight
+
+**Rotated Array Binary Search.** Compare mid with right boundary to find the sorted half vs the rotated half.
+
+### Variations
+
+1. With duplicates?
+2. Find maximum instead?
+3. Search for a target in rotated array?
+4. Count rotations?
+5. Multiple rotations?
+
+---
+
+
 ### Code
 ```kotlin
 package binarysearch
@@ -398,6 +915,54 @@ class FindPeakElement {
 | **Space** | O(1) |
 ---
 ## Find Peak Element Better Solution
+
+Same as Find Peak Element but with explicit boundary safety — out-of-bounds treated as `Int.MIN_VALUE`.
+
+### Code
+
+```kotlin
+package binarysearch
+
+class FindPeakElementBetterSolution {
+    fun findPeakElement(nums: IntArray): Int? {
+        if (nums.isEmpty()) return null
+
+        var (left, right) = 0 to nums.size - 1
+
+        while (left < right) {
+            val mid = left + (right - left) / 2
+
+            // Safely handle boundaries
+            val leftNeighbor = if (mid > 0) nums[mid - 1] else Int.MIN_VALUE
+            val rightNeighbor = if (mid < nums.size - 1) nums[mid + 1] else Int.MIN_VALUE
+
+            when {
+                nums[mid] > leftNeighbor && nums[mid] > rightNeighbor -> return mid // Found peak
+                nums[mid] < rightNeighbor -> left = mid + 1 // Move to the right
+                else -> right = mid // Move to the left
+            }
+        }
+
+        return left // Single peak element when the range narrows down
+    }
+}
+
+```
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+### Variations
+
+Same as Find Peak Element.
+
+---
+
+
 ### Code
 ```kotlin
 package binarysearch
@@ -431,7 +996,74 @@ class FindPeakElementBetterSolution {
 | **Time** | O(log n) |
 | **Space** | O(1) |
 ---
-## Version Control
+## First Bad Version
+
+**Problem:** Find the first bad version in versions [1..n] using `isBadVersion(version)` API. All subsequent versions after a bad one are also bad. Minimize API calls.
+
+**Example:**
+```
+n = 5, bad = 4
+isBadVersion(3) → false
+isBadVersion(5) → true
+isBadVersion(4) → true
+Output: 4
+```
+
+**Why binary search:** The predicate `isBadVersion(v)` is monotonic (false → true exactly once). Binary search finds the first true in O(log n) calls.
+
+### Code
+
+```kotlin
+package binarysearch
+
+abstract class VersionControl {
+    fun isBadVersion(mid: Int): Boolean {
+        return false // Return dummy value
+    }
+
+    abstract fun firstBadVersion(n: Int) : Int
+}
+class FirstBadVersion: VersionControl() {
+    override fun firstBadVersion(n: Int) : Int {
+        var start = 1
+        var end = n
+
+        while (start < end) {
+            val mid = start + (end - start) / 2
+            when {
+                isBadVersion(mid) -> end = mid
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
+}
+
+```
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+### Pattern Insight
+
+**First True (Left Boundary).** The textbook example of left-boundary binary search on a monotonic predicate.
+
+### Variations
+
+1. Last good version instead?
+2. Multiple bad ranges?
+3. Rate-limited API?
+4. Unknown n in advance?
+5. Skipped version numbers?
+
+---
+
+
 ### Code
 ```kotlin
 package binarysearch
@@ -465,7 +1097,92 @@ class FirstBadVersion: VersionControl() {
 | **Time** | O(log n) |
 | **Space** | O(1) |
 ---
-## Solution
+## Guess Number Higher Or Lower
+
+**Problem:** Pick a number from 1 to n. API `guess(num)` returns -1 (too high), 1 (too low), or 0 (correct). Find the number.
+
+**Example:**
+```
+n = 10, pick = 6
+guess(5) → 1, guess(8) → -1, guess(6) → 0
+Output: 6
+```
+
+**Why binary search:** Standard binary search on an integer range. The guess API provides the comparison.
+
+### Code
+
+```kotlin
+package binarysearch
+
+/**
+ * The API guess is defined in the parent class.
+ * @param  num   your guess
+ * @return 	     -1 if num is higher than the picked number
+ *			      1 if num is lower than the picked number
+ *               otherwise return 0
+ * fun guess(num:Int):Int {}
+ */
+
+class Solution:GuessGame() {
+    override fun guessNumber(n:Int):Int {
+        var start = 1
+        var end = n
+
+        while (start <= end) {
+            val mid = start + (end-start) / 2
+
+            val distance = guess(mid)
+
+
+            when {
+                distance == 0 -> return mid
+                distance < 0 -> end = mid - 1
+                else -> start = mid + 1
+            }
+        }
+
+        return -1
+    }
+
+
+}
+
+open class GuessGame {
+
+    open fun guessNumber(n: Int): Int {
+        TODO("Not yet implemented")
+    }
+
+    fun guess(mid: Int): Int {
+        return 0
+    }
+}
+
+```
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+### Pattern Insight
+
+**Standard Binary Search.** Pure form — the guess API is the comparison function.
+
+### Variations
+
+1. Unreliable API (occasional lies)?
+2. 64-bit range?
+3. Limited number of guesses?
+4. Unknown range?
+5. Multiple correct numbers?
+
+---
+
+
 ### Code
 ```kotlin
 package binarysearch
