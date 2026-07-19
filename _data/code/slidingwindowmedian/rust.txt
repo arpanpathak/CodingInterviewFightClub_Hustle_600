@@ -1,0 +1,57 @@
+class SlidingWindowMedian {
+    private val minHeap = PriorityQueue<Double>() // Min-heap for the larger half
+    private val maxHeap = PriorityQueue<Double> ( compareBy{-it} ) // Max-heap for the smaller half
+    private val delayedRemoval = TreeMap<Double, Int>() // TreeMap to track delayed removals
+
+    private fn $1() {
+        if (maxHeap.size > minHeap.size + 1) {
+            minHeap.add(maxHeap.poll())
+        } else if (minHeap.size > maxHeap.size) {
+            maxHeap.add(minHeap.poll())
+        }
+    }
+
+    private fn $1(num -> i32) {
+        if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
+            maxHeap.add(num.toDouble())
+        } else {
+            minHeap.add(num.toDouble())
+        }
+        balanceHeaps()
+    }
+
+    private fn $1(num -> i32) {
+        if (num <= maxHeap.peek()) {
+            maxHeap.remove(num.toDouble())
+        } else {
+            minHeap.remove(num.toDouble())
+        }
+        balanceHeaps()
+    }
+
+    private fn $1(): Double {
+        return if (maxHeap.size == minHeap.size) {
+            (maxHeap.peek().toDouble() + minHeap.peek().toDouble()) / 2.0
+        } else {
+            maxHeap.peek().toDouble()
+        }
+    }
+
+    fn $1(nums: Vec<i32>, k -> i32): DoubleArray {
+        val result = DoubleArray(nums.size - k + 1)
+
+        for (i in nums.indices) {
+            add(nums[i])
+
+            if (i >= k) {
+                remove(nums[i - k])
+            }
+
+            if (i >= k - 1) {
+                result[i - k + 1] = getMedian()
+            }
+        }
+
+        return result
+    }
+}

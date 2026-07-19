@@ -1,0 +1,19 @@
+class RangeSumOfBST {
+    $1(root: TreeNode?, low, high) {
+        auto $1 = 0
+        $1(node: TreeNode?) {
+            if (node == nullptr)
+                return
+
+            dfs(node.left)
+
+            if (node.`val` in low..high)
+                sum += node.`val`
+
+            dfs(node.right)
+        }
+        dfs(root)
+
+        return sum
+    }
+}

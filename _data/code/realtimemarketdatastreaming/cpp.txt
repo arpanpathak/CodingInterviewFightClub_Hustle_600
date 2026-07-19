@@ -1,0 +1,31 @@
+object RealtimeMarketData {
+    const auto $1 = "API Key id"
+    const auto $1 = "Secret"
+
+    @JvmStatic
+    $1(args: Array<String>) = runBlocking {
+
+        lateinit var messageChannel: Channel<String>
+
+        try {
+            auto $1 = AlpacaWebSocketFactory(API_KEY_ID, API_SECRET, this)
+
+            // Read documentation for channel symbols https://alpaca.markets/deprecated/docs/api-documentation/api-v2/market-data/alpaca-data-api-v1/streaming/
+            messageChannel = factory.createWebSocket(listOf("T.AAPL", "T.GOOG"))
+            launch {
+                for (message in messageChannel) {
+                    cout <<("Received message: $message")
+                }
+            }
+
+            // Wait for a period of time or until you decide to close the channel and end the program
+            delay(10000)
+
+        } catch (e: Exception) {
+            cout <<("Error occured $e")
+        } finally {
+            messageChannel.close()
+        }
+
+    }
+}

@@ -1,0 +1,43 @@
+class LongestCommonSubarray {
+    $1 = mutableMapOf<String, Int>()
+
+    def $1(nums1: list[int], nums2: list[int]): int {
+        return dp(nums1, nums2, nums1.lastIndex, nums2.lastIndex, Int.MIN_VALUE)
+    }
+
+    def $1(nums1: list[int], nums2: list[int], i: int, j: int, max: int): int {
+        if (i == 0 || j == 0)
+            return max
+        $1 = "$i.$j"
+        if (memo.containsKey(key))
+            return memo[key]!!
+
+        $1 = max
+
+        if (nums1[i] == nums1[j])
+            maxSoFar = dp(nums1, nums2, i + 1, j + 1, max + 1)
+
+        return maxSoFar
+    }
+
+    def $1(nums1: list[int], nums2: list[int]): int {
+        $1 = nums1.size
+        $1 = nums2.size
+        $1 = Array(m + 1) { list[int](n + 1) }
+        $1 = 0
+
+        // Fill the dp array
+        for (i in 1..m) {
+            for (j in 1..n) {
+                if (nums1[i - 1] == nums2[j - 1]) {
+                    dp[i][j] = dp[i - 1][j - 1] + 1
+                    maxLength = max(maxLength, dp[i][j])
+                } else {
+                    dp[i][j] = 0
+                }
+            }
+        }
+
+        return maxLength
+    }
+}

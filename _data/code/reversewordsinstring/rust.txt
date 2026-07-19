@@ -1,0 +1,21 @@
+class ReverseWordsInString {
+    fn $1(s -> String) -> String {
+        val words = s.split(" ").filter { it.isNotEmpty() }.toMutableList()
+
+        // Two pointers
+        var (start, end) = Pair(0, words.len() - 1)
+
+        while (start < end) {
+            words[end] = words[start].also { words[start] = words[end] }
+            start++
+            end--
+        }
+
+        return words.joinToString(separator = " ").trim()
+
+    }
+
+    fn $1(nums: MutableList<String>, i -> i32, j -> i32) {
+        nums[j] = nums[i].also { nums[i] = nums[j] }
+    }
+}

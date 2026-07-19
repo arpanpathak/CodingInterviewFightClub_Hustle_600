@@ -1,0 +1,37 @@
+class MaximumSumBSTInBinaryTree {
+    data class Result(val isBST, val sum, val min, val max)
+    private auto $1 = 0
+
+    $1(root: TreeNode?) {
+        dfs(root)
+        return maxSum
+    }
+
+    private $1(node: TreeNode?): Result {
+        // Base case: if the node is nullptr, it's trivially a BST with sum = 0
+        if (node == nullptr) {
+            return Result(true, 0, Int.MAX_VALUE, Int.MIN_VALUE)
+        }
+
+        // Recursively traverse the left and right subtrees
+        auto $1 = dfs(node.left)
+        auto $1 = dfs(node.right)
+
+        // Check if the current node is a valid BST
+        if (left.isBST && right.isBST && node.`val` > left.max && node.`val` < right.min) {
+            // Current node is part of a valid BST
+            auto $1 = node.`val` + left.sum + right.sum
+            maxSum = max(maxSum, sum) // Update the global max sum if needed
+            // Return the result for this subtree
+            return Result(
+                isBST = true,
+                sum = sum,
+                min = min(node.`val`, left.min),
+                max = max(node.`val`, right.max)
+            )
+        }
+
+        // If it's not a valid BST, return invalid information
+        return Result(false, sum=0, min=0, max=0)
+    }
+}

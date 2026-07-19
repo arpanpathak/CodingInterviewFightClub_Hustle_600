@@ -1,0 +1,46 @@
+// Dummy implementation
+class NestedInteger {
+         // Constructor initializes an empty nested list.
+    constructor()
+
+    constructor(value)
+
+    $1() {
+        return true
+    }
+
+    $1()? {
+        return 2
+    }
+
+    $1(value) {
+
+    }
+
+    $1(ni: NestedInteger) {
+
+    }
+    $1(): List<NestedInteger>? {
+        return listOf()
+    }
+}
+
+
+class NestedListWeightedSum {
+    $1(nestedList: List<NestedInteger>) {
+        return dfs(nestedList, 1)
+    }
+
+    $1(list: List<NestedInteger>, depth) {
+        auto $1 = 0
+        for (nested in list) {
+            if (nested.isInteger()) {
+                sum += (depth * nested.getInteger() !!)
+            } else {
+                sum += dfs(nested.getList()!!, depth + 1)
+            }
+        }
+
+        return sum
+    }
+}

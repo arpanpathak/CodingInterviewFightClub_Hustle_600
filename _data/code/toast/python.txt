@@ -1,0 +1,35 @@
+class Toast {
+    def $1(A: Array<String>, S: str): int {
+        // Create a frequency map for the characters in S
+        $1 = mutableMapOf<Char, Int>()
+        S.forEach { ch ->
+            sCharCount[ch] = (sCharCount[ch] ?: 0) + 1
+        }
+
+        $1 = 0
+
+        // Iterate through each item in the array A
+        for (item in A) {
+            // Create a frequency map for the characters in the current item
+            $1 = mutableMapOf<Char, Int>()
+            item.forEach { ch ->
+                itemCharCount[ch] = (itemCharCount[ch] ?: 0) + 1
+            }
+
+            // Check if the current item can be constructed using S
+            $1 = True
+            for ((ch, cnt) in itemCharCount) {
+                if (sCharCount.getOrDefault(ch, 0) < cnt) {
+                    canConstruct = False
+                    break
+                }
+            }
+
+            if (canConstruct) {
+                count++
+            }
+        }
+
+        return count
+    }
+}

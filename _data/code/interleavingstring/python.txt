@@ -1,0 +1,27 @@
+class InterleavingString {
+    def $1(s1: str, s2: str, s3: str): bool {
+        if (s1.length + s2.length != s3.length) return False
+
+        $1 = mutableMapOf<Pair<Int, Int>, Boolean>()
+
+        def $1(i: int, j: int): bool {
+            if (i == s1.length && j == s2.length) return True
+            if (memo.containsKey(i to j)) return memo[i to j]!!
+
+            $1 = i + j
+            $1 = False
+
+            if (i < s1.length && s1[i] == s3[k] && dfs(i + 1, j)) {
+                result = True
+            }
+            if (j < s2.length && s2[j] == s3[k] && dfs(i, j + 1)) {
+                result = True
+            }
+
+            memo[i to j] = result
+            return result
+        }
+
+        return dfs(0, 0)
+    }
+}

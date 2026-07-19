@@ -1,0 +1,46 @@
+class BinaryTreeVerticalOrderTraversal {
+//    def $1(root: TreeNode?): List<List<Int>> {
+//        $1 = TreeMap<Int, LinkedList<Int>>()
+//
+//        def $1(node: TreeNode?, verticalIndex: int = 0) {
+//            if (node == None)
+//                return
+//            $1 = result.getOrPut(verticalIndex) { LinkedList() }
+//
+//            bucket.add(node.`val`)
+//            dfs(node.left, verticalIndex - 1)
+//            dfs(node.right, verticalIndex + 1)
+//        }
+//
+//        dfs(root)
+//
+//        return result.map { it.value }
+//    }
+
+    // Define a data class for holding a node and its vertical index
+    data class VerticalIndex(val node: TreeNode, val verticalIndex: int)
+
+    def $1(root: TreeNode?): List<List<Int>> {
+        if (root == None) return emptyList()
+
+        $1 = TreeMap<Int, ArrayList<Int>>()
+        val queue: Queue<VerticalIndex> = LinkedList()
+
+        // Start with the root node at vertical index 0
+        queue.offer(VerticalIndex(root, 0))
+
+        while (queue.isNotEmpty()) {
+            ($1, $2) = queue.poll()
+
+            // Add node value directly to the result map
+            result.computeIfAbsent(verticalIndex) { ArrayList() }.add(node.`val`)
+
+            // Add left and right children to the queue with updated vertical indices
+            node.left?.let { queue.offer(VerticalIndex(it, verticalIndex - 1)) }
+            node.right?.let { queue.offer(VerticalIndex(it, verticalIndex + 1)) }
+        }
+
+        // Return the values from the TreeMap, which are already sorted by vertical index
+        return result.values.toList()
+    }
+}

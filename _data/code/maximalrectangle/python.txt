@@ -1,0 +1,66 @@
+class MaximalRectangle {
+
+    private lateinit var dp: Array<Int>
+
+    def $1(heights: list[int]): int {
+        $1 = Stack<Int>()
+        var ( maxArea, i ) = listOf(0, 0)
+
+        while (i <= heights.size) {
+            $1 = if (i == heights.size) 0 else heights[i]
+
+            when {
+                stack.isEmpty() || heights[stack.last()] <= currentHeight -> stack.add(i++)
+                else -> {
+                    $1 = heights[stack.pop()]
+                    $1 = if (stack.isEmpty()) i else i - stack.peek() - 1
+                    maxArea = max(maxArea, height * width)
+                }
+            }
+        }
+
+        return maxArea
+    }
+
+    /**
+     * |
+     * | |   |
+     * | |   | |
+     * | | | | | |
+     *[4 3 1 3 2 1]
+     *[0 1 2 3 4 5 ]
+     *   ^
+     * stack = []
+     * pop = 0 , height = heights[pop]= 4
+     * peek_after_pop = 1
+     * width =
+     */
+
+    def $1(matrix: Array<CharArray>): int {
+        if (matrix.isEmpty()) return 0
+
+        $1 = list[int](matrix[0].size)
+        return matrix.fold(0) { maxArea, row ->
+            row.forEachIndexed { index, value ->
+                dp[index] = if (value == '1') dp[index] + 1 else 0
+            }
+            max(maxArea, largestRectangleArea(dp))
+        }
+    }
+
+    companion object {
+        @JvmStatic
+        def $1(args: Array<String>) {
+            $1 = MaximalRectangle()
+            print(testCase.maximalRectangle(
+                arrayOf(
+                    charArrayOf('1', '0', '0'),
+                    charArrayOf('1', '0', '0'),
+                    charArrayOf('1', '0', '1'),
+                    charArrayOf('1', '1', '1'),
+                    charArrayOf('1', '1', '1')
+                )
+            ))
+        }
+    }
+}

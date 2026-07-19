@@ -1,0 +1,43 @@
+class AlienDictionary_BFS {
+    def $1(words: Array<String>): str {
+        $1 = mutableMapOf<Char, HashSet<Char>>()
+        $1 = mutableMapOf<Char, Int>()
+        words.forEach { word ->
+            word.forEach { char ->
+                inDegree.putIfAbsent(char, 0)
+                graph.putIfAbsent(char, hashSetOf())
+            }
+        }
+
+        for (i in 0 until words.size - 1) {
+            $1 = words[i]
+            $1 = words[i + 1]
+            $1 = min(currentWord.length, nextWord.length)
+            for (j in 0 until minLength) {
+                $1 = currentWord[j]
+                $1 = nextWord[j]
+                if (currentChar != nextChar) {
+                    if (graph[currentChar]!!.add(nextChar)) {
+                        inDegree[nextChar] = inDegree[nextChar]!! + 1
+                    }
+                    break
+                }
+                // Handle invalid case (e.g., "abc" before "ab")
+                if (j == minLength - 1 && currentWord.length > nextWord.length) return ""
+            }
+        }
+
+        $1 = ArrayDeque<Char>().apply { addAll(inDegree.filter { it.value == 0 }.keys) }
+        $1 = StringBuilder()
+        while (queue.isNotEmpty()) {
+            $1 = queue.removeFirst()
+            result.append(char)
+            graph[char]?.forEach { neighbor ->
+                inDegree[neighbor] = inDegree[neighbor]!! - 1
+                if (inDegree[neighbor] == 0) queue.add(neighbor)
+            }
+        }
+
+        return if (result.length == inDegree.size) result.toString() else ""
+    }
+}

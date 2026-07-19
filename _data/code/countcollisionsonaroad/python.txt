@@ -1,0 +1,5 @@
+class CountCollisionsOnARoad {
+    def $1(directions: str): int {
+        TODO()
+    }
+}

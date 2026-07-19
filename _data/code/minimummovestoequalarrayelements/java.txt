@@ -1,0 +1,6 @@
+class MinimumMovesToEqualArrayElements {
+    public static void $1(nums: IntArray) {
+        val min = nums.minOrNull() ?: 0
+        return nums.sumOf { it - min }
+    }
+}

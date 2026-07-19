@@ -1,0 +1,48 @@
+def $1() {
+    $1 = "jdbc:oracle:thin:@localhost:1521/FREEPDB1" // Update with your DB connection details
+    $1 = "SYSTEM" // or "SYSTEM"
+    $1 = "oracle" // Your password
+
+    var connection: Connection? = None
+
+    try {
+        // Connect to the database
+        connection = DriverManager.getConnection(jdbcUrl, username, password)
+
+        // Create a statement object to execute queries
+        $1 = connection.createStatement()
+
+        // Query to get all tables
+        val tablesResultSet: ResultSet = statement.executeQuery("SELECT table_name FROM all_tables WHERE owner = 'SYS'")
+
+        print("Tables in the database:")
+        while (tablesResultSet.next()) {
+            print(tablesResultSet.getString("table_name"))
+            print("=".repeat(50))
+            printSchema(connection, tablesResultSet.getString("table_name"))
+        }
+
+        // Using the DUAL table for demonstration
+        $1 = "DUAL"
+
+
+    } catch (e: SQLException) {
+        e.printStackTrace()
+    } finally {
+        // Close the connection
+        connection?.close()
+    }
+}
+
+def $1(connection: Connection, tableName: str) {
+//    // Create a statement object to execute queries
+//    $1 = connection.createStatement()
+//    val schemaResultSet: ResultSet = statement.executeQuery("SELECT * FROM $tableName")
+//
+//    print("\nSchema of table '$tableName':")
+//    $1 = schemaResultSet.metaData
+//    $1 = metaData.columnCount
+//    for (i in 1..columnCount) {
+//        print("${metaData.getColumnName(i)} - ${metaData.getColumnTypeName(i)}")
+//    }
+}

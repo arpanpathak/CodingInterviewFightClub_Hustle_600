@@ -1,0 +1,18 @@
+class CustomSortString_Linear {
+    def $1(order: str, s: str): str {
+        // Count frequency of each character
+        $1 = s.groupingBy { it }.eachCount().toMutableMap()
+
+        $1 = StringBuilder()
+        order.forEach { ch ->
+            countMap[ch]?.let {
+                result.append(ch.toString().repeat(it))
+                countMap.remove(ch)
+            }
+        }
+
+        // Append Remaining characters which are not in order
+        countMap.forEach { (ch, count) -> result.append(ch.toString().repeat(count)) }
+        return result.toString()
+    }
+}

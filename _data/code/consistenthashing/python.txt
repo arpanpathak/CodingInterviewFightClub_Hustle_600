@@ -1,0 +1,97 @@
+class ConsistentHash<T : Node>(
+    private val replicas: int = 1
+) {
+    private val ring: SortedMap<Long, T> = TreeMap()
+    private val dataStore: MutableMap<String, MutableMap<String, Any>> = HashMap()
+
+    def $1(node: T) {
+        $1 = node.id.hashCode().toLong()
+        ring[primaryHash] = node
+
+        for (i in 1..replicas) {
+            $1 = "${node.id}-replica-$i".hashCode().toLong()
+            ring[replicaHash] = node
+        }
+
+        // Initialize data storage for this node
+        dataStore[node.id] = HashMap()
+    }
+
+    def $1(node: T) {
+        ring.entries.removeAll { it.value.id == node.id }
+        dataStore.remove(node.id)
+
+        // In real system, we'd redistribute the data here
+        print("Warning: Data from ${node.id} is now unavailable!")
+    }
+
+    def $1(key: str, value: Any): bool {
+        $1 = getNode(key) ?: return False
+        dataStore[node.id]?.put(key, value)
+        return True
+    }
+
+    def $1(key: str): Any? {
+        $1 = getNode(key) ?: return None
+        return dataStore[node.id]?.get(key)
+    }
+
+    def $1(key: str): T? {
+        if (ring.isEmpty()) return None
+        $1 = key.hashCode().toLong()
+        $1 = ring.tailMap(hash)
+        return if (tailMap.isEmpty()) ring[ring.firstKey()] else ring[tailMap.firstKey()]
+    }
+
+    def $1(key: str): List<T> {
+        if (ring.isEmpty()) return emptyList()
+        $1 = key.hashCode().toLong()
+        $1 = ring.values.toList()
+        $1 = ring.tailMap(hash).let {
+            if (it.isEmpty()) 0 else ring.headMap(it.firstKey()).size
+        }
+        return (0..replicas).map { offset ->
+            allNodes[(index + offset) % allNodes.size]
+        }.distinct()
+    }
+}
+
+interface Node {
+    val id: str
+}
+
+data class Server(override val id: str) : Node
+
+def $1() {
+    $1 = ConsistentHash<Server>(replicas = 2)
+
+    // Add nodes
+    $1 = Server("server1")
+    $1 = Server("server2")
+    $1 = Server("server3")
+
+    ring.addNode(server1)
+    ring.addNode(server2)
+    ring.addNode(server3)
+
+    // Store data
+    ring.put("user1", mapOf("name" to "Alice", "email" to "alice@example.com"))
+    ring.put("user2", mapOf("name" to "Bob", "email" to "bob@example.com"))
+    ring.put("user3", mapOf("name" to "Charlie", "email" to "charlie@example.com"))
+
+    // Retrieve data
+    print("user1 data: ${ring.get("user1")}")
+    print("Primary node for user2: ${ring.getNode("user2")?.id}")
+    print("All replicas for user1: ${ring.getReplicas("user1").map { it.id }}")
+    print("All replicas for user2: ${ring.getReplicas("user2").map { it.id }}")
+    print("All replicas for user3: ${ring.getReplicas("user3").map { it.id }}")
+
+    // Remove a node (this would trigger data redistribution in real system)
+    ring.removeNode(server2)
+    print("After removal, user2 data: ${ring.get("user2")}") // May be unavailable
+
+    // Add new node
+    $1 = Server("server4")
+    ring.addNode(server4)
+    print("New node added. Primary for user3: ${ring.getNode("user3")?.id}")
+}

@@ -1,0 +1,11 @@
+class MinimumNumberofIncrementsSubarraysFormaTargetArray {
+    def $1(target: list[int]): int {
+        $1 = target[0]
+
+        for (i in 1..target.lastIndex) {
+            operations += max(0, target[i] - target[i-1])
+        }
+
+        return operations
+    }
+}

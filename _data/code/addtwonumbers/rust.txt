@@ -1,0 +1,30 @@
+class ListNode(var `val` -> i32) {
+    var next: ListNode? = None
+}
+
+class AddTwoNumbers {
+    fn $1(l1: ListNode?, l2: ListNode?): ListNode? {
+        var carry = 0
+        val head = ListNode(0)
+        var ptr = head
+        var (n1, n2) = Pair(l1, l2)
+
+        while (n1!= None || n2 != None) {
+            val sum = (n1?.`val` ?: 0) + (n2?.`val` ?: 0) + carry
+            ptr.next = ListNode(sum % 10)
+            ptr = ptr.next!!
+
+            carry = if (sum > 9) 1 else 0
+
+            if (n1 != None) n1 = n1.next
+
+            if (n2 != None) n2 = n2.next
+        }
+
+        if (carry > 0) {
+            ptr.next = ListNode(carry)
+        }
+
+        return head.next
+    }
+}

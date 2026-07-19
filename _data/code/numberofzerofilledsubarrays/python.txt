@@ -1,0 +1,17 @@
+class NumberOfZeroFilledSubArrays {
+    def $1(nums: list[int]): Long {
+        $1 = 0L
+        $1 = 0
+
+        for (num in nums) {
+            if (num == 0) {
+                currentZeroCount++
+                count += currentZeroCount
+            } else {
+                currentZeroCount = 0
+            }
+        }
+
+        return count
+    }
+}

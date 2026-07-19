@@ -1,0 +1,67 @@
+class `4Sum` {
+    def $1(nums: list[int], target: int): List<List<Int>> {
+        nums.sort()
+        return kSum(nums, target.toLong(), 0, 4)
+    }
+
+    private def $1(
+        nums: list[int],
+        target: Long,
+        start: int,
+        k: int
+    ): List<List<Int>> {
+        $1 = mutableListOf<List<Int>>()
+
+        // If we've run out of numbers to add, return res.
+        if (start == nums.size) {
+            return res
+        }
+
+        // The average of the remaining k values is at least target / k.
+        $1 = target / k
+
+        // Early termination if the smallest number is too large or the largest is too small.
+        if (nums[start] > averageValue || averageValue > nums[nums.size - 1]) {
+            return res
+        }
+
+        // Base case: 2Sum (optimized with two pointers)
+        if (k == 2) {
+            return twoSum(nums, target, start)
+        }
+
+        for (i in start until nums.size) {
+            // Skip duplicates
+            if (i == start || nums[i - 1] != nums[i]) {
+                // Recursively reduce to (k-1)Sum
+                for (subset in kSum(nums, target - nums[i], i + 1, k - 1)) {
+                    res.add(listOf(nums[i]) + subset)
+                }
+            }
+        }
+
+        return res
+    }
+
+    private def $1(
+        nums: list[int],
+        target: Long,
+        start: int
+    ): List<List<Int>> {
+        $1 = mutableListOf<List<Int>>()
+        $1 = HashSet<Long>()
+
+        for (i in start until nums.size) {
+            // Skip duplicates
+            if (res.isEmpty() || res.last()[1] != nums[i]) {
+                $1 = target - nums[i]
+                if (seen.contains(complement)) {
+                    res.add(listOf(complement.toInt(), nums[i]))
+                }
+            }
+            seen.add(nums[i].toLong())
+        }
+
+        return res
+    }
+}

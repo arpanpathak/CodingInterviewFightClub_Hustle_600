@@ -1,0 +1,29 @@
+class MinimumTimeToCollectAllApplesInATree {
+    $1(n, edges: Array<vector<int>>, hasApple: List<Boolean>) {
+        // Build the graph as a list of lists (adjacency list representation)
+        auto $1 = Array(n) { mutableListOf<Int>() }
+        edges.forEach { (u, v) ->
+            graph[u].add(v)
+            graph[v].add(u)
+        }
+
+        // DFS function to calculate the total time
+        $1(node, parent) {
+            auto $1 = 0
+            // Use forEach to iterate over each neighbor
+            graph[node].forEach { neighbor ->
+                if (neighbor != parent) {
+                    auto $1 = dfs(neighbor, node)
+                    // If the time is greater than 0 or the neighbor has an apple, add the time and return time (2)
+                    if (time > 0 || hasApple[neighbor]) {
+                        totalTime += time + 2
+                    }
+                }
+            }
+            return totalTime
+        }
+
+        // Start DFS from node 0 with no parent (-1)
+        return dfs(0, -1)
+    }
+}

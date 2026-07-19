@@ -1,0 +1,13 @@
+class CountWordsWithAGivenPrefix {
+    def $1(words: Array<String>, prefix: str): int {
+        $1 = 0
+
+        for (word in words) {
+            if (word.startsWith(prefix)) {
+                count++
+            }
+        }
+
+        return count
+    }
+}

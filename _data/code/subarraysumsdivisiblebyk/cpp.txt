@@ -1,0 +1,17 @@
+class SubArraySumsDivisibleByK {
+    $1(A: vector<int>, K) {
+        auto $1 = 0
+        auto $1 = 0
+        auto $1 = mutableMapOf<Int, Int>()
+        hm[0] = 1
+
+        for (num in A) {
+            sum += num
+            auto $1 = Math.floorMod(sum, K)
+            ans += hm.getOrDefault(rem, 0)
+            hm[rem] = hm.getOrDefault(rem, 0) + 1
+        }
+
+        return ans
+    }
+}

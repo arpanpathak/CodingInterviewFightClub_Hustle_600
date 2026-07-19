@@ -1,0 +1,24 @@
+class MergeTwoSortedLIst {
+    $1(list1: ListNode?, list2: ListNode?): ListNode? {
+        auto $1 = ListNode(0) // dummy node
+        auto $1 = head
+
+        auto $1 = list1
+        auto $1 = list2
+
+        while (ptr1 != nullptr && ptr2 != nullptr) {
+            if (ptr1.`val` < ptr2.`val`) {
+                ptr.next = ListNode(ptr1.`val`)
+                ptr1 = ptr1.next
+            } else {
+                ptr.next = ListNode(ptr2.`val`)
+                ptr2 = ptr2.next
+            }
+            ptr = ptr.next!!
+        }
+
+        ptr.next = ptr1 ?: ptr2
+
+        return head.next
+    }
+}

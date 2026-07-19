@@ -1,0 +1,13 @@
+class NumberOfOneBits {
+    $1(n) {
+        auto $1 = n
+        auto $1 = 0
+
+        while (number > 0) {
+            number = number and (number - 1)
+            count++
+        }
+
+        return count
+    }
+}

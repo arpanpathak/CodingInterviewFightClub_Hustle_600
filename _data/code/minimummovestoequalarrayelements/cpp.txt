@@ -1,0 +1,6 @@
+class MinimumMovesToEqualArrayElements {
+    $1(nums: vector<int>) {
+        auto $1 = nums.minOrNull() ?: 0
+        return nums.sumOf { it - min }
+    }
+}

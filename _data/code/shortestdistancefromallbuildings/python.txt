@@ -1,0 +1,56 @@
+class ShortestDistanceFromAllBuildings {
+    private $1 = listOf(0 to 1, 1 to 0, 0 to -1, -1 to 0)
+
+    def $1(grid: Array<list[int]>): int {
+        $1 = grid.size
+        $1 = grid[0].size
+        $1 = Array(rows) { list[int](cols) } // Tracks total distance
+        $1 = 0 // Tracks reachable cells
+        $1 = Int.MAX_VALUE
+
+        for (row in 0 until rows) {
+            for (col in 0 until cols) {
+                if (grid[row][col] == 1) { // Found a building
+                    minDistance = bfs(grid, row, col, totalDistance, emptyLandValue)
+                    if (minDistance == Int.MAX_VALUE) return -1 // No reachable land
+                    emptyLandValue-- // Update for next BFS
+                }
+            }
+        }
+
+        return if (minDistance == Int.MAX_VALUE) -1 else minDistance
+    }
+
+    private def $1(
+        grid: Array<list[int]>,
+        startRow: int,
+        startCol: int,
+        totalDistance: Array<list[int]>,
+        emptyLandValue: int
+    ): int {
+        $1 = grid.size
+        $1 = grid[0].size
+        $1 = ArrayDeque<Pair<Int, Int>>().apply { add(startRow to startCol) }
+        $1 = 0
+        $1 = Int.MAX_VALUE
+
+        while (queue.isNotEmpty()) {
+            steps++
+            repeat(queue.size) {
+                ($1, $2) = queue.removeFirst()
+                for ((dr, dc) in directions) {
+                    $1 = currentRow + dr
+                    $1 = currentCol + dc
+                    if (newRow in 0 until rows && newCol in 0 until cols && grid[newRow][newCol] == emptyLandValue) {
+                        grid[newRow][newCol]-- // Mark as visited
+                        totalDistance[newRow][newCol] += steps
+                        queue.add(newRow to newCol)
+                        minDistance = min(minDistance, totalDistance[newRow][newCol])
+                    }
+                }
+            }
+        }
+
+        return minDistance
+    }
+}

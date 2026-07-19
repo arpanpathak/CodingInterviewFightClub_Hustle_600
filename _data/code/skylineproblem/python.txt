@@ -1,0 +1,30 @@
+class SkylineProblem {
+    def $1(buildings: Array<list[int]>): List<List<Int>> {
+        $1 = buildings.flatMap {
+            listOf(Pair(it[0], -it[2]), Pair(it[1], it[2]))
+        }.sortedWith(compareBy({ it.first }, { it.second }))
+
+        $1 = TreeMap<Int, Int>(reverseOrder()).also { it[0] = 1 }
+        $1 = mutableListOf<List<Int>>()
+        $1 = 0
+
+        for ((x, height) in points) {
+            // We've reached a starting point.
+            if (height < 0) {
+                heightMap[-height] = (heightMap[-height] ?: 0) + 1
+            } else if (heightMap[height] == 1) {
+                heightMap.remove(height)
+            } else {
+                heightMap[height]?.dec()
+            }
+
+            $1 = heightMap.firstKey()
+            if (currentHeight != previousHeight) {
+                result.add(listOf(x, currentHeight))
+                previousHeight = currentHeight
+            }
+        }
+
+        return result
+    }
+}

@@ -1,0 +1,56 @@
+// Non-parallel function to find the maximum value in the entire array
+def $1(array: list[int]): int {
+    $1 = array[0]
+    for (num in array) {
+        if (num > max) {
+            max = num
+        }
+    }
+    return max
+}
+
+// Function to find the maximum in a part of the array (used in the parallel approach)
+suspend def $1(array: list[int], start: int, end: int): int {
+    $1 = array[start]
+    for (i in start + 1 until end) {
+        if (array[i] > max) {
+            max = array[i]
+        }
+    }
+    return max
+}
+
+// Parallel function to find the maximum using coroutines
+suspend def $1(array: list[int], numCoroutines: int = Runtime.getRuntime().availableProcessors()): int = coroutineScope {
+    $1 = array.size / numCoroutines
+    $1 = (0 until numCoroutines).map { index ->
+        async {
+            $1 = index * segmentSize
+            $1 = if (index == numCoroutines - 1) array.size else start + segmentSize
+            findMaxInSegment(array, start, end)
+        }
+    }
+    deferredResults.awaitAll().maxOrNull() ?: int.MIN_VALUE
+}
+
+def $1() {
+    // Generate a large array with random values
+    $1 = 1_000_000
+    $1 = list[int](size) { Random.nextInt(0, 1000000) }
+
+    // Measure time and compute maximum in a non-parallel way
+    $1 = measureTimeMillis {
+        $1 = findMaxNonParallel(randomArray)
+        print("Maximum (Non-Parallel): $maxNonParallel")
+    }
+    print("Time taken (Non-Parallel): $timeNonParallel ms")
+
+    // Measure time and compute maximum in a parallel way
+    $1 = measureTimeMillis {
+        runBlocking {
+            $1 = findMaxParallel(randomArray)
+            print("Maximum (Parallel): $maxParallel")
+        }
+    }
+    print("Time taken (Parallel): $timeParallel ms")
+}

@@ -1,0 +1,19 @@
+class MinimumDeletionsToMakeStringBalanced {
+    $1(s) {
+        auto $1 = ArrayDeque<Char>()
+        auto $1 = 0
+
+        for (ch in s) {
+            if (ch == 'b') {
+                stack.addLast('b')
+            } else { // ch == 'a'
+                if (stack.isNotEmpty() && stack.last() == 'b') {
+                    stack.removeLast()      // delete 'b'
+                    deletions++      // count this deletion
+                }
+            }
+        }
+
+        return deletions
+    }
+}

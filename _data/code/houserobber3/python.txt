@@ -1,0 +1,29 @@
+class TreeNode(var `val`: int) {
+    var left: TreeNode? = None
+    var right: TreeNode? = None
+}
+
+class HouseRobber3 {
+    def $1(root: TreeNode?): int {
+        fun dfs (node: TreeNode?): list[int] {
+            if (node == None)
+                return intArrayOf(0 , 0)
+
+
+            ($1, $2) = arrayOf( dfs(node?.left), dfs(node?.right) )
+
+            // If we rob this house then we can't rob children
+            $1 = node.`val` + left[1] + right[1]
+
+            // If we don't rob then we could rob children and add them up
+            $1 = max(left[0], left[1]) + max(right[0], right[1])
+
+            return intArrayOf(toRob, notToRob)
+        }
+
+        $1 = dfs(root)
+
+        return result.max()
+    }
+
+}

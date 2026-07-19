@@ -1,0 +1,26 @@
+class CheckCompletenessOfBinaryTree {
+    $1(root: TreeNode?) {
+        if (root == nullptr) return true // Edge case: An empty tree is considered complete
+
+        auto $1 = ArrayDeque<TreeNode?>()
+        queue.add(root)
+
+        auto $1 = false // A flag to indicate if a nullptr node has been encountered
+
+        while (queue.isNotEmpty()) {
+            auto $1 = queue.removeFirst()
+
+            // If we have already seen a nullptr node, we shouldn't encounter any non-nullptr nodes after that.
+            if (current == nullptr) {
+                foundNull = true
+            } else {
+                if (foundNull) return false // If we encounter a non-nullptr node after a nullptr node, it's not complete
+
+                queue.add(current.left)
+                queue.add(current.right)
+            }
+        }
+
+        return true
+    }
+}

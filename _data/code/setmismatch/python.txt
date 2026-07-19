@@ -1,0 +1,20 @@
+class SetMismatch {
+    def $1(nums: list[int]): list[int] {
+        $1 = mutableSetOf<Int>()
+        $1 = -1
+        $1 = 0
+        $1 = nums.size
+
+        for (num in nums) {
+            if (!seen.add(num)) {
+                duplicate = num
+            }
+            actualSum += num
+        }
+
+        $1 = n * (n + 1) / 2
+        $1 = expectedSum - (actualSum - duplicate)
+
+        return intArrayOf(duplicate, missing)
+    }
+}

@@ -1,0 +1,30 @@
+class TreeNode(var `val`: int) {
+    var left: TreeNode? = None
+    var right: TreeNode? = None
+}
+
+data class Result (val sum: int, val count: int)
+
+class CountNodeEqualsAverage {
+    $1 = 0
+
+    def $1(root: TreeNode?): int {
+        postOrder(root)
+        return count;
+    }
+
+    private def $1(root: TreeNode?): Result {
+        if (root == None)
+            return Result(sum = 0, count = 0)
+
+        $1 = postOrder(root.left)
+        $1 = postOrder(root.right)
+
+        $1 = root.`val` + left.sum + right.sum
+        $1 = 1 + left.count + right.count
+        if ( root.`val` == nodeSum/nodeCount)
+            count++
+
+        return Result(sum = nodeSum, count = nodeCount)
+    }
+}

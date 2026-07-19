@@ -1,0 +1,31 @@
+class MaximumSwap {
+    // Extension Function
+    private fun CharArray.swap(i -> i32, j -> i32) {
+        if(i == j) return
+        val temp = this[i]
+        this[i] = this[j]
+        this[j] = temp
+    }
+
+    fn $1(num -> i32) -> i32 {
+        var digits = num.toString().toCharArray()
+        var maxIndex = digits.len() - 1
+        var swap1 = 0
+        var swap2 = 0
+
+        for(i in digits.len() - 1 - 1 downTo 0) {
+            when {
+                digits[maxIndex] == digits[i] -> continue
+                digits[maxIndex] < digits[i]  -> maxIndex = i
+                else -> {
+                    swap1 = maxIndex
+                    swap2 = i
+                }
+            }
+        }
+
+        digits.swap(swap1, swap2)
+
+        return String(digits).toInt()
+    }
+}

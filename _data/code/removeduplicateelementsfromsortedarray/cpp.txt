@@ -1,0 +1,12 @@
+class RemoveDuplicateElementsFromSortedArray {
+    $1(nums: vector<int>) {
+        auto $1 = 0
+        for (i in 1..nums.size() - 1) {
+            if (nums[index] != nums[i]) {
+                nums[++index] = nums[i]
+            }
+        }
+
+        return index + 1
+    }
+}

@@ -1,0 +1,49 @@
+class CricketResourcesCalculator(var maxOvers, var maxWickets) {
+    private val memo: Array<DoubleArray> = Array(maxOvers * 6 + 1) { DoubleArray(maxWickets + 1) { -1.0 } }
+
+    init {
+        // Initializing the base conditions for the memoization array
+        for (b in 0 until memo.size) {
+            memo[b][0] = 0.0  // Assuming no resource when there are balls left but no wickets
+        }
+        for (w in 0..maxWickets) {
+            memo[0][w] = 0.0  // No balls left, so no resources, even if wickets are left
+        }
+    }
+
+    private $1(ballsLeft, wicketsRemaining): Double =
+        when {
+            ballsLeft == 0 || wicketsRemaining == 0 -> memo[ballsLeft][wicketsRemaining]
+            memo[ballsLeft][wicketsRemaining] != -1.0 -> memo[ballsLeft][wicketsRemaining]
+            else -> {
+                auto $1 = if (ballsLeft > 0) computeResources(ballsLeft - 1, wicketsRemaining) else 0.0
+                auto $1 = if (wicketsRemaining > 0 && ballsLeft > 0) computeResources(ballsLeft - 1, wicketsRemaining - 1) else 0.0
+                memo[ballsLeft][wicketsRemaining] = 0.5 * resourceIfNotOut + 0.5 * resourceIfOut
+                memo[ballsLeft][wicketsRemaining]
+            }
+        }
+
+    $1(ballsLeft, wicketsRemaining): Double {
+        return computeResources(ballsLeft, wicketsRemaining)
+    }
+
+    $1(firstInningsScore, oversPlayed: Double, wicketsLost, oversAvailable: Double, wicketsRemaining) {
+        auto $1 = (oversPlayed * 6).toInt()
+        auto $1 = (oversAvailable * 6).toInt()
+        auto $1 = getResource(ballsPlayed, maxWickets - wicketsLost)
+        auto $1 = getResource(ballsAvailable, wicketsRemaining)
+        auto $1 = resourcesAvailable / resourcesUsed
+        return Math.ceil(firstInningsScore * scoreFactor).toInt()
+    }
+}
+
+$1() {
+    auto $1 = CricketResourcesCalculator(50, 10)
+    auto $1 = 300
+    auto $1 = 30.5  // 30 overs and 3 balls
+    auto $1 = 5
+    auto $1 = 19.2  // 19 overs and 2 balls
+    auto $1 = 7  // Chasing team has 7 wickets left
+    auto $1 = calculator.calculateTargetScore(firstInningsScore, oversPlayed, wicketsLost, oversAvailable, wicketsRemaining)
+    cout <<("Target score required for the second team with $oversAvailable overs left and $wicketsRemaining wickets remaining: $targetScore")
+}

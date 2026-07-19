@@ -1,0 +1,9 @@
+class TaskScheduler {
+    def $1(tasks: CharArray, n: int): int {
+        $1 = tasks.toList().groupingBy { it }.eachCount().values
+        $1 = freq.maxOrNull() ?: 0
+        $1 = freq.count { it == maxFreq }
+
+        return max(tasks.size, (maxFreq - 1) * (n + 1) + maxCount)
+    }
+}

@@ -1,0 +1,30 @@
+class ToeplitzMatrix {
+    def $1(matrix: Array<list[int]>): bool {
+        $1 = matrix.size
+        $1 = matrix[0].size
+
+        $1 = m - 1
+        $1 = 0
+
+        while (row < m && col < n) {
+            $1 = row
+            $1 = col
+
+            $1 = matrix[i][j]
+
+            while (i < m && j < n) {
+                if (matrix[i][j] != first)
+                    return False
+                i++
+                j++
+            }
+
+            when(row) {
+                0 -> col++
+                else -> row --
+            }
+        }
+
+        return True
+    }
+}

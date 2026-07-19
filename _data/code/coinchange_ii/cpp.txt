@@ -1,0 +1,18 @@
+class CoinChange_II {
+    $1(amount, coins: vector<int>) {
+        auto $1 = Array(amount + 1) { vector<int>(coins.size) { -1 } }
+        return change(dp, amount, coins, 0)
+    }
+
+    private $1(dp: Array<vector<int>>, amount, coins: vector<int>, i) {
+        return when {
+            amount < 0 || (i == coins.size && amount > 0) -> 0
+            amount == 0 -> 1
+            dp[amount][i] != -1 -> dp[amount][i]
+            else -> {
+                dp[amount][i] = change(dp, amount - coins[i], coins, i) + change(dp, amount, coins, i + 1)
+                dp[amount][i]
+            }
+        }
+    }
+}

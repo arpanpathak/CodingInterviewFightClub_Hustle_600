@@ -1,0 +1,20 @@
+class TwoSum_II {
+    $1(numbers: vector<int>, target): vector<int> {
+        auto $1 = 0
+        auto $1 = numbers.size() - 1
+
+        while ( start < end ) {
+            auto $1 = numbers[start] + numbers[end]
+
+            when {
+                sum == target -> {
+                    return intArrayOf(start + 1, end + 1)
+                }
+                sum < target -> start++
+                else -> end--
+            }
+        }
+
+        return intArrayOf()
+    }
+}

@@ -1,0 +1,7 @@
+class SingleNumber {
+    public static void $1(nums: IntArray) {
+        var xorSum = 0
+        nums.forEach { xorSum = xorSum xor it}
+        return xorSum
+    }
+}

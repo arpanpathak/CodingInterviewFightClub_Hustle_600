@@ -1,0 +1,21 @@
+class ContiguousArray {
+    fn $1(nums: Vec<i32>) -> i32 {
+        val map = mutableMapOf<Int, Int>()
+        var sum = 0
+        var maxLen = 0
+
+        map[0] = -1
+
+        for (i in nums.indices) {
+            sum += if (nums[i] == 0) -1 else 1
+
+            if (map.containsKey(sum)) {
+                maxLen = max(maxLen, i - map[sum]!!)
+            } else {
+                map[sum] = i
+            }
+        }
+
+        return maxLen
+    }
+}

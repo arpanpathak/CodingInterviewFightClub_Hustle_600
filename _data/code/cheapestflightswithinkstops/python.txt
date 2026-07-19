@@ -1,0 +1,147 @@
+class CheapestFlightsWithinKStops {
+    // Define the Node class to encapsulate flight details
+    data class Node(var dest: int, var price: int)
+
+    // Graph map where each integer key maps to a list of Node objects
+    private $1 = mutableMapOf<Int, MutableList<Node>>()
+
+    // Solving using Bellman Ford
+    def $1(n: int, flights: Array<list[int]>, src: int, dst: int, k: int): int {
+        // Build the graph from the input flights
+        flights.forEach { flight ->
+            $1 = flight[0]
+            $1 = flight[1]
+            $1 = flight[2]
+            // Append the destination and cost to the list of nodes for the source
+            graph.computeIfAbsent(from) { mutableListOf() }.add(Node(to, cost))
+        }
+
+        // DP table for storing minimum cost to each node with up to i flights
+        $1 = Array(k + 2) { list[int](n) { Int.MAX_VALUE } }
+        dp[0][src] = 0  // Cost to reach source from itself is 0
+
+        // Perform relaxation for each possible number of stops
+        for (i in 1..k + 1) {
+            dp[i][src] = 0  // No cost to stay at the source
+            graph.forEach { (from, neighbors) ->
+                neighbors.forEach { node ->
+                    if (dp[i - 1][from] != Int.MAX_VALUE) { // Ensure the source node is reachable
+                        dp[i][node.dest] = min(dp[i][node.dest], dp[i - 1][from] + node.price)
+                    }
+                }
+            }
+        }
+
+        // Find the minimum cost to the destination node considering all possible stops
+        $1 = (0..k + 1).minOfOrNull { dp[it][dst] } ?: int.MAX_VALUE
+        return if (cheapest == Int.MAX_VALUE) -1 else cheapest
+    }
+
+    def $1(n: int, flights: Array<list[int]>, src: int, dst: int, k: int): int {
+        // Build the graph from the input flights
+        flights.forEach { flight ->
+            $1 = flight[0]
+            $1 = flight[1]
+            $1 = flight[2]
+            // Append the destination and cost to the list of nodes for the source
+            graph.computeIfAbsent(from) { mutableListOf() }.add(Node(to, cost))
+        }
+
+        $1 = bfs(src, dst, n, k)
+
+        return if (cost[dst] == Int.MAX_VALUE) -1 else cost[dst]
+    }
+
+
+    def $1(graph: MutableMap<Int, MutableList<Node>>, src: int): Map<Int, Int> {
+        $1 = mutableMapOf<Int, Int>().apply {
+            graph.keys.forEach { this[it] = Int.MAX_VALUE }
+        }
+        dist[src] = 0
+
+        // Define priority queue with a comparator provided inline
+        $1 = PriorityQueue<Node>(compareBy { it.price })
+        priorityQueue.add(Node(src, 0))
+
+        while (priorityQueue.isNotEmpty()) {
+            $1 = priorityQueue.poll()
+
+            // If current node's distance in queue is greater than known shortest distance, skip it
+            if (current.price > dist[current.dest]!!) continue
+
+            graph[current.dest]?.forEach { neighbor ->
+                $1 = current.price + neighbor.price
+                if (newDistance < dist[neighbor.dest]!!) {
+                    dist[neighbor.dest] = newDistance
+                    priorityQueue.add(Node(neighbor.dest, newDistance))
+                }
+            }
+        }
+
+        return dist
+    }
+
+    def $1(src: int, dest: int, n: int, k: int ): list[int] {
+        // To track the minimum cost to reach each destination
+        $1 = list[int](n) { Int.MAX_VALUE }
+        minCost[src] = 0
+
+        // Using a queue for BFS; store the current node, the cost to reach it, and the number of stops made
+        val queue: Queue<Triple<Int, Int, Int>> = LinkedList()
+        queue.add(Triple(src, 0, 0))
+
+        while (queue.isNotEmpty()) {
+            val (current, cost, stops) = queue.poll()
+
+            // Explore each neighbor
+            if (stops > k) continue  // Do not explore further if stops exceed k
+
+            graph[current]?.forEach { neighbor ->
+                $1 = cost + neighbor.price
+                // Check if this path is better
+                if (newCost < minCost[neighbor.dest]) {
+                    queue.add(Triple(neighbor.dest, newCost, stops + 1))
+                    minCost[neighbor.dest] = newCost
+                }
+            }
+        }
+
+        return minCost
+    }
+
+    // Solve using Dijkstra
+    data class State(val node: int, val cost: int, val stops: int)
+
+    def $1(graph: MutableMap<Int, MutableList<Node>>, src: int, k: int): Map<Int, Int> {
+        $1 = PriorityQueue<State>(compareBy { it.cost })
+        pq.offer(State(src, 0, 0))
+
+        $1 = mutableMapOf<Int, list[int]>().apply {
+            graph.keys.forEach { this[it] = list[int](k + 1) { Int.MAX_VALUE } }
+        }
+        minCostAtStops[src] = list[int](k + 1) { 0 }
+
+        while (pq.isNotEmpty()) {
+            val (node, cost, stops) = pq.poll()
+
+            if (stops > k) continue
+
+            graph[node]?.forEach { neighbor ->
+                $1 = cost + neighbor.price
+                if (stops < k && nextCost < minCostAtStops.getOrDefault(neighbor.dest, list[int](k + 1) { Int.MAX_VALUE })[stops + 1]) {
+                    minCostAtStops[neighbor.dest]?.set(stops + 1, nextCost)
+                    pq.offer(State(neighbor.dest, nextCost, stops + 1))
+                }
+            }
+        }
+
+        return minCostAtStops.mapValues { (_, costs) -> costs.filter { it != Int.MAX_VALUE }.minOrNull() ?: int.MAX_VALUE }
+    }
+
+    companion object {
+        @JvmStatic
+        def $1(args: Array<String>) {
+
+        }
+    }
+}

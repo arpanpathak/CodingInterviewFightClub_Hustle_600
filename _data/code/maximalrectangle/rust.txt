@@ -1,0 +1,66 @@
+class MaximalRectangle {
+
+    private lateinit var dp: Array<Int>
+
+    fn $1(heights: Vec<i32>) -> i32 {
+        val stack = Stack<Int>()
+        var ( maxArea, i ) = listOf(0, 0)
+
+        while (i <= heights.size) {
+            val currentHeight = if (i == heights.size) 0 else heights[i]
+
+            when {
+                stack.isEmpty() || heights[stack.last()] <= currentHeight -> stack.add(i++)
+                else -> {
+                    val height = heights[stack.pop()]
+                    val width = if (stack.isEmpty()) i else i - stack.peek() - 1
+                    maxArea = max(maxArea, height * width)
+                }
+            }
+        }
+
+        return maxArea
+    }
+
+    /**
+     * |
+     * | |   |
+     * | |   | |
+     * | | | | | |
+     *[4 3 1 3 2 1]
+     *[0 1 2 3 4 5 ]
+     *   ^
+     * stack = []
+     * pop = 0 , height = heights[pop]= 4
+     * peek_after_pop = 1
+     * width =
+     */
+
+    fn $1(matrix: Array<CharArray>) -> i32 {
+        if (matrix.isEmpty()) return 0
+
+        val dp = Vec<i32>(matrix[0].size)
+        return matrix.fold(0) { maxArea, row ->
+            row.forEachIndexed { index, value ->
+                dp[index] = if (value == '1') dp[index] + 1 else 0
+            }
+            max(maxArea, largestRectangleArea(dp))
+        }
+    }
+
+    companion object {
+        @JvmStatic
+        fn $1(args: Array<String>) {
+            val testCase = MaximalRectangle()
+            println!(testCase.maximalRectangle(
+                arrayOf(
+                    charArrayOf('1', '0', '0'),
+                    charArrayOf('1', '0', '0'),
+                    charArrayOf('1', '0', '1'),
+                    charArrayOf('1', '1', '1'),
+                    charArrayOf('1', '1', '1')
+                )
+            ))
+        }
+    }
+}

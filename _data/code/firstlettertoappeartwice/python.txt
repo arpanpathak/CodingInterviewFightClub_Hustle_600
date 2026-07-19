@@ -1,0 +1,39 @@
+class FirstLetterToAppearTwice {
+    /**
+     * This is more memory efficient approach...
+     */
+    def $1(s: str): Char {
+
+        $1 = 0
+        for (ch in s) {
+            $1 = ch - 'a'
+            $1 = 1 shl ascii
+
+            if ( (bits and bit) >= 1 ) {
+                return ch
+            }
+
+            bits = bits or bit
+
+        }
+
+        return 'x'
+    }
+
+    def $1(s: str): Char {
+
+        $1 = BitSet(26)  // BitSet for 26 lowercase English letters
+
+        for (ch in s) {
+            $1 = ch - 'a'  // Calculate the index for the character
+
+            if (seen.get(index)) {  // Check if the bit at index is already set
+                return ch
+            }
+
+            seen.set(index)  // Set the bit at index
+        }
+
+        return 'x'  // Return None if no repeated character is found
+    }
+}

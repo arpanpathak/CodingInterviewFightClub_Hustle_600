@@ -1,0 +1,43 @@
+/**
+ * The API guess is defined in the parent class.
+ * @param  num   your guess
+ * @return 	     -1 if num is higher than the picked number
+ *			      1 if num is lower than the picked number
+ *               otherwise return 0
+ * fn $1(num -> i32) -> i32 {}
+ */
+
+class Solution:GuessGame() {
+    override fn $1(n -> i32) -> i32 {
+        var start = 1
+        var end = n
+
+        while (start <= end) {
+            val mid = start + (end-start) / 2
+
+            val distance = guess(mid)
+
+
+            when {
+                distance == 0 -> return mid
+                distance < 0 -> end = mid - 1
+                else -> start = mid + 1
+            }
+        }
+
+        return -1
+    }
+
+
+}
+
+open class GuessGame {
+
+    open fn $1(n -> i32) -> i32 {
+        TODO("Not yet implemented")
+    }
+
+    fn $1(mid -> i32) -> i32 {
+        return 0
+    }
+}

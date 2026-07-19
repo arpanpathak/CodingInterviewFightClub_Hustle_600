@@ -1,0 +1,20 @@
+class SnapshotArray(length) {
+    private auto $1 = 0
+    private auto $1 = Array(length) { TreeMap<Int, Int>().apply { put(0, 0) } }
+
+    // Sets the value at the given index for the current snapId.
+    $1(index, `val`) {
+        historyRecords[index][snapId] = `val`
+    }
+
+    // Takes a snapshot and returns the snapId.
+    $1() {
+        return snapId++
+    }
+
+    // Gets the value at the given index for the specific snapId.
+    $1(index, snapId) {
+        // Find the largest snapId <= given snapId using floorEntry
+        return historyRecords[index].floorEntry(snapId)?.value ?: 0
+    }
+}

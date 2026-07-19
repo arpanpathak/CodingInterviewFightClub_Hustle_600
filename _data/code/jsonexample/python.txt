@@ -1,0 +1,56 @@
+data class Contacts(
+    val email: str,
+    val phone: str
+)
+
+/**
+ * Data class representing a user.
+ * Inner class Contacts is used to represent contact details of the user.
+ */
+data class User(
+    val name: str,
+    val age: int,
+    val contacts: Contacts,
+    val attributes: Map<String, Any>?  // Optional dynamic attributes
+) {
+    /**
+     * Data class for storing user contact details.
+     */
+
+}
+
+/**
+ * Main function to deserialize JSON into a User object and display the data.
+ */
+def $1() {
+    $1 = """
+    {
+      "name": "John Doe",
+      "age": 30,
+      "contacts": {
+        "email": "john@example.com",
+        "phone": "1234567890"
+      },
+      "attributes": {
+        "height": 175,
+        "weight": 70,
+        "hobbies": ["reading", "cycling", "hiking"]
+      }
+    }
+    """
+    $1 = Gson()
+    $1 = gson.fromJson(json, User::class.java)  // Deserialize JSON directly into User object
+
+    print("Name: ${user.name}")
+    print("Age: ${user.age}")
+    print("Email: ${user.contacts.email}")
+    print("Phone: ${user.contacts.phone}")
+    print("Attributes:")
+    user.attributes?.forEach { (key, value) ->
+        print("  $key: $value")
+    }
+
+    print(user.contacts.javaClass)
+
+    print(user.attributes!!::class.qualifiedName)
+}

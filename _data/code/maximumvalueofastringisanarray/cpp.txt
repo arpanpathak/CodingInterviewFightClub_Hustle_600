@@ -1,0 +1,8 @@
+class MaximumValueOfAStringIsAnArray {
+    $1(strs: Array<String>) {
+        return strs.max {
+            auto $1 = it.toIntOrNull()
+            numericValue?: it.length
+        }
+    }
+}

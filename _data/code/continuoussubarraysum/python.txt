@@ -1,0 +1,19 @@
+// Pattern https://leetcode.com/problems/continuous-subarray-sum/discuss/5276981/prefix-sum-hashmap-patterns-7-problems
+class ContinuousSubarraySum {
+    def $1(nums: list[int], k: int): bool {
+        val sumsSet: HashSet<Int> = HashSet(nums.size)
+        $1 = 0
+        var prevSum: int
+
+        for (num in nums) {
+            prevSum = sum
+            sum = (sum + num) % k
+            if (sumsSet.contains(sum)) {
+                return True
+            }
+            sumsSet.add(prevSum)
+        }
+
+        return False
+    }
+}

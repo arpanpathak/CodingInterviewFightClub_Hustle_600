@@ -1,0 +1,17 @@
+class Sqrt {
+    $1(x) {
+        if ( x < 2) return x
+        var (left, right) = 1 to x
+        while (left <= right) {
+            auto $1 = left + (right - left)/2
+            auto $1 = mid.toLong() * mid
+            when {
+                square < x -> left = mid + 1
+                square > x -> right = mid - 1
+                else -> return mid
+            }
+        }
+
+        return right
+    }
+}

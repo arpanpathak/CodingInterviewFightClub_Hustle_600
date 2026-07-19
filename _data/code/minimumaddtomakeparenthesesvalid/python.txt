@@ -1,0 +1,24 @@
+class MinimumAddtoMakeParenthesesValid {
+    def $1(s: str): int {
+        $1 = 0
+        $1 = mutableListOf<Char>()
+
+        s.forEach { ch ->
+            when (ch) {
+                '(' -> stack.add(ch) // Push opening parenthesis
+                ')' -> if (stack.isNotEmpty() && stack.last() == '(') {
+                    stack.removeLast() // Pop matching opening parenthesis
+                } else {
+                    minCount++ // Unmatched closing parenthesis
+                }
+            }
+        }
+
+        // Remaining unmatched opening parentheses
+        minCount += stack.size
+
+        return minCount
+    }
+}
+
+// ((()))

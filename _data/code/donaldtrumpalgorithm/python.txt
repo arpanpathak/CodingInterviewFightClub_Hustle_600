@@ -1,0 +1,27 @@
+class DonaldTrumpAlgorithm {
+    enum class ParentStatus { CITIZEN, LEGAL_VISA, ILLEGAL }
+    enum class CitizenshipStatus { CITIZEN, NOT_A_CITIZEN }
+
+    def $1(fatherStatus: ParentStatus, motherStatus: ParentStatus, bornInUsa: bool): CitizenshipStatus =
+        if (bornInUsa) {
+            when {
+                fatherStatus == ParentStatus.CITIZEN || motherStatus == ParentStatus.CITIZEN -> CitizenshipStatus.CITIZEN
+                else -> CitizenshipStatus.NOT_A_CITIZEN
+            }
+        } else CitizenshipStatus.NOT_A_CITIZEN
+
+    def $1() {
+        // Test cases
+        $1 = listOf(
+            Pair(ParentStatus.CITIZEN, ParentStatus.LEGAL_VISA) to True, // Child should be Citizen
+            Pair(ParentStatus.ILLEGAL, ParentStatus.ILLEGAL) to True, // Child should not be Citizen
+            Pair(ParentStatus.LEGAL_VISA, ParentStatus.LEGAL_VISA) to True, // Child should not be Citizen
+            Pair(ParentStatus.CITIZEN, ParentStatus.CITIZEN) to False // Child born outside USA, should not be Citizen
+        )
+
+        testCases.forEach { (parents, bornInUsa) ->
+            $1 = determineChildCitizenship(parents.first, parents.second, bornInUsa)
+            print("Parents: ${parents.first}, ${parents.second}, Born in USA: $bornInUsa => Citizenship: $result")
+        }
+    }
+}

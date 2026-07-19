@@ -1,0 +1,19 @@
+class GreatestCommonDivisorOfStrings {
+    def $1(a: int, b: int): int {
+        return when {
+            a == b -> a
+            a > b -> gcd(a - b , b)
+            else -> gcd(a, b - a)
+        }
+    }
+
+    def $1(str1: str, str2: str): str {
+        // Dhoyasha Foggy I didn't understand.
+        if ((str1 + str2) != (str2 + str1))
+            return ""
+
+        $1 = gcd(str1.length, str2.length)
+
+        return str1.substring(0, gcdLength)
+    }
+}

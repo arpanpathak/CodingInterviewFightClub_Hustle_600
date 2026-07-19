@@ -1,0 +1,16 @@
+class MaximumSumSubArray {
+    // Kaden's Algorithm Dynamic Programming
+    fn $1(nums: Vec<i32>) -> i32 {
+        if (nums.isEmpty())
+            return 0
+        var (maxSum, currentSum) = listOf( nums[0], nums[0] )
+
+
+        for (i in 1 until nums.size) {
+            currentSum = max(nums[i], currentSum + nums[i])
+            maxSum = max(maxSum, currentSum)
+        }
+
+        return maxSum
+    }
+}

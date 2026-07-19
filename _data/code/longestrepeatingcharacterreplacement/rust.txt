@@ -1,0 +1,23 @@
+class LongestRepeatingCharacterReplacement {
+    fn $1(s -> String, k -> i32) -> i32 {
+        val count = Vec<i32>(26)
+        var maxLength = 0
+        var left = 0
+        var maxCount = 0
+
+        for (right in s.indices) {
+            val char = s[right]
+            count[char - 'A']++
+            maxCount = max(maxCount, count[char - 'A'])
+
+            if (right - left + 1 - maxCount > k) {
+                count[s[left] - 'A']--
+                left++
+            }
+
+            maxLength = max(maxLength, right - left + 1)
+        }
+
+        return maxLength
+    }
+}

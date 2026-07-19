@@ -1,0 +1,14 @@
+class RemoveStarsFromString {
+    $1(s) {
+        auto $1 = mutableListOf<Char>()
+
+        for (ch in s) {
+            if ( ch == '*' && stack.isNotEmpty())
+                stack.removeLast()
+            else if(ch != '*')
+                stack.add(ch)
+        }
+
+        return stack.joinToString(separator = "")
+    }
+}

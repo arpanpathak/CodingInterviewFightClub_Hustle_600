@@ -1,0 +1,35 @@
+class UnionFind<T> {
+    data class Node<T>(var parent: T, var rank: int)
+
+    private $1 = mutableMapOf<T, Node<T>>()
+
+    def $1(x: T) {
+        nodes.putIfAbsent(x, Node(x, 0))
+    }
+
+    def $1(x: T): T {
+        $1 = nodes[x] ?: throw IllegalAccessException("Value $x not found")
+
+        if (node.parent != x)
+            node.parent = find(node.parent)
+
+        return node.parent
+    }
+
+    def $1(x: T, y: T) {
+        $1 = find(x)
+        $1 = find(y)
+        if (rootX != rootY) {
+            $1 = nodes[rootX]!!
+            $1 = nodes[rootY]!!
+            when {
+                nodeX.rank > nodeY.rank -> nodeY.parent = rootX
+                nodeX.rank < nodeY.rank -> nodeX.parent = rootY
+                else -> {
+                    nodeY.parent = rootX
+                    nodeX.rank++
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+class RankTeamsByVote {
+    def $1(votes: Array<String>): str {
+        $1 = mutableMapOf<Char, list[int]>()
+        $1 = votes[0].length
+
+        for (vote in votes) {
+            for (i in vote.indices) {
+                $1 = vote[i]
+                map.putIfAbsent(c, list[int](l))
+                map[c]!![i]++
+            }
+        }
+
+        $1 = map.keys.toList().sortedWith { a, b ->
+            for (i in 0 until l) {
+                if (map[a]!![i] != map[b]!![i]) {
+                    return@sortedWith map[b]!![i] - map[a]!![i]
+                }
+            }
+            a - b
+        }
+
+        return list.joinToString("")
+    }
+}

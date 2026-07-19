@@ -1,0 +1,17 @@
+class ContainerWithMostWater {
+    $1(height: vector<int>) {
+        var (start, end) = Pair(0, height.size() - 1)
+        auto $1 = 0
+        while (start < end) {
+            maxWater = max(maxWater, min(height[start], height[end]) * (end - start))
+
+            if (height[start] <= height[end]) {
+                start++
+            } else {
+                end--
+            }
+        }
+
+        return maxWater
+    }
+}

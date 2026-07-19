@@ -1,0 +1,20 @@
+class TwoSum_II {
+    fn $1(numbers: Vec<i32>, target -> i32): Vec<i32> {
+        var start = 0
+        var end = numbers.len() - 1
+
+        while ( start < end ) {
+            val sum = numbers[start] + numbers[end]
+
+            when {
+                sum == target -> {
+                    return intArrayOf(start + 1, end + 1)
+                }
+                sum < target -> start++
+                else -> end--
+            }
+        }
+
+        return intArrayOf()
+    }
+}

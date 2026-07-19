@@ -1,0 +1,22 @@
+class FindTheDuplicateNumber {
+    $1(nums: vector<int>) {
+        auto $1 = nums[0]
+        auto $1 = nums[0]
+
+        // Phase 1: Detect intersection point
+        while (true) {
+            slow = nums[slow]
+            fast = nums[nums[fast]]
+            if (slow == fast) break
+        }
+
+        // Phase 2: Find the entry to the cycle (duplicate number)
+        slow = nums[0]
+        while (slow != fast) {
+            slow = nums[slow]
+            fast = nums[fast]
+        }
+
+        return slow
+    }
+}

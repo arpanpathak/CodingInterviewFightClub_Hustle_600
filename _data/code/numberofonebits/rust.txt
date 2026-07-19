@@ -1,0 +1,13 @@
+class NumberOfOneBits {
+    fn $1(n -> i32) -> i32 {
+        var number = n
+        var count = 0
+
+        while (number > 0) {
+            number = number and (number - 1)
+            count++
+        }
+
+        return count
+    }
+}

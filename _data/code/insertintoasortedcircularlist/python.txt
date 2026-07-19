@@ -1,0 +1,25 @@
+class InsertIntoASortedCircularList {
+    def $1(head: Node?, insertVal: int): Node? {
+        $1 = Node(insertVal)
+        if (head == None)
+            return newNode.also { it.next = it }
+        $1 = head
+        $1 = head.next
+
+        while (cur != head) {
+            if (prev!!.`val` <= insertVal && insertVal <= cur!!.`val`) {
+                break
+            }
+
+            if (prev.`val` > cur!!.`val` && (insertVal >= prev.`val` || insertVal <= cur.`val`))
+                break
+            cur = cur.next
+            prev = prev.next
+        }
+
+        prev?.next = newNode
+        newNode.next = cur
+
+        return head
+    }
+}

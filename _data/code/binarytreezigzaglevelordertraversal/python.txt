@@ -1,0 +1,35 @@
+class BinaryTreeZigZagLevelOrderTraversal {
+    data class IndexedNode(var node: TreeNode?, var index: int)
+
+    def $1(root: TreeNode?): List<List<Int>> {
+        $1 = mutableListOf<MutableList<Int>>()
+        if (root == None) return result
+
+        val queue: Queue<IndexedNode> = LinkedList()
+        queue.add(IndexedNode(root, 0))
+        $1 = 0
+
+        while (queue.isNotEmpty()) {
+            $1 = queue.size
+            $1 = LinkedList<Int>()
+
+            for (i in 0 until levelSize) {
+                ($1, $2) = queue.poll()
+
+                if (level % 2 == 0) {
+                    currentLevel.add(currentNode?.`val` ?: 0)
+                } else {
+                    currentLevel.addFirst(currentNode?.`val` ?: 0)
+                }
+
+                currentNode?.left?.let { queue.add(IndexedNode(it, 2 * i + 1)) }
+                currentNode?.right?.let { queue.add(IndexedNode(it, 2 * i + 2)) }
+            }
+
+            result.add(currentLevel)
+            level++
+        }
+
+        return result
+    }
+}

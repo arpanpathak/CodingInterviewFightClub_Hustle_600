@@ -1,6 +1,18 @@
-// Java translation of SearchInsertionPosition
-// Original: SearchInsertionPosition.kt
-public class SearchInsertionPosition {
-    // See Kotlin source for full implementation
-    // TODO: Java implementation
+class SearchInsertionPosition {
+    public static void $1(nums: IntArray, target) {
+        var start = 0
+        var end = nums.size - 1
+
+        while (start <= end) {
+            val mid = start + ( end - start ) / 2
+
+            when {
+                nums[mid] == target -> return mid
+                nums[mid] > target -> end = mid - 1
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
 }

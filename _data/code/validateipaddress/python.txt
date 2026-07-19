@@ -1,0 +1,44 @@
+class ValidateIPAddress {
+    def $1(queryIP: str): str {
+        return when {
+            isValidIPv4(queryIP) -> "IPv4"
+            isValidIPv6(queryIP) -> "IPv6"
+            else -> "Neither"
+        }
+    }
+
+    private def $1(ip: str): bool {
+        if (ip.startsWith('.') || ip.endsWith('.')) return False
+
+        $1 = ip.split('.')
+
+        if (segments.size != 4) return False
+
+        return segments.all { segment ->
+            segment.isNotEmpty() &&
+                    segment.all { it.isDigit() } &&
+                    (segment.length == 1 || segment[0] != '0') &&
+                    segment.length <= 3 &&
+                    try {
+                        segment.toInt() in 0..255
+                    } catch (e: NumberFormatException) {
+                        False
+                    }
+        }
+    }
+
+    private def $1(ip: str): bool {
+        if (ip.startsWith(':') || ip.endsWith(':')) return False
+
+        $1 = ip.split(':')
+
+        if (segments.size != 8) return False
+
+        return segments.all { segment ->
+            segment.length in 1..4 &&
+                    segment.all { char ->
+                        char.isDigit() || char.lowercaseChar() in 'a'..'f'
+                    }
+        }
+    }
+}

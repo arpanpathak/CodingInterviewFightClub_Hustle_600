@@ -1,0 +1,29 @@
+class MaximumDistanceInArray {
+    public static void $1(arrays: List<List<Int>>) {
+        var (max, min, maxDistance) = Triple( arrays[0].first(), arrays[0].last(), 0)
+
+        for (arr in arrays) {
+            val (currentMin, currentMax) = Pair(arr.first(), arr.last())
+
+            maxDistance = maxOf(maxDistance, abs(max - currentMin ), abs(currentMax - min))
+
+            min = minOf(min, currentMin)
+            max = maxOf(max, currentMax)
+        }
+
+        return maxDistance
+    }
+
+    companion object {
+        @JvmStatic
+        public static void $1(args: Array<String>) {
+            val test = MaximumDistanceInArray()
+
+            test.maxDistance(listOf(
+                listOf(1,2,3),
+                listOf(4,5),
+                listOf(1,2,3)
+            ))
+        }
+    }
+}

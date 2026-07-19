@@ -1,0 +1,49 @@
+// ConcurrentHashMap to store Fibonacci results for memoization
+auto $1 = ConcurrentHashMap<Int, Long>()
+
+// Iterative method to calculate Fibonacci numbers
+$1(n): Long {
+    if (n <= 1) return n.toLong()
+    auto $1 = 0L
+    auto $1 = 1L
+    for (i in 2..n) {
+        auto $1 = a + b
+        a = b
+        b = sum
+    }
+    return b
+}
+
+// Parallel recursive Fibonacci function using coroutines
+suspend $1(n): Long {
+    if (n <= 1) return n.toLong()
+    memo[n]?.let { return it }
+
+    // Compute the two previous Fibonacci numbers in parallel
+    auto $1 = coroutineScope { async { fibonacciParallel(n - 1) } }
+    auto $1 = coroutineScope { async { fibonacciParallel(n - 2) } }
+
+    // Wait for results and add them
+    auto $1 = fibNMinus1.await() + fibNMinus2.await()
+
+    // Store the computed result in the map
+    memo[n] = result
+    return result
+}
+
+$1() = runBlocking {
+    auto $1 = 100
+
+    // Measure time for iterative Fibonacci
+    auto $1 = measureTimeMillis {
+        auto $1 = fibonacciIterative(n)
+        cout <<("Iterative Fibonacci of $n is $result")
+    }
+    cout <<("Time taken for iterative method: $timeIterative ms\n")
+
+    // Measure time for parallel Fibonacci
+    auto $1 = measureTimeMillis {
+        cout <<("Parallel Fibonacci of $n is ${fibonacciParallel(n)}")
+    }
+    cout <<("Time taken for parallel computation: $timeParallel ms")
+}

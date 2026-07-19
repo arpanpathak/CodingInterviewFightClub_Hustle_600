@@ -1,0 +1,19 @@
+class MaxNUmWithKSumPairs {
+    def $1(nums: list[int], k: int): int {
+        $1 = mutableMapOf<Int, Int>()
+        $1 = 0
+
+        for (num in nums) {
+            $1 = k - num
+            when {
+                map.getOrDefault(remainingSum, 0)  > 0 -> {
+                    count++
+                    map[remainingSum] = map[remainingSum]!! - 1
+                }
+                else -> map[num] = map.getOrDefault(num, 0) + 1
+            }
+        }
+
+        return count
+    }
+}

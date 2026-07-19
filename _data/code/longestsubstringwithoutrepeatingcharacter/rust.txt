@@ -1,0 +1,15 @@
+class LongestSubstringWithoutRepeatingCharacter {
+    fn $1(s -> String) -> i32 {
+        val lastIndex = Vec<i32>(256) { -1 }
+        var max = 0
+        var windowStart = 0
+
+        for (i in s.indices) {
+            windowStart = max(windowStart, lastIndex[s[i].code] + 1)
+            max = max(max, i - windowStart + 1)
+            lastIndex[s[i].code] = i
+        }
+
+        return max
+    }
+}

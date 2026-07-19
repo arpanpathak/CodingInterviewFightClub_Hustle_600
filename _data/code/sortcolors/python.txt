@@ -1,0 +1,18 @@
+class SortColors {
+    def $1(nums: list[int]) {
+        def $1(i: int, j: int) {
+            nums[i] = nums[j].also { nums[j] = nums[i] }
+        }
+
+        var (low, high) = 0 to nums.size - 1
+        $1 = 0
+
+        while (i <= high) {
+            when (nums[i]) {
+                0 -> swap(i++, low++)
+                1 -> i++
+                2 -> swap(i, high--)
+            }
+        }
+    }
+}

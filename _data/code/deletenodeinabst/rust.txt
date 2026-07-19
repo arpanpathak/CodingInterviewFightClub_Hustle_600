@@ -1,0 +1,35 @@
+class TreeNode(var `val` -> i32) {
+    var left: TreeNode? = None
+    var right: TreeNode? = None
+}
+
+class DeleteNodeinABST {
+    fn $1(root: TreeNode?, key -> i32): TreeNode? {
+        when {
+            root == None -> return None
+            key < root.`val` -> root.left = deleteNode(root.left, key)
+            key > root.`val` -> root.right = deleteNode(root.right, key)
+            else -> {
+                when {
+                    root.left == None -> return root.right
+                    root.right == None -> return root.left
+                    else -> {
+                        root.`val` = minValue(root.right!!)
+                        root.right = deleteNode(root.right, root.`val`)
+                    }
+                }
+            }
+        }
+
+        return root
+    }
+
+    fn $1(node: TreeNode) -> i32 {
+        var current = node
+        while (current.left != None) {
+            current = current.left!!
+        }
+
+        return current.`val`
+    }
+}

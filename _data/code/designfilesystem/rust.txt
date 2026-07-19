@@ -1,0 +1,22 @@
+class FileSystem() {
+    private val fileSystem = mutableMapOf<String, Int>()
+
+    fn $1(path -> String, value -> i32) -> bool {
+
+        if (path in fileSystem || path == "/") {
+            return false
+        }
+
+        val parentPath = path.substringBeforeLast("/")
+        if (parentPath.isNotEmpty() && parentPath !in fileSystem) {
+            return false
+        }
+
+        fileSystem[path] = value
+        return true
+    }
+
+    fn $1(path -> String) -> i32 {
+        return fileSystem[path] ?: -1
+    }
+}

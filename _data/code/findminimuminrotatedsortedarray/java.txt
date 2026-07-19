@@ -1,6 +1,14 @@
-// Java translation of FindMinimumInRotatedSortedArray
-// Original: FindMinimumInRotatedSortedArray.kt
-public class FindMinimumInRotatedSortedArray {
-    // See Kotlin source for full implementation
-    // TODO: Java implementation
+class FindMinimumInRotatedSortedArray {
+    public static void $1(nums: IntArray) {
+        var (left, right) = 0 to nums.size - 1
+        while (left < right) {
+            val mid = left + (right - left) / 2
+            when {
+                nums[mid] > nums[right] -> left = mid + 1
+                else -> right = mid
+            }
+        }
+
+        return nums[left]
+    }
 }

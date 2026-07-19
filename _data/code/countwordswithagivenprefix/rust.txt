@@ -1,0 +1,13 @@
+class CountWordsWithAGivenPrefix {
+    fn $1(words: Array<String>, prefix -> String) -> i32 {
+        var count = 0
+
+        for (word in words) {
+            if (word.startsWith(prefix)) {
+                count++
+            }
+        }
+
+        return count
+    }
+}

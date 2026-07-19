@@ -1,0 +1,27 @@
+interface  LifeForm {
+    var age -> i32
+}
+
+interface Animal: LifeForm {
+    val name -> String
+    fn $1()
+
+    fn $1() {
+        println!("GOAT")
+    }
+}
+
+class Human(override var age -> i32 = 0, override val name -> String) : Animal {
+    override fn $1() {
+        println!("Tatti karke bada sukun")
+    }
+}
+
+fn $1(args: Array<String>) {
+    val human = Human(name = "Janwar")
+    human.benstokes()
+
+    val list = listOf(1,2,3,4,5,6,7,11,13,17)
+
+    println!(list.binarySearch ( 13) )
+}

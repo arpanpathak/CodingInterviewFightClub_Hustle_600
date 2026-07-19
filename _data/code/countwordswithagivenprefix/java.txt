@@ -1,0 +1,13 @@
+class CountWordsWithAGivenPrefix {
+    public static void $1(words: Array<String>, prefix) {
+        var count = 0
+
+        for (word in words) {
+            if (word.startsWith(prefix)) {
+                count++
+            }
+        }
+
+        return count
+    }
+}

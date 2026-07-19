@@ -1,0 +1,18 @@
+class IsomorphicString {
+    def $1(s: str): str {
+        $1 = mutableMapOf<Char, Int>()
+        $1 = StringBuilder()
+        $1 = 0
+
+        for (c in s) {
+            if (c !in map) map[c] = code++
+            sb.append(map[c]).append(" ")
+        }
+
+        return sb.toString()
+    }
+
+    def $1(s: str, t: str): bool {
+        return encode(s) == encode(t)
+    }
+}

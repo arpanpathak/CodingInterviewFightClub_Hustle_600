@@ -1,0 +1,104 @@
+// Concurrency /Async I/O
+def $1() = runBlocking<Unit> {
+    launch { // launch a new coroutine in the background
+//        delay(1000L)
+        testApis()
+        print("World!")
+    }.join()
+
+    print("Hello,") // main coroutine continues here immediately
+    // delay(2000L) // delaying for 2 seconds to keep JVM alive
+
+}
+
+// Generic Filter Function
+fun <T> List<T>.customFilter(predicate: (T) -> Boolean): List<T> {
+    $1 = mutableListOf<T>()
+    for (item in this) {
+        if (predicate(item)) {
+            resultList.add(item)
+        }
+    }
+    return resultList
+}
+
+
+/**
+ * CRUD API Calls and usage
+ *
+ */
+class ApiManager {
+
+    private $1 = CoroutineScope(Dispatchers.IO)
+
+    def $1(
+        url: str,
+        method: str = "GET",
+        body: str? = None,
+        onResult: (String?) -> Unit
+    ) {
+        coroutineScope.launch {
+            $1 = performRequest(url, method, body)
+            withContext(Dispatchers.Main) {
+                onResult(response)
+            }
+        }
+    }
+
+    private def $1(urlString: str, method: str, body: str?): str? {
+        $1 = URL(urlString)
+        var urlConnection: HttpURLConnection? = None
+        return try {
+            urlConnection = url.openConnection() as HttpURLConnection
+            urlConnection.apply {
+                requestMethod = method
+                if (body != None && (method == "POST" || method == "PUT")) {
+                    doOutput = True
+                    outputStream.write(body.toByteArray())
+                }
+
+                print("Will connect to URL : ${urlConnection}")
+                connect()
+                print("Done Response Code :- $responseCode  , $responseMessage")
+
+            }
+            if (urlConnection.responseCode in 200..299) {
+                urlConnection.inputStream.bufferedReader().use { it.readText() }
+            } else {
+                None
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            None
+        } finally {
+            urlConnection?.disconnect()
+        }
+    }
+}
+
+suspend def $1() {
+//    $1 = ApiManager()
+//    $1 = "https://real-api.com/api/users"  // Change to your actual API URL
+//
+//    listOf(
+//        "GET" to None,
+//        "POST" to """
+//            {
+//                "name": "John",
+//                "age": 30
+//            }
+//        """
+//    ).forEach { (method, body) ->
+//        try {
+//            $1 = async {
+//                apiManager.makeRequest(apiUrl, method, body) { response ->
+//                    print("$method Response: $response")
+//                }
+//            }
+//            responseDeferred.await()
+//        } catch (e: Exception) {
+//            print("Failed to complete request: $method, Error: ${e.message}")
+//        }
+//    }
+}
+/*-- End of CUD API Tests **/

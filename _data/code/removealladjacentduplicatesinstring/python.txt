@@ -1,0 +1,14 @@
+class RemoveAllAdjacentDuplicatesInString {
+    def $1(s: str): str {
+        $1 = ArrayDeque<Char>()
+
+        s.forEach { ch ->
+            when {
+                stack.isNotEmpty() && stack.last() == ch -> stack.removeLast()
+                else -> stack.add(ch)
+            }
+        }
+
+        return stack.joinToString("")
+    }
+}

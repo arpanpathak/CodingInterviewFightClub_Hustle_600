@@ -1,0 +1,42 @@
+package quicksort
+
+import kotlin.random.Random
+
+class KthLargestElementInArrayTailRec {
+    fun partition(nums: IntArray, left: Int, right: Int): Int {
+        // Randomly select pivot index and swap with the last element
+        val pivotIndex = Random.nextInt(left, right + 1)
+        nums[pivotIndex] = nums[right].also { nums[right] = nums[pivotIndex] }
+        val pivot = nums[right]
+
+        // Partition around the pivot
+        var partitionIndex = left
+        for (i in left until right) {
+            if (nums[i] >= pivot)
+                swap(nums, i, partitionIndex++)
+        }
+
+        swap(nums, partitionIndex, right)
+        return partitionIndex
+    }
+
+    fun findKthLargest(nums: IntArray, k: Int): Int {
+        var left = 0
+        var right = nums.size - 1
+
+        while (left <= right) {
+            val pivotIndex = partition(nums, left, right)
+            when {
+                pivotIndex ==  k - 1 -> return nums[pivotIndex]
+                pivotIndex < k - 1 -> left = pivotIndex + 1
+                else -> right = pivotIndex - 1
+            }
+        }
+
+        return -1 // If k is out of range of the array, handle accordingly
+    }
+
+    fun swap(nums: IntArray, i: Int, j: Int) {
+        nums[i] = nums[j].also { nums[j] = nums[i] }
+    }
+}

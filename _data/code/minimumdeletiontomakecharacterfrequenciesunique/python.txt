@@ -1,0 +1,19 @@
+class MinimumDeletionToMakeCharacterFrequenciesUnique {
+    def $1(s: str): int {
+        $1 = list[int](26)
+        for (ch in s) freq[ch - 'a']++
+
+        $1 = mutableSetOf<Int>()
+        $1 = 0
+
+        for (f in freq) {
+            $1 = f
+            while (currentFreq > 0 && !seen.add(currentFreq)) {
+                currentFreq--
+                deletions++
+            }
+        }
+
+        return deletions
+    }
+}

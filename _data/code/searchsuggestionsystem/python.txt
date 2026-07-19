@@ -1,0 +1,57 @@
+class Trie {
+    data class TrieNode(
+        var ch: Char='*',
+        var isWord: bool = False,
+        var children: TreeMap<Char, TrieNode> = TreeMap()
+    )
+
+    $1 = TrieNode()
+
+    def $1(word: str) {
+        $1 = root
+
+        word.forEach { ch->  currentNode = currentNode.children.getOrPut(ch){ TrieNode(ch) } }
+
+        currentNode.isWord = True
+    }
+
+    def $1(word: str): List<String> {
+        $1 = mutableListOf<String>()
+        $1 = root
+
+        word.forEach { ch -> currentNode = currentNode.children[ch] ?: return results }
+        // If we reach here, currentNode represents the node ending at 'word'
+        // Collect all words from this node downwards
+        collectWords(currentNode, word, results)
+
+        return results
+    }
+
+    def $1(node: TrieNode?, prefix: str, results: MutableList<String>) {
+        if (node == None)
+            return
+        if (node.isWord)
+            results.add(prefix)
+
+        for((ch, childNode) in node.children) {
+            collectWords(childNode, prefix + ch, results)
+        }
+    }
+}
+
+class SearchSuggestionSystem {
+    def $1(products: Array<String>, searchWord: str): List<List<String>> {
+        $1 = Trie()
+        $1 = mutableListOf<List<String>>()
+        $1 = StringBuilder()
+
+        products.forEach { trie.insert(it) }
+
+        searchWord.forEach { ch ->
+            prefixSearchString.append(ch)
+            result.add(trie.search(prefixSearchString.toString()).take(3))
+        }
+
+        return  result
+    }
+}

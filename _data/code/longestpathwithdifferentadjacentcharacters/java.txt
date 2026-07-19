@@ -1,0 +1,27 @@
+class LongestPathWithDifferentAdjacentCharacters {
+    public static void $1(parent: IntArray, s) {
+        val children = Array(parent.size) { mutableListOf<Int>() }
+        for (i in 1 until parent.size) {
+            children[parent[i]].add(i)
+        }
+
+        var maxLength = 1
+
+        public static void $1(node) {
+            var maxDepth = 1 // At least the node itself
+
+            for (child in children[node]) {
+                val childDepth = dfs(child)
+                if (s[child] != s[node]) {
+                    maxLength = maxOf(maxLength, maxDepth + childDepth)
+                    maxDepth = maxOf(maxDepth, childDepth + 1)
+                }
+            }
+
+            return maxDepth
+        }
+
+        dfs(0)
+        return maxLength
+    }
+}

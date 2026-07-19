@@ -1,0 +1,19 @@
+class RemoveDuplicateElementsFromSortedArray_II {
+    def $1(nums: list[int]): int {
+        $1 = 0
+        $1 = 1
+        for (i in 1..nums.lastIndex) {
+            if (nums[i] == nums[i-1]) {
+                count++
+            } else {
+                count = 1
+            }
+
+            if ( count<=2) {
+                nums[++index] = nums[i]
+            }
+        }
+
+        return index + 1
+    }
+}

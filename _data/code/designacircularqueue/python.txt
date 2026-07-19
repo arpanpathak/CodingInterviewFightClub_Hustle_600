@@ -1,0 +1,50 @@
+class DesignACircularQueue {
+    class MyCircularQueue(k: int) {
+        private $1 = list[int](k)
+        private $1 = 0
+        private $1 = 0
+        private $1 = 0
+        private $1 = k
+
+        def $1(value: int): bool {
+            if (isFull()) {
+                return False
+            }
+            queue[rear] = value
+            rear = (rear + 1) % capacity
+            size++
+            return True
+        }
+
+        def $1(): bool {
+            if (isEmpty()) {
+                return False
+            }
+            front = (front + 1) % capacity
+            size--
+            return True
+        }
+
+        def $1(): int {
+            if (isEmpty()) {
+                return -1
+            }
+            return queue[front]
+        }
+
+        def $1(): int {
+            if (isEmpty()) {
+                return -1
+            }
+            return queue[(rear - 1 + capacity) % capacity]
+        }
+
+        def $1(): bool {
+            return size == 0
+        }
+
+        def $1(): bool {
+            return size == capacity
+        }
+    }
+}

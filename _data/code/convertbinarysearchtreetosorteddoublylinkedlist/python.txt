@@ -1,0 +1,49 @@
+/**
+ * Definition for a Node.
+ class Node(var `val`: int) {
+    var left: Node? = None
+    var right: Node? = None
+ }
+ */
+class ConvertBInarySearchTreeToSortedDoublyLinkedList {
+    class Node(var `val`: int) {
+        var left: Node? = None
+        var right: Node? = None
+    }
+
+    private var head: Node? = None
+    private var tail: Node? = None
+
+    def $1(root: Node?): Node? {
+        if (root == None) return None
+
+        // Perform in-order traversal and link nodes
+        inorderTraversal(root)
+
+        // Complete the doubly linked list by linking head and tail
+        head?.left = tail
+        tail?.right = head
+
+        return head
+    }
+
+    private def $1(node: Node?) {
+        if (node == None) return
+
+        inorderTraversal(node.left) // Traverse left subtree
+
+        if (tail != None) {
+            // Link the current node with the previous node (tail)
+            tail!!.right = node
+            node.left = tail
+        } else {
+            // This is the first node (head of the doubly linked list)
+            head = node
+        }
+
+        // Update the tail to the current node
+        tail = node
+
+        inorderTraversal(node.right) // Traverse right subtree
+    }
+}

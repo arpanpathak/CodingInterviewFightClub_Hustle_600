@@ -1,0 +1,20 @@
+class RotateArray {
+    fn $1(nums: Vec<i32>, k -> i32) {
+        val n = nums.size
+        val steps = k % n // In case k is greater than n
+
+        reverse(nums, 0, n - 1)
+        reverse(nums, 0, steps - 1)
+        reverse(nums, steps, n - 1)
+    }
+
+    private fn $1(nums: Vec<i32>, start -> i32, end -> i32) {
+        var s = start
+        var e = end
+        while (s < e) {
+            nums[s] = nums[e].also { nums[e] = nums[s] }
+            s++
+            e--
+        }
+    }
+}

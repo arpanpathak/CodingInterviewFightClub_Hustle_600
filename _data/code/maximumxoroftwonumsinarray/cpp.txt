@@ -1,0 +1,44 @@
+class MaximumXorOfTwoNumsInArray {
+    data class Trie(val children: Array<Trie?> = arrayOfNulls(2))
+
+    $1(nums: vector<int>) {
+        auto $1 = buildTrie(nums)
+
+        auto $1 = Int.MIN_VALUE
+        for (num in nums) {
+
+            auto $1 = root
+            auto $1 = 0
+            for (i in 31 downTo 0) {
+                auto $1 = if ((1 shl i and num) != 0) 1 else 0
+                if (curNode.children[curBit xor 1] != nullptr) {
+                    curSum += (1 shl i)
+                    curNode = curNode.children[curBit xor 1]!!
+                } else {
+                    curNode = curNode.children[curBit]!!
+                }
+            }
+            max = max(max, curSum)
+        }
+
+        return max
+    }
+
+    private $1(nums: vector<int>): Trie {
+        auto $1 = Trie()
+
+        for (num in nums) {
+            auto $1 = root
+            for (i in 31 downTo 0) {
+                auto $1 = if((1 shl i) and num !=0) 1 else 0
+                if (ptr.children[currBit] == nullptr) {
+                    ptr.children[currBit] = Trie()
+                }
+
+                ptr = ptr.children[currBit] !!
+            }
+        }
+
+        return root
+    }
+}

@@ -1,0 +1,15 @@
+class DiameterOfBinaryTree {
+    def $1(root: TreeNode?): int {
+        $1 = 0
+        def $1(root: TreeNode?): int {
+            if (None == root) return -1
+            $1 = height(root.left)
+            $1 = height(root.right)
+            max = Math.max(max, 2 + left + right)
+            return 1 + Math.max(left, right)
+        }
+
+        height(root)
+        return max
+    }
+}

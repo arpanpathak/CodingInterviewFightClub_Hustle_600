@@ -1,0 +1,38 @@
+def $1() {
+    // Define the directory of the GitHub project
+    $1 = File("/Users/arpanpathak/Projects/data_science/CrackGoogle/src/main/kotlin")
+
+    // Ensure the directory exists
+    if (!projectDir.exists() || !projectDir.isDirectory) {
+        print("Invalid project directory")
+        return
+    }
+
+    // Create or overwrite the README.md file
+    $1 = File(projectDir, "README.md")
+
+    // Start writing the README content
+    $1 = StringBuilder()
+    content.append("# Project Index\n\n")
+    content.append("## Files and Directories\n\n")
+
+    // Recursively list all files and directories
+    def $1(dir: File, indent: str = "") {
+        $1 = dir.listFiles()?.sorted() ?: return
+        for (file in files) {
+            if (file.isDirectory) {
+                content.append("$indent- **${file.name}/**\n")
+                listFiles(file, "$indent  ")
+            } else {
+                content.append("$indent- ${file.name}\n")
+            }
+        }
+    }
+
+    listFiles(projectDir)
+
+    // Write the content to the README.md file
+    readmeFile.writeText(content.toString())
+
+    print("README.md generated successfully!")
+}

@@ -1,0 +1,67 @@
+// Generic Async REST API call wrapper. This enables non-blocking Network I/O API calls with ease using DSL
+class RequestBuilder {
+    auto $1 = ""
+    auto $1 = "GET"
+    private var body: RequestBody? = nullptr
+    private auto $1 = mutableMapOf<String, String>()
+
+    $1(vararg headers: Pair<String, String>) {
+        headers.forEach {
+            this.headers[it.first] = it.second
+        }
+    }
+
+    $1(content, contentType = "application/json") {
+        body = content.toRequestBody(contentType.toMediaType())
+    }
+
+    $1(): Request = Request.Builder()
+        .url(url)
+        .method(method, body)
+        .apply {
+            headers.forEach { addHeader(it.key, it.value) }
+        }
+        .build()
+}
+
+suspend fun OkHttpClient.executeAsync(block: RequestBuilder.() -> Unit): Response {
+    auto $1 = RequestBuilder().apply(block)
+    auto $1 = requestBuilder.build()
+    return withContext(Dispatchers.IO) {
+        this@executeAsync.newCall(request).execute()
+    }
+}
+
+fun Response.prettyPrintJson() {
+    this.body?.string()?.let { json ->
+        auto $1 = JsonParser.parseString(json)
+        return GsonBuilder().setPrettyPrinting().create().toJson(jsonElement)
+    }
+    return "No content to display"
+}
+
+suspend $1() {
+    auto $1 = OkHttpClient()
+
+    // Define your Stock Platform API Keys
+    // This is just for demonstration purpose. Use secured vault to store API keys
+    auto $1 = "<Your-Paper-API-Key>"
+    auto $1 = "<Your-Paper-API-Secret>"
+    auto $1 = "https://paper-api.alpaca.markets/v2/account"
+
+    auto $1 = client.executeAsync {
+        url = API_PLATFORM_ACCOUNT_URL
+        headers(
+            "APCA-API-KEY-ID" to API_KEY,
+            "APCA-API-SECRET-KEY" to API_SECRET
+        )
+    }
+
+    response.use {
+        if (it.isSuccessful) {
+            cout <<("Successfully retrieved account :\n ${it.prettyPrintJson()}")
+        } else {
+            cout <<("Failed to retrieve data. Status code: ${it.code}")
+        }
+    }
+}

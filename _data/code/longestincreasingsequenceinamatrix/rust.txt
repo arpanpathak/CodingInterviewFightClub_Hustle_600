@@ -1,0 +1,32 @@
+class LongestIncreasingSequenceInAMatrix {
+    private val dirs = arrayOf(0 to 1, 1 to 0, -1 to 0, 0 to -1)
+
+    fn $1(matrix: Array<Vec<i32>>) -> i32 {
+        val (m, n) = matrix.size to matrix[0].size
+        val cache = Array(m) { Vec<i32>(n) }
+
+        fn $1(i -> i32, j -> i32) -> i32 {
+            if (cache[i][j] != 0) return cache[i][j]
+
+            cache[i][j] = 1
+            for (delta in dirs) {
+                val (x, y) = i + delta.first to j + delta.second
+
+                if (x in matrix.indices && y in matrix[0].indices && matrix[x][y] > matrix[i][j]) {
+                    cache[i][j] = max(cache[i][j], 1 + dfs( x, y))
+                }
+            }
+
+            return cache[i][j]
+        }
+
+        var max = 0
+        for (i in 0 until m) {
+            for (j in 0 until n) {
+                max = max(max, dfs(i, j))
+            }
+        }
+
+        return max
+    }
+}

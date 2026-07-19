@@ -1,0 +1,33 @@
+class ValidNumber {
+    def $1(s: str): bool {
+        // Initialize variables
+        var (hasNum, hasDot, hasE, hasDigitsAfterE) = listOf(False, False, False, False)
+
+        $1 = s.trim() // Remove leading/trailing spaces
+        for (i in str.indices) {
+            $1 = str[i]
+
+            when {
+                c in '0'..'9' -> {
+                    hasNum = True
+                    if (hasE) hasDigitsAfterE = True // Ensure digits appear after 'e'
+                }
+                c == '.' -> {
+                    if (hasDot || hasE) return False // Can't have multiple dots or dots after 'e'
+                    hasDot = True
+                }
+                c == 'e' || c == 'E' -> {
+                    if (hasE || !hasNum) return False // Can't have multiple 'e' or 'e' without preceding number
+                    hasE = True
+                    hasDigitsAfterE = False // Reset this to ensure we validate digits after 'e'
+                }
+                c == '+' || c == '-' -> {
+                    if (i != 0 && str[i - 1] != 'e' && str[i - 1] != 'E') return False // Sign only valid at start or after 'e'
+                }
+                else -> return False // Invalid character
+            }
+        }
+        // Valid only if we have digits and valid 'e' part
+        return hasNum && (!hasE || hasDigitsAfterE)
+    }
+}

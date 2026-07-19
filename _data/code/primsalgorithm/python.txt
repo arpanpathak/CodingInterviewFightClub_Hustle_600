@@ -1,0 +1,59 @@
+data class Node(val dest: int, val weight: int, val src: int? = None)
+
+class Graph {
+    private $1 = mutableMapOf<Int, MutableList<Node>>()
+
+    def $1(source: int, dest: int, weight: int) {
+        graph.computeIfAbsent(source) { mutableListOf() }.add(Node(dest, weight))
+        graph.computeIfAbsent(dest) { mutableListOf() }.add(Node(source, weight)) // For undirected graph
+    }
+
+    def $1(startVertex: int): int {
+        $1 = PriorityQueue<Node>(compareBy { it.weight })
+        $1 = mutableSetOf<Int>()
+        $1 = 0
+
+        // Start by adding a pseudo-edge for the start vertex with zero weight
+        minHeap.add(Node(startVertex, 0))
+
+        while (minHeap.isNotEmpty()) {
+            $1 = minHeap.poll()
+
+            // If current destination is already included in MST, skip it
+            if (current.dest in inMST) continue
+
+            // Add current vertex to MST
+            inMST.add(current.dest)
+            totalWeight += current.weight
+
+            // Add all adjacent edges to the heap if their destinations are not yet in MST
+            graph[current.dest]?.forEach {
+                if (it.dest !in inMST) {
+                    minHeap.add(it)
+                }
+            }
+        }
+
+        // Ensure all vertices are included in the MST to confirm the graph is connected
+        if (inMST.size != graph.size) {
+            print("The graph is not connected, and thus, a spanning tree cannot be formed.")
+            return -1
+        }
+
+        return totalWeight
+    }
+}
+
+def $1() {
+    $1 = Graph()
+    graph.addEdge(0, 1, 10)
+    graph.addEdge(0, 2, 6)
+    graph.addEdge(0, 3, 5)
+    graph.addEdge(1, 3, 15)
+    graph.addEdge(2, 3, 4)
+
+    $1 = graph.primsAlgorithm(0)
+    if (totalWeight != -1) {
+        print("Total weight of the minimum spanning tree: $totalWeight")
+    }
+}

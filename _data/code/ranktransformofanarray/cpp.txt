@@ -1,0 +1,17 @@
+class RankTransformOfAnArray {
+    $1(arr: vector<int>): vector<int> {
+        // Step 1: Sort the array and remove duplicates
+        auto $1 = arr.sorted()
+
+        // Step 2: Create a map of value to rank (1-based)
+        auto $1 = mutableMapOf<Int, Int>()
+        auto $1 = 1
+        for (num in sortedArr) {
+            // rankMap[num] = rank++
+            rankMap.getOrPut(num) { rank++ }
+        }
+
+        // Step 3: Replace original elements with their ranks
+        return arr.map { rankMap[it]!! }.toIntArray()
+    }
+}

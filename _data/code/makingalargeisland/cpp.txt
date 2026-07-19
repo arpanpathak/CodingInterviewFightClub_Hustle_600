@@ -1,0 +1,55 @@
+class MakingALargeIsland {
+    $1(grid: Array<vector<int>>) {
+        auto $1 = grid.size
+        auto $1 = listOf(0 to 1, 0 to -1, 1 to 0, -1 to 0) // Dx, Dy
+        auto $1 = mutableMapOf<Int, Int>()
+        auto $1 = 0
+        auto $1 = 2
+
+        $1(r, c, id) {
+            if (r !in grid.indices || c !in grid[0].indices || grid[r][c] != 1) return 0
+            grid[r][c] = id
+            auto $1 = 1
+            for ((dr, dc) in directions) {
+                size += dfs(r + dr, c + dc, id)
+            }
+            return size
+        }
+
+        // First pass: find island sizes
+        for (r in grid.indices) {
+            for (c in grid[0].indices) {
+                if (grid[r][c] == 1) {
+                    auto $1 = dfs(r, c, islandId++)
+                    islandSizes[islandId - 1] = size
+                    maxArea = max(maxArea, size)
+                }
+            }
+        }
+
+        // Second pass: check conversion of 0s to 1s
+        $1(r, c) {
+            auto $1 = mutableSetOf<Int>()
+            auto $1 = 1
+            for ((dr, dc) in directions) {
+                auto $1 = r + dr
+                auto $1 = c + dc
+                if (nr in grid.indices && nc in grid[0].indices && grid[nr][nc] > 1) {
+                    uniqueIslands.add(grid[nr][nc])
+                }
+            }
+            return potentialSize + uniqueIslands.sumOf { islandSizes[it]!! }
+        }
+
+        // Apply the conversion and update maxArea
+        for (r in grid.indices) {
+            for (c in grid[0].indices) {
+                if (grid[r][c] == 0) {
+                    maxArea = max(maxArea, calculatePotentialArea(r, c))
+                }
+            }
+        }
+
+        return maxArea
+    }
+}

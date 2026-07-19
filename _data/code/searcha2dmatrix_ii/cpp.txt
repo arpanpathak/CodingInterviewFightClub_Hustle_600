@@ -1,0 +1,15 @@
+class SearchA2dMatrix_II {
+    $1(matrix: Array<vector<int>>, target) {
+        var (row, col) = matrix.size - 1 to 0
+
+        while (row >=0 && col < matrix[0].size) {
+            when {
+                matrix[row][col] > target -> row--
+                matrix[row][col] < target -> col++
+                else -> return true
+            }
+        }
+
+        return false
+    }
+}

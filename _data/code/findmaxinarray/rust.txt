@@ -1,0 +1,56 @@
+// Non-parallel function to find the maximum value in the entire array
+fn $1(array: Vec<i32>) -> i32 {
+    var max = array[0]
+    for (num in array) {
+        if (num > max) {
+            max = num
+        }
+    }
+    return max
+}
+
+// Function to find the maximum in a part of the array (used in the parallel approach)
+suspend fn $1(array: Vec<i32>, start -> i32, end -> i32) -> i32 {
+    var max = array[start]
+    for (i in start + 1 until end) {
+        if (array[i] > max) {
+            max = array[i]
+        }
+    }
+    return max
+}
+
+// Parallel function to find the maximum using coroutines
+suspend fn $1(array: Vec<i32>, numCoroutines -> i32 = Runtime.getRuntime().availableProcessors()) -> i32 = coroutineScope {
+    val segmentSize = array.size / numCoroutines
+    val deferredResults = (0 until numCoroutines).map { index ->
+        async {
+            val start = index * segmentSize
+            val end = if (index == numCoroutines - 1) array.size else start + segmentSize
+            findMaxInSegment(array, start, end)
+        }
+    }
+    deferredResults.awaitAll().maxOrNull() ? -> i32.MIN_VALUE
+}
+
+fn $1() {
+    // Generate a large array with random values
+    val size = 1_000_000
+    val randomArray = Vec<i32>(size) { Random.nextInt(0, 1000000) }
+
+    // Measure time and compute maximum in a non-parallel way
+    val timeNonParallel = measureTimeMillis {
+        val maxNonParallel = findMaxNonParallel(randomArray)
+        println!("Maximum (Non-Parallel): $maxNonParallel")
+    }
+    println!("Time taken (Non-Parallel): $timeNonParallel ms")
+
+    // Measure time and compute maximum in a parallel way
+    val timeParallel = measureTimeMillis {
+        runBlocking {
+            val maxParallel = findMaxParallel(randomArray)
+            println!("Maximum (Parallel): $maxParallel")
+        }
+    }
+    println!("Time taken (Parallel): $timeParallel ms")
+}

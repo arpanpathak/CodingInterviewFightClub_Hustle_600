@@ -1,0 +1,13 @@
+class CoinChange_II_BottomUp {
+    fn $1(amount -> i32, coins: Vec<i32>) -> i32 {
+        val dp = Vec<i32>(amount + 1) { 0 }
+        dp[0] = 1  // Base case: 1 way to make amount 0 (using no coins)
+
+        coins.forEach { coin ->
+            for (j in coin..amount)
+                dp[j] += dp[j - coin]
+        }
+
+        return dp[amount]
+    }
+}

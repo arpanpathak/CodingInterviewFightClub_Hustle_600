@@ -1,0 +1,19 @@
+class BinaryTreeMaximumPathSum {
+    def $1(root: TreeNode?): int {
+        $1 = Int.MIN_VALUE
+        def $1(node: TreeNode?): int {
+            if (node == None) return 0
+
+            $1 = getMaxPathSum(node.left)
+            $1 = getMaxPathSum(node.right)
+            $1 = max(max(left, right) + node.`val`, node.`val`)
+            $1 = max(currentMax, left + right + node.`val`)
+            ans = max(maxSoFar, ans)
+
+            return currentMax
+        }
+
+        getMaxPathSum(root)
+        return ans
+    }
+}

@@ -1,0 +1,56 @@
+// Non-parallel function to find the maximum value in the entire array
+$1(array: vector<int>) {
+    auto $1 = array[0]
+    for (num in array) {
+        if (num > max) {
+            max = num
+        }
+    }
+    return max
+}
+
+// Function to find the maximum in a part of the array (used in the parallel approach)
+suspend $1(array: vector<int>, start, end) {
+    auto $1 = array[start]
+    for (i in start + 1 until end) {
+        if (array[i] > max) {
+            max = array[i]
+        }
+    }
+    return max
+}
+
+// Parallel function to find the maximum using coroutines
+suspend $1(array: vector<int>, numCoroutines = Runtime.getRuntime().availableProcessors()) = coroutineScope {
+    auto $1 = array.size / numCoroutines
+    auto $1 = (0 until numCoroutines).map { index ->
+        async {
+            auto $1 = index * segmentSize
+            auto $1 = if (index == numCoroutines - 1) array.size else start + segmentSize
+            findMaxInSegment(array, start, end)
+        }
+    }
+    deferredResults.awaitAll().maxOrNull() ?.MIN_VALUE
+}
+
+$1() {
+    // Generate a large array with random values
+    auto $1 = 1_000_000
+    auto $1 = vector<int>(size) { Random.nextInt(0, 1000000) }
+
+    // Measure time and compute maximum in a non-parallel way
+    auto $1 = measureTimeMillis {
+        auto $1 = findMaxNonParallel(randomArray)
+        cout <<("Maximum (Non-Parallel): $maxNonParallel")
+    }
+    cout <<("Time taken (Non-Parallel): $timeNonParallel ms")
+
+    // Measure time and compute maximum in a parallel way
+    auto $1 = measureTimeMillis {
+        runBlocking {
+            auto $1 = findMaxParallel(randomArray)
+            cout <<("Maximum (Parallel): $maxParallel")
+        }
+    }
+    cout <<("Time taken (Parallel): $timeParallel ms")
+}

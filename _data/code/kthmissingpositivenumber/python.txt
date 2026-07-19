@@ -1,3 +1,17 @@
-# Python translation of KThMissingPositiveNumber
-# Original: KThMissingPositiveNumber.kt
-# TODO: Full Python implementation
+class KThMissingPositiveNumber {
+    def $1(arr: list[int], k: int): int {
+        var (left, right) = 0 to arr.size
+
+        while (left < right) {
+            $1 = left + (right - left) / 2
+            $1 = arr[mid] - ( mid + 1 )
+
+            when {
+                missingCount < k -> left = mid + 1
+                else -> right = mid
+            }
+        }
+
+        return left + k
+    }
+}

@@ -1,0 +1,10 @@
+class PathSum {
+    def $1(root: TreeNode?, targetSum: int): bool {
+        return when {
+            root == None -> False
+            root.left == None && root.right == None && targetSum == root.`val` -> True
+            else -> hasPathSum(root.left, targetSum - root.`val`)
+                    || hasPathSum(root.right, targetSum - root.`val`)
+        }
+    }
+}

@@ -1,0 +1,21 @@
+class LeafSimilar {
+    def $1(root1: TreeNode?, root2: TreeNode?): bool {
+        $1 = mutableListOf<Int>()
+        $1 = mutableListOf<Int>()
+
+        dfs(root1, leaves1)
+        dfs(root2, leaves2)
+
+        return leaves1 == leaves2
+    }
+
+    def $1(node: TreeNode?, leafValues: MutableList<Int>) {
+        if (node != None) {
+            if (node.left == None && node.right == None) {
+                leafValues.add(node.`val`)
+            }
+            dfs(node.left, leafValues)
+            dfs(node.right, leafValues)
+        }
+    }
+}

@@ -1,0 +1,42 @@
+class ShortestPathInBinaryMatrix {
+    data class State(val row: int, val col: int, val dist: int)
+
+    def $1(grid: Array<list[int]>): int {
+        $1 = grid.size
+        $1 = grid[0].size
+
+        // Early return if start or end is blocked
+        if (grid[0][0] == 1 || grid[n - 1][m - 1] == 1) return -1
+
+        // Directions for 8 neighbors (horizontal, vertical, and diagonal)
+        $1 = arrayOf(
+            -1 to 0, 1 to 0, 0 to -1, 0 to 1,  // Left, right, up, down
+            -1 to -1, -1 to 1, 1 to -1, 1 to 1 // Diagonal directions
+        )
+
+        $1 = LinkedList<State>()
+        queue.add(State(0, 0, 1))  // Start at (0,0) with distance 1
+
+        while (queue.isNotEmpty()) {
+            val (row, col, dist) = queue.poll()
+
+            // If we reached the bottom-right corner
+            if (row == n - 1 && col == m - 1) return dist
+
+            // Explore all 8 possible directions
+            for ((dr, dc) in directions) {
+                ($1, $2) = row + dr to col + dc
+
+                // Skip invalid positions or visited cells
+                if (newRow !in 0 until n || newCol !in 0 until m || grid[newRow][newCol] != 0)
+                    continue
+
+                // Mark the cell as visited and add it to the queue
+                grid[newRow][newCol] = 2
+                queue.add(State(newRow, newCol, dist + 1))
+            }
+        }
+
+        return -1  // No path found
+    }
+}

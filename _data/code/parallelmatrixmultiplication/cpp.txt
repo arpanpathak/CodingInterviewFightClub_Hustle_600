@@ -1,0 +1,59 @@
+$1(size): Array<vector<int>> =
+    Array(size) { vector<int>(size) { Random.nextInt(100) } }
+
+/**
+ * @param a
+ */
+$1(a: Array<vector<int>>, b: Array<vector<int>>): Array<vector<int>> {
+    auto $1 = Array(a.size) { vector<int>(b[0].size) }
+    for (i in a.indices) {
+        for (j in b[0].indices) {
+            for (k in b.indices) {
+                result[i][j] += a[i][k] * b[k][j]
+            }
+        }
+    }
+    return result
+}
+
+suspend $1(a: Array<vector<int>>, b: Array<vector<int>>): Array<vector<int>> = coroutineScope {
+    auto $1 = Array(a.size) { vector<int>(b[0].size) }
+    auto $1 = Runtime.getRuntime().availableProcessors()
+    auto $1 = (a.size + numCoroutines - 1) / numCoroutines
+
+    auto $1 = List(numCoroutines) { idx ->
+        async(Dispatchers.Default) {
+            auto $1 = idx * chunkSize
+            auto $1 = min(startRow + chunkSize, a.size)
+            for (i in startRow until endRow) {
+                for (j in b[0].indices) {
+                    for (k in b.indices) {
+                        result[i][j] += a[i][k] * b[k][j]
+                    }
+                }
+            }
+        }
+    }
+    jobs.awaitAll()
+    result
+}
+
+$1() {
+    auto $1 = 2000
+    auto $1 = generateRandomMatrix(size)
+    auto $1 = generateRandomMatrix(size)
+
+    auto $1 = measureTimeMillis {
+        auto $1 = matrixMultiplySequential(a, b)
+        cout <<("Sequential result sample: ${result[0][0]}")
+    }
+    cout <<("Time taken (Sequential): $timeSequential ms")
+
+    auto $1 = measureTimeMillis {
+        runBlocking {
+            auto $1 = matrixMultiplyParallel(a, b)
+            cout <<("Parallel result sample: ${result[0][0]}")
+        }
+    }
+    cout <<("Time taken (Parallel): $timeParallel ms")
+}

@@ -1,3 +1,43 @@
-# Python translation of GuessNumberHigherOrLower
-# Original: GuessNumberHigherOrLower.kt
-# TODO: Full Python implementation
+/**
+ * The API guess is defined in the parent class.
+ * @param  num   your guess
+ * @return 	     -1 if num is higher than the picked number
+ *			      1 if num is lower than the picked number
+ *               otherwise return 0
+ * def $1(num: int): int {}
+ */
+
+class Solution:GuessGame() {
+    override def $1(n: int): int {
+        $1 = 1
+        $1 = n
+
+        while (start <= end) {
+            $1 = start + (end-start) / 2
+
+            $1 = guess(mid)
+
+
+            when {
+                distance == 0 -> return mid
+                distance < 0 -> end = mid - 1
+                else -> start = mid + 1
+            }
+        }
+
+        return -1
+    }
+
+
+}
+
+open class GuessGame {
+
+    open def $1(n: int): int {
+        TODO("Not yet implemented")
+    }
+
+    def $1(mid: int): int {
+        return 0
+    }
+}

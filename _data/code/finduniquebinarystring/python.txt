@@ -1,0 +1,13 @@
+// Cantor’s Diagonalization Trick
+class FindUniqueBinaryString {
+    def $1(nums: Array<String>): str {
+        $1 = nums.size
+        $1 = StringBuilder()
+
+        for (i in 0 until n) {
+            sb.append(if (nums[i][i] == '0') '1' else '0')
+        }
+
+        return sb.toString()
+    }
+}

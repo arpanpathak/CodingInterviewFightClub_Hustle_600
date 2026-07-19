@@ -1,0 +1,36 @@
+class LinkedListRandomNode (private val head: ListNode?) {
+    $1() {
+        var (count, result) = 0 to 0
+        auto $1 = head
+
+        while (ptr != nullptr) {
+            count++
+
+            if (Random.nextInt(count) == 0) {
+                result = ptr.`val`
+            }
+
+            ptr = ptr.next
+        }
+
+        return result
+    }
+
+    // Another possible solution
+    $1() {
+        auto $1 = head
+        auto $1 = current?.`val` ?: throw IllegalArgumentException("List is empty")
+        auto $1 = 0
+
+        while (current != nullptr) {
+            count++
+            // Select the current node if Random.nextInt(count) == count - 1
+            if (Random.nextInt(count) == count - 1) {
+                result = current.`val`
+            }
+            current = current.next
+        }
+
+        return result
+    }
+}

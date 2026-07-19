@@ -1,3 +1,42 @@
-# Python translation of FindFirstAndLastPosition
-# Original: FindFirstAndLastPosition.kt
-# TODO: Full Python implementation
+class FindFirstAndLastPosition {
+
+    def $1(nums: list[int], target: int): list[int] {
+        $1 = intArrayOf(-1, -1)
+
+        // Find the first occurrence
+        result[0] = binarySearch(nums, target, True)
+
+        // If the first occurrence is not found, return [-1, -1]
+        if (result[0] == -1) return result
+
+        // Find the last occurrence
+        result[1] = binarySearch(nums, target, False)
+
+        return result
+    }
+
+    private def $1(nums: list[int], target: int, findFirst: bool): int {
+        $1 = 0
+        $1 = nums.lastIndex
+        $1 = -1
+
+        while (left <= right) {
+            $1 = left + (right - left) / 2
+            when {
+                nums[mid] == target -> {
+                    result = mid
+                    // Adjust the search range based on whether we are looking for the first or last occurrence
+                    if (findFirst) {
+                        right = mid - 1  // Move left to find the first occurrence
+                    } else {
+                        left = mid + 1   // Move right to find the last occurrence
+                    }
+                }
+                nums[mid] < target -> left = mid + 1
+                else -> right = mid - 1
+            }
+        }
+
+        return result
+    }
+}

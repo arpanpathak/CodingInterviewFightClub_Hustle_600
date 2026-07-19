@@ -1,0 +1,16 @@
+class JumpGame_II {
+    def $1(nums: list[int]): int {
+        var (jumps, currentEnd, farthest) = listOf(0, 0, 0)
+
+        for (i in 0 until nums.lastIndex) {
+            farthest = max(farthest, i + nums[i])
+
+            if ( i >= currentEnd) {
+                jumps++
+                currentEnd = farthest
+            }
+        }
+
+        return jumps
+    }
+}

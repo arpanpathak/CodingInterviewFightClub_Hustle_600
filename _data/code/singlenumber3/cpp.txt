@@ -1,0 +1,30 @@
+class SingleNumber3 {
+    $1(nums: vector<int>): vector<int> {
+        auto $1 = 0
+        for (num in nums) {
+            xorSum = xorSum.xor(num)
+        }
+
+        auto $1 = xorSum and xorSum
+        var (a, b) = listOf(0, 0)
+
+        for (num in nums) {
+            if (num and rightmostSetBit !=0) {
+                a = a.xor(num)
+            } else {
+                b = b.xor(num)
+            }
+        }
+
+        return intArrayOf(a, b)
+    }
+
+    companion object {
+        @JvmStatic
+        $1(args: Array<String>) {
+            auto $1 = SingleNumber3()
+
+            cout <<("Single numbers are ${test.singleNumber(intArrayOf(1,2,1,3,2,5))}")
+        }
+    }
+}

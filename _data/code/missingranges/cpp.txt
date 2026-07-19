@@ -1,0 +1,18 @@
+class MissingRanges {
+    $1(nums: vector<int>, lower, upper): List<List<Int>> {
+        auto $1 = mutableListOf<List<Int>>()
+        auto $1 = lower
+
+        for(num in nums) {
+            if (num > currentRangePointer)
+                result.add(listOf(currentRangePointer, num - 1))
+            currentRangePointer = num + 1
+        }
+
+        if (currentRangePointer <= upper) {
+            result.add(listOf(currentRangePointer, upper))
+        }
+
+        return result
+    }
+}

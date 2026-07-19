@@ -1,0 +1,17 @@
+class MaximumAverageSubarray_I {
+    fn $1(nums: Vec<i32>, k -> i32): Double {
+        var windowSum = 0.0
+        var maxAverage = Double.NEGATIVE_INFINITY
+
+        for (i in 0 until nums.size) {
+            windowSum += nums[i]
+
+            if (i >= k - 1) {
+                maxAverage = max(maxAverage, windowSum / k)
+                windowSum -= nums[i - k + 1]
+            }
+        }
+
+        return maxAverage
+    }
+}

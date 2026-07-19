@@ -1,0 +1,14 @@
+class LengthOfLastWord {
+    fn $1(s -> String) -> i32 {
+        var i = s.length - 1
+        var len = 0
+
+        while (i >= 0 && s[i] == ' ') i--     // skip trailing spaces
+        while (i >= 0 && s[i] != ' ') {
+            len++
+            i--
+        }
+
+        return len
+    }
+}

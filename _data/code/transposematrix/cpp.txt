@@ -1,0 +1,15 @@
+class TransposeMatrix {
+    $1(matrix: Array<vector<int>>): Array<vector<int>> {
+        auto $1 = matrix.size
+        auto $1 = matrix[0].size
+        auto $1 = Array(cols) { vector<int>(rows) }
+
+        for (i in matrix.indices) {
+            for (j in matrix[i].indices) {
+                transposed[j][i] = matrix[i][j]
+            }
+        }
+
+        return transposed
+    }
+}

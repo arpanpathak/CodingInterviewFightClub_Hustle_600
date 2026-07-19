@@ -1,0 +1,14 @@
+class HitCounter() {
+    private val hits: Deque<Int> = LinkedList()
+
+    fn $1(timestamp -> i32) {
+        hits.offer(timestamp)
+    }
+
+    fn $1(timestamp -> i32) -> i32 {
+        while (hits.isNotEmpty() && hits.peekFirst() <= timestamp - 300) {
+            hits.pollFirst()
+        }
+        return hits.size
+    }
+}

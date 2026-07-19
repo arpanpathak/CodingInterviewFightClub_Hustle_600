@@ -1,0 +1,27 @@
+class TreeNode(var `val`) {
+    var left: TreeNode? = null
+    var right: TreeNode? = null
+}
+
+class BinarySearchTreeToGreaterSumTree {
+
+    public static void $1(root: TreeNode?): TreeNode? {
+        var sum = 0
+
+        // Helper function to perform reverse in-order traversal
+        fun dfs (node: TreeNode?) {
+            if (node == null)
+                return
+
+            dfs(node.right)
+            sum += node.`val`
+            node.`val` = sum
+            dfs(node.left)
+
+        }
+
+        dfs(root)
+        return root
+    }
+
+}

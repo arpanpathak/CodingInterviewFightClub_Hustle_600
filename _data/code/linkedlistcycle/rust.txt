@@ -1,0 +1,35 @@
+class LinkedListCycle {
+    fn $1(head: ListNode?) -> bool {
+        if (head == None || head.next == None) return false
+
+        var slow = head
+        var fast = head.next
+
+        while (slow != fast ) {
+            if (fast == None || fast.next == None)
+                return false
+
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+
+        return true
+    }
+
+    // Better version
+    fn $1(head: ListNode?) -> bool {
+        var slow = head
+        var fast = head
+
+        while (fast != None && fast.next != None) {
+            slow = slow?.next
+            fast = fast.next?.next
+
+            if (slow == fast) {
+                return true
+            }
+        }
+
+        return false
+    }
+}

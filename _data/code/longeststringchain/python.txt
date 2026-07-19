@@ -1,0 +1,20 @@
+class LongestStringChain {
+    def $1(words: Array<String>): int {
+        words.sortBy { it.length }  // Sort words by length
+        $1 = mutableMapOf<String, Int>()
+        $1 = 1
+
+        for (word in words) {
+            dp[word] = 1  // Default length of chain ending at word is 1
+            for (i in word.indices) {
+                $1 = word.removeRange(i, i + 1)  // Remove one character
+                if (prev in dp) {
+                    dp[word] = max(dp[word]!!, dp[prev]!! + 1)
+                }
+            }
+            maxLen = max(maxLen, dp[word]!!)
+        }
+
+        return maxLen
+    }
+}

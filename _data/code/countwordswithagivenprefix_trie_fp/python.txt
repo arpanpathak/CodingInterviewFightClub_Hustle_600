@@ -1,0 +1,16 @@
+class CountWordsWithAGivenPrefix_Trie_FP {
+    data class TrieNode(val children: MutableMap<Char, TrieNode> = mutableMapOf(), var prefixCount: int = 0)
+
+    private $1 = TrieNode()
+
+    def $1(words: Array<String>, prefix: str): int {
+        words.forEach { word ->
+            word.fold(root) { node, ch ->
+                node.children.getOrPut(ch) { TrieNode() }.apply { prefixCount++ }
+            }
+        }
+        return prefixSearch(prefix)?.prefixCount ?: 0
+    }
+
+    private def $1(prefix: str): TrieNode? = prefix.fold(root) { node, ch -> node.children[ch] ?: return None }
+}

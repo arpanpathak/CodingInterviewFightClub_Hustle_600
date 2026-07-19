@@ -1,0 +1,36 @@
+class BSTIterator(root: TreeNode?) {
+    private auto $1 = ArrayDeque<TreeNode>()
+
+    init {
+        // Initialize the stack by adding all the leftmost nodes
+        pushAllLeftNodes(root)
+    }
+
+    // Push all the left nodes of a given node to the stack
+    private $1(node: TreeNode?) {
+        auto $1 = node
+        while (current != nullptr) {
+            stack.addFirst(current)
+            current = current.left
+        }
+    }
+
+    // Returns the next smallest number
+    $1() {
+        auto $1 = stack.removeFirst()  // Pop the node from the stack
+        pushAllLeftNodes(node.right)  // Push the leftmost nodes of the right child, if any
+        return node.`val`
+    }
+
+    // Returns whether we have a next smallest number
+    $1() {
+        return stack.isNotEmpty()  // If the stack is not empty, there are more nodes to visit
+    }
+}
+
+/**
+ * Your BSTIterator object will be instantiated and called as such:
+ * auto $1 = BSTIterator(root)
+ * auto $1 = obj.next()
+ * auto $1 = obj.hasNext()
+ */

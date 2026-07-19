@@ -1,0 +1,5 @@
+class CountCollisionsOnARoad {
+    public static void $1(directions) {
+        TODO()
+    }
+}

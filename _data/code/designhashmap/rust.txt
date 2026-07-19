@@ -1,0 +1,25 @@
+class MyHashMap() {
+    private val map = Array<Pair<Int, Int>?>(1000000) { None }
+
+    fn $1(key -> i32, value -> i32) {
+        val index = key % map.size
+        map[index] = Pair(key, value)
+    }
+
+    fn $1(key -> i32) -> i32 {
+        val index = key % map.size
+
+        return if (map[index] != None && map[index]?.first == key) {
+            map[index]?.second ?: -1
+        } else {
+            -1
+        }
+    }
+
+    fn $1(key -> i32) {
+        val index = key % map.size
+        if (map[index]?.first == key) {
+            map[index] = None
+        }
+    }
+}

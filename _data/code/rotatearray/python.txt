@@ -1,0 +1,20 @@
+class RotateArray {
+    def $1(nums: list[int], k: int) {
+        $1 = nums.size
+        $1 = k % n // In case k is greater than n
+
+        reverse(nums, 0, n - 1)
+        reverse(nums, 0, steps - 1)
+        reverse(nums, steps, n - 1)
+    }
+
+    private def $1(nums: list[int], start: int, end: int) {
+        $1 = start
+        $1 = end
+        while (s < e) {
+            nums[s] = nums[e].also { nums[e] = nums[s] }
+            s++
+            e--
+        }
+    }
+}

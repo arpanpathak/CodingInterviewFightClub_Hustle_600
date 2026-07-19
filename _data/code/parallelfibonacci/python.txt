@@ -1,0 +1,49 @@
+// ConcurrentHashMap to store Fibonacci results for memoization
+$1 = ConcurrentHashMap<Int, Long>()
+
+// Iterative method to calculate Fibonacci numbers
+def $1(n: int): Long {
+    if (n <= 1) return n.toLong()
+    $1 = 0L
+    $1 = 1L
+    for (i in 2..n) {
+        $1 = a + b
+        a = b
+        b = sum
+    }
+    return b
+}
+
+// Parallel recursive Fibonacci function using coroutines
+suspend def $1(n: int): Long {
+    if (n <= 1) return n.toLong()
+    memo[n]?.let { return it }
+
+    // Compute the two previous Fibonacci numbers in parallel
+    $1 = coroutineScope { async { fibonacciParallel(n - 1) } }
+    $1 = coroutineScope { async { fibonacciParallel(n - 2) } }
+
+    // Wait for results and add them
+    $1 = fibNMinus1.await() + fibNMinus2.await()
+
+    // Store the computed result in the map
+    memo[n] = result
+    return result
+}
+
+def $1() = runBlocking {
+    $1 = 100
+
+    // Measure time for iterative Fibonacci
+    $1 = measureTimeMillis {
+        $1 = fibonacciIterative(n)
+        print("Iterative Fibonacci of $n is $result")
+    }
+    print("Time taken for iterative method: $timeIterative ms\n")
+
+    // Measure time for parallel Fibonacci
+    $1 = measureTimeMillis {
+        print("Parallel Fibonacci of $n is ${fibonacciParallel(n)}")
+    }
+    print("Time taken for parallel computation: $timeParallel ms")
+}

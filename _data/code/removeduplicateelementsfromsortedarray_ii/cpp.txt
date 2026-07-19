@@ -1,0 +1,19 @@
+class RemoveDuplicateElementsFromSortedArray_II {
+    $1(nums: vector<int>) {
+        auto $1 = 0
+        auto $1 = 1
+        for (i in 1..nums.size() - 1) {
+            if (nums[i] == nums[i-1]) {
+                count++
+            } else {
+                count = 1
+            }
+
+            if ( count<=2) {
+                nums[++index] = nums[i]
+            }
+        }
+
+        return index + 1
+    }
+}

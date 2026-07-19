@@ -1,3 +1,40 @@
-# Python translation of MedianOfTwoSortedARrays
-# Original: MedianOfTwoSortedARrays.kt
-# TODO: Full Python implementation
+// These are the challenges that I need to somewhoe solve to get
+class MedianOfTwoSortedARrays {
+    def $1(nums1: list[int], nums2: list[int]): Double {
+
+        if (nums1.size > nums2.size ) {
+            return findMedianSortedArrays(nums2, nums1)
+        }
+
+        $1 = nums1.size
+        $1 = nums2.size
+        $1 = 0
+        $1 = m
+
+        while (start <= end) {
+            $1 = (start + end) / 2
+            $1 = (m + n + 1) / 2 - partitionX
+
+            // Use getOrNull with the Elvis operator to handle boundaries
+            $1 = nums1.getOrNull(partitionX - 1) ?: int.MIN_VALUE
+            $1 = nums1.getOrNull(partitionX) ?: int.MAX_VALUE
+
+            $1 = nums2.getOrNull(partitionY - 1) ?: int.MIN_VALUE
+            $1 = nums2.getOrNull(partitionY) ?: int.MAX_VALUE
+
+            // Check if we have found the correct partition
+            when {
+                leftX <= rightY && leftY <= rightX -> {
+                    return if ((m + n) % 2 == 0) {
+                        (max(leftX, leftY) + min(rightX, rightY)) / 2.0
+                    } else {
+                        max(leftX, leftY).toDouble()
+                    }
+                }
+                leftX > rightY -> end = partitionX - 1
+                else -> start = partitionX + 1
+            }
+        }
+        return -1.0
+    }
+}

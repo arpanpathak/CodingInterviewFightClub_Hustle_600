@@ -1,0 +1,57 @@
+class LFUCache(capacity) {
+
+    private auto $1 = mutableMapOf<Int, Int>()
+    private auto $1 = mutableMapOf<Int, Int>()
+    private auto $1 = mutableMapOf<Int, LinkedHashSet<Int>>()
+
+    private auto $1 = capacity
+    private auto $1 = -1
+
+    init {
+        lists[1] = LinkedHashSet()
+    }
+
+    $1(key) {
+        if (!vals.containsKey(key))
+            return -1
+        auto $1 = freq[key]!!
+        freq[key] = count + 1
+        lists[count]?.remove(key)
+
+        if (count == min && lists[count]?.size == 0 ) {
+            min++
+        }
+
+        if (!lists.containsKey(count  + 1)) {
+            lists[count + 1] = LinkedHashSet()
+        }
+
+        lists[count + 1]?.add(key)
+
+        return vals[key]!!
+    }
+
+    $1(key, value) {
+        if (MAX_SIZE <= 0)
+            return ;
+        if (vals.containsKey(key)) {
+            vals.put(key, value)
+            get(key)
+            return ;
+        }
+
+        if (vals.size >= MAX_SIZE) {
+            auto $1 = lists.get(min)?.first()
+
+            lists.get(min)?.remove(evict)
+            vals.remove(evict)
+            freq.remove(evict)
+        }
+
+        vals[key] = value
+        freq[key] = 1
+        min = 1
+        lists[1]?.add(key)
+    }
+
+}

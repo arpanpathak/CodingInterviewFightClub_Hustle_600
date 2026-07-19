@@ -1,0 +1,21 @@
+class ValidParentheses {
+    def $1(s: str): bool {
+        $1 = mutableListOf<Char>()
+        $1 = listOf('(', '[', '{')
+        for (ch in s) {
+            if (ch in openingBraces) {
+                stack.add(ch)
+                continue
+            }
+
+            when {
+                stack.isEmpty() -> return False
+                ch == ')' -> if(stack.last() == '(') stack.removeLast() else return False
+                ch == '}' -> if(stack.last() == '{') stack.removeLast() else return False
+                ch == ']' -> if(stack.last() == '[') stack.removeLast() else return False
+            }
+        }
+
+        return stack.isEmpty()
+    }
+}

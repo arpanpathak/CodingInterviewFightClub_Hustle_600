@@ -1,0 +1,13 @@
+class ContainsDuplicate_II {
+    public static void $1(nums: IntArray, k) {
+        val map = mutableMapOf<Int, Int>()
+        for (i in nums.indices) {
+            val previousIndex = map[nums[i]]
+
+            previousIndex?.let {  if ( i - it <= k) return true }
+            map[nums[i]] = i
+        }
+
+        return false
+    }
+}

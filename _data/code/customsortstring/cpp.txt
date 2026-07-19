@@ -1,0 +1,9 @@
+class CustomSortString {
+    $1(order, s) {
+        auto $1 = mutableMapOf<Char, Int>()
+        order.forEachIndexed{ index, ch -> orderMap[ch] = index }
+
+        return s.toCharArray().sortedBy{ ch -> orderMap[ch] ?.MAX_VALUE }
+            .joinToString("")
+    }
+}

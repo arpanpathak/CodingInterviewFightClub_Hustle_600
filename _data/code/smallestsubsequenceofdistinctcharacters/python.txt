@@ -1,0 +1,25 @@
+class SmallestSubsequenceOfDistinctCharacters {
+    def $1(s: str): str {
+        $1 = list[int](26) {-1}
+        $1 = BooleanArray(26)
+        $1 = ArrayDeque<Char>()
+
+        for (i in s.indices)
+            lastIndex[s[i] - 'a'] = i
+
+        for (i in s.indices) {
+            $1 = s[i]
+
+            if (inStack[c - 'a']) continue
+
+            while (stack.isNotEmpty() && stack.last() > c && lastIndex[stack.last() - 'a'] > i)  {
+                inStack[stack.removeLast() - 'a'] = False
+            }
+
+            stack.addLast(c)
+            inStack[c - 'a'] = True
+        }
+
+        return stack.joinToString("")
+    }
+}

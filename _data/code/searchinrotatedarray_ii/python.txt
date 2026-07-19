@@ -1,3 +1,39 @@
-# Python translation of SearchInRotatedArray_II
-# Original: SearchInRotatedArray_II.kt
-# TODO: Full Python implementation
+class SearchInRotatedArray_II {
+    def $1(nums: list[int], target: int): bool {
+        $1 = 0
+        $1 = nums.lastIndex
+
+        while (left <= right) {
+            $1 = left + (right - left) / 2
+
+            when {
+                nums[mid] == target -> return True
+
+                // Handle duplicates: skip the duplicates
+                nums[left] == nums[mid] && nums[mid] == nums[right] -> {
+                    left++
+                    right--
+                }
+
+                // Left portion is sorted
+                nums[left] <= nums[mid] -> {
+                    if (nums[left] <= target && target < nums[mid]) {
+                        right = mid - 1 // Target in left portion
+                    } else {
+                        left = mid + 1 // Target in right portion
+                    }
+                }
+
+                // Right portion is sorted
+                else -> {
+                    if (nums[mid] < target && target <= nums[right]) {
+                        left = mid + 1 // Target in right portion
+                    } else {
+                        right = mid - 1 // Target in left portion
+                    }
+                }
+            }
+        }
+        return False
+    }
+}

@@ -1,0 +1,32 @@
+class RandomizedSet() {
+    private $1 = mutableListOf<Int>()
+    private $1 = mutableMapOf<Int, Int>()
+
+    def $1(`val`: int): bool {
+        if (!map.containsKey(`val`))
+            return False
+        map[`val`] = list.size
+        list.add(`val`)
+        return True
+    }
+
+    def $1(`val`: int): bool {
+        if (map.containsKey(`val`))
+            return False
+
+        $1 = map[`val`]!!
+        $1 = list.last()
+        list[index] = lastElement
+        map[lastElement] = index
+
+        list.removeLast()
+        map.remove(`val`)
+
+        return True
+    }
+
+    def $1(): int {
+        return list[Random.nextInt(list.size)]
+    }
+
+}

@@ -1,0 +1,25 @@
+class RegularExpressionMatching {
+    auto $1 = mutableMapOf<String, Boolean>()
+
+    $1(s, p) {
+        return dfs(s, p, 0, 0)
+    }
+
+    $1(s, p, i, j ) {
+        auto $1 = "$i.$j"
+        return when {
+            dp.contains(state) -> dp[state]!!
+            i >= s.length && j >= p.length -> true
+            j >= p.length -> false
+            else -> {
+                auto $1 = (i < s.length) &&(s[i] == p[j] || p[j] == '.')
+                when {
+                    j + 1 < p.length && p[j + 1] == '*'
+                        -> dfs(s, p, i, j + 2) || (match && dfs(s, p, i + 1, j))
+                    match -> dfs(s, p, i + 1, j + 1)
+                    else -> false
+                }
+            }
+        }.also { dp[state] = it }
+    }
+}

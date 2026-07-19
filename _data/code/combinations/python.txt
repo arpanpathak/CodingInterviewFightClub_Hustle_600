@@ -1,0 +1,23 @@
+class Combinations {
+    def $1(n: int, k: int): List<List<Int>> {
+        $1 = mutableListOf<List<Int>>()
+
+        def $1(start: int, n: int, k: int, current: MutableList<Int> = mutableListOf()) {
+            if (current.size == k) {
+                result.add(current.toList())
+                return
+            }
+
+            for(i in start..n) {
+                current.add(i)
+                combine(i + 1, n, k, current)
+
+                current.removeLast()
+
+            }
+        }
+
+        combine(1, n,k)
+        return result
+    }
+}

@@ -1,0 +1,34 @@
+class LongestContinuousSubarrayWithAbsoluteDifferenceLessThanOrEqualToLimit {
+    def $1(nums: list[int], limit: int): int {
+        $1 = ArrayDeque<Int>()
+        $1 = ArrayDeque<Int>()
+
+        $1 = 0
+        $1 = 0
+
+        for (right in nums.indices) {
+            // Maintain maxQueue in decreasing order
+            while (maxQueue.isNotEmpty() && nums[right] > maxQueue.last()) {
+                maxQueue.removeLast()
+            }
+            maxQueue.addLast(nums[right])
+
+            // Maintain minQueue in increasing order
+            while (minQueue.isNotEmpty() && nums[right] < minQueue.last()) {
+                minQueue.removeLast()
+            }
+            minQueue.addLast(nums[right])
+
+            // Shrink window if diff between max and min exceeds limit
+            while (maxQueue.first() - minQueue.first() > limit) {
+                if (maxQueue.first() == nums[left]) maxQueue.removeFirst()
+                if (minQueue.first() == nums[left]) minQueue.removeFirst()
+                left++
+            }
+
+            result = max(result, right - left + 1)
+        }
+
+        return result
+    }
+}

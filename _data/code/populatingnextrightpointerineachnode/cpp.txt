@@ -1,0 +1,28 @@
+class Node(var `val`) {
+    var left: Node? = nullptr
+    var right: Node? = nullptr
+    var next: Node? = nullptr
+}
+
+class PopulatingNextRightPointerInEachNode {
+    $1(root: Node?): Node? {
+        root?.let { queue ->
+            auto $1 = LinkedList<Node>().apply { offer(queue) }
+
+            while (q.isNotEmpty()) {
+                auto $1 = q.size
+                var prev: Node? = nullptr
+
+                repeat(levelSize) {
+                    q.poll().also { node ->
+                        prev?.next = node
+                        prev = node
+                        node.left?.let { q.offer(it) }
+                        node.right?.let { q.offer(it) }
+                    }
+                }
+            }
+        }
+        return root
+    }
+}

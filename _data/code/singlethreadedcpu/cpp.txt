@@ -1,0 +1,30 @@
+class SingleThreadedCPU {
+    data class Task(val enqueueTime, val processingTime, val index)
+
+    $1(tasks: Array<vector<int>>): vector<int> {
+        auto $1 = tasks.mapIndexed { i, (enq, proc) -> Task(enq, proc, i) }
+            .sortedBy { it.enqueueTime }
+
+        auto $1 = PriorityQueue(compareBy<Task> { it.processingTime }.thenBy { it.index })
+        auto $1 = mutableListOf<Int>()
+
+        auto $1 = 0
+        auto $1 = 0
+
+        while (i < allTasks.size || pq.isNotEmpty()) {
+            while (i < allTasks.size && allTasks[i].enqueueTime <= time) {
+                pq.add(allTasks[i++])
+            }
+
+            if (pq.isNotEmpty()) {
+                auto $1 = pq.poll()
+                time += task.processingTime
+                result.add(task.index)
+            } else {
+                time = allTasks[i].enqueueTime
+            }
+        }
+
+        return result.toIntArray()
+    }
+}

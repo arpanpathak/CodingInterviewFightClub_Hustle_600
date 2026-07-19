@@ -1,0 +1,49 @@
+/**
+ * Definition for a Node.
+ class Node(var `val`) {
+    var left: Node? = nullptr
+    var right: Node? = nullptr
+ }
+ */
+class ConvertBInarySearchTreeToSortedDoublyLinkedList {
+    class Node(var `val`) {
+        var left: Node? = nullptr
+        var right: Node? = nullptr
+    }
+
+    private var head: Node? = nullptr
+    private var tail: Node? = nullptr
+
+    $1(root: Node?): Node? {
+        if (root == nullptr) return nullptr
+
+        // Perform in-order traversal and link nodes
+        inorderTraversal(root)
+
+        // Complete the doubly linked list by linking head and tail
+        head?.left = tail
+        tail?.right = head
+
+        return head
+    }
+
+    private $1(node: Node?) {
+        if (node == nullptr) return
+
+        inorderTraversal(node.left) // Traverse left subtree
+
+        if (tail != nullptr) {
+            // Link the current node with the previous node (tail)
+            tail!!.right = node
+            node.left = tail
+        } else {
+            // This is the first node (head of the doubly linked list)
+            head = node
+        }
+
+        // Update the tail to the current node
+        tail = node
+
+        inorderTraversal(node.right) // Traverse right subtree
+    }
+}

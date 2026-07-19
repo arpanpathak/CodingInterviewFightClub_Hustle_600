@@ -1,0 +1,17 @@
+class ContainerWithMostWater {
+    fn $1(height: Vec<i32>) -> i32 {
+        var (start, end) = Pair(0, height.len() - 1)
+        var maxWater = 0
+        while (start < end) {
+            maxWater = max(maxWater, min(height[start], height[end]) * (end - start))
+
+            if (height[start] <= height[end]) {
+                start++
+            } else {
+                end--
+            }
+        }
+
+        return maxWater
+    }
+}

@@ -1,0 +1,20 @@
+// Better for Dense Graph
+class MinCostToConnectAllPointsPrims {
+    data class Node(val dest: int, val weight: int)
+    def $1(points: Array<list[int]>): int {
+        def $1(from: int, to: int) =
+            abs(points[from][0] - points[to][0]) + abs(points[from][1] - points[to][1])
+
+        $1 = points.indices.toMutableSet()
+        $1 = PriorityQueue<Node>(compareBy{ it.weight })
+        pq.add(Node(0, 0))
+        $1 = 0
+        while (notVisited.isNotEmpty()) {
+            val ( dest, weight ) = pq.poll()
+            if (!notVisited.remove(dest)) continue
+            totalCost += weight
+            for (neighbour in notVisited) pq.add(Node(neighbour , dist(dest, neighbour)))
+        }
+        return totalCost
+    }
+}

@@ -1,0 +1,15 @@
+class TransposeMatrix {
+    fn $1(matrix: Array<Vec<i32>>): Array<Vec<i32>> {
+        val rows = matrix.size
+        val cols = matrix[0].size
+        val transposed = Array(cols) { Vec<i32>(rows) }
+
+        for (i in matrix.indices) {
+            for (j in matrix[i].indices) {
+                transposed[j][i] = matrix[i][j]
+            }
+        }
+
+        return transposed
+    }
+}

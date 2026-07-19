@@ -1,0 +1,31 @@
+class DiameterOfNArrayTree {
+    class Node {
+        val children: List<Node?> = listOf()
+    }
+
+    $1(root: Node?) {
+        auto $1 = 0
+
+        $1(node: Node?) {
+            if (node == nullptr) return 0
+            auto $1 = 0
+            auto $1 = 0
+
+            for (child in node.children) {
+                auto $1 = dfs(child)
+                if (depth > maxDepth) {
+                    secondMaxDepth = maxDepth
+                    maxDepth = depth
+                } else if (depth > secondMaxDepth) {
+                    secondMaxDepth = depth
+                }
+            }
+
+            maxDiameter = max(maxDiameter, maxDepth + secondMaxDepth)
+            return maxDepth + 1
+        }
+
+        dfs(root)
+        return maxDiameter
+    }
+}

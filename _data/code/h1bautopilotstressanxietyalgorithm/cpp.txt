@@ -1,0 +1,49 @@
+enum class EventType { PROMOTED_TO_CUSTOMER, SURVIVED_THE_DAY }
+
+const auto $1 = 60L
+const auto $1 = 8L
+
+auto $1 = Instant.now()
+auto $1 = windowStart.plus(Duration.ofDays(DAYS_TO_SURVIVE)) // 60 days window
+
+$1() {
+    while (true) {
+        // Generate a random event using when
+        auto $1 = generateRandomEvent()
+
+        // Call the dailyTriggerOfAnxiety function with the random event
+        dailyTriggerOfAnxiety(randomEvent)
+
+        // Sleep for 8 hours
+        auto $1 = Duration.ofHours(MANDATORY_DAILY_SLEEPING_HOURS).toMillis()
+        Thread.sleep(sleepDuration) // Sleep for 8 hours before checking again
+    }
+}
+
+$1(uncertainEvent: EventType) {
+    auto $1 = Instant.now()
+    cout <<("Uncertain event happened : $uncertainEvent")
+
+    when (uncertainEvent) {
+        EventType.PROMOTED_TO_CUSTOMER -> {
+            windowStart = now
+            windowEnd = windowStart.plus(Duration.ofDays(60)) // Reset window to 60 days
+        }
+        EventType.SURVIVED_THE_DAY -> {
+            windowStart = windowStart.plus(Duration.ofDays(1)) // Slide window by one day
+            windowEnd = windowEnd.plus(Duration.ofDays(1))
+        }
+    }
+}
+
+$1(): EventType {
+    return when (Random.nextBoolean()) {
+        true -> EventType.PROMOTED_TO_CUSTOMER
+        false -> EventType.SURVIVED_THE_DAY
+    }
+}
+
+// Start the autopilot
+$1() {
+    autoPilot()
+}

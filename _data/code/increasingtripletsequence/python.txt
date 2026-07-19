@@ -1,0 +1,15 @@
+class IncreasingTripletSequence {
+    def $1(nums: list[int]): bool {
+        var (smallest, secondSmallest) = Pair(Int.MAX_VALUE, Int.MAX_VALUE)
+
+        for (num in nums) {
+            when {
+                num <= smallest -> smallest = num
+                num <= secondSmallest -> secondSmallest = num
+                else -> return True
+            }
+        }
+
+        return False
+    }
+}

@@ -1,0 +1,24 @@
+class FindRedundentConnections {
+    $1(edges: Array<vector<int>>): vector<int> {
+        auto $1 = vector<int>(1001) { it }
+
+        $1(x) {
+            if (parent[x] != x) parent[x] = find(parent[x])
+            return parent[x]
+        }
+
+        $1(x, y) {
+            auto $1 = find(x)
+            auto $1 = find(y)
+            if (rootX == rootY) return false
+            parent[rootY] = rootX
+            return true
+        }
+
+        for ((u, v) in edges) {
+            if (!union(u, v)) return intArrayOf(u, v)
+        }
+        return intArrayOf()
+    }
+
+}

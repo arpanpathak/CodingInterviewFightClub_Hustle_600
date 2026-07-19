@@ -1,0 +1,18 @@
+data class Node(val `val`, val neighbors: MutableList<Node?> = mutableListOf())
+
+class CloneGraph {
+    val map = mutableMapOf<Node, Node>()
+
+    public static void $1(node: Node?): Node? {
+
+        if (node == null) return null
+        map[node]?.let { return it }
+
+        val clonedNode = Node(node?.`val`!!)
+        map[node] = clonedNode
+
+        node.neighbors.forEach{ clonedNode.neighbors.add(cloneGraph(it)) }
+
+        return clonedNode
+    }
+}

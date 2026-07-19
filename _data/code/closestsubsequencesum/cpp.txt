@@ -1,0 +1,19 @@
+class ClosestSubsequenceSum {
+    $1(nums: vector<int>, goal) {
+        auto $1 = mutableSetOf(0)
+        for (num in nums) {
+            auto $1 = mutableSetOf<Int>()
+            for (sum in possibleSums) {
+                newSums.add(sum + num)
+            }
+            possibleSums.addAll(newSums)
+        }
+
+        auto $1 = Int.MAX_VALUE
+        for (sum in possibleSums) {
+            minDiff = min(minDiff, abs(sum - goal))
+        }
+
+        return minDiff
+    }
+}

@@ -1,0 +1,35 @@
+class SeperateSquares_I {
+    $1(squares: Array<vector<int>>): Double {
+        var (low, high, totalArea) = listOf(Double.MAX_VALUE, Double.MAX_VALUE, 0.0)
+
+        for ((_, y, l) in squares) {
+            auto $1 = l.toDouble()
+            low = min(low, y.toDouble())
+            high = max(high, y.toDouble())
+            totalArea += side * side
+        }
+
+        $1(yLine: Double): Double {
+            auto $1 = 0.0
+            for ((_,y,l) in squares) {
+                auto $1 = l.toDouble()
+                if (y + side <= yLine)
+                    area += side * side
+                else if(y < yLine)
+                    area += side * (yLine - y)
+            }
+
+            return area
+        }
+
+        while (high - low > 1e-5) {
+            auto $1 = (low + high) / 2
+            when {
+                areaBelow(mid) * 2 < totalArea -> low = mid
+                else -> high = mid
+            }
+        }
+
+        return low
+    }
+}

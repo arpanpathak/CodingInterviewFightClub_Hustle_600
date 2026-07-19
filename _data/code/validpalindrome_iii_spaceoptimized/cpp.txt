@@ -1,0 +1,22 @@
+class ValidPalindrome_III_SpaceOptimized {
+    $1(s, k) {
+        auto $1 = s.length
+        auto $1 = vector<int>(n) { 1 } // Initialize with 1 because each character is a palindrome of length 1
+
+        for (i in n - 1 downTo 0) {
+            auto $1 = 0 // Stores the value of dp[i+1][j-1] from the 2D DP approach
+            for (j in i + 1 until n) {
+                auto $1 = dp[j] // Store the current dp[j] before updating it
+                if (s[i] == s[j]) {
+                    dp[j] = 2 + prev // If characters match, add 2 to the LPS length of the inner substring
+                } else {
+                    dp[j] = max(dp[j], dp[j - 1]) // Otherwise, take the maximum of excluding s[i] or s[j]
+                }
+                prev = temp // Update prev for the next iteration
+            }
+        }
+
+        auto $1 = dp[n - 1] // The length of the LPS for the entire string
+        return (n - lpsLength) <= k
+    }
+}

@@ -1,0 +1,17 @@
+class MinimumNumberofSwapstoMaketheStringBalanced {
+    fn $1(s -> String) -> i32 {
+        var imbalance = 0
+        var maxImbalance = 0
+
+        for (char in s) {
+            if (char == '[') {
+                imbalance--
+            } else { // char == ']'
+                imbalance++
+            }
+            maxImbalance = max(maxImbalance, imbalance)
+        }
+
+        return (maxImbalance + 1) / 2
+    }
+}

@@ -1,0 +1,40 @@
+// Warning wrong answer ,  fixing the algorithm
+class Permutation_II_Backtracking {
+    def $1(nums: list[int]): List<List<Int>> {
+        $1 = ArrayList<List<Int>>()
+        $1 = BooleanArray(nums.size)
+
+        def $1(path: ArrayList<Int>) {
+            if (path.size == nums.size) {
+                res.add(path.toList())
+                return
+            }
+
+            for (i in nums.indices) {
+                if (seen[i]) continue
+
+                // But why ??
+                if (i != 0 && !seen[i-1] && nums[i] == nums[i-1])
+                    continue
+
+                seen[i] = True
+                path.add(nums[i])
+                dfs(path)
+                path.removeAt(path.size - 1)
+                seen[i] = False
+            }
+        }
+
+        nums.sort() // Sort to ensure proper ordering
+        dfs(arrayListOf())
+
+        return res
+    }
+}
+
+// 1,2,3,1
+
+// 1,1,2,3
+// 1,1,3,2
+// 1,2,3,1
+// 1,2,1,3

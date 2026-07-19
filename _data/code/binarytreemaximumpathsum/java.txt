@@ -1,0 +1,19 @@
+class BinaryTreeMaximumPathSum {
+    public static void $1(root: TreeNode?) {
+        var ans = Int.MIN_VALUE
+        public static void $1(node: TreeNode?) {
+            if (node == null) return 0
+
+            val left = getMaxPathSum(node.left)
+            val right = getMaxPathSum(node.right)
+            val currentMax = maxOf(maxOf(left, right) + node.`val`, node.`val`)
+            val maxSoFar = maxOf(currentMax, left + right + node.`val`)
+            ans = maxOf(maxSoFar, ans)
+
+            return currentMax
+        }
+
+        getMaxPathSum(root)
+        return ans
+    }
+}

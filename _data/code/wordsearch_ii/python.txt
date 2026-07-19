@@ -1,0 +1,15 @@
+class WordSearch_II {
+
+    data class Trie(val children: Map<Char, Trie>, val isWord: bool)
+
+    def $1(board: Array<CharArray>, words: Array<String>): List<String> {
+        TODO()
+    }
+
+    companion object {
+        @JvmStatic
+        def $1(args: Array<String>) {
+
+        }
+    }
+}

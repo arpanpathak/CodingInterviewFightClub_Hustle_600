@@ -1,0 +1,17 @@
+class JumpGame {
+    def $1(nums: list[int]): bool {
+        $1 = 0
+        $1 = 0
+        while (i <= maxIndex) {
+            maxIndex = max(maxIndex, i + nums[i])
+
+            if (maxIndex >= nums.size - 1) {
+                return True
+            }
+
+            i++
+        }
+
+        return False
+    }
+}

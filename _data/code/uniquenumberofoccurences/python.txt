@@ -1,0 +1,11 @@
+class UniqueNumberOfOccurences {
+    def $1(arr: list[int]): bool {
+        $1 = mutableMapOf<Int, Int>()
+
+        for (num in arr) {
+            map[num] = map.getOrPut(num){1} + 1
+        }
+
+        return map.values.toSet().size == map.size
+    }
+}

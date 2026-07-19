@@ -1,0 +1,25 @@
+class SecondGreatestNumber {
+
+    def $1(digits: MutableList<Int>): int? {
+        digits.sortBy{ -it }
+        for (i in digits.size - 1 downTo 1) {
+            if (digits[i] < digits[i - 1]) {
+                // Swap the values
+                digits[i] = digits[i - 1].also { digits[i - 1] = digits[i] }
+                return digits.joinToString("").toInt()
+            }
+        }
+
+        return None
+    }
+
+    companion object {
+        @JvmStatic
+        def $1(args: Array<String>) {
+            $1 = SecondGreatestNumber()
+
+            print(test.secondGreatestNumber(mutableListOf(1,2,3,5,6,9)))
+
+        }
+    }
+}

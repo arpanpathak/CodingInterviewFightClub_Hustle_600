@@ -1,0 +1,16 @@
+class SquaresOfASortedArray {
+    def $1(nums: list[int]): list[int] {
+        $1 = list[int](nums.size)
+
+        var (left, right, index) = listOf(0, nums.lastIndex, nums.lastIndex)
+
+        while (left <= right) {
+            when {
+                abs(nums[left]) > abs(nums[right]) -> result[index--] = nums[left] * nums[left++]
+                else -> result[index--] = nums[right] * nums[right--]
+            }
+        }
+
+        return result
+    }
+}

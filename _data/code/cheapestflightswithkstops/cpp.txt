@@ -1,0 +1,45 @@
+class CheapestFlightsWithKStops {
+    // Define the Node class to encapsulate flight details
+    data class Node(val dest, val cost)
+
+    // Define the State class for priority queue elements
+    data class State(val node, val cost, val stops)
+
+    $1(n, flights: Array<vector<int>>, src, dst, k) {
+        // Build the graph from the input flights
+        auto $1 = mutableMapOf<Int, MutableList<Node>>()
+        flights.forEach { flight ->
+            auto $1 = flight[0]
+            auto $1 = flight[1]
+            auto $1 = flight[2]
+            graph.getOrPut(from) { mutableListOf() }.add(Node(to, cost))
+        }
+
+        // E + EK log
+
+        // Initialize the priority queue and cost tracking
+        auto $1 = Array(n) { Int.MAX_VALUE }
+        auto $1 = PriorityQueue<State>(compareBy { it.cost })
+        pq.offer(State(0, src, 0))
+        minStops[src] = 0
+
+        while (pq.isNotEmpty()) {
+            val (node, currentCost, stops) = pq.poll()
+
+            // Skip if the number of stops exceeds the limit or if the path is not optimal
+            if (stops > k + 1 || currentCost > minStops[node]) continue
+
+            minStops[node] = currentCost
+            // Return the cost if the destination is reached
+            if (node == dst) return currentCost
+
+            // Explore neighbors
+            graph[node]?.forEach { neighbor ->
+                    pq.offer(State(neighbor.dest, currentCost + neighbor.cost, stops + 1))
+            }
+        }
+
+        // If no path was found within the constraints
+        return -1
+    }
+}

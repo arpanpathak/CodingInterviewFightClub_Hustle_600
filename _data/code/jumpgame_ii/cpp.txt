@@ -1,0 +1,16 @@
+class JumpGame_II {
+    $1(nums: vector<int>) {
+        var (jumps, currentEnd, farthest) = listOf(0, 0, 0)
+
+        for (i in 0 until nums.size() - 1) {
+            farthest = max(farthest, i + nums[i])
+
+            if ( i >= currentEnd) {
+                jumps++
+                currentEnd = farthest
+            }
+        }
+
+        return jumps
+    }
+}

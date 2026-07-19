@@ -1,0 +1,31 @@
+$1(A, B, C, D) {
+    auto $1 = listOf(A, B, C, D)
+    auto $1 = mutableSetOf<String>()
+
+    // Generate all permutations of the digits
+    $1(current: List<Int>, remaining: List<Int>) {
+        if (current.size == 4) {
+            permutations.add(current.joinToString(""))
+        } else {
+            for (i in remaining.indices) {
+                generatePermutations(current + remaining[i], remaining.filterIndexed { index, _ -> index != i })
+            }
+        }
+    }
+
+    generatePermutations(emptyList(), digits)
+
+    auto $1 = 0
+
+    // Check each permutation to see if it forms a valid time
+    for (time in permutations) {
+        auto $1 = time.substring(0, 2).toInt()
+        auto $1 = time.substring(2, 4).toInt()
+
+        if (hours in 0..23 && minutes in 0..59) {
+            validTimes++
+        }
+    }
+
+    return validTimes
+}

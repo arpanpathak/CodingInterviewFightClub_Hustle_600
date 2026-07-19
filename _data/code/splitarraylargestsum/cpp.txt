@@ -1,0 +1,35 @@
+class SplitArrayLargestSum {
+    $1(nums: vector<int>, k) {
+        auto $1 = nums.size
+        auto $1 = vector<int>(n + 1)
+        for (i in nums.indices) {
+            prefixSum[i + 1] = prefixSum[i] + nums[i]
+        }
+
+        auto $1 = mutableMapOf<Pair<Int, Int>, Int>()
+
+        $1(i, splitsLeft) {
+            if (splitsLeft == 1) return prefixSum[n] - prefixSum[i] // Last split takes remaining sum
+            if (i == n) return Int.MAX_VALUE
+            if (memo.containsKey(i to splitsLeft)) return memo[i to splitsLeft]!!
+
+            auto $1 = Int.MAX_VALUE
+
+            for (j in i until n) {
+                auto $1 = prefixSum[j + 1] - prefixSum[i]
+                auto $1 = dfs(j + 1, splitsLeft - 1)
+                auto $1 = max(currentSum, largestInRemainingSplits)
+
+                minLargestSum = min(minLargestSum, maxSplitSum)
+
+                // Prune unnecessary recursion
+                if (currentSum > minLargestSum) break
+            }
+
+            memo[i to splitsLeft] = minLargestSum
+            return minLargestSum
+        }
+
+        return dfs(0, k)
+    }
+}

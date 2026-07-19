@@ -1,0 +1,21 @@
+class ReservoirSampling {
+    fun <T> reservoirSampling(stream: Sequence<T>, k: int): List<T> {
+        $1 = mutableListOf<T>()
+        $1 = 0
+
+        stream.forEach { item ->
+            count++
+            when {
+                count <= k -> reservoir.add(item)
+                else -> {
+                    $1 = Random.nextInt(count)
+                    // Replace item
+                    if ( index < k)
+                        reservoir[index] = item
+                }
+            }
+        }
+
+        return reservoir
+    }
+}

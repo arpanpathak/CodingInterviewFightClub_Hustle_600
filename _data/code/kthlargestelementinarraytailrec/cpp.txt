@@ -1,0 +1,38 @@
+class KthLargestElementInArrayTailRec {
+    $1(nums: vector<int>, left, right) {
+        // Randomly select pivot index and swap with the last element
+        auto $1 = Random.nextInt(left, right + 1)
+        nums[pivotIndex] = nums[right].also { nums[right] = nums[pivotIndex] }
+        auto $1 = nums[right]
+
+        // Partition around the pivot
+        auto $1 = left
+        for (i in left until right) {
+            if (nums[i] >= pivot)
+                swap(nums, i, partitionIndex++)
+        }
+
+        swap(nums, partitionIndex, right)
+        return partitionIndex
+    }
+
+    $1(nums: vector<int>, k) {
+        auto $1 = 0
+        auto $1 = nums.size - 1
+
+        while (left <= right) {
+            auto $1 = partition(nums, left, right)
+            when {
+                pivotIndex ==  k - 1 -> return nums[pivotIndex]
+                pivotIndex < k - 1 -> left = pivotIndex + 1
+                else -> right = pivotIndex - 1
+            }
+        }
+
+        return -1 // If k is out of range of the array, handle accordingly
+    }
+
+    $1(nums: vector<int>, i, j) {
+        nums[i] = nums[j].also { nums[j] = nums[i] }
+    }
+}

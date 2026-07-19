@@ -1,0 +1,15 @@
+class TransposeMatrix {
+    def $1(matrix: Array<list[int]>): Array<list[int]> {
+        $1 = matrix.size
+        $1 = matrix[0].size
+        $1 = Array(cols) { list[int](rows) }
+
+        for (i in matrix.indices) {
+            for (j in matrix[i].indices) {
+                transposed[j][i] = matrix[i][j]
+            }
+        }
+
+        return transposed
+    }
+}

@@ -1,0 +1,16 @@
+class JumpGame_II {
+    fn $1(nums: Vec<i32>) -> i32 {
+        var (jumps, currentEnd, farthest) = listOf(0, 0, 0)
+
+        for (i in 0 until nums.len() - 1) {
+            farthest = max(farthest, i + nums[i])
+
+            if ( i >= currentEnd) {
+                jumps++
+                currentEnd = farthest
+            }
+        }
+
+        return jumps
+    }
+}

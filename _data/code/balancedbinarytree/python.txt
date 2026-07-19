@@ -1,0 +1,20 @@
+class BalancedBinaryTree {
+    def $1(root: TreeNode?): bool {
+        def $1(node: TreeNode?): int {
+            if (node == None) return 0
+
+            $1 = checkHeight(node.left)
+            $1 = checkHeight(node.right)
+
+            // If subtree is unbalanced, return -1 to signal it
+            if (leftHeight == -1 || rightHeight == -1 || abs(leftHeight - rightHeight) > 1) {
+                return -1
+            }
+
+            // Return the height of the tree rooted at this node
+            return 1 + max(leftHeight, rightHeight)
+        }
+
+        return checkHeight(root) != -1
+    }
+}

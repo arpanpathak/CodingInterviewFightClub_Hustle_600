@@ -1,0 +1,35 @@
+class pow {
+    def $1(x: Double, n: int): Double {
+        def $1(x: Double, n: Long): Double {
+            if (n == 0L) return 1.0
+
+            $1 = pow(x, n/2)
+            return when(n % 2) {
+                0L -> half * half
+                else -> x * half * half
+            }
+        }
+        return if (n >=0) pow(x, n.toLong()) else 1 / pow(x, n.toLong())
+    }
+
+    def $1(x: Double, n: int): Double {
+        $1 = x
+        $1 = n.toLong()
+        $1 = 1.0
+
+        if (exponent < 0) {
+            base = 1 / base
+            exponent = -exponent
+        }
+
+        while (exponent > 0) {
+            if (exponent % 2 == 1L) {
+                result *= base
+            }
+            base *= base
+            exponent /= 2
+        }
+
+        return result
+    }
+}

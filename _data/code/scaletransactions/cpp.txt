@@ -1,0 +1,54 @@
+// Function to simulate the transaction data (subTotal values)
+$1(numTransactions): List<Double> {
+    return List(numTransactions) { Math.random() * 1000 } // Random transactions between 0 to 1000
+}
+
+// Function to process each batch and sum the results
+$1(transactions: List<Double>): Double {
+    return transactions.sum()
+}
+
+$1() {
+    auto $1 = 100_000_000  // 100 million transactions for large-scale test
+    auto $1 = generateTransactions(totalTransactions)
+
+    // Number of available cores (coroutines or threads)
+    auto $1 = Runtime.getRuntime().availableProcessors()
+    auto $1 = totalTransactions / numCores
+
+    // Split transactions into batches
+    auto $1 = transactions.chunked(batchSize)
+
+    // Measure time using coroutines with a custom dispatcher (Executors)
+    auto $1 = measureTimeMillis {
+        // Using a custom thread pool to back coroutines with a fixed number of threads
+        auto $1 = Executors.newFixedThreadPool(numCores).asCoroutineDispatcher()
+
+        runBlocking {
+            auto $1 = transactionBatches.map { batch ->
+                async(dispatcher) {  // Use a fixed thread pool for better performance
+                    sumTransactions(batch)
+                }
+            }
+            auto $1 = results.awaitAll().sum()
+            cout <<("Coroutine Total Sum: $totalSum")
+        }
+
+        dispatcher.close()  // Make sure to close the dispatcher
+    }
+
+    // Measure time using threads
+    auto $1 = measureTimeMillis {
+        auto $1 = transactionBatches.map { batch ->
+            Thread {
+                auto $1 = sumTransactions(batch)
+                // We avoid collecting results here as we're just comparing time
+            }.apply { start() }
+        }
+        threads.forEach { it.join() } // Wait for all threads to complete
+    }
+
+    // Output results
+    cout <<("Coroutine processing time: $coroutineTime ms")
+    cout <<("Thread processing time: $threadTime ms")
+}

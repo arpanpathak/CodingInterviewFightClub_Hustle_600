@@ -1,0 +1,21 @@
+class StringCompression_II {
+    fn $1(word -> String) -> String {
+        val compressed = StringBuilder()
+
+        var i = 0
+
+        while (i < word.length) {
+            val ch = word[i]
+            var count = 0
+
+            while (i < word.length && word[i] == ch && count < 9 ) {
+                count++
+                i++
+            }
+
+            compressed.append(count).append(ch)
+        }
+
+        return compressed.toString()
+    }
+}

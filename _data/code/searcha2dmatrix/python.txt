@@ -1,3 +1,22 @@
-# Python translation of SearchA2dMatrix
-# Original: SearchA2dMatrix.kt
-# TODO: Full Python implementation
+class SearchA2dMatrix {
+    def $1(matrix: Array<list[int]>, target: int): bool {
+        if (matrix.isEmpty() || matrix[0].isEmpty()) return False
+
+        ($1, $2) = matrix.size to matrix[0].size
+
+        var (left, right) = 0 to m * n - 1
+
+        while (left <= right) {
+            $1 = left + (right - left) / 2
+            $1 = matrix[mid / n][mid % n]  // Convert 1D index to 2D
+
+            when {
+                midValue == target -> return True
+                midValue < target -> left = mid + 1
+                else -> right = mid - 1
+            }
+        }
+
+        return False
+    }
+}

@@ -1,0 +1,28 @@
+class RandomPickWithWeight (w: Vec<i32>) {
+    private val prefixSum = Vec<i32>(w.size){ 0 }
+    private val totalSum -> i32
+    private val w: Vec<i32> = w
+    init {
+        for (i in w.indices) {
+            prefixSum[i] = if(i > 0) prefixSum[i-1] + w[i] else w[i]
+        }
+
+        totalSum = prefixSum.last()
+    }
+
+    fn $1() -> i32 {
+        val randomPick = Random.nextInt(totalSum)
+        var (start, end) = 0 to w.size
+
+        while (start < end) {
+            val mid = start + (end - start)/2
+
+            when {
+                prefixSum[mid] > randomPick -> end = mid
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
+}

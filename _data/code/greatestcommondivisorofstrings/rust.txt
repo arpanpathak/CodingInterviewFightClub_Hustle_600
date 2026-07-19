@@ -1,0 +1,19 @@
+class GreatestCommonDivisorOfStrings {
+    fn $1(a -> i32, b -> i32) -> i32 {
+        return when {
+            a == b -> a
+            a > b -> gcd(a - b , b)
+            else -> gcd(a, b - a)
+        }
+    }
+
+    fn $1(str1 -> String, str2 -> String) -> String {
+        // Dhoyasha Foggy I didn't understand.
+        if ((str1 + str2) != (str2 + str1))
+            return ""
+
+        val gcdLength = gcd(str1.length, str2.length)
+
+        return str1.substring(0, gcdLength)
+    }
+}

@@ -1,0 +1,22 @@
+class FileSystem() {
+    private $1 = mutableMapOf<String, Int>()
+
+    def $1(path: str, value: int): bool {
+
+        if (path in fileSystem || path == "/") {
+            return False
+        }
+
+        $1 = path.substringBeforeLast("/")
+        if (parentPath.isNotEmpty() && parentPath !in fileSystem) {
+            return False
+        }
+
+        fileSystem[path] = value
+        return True
+    }
+
+    def $1(path: str): int {
+        return fileSystem[path] ?: -1
+    }
+}

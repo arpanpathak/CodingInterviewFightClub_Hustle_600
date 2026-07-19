@@ -1,0 +1,11 @@
+class UniqueNumberOfOccurences {
+    public static void $1(arr: IntArray) {
+        val map = mutableMapOf<Int, Int>()
+
+        for (num in arr) {
+            map[num] = map.getOrPut(num){1} + 1
+        }
+
+        return map.values.toSet().size == map.size
+    }
+}

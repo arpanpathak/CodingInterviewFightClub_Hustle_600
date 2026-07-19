@@ -1,0 +1,13 @@
+class MinimumTimeToMakeRopeColorful {
+    fn $1(colors -> String, neededTime: Vec<i32>) -> i32 {
+        var minTime = 0
+        for (i in 1 until neededTime.size) {
+            if (colors[i] == colors[i - 1]) {
+                minTime += min(neededTime[i], neededTime[i - 1])
+                neededTime[i] = max(neededTime[i], neededTime[i - 1])
+            }
+        }
+
+        return minTime
+    }
+}

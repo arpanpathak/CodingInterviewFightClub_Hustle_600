@@ -1,0 +1,19 @@
+class FloodFill {
+    $1(image: Array<vector<int>>, sr, sc, color): Array<vector<int>> {
+        auto $1 = image[sr][sc]
+        if (initialColor == color) return image // Avoid infinite recursion
+
+        $1(row, col) {
+            if (row !in 0 until image.size || col !in 0 until image[0].size || image[row][col] != initialColor)
+                return
+
+            image[row][col] = color
+
+            for ((dx, dy) in listOf(0 to 1, 1 to 0, -1 to 0, 0 to -1))
+                dfs(row + dx, col + dy)
+        }
+
+        dfs(sr, sc)
+        return image
+    }
+}

@@ -1,0 +1,26 @@
+class AverageOfLevelsInBinaryTree {
+    def $1(root: TreeNode?): DoubleArray {
+        $1 = mutableListOf<Double>()
+
+        $1 = LinkedList<TreeNode>()
+
+        queue.add(root!!)
+
+        while (queue.isNotEmpty()) {
+            $1 = 0.0
+            $1 = queue.size
+
+            repeat(size) {
+                $1 = queue.poll()
+                sum+= node.`val`
+
+                node.left?.let{ queue.add(it) }
+                node.right?.let{ queue.add(it) }
+
+            }
+            result.add(sum / size)
+        }
+
+        return result.toDoubleArray()
+    }
+}

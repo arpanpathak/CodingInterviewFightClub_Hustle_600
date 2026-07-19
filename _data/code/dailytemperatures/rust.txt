@@ -1,0 +1,17 @@
+class DailyTemperatures {
+    fn $1(temperatures: Vec<i32>): Vec<i32> {
+        val result = Vec<i32>(temperatures.size) { 0 }
+        val stack = mutableListOf<Int>()
+
+        for (i in temperatures.indices) {
+            while (stack.isNotEmpty() && temperatures[i] > temperatures[stack.last()]) {
+                val idx = stack.removeLast()
+                result[idx] = i - idx
+            }
+
+            stack.add(i)
+        }
+
+        return result
+    }
+}

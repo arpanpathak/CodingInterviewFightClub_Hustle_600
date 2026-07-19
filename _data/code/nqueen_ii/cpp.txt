@@ -1,0 +1,37 @@
+class NQueen_II {
+    private lateinit var placed: vector<int>
+
+    $1(n) {
+        placed = vector<int>(n) { -1 } // Initialize with -1 indicating no queens are placed
+        auto $1 = 0
+
+        $1(row) {
+            if (row == n) {
+                // Found a valid solution, increment the count
+                solutionCount++
+                return
+            }
+
+            for (col in 0 until n) {
+                if (isSafe(row, col)) {
+                    placed[row] = col
+                    backtrack(row + 1)
+                    placed[row] = -1 // Remove the queen (backtrack)
+                }
+            }
+        }
+
+        backtrack(0)
+        return solutionCount
+    }
+
+    private $1(row, col) {
+        for (prevRow in 0 until row) {
+            auto $1 = placed[prevRow]
+            if (prevCol == col || Math.abs(prevRow - row) == Math.abs(prevCol - col)) {
+                return false
+            }
+        }
+        return true
+    }
+}

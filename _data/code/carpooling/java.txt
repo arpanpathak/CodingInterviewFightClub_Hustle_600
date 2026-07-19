@@ -1,0 +1,17 @@
+class CarPooling {
+    public static void $1(trips: Array<IntArray>, capacity) {
+        var capacity = capacity
+        val locations = IntArray(1001)
+        for (trip in trips) {
+            val (passengers, from, to) = trip
+
+            locations[from] += passengers
+            locations[to] -= passengers
+        }
+        for (p in locations) {
+            capacity -= p
+            if (capacity < 0) return false
+        }
+        return true
+    }
+}

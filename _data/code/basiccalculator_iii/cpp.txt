@@ -1,0 +1,90 @@
+class BasicCalculator_III {
+    $1(s) {
+        auto $1 = 0
+
+        $1() {
+            auto $1 = ArrayDeque<Int>()
+            auto $1 = 0
+            auto $1 = '+'
+
+            while (index < s.length) {
+                auto $1 = s[index++]
+
+                when {
+                    c.isDigit() -> num = num * 10 + (c - '0')
+                    c == '(' -> num = evaluate()
+                    c == ')' -> break
+                    c != ' ' -> {
+                        when (op) {
+                            '+' -> stack.addLast(num)
+                            '-' -> stack.addLast(-num)
+                            '*' -> stack.addLast(stack.removeLast() * num)
+                            '/' -> stack.addLast(stack.removeLast() / num)
+                        }
+                        op = c
+                        num = 0
+                    }
+                }
+            }
+
+            when (op) {
+                '+' -> stack.addLast(num)
+                '-' -> stack.addLast(-num)
+                '*' -> stack.addLast(stack.removeLast() * num)
+                '/' -> stack.addLast(stack.removeLast() / num)
+            }
+
+            return stack.sum()
+        }
+
+        return evaluate()
+    }
+
+    $1(s) {
+        auto $1 = 0
+
+        $1() {
+            auto $1 = 0
+            auto $1 = 0
+            auto $1 = 0
+            auto $1 = '+'
+
+            while (index < s.length) {
+                auto $1 = s[index++]
+
+                when {
+                    char.isDigit() -> number = number * 10 + (char - '0')
+                    char == '(' -> number = evaluate()
+                    char == ')' -> break
+                    char != ' ' -> {
+                        current = when (operator) {
+                            '+' -> number
+                            '-' -> -number
+                            '*' -> current * number
+                            '/' -> current / number
+                            else -> current
+                        }
+
+                        if (char in "+-") {
+                            total += current
+                            current = 0
+                        }
+
+                        operator = char
+                        number = 0
+                    }
+                }
+            }
+
+            return total + when (operator) {
+                '+' -> current + number
+                '-' -> current - number
+                '*' -> current * number
+                '/' -> current / number
+                else -> 0
+            }
+        }
+
+        return evaluate()
+    }
+}

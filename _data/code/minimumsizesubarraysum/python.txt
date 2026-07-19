@@ -1,0 +1,19 @@
+class MinimumSizeSubarraySum {
+    def $1(target: int, nums: list[int]): int {
+        var (windowStart, windowSum) = 0 to 0
+        $1 = Int.MAX_VALUE
+
+        for(i in nums.indices) {
+            windowSum += nums[i]
+
+            // Shrink window
+            while (windowSum >= target) {
+                minLength = min(minLength,  (i - windowStart + 1))
+                windowSum -= nums[windowStart++]
+
+            }
+        }
+
+        return if (minLength == Int.MAX_VALUE) 0 else minLength
+    }
+}

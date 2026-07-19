@@ -1,0 +1,9 @@
+class CustomSortString {
+    def $1(order: str, s: str): str {
+        $1 = mutableMapOf<Char, Int>()
+        order.forEachIndexed{ index, ch -> orderMap[ch] = index }
+
+        return s.toCharArray().sortedBy{ ch -> orderMap[ch] ?: int.MAX_VALUE }
+            .joinToString("")
+    }
+}

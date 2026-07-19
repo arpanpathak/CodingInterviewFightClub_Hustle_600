@@ -1,0 +1,17 @@
+class NumberOfZeroFilledSubArrays {
+    $1(nums: vector<int>): Long {
+        auto $1 = 0L
+        auto $1 = 0
+
+        for (num in nums) {
+            if (num == 0) {
+                currentZeroCount++
+                count += currentZeroCount
+            } else {
+                currentZeroCount = 0
+            }
+        }
+
+        return count
+    }
+}

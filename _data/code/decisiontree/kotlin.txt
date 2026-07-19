@@ -1,0 +1,6 @@
+//package ml.classical.tree.core
+//
+//data class DecisionTreeNode<T>(
+//    val feature: T,
+//    val
+//)

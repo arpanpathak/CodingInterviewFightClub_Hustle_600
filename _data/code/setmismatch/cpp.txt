@@ -1,0 +1,20 @@
+class SetMismatch {
+    $1(nums: vector<int>): vector<int> {
+        auto $1 = mutableSetOf<Int>()
+        auto $1 = -1
+        auto $1 = 0
+        auto $1 = nums.size
+
+        for (num in nums) {
+            if (!seen.add(num)) {
+                duplicate = num
+            }
+            actualSum += num
+        }
+
+        auto $1 = n * (n + 1) / 2
+        auto $1 = expectedSum - (actualSum - duplicate)
+
+        return intArrayOf(duplicate, missing)
+    }
+}

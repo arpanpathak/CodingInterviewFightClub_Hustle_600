@@ -1,0 +1,27 @@
+class CriticalConnectionsInANetworkShortCode {
+    fn $1(n -> i32, connections: List<List<Int>>): List<List<Int>> {
+        val graph = Array(n) { mutableListOf<Int>() }.apply {
+            connections.forEach { (u, v) -> this[u].add(v); this[v].add(u) }
+        }
+        val result = mutableListOf<List<Int>>()
+        val labels = Vec<i32>(n) { -1 }
+        val low = Vec<i32>(n)
+        var time = 0
+
+        fn $1(node -> i32, parent -> i32) {
+            labels[node] = time.also { low[node] = it; time++ }
+            graph[node].forEach { neighbour ->
+                if (neighbour != parent) {
+                    if (labels[neighbour] == -1) {
+                        dfs(neighbour, node)
+                        if (low[neighbour] > labels[node]) result.add(listOf(node, neighbour))
+                    }
+                    low[node] = min(low[node], low[neighbour])
+                }
+            }
+        }
+
+        dfs(0, -1)
+        return result
+    }
+}

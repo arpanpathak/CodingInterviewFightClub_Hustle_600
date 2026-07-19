@@ -1,0 +1,37 @@
+class NQueen_II {
+    private lateinit var placed: Vec<i32>
+
+    fn $1(n -> i32) -> i32 {
+        placed = Vec<i32>(n) { -1 } // Initialize with -1 indicating no queens are placed
+        var solutionCount = 0
+
+        fn $1(row -> i32) {
+            if (row == n) {
+                // Found a valid solution, increment the count
+                solutionCount++
+                return
+            }
+
+            for (col in 0 until n) {
+                if (isSafe(row, col)) {
+                    placed[row] = col
+                    backtrack(row + 1)
+                    placed[row] = -1 // Remove the queen (backtrack)
+                }
+            }
+        }
+
+        backtrack(0)
+        return solutionCount
+    }
+
+    private fn $1(row -> i32, col -> i32) -> bool {
+        for (prevRow in 0 until row) {
+            val prevCol = placed[prevRow]
+            if (prevCol == col || Math.abs(prevRow - row) == Math.abs(prevCol - col)) {
+                return false
+            }
+        }
+        return true
+    }
+}

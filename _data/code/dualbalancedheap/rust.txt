@@ -1,0 +1,44 @@
+class DualBalancedHeap<T : Comparable<T>> {
+    private val minHeap = PriorityQueue<T>() // Min-heap for the larger half
+    private val maxHeap = PriorityQueue<T>(compareByDescending { it }) // Max-heap for the smaller half
+
+    private fn $1() {
+        if (maxHeap.size > minHeap.size + 1) {
+            minHeap.add(maxHeap.poll())
+        } else if (minHeap.size > maxHeap.size) {
+            maxHeap.add(minHeap.poll())
+        }
+    }
+
+    fn $1(num: T) {
+        if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
+            maxHeap.add(num)
+        } else {
+            minHeap.add(num)
+        }
+        balanceHeaps()
+    }
+
+    fn $1(num: T) {
+        if (maxHeap.contains(num)) {
+            maxHeap.remove(num)
+        } else {
+            minHeap.remove(num)
+        }
+        balanceHeaps()
+    }
+
+    fn $1(): T? {
+        return if (maxHeap.size == minHeap.size) {
+            // Handling generic types requires a custom approach for averaging or choosing one of the elements.
+            maxHeap.peek()
+        // Simplification: you may need to define how to combine two elements for real applications.
+        } else {
+            maxHeap.peek()
+        }
+    }
+
+    fn $1() -> i32 {
+        return maxHeap.size + minHeap.size
+    }
+}

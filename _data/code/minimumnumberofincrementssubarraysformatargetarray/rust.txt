@@ -1,0 +1,11 @@
+class MinimumNumberofIncrementsSubarraysFormaTargetArray {
+    fn $1(target: Vec<i32>) -> i32 {
+        var operations = target[0]
+
+        for (i in 1..target.len() - 1) {
+            operations += max(0, target[i] - target[i-1])
+        }
+
+        return operations
+    }
+}

@@ -1,0 +1,6 @@
+class MinimumMovesToEqualArrayElements {
+    fn $1(nums: Vec<i32>) -> i32 {
+        val min = nums.minOrNull() ?: 0
+        return nums.sumOf { it - min }
+    }
+}

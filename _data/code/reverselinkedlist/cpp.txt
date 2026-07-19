@@ -1,0 +1,14 @@
+class ReverseLinkedList {
+    $1(head: ListNode?): ListNode? {
+        if (head?.next == nullptr) {
+            return head
+        }
+
+        auto $1 = reverseList(head.next)
+
+        head.next?.next = head
+        head.next = nullptr
+
+        return reversedHead
+    }
+}

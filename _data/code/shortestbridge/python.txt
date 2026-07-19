@@ -1,0 +1,49 @@
+class ShortestBridge {
+    def $1(grid: Array<list[int]>): int {
+        $1 = listOf(0 to 1, 1 to 0, 0 to -1, -1 to 0)
+        $1 = ArrayDeque<Pair<Int, Int>>()
+        $1 = grid.size
+
+        // Helper function to perform DFS
+        def $1(x: int, y: int) {
+            if (x !in 0 until n || y !in 0 until n || grid[x][y] != 1) return
+            grid[x][y] = 2 // Mark as visited
+            queue.add(x to y) // Add to the BFS queue
+            directions.forEach { (dx, dy) -> dfs(x + dx, y + dy) }
+        }
+
+        // Find the first island and mark it
+        outer@for (i in 0 until n) {
+            for (j in 0 until n) {
+                if (grid[i][j] == 1) {
+                    dfs(i, j)
+                    break@outer
+                }
+            }
+        }
+
+        // Perform BFS to find the shortest bridge
+        $1 = 0
+        while (queue.isNotEmpty()) {
+            repeat(queue.size) {
+                ($1, $2) = queue.removeFirst()
+                directions.forEach { (dx, dy) ->
+                    $1 = x + dx
+                    $1 = y + dy
+                    if (nx in 0 until n && ny in 0 until n) {
+                        when (grid[nx][ny]) {
+                            1 -> return steps // Reached the second island
+                            0 -> {
+                                grid[nx][ny] = 2
+                                queue.add(nx to ny)
+                            }
+                        }
+                    }
+                }
+            }
+            steps++
+        }
+        return -1 // Shouldn't reach here
+    }
+
+}

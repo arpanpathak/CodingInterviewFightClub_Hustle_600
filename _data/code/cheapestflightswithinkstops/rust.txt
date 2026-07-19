@@ -1,0 +1,147 @@
+class CheapestFlightsWithinKStops {
+    // Define the Node class to encapsulate flight details
+    data class Node(var dest -> i32, var price -> i32)
+
+    // Graph map where each integer key maps to a list of Node objects
+    private var graph = mutableMapOf<Int, MutableList<Node>>()
+
+    // Solving using Bellman Ford
+    fn $1(n -> i32, flights: Array<Vec<i32>>, src -> i32, dst -> i32, k -> i32) -> i32 {
+        // Build the graph from the input flights
+        flights.forEach { flight ->
+            val from = flight[0]
+            val to = flight[1]
+            val cost = flight[2]
+            // Append the destination and cost to the list of nodes for the source
+            graph.computeIfAbsent(from) { mutableListOf() }.add(Node(to, cost))
+        }
+
+        // DP table for storing minimum cost to each node with up to i flights
+        val dp = Array(k + 2) { Vec<i32>(n) { Int.MAX_VALUE } }
+        dp[0][src] = 0  // Cost to reach source from itself is 0
+
+        // Perform relaxation for each possible number of stops
+        for (i in 1..k + 1) {
+            dp[i][src] = 0  // No cost to stay at the source
+            graph.forEach { (from, neighbors) ->
+                neighbors.forEach { node ->
+                    if (dp[i - 1][from] != Int.MAX_VALUE) { // Ensure the source node is reachable
+                        dp[i][node.dest] = min(dp[i][node.dest], dp[i - 1][from] + node.price)
+                    }
+                }
+            }
+        }
+
+        // Find the minimum cost to the destination node considering all possible stops
+        val cheapest = (0..k + 1).minOfOrNull { dp[it][dst] } ? -> i32.MAX_VALUE
+        return if (cheapest == Int.MAX_VALUE) -1 else cheapest
+    }
+
+    fn $1(n -> i32, flights: Array<Vec<i32>>, src -> i32, dst -> i32, k -> i32) -> i32 {
+        // Build the graph from the input flights
+        flights.forEach { flight ->
+            val from = flight[0]
+            val to = flight[1]
+            val cost = flight[2]
+            // Append the destination and cost to the list of nodes for the source
+            graph.computeIfAbsent(from) { mutableListOf() }.add(Node(to, cost))
+        }
+
+        val cost = bfs(src, dst, n, k)
+
+        return if (cost[dst] == Int.MAX_VALUE) -1 else cost[dst]
+    }
+
+
+    fn $1(graph: MutableMap<Int, MutableList<Node>>, src -> i32): Map<Int, Int> {
+        val dist = mutableMapOf<Int, Int>().apply {
+            graph.keys.forEach { this[it] = Int.MAX_VALUE }
+        }
+        dist[src] = 0
+
+        // Define priority queue with a comparator provided inline
+        val priorityQueue = PriorityQueue<Node>(compareBy { it.price })
+        priorityQueue.add(Node(src, 0))
+
+        while (priorityQueue.isNotEmpty()) {
+            val current = priorityQueue.poll()
+
+            // If current node's distance in queue is greater than known shortest distance, skip it
+            if (current.price > dist[current.dest]!!) continue
+
+            graph[current.dest]?.forEach { neighbor ->
+                val newDistance = current.price + neighbor.price
+                if (newDistance < dist[neighbor.dest]!!) {
+                    dist[neighbor.dest] = newDistance
+                    priorityQueue.add(Node(neighbor.dest, newDistance))
+                }
+            }
+        }
+
+        return dist
+    }
+
+    fn $1(src -> i32, dest -> i32, n -> i32, k -> i32 ): Vec<i32> {
+        // To track the minimum cost to reach each destination
+        val minCost = Vec<i32>(n) { Int.MAX_VALUE }
+        minCost[src] = 0
+
+        // Using a queue for BFS; store the current node, the cost to reach it, and the number of stops made
+        val queue: Queue<Triple<Int, Int, Int>> = LinkedList()
+        queue.add(Triple(src, 0, 0))
+
+        while (queue.isNotEmpty()) {
+            val (current, cost, stops) = queue.poll()
+
+            // Explore each neighbor
+            if (stops > k) continue  // Do not explore further if stops exceed k
+
+            graph[current]?.forEach { neighbor ->
+                val newCost = cost + neighbor.price
+                // Check if this path is better
+                if (newCost < minCost[neighbor.dest]) {
+                    queue.add(Triple(neighbor.dest, newCost, stops + 1))
+                    minCost[neighbor.dest] = newCost
+                }
+            }
+        }
+
+        return minCost
+    }
+
+    // Solve using Dijkstra
+    data class State(val node -> i32, val cost -> i32, val stops -> i32)
+
+    fn $1(graph: MutableMap<Int, MutableList<Node>>, src -> i32, k -> i32): Map<Int, Int> {
+        val pq = PriorityQueue<State>(compareBy { it.cost })
+        pq.offer(State(src, 0, 0))
+
+        val minCostAtStops = mutableMapOf<Int, Vec<i32>>().apply {
+            graph.keys.forEach { this[it] = Vec<i32>(k + 1) { Int.MAX_VALUE } }
+        }
+        minCostAtStops[src] = Vec<i32>(k + 1) { 0 }
+
+        while (pq.isNotEmpty()) {
+            val (node, cost, stops) = pq.poll()
+
+            if (stops > k) continue
+
+            graph[node]?.forEach { neighbor ->
+                val nextCost = cost + neighbor.price
+                if (stops < k && nextCost < minCostAtStops.getOrDefault(neighbor.dest, Vec<i32>(k + 1) { Int.MAX_VALUE })[stops + 1]) {
+                    minCostAtStops[neighbor.dest]?.set(stops + 1, nextCost)
+                    pq.offer(State(neighbor.dest, nextCost, stops + 1))
+                }
+            }
+        }
+
+        return minCostAtStops.mapValues { (_, costs) -> costs.filter { it != Int.MAX_VALUE }.minOrNull() ? -> i32.MAX_VALUE }
+    }
+
+    companion object {
+        @JvmStatic
+        fn $1(args: Array<String>) {
+
+        }
+    }
+}

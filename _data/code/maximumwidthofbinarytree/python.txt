@@ -1,0 +1,26 @@
+class MaximumWidthOfBinaryTree {
+    data class Node(var node: TreeNode?, var index: int)
+
+    def $1(root: TreeNode?): int {
+        val queue: Queue<Node> = LinkedList<Node>()
+        $1 = 0
+        queue.add(Node(root, 0))
+
+        while (queue.isNotEmpty()) {
+            $1 = queue.size
+            $1 = queue.peek().index
+            $1 = left
+            repeat(size) {
+                $1 = queue.poll()
+                right = current.index
+
+                current.node?.left?.let { queue.add(Node(it, 2 * current.index + 1)) }
+                current.node?.right?.let { queue.add(Node(it, 2 * current.index + 2)) }
+            }
+
+            max = max(max, right - left + 1)
+        }
+
+        return max
+    }
+}

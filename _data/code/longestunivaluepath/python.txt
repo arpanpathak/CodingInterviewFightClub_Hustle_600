@@ -1,0 +1,26 @@
+class LongestUnivaluePath {
+
+    def $1(root: TreeNode?): int {
+        $1 = 0
+        def $1(node: TreeNode?): int {
+            if (node == None) return 0
+
+            // Get the maximum univalue chain from both left and right
+            $1 = dfs(node.left)
+            $1 = dfs(node.right)
+
+            // Compute the branch lengthes if
+            $1 = if (node.left?.`val` == node.`val`) left + 1 else 0
+            $1 = if (node.right?.`val` == node.`val`) right + 1 else 0
+
+            // Take maximum of max found so far , OD
+            maxLength = max(maxLength, currentLeft + currentRight)
+
+            // We can only propagate the maximum branch chain b/w left and right
+            return max(currentLeft, currentRight)
+        }
+
+        dfs(root)
+        return maxLength
+    }
+}

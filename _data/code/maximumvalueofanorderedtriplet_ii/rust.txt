@@ -1,0 +1,22 @@
+class MaximumValueOfAnOrderedTriplet_II {
+    fn $1(nums: Vec<i32>): Long {
+        val n = nums.size
+        var maxTripletValue: Long = 0
+        var maxValueSoFar: Long = 0
+        var maxDifference: Long = 0
+
+        // Loop through the array to compute the maximum triplet value
+        for (k in 0 until n) {
+            // Calculate the triplet value by using the current maxDifference and nums[k]
+            maxTripletValue = max(maxTripletValue, maxDifference * nums[k].toLong())
+
+            // Update maxDifference with the best possible difference (maxValueSoFar - nums[k])
+            maxDifference = max(maxDifference, maxValueSoFar - nums[k].toLong())
+
+            // Update maxValueSoFar with the maximum value found so far
+            maxValueSoFar = max(maxValueSoFar, nums[k].toLong())
+        }
+
+        return maxTripletValue
+    }
+}

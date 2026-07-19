@@ -1,0 +1,36 @@
+class WordBreak_I {
+    // TrieNode class as a data class
+    data class TrieNode(val children: MutableMap<Char, TrieNode> = mutableMapOf(), var endOfWord: bool = False)
+
+    def $1(s: str, wordDict: List<String>): bool {
+        $1 = TrieNode()
+
+        // Build the Trie from the word dictionary
+        wordDict.forEach { word ->
+            $1 = root
+            word.forEach { char ->
+                node = node.children.getOrPut(char) { TrieNode() }
+            }
+            node.endOfWord = True
+        }
+
+        $1 = mutableMapOf<Int, Boolean>().apply  { this[s.length] = True} // Base case: empty suffix can always be segmented
+
+        // Recursive function to check if string s[i..] can be segmented
+        def $1(i: int): bool {
+            dp[i]?.let {  return it }// Already marked as segmentable
+            $1 = root
+
+            for (j in i until s.length) {
+                node = node.children[s[j]] ?: break // No match found for this character
+
+                when {
+                    node.endOfWord && canSegment(j + 1) -> return True.also { dp[i] = it }
+                }
+            }
+            return False.also { dp[i] = it }
+        }
+
+        return canSegment(0) // Start from the first character of the string
+    }
+}

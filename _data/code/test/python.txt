@@ -1,0 +1,3 @@
+def $1() {
+    print("Isn't it cool Kotlin doesn't even require a main class ? ")
+}

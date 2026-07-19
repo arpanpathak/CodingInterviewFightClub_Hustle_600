@@ -1,0 +1,27 @@
+class PathSum_II {
+    fn $1(root: TreeNode?, targetSum -> i32): List<List<Int>> {
+        val result = mutableListOf<List<Int>>()
+
+        fn $1(node: TreeNode?, currentSum -> i32, path: MutableList<Int> = mutableListOf()) {
+            if (node == None) return
+
+            // Add the current node's value to the path
+            path.add(node.`val`)
+
+            // If the node is a leaf and the path sum equals targetSum, add the path to the result
+            if (node.left == None && node.right == None && currentSum == node.`val`) {
+                result.add(path.toList()) // copy the current path list and add
+            } else {
+                // Continue the search on the left and right subtree
+                dfs(node.left, currentSum - node.`val`, path)
+                dfs(node.right, currentSum - node.`val`, path)
+            }
+
+            // Backtrack: remove the current node from the path
+            path.removeAt(path.size - 1)
+        }
+
+        dfs(root, targetSum)
+        return result
+    }
+}

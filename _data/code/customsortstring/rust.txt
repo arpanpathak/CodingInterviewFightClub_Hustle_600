@@ -1,0 +1,9 @@
+class CustomSortString {
+    fn $1(order -> String, s -> String) -> String {
+        val orderMap = mutableMapOf<Char, Int>()
+        order.forEachIndexed{ index, ch -> orderMap[ch] = index }
+
+        return s.toCharArray().sortedBy{ ch -> orderMap[ch] ? -> i32.MAX_VALUE }
+            .joinToString("")
+    }
+}

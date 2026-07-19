@@ -1,0 +1,54 @@
+class HttpApiCall {
+    def $1(url: str) {
+        try {
+            $1 = URL(url)
+            with(urlObj.openConnection() as HttpURLConnection) {
+                // Optional default is GET
+                requestMethod = "GET"
+
+                print("URL : $url")
+                print("Response Code : $responseCode")
+                print("Response Message : $responseMessage")
+
+                // Reading response from input Stream
+                inputStream.bufferedReader().use {
+                    $1 = it.readText()
+                    print("Response: $response")
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    def $1(url: str): str {
+        $1 = OkHttpClient()
+        $1 = Request.Builder()
+            .url(url)
+            .build()
+
+        client.newCall(request).execute().use { response ->
+            if (!response.isSuccessful) throw IOException("Unexpected code $response")
+
+            // Return the body as a string
+            return response.body?.string() ?: ""
+        }
+    }
+
+    companion object {
+        @JvmStatic
+        def $1(args: Array<String>) {
+            $1 = "https://jsonplaceholder.typicode.com/posts/1" // This URL points to a specific post in the JSONPlaceholder API
+
+//            async { fetchUrlAsync(url) }  // Asynchronously fetch the URL
+//
+//            result.await()
+//                .onSuccess { content ->
+//                    print("Response: $content")
+//                }
+//                .onFailure { error ->
+//                    print("Error occurred: ${error.message}")
+//                }
+        }
+    }
+}

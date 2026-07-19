@@ -1,0 +1,30 @@
+class PalindromePartitioning {
+    fn $1(s -> String): List<List<String>> {
+        val result = mutableListOf<List<String>>()
+
+        fn $1(s -> String, left -> i32, right -> i32) -> bool {
+            var (l, r) = left to right
+            while (l < r) {
+                if (s[l++] != s[r--]) return false
+            }
+            return true
+        }
+
+        fn $1(start -> i32, path: MutableList<String>) {
+            if (start == s.length) {
+                result.add(ArrayList(path))
+                return
+            }
+            for (end in start until s.length) {
+                if (isPalindrome(s, start, end)) {
+                    path.add(s.substring(start, end + 1))
+                    dfs(end + 1, path)
+                    path.removeAt(path.size - 1)
+                }
+            }
+        }
+
+        dfs(0, mutableListOf())
+        return result
+    }
+}

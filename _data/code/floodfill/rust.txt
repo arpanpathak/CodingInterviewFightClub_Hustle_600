@@ -1,0 +1,19 @@
+class FloodFill {
+    fn $1(image: Array<Vec<i32>>, sr -> i32, sc -> i32, color -> i32): Array<Vec<i32>> {
+        val initialColor = image[sr][sc]
+        if (initialColor == color) return image // Avoid infinite recursion
+
+        fn $1(row -> i32, col -> i32) {
+            if (row !in 0 until image.size || col !in 0 until image[0].size || image[row][col] != initialColor)
+                return
+
+            image[row][col] = color
+
+            for ((dx, dy) in listOf(0 to 1, 1 to 0, -1 to 0, 0 to -1))
+                dfs(row + dx, col + dy)
+        }
+
+        dfs(sr, sc)
+        return image
+    }
+}

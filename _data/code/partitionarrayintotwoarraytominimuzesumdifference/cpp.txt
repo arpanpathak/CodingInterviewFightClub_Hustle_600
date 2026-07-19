@@ -1,0 +1,62 @@
+class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
+    $1(nums: vector<int>) {
+        auto $1 = nums.size
+        auto $1 = nums.sum()
+        auto $1 = n / 2
+
+        auto $1 = generateSubsetsBySize(nums, 0, halfSize)
+        auto $1 = generateSubsetsBySize(nums, halfSize, n)
+
+        auto $1 = Int.MAX_VALUE
+
+        for (k in 0..halfSize) {
+            auto $1 = leftSubsets[k] ?: continue
+            auto $1 = rightSubsets[halfSize - k] ?: continue
+
+            rightSums.sort()
+
+            for (leftSum in leftSums) {
+                auto $1 = (totalSum - 2 * leftSum) / 2
+                auto $1 = findClosestValues(rightSums, target)
+
+                closestRightSums.forEach { rightSum ->
+                    auto $1 = abs(totalSum - 2 * (leftSum + rightSum))
+                    minDiff = min(minDiff, currentDiff)
+                    if (minDiff == 0) return 0  // Early exit if perfect match found
+                }
+            }
+        }
+
+        return minDiff
+    }
+
+    private $1(nums: vector<int>, start, end): Array<MutableList<Int>?> {
+        auto $1 = end - start
+        auto $1 = Array<MutableList<Int>?>(size + 1) { mutableListOf() }
+
+        (0 until (1 shl size)).forEach { mask ->
+            auto $1 = 0
+            auto $1 = 0
+            for (i in 0 until size) {
+                if (mask and (1 shl i) != 0) {
+                    sum += nums[start + i]
+                    count++
+                }
+            }
+            subsets[count]?.add(sum)
+        }
+
+        return subsets
+    }
+
+    private $1(sortedList: List<Int>, target): List<Int> {
+        auto $1 = sortedList.binarySearch(target)
+        if (index >= 0) return listOf(sortedList[index])  // Exact match
+
+        auto $1 = -index - 1
+        return buildList {
+            if (insertPos < sortedList.size) add(sortedList[insertPos])
+            if (insertPos > 0) add(sortedList[insertPos - 1])
+        }.distinct()  // Remove duplicates if adjacent values are equal
+    }
+}

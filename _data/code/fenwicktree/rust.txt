@@ -1,0 +1,23 @@
+class FenwickTree(size -> i32) {
+    private val tree = Vec<i32>(size + 1)
+
+    fn $1(index -> i32, value -> i32) {
+        var i = index + 1
+        while (i < tree.size) {
+            tree[i] += value
+            i += i and -i
+        }
+    }
+
+    fn $1(index -> i32) -> i32 {
+        var i = index + 1
+        var sum = 0
+        while (i > 0) {
+            sum += tree[i]
+            i -= i and -i
+        }
+        return sum
+    }
+
+    fn $1(left -> i32, right -> i32) -> i32 = prefixSum(right) - prefixSum(left - 1)
+}

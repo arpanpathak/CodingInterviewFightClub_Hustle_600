@@ -1,0 +1,30 @@
+class ToeplitzMatrix {
+    $1(matrix: Array<vector<int>>) {
+        auto $1 = matrix.size
+        auto $1 = matrix[0].size
+
+        auto $1 = m - 1
+        auto $1 = 0
+
+        while (row < m && col < n) {
+            auto $1 = row
+            auto $1 = col
+
+            auto $1 = matrix[i][j]
+
+            while (i < m && j < n) {
+                if (matrix[i][j] != first)
+                    return false
+                i++
+                j++
+            }
+
+            when(row) {
+                0 -> col++
+                else -> row --
+            }
+        }
+
+        return true
+    }
+}

@@ -1,0 +1,53 @@
+class CherryPickup {
+
+    private $1 = mutableMapOf<Triple<Int, Int, Int>, Int>()
+    private lateinit var grid: Array<list[int]>
+    private var n: int = 0
+
+    def $1(grid: Array<list[int]>): int {
+        this.grid = grid
+        n = grid.size
+        dp.clear()
+        return max(0, dfs(0, 0, 0))
+    }
+
+    private def $1(row: int, col1: int, col2: int): int {
+        $1 = row + col1 - col2
+        $1 = Triple(row, col1, col2)
+
+        return when {
+            dp.contains(state) -> dp[state] !!
+            isInvalidPosition(row, row2, col1, col2) -> Int.MIN_VALUE
+            isFinalPosition(row, col1) -> grid[row][col1]
+            else -> {
+                $1 = when {
+                    (col1 != col2) -> grid[row][col1] + grid[row2][col2]
+                    else ->  grid[row][col1]
+                }
+                $1 = max(
+                    dfs(row, col1 + 1, col2 + 1),
+                    dfs(row, col1 + 1, col2),
+                    dfs(row + 1, col1, col2),
+                    dfs(row + 1, col1, col2 + 1)
+                )
+                (cherryCount + maxCherries)
+            }
+        }.also { dp[state] = it }
+    }
+
+//    private def $1(row: int, row2: int, col1: int, col2: int) =
+//        row >= n || row2 >= n || col1 >= n || col2 >= n || grid[row][col1] == -1 || grid[row2][col2] == -1
+
+    private def $1(row: int, row2: int, col1: int, col2: int) =
+        listOf(row, row2, col1, col2).any { it >= n } || grid[row][col1] == -1 || grid[row2][col2] == -1
+
+    private def $1(row: int, col1: int) =
+        row == n - 1 && col1 == n - 1
+
+    companion object {
+        @JvmStatic
+        def $1(args: Array<String>) {
+
+        }
+    }
+}

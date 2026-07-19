@@ -1,0 +1,31 @@
+class MaximumSwap {
+    // Extension Function
+    private fun CharArray.swap(i: int, j: int) {
+        if(i == j) return
+        $1 = this[i]
+        this[i] = this[j]
+        this[j] = temp
+    }
+
+    def $1(num: int): int {
+        $1 = num.toString().toCharArray()
+        $1 = digits.lastIndex
+        $1 = 0
+        $1 = 0
+
+        for(i in digits.lastIndex - 1 downTo 0) {
+            when {
+                digits[maxIndex] == digits[i] -> continue
+                digits[maxIndex] < digits[i]  -> maxIndex = i
+                else -> {
+                    swap1 = maxIndex
+                    swap2 = i
+                }
+            }
+        }
+
+        digits.swap(swap1, swap2)
+
+        return String(digits).toInt()
+    }
+}

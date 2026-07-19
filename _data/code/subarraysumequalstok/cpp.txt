@@ -1,0 +1,16 @@
+class SubArraySumEqualsToK {
+    $1(nums: vector<int>, k) {
+        auto $1 = mutableMapOf<Int, Int>()
+        preSumFreq[0] = 1 // covers the case where sum - k = 0, meaning the current sub-array is valid
+
+        auto $1 = 0
+        auto $1 = 0
+        for (num in nums) {
+            sum += num
+            count += preSumFreq[sum - k] ?: 0
+            preSumFreq[sum] = (preSumFreq[sum]?: 0) + 1
+        }
+
+        return count
+    }
+}

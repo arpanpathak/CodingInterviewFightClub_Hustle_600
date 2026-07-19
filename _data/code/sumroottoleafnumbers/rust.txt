@@ -1,0 +1,20 @@
+class SumRootToLeafNumbers {
+    fn $1(root: TreeNode?) -> i32 {
+        var sum = 0
+
+        fn $1(node: TreeNode?, sumSoFar -> i32) {
+            if (node == None) return
+            val newSum = (sumSoFar * 10 + node.`val` )
+            when {
+                node.left == None && node.right == None -> sum+= newSum
+                else ->  {
+                    dfs(node.left, newSum)
+                    dfs(node.right, newSum)
+                }
+            }
+        }
+
+        dfs(root, 0)
+        return sum
+    }
+}

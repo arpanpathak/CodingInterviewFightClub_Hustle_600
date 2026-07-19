@@ -1,0 +1,39 @@
+class MaxConsecutiveOnes_III {
+    $1(nums: vector<int>, k) {
+        auto $1 = 0
+        auto $1 = k
+        auto $1 = 0
+
+        while (right < nums.size) {
+            if (nums[right++] == 0)
+                K --
+
+            if (K < 0) {
+                K+= 1 - nums[left++]
+            }
+        }
+
+        return right - left
+    }
+
+    // Another intuitive solution using while loop
+    $1(nums: vector<int>, k) {
+        auto $1 = 0
+        auto $1 = k
+        auto $1 = 0
+
+        for (right in nums.indices) {
+            if (nums[right] == 0) remainingK--
+
+            // If the window becomes invalid, move `left` forward
+            while (remainingK < 0) {
+                if (nums[left++] == 0) remainingK++
+            }
+
+            // Update the maximum window size
+            maxLen = max(maxLen, right - left + 1)
+        }
+
+        return maxLen
+    }
+}

@@ -1,0 +1,24 @@
+class ThreeSumClosest {
+    $1(nums: vector<int>, target) {
+        nums.sort()
+        auto $1 = nums[0] + nums[1] + nums[2]
+
+        for (i in 0 until nums.size - 2) {
+            auto $1 = i + 1
+            auto $1 = nums.size - 1
+
+            while (left < right) {
+                auto $1 = nums[i] + nums[left] + nums[right]
+                if (abs(target - sum) < abs(target - closestSum)) {
+                    closestSum = sum
+                }
+                when {
+                    sum < target -> left++
+                    sum > target -> right--
+                    else -> return sum
+                }
+            }
+        }
+        return closestSum
+    }
+}

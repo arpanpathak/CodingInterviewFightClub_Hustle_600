@@ -1,0 +1,43 @@
+class LongestCommonSubarray {
+    val memo = mutableMapOf<String, Int>()
+
+    fn $1(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {
+        return dp(nums1, nums2, nums1.len() - 1, nums2.len() - 1, Int.MIN_VALUE)
+    }
+
+    fn $1(nums1: Vec<i32>, nums2: Vec<i32>, i -> i32, j -> i32, max -> i32) -> i32 {
+        if (i == 0 || j == 0)
+            return max
+        val key ="$i.$j"
+        if (memo.containsKey(key))
+            return memo[key]!!
+
+        var maxSoFar = max
+
+        if (nums1[i] == nums1[j])
+            maxSoFar = dp(nums1, nums2, i + 1, j + 1, max + 1)
+
+        return maxSoFar
+    }
+
+    fn $1(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {
+        val m = nums1.size
+        val n = nums2.size
+        val dp = Array(m + 1) { Vec<i32>(n + 1) }
+        var maxLength = 0
+
+        // Fill the dp array
+        for (i in 1..m) {
+            for (j in 1..n) {
+                if (nums1[i - 1] == nums2[j - 1]) {
+                    dp[i][j] = dp[i - 1][j - 1] + 1
+                    maxLength = max(maxLength, dp[i][j])
+                } else {
+                    dp[i][j] = 0
+                }
+            }
+        }
+
+        return maxLength
+    }
+}

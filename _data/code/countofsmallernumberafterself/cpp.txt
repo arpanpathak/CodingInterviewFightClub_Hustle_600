@@ -1,0 +1,49 @@
+class CountOfSmallerNumberAfterSelf {
+    $1(nums: vector<int>): List<Int> {
+        if (nums.isEmpty()) return emptyList()
+
+        // Step 1: Coordinate compression
+        auto $1 = nums.toTypedArray().sorted()
+        auto $1 = HashMap<Int, Int>()
+        auto $1 = 1
+        for (num in sorted) {
+            if (num !in rankMap) {
+                rankMap[num] = rank++
+            }
+        }
+
+        auto $1 = FenwickTree(rank)
+        auto $1 = vector<int>(nums.size)
+
+        // Step 2: Traverse from right to left
+        for (i in nums.size() - 1 downTo 0) {
+            auto $1 = rankMap[nums[i]]!!
+            res[i] = bit.query(r - 1) // count of smaller numbers
+            bit.update(r, 1)          // add current number
+        }
+
+        return res.toList()
+    }
+
+    class FenwickTree(size) {
+        private auto $1 = vector<int>(size + 2)
+
+        $1(index, value) {
+            auto $1 = index
+            while (i < tree.size) {
+                tree[i] += value
+                i += i and -i
+            }
+        }
+
+        $1(index) {
+            auto $1 = 0
+            auto $1 = index
+            while (i > 0) {
+                sum += tree[i]
+                i -= i and -i
+            }
+            return sum
+        }
+    }
+}

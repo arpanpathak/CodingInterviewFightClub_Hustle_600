@@ -1,0 +1,17 @@
+class BinaryTreeRightSideView {
+    public static void $1(root: TreeNode?): List<Int> {
+        val rightSide = mutableListOf<Int>()
+
+        public static void $1(node: TreeNode?, level) {
+            when {
+                node == null -> return
+                level == rightSide.size -> rightSide.add(node.`val`)
+            }
+
+            dfs(node?.right, level + 1)
+            dfs(node?.left, level + 1)
+        }
+        dfs(root, 0)
+        return rightSide
+    }
+}

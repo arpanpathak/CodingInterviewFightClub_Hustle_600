@@ -1,0 +1,6 @@
+class FirstUniqueCharacter {
+    public static void $1(s) {
+        val count = s.groupingBy { it }.eachCount()
+        return s.indexOfFirst { count[it] == 1 }
+    }
+}

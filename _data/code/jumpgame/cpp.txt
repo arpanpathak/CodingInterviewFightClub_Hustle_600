@@ -1,0 +1,17 @@
+class JumpGame {
+    $1(nums: vector<int>) {
+        auto $1 = 0
+        auto $1 = 0
+        while (i <= maxIndex) {
+            maxIndex = max(maxIndex, i + nums[i])
+
+            if (maxIndex >= nums.size - 1) {
+                return true
+            }
+
+            i++
+        }
+
+        return false
+    }
+}

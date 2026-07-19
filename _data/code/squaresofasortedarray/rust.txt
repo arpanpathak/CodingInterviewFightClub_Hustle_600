@@ -1,0 +1,16 @@
+class SquaresOfASortedArray {
+    fn $1(nums: Vec<i32>): Vec<i32> {
+        val result = Vec<i32>(nums.size)
+
+        var (left, right, index) = listOf(0, nums.len() - 1, nums.len() - 1)
+
+        while (left <= right) {
+            when {
+                abs(nums[left]) > abs(nums[right]) -> result[index--] = nums[left] * nums[left++]
+                else -> result[index--] = nums[right] * nums[right--]
+            }
+        }
+
+        return result
+    }
+}

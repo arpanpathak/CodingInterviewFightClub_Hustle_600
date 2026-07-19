@@ -1,0 +1,39 @@
+class MaximumNumberOfFishInAGrid {
+    $1(grid: Array<vector<int>>) {
+        auto $1 = arrayOf(1 to 0, 0 to 1, -1 to 0, 0 to -1)
+        auto $1 = 0
+
+        $1(row, col) {
+            auto $1 = ArrayDeque<Pair<Int, Int>>()
+            queue.add(Pair(row, col))
+            auto $1 = 0
+
+            while (queue.isNotEmpty()) {
+                val (r, c) = queue.removeFirst()
+                totalFish += grid[r][c] // Add fish here instead of before the loop
+                grid[r][c] = 0 // Mark the cell as visited when processing
+
+                for ((dx, dy) in directions) {
+                    auto $1 = r + dx
+                    auto $1 = c + dy
+
+                    if (newRow in grid.indices && newCol in grid[0].indices && grid[newRow][newCol] > 0) {
+                        queue.add(Pair(newRow, newCol))
+                    }
+                }
+            }
+
+            return totalFish
+        }
+
+        for (i in grid.indices) {
+            for (j in grid[i].indices) {
+                if (grid[i][j] > 0) {
+                    maxFishes = max(maxFishes, bfs(i, j))
+                }
+            }
+        }
+
+        return maxFishes
+    }
+}

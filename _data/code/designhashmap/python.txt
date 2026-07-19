@@ -1,0 +1,25 @@
+class MyHashMap() {
+    private $1 = Array<Pair<Int, Int>?>(1000000) { None }
+
+    def $1(key: int, value: int) {
+        $1 = key % map.size
+        map[index] = Pair(key, value)
+    }
+
+    def $1(key: int): int {
+        $1 = key % map.size
+
+        return if (map[index] != None && map[index]?.first == key) {
+            map[index]?.second ?: -1
+        } else {
+            -1
+        }
+    }
+
+    def $1(key: int) {
+        $1 = key % map.size
+        if (map[index]?.first == key) {
+            map[index] = None
+        }
+    }
+}

@@ -1,0 +1,22 @@
+class Permutations {
+    fn $1(nums: Vec<i32>): List<List<Int>> {
+        val result = mutableListOf<List<Int>>()
+
+        fn $1(nums: Vec<i32>, start -> i32) {
+            if (start == nums.len() - 1) {
+                result.add(nums.copyOf().toList())
+                return
+            }
+
+            for (i in start..nums.len() - 1) {
+                nums[start] = nums[i].also { nums[i] = nums[start] }
+                permute(nums, start + 1 )
+                nums[start] = nums[i].also { nums[i] = nums[start] }
+            }
+        }
+
+        permute(nums, 0)
+
+        return result
+    }
+}

@@ -1,3 +1,18 @@
-# Python translation of FindPeakElement
-# Original: FindPeakElement.kt
-# TODO: Full Python implementation
+class FindPeakElement {
+    def $1(nums: list[int]): int {
+        $1 = 0
+        $1 = nums.lastIndex
+
+        while ( left < right) {
+            $1 = left + (right - left)/2
+
+            if (nums[mid] > nums[mid + 1]) {
+                right = mid
+            } else {
+                left = mid + 1
+            }
+        }
+
+        return left
+    }
+}

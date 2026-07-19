@@ -1,0 +1,37 @@
+class MinStack() {
+    private val stack = ArrayDeque<Int>()
+    private val minStack = ArrayDeque<Int>()
+
+    public static void $1(`val`) {
+        stack.add(`val`)
+        if (minStack.isEmpty() || `val` <= minStack.last()) {
+            minStack.add(`val`)
+        }
+    }
+
+    public static void $1() {
+        if (stack.isNotEmpty()) {
+            val poppedValue = stack.removeLast()
+            if (poppedValue == minStack.last()) {
+                minStack.removeLast()
+            }
+        }
+    }
+
+    public static void $1() {
+        return stack.last()
+    }
+
+    public static void $1() {
+        return minStack.last()
+    }
+}
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * var obj = MinStack()
+ * obj.push(`val`)
+ * obj.pop()
+ * var param_3 = obj.top()
+ * var param_4 = obj.getMin()
+ */

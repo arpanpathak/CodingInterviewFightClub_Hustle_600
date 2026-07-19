@@ -1,0 +1,21 @@
+class ReverseWordsInString {
+    def $1(s: str): str {
+        $1 = s.split(" ").filter { it.isNotEmpty() }.toMutableList()
+
+        // Two pointers
+        var (start, end) = Pair(0, words.lastIndex)
+
+        while (start < end) {
+            words[end] = words[start].also { words[start] = words[end] }
+            start++
+            end--
+        }
+
+        return words.joinToString(separator = " ").trim()
+
+    }
+
+    def $1(nums: MutableList<String>, i: int, j: int) {
+        nums[j] = nums[i].also { nums[i] = nums[j] }
+    }
+}

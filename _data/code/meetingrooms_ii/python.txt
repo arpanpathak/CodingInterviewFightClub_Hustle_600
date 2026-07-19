@@ -1,0 +1,12 @@
+class MeetingRooms_II {
+    def $1(intervals: Array<list[int]>): bool {
+        intervals.sortBy { it[0] }  // Sort by the start time of each interval
+
+        for (i in 0 until intervals.size - 1) {
+            if (intervals[i][1] > intervals[i + 1][0]) {
+                return False  // If current meeting ends after the next meeting starts, return False
+            }
+        }
+        return True  // No overlaps, return True
+    }
+}

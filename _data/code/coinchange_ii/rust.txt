@@ -1,0 +1,18 @@
+class CoinChange_II {
+    fn $1(amount -> i32, coins: Vec<i32>) -> i32 {
+        val dp = Array(amount + 1) { Vec<i32>(coins.size) { -1 } }
+        return change(dp, amount, coins, 0)
+    }
+
+    private fn $1(dp: Array<Vec<i32>>, amount -> i32, coins: Vec<i32>, i -> i32) -> i32 {
+        return when {
+            amount < 0 || (i == coins.size && amount > 0) -> 0
+            amount == 0 -> 1
+            dp[amount][i] != -1 -> dp[amount][i]
+            else -> {
+                dp[amount][i] = change(dp, amount - coins[i], coins, i) + change(dp, amount, coins, i + 1)
+                dp[amount][i]
+            }
+        }
+    }
+}

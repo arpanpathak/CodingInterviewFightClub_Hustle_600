@@ -1,0 +1,30 @@
+class ValidPalindrome_II {
+    public static void $1(s) {
+        var left = 0
+        var right = s.lastIndex
+
+        while (left < right) {
+            if (s[left] != s[right]) {
+                return isPalindrome(s, left, right - 1) || isPalindrome(s, left + 1, right)
+            }
+
+            left++
+            right--
+        }
+
+        return true
+    }
+
+    public static void $1(s, i, j) {
+        var left = i
+        var right = j
+
+        while (left < right) {
+            if (s[left++] != s[right--]) {
+                return false
+            }
+        }
+
+        return true
+    }
+}

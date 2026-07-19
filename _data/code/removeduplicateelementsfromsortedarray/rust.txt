@@ -1,0 +1,12 @@
+class RemoveDuplicateElementsFromSortedArray {
+    fn $1(nums: Vec<i32>) -> i32 {
+        var index = 0
+        for (i in 1..nums.len() - 1) {
+            if (nums[index] != nums[i]) {
+                nums[++index] = nums[i]
+            }
+        }
+
+        return index + 1
+    }
+}

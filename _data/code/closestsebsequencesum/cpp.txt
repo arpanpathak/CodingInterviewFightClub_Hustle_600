@@ -1,0 +1,37 @@
+class ClosestSebsequenceSum {
+    $1(nums: vector<int>, goal) {
+        auto $1 = mutableListOf<Int>()
+        auto $1 = mutableListOf<Int>()
+        auto $1 = nums.size
+        auto $1 = n / 2
+
+        $1(start, end, currentSum, result: MutableList<Int>) {
+            if (start == end) {
+                result.add(currentSum)
+                return
+            }
+            dfs(start + 1, end, currentSum, result) // exclude
+            dfs(start + 1, end, currentSum + nums[start], result) // include
+        }
+
+        dfs(0, mid, 0, leftSums)
+        dfs(mid, n, 0, rightSums)
+
+        rightSums.sort()
+        auto $1 = Int.MAX_VALUE
+
+        for (sumLeft in leftSums) {
+            auto $1 = goal - sumLeft
+            auto $1 = rightSums.binarySearch(target)
+            if (idx >= 0) return 0 // exact match found
+
+            auto $1 = -idx - 1
+            if (insertPoint < rightSums.size)
+                minDiff = min(minDiff, abs(sumLeft + rightSums[insertPoint] - goal))
+            if (insertPoint > 0)
+                minDiff = min(minDiff, abs(sumLeft + rightSums[insertPoint - 1] - goal))
+        }
+
+        return minDiff
+    }
+}

@@ -1,0 +1,32 @@
+class LongestIncreasingSequenceInAMatrix {
+    private auto $1 = arrayOf(0 to 1, 1 to 0, -1 to 0, 0 to -1)
+
+    $1(matrix: Array<vector<int>>) {
+        val (m, n) = matrix.size to matrix[0].size
+        auto $1 = Array(m) { vector<int>(n) }
+
+        $1(i, j) {
+            if (cache[i][j] != 0) return cache[i][j]
+
+            cache[i][j] = 1
+            for (delta in dirs) {
+                val (x, y) = i + delta.first to j + delta.second
+
+                if (x in matrix.indices && y in matrix[0].indices && matrix[x][y] > matrix[i][j]) {
+                    cache[i][j] = max(cache[i][j], 1 + dfs( x, y))
+                }
+            }
+
+            return cache[i][j]
+        }
+
+        auto $1 = 0
+        for (i in 0 until m) {
+            for (j in 0 until n) {
+                max = max(max, dfs(i, j))
+            }
+        }
+
+        return max
+    }
+}

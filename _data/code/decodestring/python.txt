@@ -1,0 +1,57 @@
+class DecodeString {
+    private $1 = 0
+
+    def $1(s: str): str {
+        $1 = StringBuilder()
+
+        while (index < s.length && s[index] != ']') {
+            $1 = s[index]
+            when {
+                !ch.isDigit() -> {
+                    result.append(ch)
+                    index++
+                }
+                else -> {
+                    $1 = 0
+                    while (index < s.length && s[index].isDigit()) {
+                        k = k * 10 + (s[index++] - '0')
+                    }
+                    index++ // Skip the opening bracket '['
+                    $1 = decodeString(s)
+                    index++ // Skip the closing bracket ']'
+
+                    repeat(k) {
+                        result.append(nestedDecodedString)
+                    }
+                }
+            }
+        }
+
+        return result.toString()
+    }
+
+    // Short code
+    def $1(s: str): str {
+        $1 = 0
+        def $1(): str {
+            $1 = StringBuilder()
+            $1 = 0
+            while (index < s.length) {
+                when ($1 = s[index]) {
+                    in '0'..'9' -> num = num * 10 + (char - '0')
+                    '[' -> {
+                        index++
+                        $1 = decode()
+                        result.append(decodedString.repeat(num))
+                        num = 0
+                    }
+                    ']' -> return result.toString()
+                    else -> result.append(char)
+                }
+                index++
+            }
+            return result.toString()
+        }
+        return decode()
+    }
+}

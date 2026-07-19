@@ -1,0 +1,26 @@
+class CheckCompletenessOfBinaryTree {
+    fn $1(root: TreeNode?) -> bool {
+        if (root == None) return true // Edge case: An empty tree is considered complete
+
+        val queue = ArrayDeque<TreeNode?>()
+        queue.add(root)
+
+        var foundNull = false // A flag to indicate if a None node has been encountered
+
+        while (queue.isNotEmpty()) {
+            val current = queue.removeFirst()
+
+            // If we have already seen a None node, we shouldn't encounter any non-None nodes after that.
+            if (current == None) {
+                foundNull = true
+            } else {
+                if (foundNull) return false // If we encounter a non-None node after a None node, it's not complete
+
+                queue.add(current.left)
+                queue.add(current.right)
+            }
+        }
+
+        return true
+    }
+}

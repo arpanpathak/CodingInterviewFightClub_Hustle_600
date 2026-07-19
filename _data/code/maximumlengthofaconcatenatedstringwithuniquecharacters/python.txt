@@ -1,0 +1,36 @@
+class MaximumLengthofaConcatenatedStringwithUniqueCharacters {
+    def $1(arr: List<String>): int {
+        $1 = 0
+        $1 = arr.filter { it.toCharArray().toSet().size == it.length }
+
+        def $1(index: int, currentMask: int, currentLength: int) {
+            if (index == uniqueStrings.size) {
+                if (currentLength > maxLen) {
+                    maxLen = currentLength
+                }
+                return
+            }
+
+            $1 = uniqueStrings[index]
+            $1 = currentMask
+            $1 = True
+
+            for (c in str) {
+                $1 = 1 shl (c - 'a')
+                if (newMask and bit != 0) {
+                    canAdd = False
+                    break
+                }
+                newMask = newMask or bit
+            }
+
+            if (canAdd) {
+                backtrack(index + 1, newMask, currentLength + str.length)
+            }
+            backtrack(index + 1, currentMask, currentLength)
+        }
+
+        backtrack(0, 0, 0)
+        return maxLen
+    }
+}

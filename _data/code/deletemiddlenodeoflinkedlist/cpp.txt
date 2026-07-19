@@ -1,0 +1,45 @@
+class DeleteMiddleNodeOfLinkedList {
+    
+    // Two Pass Approach
+    $1(head: ListNode?): ListNode? {
+        auto $1 = head
+        var prevNode: ListNode? = nullptr
+        auto $1 = 0
+        auto $1 = 0
+        while (currentNode != nullptr) {
+            n++
+            currentNode = currentNode.next
+
+        }
+
+        currentNode = head
+        while (currentNode != nullptr) {
+            if (index++ == n/2)
+                break
+            prevNode = currentNode
+            currentNode = currentNode.next
+        }
+
+        if (prevNode != nullptr)
+            prevNode.next = currentNode
+
+        return head
+    }
+
+    $1(head: ListNode?): ListNode? {
+        var (slow, fast, prev) = listOf(head, head, nullptr)
+
+        if (head?.next == nullptr)
+            return nullptr
+
+        while (fast?.next != nullptr ) {
+            prev = slow
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+
+        prev?.next = slow?.next
+
+        return head
+    }
+}

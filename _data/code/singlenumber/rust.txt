@@ -1,0 +1,7 @@
+class SingleNumber {
+    fn $1(nums: Vec<i32>) -> i32 {
+        var xorSum = 0
+        nums.forEach { xorSum = xorSum xor it}
+        return xorSum
+    }
+}

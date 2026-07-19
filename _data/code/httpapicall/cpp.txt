@@ -1,0 +1,54 @@
+class HttpApiCall {
+    $1(url) {
+        try {
+            auto $1 = URL(url)
+            with(urlObj.openConnection() as HttpURLConnection) {
+                // Optional default is GET
+                requestMethod = "GET"
+
+                cout <<("URL : $url")
+                cout <<("Response Code : $responseCode")
+                cout <<("Response Message : $responseMessage")
+
+                // Reading response from input Stream
+                inputStream.bufferedReader().use {
+                    auto $1 = it.readText()
+                    cout <<("Response: $response")
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    $1(url) {
+        auto $1 = OkHttpClient()
+        auto $1 = Request.Builder()
+            .url(url)
+            .build()
+
+        client.newCall(request).execute().use { response ->
+            if (!response.isSuccessful) throw IOException("Unexpected code $response")
+
+            // Return the body as a string
+            return response.body?.string() ?: ""
+        }
+    }
+
+    companion object {
+        @JvmStatic
+        $1(args: Array<String>) {
+            auto $1 = "https://jsonplaceholder.typicode.com/posts/1" // This URL points to a specific post in the JSONPlaceholder API
+
+//            async { fetchUrlAsync(url) }  // Asynchronously fetch the URL
+//
+//            result.await()
+//                .onSuccess { content ->
+//                    cout <<("Response: $content")
+//                }
+//                .onFailure { error ->
+//                    cout <<("Error occurred: ${error.message}")
+//                }
+        }
+    }
+}

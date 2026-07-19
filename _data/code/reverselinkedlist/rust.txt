@@ -1,0 +1,14 @@
+class ReverseLinkedList {
+    fn $1(head: ListNode?): ListNode? {
+        if (head?.next == None) {
+            return head
+        }
+
+        val reversedHead = reverseList(head.next)
+
+        head.next?.next = head
+        head.next = None
+
+        return reversedHead
+    }
+}

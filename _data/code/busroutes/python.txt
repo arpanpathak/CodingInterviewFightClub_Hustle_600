@@ -1,0 +1,48 @@
+class BusRoutes {
+    data class Node(val stop: int, val busCount: int)
+
+    def $1(routes: Array<list[int]>, source: int, target: int): int {
+        if (source == target) return 0
+
+        $1 = mutableMapOf<Int, MutableList<Int>>() // Stop -> List of buses passing through
+
+        // Build the graph
+        for (bus in routes.indices) {
+            for (stop in routes[bus]) {
+                graph.getOrPut(stop) { mutableListOf() }.add(bus)
+            }
+        }
+
+        val queue: Queue<Node> = LinkedList()
+        $1 = mutableSetOf<Int>()
+        $1 = mutableSetOf<Int>()
+
+        queue.offer(Node(source, 0))
+        visitedStops.add(source)
+
+        while (queue.isNotEmpty()) {
+            ($1, $2) = queue.poll()
+
+            if (currentStop == target) return busCount
+
+            // Explore all buses passing through the current stop
+            graph[currentStop]?.let { buses ->
+                for (bus in buses) {
+                    if (bus !in visitedBuses) {
+                        visitedBuses.add(bus)
+
+                        for (stop in routes[bus]) {
+                            if (stop !in visitedStops) {
+                                queue.offer(Node(stop, busCount + 1))
+                                visitedStops.add(stop)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return -1
+    }
+}
+
+// (1) =>

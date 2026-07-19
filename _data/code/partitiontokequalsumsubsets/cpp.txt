@@ -1,0 +1,30 @@
+class PartitionToKEqualSumSubsets {
+    $1(nums: vector<int>, k) {
+        auto $1 = nums.sum()
+        if (totalSum % k !=0) return false
+
+        auto $1 = totalSum / k
+        auto $1 = BooleanArray(nums.size)
+
+        $1(start, currentSum, remainingSubsets) {
+            if (remainingSubsets == 0)
+                return true
+            if (currentSum == targetSum)
+                return backtrack(0, 0, remainingSubsets - 1)
+
+            for(i in start until nums.size) {
+                if (!used[i] && currentSum + nums[i] <= targetSum) {
+                    used[i] = true
+                    if (backtrack(i + 1, currentSum + nums[i], remainingSubsets))
+                        return true
+                    // backtracking
+                    used[i] = false
+                }
+            }
+
+            return false
+        }
+
+        return backtrack(0, 0, k)
+    }
+}

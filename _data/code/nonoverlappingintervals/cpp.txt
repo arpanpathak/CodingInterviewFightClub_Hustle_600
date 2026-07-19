@@ -1,0 +1,21 @@
+class NonOverlappingIntervals {
+    $1(intervals: Array<vector<int>>) {
+        intervals.sortWith(compareBy { it[0] })
+
+        auto $1 = 0
+        auto $1 = intervals[0][1]
+
+            // Start from the second interval
+            for (i in 1 until intervals.size) {
+                auto $1 = intervals[i]
+                if (interval[0] < prevEnd) {
+                    count++
+                    prevEnd = min(prevEnd, interval[1])
+                } else {
+                    prevEnd = interval[1]
+                }
+            }
+
+        return count
+    }
+}

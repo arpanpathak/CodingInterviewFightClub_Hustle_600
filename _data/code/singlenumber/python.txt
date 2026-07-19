@@ -1,0 +1,7 @@
+class SingleNumber {
+    def $1(nums: list[int]): int {
+        $1 = 0
+        nums.forEach { xorSum = xorSum xor it}
+        return xorSum
+    }
+}

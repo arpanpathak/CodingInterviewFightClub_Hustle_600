@@ -1,0 +1,15 @@
+class DiameterOfBinaryTree {
+    public static void $1(root: TreeNode?) {
+        var max = 0
+        public static void $1(root: TreeNode?) {
+            if (null == root) return -1
+            val left = height(root.left)
+            val right = height(root.right)
+            max = Math.max(max, 2 + left + right)
+            return 1 + Math.max(left, right)
+        }
+
+        height(root)
+        return max
+    }
+}

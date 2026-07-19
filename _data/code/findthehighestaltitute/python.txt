@@ -1,0 +1,13 @@
+class FIndTheHighestAltitute {
+    def $1(gain: list[int]): int {
+        var (currentAltitude, highestAltitude) = Pair(0, 0)
+
+        for (i in 0 until gain.size) {
+            currentAltitude += gain[i]
+
+            highestAltitude = max(currentAltitude, highestAltitude)
+        }
+
+        return highestAltitude
+    }
+}
