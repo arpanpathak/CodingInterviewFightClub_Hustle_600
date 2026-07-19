@@ -92,7 +92,90 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="apartmenthunting" %}
+```kotlin
+package binarysearch
+
+fun findBestBlock(blocks: List<Map<String, Boolean>>, requirements: List<String>): Int {
+    // Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
+    val amenityMap = mutableMapOf<String, MutableList<Int>>()
+    blocks.forEachIndexed { index, block ->
+        block.forEach { (amenity, present) ->
+            if (present) {
+                amenityMap.getOrPut(amenity) { mutableListOf() }.add(index)
+            }
+        }
+    }
+
+    // Ensure all required amenities are present
+    requirements.forEach {
+        if (amenityMap[it].isNullOrEmpty()) return -1 // Return -1 if any required amenity is not present in any block
+    }
+
+    // Step 2: Determine the optimal block
+    var bestBlock = -1
+    var bestMaxDistance = Int.MAX_VALUE
+
+    // N * R * Log(K) , K = number of unique amininties present across all the blocks
+    blocks.forEachIndexed { index, _ ->
+        val maxDistance = requirements.map { amenity ->
+            closestDistance(index, amenityMap[amenity]!!)
+        }.maxOrNull()!!
+
+        // Check if the current block has the smallest maximum distance
+        if (maxDistance < bestMaxDistance) {
+            bestMaxDistance = maxDistance
+            bestBlock = index
+        }
+    }
+
+    return bestBlock
+}
+
+// Function to find the minimum distance to the closest block with the given amenity
+fun closestDistance(blockIndex: Int, blocksWithAmenity: List<Int>): Int {
+    val pos = blocksWithAmenity.binarySearch(blockIndex)
+    return if (pos >= 0) 0
+    else {
+        val insertPoint = -pos - 1
+        val leftDistance = if (insertPoint > 0) blockIndex - blocksWithAmenity[insertPoint - 1] else Int.MAX_VALUE
+        val rightDistance = if (insertPoint < blocksWithAmenity.size) blocksWithAmenity[insertPoint] - blockIndex else Int.MAX_VALUE
+        minOf(leftDistance, rightDistance)
+    }
+}
+
+// Custom Binary Search implementation
+fun binarySearch(arr: List<Int>, target: Int): Int {
+    var (low, high) = listOf(0, arr.lastIndex)
+
+    while (low<= high) {
+        val mid = low + (high - low) / 2
+        when {
+            arr[mid] < target -> low = mid + 1
+            arr[mid] > target -> high = mid - 1
+            else -> return mid
+        }
+    }
+
+    return -(low + 1)
+}
+
+
+
+fun main() {
+    val blocks = listOf(
+        mapOf("gym" to false, "school" to true, "store" to false),
+        mapOf("gym" to true, "school" to false, "store" to false),
+        mapOf("gym" to true, "school" to true, "store" to false),
+        mapOf("gym" to false, "school" to true, "store" to false),
+        mapOf("gym" to false, "school" to true, "store" to true)
+    )
+    val requirements = listOf("gym", "school", "store")
+
+
+    val bestBlock = findBestBlock(blocks, requirements)
+    println("The best block to choose is: $bestBlock")
+}
+```
 
 ### Complexity
 
@@ -133,7 +216,45 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="capacitytoshippackagewithinddays" %}
+```kotlin
+package binarysearch
+
+class CapacityToShipPackageWithinDDays {
+    fun feasible(weights: IntArray, mid:Int, days: Int): Boolean {
+        var (daysNeeded, currentLoad) = 1 to 0
+        weights.forEach { weight ->
+            currentLoad += weight
+            if (currentLoad > mid) {
+                daysNeeded++
+                currentLoad = weight
+            }
+        }
+
+        return daysNeeded <= days
+    }
+
+    fun shipWithinDays(weights: IntArray, days: Int): Int {
+        var (sum, max) = 0 to 0
+
+        weights.forEach{ weight ->
+            sum += weight
+            max = maxOf(max, weight)
+        }
+
+        var (l, r) = max to sum
+
+        while ( l < r) {
+            val mid = l + (r - l) / 2
+            when {
+                feasible(weights, mid, days) -> r = mid
+                else -> l = mid + 1
+            }
+        }
+
+        return l
+    }
+}
+```
 
 ### Complexity
 
@@ -186,7 +307,49 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="closestsebsequencesum" %}
+```kotlin
+package binarysearch
+
+import kotlin.math.abs
+
+class ClosestSebsequenceSum {
+    fun minAbsDifference(nums: IntArray, goal: Int): Int {
+        val leftSums = mutableListOf<Int>()
+        val rightSums = mutableListOf<Int>()
+        val n = nums.size
+        val mid = n / 2
+
+        fun dfs(start: Int, end: Int, currentSum: Int, result: MutableList<Int>) {
+            if (start == end) {
+                result.add(currentSum)
+                return
+            }
+            dfs(start + 1, end, currentSum, result) // exclude
+            dfs(start + 1, end, currentSum + nums[start], result) // include
+        }
+
+        dfs(0, mid, 0, leftSums)
+        dfs(mid, n, 0, rightSums)
+
+        rightSums.sort()
+        var minDiff = Int.MAX_VALUE
+
+        for (sumLeft in leftSums) {
+            val target = goal - sumLeft
+            val idx = rightSums.binarySearch(target)
+            if (idx >= 0) return 0 // exact match found
+
+            val insertPoint = -idx - 1
+            if (insertPoint < rightSums.size)
+                minDiff = minOf(minDiff, abs(sumLeft + rightSums[insertPoint] - goal))
+            if (insertPoint > 0)
+                minDiff = minOf(minDiff, abs(sumLeft + rightSums[insertPoint - 1] - goal))
+        }
+
+        return minDiff
+    }
+}
+```
 
 ### Complexity
 
@@ -246,7 +409,52 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="findfirstandlastposition" %}
+```kotlin
+package binarysearch
+
+class FindFirstAndLastPosition {
+
+    fun searchRange(nums: IntArray, target: Int): IntArray {
+        val result = intArrayOf(-1, -1)
+
+        // Find the first occurrence
+        result[0] = binarySearch(nums, target, true)
+
+        // If the first occurrence is not found, return [-1, -1]
+        if (result[0] == -1) return result
+
+        // Find the last occurrence
+        result[1] = binarySearch(nums, target, false)
+
+        return result
+    }
+
+    private fun binarySearch(nums: IntArray, target: Int, findFirst: Boolean): Int {
+        var left = 0
+        var right = nums.lastIndex
+        var result = -1
+
+        while (left <= right) {
+            val mid = left + (right - left) / 2
+            when {
+                nums[mid] == target -> {
+                    result = mid
+                    // Adjust the search range based on whether we are looking for the first or last occurrence
+                    if (findFirst) {
+                        right = mid - 1  // Move left to find the first occurrence
+                    } else {
+                        left = mid + 1   // Move right to find the last occurrence
+                    }
+                }
+                nums[mid] < target -> left = mid + 1
+                else -> right = mid - 1
+            }
+        }
+
+        return result
+    }
+}
+```
 
 ### Complexity
 
@@ -297,7 +505,60 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="findkclosestelements" %}
+```kotlin
+package heap
+
+import java.util.PriorityQueue
+import kotlin.math.abs
+
+class FindKClosestElements {
+    class FindKClosestElements {
+        /**
+         * Solving using Max Heap. O ( N log K + K log K )
+         */
+        fun findClosestElements(arr: Array<Int>, k: Int, x: Int): List<Int> {
+            /**
+             * If we create a Max heap returning ( logic(b)  - logic(a) )
+             * and keep adding element and remove farthest element in each iteration once heap size goes > K
+             * then we'll eliminate (n - k ). Remaining elements will be K closest elements.i.e n - (n-k) = K
+             *
+             *
+             * example of logic function could be frequency count from map eucledian distances
+             */
+           val priorityQueue = PriorityQueue<Int> { a,b ->
+               val diffA = abs(a - x)
+               val diffB = abs(b - x)
+               if (diffA == diffB) b - a else  diffB - diffA
+           }
+            arr.forEach { element ->
+                priorityQueue.offer(element)
+                // Remove the farthest element
+                if (priorityQueue.size > k)
+                    priorityQueue.poll()
+            }
+            val result = mutableListOf<Int>()
+
+            repeat(k) {
+                if (priorityQueue.isNotEmpty())
+                    result.add(priorityQueue.poll())
+            }
+
+            return result
+        }
+
+        // We could also do
+
+        companion object {
+            @JvmStatic
+            fun main(args: Array<String>) {
+                val testClass = FindKClosestElements()
+
+                println(testClass.findClosestElements(arrayOf(1,2,3,4,5,6,7), 4, 4 ))
+            }
+        }
+    }
+}
+```
 
 ### Complexity
 
@@ -340,7 +601,24 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="findminimuminrotatedsortedarray" %}
+```kotlin
+package binarysearch
+
+class FindMinimumInRotatedSortedArray {
+    fun findMin(nums: IntArray): Int {
+        var (left, right) = 0 to nums.size - 1
+        while (left < right) {
+            val mid = left + (right - left) / 2
+            when {
+                nums[mid] > nums[right] -> left = mid + 1
+                else -> right = mid
+            }
+        }
+
+        return nums[left]
+    }
+}
+```
 
 ### Complexity
 
@@ -383,7 +661,28 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="findpeakelement" %}
+```kotlin
+package binarysearch
+
+class FindPeakElement {
+    fun findPeakElement(nums: IntArray): Int {
+        var left = 0
+        var right = nums.lastIndex
+
+        while ( left < right) {
+            val mid = left + (right - left)/2
+
+            if (nums[mid] > nums[mid + 1]) {
+                right = mid
+            } else {
+                left = mid + 1
+            }
+        }
+
+        return left
+    }
+}
+```
 
 ### Complexity
 
@@ -439,7 +738,33 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="findpeakelementbettersolution" %}
+```kotlin
+package binarysearch
+
+class FindPeakElementBetterSolution {
+    fun findPeakElement(nums: IntArray): Int? {
+        if (nums.isEmpty()) return null
+
+        var (left, right) = 0 to nums.size - 1
+
+        while (left < right) {
+            val mid = left + (right - left) / 2
+
+            // Safely handle boundaries
+            val leftNeighbor = if (mid > 0) nums[mid - 1] else Int.MIN_VALUE
+            val rightNeighbor = if (mid < nums.size - 1) nums[mid + 1] else Int.MIN_VALUE
+
+            when {
+                nums[mid] > leftNeighbor && nums[mid] > rightNeighbor -> return mid // Found peak
+                nums[mid] < rightNeighbor -> left = mid + 1 // Move to the right
+                else -> right = mid // Move to the left
+            }
+        }
+
+        return left // Single peak element when the range narrows down
+    }
+}
+```
 
 ### Complexity
 
@@ -488,7 +813,33 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="firstbadversion" %}
+```kotlin
+package binarysearch
+
+abstract class VersionControl {
+    fun isBadVersion(mid: Int): Boolean {
+        return false // Return dummy value
+    }
+
+    abstract fun firstBadVersion(n: Int) : Int
+}
+class FirstBadVersion: VersionControl() {
+    override fun firstBadVersion(n: Int) : Int {
+        var start = 1
+        var end = n
+
+        while (start < end) {
+            val mid = start + (end - start) / 2
+            when {
+                isBadVersion(mid) -> end = mid
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
+}
+```
 
 ### Complexity
 
@@ -531,7 +882,53 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="guessnumberhigherorlower" %}
+```kotlin
+package binarysearch
+
+/**
+ * The API guess is defined in the parent class.
+ * @param  num   your guess
+ * @return 	     -1 if num is higher than the picked number
+ *			      1 if num is lower than the picked number
+ *               otherwise return 0
+ * fun guess(num:Int):Int {}
+ */
+
+class Solution:GuessGame() {
+    override fun guessNumber(n:Int):Int {
+        var start = 1
+        var end = n
+
+        while (start <= end) {
+            val mid = start + (end-start) / 2
+
+            val distance = guess(mid)
+
+
+            when {
+                distance == 0 -> return mid
+                distance < 0 -> end = mid - 1
+                else -> start = mid + 1
+            }
+        }
+
+        return -1
+    }
+
+
+}
+
+open class GuessGame {
+
+    open fun guessNumber(n: Int): Int {
+        TODO("Not yet implemented")
+    }
+
+    fun guess(mid: Int): Int {
+        return 0
+    }
+}
+```
 
 ### Complexity
 
@@ -582,7 +979,41 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="houserobber_iv" %}
+```kotlin
+package binarysearch
+
+class HouseRobber_IV {
+    fun minCapability(nums: IntArray, k: Int): Int {
+        var left = nums.minOrNull() ?: 0
+        var right = nums.maxOrNull() ?: 0
+
+        fun canRob(cap: Int): Boolean {
+            var robbed = 0
+            var i = 0
+            while (i < nums.size) {
+                if (nums[i] <= cap) {
+                    robbed++
+                    i += 2  // skip adjacent
+                } else {
+                    i++
+                }
+            }
+            return robbed >= k
+        }
+
+        while (left < right) {
+            val mid = (left + right) / 2
+            if (canRob(mid)) {
+                right = mid
+            } else {
+                left = mid + 1
+            }
+        }
+
+        return left
+    }
+}
+```
 
 ### Complexity
 
@@ -625,7 +1056,27 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="kthmissingpositivenumber" %}
+```kotlin
+package binarysearch
+
+class KThMissingPositiveNumber {
+    fun findKthPositive(arr: IntArray, k: Int): Int {
+        var (left, right) = 0 to arr.size
+
+        while (left < right) {
+            val mid = left + (right - left) / 2
+            val missingCount = arr[mid] - ( mid + 1 )
+
+            when {
+                missingCount < k -> left = mid + 1
+                else -> right = mid
+            }
+        }
+
+        return left + k
+    }
+}
+```
 
 ### Complexity
 
@@ -659,8 +1110,8 @@ Input: piles = [3, 6, 7, 11], h = 8
 Output: 4
 
 Explanation:
-- At k = 4:  pile 0: ceil(3/4)=1h, pile 1: ceil(6/4)=2h, pile 2: ceil(7/4)=2h, pile 3: ceil(11/4)=3h. Total = 1+2+2+3 = 8h ✅
-- At k = 3:  ceil(3/3)=1h + ceil(6/3)=2h + ceil(7/3)=3h + ceil(11/3)=4h = 10h > 8h ❌
+- At k = 4:  pile 0: ceil(3/4)=1h, pile 1: ceil(6/4)=2h, pile 2: ceil(7/4)=2h, pile 3: ceil(11/4)=3h. Total = 1+2+2+3 = 8h  ✅
+- At k = 3:  ceil(3/3)=1h + ceil(6/3)=2h + ceil(7/3)=3h + ceil(11/3)=4h = 10h > 8h  ❌
 So the minimum k is 4.
 ```
 
@@ -668,7 +1119,7 @@ So the minimum k is 4.
 
 **The search space:**
 - **Lower bound:** `1` (she must eat at least 1 banana per hour)
-- **Upper bound:** `max(piles)` (eating faster than the largest pile doesn't help — the bottleneck is the biggest single pile)
+- **Upper bound:** `max(piles)` (eating faster than the largest pile doesn't help because the bottleneck is the biggest single pile)
 - **Feasibility function:** `canEatAllBananas(k)` computes whether speed `k` lets Koko finish in ≤ `h` hours
 
 **Dry run:**
@@ -695,21 +1146,102 @@ Binary search on k in [1, 11]:
   Step 5: left=4, right=4, loop exits. Return 4.
 ```
 
-**Code:**
+### Code
 
-{% include code-tabs-file.html problem="kokoeatingbanana" %}
+```kotlin
+package binarysearch
 
-**Complexity Analysis:**
+/**
+ * Problem: Koko loves bananas. There are n piles, pile i has piles[i] bananas.
+ * Guards return in h hours. Koko eats at speed k bananas/hour.
+ * Find minimum k to finish all bananas within h hours.
+ *
+ * Pattern: Binary search on answer (minimize k such that canEatAll(k) is feasible).
+ * The predicate canEatAll(k) is monotonic: if speed k works, any speed > k also works.
+ *
+ * Search space: k ∈ [1, max(piles)]
+ * - Lower bound: must eat at least 1 banana/hour
+ * - Upper bound: eating faster than largest pile doesn't help further
+ */
+class KokoEatingBanana {
+
+    /**
+     * Finds the minimum integer eating speed k such that Koko
+     * can eat all piles within h hours.
+     *
+     * @param piles Array where piles[i] = number of bananas in pile i
+     *              Constraints: 1 <= piles.length <= 10^4
+     *                           piles.length <= h <= 10^9
+     *                           1 <= piles[i] <= 10^9
+     * @param h     Hours available before guards return
+     *              Constraints: h >= piles.length
+     * @return      Minimum integer eating speed k
+     *
+     * Time  Complexity: O(n log m) where n = piles.size, m = max(piles)
+     * Space Complexity: O(1)
+     */
+    fun minEatingSpeed(piles: IntArray, h: Int): Int {
+        // Left: slowest possible speed (1 banana/hour)
+        var left = 1
+        // Right: fastest useful speed = largest pile
+        var right = piles.maxOrNull()!!
+
+        // Binary search: answer is always in [left, right]
+        while (left < right) {
+            // Safe midpoint: avoids overflow from (left + right)
+            val mid = left + (right - left) / 2
+
+            if (canEatAllBananas(piles, h, mid)) {
+                // Speed mid works — try slower speed
+                right = mid
+            } else {
+                // Speed mid too slow — need faster
+                left = mid + 1
+            }
+        }
+        return left
+    }
+
+    /**
+     * Checks whether eating speed `k` lets Koko finish all piles
+     * within `h` hours.
+     *
+     * Hours per pile = ceil(pile / k).
+     * Total hours = sum of ceil(pile / k) for all piles.
+     * Feasible if total hours <= h.
+     *
+     * Integer ceil trick: (pile + k - 1) / k
+     *   (7 + 4 - 1) / 4 = 10 / 4 = 2 (integer division truncates)
+     *
+     * @param piles Array of banana piles
+     * @param h     Hours available
+     * @param k     Eating speed in bananas per hour
+     * @return      True if total hours needed <= h
+     */
+    private fun canEatAllBananas(piles: IntArray, h: Int, k: Int): Boolean {
+        var totalHours = 0
+        for (pile in piles) {
+            totalHours += (pile + k - 1) / k
+            if (totalHours > h) return false  // early exit
+        }
+        return totalHours <= h
+    }
+}
+```
+
+### Complexity Analysis
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n log m) — binary search over range [1, max(piles)] takes log₂ m iterations. Each iteration runs `canEatAllBananas` which scans all n piles in O(n). So total = O(n) × O(log m) = O(n log m) |
-| **Space** | O(1) — only a few integer variables regardless of input size |
+| **Time** | O(n log m) — binary search over [1, max(piles)] takes log₂m iterations. Each iteration scans n piles. Total = O(n) × O(log m) = O(n log m) |
+| **Space** | O(1) — only integer variables regardless of input size |
 
-**Key insight for the pattern:**
-This is a **"minimize X such that predicate(X) is true"** problem — one of binary search's most powerful applications beyond simple array search. The predicate `canEatAllBananas(k)` is monotonic (once true at k, true for all larger k). We binary search for the first k where the predicate becomes true.
+### Pattern Insight
 
-**Variations:**
+This is a **"minimize X such that predicate(X) is true"** problem. The predicate `canEatAllBananas(k)` is monotonic (once true at k, true for all larger k). We binary search for the first k where the predicate becomes true.
+
+### Variations
+
 1. What if Koko can eat from multiple piles simultaneously?
 2. What if piles are refilled at a constant rate?
 3. What if there's a maximum speed limit enforced?
@@ -757,7 +1289,50 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="medianoftwosortedarrays" %}
+```kotlin
+package binarysearch
+
+// These are the challenges that I need to somewhoe solve to get
+class MedianOfTwoSortedARrays {
+    fun findMedianSortedArrays(nums1: IntArray, nums2: IntArray): Double {
+
+        if (nums1.size > nums2.size ) {
+            return findMedianSortedArrays(nums2, nums1)
+        }
+
+        val m = nums1.size
+        val n = nums2.size
+        var start = 0
+        var end = m
+
+        while (start <= end) {
+            val partitionX = (start + end) / 2
+            val partitionY = (m + n + 1) / 2 - partitionX
+
+            // Use getOrNull with the Elvis operator to handle boundaries
+            val leftX = nums1.getOrNull(partitionX - 1) ?: Int.MIN_VALUE
+            val rightX = nums1.getOrNull(partitionX) ?: Int.MAX_VALUE
+
+            val leftY = nums2.getOrNull(partitionY - 1) ?: Int.MIN_VALUE
+            val rightY = nums2.getOrNull(partitionY) ?: Int.MAX_VALUE
+
+            // Check if we have found the correct partition
+            when {
+                leftX <= rightY && leftY <= rightX -> {
+                    return if ((m + n) % 2 == 0) {
+                        (maxOf(leftX, leftY) + minOf(rightX, rightY)) / 2.0
+                    } else {
+                        maxOf(leftX, leftY).toDouble()
+                    }
+                }
+                leftX > rightY -> end = partitionX - 1
+                else -> start = partitionX + 1
+            }
+        }
+        return -1.0
+    }
+}
+```
 
 ### Complexity
 
@@ -800,7 +1375,40 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="randompickwithweight" %}
+```kotlin
+package binarysearch
+
+import kotlin.random.Random
+
+class RandomPickWithWeight (w: IntArray) {
+    private val prefixSum = IntArray(w.size){ 0 }
+    private val totalSum: Int
+    private val w: IntArray = w
+    init {
+        for (i in w.indices) {
+            prefixSum[i] = if(i > 0) prefixSum[i-1] + w[i] else w[i]
+        }
+
+        totalSum = prefixSum.last()
+    }
+
+    fun pickIndex(): Int {
+        val randomPick = Random.nextInt(totalSum)
+        var (start, end) = 0 to w.size
+
+        while (start < end) {
+            val mid = start + (end - start)/2
+
+            when {
+                prefixSum[mid] > randomPick -> end = mid
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
+}
+```
 
 ### Complexity
 
@@ -851,7 +1459,32 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="searcha2dmatrix" %}
+```kotlin
+package binarysearch
+
+class SearchA2dMatrix {
+    fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
+        if (matrix.isEmpty() || matrix[0].isEmpty()) return false
+
+        val (m, n) = matrix.size to matrix[0].size
+
+        var (left, right) = 0 to m * n - 1
+
+        while (left <= right) {
+            val mid = left + (right - left) / 2
+            val midValue = matrix[mid / n][mid % n]  // Convert 1D index to 2D
+
+            when {
+                midValue == target -> return true
+                midValue < target -> left = mid + 1
+                else -> right = mid - 1
+            }
+        }
+
+        return false
+    }
+}
+```
 
 ### Complexity
 
@@ -912,7 +1545,49 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="searchinrotatedarray_ii" %}
+```kotlin
+package binarysearch
+
+class SearchInRotatedArray_II {
+    fun search(nums: IntArray, target: Int): Boolean {
+        var left = 0
+        var right = nums.lastIndex
+
+        while (left <= right) {
+            val mid = left + (right - left) / 2
+
+            when {
+                nums[mid] == target -> return true
+
+                // Handle duplicates: skip the duplicates
+                nums[left] == nums[mid] && nums[mid] == nums[right] -> {
+                    left++
+                    right--
+                }
+
+                // Left portion is sorted
+                nums[left] <= nums[mid] -> {
+                    if (nums[left] <= target && target < nums[mid]) {
+                        right = mid - 1 // Target in left portion
+                    } else {
+                        left = mid + 1 // Target in right portion
+                    }
+                }
+
+                // Right portion is sorted
+                else -> {
+                    if (nums[mid] < target && target <= nums[right]) {
+                        left = mid + 1 // Target in right portion
+                    } else {
+                        right = mid - 1 // Target in left portion
+                    }
+                }
+            }
+        }
+        return false
+    }
+}
+```
 
 ### Complexity
 
@@ -965,7 +1640,40 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="searchinrotatedsortedarray" %}
+```kotlin
+package binarysearch
+
+class SearchInRotatedSortedArray {
+    fun search(nums: IntArray, target: Int): Int {
+        var (start, end) = listOf(0, nums.lastIndex)
+
+        while (start <= end) {
+            val mid = start + (end - start) / 2
+
+            if (nums[mid] == target) return mid
+
+            // Determine if Left half is sorted
+            if (nums[start] <= nums[mid]) {
+                if (nums[start] <= target && target < nums[mid]) {
+                    end = mid - 1
+                } else {
+                    start = mid + 1
+                }
+            } else {
+                // Right half is sorted
+                if (nums[mid] < target && target <= nums[end]) {
+                    start = mid + 1
+                } else {
+                    end = mid - 1
+                }
+            }
+        }
+
+        return -1
+
+    }
+}
+```
 
 ### Complexity
 
@@ -1010,7 +1718,28 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="searchinsertionposition" %}
+```kotlin
+package binarysearch
+
+class SearchInsertionPosition {
+    fun searchInsert(nums: IntArray, target: Int): Int {
+        var start = 0
+        var end = nums.size - 1
+
+        while (start <= end) {
+            val mid = start + ( end - start ) / 2
+
+            when {
+                nums[mid] == target -> return mid
+                nums[mid] > target -> end = mid - 1
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
+}
+```
 
 ### Complexity
 
@@ -1067,7 +1796,33 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="singleelementinasortedarray" %}
+```kotlin
+package binarysearch
+
+class SingleElementInASortedArray {
+    fun singleNonDuplicate(nums: IntArray): Int {
+        var low = 0
+        var high = nums.size - 1
+
+        while (low < high) {
+            var mid = low + (high - low) / 2
+            // Ensure mid is even for checking pair with the next element
+            if (mid % 2 == 1) {
+                mid--
+            }
+
+            // Check if the pair is valid
+            if (nums[mid] == nums[mid + 1]) {
+                low = mid + 2 // Move to the right half
+            } else {
+                high = mid // Move to the left half
+            }
+        }
+
+        return nums[low] // low == high will give the unique element
+    }
+}
+```
 
 ### Complexity
 
@@ -1124,7 +1879,33 @@ Let's trace through the code to understand how it processes the input:
 
 ### Code
 
-{% include code-tabs-file.html problem="valleyelement" %}
+```kotlin
+package binarysearch
+
+class ValleyElement {
+    fun findValleyElementBinary(nums: IntArray): Int? {
+        if (nums.isEmpty()) return null
+
+        var (left, right) = 0 to nums.size
+
+        while (left < right) {
+            val mid = left + (right - left) / 2
+
+            // Safely handle boundaries
+            val leftNeighbor = if (mid > 0) nums[mid - 1] else Int.MAX_VALUE
+            val rightNeighbor = if (mid < nums.size - 1) nums[mid + 1] else Int.MAX_VALUE
+
+            when {
+                nums[mid] < leftNeighbor && nums[mid] < rightNeighbor -> return nums[mid] // Found valley
+                nums[mid] > rightNeighbor -> left = mid + 1 // Move to the right
+                else -> right = mid // Move to the left
+            }
+        }
+
+        return null // No valley found (unlikely for a valid array)
+    }
+}
+```
 
 ### Complexity
 

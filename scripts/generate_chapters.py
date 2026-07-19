@@ -571,7 +571,7 @@ def generate_chapter(chapter_key, chapter_info):
         if not kotlin_file.exists():
             lines.append(f"## {prob_key.replace('_', ' ').title()}")
             lines.append("")
-            lines.append("{% include code-tabs-file.html problem=\"" + prob_key + "\" %}")
+            lines.append("*(Code not available)*")
             lines.append("")
             lines.append("---")
             lines.append("")
@@ -630,7 +630,9 @@ def generate_chapter(chapter_key, chapter_info):
         # Code with detailed comments
         lines.append("### Code")
         lines.append("")
-        lines.append("{% include code-tabs-file.html problem=\"" + prob_key + "\" %}")
+        lines.append("```kotlin")
+        lines.append(kotlin_code)
+        lines.append("```")
         lines.append("")
         
         # Complexity
