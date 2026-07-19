@@ -1,43 +1,49 @@
 ---
 layout: chapter
-title: "Caches - LRU, LFU & Memory Management"
+title: "Caches:"
 chapter_number: 12
-chapter_title: "Caches"
+chapter_title: "Caches:"
 toc: true
 prev_chapter:
   url: "/chapters/11-backtracking"
-  title: "Backtracking - Exhaustive Search Mastery"
+  title: "Backtracking:"
 next_chapter:
   url: "/chapters/13-appendix"
   title: "Appendix - The Gigachad Toolkit"
 ---
 
-# Caches - LRU, LFU & Memory Management
+# Caches:
 
-This chapter covers problems from the CrackGoogle repository. All source files are linked below.
+> All 3 problems from the CrackGoogle repository with solutions in **Kotlin, Java, Python, Rust, and C++**.
 
 ## Complete Problem Set
 
-| # | Problem | Pattern | File |
-|---|---------|---------|------|
-| 1 | LRU Cache | HashMap + DLL | cache/LRUCache.kt |
-| 2 | LRU Cache (LinkedList) | LinkedHashMap | cache/LRUCacheLinkedList.kt |
-| 3 | LFU Cache | Freq Map | cache/LFUCache.kt |
-
-### LRU Cache
-```kotlin
-class LRUCache(private val capacity: Int) {
-    private val map = LinkedHashMap<Int, Int>(capacity, 0.75f, true) {
-        override fun removeEldestEntry(eldest: MutableMap.MutableEntry<Int, Int>?): Boolean = size > capacity
-    }
-    fun get(key: Int): Int = map.getOrDefault(key, -1)
-    fun put(key: Int, value: Int) { map[key] = value }
-}
-```
-
-
-See the [Master Problem Index](./14-problem-index.md) for the full catalog of all 465+ problems.
+| # | Problem | Topic | Data Files |
+|---|---------|-------|------------|
+| 1 | **LFUCache** | cache | ✅ |
+| 2 | **LRUCache** | cache | ✅ |
+| 3 | **LRUCacheLinkedList** | cache | ✅ |
 
 ---
 
-> **Next up: [Appendix - The Gigachad Toolkit ->](/chapters/13-appendix.md)**
+## Problem 0: LFUCache
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/cache/LFUCache.kt`
+
+{% include code-tabs-file.html problem="lfucache" %}
+
+---
+
+## Problem 1: LRUCache
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/cache/LRUCache.kt`
+
+{% include code-tabs-file.html problem="lrucache" %}
+
+---
+
+## Problem 2: LRUCacheLinkedList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/cache/LRUCacheLinkedList.kt`
+
+{% include code-tabs-file.html problem="lrucachelinkedlist" %}

@@ -1,82 +1,184 @@
 ---
 layout: chapter
-title: "Linked Lists - Pointer Manipulation"
+title: "Linked Lists:"
 chapter_number: 4
-chapter_title: "Linked Lists"
+chapter_title: "Linked Lists:"
 toc: true
 prev_chapter:
   url: "/chapters/03-arrays-two-pointers"
-  title: "Arrays & Two Pointers - The Bread and Butter"
+  title: "Arrays & Two Pointers:"
 next_chapter:
   url: "/chapters/05-trees"
-  title: "Trees - Hierarchical Thinking"
+  title: "Trees:"
 ---
 
-# Linked Lists - Pointer Manipulation
+# Linked Lists:
 
-This chapter covers problems from the CrackGoogle repository. All source files are linked below.
+> All 18 problems from the CrackGoogle repository with solutions in **Kotlin, Java, Python, Rust, and C++**.
 
-## Complete Problem Set (18 problems)
+## Complete Problem Set
 
-| # | Problem | Pattern | File |
-|---|---------|---------|------|
-| 1 | Reverse Linked List | Iterative | linkedlist/ReverseLinkedList.kt |
-| 2 | Merge Two Sorted Lists | Merge | linkedlist/MergeTwoSortedLIst.kt |
-| 3 | Linked List Cycle | Fast & Slow | linkedlist/LinkedListCycle.kt |
-| 4 | Linked List Cycle II | Cycle start | linkedlist/LinkedListCycle_II.kt |
-| 5 | Remove Nth Node From End | Two ptrs | linkedlist/RemoveNthNodeFromEndOfList.kt |
-| 6 | Palindrome Linked List | Reverse half | linkedlist/PalindromeLinkedList.kt |
-| 7 | Add Two Numbers | Math | linkedlist/AddTwoNumbers.kt |
-| 8 | Odd Even Linked List | Reorder | linkedlist/OddEvenLinkedList.kt |
-| 9 | Intersection of Two Lists | Two ptrs | linkedlist/IntersectionOfTwoLinkedList.kt |
-| 10 | Copy List w/ Random | Hash map | linkedlist/CopyLinkedListWithRandomPointer.kt |
-| 11 | Delete Middle Node | Fast & Slow | linkedlist/DeleteMiddleNodeOfLinkedList.kt |
-| 12 | Insert Sorted Circular | Traversal | linkedlist/InsertIntoASortedCircularLinkedList.kt |
-| 13 | Reverse Nodes k-Group | Recursive | linkedlist/ReverseNodesInKGroups.kt |
-| 14 | Merge k Sorted Lists | Divide Conquer | linkedlist/MergeKSortedList.kt |
-
-### Reverse Linked List
-```kotlin
-fun reverseList(head: ListNode?): ListNode? {
-    var prev: ListNode? = null; var curr = head
-    while (curr != null) {
-        val next = curr.next; curr.next = prev
-        prev = curr; curr = next
-    }
-    return prev
-}
-```
-
-### Merge Two Sorted Lists
-```kotlin
-fun mergeTwoLists(l1: ListNode?, l2: ListNode?): ListNode? {
-    val dummy = ListNode(0); var curr = dummy
-    var a = l1; var b = l2
-    while (a != null && b != null) {
-        if (a.`val` < b.`val`) { curr.next = a; a = a.next }
-        else { curr.next = b; b = b.next }
-        curr = curr.next!!
-    }
-    curr.next = a ?: b
-    return dummy.next
-}
-```
-
-### Cycle Detection
-```kotlin
-fun hasCycle(head: ListNode?): Boolean {
-    var slow = head; var fast = head
-    while (fast?.next != null) {
-        slow = slow!!.next; fast = fast.next!!.next
-        if (slow == fast) return true
-    }
-    return false
-}
-```
-
-
-See the [Master Problem Index](./14-problem-index.md) for the full catalog of all 465+ problems.
+| # | Problem | Topic | Data Files |
+|---|---------|-------|------------|
+| 1 | **AddTwoNumbers** | linkedlist | ✅ |
+| 2 | **CopyLinkedListWithRandomPointer** | linkedlist | ✅ |
+| 3 | **DeleteMiddleNodeOfLinkedList** | linkedlist | ✅ |
+| 4 | **InsertIntoASortedCircularLinkedList** | linkedlist | ✅ |
+| 5 | **InsertIntoASortedCircularList** | linkedlist | ✅ |
+| 6 | **IntersectionOfTwoLinkedList** | linkedlist | ✅ |
+| 7 | **LinkedListCycle** | linkedlist | ✅ |
+| 8 | **LinkedListCycle_II** | linkedlist | ✅ |
+| 9 | **MergeKSortedList** | linkedlist | ✅ |
+| 10 | **MergeKSortedListIterative** | linkedlist | ✅ |
+| 11 | **MergeTwoSortedLIst** | linkedlist | ✅ |
+| 12 | **OddEvenLinkedList** | linkedlist | ✅ |
+| 13 | **OddOrEvenLinkedList** | linkedlist | ✅ |
+| 14 | **PalindromeLinkedList** | linkedlist | ✅ |
+| 15 | **RemoveNthNodeFromEndOfList** | linkedlist | ✅ |
+| 16 | **ReverseLinkedList** | linkedlist | ✅ |
+| 17 | **ReverseLinkedListIterative** | linkedlist | ✅ |
+| 18 | **ReverseNodesInKGroups** | linkedlist | ✅ |
 
 ---
 
-> **Next up: [Trees - Hierarchical Thinking ->](/chapters/05-trees.md)**
+## Problem 0: AddTwoNumbers
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/AddTwoNumbers.kt`
+
+{% include code-tabs-file.html problem="addtwonumbers" %}
+
+---
+
+## Problem 1: CopyLinkedListWithRandomPointer
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/CopyLinkedListWithRandomPointer.kt`
+
+{% include code-tabs-file.html problem="copylinkedlistwithrandompointer" %}
+
+---
+
+## Problem 2: DeleteMiddleNodeOfLinkedList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/DeleteMiddleNodeOfLinkedList.kt`
+
+{% include code-tabs-file.html problem="deletemiddlenodeoflinkedlist" %}
+
+---
+
+## Problem 3: InsertIntoASortedCircularLinkedList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/InsertIntoASortedCircularLinkedList.kt`
+
+{% include code-tabs-file.html problem="insertintoasortedcircularlinkedlist" %}
+
+---
+
+## Problem 4: InsertIntoASortedCircularList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/InsertIntoASortedCircularList.kt`
+
+{% include code-tabs-file.html problem="insertintoasortedcircularlist" %}
+
+---
+
+## Problem 5: IntersectionOfTwoLinkedList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/IntersectionOfTwoLinkedList.kt`
+
+{% include code-tabs-file.html problem="intersectionoftwolinkedlist" %}
+
+---
+
+## Problem 6: LinkedListCycle
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/LinkedListCycle.kt`
+
+{% include code-tabs-file.html problem="linkedlistcycle" %}
+
+---
+
+## Problem 7: LinkedListCycle_II
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/LinkedListCycle_II.kt`
+
+{% include code-tabs-file.html problem="linkedlistcycle_ii" %}
+
+---
+
+## Problem 8: MergeKSortedList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/MergeKSortedList.kt`
+
+{% include code-tabs-file.html problem="mergeksortedlist" %}
+
+---
+
+## Problem 9: MergeKSortedListIterative
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/MergeKSortedListIterative.kt`
+
+{% include code-tabs-file.html problem="mergeksortedlistiterative" %}
+
+---
+
+## Problem 10: MergeTwoSortedLIst
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/MergeTwoSortedLIst.kt`
+
+{% include code-tabs-file.html problem="mergetwosortedlist" %}
+
+---
+
+## Problem 11: OddEvenLinkedList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/OddEvenLinkedList.kt`
+
+{% include code-tabs-file.html problem="oddevenlinkedlist" %}
+
+---
+
+## Problem 12: OddOrEvenLinkedList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/OddOrEvenLinkedList.kt`
+
+{% include code-tabs-file.html problem="oddorevenlinkedlist" %}
+
+---
+
+## Problem 13: PalindromeLinkedList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/PalindromeLinkedList.kt`
+
+{% include code-tabs-file.html problem="palindromelinkedlist" %}
+
+---
+
+## Problem 14: RemoveNthNodeFromEndOfList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/RemoveNthNodeFromEndOfList.kt`
+
+{% include code-tabs-file.html problem="removenthnodefromendoflist" %}
+
+---
+
+## Problem 15: ReverseLinkedList
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/ReverseLinkedList.kt`
+
+{% include code-tabs-file.html problem="reverselinkedlist" %}
+
+---
+
+## Problem 16: ReverseLinkedListIterative
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/ReverseLinkedListIterative.kt`
+
+{% include code-tabs-file.html problem="reverselinkedlistiterative" %}
+
+---
+
+## Problem 17: ReverseNodesInKGroups
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/ReverseNodesInKGroups.kt`
+
+{% include code-tabs-file.html problem="reversenodesinkgroups" %}

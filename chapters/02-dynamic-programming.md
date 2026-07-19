@@ -1,61 +1,292 @@
 ---
 layout: chapter
-title: "Dynamic Programming - Organized Recursion"
+title: "Dynamic Programming:"
 chapter_number: 2
-chapter_title: "Dynamic Programming"
+chapter_title: "Dynamic Programming:"
 toc: true
 prev_chapter:
   url: "/chapters/01-binary-search"
-  title: "Binary Search - The Art of Halving the Search Space"
+  title: "Binary Search:"
 next_chapter:
   url: "/chapters/03-arrays-two-pointers"
-  title: "Arrays & Two Pointers - The Bread and Butter"
+  title: "Arrays & Two Pointers:"
 ---
 
-# Dynamic Programming: Organized Recursion
+# Dynamic Programming:
 
-> **"Dynamic Programming is not rocket science; it's simply organized recursion."**
+> All 30 problems from the CrackGoogle repository with solutions in **Kotlin, Java, Python, Rust, and C++**.
 
-DP transforms exponential brute force into polynomial time by caching repeated subproblem results.
+## Complete Problem Set
 
-## The 4-Step Framework
-
-1. **Define the State**: What does dp[i][j] represent?
-2. **Recurrence Relation**: How does dp[i][j] relate to smaller subproblems?
-3. **Base Cases**: What are the minimal states?
-4. **Compute Order**: Top-down (memoization) or bottom-up (tabulation)?
-
-## Problem 1: House Robber
-
-Cannot rob adjacent houses. Find max value.
-
-{% include code-tabs.html  kotlin="fun rob(nums: IntArray): Int {\n    var prev2 = 0; var prev1 = 0\n    for (num in nums) {\n        val curr = maxOf(num + prev2, prev1)\n        prev2 = prev1; prev1 = curr\n    }\n    return prev1\n}"  java="public int rob(int[] nums) {\n    int prev2 = 0, prev1 = 0;\n    for (int num : nums) {\n        int curr = Math.max(num + prev2, prev1);\n        prev2 = prev1; prev1 = curr;\n    }\n    return prev1;\n}"  python="def rob(nums: list[int]) -> int:\n    prev2 = prev1 = 0\n    for num in nums:\n        curr = max(num + prev2, prev1)\n        prev2, prev1 = prev1, curr\n    return prev1" %}
-
-## Problem 2: Maximum Subarray (Kadane's Algorithm)
-{% include code-tabs.html  kotlin="fun maxSubArray(nums: IntArray): Int {\n    var local = nums[0]; var global = nums[0]\n    for (i in 1 until nums.size) {\n        local = maxOf(nums[i], local + nums[i])\n        global = maxOf(global, local)\n    }\n    return global\n}"  java="public int maxSubArray(int[] nums) {\n    int local = nums[0], global = nums[0];\n    for (int i = 1; i < nums.length; i++) {\n        local = Math.max(nums[i], local + nums[i]);\n        global = Math.max(global, local);\n    }\n    return global;\n}"  python="def max_sub_array(nums: list[int]) -> int:\n    local = global_max = nums[0]\n    for i in range(1, len(nums)):\n        local = max(nums[i], local + nums[i])\n        global_max = max(global_max, local)\n    return global_max" %}
-
-## Problem 3: Coin Change (Minimum Coins)
-{% include code-tabs.html  kotlin="fun coinChange(coins: IntArray, amount: Int): Int {\n    val dp = IntArray(amount + 1) { amount + 1 }; dp[0] = 0\n    for (a in 1..amount) for (coin in coins)\n        if (coin <= a) dp[a] = minOf(dp[a], dp[a - coin] + 1)\n    return if (dp[amount] > amount) -1 else dp[amount]\n}"  java="public int coinChange(int[] coins, int amount) {\n    int[] dp = new int[amount + 1];\n    Arrays.fill(dp, amount + 1); dp[0] = 0;\n    for (int a = 1; a <= amount; a++)\n        for (int coin : coins)\n            if (coin <= a) dp[a] = Math.min(dp[a], dp[a - coin] + 1);\n    return dp[amount] > amount ? -1 : dp[amount];\n}"  python="def coin_change(coins: list[int], amount: int) -> int:\n    dp = [amount + 1] * (amount + 1); dp[0] = 0\n    for a in range(1, amount + 1):\n        for coin in coins:\n            if coin <= a: dp[a] = min(dp[a], dp[a - coin] + 1)\n    return -1 if dp[amount] > amount else dp[amount]" %}
-
-## Problem 4: Longest Common Subsequence
-{% include code-tabs.html  kotlin="fun longestCommonSubsequence(s: String, t: String): Int {\n    val dp = Array(s.length + 1) { IntArray(t.length + 1) }\n    for (i in 1..s.length) for (j in 1..t.length)\n        dp[i][j] = if (s[i-1] == t[j-1]) dp[i-1][j-1] + 1\n                   else maxOf(dp[i-1][j], dp[i][j-1])\n    return dp[s.length][t.length]\n}"  java="public int longestCommonSubsequence(String s, String t) {\n    int m = s.length(), n = t.length();\n    int[][] dp = new int[m + 1][n + 1];\n    for (int i = 1; i <= m; i++)\n        for (int j = 1; j <= n; j++)\n            dp[i][j] = s.charAt(i-1) == t.charAt(j-1)\n                ? dp[i-1][j-1] + 1\n                : Math.max(dp[i-1][j], dp[i][j-1]);\n    return dp[m][n];\n}"  python="def longest_common_subsequence(s: str, t: str) -> int:\n    m, n = len(s), len(t)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if s[i-1] == t[j-1]: dp[i][j] = dp[i-1][j-1] + 1\n            else: dp[i][j] = max(dp[i-1][j], dp[i][j-1])\n    return dp[m][n]" %}
-
-## Quick Reference (30+ problems)
-
-| # | Problem | Pattern | File |
-|---|---------|---------|------|
-| 1 | Min Cost Climbing Stairs | Fibonacci | array/dp/MinCostClimbingStaris.kt |
-| 2 | House Robber II | Circular | array/dp/HouseRobber_II.kt |
-| 3 | Maximum Product Subarray | Kadane w/sign | dynamic_programming/MaximumProductSubarray.kt |
-| 4 | Longest Increasing Subseq | LIS | array/dp/LongestIncreasingSubsequence.kt |
-| 5 | Target Sum | Subset Sum | array/dp/TargetSum.kt |
-| 6 | Partition Equal Subset Sum | 0/1 Knap | dynamic_programming/PartitionEqualSubsetSum.kt |
-| 7 | Burst Balloons | Interval DP | array/dp/BurstBaloons.kt |
-| 8 | Edit Distance | String DP | string/dynamic_programming/EditDistance.kt |
-| 9 | Regular Expression | String DP | string/dynamic_programming/RegularExpressionMatching.kt |
-| 10 | Cherry Pickup | 3D DP | grid/dynamic_programming/CherryPickup.kt |
-| 11 | Stock Trading I-V | State Machine | stock_market/dp/*.kt |
+| # | Problem | Topic | Data Files |
+|---|---------|-------|------------|
+| 1 | **BurstBaloons** | array/dp | ✅ |
+| 2 | **CoinChange** | array/dp | ✅ |
+| 3 | **CoinChange_II** | array/dp | ✅ |
+| 4 | **CoinChange_II_BottomUp** | array/dp | ✅ |
+| 5 | **HouseRobber** | array/dp | ✅ |
+| 6 | **HouseRobber_II** | array/dp | ✅ |
+| 7 | **LongestCommonSubarray** | array/dp | ✅ |
+| 8 | **LongestIncreasingSequenceInAMatrix** | array/dp | ✅ |
+| 9 | **LongestIncreasingSubsequence** | array/dp | ✅ |
+| 10 | **MaximalSquare** | array/dp | ✅ |
+| 11 | **MaximumSumSubArray** | array/dp | ✅ |
+| 12 | **MinCostClimbingStaris** | array/dp | ✅ |
+| 13 | **MinimumNumberofIncrementsSubarraysFormaTargetArray** | array/dp | ✅ |
+| 14 | **MinimumPathSum** | array/dp | ✅ |
+| 15 | **PartitionArrayIntoTwoArrayToMinimuzeSumDifference** | array/dp | ✅ |
+| 16 | **SplitArrayLargestSum** | array/dp | ✅ |
+| 17 | **TargetSum** | array/dp | ✅ |
+| 18 | **ClosestSubsequenceSum** | dynamic_programming | ✅ |
+| 19 | **MaximumProductSubarray** | dynamic_programming | ✅ |
+| 20 | **MaximumProfitInJobScheduling** | dynamic_programming | ✅ |
+| 21 | **PartitionEqualSubsetSum** | dynamic_programming | ✅ |
+| 22 | **SuperEggDropping** | dynamic_programming | ✅ |
+| 23 | **BestTimeToBuyAndSellStock** | stock_market/dp | ✅ |
+| 24 | **BestTimeToBuyAndSellStockWithCooldown** | stock_market/dp | ✅ |
+| 25 | **BestTimeToBuyAndSellStockWithTransactionFee** | stock_market/dp | ✅ |
+| 26 | **BestTimeToBuyAndSellStock_III** | stock_market/dp | ✅ |
+| 27 | **CherryPickup** | grid/dynamic_programming | ✅ |
+| 28 | **Test** | grid/dynamic_programming | ✅ |
+| 29 | **UniquePaths_I** | grid/dynamic_programming | ✅ |
+| 30 | **UniquePaths_II** | grid/dynamic_programming | ✅ |
 
 ---
 
-> **Next up: [Arrays & Two Pointers ->](./03-arrays-two-pointers.md)**
+## Problem 0: BurstBaloons
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/BurstBaloons.kt`
+
+{% include code-tabs-file.html problem="burstbaloons" %}
+
+---
+
+## Problem 1: CoinChange
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/CoinChange.kt`
+
+{% include code-tabs-file.html problem="coinchange" %}
+
+---
+
+## Problem 2: CoinChange_II
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/CoinChange_II.kt`
+
+{% include code-tabs-file.html problem="coinchange_ii" %}
+
+---
+
+## Problem 3: CoinChange_II_BottomUp
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/CoinChange_II_BottomUp.kt`
+
+{% include code-tabs-file.html problem="coinchange_ii_bottomup" %}
+
+---
+
+## Problem 4: HouseRobber
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/HouseRobber.kt`
+
+{% include code-tabs-file.html problem="houserobber" %}
+
+---
+
+## Problem 5: HouseRobber_II
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/HouseRobber_II.kt`
+
+{% include code-tabs-file.html problem="houserobber_ii" %}
+
+---
+
+## Problem 6: LongestCommonSubarray
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/LongestCommonSubarray.kt`
+
+{% include code-tabs-file.html problem="longestcommonsubarray" %}
+
+---
+
+## Problem 7: LongestIncreasingSequenceInAMatrix
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/LongestIncreasingSequenceInAMatrix.kt`
+
+{% include code-tabs-file.html problem="longestincreasingsequenceinamatrix" %}
+
+---
+
+## Problem 8: LongestIncreasingSubsequence
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/LongestIncreasingSubsequence.kt`
+
+{% include code-tabs-file.html problem="longestincreasingsubsequence" %}
+
+---
+
+## Problem 9: MaximalSquare
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/MaximalSquare.kt`
+
+{% include code-tabs-file.html problem="maximalsquare" %}
+
+---
+
+## Problem 10: MaximumSumSubArray
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/MaximumSumSubArray.kt`
+
+{% include code-tabs-file.html problem="maximumsumsubarray" %}
+
+---
+
+## Problem 11: MinCostClimbingStaris
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/MinCostClimbingStaris.kt`
+
+{% include code-tabs-file.html problem="mincostclimbingstaris" %}
+
+---
+
+## Problem 12: MinimumNumberofIncrementsSubarraysFormaTargetArray
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/MinimumNumberofIncrementsSubarraysFormaTargetArray.kt`
+
+{% include code-tabs-file.html problem="minimumnumberofincrementssubarraysformatargetarray" %}
+
+---
+
+## Problem 13: MinimumPathSum
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/MinimumPathSum.kt`
+
+{% include code-tabs-file.html problem="minimumpathsum" %}
+
+---
+
+## Problem 14: PartitionArrayIntoTwoArrayToMinimuzeSumDifference
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/PartitionArrayIntoTwoArrayToMinimuzeSumDifference.kt`
+
+{% include code-tabs-file.html problem="partitionarrayintotwoarraytominimuzesumdifference" %}
+
+---
+
+## Problem 15: SplitArrayLargestSum
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/SplitArrayLargestSum.kt`
+
+{% include code-tabs-file.html problem="splitarraylargestsum" %}
+
+---
+
+## Problem 16: TargetSum
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/TargetSum.kt`
+
+{% include code-tabs-file.html problem="targetsum" %}
+
+---
+
+## Problem 17: ClosestSubsequenceSum
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_programming/ClosestSubsequenceSum.kt`
+
+{% include code-tabs-file.html problem="closestsubsequencesum" %}
+
+---
+
+## Problem 18: MaximumProductSubarray
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_programming/MaximumProductSubarray.kt`
+
+{% include code-tabs-file.html problem="maximumproductsubarray" %}
+
+---
+
+## Problem 19: MaximumProfitInJobScheduling
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_programming/MaximumProfitInJobScheduling.kt`
+
+{% include code-tabs-file.html problem="maximumprofitinjobscheduling" %}
+
+---
+
+## Problem 20: PartitionEqualSubsetSum
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_programming/PartitionEqualSubsetSum.kt`
+
+{% include code-tabs-file.html problem="partitionequalsubsetsum" %}
+
+---
+
+## Problem 21: SuperEggDropping
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_programming/SuperEggDropping.kt`
+
+{% include code-tabs-file.html problem="supereggdropping" %}
+
+---
+
+## Problem 22: BestTimeToBuyAndSellStock
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/stock_market/dp/BestTimeToBuyAndSellStock.kt`
+
+{% include code-tabs-file.html problem="besttimetobuyandsellstock" %}
+
+---
+
+## Problem 23: BestTimeToBuyAndSellStockWithCooldown
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/stock_market/dp/BestTimeToBuyAndSellStockWithCooldown.kt`
+
+{% include code-tabs-file.html problem="besttimetobuyandsellstockwithcooldown" %}
+
+---
+
+## Problem 24: BestTimeToBuyAndSellStockWithTransactionFee
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/stock_market/dp/BestTimeToBuyAndSellStockWithTransactionFee.kt`
+
+{% include code-tabs-file.html problem="besttimetobuyandsellstockwithtransactionfee" %}
+
+---
+
+## Problem 25: BestTimeToBuyAndSellStock_III
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/stock_market/dp/BestTimeToBuyAndSellStock_III.kt`
+
+{% include code-tabs-file.html problem="besttimetobuyandsellstock_iii" %}
+
+---
+
+## Problem 26: CherryPickup
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/grid/dynamic_programming/CherryPickup.kt`
+
+{% include code-tabs-file.html problem="cherrypickup" %}
+
+---
+
+## Problem 27: Test
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/grid/dynamic_programming/Test.kt`
+
+{% include code-tabs-file.html problem="test" %}
+
+---
+
+## Problem 28: UniquePaths_I
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/grid/dynamic_programming/UniquePaths_I.kt`
+
+{% include code-tabs-file.html problem="uniquepaths_i" %}
+
+---
+
+## Problem 29: UniquePaths_II
+
+Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/grid/dynamic_programming/UniquePaths_II.kt`
+
+{% include code-tabs-file.html problem="uniquepaths_ii" %}
