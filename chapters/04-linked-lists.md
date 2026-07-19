@@ -43,15 +43,11 @@ next_chapter:
 
 ## AddTwoNumbers
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/AddTwoNumbers.kt`
-
 {% include code-tabs-file.html problem="addtwonumbers" %}
 
 ---
 
 ## CopyLinkedListWithRandomPointer
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/CopyLinkedListWithRandomPointer.kt`
 
 {% include code-tabs-file.html problem="copylinkedlistwithrandompointer" %}
 
@@ -59,15 +55,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlis
 
 ## DeleteMiddleNodeOfLinkedList
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/DeleteMiddleNodeOfLinkedList.kt`
-
 {% include code-tabs-file.html problem="deletemiddlenodeoflinkedlist" %}
 
 ---
 
 ## InsertIntoASortedCircularLinkedList
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/InsertIntoASortedCircularLinkedList.kt`
 
 {% include code-tabs-file.html problem="insertintoasortedcircularlinkedlist" %}
 
@@ -75,15 +67,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlis
 
 ## InsertIntoASortedCircularList
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/InsertIntoASortedCircularList.kt`
-
 {% include code-tabs-file.html problem="insertintoasortedcircularlist" %}
 
 ---
 
 ## IntersectionOfTwoLinkedList
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/IntersectionOfTwoLinkedList.kt`
 
 {% include code-tabs-file.html problem="intersectionoftwolinkedlist" %}
 
@@ -91,15 +79,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlis
 
 ## LinkedListCycle
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/LinkedListCycle.kt`
-
 {% include code-tabs-file.html problem="linkedlistcycle" %}
 
 ---
 
 ## LinkedListCycle_II
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/LinkedListCycle_II.kt`
 
 {% include code-tabs-file.html problem="linkedlistcycle_ii" %}
 
@@ -107,15 +91,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlis
 
 ## MergeKSortedList
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/MergeKSortedList.kt`
-
 {% include code-tabs-file.html problem="mergeksortedlist" %}
 
 ---
 
 ## MergeKSortedListIterative
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/MergeKSortedListIterative.kt`
 
 {% include code-tabs-file.html problem="mergeksortedlistiterative" %}
 
@@ -123,15 +103,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlis
 
 ## MergeTwoSortedLIst
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/MergeTwoSortedLIst.kt`
-
 {% include code-tabs-file.html problem="mergetwosortedlist" %}
 
 ---
 
 ## OddEvenLinkedList
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/OddEvenLinkedList.kt`
 
 {% include code-tabs-file.html problem="oddevenlinkedlist" %}
 
@@ -139,15 +115,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlis
 
 ## OddOrEvenLinkedList
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/OddOrEvenLinkedList.kt`
-
 {% include code-tabs-file.html problem="oddorevenlinkedlist" %}
 
 ---
 
 ## PalindromeLinkedList
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/PalindromeLinkedList.kt`
 
 {% include code-tabs-file.html problem="palindromelinkedlist" %}
 
@@ -155,15 +127,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlis
 
 ## RemoveNthNodeFromEndOfList
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/RemoveNthNodeFromEndOfList.kt`
-
 {% include code-tabs-file.html problem="removenthnodefromendoflist" %}
 
 ---
 
 ## ReverseLinkedList
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/ReverseLinkedList.kt`
 
 {% include code-tabs-file.html problem="reverselinkedlist" %}
 
@@ -171,14 +139,10 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlis
 
 ## ReverseLinkedListIterative
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/ReverseLinkedListIterative.kt`
-
 {% include code-tabs-file.html problem="reverselinkedlistiterative" %}
 
 ---
 
 ## ReverseNodesInKGroups
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/linkedlist/ReverseNodesInKGroups.kt`
 
 {% include code-tabs-file.html problem="reversenodesinkgroups" %}

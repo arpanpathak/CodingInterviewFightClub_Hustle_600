@@ -34,15 +34,11 @@ next_chapter:
 
 ## FirstLetterToAppearTwice
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/FirstLetterToAppearTwice.kt`
-
 {% include code-tabs-file.html problem="firstlettertoappeartwice" %}
 
 ---
 
 ## LongestNiceSubarray
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/LongestNiceSubarray.kt`
 
 {% include code-tabs-file.html problem="longestnicesubarray" %}
 
@@ -50,15 +46,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/Lo
 
 ## MaximumXorOfTwoNumsInArray
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/MaximumXorOfTwoNumsInArray.kt`
-
 {% include code-tabs-file.html problem="maximumxoroftwonumsinarray" %}
 
 ---
 
 ## Number of Steps to ReduceaANumberInBinaryRepresentationtoOne
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/Number of Steps to ReduceaANumberInBinaryRepresentationtoOne.kt`
 
 {% include code-tabs-file.html problem="number_of_steps_to_reduceaanumberinbinaryrepresentationtoone" %}
 
@@ -66,15 +58,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/Nu
 
 ## NumberOfOneBits
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/NumberOfOneBits.kt`
-
 {% include code-tabs-file.html problem="numberofonebits" %}
 
 ---
 
 ## ReverseBits
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/ReverseBits.kt`
 
 {% include code-tabs-file.html problem="reversebits" %}
 
@@ -82,22 +70,16 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/Re
 
 ## SingleNumber
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/SingleNumber.kt`
-
 {% include code-tabs-file.html problem="singlenumber" %}
 
 ---
 
 ## SingleNumber3
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/SingleNumber3.kt`
-
 {% include code-tabs-file.html problem="singlenumber3" %}
 
 ---
 
 ## SumOfAllSubsetXorTotal
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/bitset/SumOfAllSubsetXorTotal.kt`
 
 {% include code-tabs-file.html problem="sumofallsubsetxortotal" %}

@@ -55,15 +55,11 @@ next_chapter:
 
 ## BurstBaloons
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/BurstBaloons.kt`
-
 {% include code-tabs-file.html problem="burstbaloons" %}
 
 ---
 
 ## CoinChange
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/CoinChange.kt`
 
 {% include code-tabs-file.html problem="coinchange" %}
 
@@ -71,15 +67,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/
 
 ## CoinChange_II
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/CoinChange_II.kt`
-
 {% include code-tabs-file.html problem="coinchange_ii" %}
 
 ---
 
 ## CoinChange_II_BottomUp
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/CoinChange_II_BottomUp.kt`
 
 {% include code-tabs-file.html problem="coinchange_ii_bottomup" %}
 
@@ -87,15 +79,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/
 
 ## HouseRobber
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/HouseRobber.kt`
-
 {% include code-tabs-file.html problem="houserobber" %}
 
 ---
 
 ## HouseRobber_II
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/HouseRobber_II.kt`
 
 {% include code-tabs-file.html problem="houserobber_ii" %}
 
@@ -103,15 +91,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/
 
 ## LongestCommonSubarray
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/LongestCommonSubarray.kt`
-
 {% include code-tabs-file.html problem="longestcommonsubarray" %}
 
 ---
 
 ## LongestIncreasingSequenceInAMatrix
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/LongestIncreasingSequenceInAMatrix.kt`
 
 {% include code-tabs-file.html problem="longestincreasingsequenceinamatrix" %}
 
@@ -119,15 +103,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/
 
 ## LongestIncreasingSubsequence
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/LongestIncreasingSubsequence.kt`
-
 {% include code-tabs-file.html problem="longestincreasingsubsequence" %}
 
 ---
 
 ## MaximalSquare
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/MaximalSquare.kt`
 
 {% include code-tabs-file.html problem="maximalsquare" %}
 
@@ -135,15 +115,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/
 
 ## MaximumSumSubArray
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/MaximumSumSubArray.kt`
-
 {% include code-tabs-file.html problem="maximumsumsubarray" %}
 
 ---
 
 ## MinCostClimbingStaris
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/MinCostClimbingStaris.kt`
 
 {% include code-tabs-file.html problem="mincostclimbingstaris" %}
 
@@ -151,15 +127,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/
 
 ## MinimumNumberofIncrementsSubarraysFormaTargetArray
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/MinimumNumberofIncrementsSubarraysFormaTargetArray.kt`
-
 {% include code-tabs-file.html problem="minimumnumberofincrementssubarraysformatargetarray" %}
 
 ---
 
 ## MinimumPathSum
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/MinimumPathSum.kt`
 
 {% include code-tabs-file.html problem="minimumpathsum" %}
 
@@ -167,15 +139,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/
 
 ## PartitionArrayIntoTwoArrayToMinimuzeSumDifference
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/PartitionArrayIntoTwoArrayToMinimuzeSumDifference.kt`
-
 {% include code-tabs-file.html problem="partitionarrayintotwoarraytominimuzesumdifference" %}
 
 ---
 
 ## SplitArrayLargestSum
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/SplitArrayLargestSum.kt`
 
 {% include code-tabs-file.html problem="splitarraylargestsum" %}
 
@@ -183,15 +151,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/
 
 ## TargetSum
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/array/dp/TargetSum.kt`
-
 {% include code-tabs-file.html problem="targetsum" %}
 
 ---
 
 ## ClosestSubsequenceSum
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_programming/ClosestSubsequenceSum.kt`
 
 {% include code-tabs-file.html problem="closestsubsequencesum" %}
 
@@ -199,15 +163,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_p
 
 ## MaximumProductSubarray
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_programming/MaximumProductSubarray.kt`
-
 {% include code-tabs-file.html problem="maximumproductsubarray" %}
 
 ---
 
 ## MaximumProfitInJobScheduling
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_programming/MaximumProfitInJobScheduling.kt`
 
 {% include code-tabs-file.html problem="maximumprofitinjobscheduling" %}
 
@@ -215,15 +175,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_p
 
 ## PartitionEqualSubsetSum
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_programming/PartitionEqualSubsetSum.kt`
-
 {% include code-tabs-file.html problem="partitionequalsubsetsum" %}
 
 ---
 
 ## SuperEggDropping
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_programming/SuperEggDropping.kt`
 
 {% include code-tabs-file.html problem="supereggdropping" %}
 
@@ -231,15 +187,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/dynamic_p
 
 ## BestTimeToBuyAndSellStock
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/stock_market/dp/BestTimeToBuyAndSellStock.kt`
-
 {% include code-tabs-file.html problem="besttimetobuyandsellstock" %}
 
 ---
 
 ## BestTimeToBuyAndSellStockWithCooldown
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/stock_market/dp/BestTimeToBuyAndSellStockWithCooldown.kt`
 
 {% include code-tabs-file.html problem="besttimetobuyandsellstockwithcooldown" %}
 
@@ -247,15 +199,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/stock_mar
 
 ## BestTimeToBuyAndSellStockWithTransactionFee
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/stock_market/dp/BestTimeToBuyAndSellStockWithTransactionFee.kt`
-
 {% include code-tabs-file.html problem="besttimetobuyandsellstockwithtransactionfee" %}
 
 ---
 
 ## BestTimeToBuyAndSellStock_III
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/stock_market/dp/BestTimeToBuyAndSellStock_III.kt`
 
 {% include code-tabs-file.html problem="besttimetobuyandsellstock_iii" %}
 
@@ -263,15 +211,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/stock_mar
 
 ## CherryPickup
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/grid/dynamic_programming/CherryPickup.kt`
-
 {% include code-tabs-file.html problem="cherrypickup" %}
 
 ---
 
 ## Test
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/grid/dynamic_programming/Test.kt`
 
 {% include code-tabs-file.html problem="test" %}
 
@@ -279,14 +223,10 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/grid/dyna
 
 ## UniquePaths_I
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/grid/dynamic_programming/UniquePaths_I.kt`
-
 {% include code-tabs-file.html problem="uniquepaths_i" %}
 
 ---
 
 ## UniquePaths_II
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/grid/dynamic_programming/UniquePaths_II.kt`
 
 {% include code-tabs-file.html problem="uniquepaths_ii" %}

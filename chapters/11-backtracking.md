@@ -35,15 +35,11 @@ next_chapter:
 
 ## ExpressionAndAddOperators
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtracking/ExpressionAndAddOperators.kt`
-
 {% include code-tabs-file.html problem="expressionandaddoperators" %}
 
 ---
 
 ## ExpressionAndAddOperatorsOptimized
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtracking/ExpressionAndAddOperatorsOptimized.kt`
 
 {% include code-tabs-file.html problem="expressionandaddoperatorsoptimized" %}
 
@@ -51,15 +47,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtrack
 
 ## NQueen
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtracking/NQueen.kt`
-
 {% include code-tabs-file.html problem="nqueen" %}
 
 ---
 
 ## NQueen_II
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtracking/NQueen_II.kt`
 
 {% include code-tabs-file.html problem="nqueen_ii" %}
 
@@ -67,15 +59,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtrack
 
 ## PalindromePartitioning
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtracking/PalindromePartitioning.kt`
-
 {% include code-tabs-file.html problem="palindromepartitioning" %}
 
 ---
 
 ## PartitionToKEqualSumSubsets
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtracking/PartitionToKEqualSumSubsets.kt`
 
 {% include code-tabs-file.html problem="partitiontokequalsumsubsets" %}
 
@@ -83,15 +71,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtrack
 
 ## RestoreIPAddresses
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtracking/RestoreIPAddresses.kt`
-
 {% include code-tabs-file.html problem="restoreipaddresses" %}
 
 ---
 
 ## Strobogrammatic_Number_II
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtracking/Strobogrammatic_Number_II.kt`
 
 {% include code-tabs-file.html problem="strobogrammatic_number_ii" %}
 
@@ -99,14 +83,10 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtrack
 
 ## SudokuSolver
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtracking/SudokuSolver.kt`
-
 {% include code-tabs-file.html problem="sudokusolver" %}
 
 ---
 
 ## SudokuSolverSet
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/backtracking/SudokuSolverSet.kt`
 
 {% include code-tabs-file.html problem="sudokusolverset" %}

@@ -43,15 +43,11 @@ next_chapter:
 
 ## ApartmentHunting
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/ApartmentHunting.kt`
-
 {% include code-tabs-file.html problem="apartmenthunting" %}
 
 ---
 
 ## CapacityToShipPackageWithinDDays
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/CapacityToShipPackageWithinDDays.kt`
 
 {% include code-tabs-file.html problem="capacitytoshippackagewithinddays" %}
 
@@ -59,15 +55,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysea
 
 ## ClosestSebsequenceSum
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/ClosestSebsequenceSum.kt`
-
 {% include code-tabs-file.html problem="closestsebsequencesum" %}
 
 ---
 
 ## FindFirstAndLastPosition
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/FindFirstAndLastPosition.kt`
 
 {% include code-tabs-file.html problem="findfirstandlastposition" %}
 
@@ -75,15 +67,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysea
 
 ## FindKClosestElements
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/FindKClosestElements.kt`
-
 {% include code-tabs-file.html problem="findkclosestelements" %}
 
 ---
 
 ## FindMinimumInRotatedSortedArray
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/FindMinimumInRotatedSortedArray.kt`
 
 {% include code-tabs-file.html problem="findminimuminrotatedsortedarray" %}
 
@@ -91,15 +79,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysea
 
 ## FindPeakElement
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/FindPeakElement.kt`
-
 {% include code-tabs-file.html problem="findpeakelement" %}
 
 ---
 
 ## FindPeakElementBetterSolution
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/FindPeakElementBetterSolution.kt`
 
 {% include code-tabs-file.html problem="findpeakelementbettersolution" %}
 
@@ -107,15 +91,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysea
 
 ## FirstBadVersion
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/FirstBadVersion.kt`
-
 {% include code-tabs-file.html problem="firstbadversion" %}
 
 ---
 
 ## GuessNumberHigherOrLower
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/GuessNumberHigherOrLower.kt`
 
 {% include code-tabs-file.html problem="guessnumberhigherorlower" %}
 
@@ -123,15 +103,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysea
 
 ## HouseRobber_IV
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/HouseRobber_IV.kt`
-
 {% include code-tabs-file.html problem="houserobber_iv" %}
 
 ---
 
 ## KThMissingPositiveNumber
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/KThMissingPositiveNumber.kt`
 
 {% include code-tabs-file.html problem="kthmissingpositivenumber" %}
 
@@ -139,15 +115,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysea
 
 ## KokoEatingBanana
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/KokoEatingBanana.kt`
-
 {% include code-tabs-file.html problem="kokoeatingbanana" %}
 
 ---
 
 ## MedianOfTwoSortedARrays
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/MedianOfTwoSortedARrays.kt`
 
 {% include code-tabs-file.html problem="medianoftwosortedarrays" %}
 
@@ -155,15 +127,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysea
 
 ## RandomPickWithWeight
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/RandomPickWithWeight.kt`
-
 {% include code-tabs-file.html problem="randompickwithweight" %}
 
 ---
 
 ## SearchA2dMatrix
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/SearchA2dMatrix.kt`
 
 {% include code-tabs-file.html problem="searcha2dmatrix" %}
 
@@ -171,15 +139,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysea
 
 ## SearchInRotatedArray_II
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/SearchInRotatedArray_II.kt`
-
 {% include code-tabs-file.html problem="searchinrotatedarray_ii" %}
 
 ---
 
 ## SearchInRotatedSortedArray
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/SearchInRotatedSortedArray.kt`
 
 {% include code-tabs-file.html problem="searchinrotatedsortedarray" %}
 
@@ -187,22 +151,16 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysea
 
 ## SearchInsertionPosition
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/SearchInsertionPosition.kt`
-
 {% include code-tabs-file.html problem="searchinsertionposition" %}
 
 ---
 
 ## SingleElementInASortedArray
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/SingleElementInASortedArray.kt`
-
 {% include code-tabs-file.html problem="singleelementinasortedarray" %}
 
 ---
 
 ## ValleyElement
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/binarysearch/ValleyElement.kt`
 
 {% include code-tabs-file.html problem="valleyelement" %}

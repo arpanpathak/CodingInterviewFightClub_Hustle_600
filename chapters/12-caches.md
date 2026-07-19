@@ -25,22 +25,16 @@ prev_chapter:
 
 ## LFUCache
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/cache/LFUCache.kt`
-
 {% include code-tabs-file.html problem="lfucache" %}
 
 ---
 
 ## LRUCache
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/cache/LRUCache.kt`
-
 {% include code-tabs-file.html problem="lrucache" %}
 
 ---
 
 ## LRUCacheLinkedList
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/cache/LRUCacheLinkedList.kt`
 
 {% include code-tabs-file.html problem="lrucachelinkedlist" %}

@@ -17,20 +17,22 @@ This book is your **complete, unflinching guide** to dominating the modern softw
 
 | # | Chapter | Problems | Links |
 |---|---------|----------|-------|
-| [1](./chapters/01-binary-search.html) | 🔍 **Binary Search** | 21 problems | [Jump →](#1-binary-search) |
-| [2](./chapters/02-dynamic-programming.html) | 🧠 **Dynamic Programming** | 30+ problems | [Jump →](#2-dynamic-programming) |
-| [3](./chapters/03-arrays-two-pointers.html) | 📊 **Arrays & Two Pointers** | 100+ problems | [Jump →](#3-arrays--two-pointers) |
-| [4](./chapters/04-linked-lists.html) | 🔗 **Linked Lists** | 18 problems | [Jump →](#4-linked-lists) |
-| [5](./chapters/05-trees.html) | 🌳 **Trees** | 49+ problems | [Jump →](#5-trees) |
-| [6](./chapters/06-graphs.html) | 🕸️ **Graphs** | 25+ problems | [Jump →](#6-graphs) |
-| [7](./chapters/07-bit-manipulation.html) | 💡 **Bit Manipulation** | 9 problems | [Jump →](#7-bit-manipulation) |
-| [8](./chapters/08-heaps.html) | 📊 **Heaps & Priority Queues** | 11 problems | [Jump →](#8-heaps) |
-| [9](./chapters/09-disjoint-set-union.html) | 🔗 **Disjoint Set Union** | 3 problems | [Jump →](#9-disjoint-set-union) |
-| [10](./chapters/10-string-matching.html) | 🔤 **String Matching** | 56 problems | [Jump →](#10-string-matching) |
-| [11](./chapters/11-backtracking.html) | 🔙 **Backtracking** | 10 problems | [Jump →](#11-backtracking) |
-| [12](./chapters/12-caches.html) | 💾 **Caches** | 3 problems | [Jump →](#12-caches) |
-| [A](./chapters/13-appendix.html) | 📚 **Appendix & Toolkit** | Reference | [Jump →](#13-appendix) |
-| [📍](./chapters/14-problem-index.html) | 🗺️ **Full Problem Index** | 465+ cataloged | [Jump →](#14-full-problem-index) |
+| # | Chapter | Problems | Difficulty |
+|---|---------|----------|------------|
+| 1 | [Binary Search →](./chapters/01-binary-search.html) | 21 problems | <span class="badge badge-easy">Easy</span> <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| 2 | [Dynamic Programming →](./chapters/02-dynamic-programming.html) | 30+ problems | <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| 3 | [Arrays & Two Pointers →](./chapters/03-arrays-two-pointers.html) | 100+ problems | <span class="badge badge-easy">Easy</span> <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| 4 | [Linked Lists →](./chapters/04-linked-lists.html) | 18 problems | <span class="badge badge-easy">Easy</span> <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| 5 | [Trees →](./chapters/05-trees.html) | 49+ problems | <span class="badge badge-easy">Easy</span> <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| 6 | [Graphs →](./chapters/06-graphs.html) | 25+ problems | <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| 7 | [Bit Manipulation →](./chapters/07-bit-manipulation.html) | 9 problems | <span class="badge badge-easy">Easy</span> <span class="badge badge-medium">Medium</span> |
+| 8 | [Heaps & Priority Queues →](./chapters/08-heaps.html) | 11 problems | <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| 9 | [Disjoint Set Union →](./chapters/09-disjoint-set-union.html) | 3 problems | <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| 10 | [String Matching →](./chapters/10-string-matching.html) | 56 problems | <span class="badge badge-easy">Easy</span> <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| 11 | [Backtracking →](./chapters/11-backtracking.html) | 10 problems | <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| 12 | [Caches & Memory Mgmt →](./chapters/12-caches.html) | 3 problems | <span class="badge badge-medium">Medium</span> <span class="badge badge-hard">Hard</span> |
+| A | [Appendix & Toolkit →](./chapters/13-appendix.html) | Reference | — |
+| 🗺️ | [Full Problem Index →](./chapters/14-problem-index.html) | 465+ cataloged | — |
 
 ---
 

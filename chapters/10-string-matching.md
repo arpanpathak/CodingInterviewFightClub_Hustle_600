@@ -81,15 +81,11 @@ next_chapter:
 
 ## ApplySubstitutions
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ApplySubstitutions.kt`
-
 {% include code-tabs-file.html problem="applysubstitutions" %}
 
 ---
 
 ## CheckifaParenthesesStringCanBeValid
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/CheckifaParenthesesStringCanBeValid.kt`
 
 {% include code-tabs-file.html problem="checkifaparenthesesstringcanbevalid" %}
 
@@ -97,15 +93,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Ch
 
 ## CountAndSay
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/CountAndSay.kt`
-
 {% include code-tabs-file.html problem="countandsay" %}
 
 ---
 
 ## CountWordsWithAGivenPrefix
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/CountWordsWithAGivenPrefix.kt`
 
 {% include code-tabs-file.html problem="countwordswithagivenprefix" %}
 
@@ -113,15 +105,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Co
 
 ## ExcelSheetToColumnNumber
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ExcelSheetToColumnNumber.kt`
-
 {% include code-tabs-file.html problem="excelsheettocolumnnumber" %}
 
 ---
 
 ## FindUniqueBinaryString
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/FindUniqueBinaryString.kt`
 
 {% include code-tabs-file.html problem="finduniquebinarystring" %}
 
@@ -129,15 +117,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Fi
 
 ## GoatLatin
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/GoatLatin.kt`
-
 {% include code-tabs-file.html problem="goatlatin" %}
 
 ---
 
 ## GreatestCommonDivisorOfStrings
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/GreatestCommonDivisorOfStrings.kt`
 
 {% include code-tabs-file.html problem="greatestcommondivisorofstrings" %}
 
@@ -145,15 +129,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Gr
 
 ## GroupAnagrams
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/GroupAnagrams.kt`
-
 {% include code-tabs-file.html problem="groupanagrams" %}
 
 ---
 
 ## IsSubsequence
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/IsSubsequence.kt`
 
 {% include code-tabs-file.html problem="issubsequence" %}
 
@@ -161,15 +141,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Is
 
 ## IsomorphicString
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/IsomorphicString.kt`
-
 {% include code-tabs-file.html problem="isomorphicstring" %}
 
 ---
 
 ## LengthOfLastWord
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/LengthOfLastWord.kt`
 
 {% include code-tabs-file.html problem="lengthoflastword" %}
 
@@ -177,15 +153,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Le
 
 ## LongestCommonPrefix
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/LongestCommonPrefix.kt`
-
 {% include code-tabs-file.html problem="longestcommonprefix" %}
 
 ---
 
 ## LongestPalidnromicSubstring
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/LongestPalidnromicSubstring.kt`
 
 {% include code-tabs-file.html problem="longestpalidnromicsubstring" %}
 
@@ -193,15 +165,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Lo
 
 ## MaximumLengthofaConcatenatedStringwithUniqueCharacters
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/MaximumLengthofaConcatenatedStringwithUniqueCharacters.kt`
-
 {% include code-tabs-file.html problem="maximumlengthofaconcatenatedstringwithuniquecharacters" %}
 
 ---
 
 ## MaximumValueOfAStringIsAnArray
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/MaximumValueOfAStringIsAnArray.kt`
 
 {% include code-tabs-file.html problem="maximumvalueofastringisanarray" %}
 
@@ -209,15 +177,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Ma
 
 ## MergeStringAlternatively
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/MergeStringAlternatively.kt`
-
 {% include code-tabs-file.html problem="mergestringalternatively" %}
 
 ---
 
 ## MinimumDeletionToMakeCharacterFrequenciesUnique
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/MinimumDeletionToMakeCharacterFrequenciesUnique.kt`
 
 {% include code-tabs-file.html problem="minimumdeletiontomakecharacterfrequenciesunique" %}
 
@@ -225,15 +189,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Mi
 
 ## ReverseVowelOfString
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ReverseVowelOfString.kt`
-
 {% include code-tabs-file.html problem="reversevowelofstring" %}
 
 ---
 
 ## ReverseWordsInString
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ReverseWordsInString.kt`
 
 {% include code-tabs-file.html problem="reversewordsinstring" %}
 
@@ -241,15 +201,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Re
 
 ## StringCompression
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/StringCompression.kt`
-
 {% include code-tabs-file.html problem="stringcompression" %}
 
 ---
 
 ## StringCompression_II
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/StringCompression_II.kt`
 
 {% include code-tabs-file.html problem="stringcompression_ii" %}
 
@@ -257,15 +213,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/St
 
 ## ValidAnagram
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ValidAnagram.kt`
-
 {% include code-tabs-file.html problem="validanagram" %}
 
 ---
 
 ## ValidNumber
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ValidNumber.kt`
 
 {% include code-tabs-file.html problem="validnumber" %}
 
@@ -273,15 +225,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Va
 
 ## ValidPalindrome
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ValidPalindrome.kt`
-
 {% include code-tabs-file.html problem="validpalindrome" %}
 
 ---
 
 ## ValidPalindrome_II
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ValidPalindrome_II.kt`
 
 {% include code-tabs-file.html problem="validpalindrome_ii" %}
 
@@ -289,15 +237,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Va
 
 ## ValidWordAbbreviation
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ValidWordAbbreviation.kt`
-
 {% include code-tabs-file.html problem="validwordabbreviation" %}
 
 ---
 
 ## ValidateIPAddress
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ValidateIPAddress.kt`
 
 {% include code-tabs-file.html problem="validateipaddress" %}
 
@@ -305,15 +249,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/Va
 
 ## FindTheIndexofTheFirstOccurrenceIna String
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/pattern_matching/FindTheIndexofTheFirstOccurrenceIna String.kt`
-
 {% include code-tabs-file.html problem="findtheindexofthefirstoccurrenceina_string" %}
 
 ---
 
 ## FindTheIndexofTheFirstOccurrenceIna String_RabinKarp
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/pattern_matching/FindTheIndexofTheFirstOccurrenceIna String_RabinKarp.kt`
 
 {% include code-tabs-file.html problem="findtheindexofthefirstoccurrenceina_string_rabinkarp" %}
 
@@ -321,15 +261,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/pa
 
 ## GenerateParantheses
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/backtracking/GenerateParantheses.kt`
-
 {% include code-tabs-file.html problem="generateparantheses" %}
 
 ---
 
 ## EditDistance
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/EditDistance.kt`
 
 {% include code-tabs-file.html problem="editdistance" %}
 
@@ -337,15 +273,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dy
 
 ## InterleavingString
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/InterleavingString.kt`
-
 {% include code-tabs-file.html problem="interleavingstring" %}
 
 ---
 
 ## LongestCommonSubsequence
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/LongestCommonSubsequence.kt`
 
 {% include code-tabs-file.html problem="longestcommonsubsequence" %}
 
@@ -353,15 +285,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dy
 
 ## LongestCommonSubstring
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/LongestCommonSubstring.kt`
-
 {% include code-tabs-file.html problem="longestcommonsubstring" %}
 
 ---
 
 ## LongestPalindromicSubsequence
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/LongestPalindromicSubsequence.kt`
 
 {% include code-tabs-file.html problem="longestpalindromicsubsequence" %}
 
@@ -369,15 +297,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dy
 
 ## LongestPalindromicSubsequence_BottomUp
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/LongestPalindromicSubsequence_BottomUp.kt`
-
 {% include code-tabs-file.html problem="longestpalindromicsubsequence_bottomup" %}
 
 ---
 
 ## LongestStringChain
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/LongestStringChain.kt`
 
 {% include code-tabs-file.html problem="longeststringchain" %}
 
@@ -385,15 +309,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dy
 
 ## RegularExpressionMatching
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/RegularExpressionMatching.kt`
-
 {% include code-tabs-file.html problem="regularexpressionmatching" %}
 
 ---
 
 ## ShortestCommonSupersequence
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/ShortestCommonSupersequence.kt`
 
 {% include code-tabs-file.html problem="shortestcommonsupersequence" %}
 
@@ -401,15 +321,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dy
 
 ## ValidPalindrome_III
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/ValidPalindrome_III.kt`
-
 {% include code-tabs-file.html problem="validpalindrome_iii" %}
 
 ---
 
 ## ValidPalindrome_III_SpaceOptimized
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dynamic_programming/ValidPalindrome_III_SpaceOptimized.kt`
 
 {% include code-tabs-file.html problem="validpalindrome_iii_spaceoptimized" %}
 
@@ -417,15 +333,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/dy
 
 ## FindAllAnagrams
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/sliding_window/FindAllAnagrams.kt`
-
 {% include code-tabs-file.html problem="findallanagrams" %}
 
 ---
 
 ## MaximumNumberofVowelsinSubstringofGivenLength
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/sliding_window/MaximumNumberofVowelsinSubstringofGivenLength.kt`
 
 {% include code-tabs-file.html problem="maximumnumberofvowelsinsubstringofgivenlength" %}
 
@@ -433,15 +345,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/sl
 
 ## MinimumWindowSubstring
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/sliding_window/MinimumWindowSubstring.kt`
-
 {% include code-tabs-file.html problem="minimumwindowsubstring" %}
 
 ---
 
 ## BreakAPalindrome
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/greedy/BreakAPalindrome.kt`
 
 {% include code-tabs-file.html problem="breakapalindrome" %}
 
@@ -449,15 +357,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/gr
 
 ## CustomSortString
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/sorting/CustomSortString.kt`
-
 {% include code-tabs-file.html problem="customsortstring" %}
 
 ---
 
 ## CustomSortString_Linear
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/sorting/CustomSortString_Linear.kt`
 
 {% include code-tabs-file.html problem="customsortstring_linear" %}
 
@@ -465,15 +369,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/so
 
 ## DetermineIfStringsAreClose
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/hashtable/DetermineIfStringsAreClose.kt`
-
 {% include code-tabs-file.html problem="determineifstringsareclose" %}
 
 ---
 
 ## GroupShiftedStrings
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/hashtable/GroupShiftedStrings.kt`
 
 {% include code-tabs-file.html problem="groupshiftedstrings" %}
 
@@ -481,15 +381,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ha
 
 ## PermutationsInString
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/hashtable/PermutationsInString.kt`
-
 {% include code-tabs-file.html problem="permutationsinstring" %}
 
 ---
 
 ## UniqueLength3PalindromicSubsequence
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/hashtable/UniqueLength3PalindromicSubsequence.kt`
 
 {% include code-tabs-file.html problem="uniquelength3palindromicsubsequence" %}
 
@@ -497,15 +393,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/ha
 
 ## UniqueSubstringWithEqualDigitFrequency
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/hashtable/UniqueSubstringWithEqualDigitFrequency.kt`
-
 {% include code-tabs-file.html problem="uniquesubstringwithequaldigitfrequency" %}
 
 ---
 
 ## DecodeString
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/stack/DecodeString.kt`
 
 {% include code-tabs-file.html problem="decodestring" %}
 
@@ -513,14 +405,10 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/st
 
 ## RemoveAllAdjacentDuplicatesInString
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/stack/RemoveAllAdjacentDuplicatesInString.kt`
-
 {% include code-tabs-file.html problem="removealladjacentduplicatesinstring" %}
 
 ---
 
 ## SimplifyPath
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/string/stack/SimplifyPath.kt`
 
 {% include code-tabs-file.html problem="simplifypath" %}

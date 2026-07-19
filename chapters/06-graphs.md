@@ -51,15 +51,11 @@ next_chapter:
 
 ## BusRoutes
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/BusRoutes.kt`
-
 {% include code-tabs-file.html problem="busroutes" %}
 
 ---
 
 ## CloneGraph
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/CloneGraph.kt`
 
 {% include code-tabs-file.html problem="clonegraph" %}
 
@@ -67,15 +63,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/Clo
 
 ## DiameterOfBinaryTree
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/DiameterOfBinaryTree.kt`
-
 {% include code-tabs-file.html problem="diameterofbinarytree" %}
 
 ---
 
 ## HouseRobber3
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/HouseRobber3.kt`
 
 {% include code-tabs-file.html problem="houserobber3" %}
 
@@ -83,15 +75,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/Hou
 
 ## ReorderRoutesToMakeAllPathsLeadToCityZero
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/ReorderRoutesToMakeAllPathsLeadToCityZero.kt`
-
 {% include code-tabs-file.html problem="reorderroutestomakeallpathsleadtocityzero" %}
 
 ---
 
 ## WordLadder
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/WordLadder.kt`
 
 {% include code-tabs-file.html problem="wordladder" %}
 
@@ -99,15 +87,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/Wor
 
 ## FindRedundentConnections
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/mst/FindRedundentConnections.kt`
-
 {% include code-tabs-file.html problem="findredundentconnections" %}
 
 ---
 
 ## PrimsAlgorithm
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/mst/PrimsAlgorithm.kt`
 
 {% include code-tabs-file.html problem="primsalgorithm" %}
 
@@ -115,15 +99,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/mst
 
 ## CriticalConnectionsInANetwork
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/articulation_point/CriticalConnectionsInANetwork.kt`
-
 {% include code-tabs-file.html problem="criticalconnectionsinanetwork" %}
 
 ---
 
 ## CriticalConnectionsInANetworkShortCode
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/articulation_point/CriticalConnectionsInANetworkShortCode.kt`
 
 {% include code-tabs-file.html problem="criticalconnectionsinanetworkshortcode" %}
 
@@ -131,15 +111,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/art
 
 ## FindArticulationPoints
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/articulation_point/FindArticulationPoints.kt`
-
 {% include code-tabs-file.html problem="findarticulationpoints" %}
 
 ---
 
 ## CourseSchedule
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/cycle/CourseSchedule.kt`
 
 {% include code-tabs-file.html problem="courseschedule" %}
 
@@ -147,15 +123,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/cyc
 
 ## CourseSchedule_II
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/cycle/CourseSchedule_II.kt`
-
 {% include code-tabs-file.html problem="courseschedule_ii" %}
 
 ---
 
 ## ParallelCourses
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/cycle/ParallelCourses.kt`
 
 {% include code-tabs-file.html problem="parallelcourses" %}
 
@@ -163,15 +135,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/cyc
 
 ## AlienDictionary
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/topological_sort/AlienDictionary.kt`
-
 {% include code-tabs-file.html problem="aliendictionary" %}
 
 ---
 
 ## AlienDictionary_BFS
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/topological_sort/AlienDictionary_BFS.kt`
 
 {% include code-tabs-file.html problem="aliendictionary_bfs" %}
 
@@ -179,15 +147,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/top
 
 ## ApplySubstitutions
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/topological_sort/ApplySubstitutions.kt`
-
 {% include code-tabs-file.html problem="applysubstitutions" %}
 
 ---
 
 ## CourseSchedule_II
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/topological_sort/CourseSchedule_II.kt`
 
 {% include code-tabs-file.html problem="courseschedule_ii" %}
 
@@ -195,15 +159,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/top
 
 ## CourseSchedule_II_BFS
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/topological_sort/CourseSchedule_II_BFS.kt`
-
 {% include code-tabs-file.html problem="courseschedule_ii_bfs" %}
 
 ---
 
 ## CheapestFlightWithKStops
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/greedy/CheapestFlightWithKStops.kt`
 
 {% include code-tabs-file.html problem="cheapestflightwithkstops" %}
 
@@ -211,15 +171,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/gre
 
 ## CheapestFlightsWithKStops
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/greedy/CheapestFlightsWithKStops.kt`
-
 {% include code-tabs-file.html problem="cheapestflightswithkstops" %}
 
 ---
 
 ## DonaldTrumpAlgorithm
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/greedy/DonaldTrumpAlgorithm.kt`
 
 {% include code-tabs-file.html problem="donaldtrumpalgorithm" %}
 
@@ -227,15 +183,11 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/gre
 
 ## TheMaze_III
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/greedy/TheMaze_III.kt`
-
 {% include code-tabs-file.html problem="themaze_iii" %}
 
 ---
 
 ## CheapestFlightsWithinKStops
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/dp/CheapestFlightsWithinKStops.kt`
 
 {% include code-tabs-file.html problem="cheapestflightswithinkstops" %}
 
@@ -243,14 +195,10 @@ Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/dp/
 
 ## BinarySearchTreeToGreaterSumTree
 
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/bst/BinarySearchTreeToGreaterSumTree.kt`
-
 {% include code-tabs-file.html problem="binarysearchtreetogreatersumtree" %}
 
 ---
 
 ## RangeSumOfBST
-
-Source: `/Users/arpanpathak/Projects/data_science/CrackGoogle/bin/main/graph/bst/RangeSumOfBST.kt`
 
 {% include code-tabs-file.html problem="rangesumofbst" %}
