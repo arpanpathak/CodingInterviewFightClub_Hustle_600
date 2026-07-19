@@ -108,6 +108,30 @@ pre code {
   font-size: inherit;
 }
 
+/* ═══ Rouge syntax highlighting (Night Owl colors) ═══ */
+.highlight { background: var(--bg-code); border-radius: 6px; overflow-x: auto; }
+.highlight pre { background: none; border: none; padding: 1rem; margin: 0; }
+.highlight .k, .highlight .kd { color: #c792ea; font-weight: 600; }  /* keywords */
+.highlight .kt { color: #ffcb8b; }  /* type */
+.highlight .nf { color: #82aaff; }  /* function */
+.highlight .nv { color: #e6edf3; }  /* variable */
+.highlight .p { color: #89ddff; }   /* punctuation */
+.highlight .na { color: #f78c6c; }  /* annotation */
+.highlight .s, .highlight .s2 { color: #c3e88d; }  /* strings */
+.highlight .c1, .highlight .cm { color: #546e7a; font-style: italic; }  /* comments */
+.highlight .mi, .highlight .mf { color: #f78c6c; }  /* numbers */
+.highlight .o { color: #89ddff; }  /* operators */
+.highlight .kc { color: #c792ea; } /* constants */
+.highlight .nc { color: #ffcb8b; } /* class */
+.highlight .nd { color: #82aaff; } /* decorator */
+.highlight .no { color: #ff5874; } /* builtins */
+.highlight .err { color: #ff5874; background: none; } /* errors */
+
+/* Code block wrapper */
+.code-block { margin: 0; }
+.code-block .highlight { margin: 0; border-radius: 0; }
+.code-block pre { margin: 0; border: none; border-radius: 0; }
+
 /* ═══ Layout ═══ */
 .container {
   max-width: 1100px;

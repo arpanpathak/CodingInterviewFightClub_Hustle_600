@@ -1,7 +1,6 @@
 {% comment %}
-  Code tabs — currently only Kotlin is clean.
-  Java/Python/Rust/C++ have $1 placeholders from previous AI corruption.
-  Only showing Kotlin until regenerated.
+  Code display with Jekyll syntax highlighting (rouge).
+  Currently only Kotlin is clean — other langs had $1 corruption from previous AI.
 {% endcomment %}
 
 {% assign problem_key = include.problem %}
@@ -15,6 +14,8 @@
     </button>
   </div>
   <div class="tab-content active" data-lang="kotlin">
-    <pre><code>{{ code | escape }}</code></pre>
+    <div class="code-block">
+      {% highlight kotlin %}{{ code }}{% endhighlight %}
+    </div>
   </div>
 </div>

@@ -602,38 +602,12 @@ def generate_chapter(chapter_key, chapter_info):
         lines.append(desc)
         lines.append("")
         
-        # Why this works
-        lines.append("### Why This Works")
-        lines.append("")
-        
-        if any(p[0] == 'binary-search' for p in patterns):
-            lines.append("The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.")
-            lines.append("")
-        
-        elif any(p[0] == 'dp' for p in patterns):
-            lines.append("Dynamic programming works because this problem has **optimal substructure** (the optimal solution contains optimal solutions to subproblems) and **overlapping subproblems** (the same subproblems are solved multiple times). The DP table/memoization cache stores computed results to avoid redundant work.")
-            lines.append("")
-        
-        elif any(p[0] == 'bfs' for p in patterns):
-            lines.append("BFS works because it explores nodes in order of their distance from the source. The queue ensures that nodes at distance `k` are processed before nodes at distance `k+1`. This guarantees the first time we reach the target, it's via the shortest path.")
-            lines.append("")
-        
-        elif any(p[0] == 'dfs' for p in patterns):
-            lines.append("DFS systematically explores every path to its end before backtracking. This exhaustive search guarantees correctness for connectivity problems and path existence. The recursion implicitly uses a stack to track the exploration path.")
-            lines.append("")
-        
-        else:
-            lines.append("The algorithm systematically processes the input to produce the correct result. Each step maintains an invariant that leads to the final correct answer. The data structures used optimize the critical operations to O(1) or O(log n) each.")
-            lines.append("")
-        
-        # Algorithmic thinking
-        lines.append("### Algorithmic Thinking")
+        # Approach
+        lines.append("### Approach")
         lines.append("")
         approach = infer_approach(prob_key, kotlin_code, sigs, patterns)
         lines.append(approach)
-        lines.append("")
-        
-        # Dry run with code
+        lines.append("")        # Dry run with code
         lines.append("### Code Walkthrough")
         lines.append("")
         lines.append("Let's trace through the code to understand how it processes the input:")

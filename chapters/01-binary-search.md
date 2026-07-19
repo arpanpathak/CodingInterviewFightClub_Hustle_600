@@ -64,11 +64,7 @@ Sorted array + search → Binary Search. The key insight: find a predicate that 
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -123,11 +119,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm systematically processes the input to produce the correct result. Each step maintains an invariant that leads to the final correct answer. The data structures used optimize the critical operations to O(1) or O(log n) each.
-
-### Algorithmic Thinking
+### Approach
 
 **Solution Approach:**
 1. The main function `feasible` processes the input
@@ -173,11 +165,7 @@ The algorithm processes each element a constant number of times, giving O(n²). 
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -232,11 +220,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -293,11 +277,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-BFS works because it explores nodes in order of their distance from the source. The queue ensures that nodes at distance `k` are processed before nodes at distance `k+1`. This guarantees the first time we reach the target, it's via the shortest path.
-
-### Algorithmic Thinking
+### Approach
 
 **BFS (Breadth-First Search) Approach:**
 1. Use a queue to process nodes level by level
@@ -344,11 +324,7 @@ Each node and edge is visited at most once, giving O(n log k) for a graph with V
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -391,11 +367,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -445,11 +417,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -501,11 +469,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -551,11 +515,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -601,11 +561,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -653,11 +609,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -707,11 +659,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -768,11 +716,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -820,11 +764,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -870,11 +810,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -929,11 +865,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -991,11 +923,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -1044,11 +972,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -1100,11 +1024,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
@@ -1161,11 +1081,7 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 
 
-### Why This Works
-
-The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
-
-### Algorithmic Thinking
+### Approach
 
 **Binary Search Approach:**
 1. Define the search space and feasibility predicate
