@@ -1,0 +1,51 @@
+{% comment %}
+  Code tabs include for multi-language code samples.
+  Usage:
+  {% include code-tabs.html kotlin="..." java="..." python="..." rust="..." cpp="..." %}
+{% endcomment %}
+
+{% assign kotlin_code = include.kotlin %}
+{% assign java_code = include.java %}
+{% assign python_code = include.python %}
+{% assign rust_code = include.rust %}
+{% assign cpp_code = include.cpp %}
+
+<div class="code-tabs">
+  <div class="tab-nav">
+    {% if kotlin_code %}<button class="tab-btn active" data-lang="kotlin"><span class="lang-icon">🟣</span> Kotlin</button>{% endif %}
+    {% if java_code %}<button class="tab-btn" data-lang="java"><span class="lang-icon">🟠</span> Java</button>{% endif %}
+    {% if python_code %}<button class="tab-btn" data-lang="python"><span class="lang-icon">🔵</span> Python</button>{% endif %}
+    {% if rust_code %}<button class="tab-btn" data-lang="rust"><span class="lang-icon">🦀</span> Rust</button>{% endif %}
+    {% if cpp_code %}<button class="tab-btn" data-lang="cpp"><span class="lang-icon">⚙️</span> C++</button>{% endif %}
+  </div>
+
+  {% if kotlin_code %}
+  <div class="tab-content active" data-lang="kotlin">
+    <pre><code>{{ kotlin_code | escape }}</code></pre>
+  </div>
+  {% endif %}
+
+  {% if java_code %}
+  <div class="tab-content" data-lang="java">
+    <pre><code>{{ java_code | escape }}</code></pre>
+  </div>
+  {% endif %}
+
+  {% if python_code %}
+  <div class="tab-content" data-lang="python">
+    <pre><code>{{ python_code | escape }}</code></pre>
+  </div>
+  {% endif %}
+
+  {% if rust_code %}
+  <div class="tab-content" data-lang="rust">
+    <pre><code>{{ rust_code | escape }}</code></pre>
+  </div>
+  {% endif %}
+
+  {% if cpp_code %}
+  <div class="tab-content" data-lang="cpp">
+    <pre><code>{{ cpp_code | escape }}</code></pre>
+  </div>
+  {% endif %}
+</div>

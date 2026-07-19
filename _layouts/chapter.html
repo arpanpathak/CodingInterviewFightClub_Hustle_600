@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% if page.chapter_number %}
+<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:0;">
+  Chapter {{ page.chapter_number }}{% if page.chapter_title %} · {{ page.chapter_title }}{% endif %}
+</p>
+{% endif %}
+
+{{ content }}
+
+{% if page.prev_chapter or page.next_chapter %}
+<nav class="chapter-nav">
+  <span>
+    {% if page.prev_chapter %}
+    <a href="{{ page.prev_chapter.url | relative_url }}">← {{ page.prev_chapter.title }}</a>
+    {% endif %}
+  </span>
+  <span>
+    {% if page.next_chapter %}
+    <a href="{{ page.next_chapter.url | relative_url }}">{{ page.next_chapter.title }} →</a>
+    {% endif %}
+  </span>
+</nav>
+{% endif %}

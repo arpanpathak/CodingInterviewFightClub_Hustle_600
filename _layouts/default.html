@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/book.css' | relative_url }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥊</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container" style="max-width:1200px;">
+    <a href="{{ '/' | relative_url }}" class="site-title">🥊 Coding Interview Fight Club</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/chapters/01-binary-search' | relative_url }}">Start Reading</a></li>
+        <li><button id="focus-toggle" class="tab-btn" style="border:none;">🎯 Focus Mode</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="max-width:1200px;display:flex;gap:2rem;">
+  {% if page.toc != false and page.layout == 'chapter' %}
+  <aside class="toc-wrapper" style="flex:0 0 260px;">
+    <div class="toc">
+      <h3>📖 On This Page</h3>
+      <ul></ul>
+    </div>
+  </aside>
+  {% endif %}
+  <article class="chapter-content" style="flex:1;min-width:0;">
+    {{ content }}
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>🥊 <strong>Coding Interview Fight Club</strong> — From poverty to TC, one algorithm at a time.</p>
+    <p>Built with ❤️ for neurodivergent warriors who refuse to lose.</p>
+    <p>{% if page.path %}<small>Last updated: {{ site.time | date: '%B %d, %Y' }}</small>{% endif %}</p>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/book.js' | relative_url }}"></script>
+</body>
+</html>
