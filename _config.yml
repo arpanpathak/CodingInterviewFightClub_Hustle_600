@@ -1,17 +1,16 @@
 # Coding Interview Fight Club - Book
 # GitHub Pages Configuration
 title: "🥊 Coding Interview Fight Club"
-description: "The complete guide to dominating technical interviews at top-tier companies. From poverty to TC - one algorithm at a time."
+description: "The complete guide to dominating technical interviews at top-tier companies. From poverty to TC - one algorithm at a time. Covers 465+ problems across 14 chapters in 5 languages."
 url: "https://arpanpathak.github.io"
-baseurl: "/CrackGoogle/CodingInterviewFightClub_Hustle_600"
+baseurl: "/CodingInterviewFightClub_Hustle_600"
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
 
-# Theme settings
-remote_theme: pages-themes/modernist@v0.2.0
+# Theme - we use our own custom CSS
+# No remote_theme needed - our custom CSS in assets/css/book.css handles everything
 plugins:
-  - jekyll-remote-theme
   - jemoji
 
 # Custom settings
