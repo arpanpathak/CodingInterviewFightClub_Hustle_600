@@ -1,5 +1,5 @@
 class CountCollisionsOnARoad {
-    def $1(directions: str): int {
-        TODO()
-    }
+def countCollisions(directions):
+TODO()
+}
 }

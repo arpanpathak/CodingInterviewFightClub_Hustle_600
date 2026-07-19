@@ -297,6 +297,16 @@ MIN FEASIBLE:      while (l < r)  { if (f(m)) r=m; else l=m+1; } return l;
 MAX FEASIBLE:      while (l < r)  { m = l+(r-l+1)/2; if (f(m)) l=m; else r=m-1; } return l;
 ```
 
+## Quick Links to All Binary Search Problems
+
+| Problem | File | Code |
+|---------|------|------|
+| Classic Binary Search | {% include code-tabs-file.html problem="binarysearch" %} | `binarysearch/BinarySearch.kt` |
+| Search Insert Position | {% include code-tabs-file.html problem="searchinsertionposition" %} | `binarysearch/SearchInsertionPosition.kt` |
+| First Bad Version | {% include code-tabs-file.html problem="firstbadversion" %} | `binarysearch/FirstBadVersion.kt` |
+| Guess Number | {% include code-tabs-file.html problem="guessnumberhigherorlower" %} | `binarysearch/GuessNumberHigherOrLower.kt` |
+| Koko Eating Bananas | {% include code-tabs-file.html problem="kokoeatingbanana" %} | `binarysearch/KokoEatingBanana.kt` |
+
 ## Key Takeaways
 
 1. **Safe midpoint**: `mid = left + (right - left) / 2` prevents overflow

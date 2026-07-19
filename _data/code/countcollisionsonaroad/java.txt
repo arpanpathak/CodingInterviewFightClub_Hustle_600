@@ -1,5 +1,7 @@
+// package simulation
+
 class CountCollisionsOnARoad {
-    public static void $1(directions) {
-        TODO()
-    }
+    public int countCollisions(directions: String) {
+    TODO()
+}
 }
