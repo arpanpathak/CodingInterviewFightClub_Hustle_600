@@ -98,6 +98,11 @@ class AddTwoNumbers {
 }
 ```
 
+
+### Pattern Insight
+
+Study the code and identify the algorithmic pattern.
+
 ### Complexity
 
 | Metric | Value |
@@ -105,8 +110,10 @@ class AddTwoNumbers {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+
+---
 ## Copy Linked List With Random Pointer
 
 ### Problem
@@ -174,90 +181,10 @@ class CopyLinkedListWithRandomPointer {
 }
 ```
 
-### Complexity
 
-| Metric | Value |
-|--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+### Pattern Insight
 
----
-
-## Delete Middle Node Of Linked List
-
-### Problem
-
-Solves the Delete Middle Node Of Linked List problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package linkedlist
-
-class DeleteMiddleNodeOfLinkedList {
-    
-    // Two Pass Approach
-    /**
-    * Solves the Delete Middle Node Of Linked List problem.
-    * Takes `head` (linked list node reference).
-    *
-    * @param head The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    fun deleteMiddle(head: ListNode?): ListNode? {
-        var currentNode = head
-        var prevNode: ListNode? = null
-        var index = 0
-        var n =0
-        while (currentNode != null) {
-            n++
-            currentNode = currentNode.next
-
-        }
-
-        currentNode = head
-        while (currentNode != null) {
-            if (index++ == n/2)
-                break
-            prevNode = currentNode
-            currentNode = currentNode.next
-        }
-
-        if (prevNode != null)
-            prevNode.next = currentNode
-
-        return head
-    }
-
-    /**
-    * Solves the Delete Middle Node Of Linked List problem.
-    * Takes `head` (linked list node reference).
-    *
-    * @param head The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    fun deleteMiddleTwoPointer(head: ListNode?): ListNode? {
-        var (slow, fast, prev) = listOf(head, head, null)
-
-        if (head?.next == null)
-            return null
-
-        while (fast?.next != null ) {
-            prev = slow
-            slow = slow?.next
-            fast = fast?.next?.next
-        }
-
-        prev?.next = slow?.next
-
-        return head
-    }
-}
-```
+**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
 
 ### Complexity
 
@@ -266,59 +193,27 @@ class DeleteMiddleNodeOfLinkedList {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
+### Variations
+
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
 ---
+y
 
-## Node
+| Metric | Value |
+|--------|-------|
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
-### Problem
+### Variations
 
-Solves the Node problem.
 
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package linkedlist
-
-class Node(var `val`: Int) {
-    var next: Node? = null
-}
-
-class InsertIntoASortedCircularLinkedList {
-    /**
-    * Solves the Node problem.
-    * Takes `head` (Node?), `insertVal` (integer).
-    *
-    * @param head The Node? (nullable).
-    * @param insertVal The integer parameter representing insertVal.
-    * @return The result, or `null` if not found.
-    */
-    fun insert(head: Node?, insertVal: Int): Node? {
-        val newNode = Node(insertVal)
-        if (head == null) return newNode.apply { next = newNode }
-
-        var current: Node? = head
-        do {
-            when {
-                current?.`val`!! <= insertVal && insertVal <= current?.next?.`val`!! -> {
-                    newNode.next = current?.next
-                    current?.next = newNode
-                    return head
-                }
-                current?.`val`!! > current?.next?.`val`!! && (insertVal >= current?.`val`!! || insertVal <= current?.next?.`val`!!) -> {
-                    newNode.next = current?.next
-                    current?.next = newNode
-                    return head
-                }
-            }
-            current = current?.next
-        } while (current != head)
-
-        newNode.next = current?.next
-        current?.next = newNode
+---
+ent?.next = newNode
         return head
     }
 }
@@ -374,6 +269,16 @@ class IntersectionOfTwoLinkedList {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+
+
+### Pattern Insight
+
+**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+
 ### Complexity
 
 | Metric | Value |
@@ -381,8 +286,15 @@ class IntersectionOfTwoLinkedList {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
----
+### Variations
 
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
+---
 ## Linked List Cycle
 
 ### Problem
@@ -449,6 +361,11 @@ class LinkedListCycle {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+
 ### Complexity
 
 | Metric | Value |
@@ -513,17 +430,16 @@ class LinkedListCycle_II {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
+### Variations
+
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
 ---
 
-## Merge K Sorted List
-
-### Problem
-
-Solves the Merge KSorted List problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -733,6 +649,16 @@ class MergeTwoSortedLIst {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Linked list manipulation. Use pointer rearrangement to achieve O(1) space solutions.
+
+
+### Pattern Insight
+
+**Pattern:** Linked list manipulation. Use pointer rearrangement to achieve O(1) space solutions.
+
 ### Complexity
 
 | Metric | Value |
@@ -793,17 +719,16 @@ class OddEvenLinkedList {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
+### Variations
+
+1. What if the list is circular? How does detection change?
+1. What if you can't use extra memory (O(1) space constraint)?
+1. What if the list is doubly linked? Any simplifications?
+1. What if you need to do this recursively vs iteratively?
+1. What if multiple operations need to be supported (LRU cache pattern)?
+
 ---
-
-## Palindrome Linked List
-
-### Problem
-
-Solves the Palindrome Linked List problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+l algorithmic pattern._
 
 ### Code
 
@@ -1068,41 +993,16 @@ class ReverseLinkedListIterative {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
+### Variations
+
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
 ---
-
-## Reverse Nodes In K Groups
-
-### Problem
-
-Solves the Reverse Nodes In KGroups problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package linkedlist
-
-class ReverseNodesInKGroups {
-    /**
-    * Solves the Reverse Nodes In KGroups problem.
-    * Takes `head` (linked list node reference), `k` (integer).
-    *
-    * @param head The input linked list node reference.
-    * @param k The integer parameter representing k.
-    * @return The resulting collection (linked list node reference).
-    */
-    fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
-        if (head == null || k == 1) return head
-
-        val dummy = ListNode(0)
-        dummy.next = head
-        var start: ListNode? = dummy
-        var end: ListNode? = dummy
-
-        while (end?.next != null) {
+ {
             // Move `end` k steps forward
             for (i in 0 until k) {
                 end = end?.next

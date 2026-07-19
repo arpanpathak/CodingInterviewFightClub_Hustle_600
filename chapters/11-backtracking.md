@@ -98,6 +98,11 @@ class Combinations {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -105,8 +110,15 @@ class Combinations {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Combination Sum
 
 ### Problem
@@ -161,6 +173,11 @@ class CombinationSum {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Backtracking / DFS. Explore all possibilities, pruning when constraints are violated.
+
 ### Complexity
 
 | Metric | Value |
@@ -168,8 +185,15 @@ class CombinationSum {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Combination Sum_II
 
 ### Problem
@@ -229,6 +253,11 @@ class CombinationSum_II {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Backtracking / DFS. Explore all possibilities, pruning when constraints are violated.
+
 ### Complexity
 
 | Metric | Value |
@@ -236,58 +265,16 @@ class CombinationSum_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Combination Sum3
-
-### Problem
-
-Solves the Combination Sum3 problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array.backtracking
-
-class CombinationSum3 {
-    /**
-    * Solves the Combination Sum3 problem.
-    * Takes `k` (integer), `n` (integer).
-    *
-    * @param k The integer parameter representing k.
-    * @param n The integer parameter representing n.
-    * @return The computed integer result.
-    */
-    fun combinationSum3(k: Int, n: Int): List<List<Int>> {
-        val result = mutableListOf<List<Int>>()
-        dfs(k,n, 1, result)
-        return result
-    }
-
-    /**
-    * Solves the Combination Sum3 problem.
-    * Takes `k` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf().
-    *
-    * @param k The integer parameter representing k.
-    * @param remaining The integer parameter representing remaining.
-    * @param start The integer parameter representing start.
-    * @param result The input MutableList<List<Int>>.
-    * @param curr The input MutableList<Int> = mutableListOf(.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    fun dfs(
-        k: Int,
-        remaining: Int,
-        start: Int,
-        result: MutableList<List<Int>>,
-        curr: MutableList<Int> = mutableListOf(),
-    ) {
-
-        if (curr.size == k && remaining == 0) {
+ && remaining == 0) {
             result.add(curr.toList())
             return
         }
@@ -463,6 +450,11 @@ fun main(args: Array<String>) {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Backtracking / DFS. Explore all possibilities, pruning when constraints are violated.
+
 ### Complexity
 
 | Metric | Value |
@@ -470,8 +462,15 @@ fun main(args: Array<String>) {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the tree is not balanced (skewed)? Worst-case complexity?
+1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need to handle both BST and non-BST trees?
+1. Can this be solved with Morris traversal (O(1) space)?
+
+---
 ## Expression And Add Operators Optimized
 
 ### Problem
@@ -555,6 +554,11 @@ class ExpressionAndAddOperatorsOptimized {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Backtracking / DFS. Explore all possibilities, pruning when constraints are violated.
+
 ### Complexity
 
 | Metric | Value |
@@ -562,76 +566,16 @@ class ExpressionAndAddOperatorsOptimized {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## N Queen
-
-### Problem
-
-Solves the NQueen problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package backtracking
-
-import javax.swing.text.html.HTML.Attribute.N
-
-class NQueen {
-    private lateinit var placed: IntArray
-
-    /**
-    * Solves the NQueen problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The resulting collection (List<List<String>).
-    */
-    fun solveNQueens(n: Int): List<List<String>> {
-        val results = mutableListOf<List<String>>()
-        placed = IntArray(n) { -1 } // Initialize with -1 indicating no queens are placed
-
-        /**
-        * Solves the NQueen problem.
-        * Takes `row` (integer).
-        *
-        * @param row The integer parameter representing row.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        fun dfs(row: Int) {
-            if (row == n) {
-                // Convert the board configuration to the required output format
-                val board = List(n) { CharArray(n) { '.' } }
-                for (r in placed.indices) {
-                    board[r][placed[r]] = 'Q'
-                }
-                results.add(board.map { it.joinToString("") })
-                return
-            }
-
-            for (col in 0 until n) {
-                if (isSafe(row, col)) {
-                    placed[row] = col
-                    dfs(row + 1)
-                    placed[row] = -1 // Remove the queen (backtrack)
-                }
-            }
-        }
-
-        dfs(0)
-        return results
-    }
-
-    /**
-    * Helper: is safe.
-    *
-    * @param row The integer parameter representing row.
-    * @param col The integer parameter representing col.
-    * @return `true` if the condition is met, `false` otherwise.
+ `false` otherwise.
     */
     private fun isSafe(row: Int, col: Int): Boolean {
         for (prevRow in 0 until row) {

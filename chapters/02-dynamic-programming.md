@@ -108,6 +108,11 @@ class BurstBaloons {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Top-down DP with memoization. Cache results of recursive calls to avoid recomputing overlapping subproblems.
+
 ### Complexity
 
 | Metric | Value |
@@ -115,8 +120,15 @@ class BurstBaloons {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
----
+### Variations
 
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
+
+---
 ## Closest Subsequence Sum
 
 ### Problem
@@ -163,6 +175,11 @@ class ClosestSubsequenceSum {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -170,8 +187,15 @@ class ClosestSubsequenceSum {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Maximumproductsubarray
 
 ### Problem
@@ -260,6 +284,11 @@ object MaximumProductSubarray {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+
 ### Complexity
 
 | Metric | Value |
@@ -267,76 +296,16 @@ object MaximumProductSubarray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
+
 ---
-
-## Maximum Profit In Job Scheduling
-
-### Problem
-
-Solves the Maximum Profit In Job Scheduling problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package dynamic_programming
-
-class MaximumProfitInJobScheduling {
-    data class Job(val start: Int, val end: Int, val profit: Int)
-
-    /**
-    * Solves the Maximum Profit In Job Scheduling problem.
-    * Takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers).
-    *
-    * @param startTime The input array of integers.
-    * @param endTime The input array of integers.
-    * @param profit The input array of integers.
-    * @return The computed integer result.
-    */
-    fun jobScheduling(startTime: IntArray, endTime: IntArray, profit: IntArray): Int {
-        // Create a list of jobs and sort them by end time
-        val jobs = startTime.indices.map { Job(startTime[it], endTime[it], profit[it]) }
-            .sortedBy { it.end }
-
-        // Initialize dp array
-        val dp = IntArray(jobs.size)
-        dp[0] = jobs[0].profit
-
-        for (i in 1 until jobs.size) {
-            // Profit if the current job is not included
-            dp[i] = dp[i - 1]
-
-            // Find the last non-overlapping job
-            val prevJobIndex = findLastNonOverlappingJob(jobs, i)
-
-            // Profit if the current job is included
-            val currentProfit = jobs[i].profit + if (prevJobIndex != -1) dp[prevJobIndex] else 0
-
-            // Take the maximum profit between including and excluding the current job
-            dp[i] = maxOf(dp[i], currentProfit)
-        }
-
-        return dp[dp.size - 1]
-    }
-
-    /**
-    * Helper: find last non overlapping job.
-    *
-    * @param jobs The input List<Job>.
-    * @param currentIndex The integer parameter representing currentIndex.
-    * @return The computed integer result.
-    */
-    private fun findLastNonOverlappingJob(jobs: List<Job>, currentIndex: Int): Int {
-        val currentJob = jobs[currentIndex]
-        var low = 0
-        var high = currentIndex - 1
-        var best = -1
-
-        while (low <= high) {
-            val mid = (low + high) / 2
+          val mid = (low + high) / 2
             if (jobs[mid].end <= currentJob.start) {
                 best = mid
                 low = mid + 1  // Search in the right half
@@ -432,6 +401,11 @@ class PartitionEqualSubsetSum {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Top-down DP with memoization. Cache results of recursive calls to avoid recomputing overlapping subproblems.
+
 ### Complexity
 
 | Metric | Value |
@@ -439,8 +413,15 @@ class PartitionEqualSubsetSum {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
----
+### Variations
 
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
+
+---
 ## Super Egg Dropping
 
 ### Problem
@@ -558,6 +539,11 @@ class HouseRobber {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+
 ### Complexity
 
 | Metric | Value |
@@ -565,64 +551,16 @@ class HouseRobber {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
+### Variations
+
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
+
 ---
-
-## House Robber_II
-
-### Problem
-
-Solves the House Robber_II problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array.dp
-
-class HouseRobber_II {
-    /**
-    * Solves the House Robber_II problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    fun rob(nums: IntArray): Int {
-        return when {
-            nums.size == 1 -> nums[0]
-            else -> maxOf(rob(nums, 0 , nums.size ), rob(nums, 1, nums.size - 1))
-        }
-    }
-
-    /**
-     * Recusrive Solution
-     */
-    fun rob(nums: IntArray, start: Int, end: Int): Int {
-        var (include, exclude, max) = Triple(0, 0, 0)
-
-        for (i in start until  end) {
-            max = maxOf(include + nums[i], exclude)
-
-            include = exclude
-            exclude = max
-        }
-
-        return max
-    }
-
-
-    /**
-     * Bottom UP DP
-     */
-    fun robRange(nums: IntArray, start: Int, end: Int): Int {
-        if (nums.isEmpty() || start > end) return 0
-        if (start == end) return nums[start]
-
-        // Initialize an array to store the maximum amount that can be robbed up to each house
-        val dp = IntArray(nums.size)
+p = IntArray(nums.size)
 
         // Base cases
         dp[start] = nums[start]
@@ -811,6 +749,11 @@ class CoinChange_II_BottomUp {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+
 ### Complexity
 
 | Metric | Value |
@@ -818,45 +761,16 @@ class CoinChange_II_BottomUp {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
+### Variations
+
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
+
 ---
-
-## Longest Increasing Subsequence
-
-### Problem
-
-Solves the Longest Increasing Subsequence problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package tree.bst
-
-import java.util.*
-
-// Patience sorting algorithm
-class LongestIncreasingSubsequence {
-    /**
-    * Solves the Longest Increasing Subsequence problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    fun lengthOfLIS(nums: IntArray): Int {
-        val tree = TreeSet<Int>()
-        nums.forEach { num ->
-            // Find the smallest element in the tree which is greater than or equal to num
-            tree.ceiling(num)?.also {
-                // If such an element is found, it means num can replace it to potentially
-                // form a new valid increasing subsequence or extend the current one
-                tree.remove(it)
-            }
-            // Add num to the tree. If num is not replacing any element,
-            // it is extending the subsequence with a new larger element.
+t is extending the subsequence with a new larger element.
             tree.add(num)
         }
         // The size of the tree at the end will represent the length of the longest
@@ -972,6 +886,11 @@ class MaximumSumSubArray {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+
 ### Complexity
 
 | Metric | Value |
@@ -979,32 +898,16 @@ class MaximumSumSubArray {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
+### Variations
+
+1. What if the tree is not balanced (skewed)? Worst-case complexity?
+1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need to handle both BST and non-BST trees?
+1. Can this be solved with Morris traversal (O(1) space)?
+
 ---
-
-## Min Cost Climbing Staris
-
-### Problem
-
-Solves the Min Cost Climbing Staris problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array.dp
-
-class MinCostClimbingStaris {
-    /**
-    * Solves the Min Cost Climbing Staris problem.
-    * Takes `cost` (array of integers).
-    *
-    * @param cost The input array of integers.
-    * @return The computed integer result.
-    */
-    fun minCostClimbingStairs_iterative(cost: IntArray): Int {
+mbingStairs_iterative(cost: IntArray): Int {
         // Handle base cases
         if (cost.size <= 2) return cost.min()
 
@@ -1085,6 +988,11 @@ class MinCostClimbingStaris {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+
 ### Complexity
 
 | Metric | Value |
@@ -1145,59 +1053,16 @@ class MinimumPathSum {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
+### Variations
+
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
+
 ---
-
-## Split Array Largest Sum
-
-### Problem
-
-Solves the Split Array Largest Sum problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array.dp
-
-class SplitArrayLargestSum {
-    /**
-    * Solves the Split Array Largest Sum problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    fun splitArray(nums: IntArray, k: Int): Int {
-        val n = nums.size
-        val prefixSum = IntArray(n + 1)
-        for (i in nums.indices) {
-            prefixSum[i + 1] = prefixSum[i] + nums[i]
-        }
-
-        val memo = mutableMapOf<Pair<Int, Int>, Int>()
-
-        /**
-        * Solves the Split Array Largest Sum problem.
-        * Takes `i` (integer), `splitsLeft` (integer).
-        *
-        * @param i The integer parameter representing i.
-        * @param splitsLeft The integer parameter representing splitsLeft.
-        * @return The computed integer result.
-        */
-        fun dfs(i: Int, splitsLeft: Int): Int {
-            if (splitsLeft == 1) return prefixSum[n] - prefixSum[i] // Last split takes remaining sum
-            if (i == n) return Int.MAX_VALUE
-            if (memo.containsKey(i to splitsLeft)) return memo[i to splitsLeft]!!
-
-            var minLargestSum = Int.MAX_VALUE
-
-            for (j in i until n) {
-                val currentSum = prefixSum[j + 1] - prefixSum[i]
-                val largestInRemainingSplits = dfs(j + 1, splitsLeft - 1)
+ainingSplits = dfs(j + 1, splitsLeft - 1)
                 val maxSplitSum = maxOf(currentSum, largestInRemainingSplits)
 
                 minLargestSum = minOf(minLargestSum, maxSplitSum)

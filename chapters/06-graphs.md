@@ -134,6 +134,11 @@ class AlienDictionary {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Backtracking / DFS. Explore all possibilities, pruning when constraints are violated.
+
 ### Complexity
 
 | Metric | Value |
@@ -141,8 +146,15 @@ class AlienDictionary {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Alien Dictionary_BFS
 
 ### Problem
@@ -210,6 +222,16 @@ class AlienDictionary_BFS {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -217,8 +239,15 @@ class AlienDictionary_BFS {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
+---
 ## Apply Substitutions
 
 ### Problem
@@ -281,6 +310,16 @@ class ApplySubstitutions {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
+
+### Pattern Insight
+
+**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+
 ### Complexity
 
 | Metric | Value |
@@ -288,8 +327,15 @@ class ApplySubstitutions {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the tree is not balanced (skewed)? Worst-case complexity?
+1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need to handle both BST and non-BST trees?
+1. Can this be solved with Morris traversal (O(1) space)?
+
+---
 ## Bus Routes
 
 ### Problem

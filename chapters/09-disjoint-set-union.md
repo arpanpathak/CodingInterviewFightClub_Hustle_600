@@ -142,6 +142,11 @@ class AccountMerge {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+
 ### Complexity
 
 | Metric | Value |
@@ -149,8 +154,15 @@ class AccountMerge {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Number Of Island_II
 
 ### Problem
@@ -261,6 +273,16 @@ class NumberOfIsland_II {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+
+
+### Pattern Insight
+
+**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+
 ### Complexity
 
 | Metric | Value |
@@ -268,8 +290,15 @@ class NumberOfIsland_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Union Find
 
 ### Problem
@@ -344,11 +373,24 @@ class UnionFind<T> {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
 
 ---

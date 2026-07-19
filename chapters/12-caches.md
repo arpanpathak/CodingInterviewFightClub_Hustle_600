@@ -116,6 +116,11 @@ class LFUCache(capacity: Int) {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+
 ### Complexity
 
 | Metric | Value |
@@ -123,8 +128,15 @@ class LFUCache(capacity: Int) {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
----
+### Variations
 
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
+
+---
 ## LRU Cache
 
 ### Problem
@@ -180,6 +192,11 @@ class LRUCache(private val capacity: Int) {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+
 ### Complexity
 
 | Metric | Value |
@@ -187,8 +204,15 @@ class LRUCache(private val capacity: Int) {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
----
+### Variations
 
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
+
+---
 ## LRU Cache Linked List
 
 ### Problem
@@ -332,11 +356,24 @@ fun main() {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
 
 ---

@@ -174,6 +174,11 @@ class `4Sum` {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -181,8 +186,15 @@ class `4Sum` {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Add Strings
 
 ### Problem
@@ -230,6 +242,16 @@ class AddStrings {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
+
+### Pattern Insight
+
+Study the code and identify the algorithmic pattern.
+
 ### Complexity
 
 | Metric | Value |
@@ -237,8 +259,15 @@ class AddStrings {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## List Node
 
 ### Problem
@@ -294,6 +323,11 @@ class AddTwoNumbers {
 }
 ```
 
+
+### Pattern Insight
+
+Study the code and identify the algorithmic pattern.
+
 ### Complexity
 
 | Metric | Value |
@@ -301,8 +335,10 @@ class AddTwoNumbers {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+
+---
 ## Can Place Flowers
 
 ### Problem
@@ -354,50 +390,16 @@ class CanPlaceFlowers {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Container With Most Water
-
-### Problem
-
-Solves the Container With Most Water problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array.greedy
-
-class ContainerWithMostWater {
-    /**
-    * Solves the Container With Most Water problem.
-    * Takes `height` (array of integers).
-    *
-    * @param height The input array of integers.
-    * @return The computed integer result.
-    */
-    fun maxArea(height: IntArray): Int {
-        var (start, end) = Pair(0, height.lastIndex)
-        var maxWater = 0
-        while (start < end) {
-            maxWater = maxOf(maxWater, minOf(height[start], height[end]) * (end - start))
-
-            if (height[start] <= height[end]) {
-                start++
-            } else {
-                end--
-            }
-        }
-
-        return maxWater
-    }
-}
-```
-
-### Complexity
+xity
 
 | Metric | Value |
 |--------|-------|
@@ -444,6 +446,11 @@ class ContainsDuplicate_II {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -451,33 +458,16 @@ class ContainsDuplicate_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Contiguous Array
-
-### Problem
-
-Solves the Contiguous Array problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array.prefixsum
-
-class ContiguousArray {
-    /**
-    * Solves the Contiguous Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    fun findMaxLength(nums: IntArray): Int {
-        val map = mutableMapOf<Int, Int>()
+pOf<Int, Int>()
         var sum = 0
         var maxLen = 0
 
@@ -498,6 +488,11 @@ class ContiguousArray {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+
 ### Complexity
 
 | Metric | Value |
@@ -505,31 +500,16 @@ class ContiguousArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
 
-## Continuous Subarray Sum
-
-### Problem
-
-Solves the Continuous Subarray Sum problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array.prefixsum
-
-// Pattern https://leetcode.com/problems/continuous-subarray-sum/discuss/5276981/prefix-sum-hashmap-patterns-7-problems
-class ContinuousSubarraySum {
-    /**
-    * Solves the Continuous Subarray Sum problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
     * @return `true` if the condition is met, `false` otherwise.
     */
     fun checkSubarraySum(nums: IntArray, k: Int): Boolean {
@@ -551,6 +531,11 @@ class ContinuousSubarraySum {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -558,40 +543,16 @@ class ContinuousSubarraySum {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Diagonal Traverse
-
-### Problem
-
-Solves the Diagonal Traverse problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array
-
-class DiagonalTraverse {
-    // Enum to represent the direction of diagonal traversal: UP or DOWN
-    enum class Direction {
-        UP, DOWN
-    }
-
-    /**
-    * Solves the Diagonal Traverse problem.
-    * Takes `mat` (2D matrix of integers).
-    *
-    * @param mat The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    fun findDiagonalOrder(mat: Array<IntArray>): IntArray {
-        val m = mat.size        // Number of rows in the matrix
-        val n = mat[0].size     // Number of columns in the matrix
-        val result = mutableListOf<Int>()  // List to store the diagonal traversal result
+istOf<Int>()  // List to store the diagonal traversal result
 
         var i = 0  // Row index
         var j = 0  // Column index
@@ -707,6 +668,11 @@ class DiagonalTraverse_II {
 }
 ```
 
+
+### Pattern Insight
+
+Study the code and identify the algorithmic pattern.
+
 ### Complexity
 
 | Metric | Value |
@@ -714,57 +680,11 @@ class DiagonalTraverse_II {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
+### Variations
+
+
 ---
-
-## Randomized Set
-
-### Problem
-
-Solves the Randomized Set problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package probability
-
-import kotlin.random.Random
-
-class RandomizedSet() {
-    private val list = mutableListOf<Int>()
-    private val map = mutableMapOf<Int, Int>()
-
-    /**
-    * Solves the Randomized Set problem.
-    * Takes ``val`` (integer).
-    *
-    * @param `val` The integer parameter representing `val`.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    fun insert(`val`: Int): Boolean {
-        if (!map.containsKey(`val`))
-            return false
-        map[`val`] = list.size
-        list.add(`val`)
-        return true
-    }
-
-    /**
-    * Solves the Randomized Set problem.
-    * Takes ``val`` (integer).
-    *
-    * @param `val` The integer parameter representing `val`.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    fun remove(`val`: Int): Boolean {
-        if (map.containsKey(`val`))
-            return false
-
-        val index = map[`val`]!!
-        val lastElement = list.last()
+)
         list[index] = lastElement
         map[lastElement] = index
 
@@ -1048,6 +968,11 @@ class MergeIntervals {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+
 ### Complexity
 
 | Metric | Value |
@@ -1055,53 +980,16 @@ class MergeIntervals {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
 ---
-
-## Merge Sorted Array
-
-### Problem
-
-Solves the Merge Sorted Array problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array
-
-import binarysearch.FindKClosestElements
-import kotlin.math.max
-
-class MergeSortedArray {
-
-    /**
-    * Solves the Merge Sorted Array problem.
-    * Takes `nums1` (array of integers), `m` (integer), `nums2` (array of integers), `n` (integer).
-    *
-    * @param nums1 The input array of integers.
-    * @param m The integer parameter representing m.
-    * @param nums2 The input array of integers.
-    * @param n The integer parameter representing n.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
-        var (x, y, ptr) = listOf(m-1, n-1, m + n - 1)
-
-        while (x >=0  && y > 0) {
-            if (nums1[x] > nums2[y] )
-                nums1[ptr--] = nums1[x--]
-            else
-                nums1[ptr--] = nums2[y--]
-        }
-
-        while ( y >= 0) {
-            nums1[ptr--] = nums2[y--]
-        }
-
-        print(nums1.contentToString())
+ontentToString())
     }
 
     companion object {
@@ -1179,6 +1067,11 @@ class MissingRanges {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+
 ### Complexity
 
 | Metric | Value |
@@ -1236,39 +1129,16 @@ class MoveZeroes {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Next Permutation
-
-### Problem
-
-Solves the Next Permutation problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array.Combinatorics
-
-class NextPermutation {
-    /**
-    * Solves the Next Permutation problem.
-    * Takes `nums` (array of integers), `i` (integer), `j` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    fun swap(nums: IntArray, i: Int, j: Int) {
-        nums[j] = nums[i].also { nums[i] = nums[j] }
-    }
-
-    /**
-    * Solves the Next Permutation problem.
+roblem.
     * Takes `nums` (array of integers), `startIndex` (integer).
     *
     * @param nums The input array of integers.
@@ -1522,37 +1392,16 @@ class ReservoirSampling {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Rotate Array
-
-### Problem
-
-Solves the Rotate Array problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array.twopointer
-
-class RotateArray {
-    /**
-    * Solves the Rotate Array problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    fun rotate(nums: IntArray, k: Int): Unit {
-        val n = nums.size
-        val steps = k % n // In case k is greater than n
-
-        reverse(nums, 0, n - 1)
+ 0, n - 1)
         reverse(nums, 0, steps - 1)
         reverse(nums, steps, n - 1)
     }
@@ -1577,6 +1426,11 @@ class RotateArray {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -1584,31 +1438,16 @@ class RotateArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Rotate Image
-
-### Problem
-
-Solves the Rotate Image problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array
-
-class RotateImage {
-    /**
-    * Solves the Rotate Image problem.
-    * Takes `matrix` (2D matrix of integers).
-    *
-    * @param matrix The input 2D matrix of integers.
-    * @return Unit (no return value, modifies state in-place).
-    */
+  */
     fun rotate(matrix: Array<IntArray>): Unit {
         for (i in matrix.indices)
             for (j in i until matrix[i].size) {
@@ -1653,6 +1492,11 @@ class RotateImage {
  */
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -1660,31 +1504,16 @@ class RotateImage {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Search A2d Matrix_II
-
-### Problem
-
-Solves the Search A2d Matrix_II problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array
-
-class SearchA2dMatrix_II {
-    /**
-    * Solves the Search A2d Matrix_II problem.
-    * Takes `matrix` (2D matrix of integers), `target` (integer).
-    *
-    * @param matrix The input 2D matrix of integers.
-    * @param target The integer parameter representing target.
-    * @return `true` if the condition is met, `false` otherwise.
+erwise.
     */
     fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
         var (row, col) = matrix.size - 1 to 0
@@ -1702,6 +1531,11 @@ class SearchA2dMatrix_II {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -1709,46 +1543,16 @@ class SearchA2dMatrix_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Shortest Path In Binary Matrix
-
-### Problem
-
-Solves the Shortest Path In Binary Matrix problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package array
-
-import java.util.*
-
-class ShortestPathInBinaryMatrix {
-    data class State(val row: Int, val col: Int, val dist: Int)
-
-    /**
-    * Solves the Shortest Path In Binary Matrix problem.
-    * Takes `grid` (2D matrix of integers).
-    *
-    * @param grid The input 2D matrix of integers.
-    * @return The computed integer result.
-    */
-    fun shortestPathBinaryMatrix(grid: Array<IntArray>): Int {
-        val n = grid.size
-        val m = grid[0].size
-
-        // Early return if start or end is blocked
-        if (grid[0][0] == 1 || grid[n - 1][m - 1] == 1) return -1
-
-        // Directions for 8 neighbors (horizontal, vertical, and diagonal)
-        val directions = arrayOf(
-            -1 to 0, 1 to 0, 0 to -1, 0 to 1,  // Left, right, up, down
-            -1 to -1, -1 to 1, 1 to -1, 1 to 1 // Diagonal directions
+  -1 to -1, -1 to 1, 1 to -1, 1 to 1 // Diagonal directions
         )
 
         val queue = LinkedList<State>()

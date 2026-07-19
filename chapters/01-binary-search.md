@@ -171,6 +171,11 @@ fun main() {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Binary search on sorted data. Key insight: the predicate must be monotonic — once it becomes true, it stays true for all larger values.
+
 ### Complexity
 
 | Metric | Value |
@@ -178,8 +183,15 @@ fun main() {
 | **Time** | O(log n) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the array is not sorted? Can you sort first?
+1. What if there are duplicates? How does that affect the search?
+1. What if the search space is a range of values rather than array indices?
+1. What if you need to find the FIRST vs LAST occurrence?
+1. What if the input is too large to fit in memory (external search)?
+
+---
 ## Capacity To Ship Package Within D Days
 
 ### Problem
@@ -249,6 +261,11 @@ class CapacityToShipPackageWithinDDays {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -256,8 +273,15 @@ class CapacityToShipPackageWithinDDays {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Closest Sebsequence Sum
 
 ### Problem
@@ -332,6 +356,11 @@ class ClosestSebsequenceSum {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Binary search on sorted data. Key insight: the predicate must be monotonic — once it becomes true, it stays true for all larger values.
+
 ### Complexity
 
 | Metric | Value |
@@ -339,69 +368,16 @@ class ClosestSebsequenceSum {
 | **Time** | O(log n) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the array is not sorted? Can you sort first?
+1. What if there are duplicates? How does that affect the search?
+1. What if the search space is a range of values rather than array indices?
+1. What if you need to find the FIRST vs LAST occurrence?
+1. What if the input is too large to fit in memory (external search)?
+
 ---
-
-## Find First And Last Position
-
-### Problem
-
-Solves the Find First And Last Position problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package binarysearch
-
-class FindFirstAndLastPosition {
-
-    /**
-    * Solves the Find First And Last Position problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    fun searchRange(nums: IntArray, target: Int): IntArray {
-        val result = intArrayOf(-1, -1)
-
-        // Find the first occurrence
-        result[0] = binarySearch(nums, target, true)
-
-        // If the first occurrence is not found, return [-1, -1]
-        if (result[0] == -1) return result
-
-        // Find the last occurrence
-        result[1] = binarySearch(nums, target, false)
-
-        return result
-    }
-
-    /**
-    * Helper: binary search.
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @param findFirst A boolean flag: findFirst.
-    * @return The computed integer result.
-    */
-    private fun binarySearch(nums: IntArray, target: Int, findFirst: Boolean): Int {
-        var left = 0
-        var right = nums.lastIndex
-        var result = -1
-
-        while (left <= right) {
-            val mid = left + (right - left) / 2
-            when {
-                nums[mid] == target -> {
-                    result = mid
-                    // Adjust the search range based on whether we are looking for the first or last occurrence
-                    if (findFirst) {
-                        right = mid - 1  // Move left to find the first occurrence
+rrence
                     } else {
                         left = mid + 1   // Move right to find the last occurrence
                     }
@@ -498,6 +474,11 @@ class FindKClosestElements {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
+
 ### Complexity
 
 | Metric | Value |
@@ -505,8 +486,15 @@ class FindKClosestElements {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
----
+### Variations
 
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
+---
 ## Find Minimum In Rotated Sorted Array
 
 ### Problem
@@ -545,6 +533,11 @@ class FindMinimumInRotatedSortedArray {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+
 ### Complexity
 
 | Metric | Value |
@@ -552,55 +545,16 @@ class FindMinimumInRotatedSortedArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Find Peak Element
-
-### Problem
-
-Solves the Find Peak Element problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package binarysearch
-
-class FindPeakElement {
-    /**
-    * Solves the Find Peak Element problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    fun findPeakElement(nums: IntArray): Int {
-        var left = 0
-        var right = nums.lastIndex
-
-        while ( left < right) {
-            val mid = left + (right - left)/2
-
-            if (nums[mid] > nums[mid + 1]) {
-                right = mid
-            } else {
-                left = mid + 1
-            }
-        }
-
-        return left
-    }
-}
-```
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n³) |
+(n³) |
 | **Space** | O(n²) |
 
 ---
@@ -817,6 +771,11 @@ open class GuessGame {
 }
 ```
 
+
+### Pattern Insight
+
+Study the code and identify the algorithmic pattern.
+
 ### Complexity
 
 | Metric | Value |
@@ -824,65 +783,10 @@ open class GuessGame {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+
 ---
-
-## House Robber_IV
-
-### Problem
-
-Solves the House Robber_IV problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package binarysearch
-
-class HouseRobber_IV {
-    /**
-    * Solves the House Robber_IV problem.
-    * Takes `nums` (array of integers), `k` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    fun minCapability(nums: IntArray, k: Int): Int {
-        var left = nums.minOrNull() ?: 0
-        var right = nums.maxOrNull() ?: 0
-
-        /**
-        * Solves the House Robber_IV problem.
-        * Takes `cap` (integer).
-        *
-        * @param cap The integer parameter representing cap.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        fun canRob(cap: Int): Boolean {
-            var robbed = 0
-            var i = 0
-            while (i < nums.size) {
-                if (nums[i] <= cap) {
-                    robbed++
-                    i += 2  // skip adjacent
-                } else {
-                    i++
-                }
-            }
-            return robbed >= k
-        }
-
-        while (left < right) {
-            val mid = (left + right) / 2
-            if (canRob(mid)) {
-                right = mid
-            } else {
-                left = mid + 1
-            }
-        }
 
         return left
     }
@@ -1254,6 +1158,11 @@ class RandomPickWithWeight (w: IntArray) {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+
 ### Complexity
 
 | Metric | Value |
@@ -1317,27 +1226,16 @@ class SearchA2dMatrix {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Search In Rotated Array_II
-
-### Problem
-
-Solves the Search In Rotated Array_II problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package binarysearch
-
-class SearchInRotatedArray_II {
-    /**
-    * Solves the Search In Rotated Array_II problem.
-    * Takes `nums` (array of integers), `target` (integer).
+ers), `target` (integer).
     *
     * @param nums The input array of integers.
     * @param target The integer parameter representing target.
@@ -1383,6 +1281,11 @@ class SearchInRotatedArray_II {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -1390,41 +1293,16 @@ class SearchInRotatedArray_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Search In Rotated Sorted Array
-
-### Problem
-
-Solves the Search In Rotated Sorted Array problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package binarysearch
-
-class SearchInRotatedSortedArray {
-    /**
-    * Solves the Search In Rotated Sorted Array problem.
-    * Takes `nums` (array of integers), `target` (integer).
-    *
-    * @param nums The input array of integers.
-    * @param target The integer parameter representing target.
-    * @return The computed integer result.
-    */
-    fun search(nums: IntArray, target: Int): Int {
-        var (start, end) = listOf(0, nums.lastIndex)
-
-        while (start <= end) {
-            val mid = start + (end - start) / 2
-
-            if (nums[mid] == target) return mid
-
-            // Determine if Left half is sorted
+Left half is sorted
             if (nums[start] <= nums[mid]) {
                 if (nums[start] <= target && target < nums[mid]) {
                     end = mid - 1
@@ -1446,6 +1324,11 @@ class SearchInRotatedSortedArray {
     }
 }
 ```
+
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
 
 ### Complexity
 
@@ -1506,36 +1389,16 @@ class SearchInsertionPosition {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Single Element In A Sorted Array
-
-### Problem
-
-Solves the Single Element In ASorted Array problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package binarysearch
-
-class SingleElementInASortedArray {
-    /**
-    * Solves the Single Element In ASorted Array problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    fun singleNonDuplicate(nums: IntArray): Int {
-        var low = 0
-        var high = nums.size - 1
-
-        while (low < high) {
+while (low < high) {
             var mid = low + (high - low) / 2
             // Ensure mid is even for checking pair with the next element
             if (mid % 2 == 1) {
@@ -1555,6 +1418,11 @@ class SingleElementInASortedArray {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -1562,46 +1430,16 @@ class SingleElementInASortedArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Valley Element
-
-### Problem
-
-Solves the Valley Element problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package binarysearch
-
-class ValleyElement {
-    /**
-    * Solves the Valley Element problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    fun findValleyElementBinary(nums: IntArray): Int? {
-        if (nums.isEmpty()) return null
-
-        var (left, right) = 0 to nums.size
-
-        while (left < right) {
-            val mid = left + (right - left) / 2
-
-            // Safely handle boundaries
-            val leftNeighbor = if (mid > 0) nums[mid - 1] else Int.MAX_VALUE
-            val rightNeighbor = if (mid < nums.size - 1) nums[mid + 1] else Int.MAX_VALUE
-
-            when {
-                nums[mid] < leftNeighbor && nums[mid] < rightNeighbor -> return nums[mid] // Found valley
-                nums[mid] > rightNeighbor -> left = mid + 1 // Move to the right
+or -> left = mid + 1 // Move to the right
                 else -> right = mid // Move to the left
             }
         }

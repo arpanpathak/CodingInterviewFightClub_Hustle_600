@@ -130,6 +130,11 @@ class DualBalancedHeap<T : Comparable<T>> {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
+
 ### Complexity
 
 | Metric | Value |
@@ -137,8 +142,15 @@ class DualBalancedHeap<T : Comparable<T>> {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
----
+### Variations
 
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
+---
 ## MK Average
 
 ### Problem
@@ -272,6 +284,11 @@ fun main() {
  */
 ```
 
+
+### Pattern Insight
+
+Study the code and identify the algorithmic pattern.
+
 ### Complexity
 
 | Metric | Value |
@@ -279,8 +296,10 @@ fun main() {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
----
+### Variations
 
+
+---
 ## Find K Closest Elements
 
 ### Problem
@@ -354,6 +373,16 @@ class FindKClosestElements {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
+
+
+### Pattern Insight
+
+**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
+
 ### Complexity
 
 | Metric | Value |
@@ -361,54 +390,16 @@ class FindKClosestElements {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
+### Variations
+
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
 ---
-
-## Find Score Of An Array After Marking All Elements
-
-### Problem
-
-Solves the Find Score Of An Array After Marking All Elements problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package heap
-
-import java.util.*
-
-class FindScoreOfAnArrayAfterMarkingAllElements {
-    /**
-    * Solves the Find Score Of An Array After Marking All Elements problem.
-    * Takes `nums` (array of integers).
-    *
-    * @param nums The input array of integers.
-    * @return The computed integer result.
-    */
-    fun findScore(nums: IntArray): Long {
-        val n = nums.size
-        val marked = BooleanArray(n) { false }
-
-        val minHeap = PriorityQueue<Pair<Int, Int>> { a, b ->
-            if (a.first == b.first) a.second - b.second else a.first - b.first
-        }
-
-        nums.forEachIndexed { index, value -> minHeap.add(Pair(value, index)) }
-
-        var score = 0L
-
-        while (minHeap.isNotEmpty()) {
-            val (value, index) = minHeap.poll()
-
-            if (marked[index]) continue
-
-            score += value
-
-            marked[index] = true
-            if (index > 0) marked[index - 1] = true
+ = true
             if (index < n - 1) marked[index + 1] = true
         }
 
@@ -478,6 +469,11 @@ class IPO {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
+
 ### Complexity
 
 | Metric | Value |
@@ -485,8 +481,15 @@ class IPO {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
----
+### Variations
 
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
+---
 ## Longest Happy String
 
 ### Problem
@@ -574,6 +577,11 @@ class LongestHappyString {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
+
 ### Complexity
 
 | Metric | Value |
@@ -581,49 +589,16 @@ class LongestHappyString {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
+### Variations
+
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
 ---
-
-## Median From Running Stream
-
-### Problem
-
-Solves the Median From Running Stream problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package heap
-
-import java.util.*
-import kotlin.Comparator
-
-class MedianFromRunningStream {
-    private val minHeap = PriorityQueue<Int>() // Min-heap for the larger half
-    private val maxHeap = PriorityQueue<Int>(compareBy() { -it }) // Max-heap for the smaller half
-
-
-    /**
-    * Solves the Median From Running Stream problem.
-    * Takes `num` (integer).
-    *
-    * @param num The integer parameter representing num.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    fun addNum(num: Int) {
-        minHeap.offer(num)
-        maxHeap.offer(minHeap.poll())
-
-        if (minHeap.size < maxHeap.size) {
-            minHeap.offer(maxHeap.poll())
-        }
-    }
-
-    /**
-    * Solves the Median From Running Stream problem.
+edian From Running Stream problem.
     *
     * @return The computed floating-point result.
     */

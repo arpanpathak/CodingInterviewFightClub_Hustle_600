@@ -146,6 +146,11 @@ class ApplySubstitutions {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -153,8 +158,15 @@ class ApplySubstitutions {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the tree is not balanced (skewed)? Worst-case complexity?
+1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need to handle both BST and non-BST trees?
+1. Can this be solved with Morris traversal (O(1) space)?
+
+---
 ## Break A Palindrome
 
 ### Problem
@@ -195,6 +207,11 @@ class BreakAPalindrome {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -202,8 +219,15 @@ class BreakAPalindrome {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Checkifa Parentheses String Can Be Valid
 
 ### Problem
@@ -262,6 +286,11 @@ class CheckifaParenthesesStringCanBeValid {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -269,39 +298,16 @@ class CheckifaParenthesesStringCanBeValid {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Count And Say
-
-### Problem
-
-Solves the Count And Say problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string
-
-class CountAndSay {
-    /**
-    * Solves the Count And Say problem.
-    * Takes `n` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @return The resulting string.
-    */
-    fun countAndSay(n: Int): String {
-        var result = "1"
-        repeat(n - 1) {
-            val nextSequence = buildString {
-                var count = 1
-                for (i in 1 until result.length) {
-                    if (result[i] == result[i - 1]) {
-                        count++
+ount++
                     } else {
                         append(count).append(result[i - 1])
                         count = 1
@@ -316,6 +322,11 @@ class CountAndSay {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -323,40 +334,16 @@ class CountAndSay {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Count Words With A Given Prefix
-
-### Problem
-
-Solves the Count Words With AGiven Prefix problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string
-
-class CountWordsWithAGivenPrefix {
-    /**
-    * Solves the Count Words With AGiven Prefix problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    fun prefixCount(words: Array<String>, prefix: String): Int {
-        var count = 0
-
-        for (word in words) {
-            if (word.startsWith(prefix)) {
-                count++
-            }
-        }
+  }
 
         return count
     }
@@ -449,6 +436,11 @@ class CountWordsWithAGivenPrefix_Trie {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Trie (prefix tree). Store strings in a tree structure for O(L) prefix lookups.
+
 ### Complexity
 
 | Metric | Value |
@@ -456,8 +448,15 @@ class CountWordsWithAGivenPrefix_Trie {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
----
+### Variations
 
+1. What if you need to reconstruct the actual subsequence/path?
+1. What if the strings are very long? Can you optimize space?
+1. What if case sensitivity or character encoding matters?
+1. What if you need to handle multiple strings (3+)?
+1. What if there are wildcards or regex patterns involved?
+
+---
 ## Count Words With A Given Prefix_Trie_FP
 
 ### Problem
@@ -505,6 +504,11 @@ class CountWordsWithAGivenPrefix_Trie_FP {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -512,31 +516,16 @@ class CountWordsWithAGivenPrefix_Trie_FP {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Custom Sort String
-
-### Problem
-
-Solves the Custom Sort String problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string.sorting
-
-class CustomSortString {
-    /**
-    * Solves the Custom Sort String problem.
-    * Takes `order` (string), `s` (string).
-    *
-    * @param order The input string.
-    * @param s The input string.
-    * @return The resulting string.
+e resulting string.
     */
     fun customSortString(order: String, s: String): String {
         val orderMap = mutableMapOf<Char, Int>()
@@ -548,6 +537,11 @@ class CustomSortString {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -555,87 +549,16 @@ class CustomSortString {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Decode String
-
-### Problem
-
-Solves the Decode String problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string.stack
-
-class DecodeString {
-    private var index = 0
-
-    /**
-    * Solves the Decode String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    fun decodeString(s: String): String {
-        val result = StringBuilder()
-
-        while (index < s.length && s[index] != ']') {
-            val ch = s[index]
-            when {
-                !ch.isDigit() -> {
-                    result.append(ch)
-                    index++
-                }
-                else -> {
-                    var k = 0
-                    while (index < s.length && s[index].isDigit()) {
-                        k = k * 10 + (s[index++] - '0')
-                    }
-                    index++ // Skip the opening bracket '['
-                    val nestedDecodedString = decodeString(s)
-                    index++ // Skip the closing bracket ']'
-
-                    repeat(k) {
-                        result.append(nestedDecodedString)
-                    }
-                }
-            }
-        }
-
-        return result.toString()
-    }
-
-    // Short code
-    /**
-    * Solves the Decode String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    fun decodeString1(s: String): String {
-        var index = 0
-        /**
-        * Solves the Decode String problem.
-        *
-        * @return The resulting string.
-        */
-        fun decode(): String {
-            val result = StringBuilder()
-            var num = 0
-            while (index < s.length) {
-                when (val char = s[index]) {
-                    in '0'..'9' -> num = num * 10 + (char - '0')
-                    '[' -> {
-                        index++
-                        val decodedString = decode()
-                        result.append(decodedString.repeat(num))
+repeat(num))
                         num = 0
                     }
                     ']' -> return result.toString()
@@ -886,6 +809,11 @@ class FindAllAnagrams {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+
 ### Complexity
 
 | Metric | Value |
@@ -893,51 +821,16 @@ class FindAllAnagrams {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Findtheindexofthefirstoccurrenceina String
-
-### Problem
-
-Solves the findtheindexofthefirstoccurrenceina string problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string.pattern_matching
-
-import oracle.net.aso.m
-
-class `FindTheIndexofTheFirstOccurrenceIna String` {
-    /**
-    * Solves the findtheindexofthefirstoccurrenceina string problem.
-    * Takes `haystack` (string), `needle` (string).
-    *
-    * @param haystack The input string.
-    * @param needle The input string.
-    * @return The computed integer result.
-    */
-    fun strStr(haystack: String, needle: String): Int {
-        // If the needle is empty, return 0
-        if (needle.isEmpty()) return 0
-
-        // Use 'to' to assign both m and n in one line
-        val (m, n) = needle.length to haystack.length
-
-        // Step 1: Build the LPS array for the needle
-        val lps = buildLPS(needle)
-        println(needle)
-        println(lps.contentToString())
-        // Step 2: Search for the needle in the haystack using KMP algorithm
-        var (i, j) = 0 to 0  // Pairing to initialize indices for haystack and needle
-
-        while (i < n) {
-            when {
-                haystack[i] == needle[j] -> {  // Characters match
+             haystack[i] == needle[j] -> {  // Characters match
                     i++
                     j++
                 }
@@ -1355,6 +1248,11 @@ class GroupAnagrams {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -1362,51 +1260,16 @@ class GroupAnagrams {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the tree is not balanced (skewed)? Worst-case complexity?
+1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need to handle both BST and non-BST trees?
+1. Can this be solved with Morris traversal (O(1) space)?
+
 ---
-
-## Group Shifted Strings
-
-### Problem
-
-Solves the Group Shifted Strings problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string.hashtable
-
-class GroupShiftedStrings {
-    /**
-    * Solves the Group Shifted Strings problem.
-    * Takes `strings` (Array<String>).
-    *
-    * @param strings The input Array<String>.
-    * @return The resulting collection (List<List<String>).
-    */
-    fun groupStrings(strings: Array<String>): List<List<String>> {
-        val map = mutableMapOf<String, MutableList<String>>()
-
-        for (str in strings) {
-            val key = getKey(str)
-            map.computeIfAbsent(key) { mutableListOf() }.add(str)
-        }
-
-        return map.values.toList()
-    }
-
-    /**
-    * Helper: get key.
-    *
-    * @param str The input string.
-    * @return The resulting string.
-    */
-    private fun getKey(str: String): String {
-        return buildString {
-            for (i in 1 until str.length) {
+ for (i in 1 until str.length) {
                 append( ((str[i] - str[i - 1] + 26) % 26).toString() )
             }
         }
@@ -1484,6 +1347,11 @@ class InterleavingString {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -1491,51 +1359,16 @@ class InterleavingString {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Isomorphic String
-
-### Problem
-
-Solves the Isomorphic String problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string
-
-class IsomorphicString {
-    /**
-    * Solves the Isomorphic String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    fun encode(s: String): String {
-        val map = mutableMapOf<Char, Int>()
-        val sb = StringBuilder()
-        var code = 0
-
-        for (c in s) {
-            if (c !in map) map[c] = code++
-            sb.append(map[c]).append(" ")
-        }
-
-        return sb.toString()
-    }
-
-    /**
-    * Solves the Isomorphic String problem.
-    * Takes `s` (string), `t` (string).
-    *
-    * @param s The input string.
-    * @param t The input string.
-    * @return `true` if the condition is met, `false` otherwise.
+the condition is met, `false` otherwise.
     */
     fun isIsomorphic(s: String, t: String): Boolean {
         return encode(s) == encode(t)
@@ -1808,6 +1641,11 @@ class LongestCommonSubstring {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -1815,61 +1653,16 @@ class LongestCommonSubstring {
 | **Time** | O(n) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the tree is not balanced (skewed)? Worst-case complexity?
+1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need to handle both BST and non-BST trees?
+1. Can this be solved with Morris traversal (O(1) space)?
+
 ---
-
-## Longest Palidnromic Substring
-
-### Problem
-
-Solves the Longest Palidnromic Substring problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string
-
-class LongestPalidnromicSubstring {
-    /**
-    * Solves the Longest Palidnromic Substring problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    fun longestPalindrome(s: String): String {
-        if (s.isEmpty()) return ""
-
-        var start = 0
-        var maxLength = 1
-
-        // Helper function to expand around the center
-        /**
-        * Solves the Longest Palidnromic Substring problem.
-        * Takes `left` (integer), `right` (integer).
-        *
-        * @param left The integer parameter representing left.
-        * @param right The integer parameter representing right.
-        * @return The computed integer result.
-        */
-        fun expandAroundCenter(left: Int, right: Int): Int {
-            var l = left
-            var r = right
-            while (l >= 0 && r < s.length && s[l] == s[r]) {
-                l--
-                r++
-            }
-            // Return the length of the palindrome
-            return r - l - 1
-        }
-
-        for (i in 0 until s.length) {
-            // Check for odd length palindrome (center is s[i])
-            val len1 = expandAroundCenter(i, i)
-            // Check for even length palindrome (center is between s[i] and s[i + 1])
+1])
             val len2 = expandAroundCenter(i, i + 1)
 
             val len = maxOf(len1, len2)
@@ -2055,6 +1848,11 @@ class LongestRepeatingCharacterReplacement {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+
 ### Complexity
 
 | Metric | Value |
@@ -2062,24 +1860,16 @@ class LongestRepeatingCharacterReplacement {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
+
 ---
-
-## Longest String Chain
-
-### Problem
-
-Solves the Longest String Chain problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string.dynamic_programming
-
-class LongestStringChain {
+tStringChain {
     /**
     * Solves the Longest String Chain problem.
     * Takes `words` (Array<String>).
@@ -2227,6 +2017,11 @@ class MaximumValueOfAStringIsAnArray {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -2234,36 +2029,16 @@ class MaximumValueOfAStringIsAnArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Merge String Alternatively
-
-### Problem
-
-Solves the Merge String Alternatively problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string
-
-class MergeStringAlternatively {
-    /**
-    * Solves the Merge String Alternatively problem.
-    * Takes `word1` (string), `word2` (string).
-    *
-    * @param word1 The input string.
-    * @param word2 The input string.
-    * @return The resulting string.
-    */
-    fun mergeAlternately(word1: String, word2: String): String {
-        val mergedString = StringBuilder()
-
-        for (i in 0 until maxOf(word1.length, word2.length)) {
+ in 0 until maxOf(word1.length, word2.length)) {
             if (i < word1.length)
                 mergedString.append(word1[i])
             if (i < word2.length)
@@ -2472,44 +2247,16 @@ class RemoveAllAdjacentDuplicatesInString {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Reverse Words In String
-
-### Problem
-
-Solves the Reverse Words In String problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string
-
-class ReverseWordsInString {
-    /**
-    * Solves the Reverse Words In String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    fun reverseWords(s: String): String {
-        val words = s.split(" ").filter { it.isNotEmpty() }.toMutableList()
-
-        // Two pointers
-        var (start, end) = Pair(0, words.lastIndex)
-
-        while (start < end) {
-            words[end] = words[start].also { words[start] = words[end] }
-            start++
-            end--
-        }
-
-        return words.joinToString(separator = " ").trim()
+rim()
 
     }
 
@@ -2535,56 +2282,16 @@ class ReverseWordsInString {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Shortest Common Supersequence
-
-### Problem
-
-Solves the Shortest Common Supersequence problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string.dynamic_programming
-
-class ShortestCommonSupersequence {
-    /**
-    * Solves the Shortest Common Supersequence problem.
-    * Takes `X` (string), `Y` (string).
-    *
-    * @param X The input string.
-    * @param Y The input string.
-    * @return The resulting string.
-    */
-    fun shortestCommonSupersequence(X: String, Y: String): String? {
-        val (m, n) = X.length to Y.length
-        val dp = Array(m + 1) { IntArray(n + 1) }
-
-        for (i in 1..m) for (j in 1..n) {
-            dp[i][j] = if (X[i - 1] == Y[j - 1]) dp[i - 1][j - 1] + 1 else maxOf(dp[i - 1][j], dp[i][j - 1])
-        }
-
-        val scs = StringBuilder()
-        var (i, j) = m to n
-
-        while (i > 0 && j > 0) {
-            when {
-                X[i - 1] == Y[j - 1] -> { scs.append(X[i - 1]); i--; j-- }
-                dp[i - 1][j] > dp[i][j - 1] -> { scs.append(X[i - 1]); i-- }
-                else -> { scs.append(Y[j - 1]); j-- }
-            }
-        }
-
-        // Add remaining characters from X or Y
-        while (i > 0) { scs.append(X[i - 1]); i-- }
-        while (j > 0) { scs.append(Y[j - 1]); j-- }
-
-        // Reverse the result and return as string
+  // Reverse the result and return as string
         return scs.reverse().toString()
     }
 }
@@ -2750,6 +2457,11 @@ class StringCompression {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
 ### Complexity
 
 | Metric | Value |
@@ -2811,13 +2523,16 @@ class StringCompression_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Unique Length3 Palindromic Subsequence
-
-### Problem
-
-Solves the Unique Length3Palindromic Subsequence problem.
+romic Subsequence problem.
 
 ### Why This Approach
 
@@ -2869,6 +2584,11 @@ class UniqueLength3PalindromicSubsequence {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -2876,40 +2596,16 @@ class UniqueLength3PalindromicSubsequence {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Unique Substring With Equal Digit Frequency
-
-### Problem
-
-Solves the Unique Substring With Equal Digit Frequency problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string.hashtable
-
-class UniqueSubstringWithEqualDigitFrequency {
-    /**
-    * Solves the Unique Substring With Equal Digit Frequency problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    fun equalDigitFrequency(s: String): Int {
-        val n = s.length
-        val uniqueSubstrings = mutableSetOf<String>()
-
-        // Precompute prefix frequency arrays
-        val prefixFreq = Array(n + 1) { IntArray(10) }
-        for (i in 1..n) {
-            for (d in 0..9) {
-                prefixFreq[i][d] = prefixFreq[i - 1][d]
+ prefixFreq[i - 1][d]
             }
             prefixFreq[i][s[i - 1] - '0']++
         }
@@ -3081,42 +2777,16 @@ class ValidNumber {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Valid Palindrome
-
-### Problem
-
-Solves the Valid Palindrome problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string
-
-class ValidPalindrome {
-    /**
-    * Solves the Valid Palindrome problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    fun isPalindrome(s: String): Boolean {
-        var left = 0
-        var right = s.lastIndex
-        val isAlpha = {ch: Char -> Character.isAlphabetic(ch.code) || Character.isDigit(ch.code)}
-
-        while (left < right) {
-            when {
-                isAlpha(s[left]) && isAlpha(s[right])
-                        && s[left].lowercaseChar() != s[right].lowercaseChar() -> return false
-                isAlpha(s[left]) && !isAlpha(s[right]) ->  right --
-                isAlpha(s[right]) && !isAlpha(s[left]) -> left++
+a(s[left]) -> left++
                 else -> {
                     left++
                     right--
@@ -3579,6 +3249,11 @@ class PermutationsInString {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -3586,56 +3261,16 @@ class PermutationsInString {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Reverse Vowel Of String
-
-### Problem
-
-Solves the Reverse Vowel Of String problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string
-
-class ReverseVowelOfString {
-    /**
-    * Solves the Reverse Vowel Of String problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The resulting string.
-    */
-    fun reverseVowels(s: String): String {
-        val vowels = setOf('a', 'e', 'i', 'o', 'u')
-        val result = StringBuilder(s)
-
-        var (start, end) = Pair(0, s.lastIndex)
-
-        while (start < end) {
-            if (s[start] in vowels && s[end] in vowels) {
-                swap (result, start++, end--)
-            } else if (s[start].lowercaseChar() !in vowels)  {
-                start++
-            } else {
-                end--
-            }
-        }
-
-        return result.toString()
-    }
-
-    /**
-    * Solves the Reverse Vowel Of String problem.
-    * Takes `s` (StringBuilder), `i` (integer), `j` (integer).
-    *
-    * @param s The input string.
-    * @param i The integer parameter representing i.
+ The integer parameter representing i.
     * @param j The integer parameter representing j.
     * @return Unit (no return value, modifies state in-place).
     */

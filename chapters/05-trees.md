@@ -151,6 +151,11 @@ class AllNodesDistanceKinBinaryTree {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Tree traversal. Choose DFS for depth exploration, BFS for level-order processing.
+
 ### Complexity
 
 | Metric | Value |
@@ -158,8 +163,15 @@ class AllNodesDistanceKinBinaryTree {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the tree is not balanced (skewed)? Worst-case complexity?
+1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need to handle both BST and non-BST trees?
+1. Can this be solved with Morris traversal (O(1) space)?
+
+---
 ## Average Of Levels In Binary Tree
 
 ### Problem
@@ -213,6 +225,16 @@ class AverageOfLevelsInBinaryTree {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+
+
+### Pattern Insight
+
+**Pattern:** Tree traversal. Choose DFS for depth exploration, BFS for level-order processing.
+
 ### Complexity
 
 | Metric | Value |
@@ -220,8 +242,15 @@ class AverageOfLevelsInBinaryTree {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
----
+### Variations
 
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
+---
 ## Balanced Binary Tree
 
 ### Problem
@@ -275,6 +304,11 @@ class BalancedBinaryTree {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Tree traversal. Choose DFS for depth exploration, BFS for level-order processing.
+
 ### Complexity
 
 | Metric | Value |
@@ -282,8 +316,15 @@ class BalancedBinaryTree {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the tree is not balanced (skewed)? Worst-case complexity?
+1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need to handle both BST and non-BST trees?
+1. Can this be solved with Morris traversal (O(1) space)?
+
+---
 ## B Inary Tree In Order Traversal Iterative
 
 ### Problem
@@ -332,6 +373,11 @@ class BInaryTreeInOrderTraversalIterative {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+
 ### Complexity
 
 | Metric | Value |
@@ -339,47 +385,16 @@ class BInaryTreeInOrderTraversalIterative {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the graph is disconnected?
+1. What if edges have weights (non-uniform cost)?
+1. Can this be solved with DFS instead? What's the tradeoff?
+1. What if you need the path, not just the distance/existence?
+1. What if the graph is too large for BFS? Iterative deepening?
+
 ---
-
-## Binary Tree Level Order Traversal
-
-### Problem
-
-Solves the Binary Tree Level Order Traversal problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package tree
-
-import java.util.*
-import kotlin.collections.ArrayList
-
-
-class BinaryTreeLevelOrderTraversal {
-    /**
-    * Solves the Binary Tree Level Order Traversal problem.
-    * Takes `root` (binary tree node reference).
-    *
-    * @param root The binary tree node reference (nullable).
-    * @return The computed integer result.
-    */
-    fun levelOrder(root: TreeNode?): List<List<Int>> {
-        val result: MutableList<List<Int>> = ArrayList()
-        if (root == null)
-            return result
-        val queue: Queue<TreeNode> = LinkedList()
-        queue.add(root)
-
-        while (!queue.isEmpty()) {
-            val lst: MutableList<Int> = ArrayList()
-            var size: Int = queue.size
-
-            while (size-- > 0) {
+          while (size-- > 0) {
                 val temp: TreeNode = queue.poll()
                 lst.add(temp.`val`)
 

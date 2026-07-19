@@ -101,6 +101,11 @@ class FirstLetterToAppearTwice {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+
 ### Complexity
 
 | Metric | Value |
@@ -108,8 +113,15 @@ class FirstLetterToAppearTwice {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. Can you optimize space by using only the previous row?
+1. What if the input size is too large for 2D DP? Can you reduce dimensions?
+1. Can this be solved greedily instead? When does greedy fail?
+1. What if you need to reconstruct the path, not just the optimal value?
+1. What changes if you can make unlimited vs limited moves/choices?
+
+---
 ## Longest Nice Subarray
 
 ### Problem
@@ -152,6 +164,11 @@ class LongestNiceSubarray {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -159,8 +176,15 @@ class LongestNiceSubarray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Maximum Xor Of Two Nums In Array
 
 ### Problem
@@ -235,6 +259,11 @@ class MaximumXorOfTwoNumsInArray {
 }
 ```
 
+
+### Pattern Insight
+
+Study the code and identify the algorithmic pattern.
+
 ### Complexity
 
 | Metric | Value |
@@ -242,38 +271,11 @@ class MaximumXorOfTwoNumsInArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+
 ---
-
-## Number Of Steps To Reduceaanumberinbinaryrepresentationtoone
-
-### Problem
-
-Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package bitset
-
-class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
-    /**
-    * Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    fun numSteps(s: String): Int {
-        var steps = 0
-        var carry = 0
-
-        for (i in s.length - 1 downTo 1) {
-            val digit = (s[i] - '0') + carry
-            if (digit % 2 == 1) {
+    if (digit % 2 == 1) {
                 steps += 2  // Add 1 (makes it even) + divide by 2
                 carry = 1   // Propagate carry
             } else {
@@ -332,6 +334,16 @@ class NumberOfOneBits {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -339,8 +351,15 @@ class NumberOfOneBits {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
----
+### Variations
 
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
+---
 ## Reverse Bits
 
 ### Problem
@@ -419,6 +438,11 @@ class SingleNumber {
 }
 ```
 
+
+### Pattern Insight
+
+**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+
 ### Complexity
 
 | Metric | Value |
@@ -426,26 +450,16 @@ class SingleNumber {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
+### Variations
+
+1. What if the input size is much larger? Can you optimize?
+1. What if you need O(1) extra space instead of O(n)?
+1. What if there are duplicates or edge cases to handle?
+1. What if the problem constraints change (positive only, sorted, etc.)?
+1. Can this solution be parallelized?
+
 ---
-
-## Single Number3
-
-### Problem
-
-Solves the Single Number3 problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package bitset
-
-class SingleNumber3 {
-    /**
-    * Solves the Single Number3 problem.
+ * Solves the Single Number3 problem.
     * Takes `nums` (array of integers).
     *
     * @param nums The input array of integers.
