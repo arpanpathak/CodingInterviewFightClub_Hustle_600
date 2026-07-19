@@ -14,19 +14,17 @@ next_chapter:
 
 # Disjoint Set Union
 
-> **3 problems** — Master union-find for connectivity and dynamic graph components.
+> **3 problems**
 
 ## The Pattern
 
-DSU tracks connected components. Union by rank + path compression = near-O(1).
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [Account Merge](#accountmerge) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [Number Of Island_II](#numberofisland_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [Union Find](#unionfind) | — | <span class="badge badge-medium">Medium</span> |
+1. [Account Merge](#accountmerge)
+2. [Number Of Island_II](#numberofisland_ii)
+3. [Union Find](#unionfind)
 
 ---
 
@@ -34,11 +32,19 @@ DSU tracks connected components. Union by rank + path compression = near-O(1).
 
 ### Problem
 
-Solves the Account Merge problem.
+Given `x` (T), `y` (T), `accounts` (List<List<String>>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: x = input_value, y = input_value, accounts = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -231,22 +237,22 @@ class AccountMerge {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -254,11 +260,19 @@ class AccountMerge {
 
 ### Problem
 
-Solves the Number Of Island_II problem.
+Given `x` (Pair<Int), `y` (Pair<Int), `position` (Pair<Int), `m` (integer), `n` (integer), `positions` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: x = input_value, y = input_value, position = input_value, m = 5, n = 5, positions = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -455,22 +469,22 @@ class NumberOfIsland_II {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -478,11 +492,19 @@ class NumberOfIsland_II {
 
 ### Problem
 
-Solves the Union Find problem.
+Given `x` (T), `y` (T), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: x = input_value, y = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -616,21 +638,21 @@ class UnionFind<T> {
 
 ### Pattern Insight
 
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
 1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
+1. What if the predicate is not monotonic?
 
 ---

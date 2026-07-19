@@ -14,62 +14,60 @@ next_chapter:
 
 # Trees
 
-> **46 problems** — Master tree traversals, BST operations, and recursive tree algorithms.
+> **46 problems**
 
 ## The Pattern
 
-Trees are recursive — master DFS (pre/in/post-order), BFS (level-order), and BST properties.
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [All Nodes Distance Kin Binary Tree](#allnodesdistancekinbinarytree) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [Average Of Levels In Binary Tree](#averageoflevelsinbinarytree) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [Balanced Binary Tree](#balancedbinarytree) | — | <span class="badge badge-medium">Medium</span> |
-| 4 | [B Inary Tree In Order Traversal Iterative](#binarytreeinordertraversaliterative) | — | <span class="badge badge-medium">Medium</span> |
-| 5 | [Binary Tree Level Order Traversal](#binarytreelevelordertraversal) | — | <span class="badge badge-medium">Medium</span> |
-| 6 | [Binary Tree Level Order Traversal_II](#binarytreelevelordertraversal_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 7 | [Binary Tree Maximum Path Sum](#binarytreemaximumpathsum) | — | <span class="badge badge-medium">Medium</span> |
-| 8 | [Binary Tree Right Side View](#binarytreerightsideview) | — | <span class="badge badge-medium">Medium</span> |
-| 9 | [Binary Tree Vertical Order Traversal](#binarytreeverticalordertraversal) | — | <span class="badge badge-medium">Medium</span> |
-| 10 | [Binary Tree Vertical Order Traversal_Without Sorting](#binarytreeverticalordertraversal_withoutsorting) | — | <span class="badge badge-medium">Medium</span> |
-| 11 | [Binary Tree Zig Zag Level Order Traversal](#binarytreezigzaglevelordertraversal) | — | <span class="badge badge-medium">Medium</span> |
-| 12 | [Boundary Of Binary Tree](#boundaryofbinarytree) | — | <span class="badge badge-medium">Medium</span> |
-| 13 | [BST Iterator](#bstiterator) | — | <span class="badge badge-medium">Medium</span> |
-| 14 | [Check Completeness Of Binary Tree](#checkcompletenessofbinarytree) | — | <span class="badge badge-medium">Medium</span> |
-| 15 | [Closest Binary Search Tree Value](#closestbinarysearchtreevalue) | — | <span class="badge badge-medium">Medium</span> |
-| 16 | [Construct Binary Tree From Inorder And Post Order Traversal](#constructbinarytreefrominorderandpostordertraversal) | — | <span class="badge badge-medium">Medium</span> |
-| 17 | [Construct Binary Tree From Preorder And In Order Traversal](#constructbinarytreefrompreorderandinordertraversal) | — | <span class="badge badge-medium">Medium</span> |
-| 18 | [Construct Binary Tree From String](#constructbinarytreefromstring) | — | <span class="badge badge-medium">Medium</span> |
-| 19 | [Convert B Inary Search Tree To Sorted Doubly Linked List](#convertbinarysearchtreetosorteddoublylinkedlist) | — | <span class="badge badge-medium">Medium</span> |
-| 20 | [Count Good Node In B Inary Tree](#countgoodnodeinbinarytree) | — | <span class="badge badge-medium">Medium</span> |
-| 21 | [Tree Node](#countnodeequalsaverage) | — | <span class="badge badge-medium">Medium</span> |
-| 22 | [Tree Node](#deletenodeinabst) | — | <span class="badge badge-medium">Medium</span> |
-| 23 | [Find Largest Value In Each Tree Row](#findlargestvalueineachtreerow) | — | <span class="badge badge-medium">Medium</span> |
-| 24 | [Inorder Successor](#inordersuccessor) | — | <span class="badge badge-medium">Medium</span> |
-| 25 | [Leaf Similar](#leafsimilar) | — | <span class="badge badge-medium">Medium</span> |
-| 26 | [Longest Univalue Path](#longestunivaluepath) | — | <span class="badge badge-medium">Medium</span> |
-| 27 | [Lowest Common Ancestor](#lowestcommonancestor) | — | <span class="badge badge-medium">Medium</span> |
-| 28 | [Lowest Common Ancestor_III](#lowestcommonancestor_iii) | — | <span class="badge badge-medium">Medium</span> |
-| 29 | [Maximum Depth Of Binary Tree](#maximumdepthofbinarytree) | — | <span class="badge badge-medium">Medium</span> |
-| 30 | [Maximum Sum BST In Binary Tree](#maximumsumbstinbinarytree) | — | <span class="badge badge-medium">Medium</span> |
-| 31 | [Maximum Width Of Binary Tree](#maximumwidthofbinarytree) | — | <span class="badge badge-medium">Medium</span> |
-| 32 | [Minimum Time To Collect All Apples In A Tree](#minimumtimetocollectallapplesinatree) | — | <span class="badge badge-medium">Medium</span> |
-| 33 | [Path Sum](#pathsum) | — | <span class="badge badge-medium">Medium</span> |
-| 34 | [Path Sum_II](#pathsum_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 35 | [Path Sum III](#pathsumiii) | — | <span class="badge badge-medium">Medium</span> |
-| 36 | [Populate Next Right Pointers In Each Node_II](#populatenextrightpointersineachnode_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 37 | [Populate Next Right Pointers In Each Node_II_Constant](#populatenextrightpointersineachnode_ii_constant) | — | <span class="badge badge-medium">Medium</span> |
-| 38 | [Node](#populatingnextrightpointerineachnode) | — | <span class="badge badge-medium">Medium</span> |
-| 39 | [Range Sum Of BST](#rangesumofbst) | — | <span class="badge badge-medium">Medium</span> |
-| 40 | [Recover A Tree From Pre Order Traversal](#recoveratreefrompreordertraversal) | — | <span class="badge badge-medium">Medium</span> |
-| 41 | [Recover Binary Search Tree](#recoverbinarysearchtree) | — | <span class="badge badge-medium">Medium</span> |
-| 42 | [Codec](#serializeanddeserializeabinarytree) | — | <span class="badge badge-medium">Medium</span> |
-| 43 | [Serialize And Deserialize N Array Tree](#serializeanddeserializenarraytree) | — | <span class="badge badge-medium">Medium</span> |
-| 44 | [Step By Step Directions From A Node To Another](#stepbystepdirectionsfromanodetoanother) | — | <span class="badge badge-medium">Medium</span> |
-| 45 | [Sum Root To Leaf Numbers](#sumroottoleafnumbers) | — | <span class="badge badge-medium">Medium</span> |
-| 46 | [Vertical Order Traversal Of A Binary Tree](#verticalordertraversalofabinarytree) | — | <span class="badge badge-medium">Medium</span> |
+1. [All Nodes Distance Kin Binary Tree](#allnodesdistancekinbinarytree)
+2. [Average Of Levels In Binary Tree](#averageoflevelsinbinarytree)
+3. [Balanced Binary Tree](#balancedbinarytree)
+4. [B Inary Tree In Order Traversal Iterative](#binarytreeinordertraversaliterative)
+5. [Binary Tree Level Order Traversal](#binarytreelevelordertraversal)
+6. [Binary Tree Level Order Traversal_II](#binarytreelevelordertraversal_ii)
+7. [Binary Tree Maximum Path Sum](#binarytreemaximumpathsum)
+8. [Binary Tree Right Side View](#binarytreerightsideview)
+9. [Binary Tree Vertical Order Traversal](#binarytreeverticalordertraversal)
+10. [Binary Tree Vertical Order Traversal_Without Sorting](#binarytreeverticalordertraversal_withoutsorting)
+11. [Binary Tree Zig Zag Level Order Traversal](#binarytreezigzaglevelordertraversal)
+12. [Boundary Of Binary Tree](#boundaryofbinarytree)
+13. [BST Iterator](#bstiterator)
+14. [Check Completeness Of Binary Tree](#checkcompletenessofbinarytree)
+15. [Closest Binary Search Tree Value](#closestbinarysearchtreevalue)
+16. [Construct Binary Tree From Inorder And Post Order Traversal](#constructbinarytreefrominorderandpostordertraversal)
+17. [Construct Binary Tree From Preorder And In Order Traversal](#constructbinarytreefrompreorderandinordertraversal)
+18. [Construct Binary Tree From String](#constructbinarytreefromstring)
+19. [Convert B Inary Search Tree To Sorted Doubly Linked List](#convertbinarysearchtreetosorteddoublylinkedlist)
+20. [Count Good Node In B Inary Tree](#countgoodnodeinbinarytree)
+21. [Tree Node](#countnodeequalsaverage)
+22. [Tree Node](#deletenodeinabst)
+23. [Find Largest Value In Each Tree Row](#findlargestvalueineachtreerow)
+24. [Inorder Successor](#inordersuccessor)
+25. [Leaf Similar](#leafsimilar)
+26. [Longest Univalue Path](#longestunivaluepath)
+27. [Lowest Common Ancestor](#lowestcommonancestor)
+28. [Lowest Common Ancestor_III](#lowestcommonancestor_iii)
+29. [Maximum Depth Of Binary Tree](#maximumdepthofbinarytree)
+30. [Maximum Sum BST In Binary Tree](#maximumsumbstinbinarytree)
+31. [Maximum Width Of Binary Tree](#maximumwidthofbinarytree)
+32. [Minimum Time To Collect All Apples In A Tree](#minimumtimetocollectallapplesinatree)
+33. [Path Sum](#pathsum)
+34. [Path Sum_II](#pathsum_ii)
+35. [Path Sum III](#pathsumiii)
+36. [Populate Next Right Pointers In Each Node_II](#populatenextrightpointersineachnode_ii)
+37. [Populate Next Right Pointers In Each Node_II_Constant](#populatenextrightpointersineachnode_ii_constant)
+38. [Node](#populatingnextrightpointerineachnode)
+39. [Range Sum Of BST](#rangesumofbst)
+40. [Recover A Tree From Pre Order Traversal](#recoveratreefrompreordertraversal)
+41. [Recover Binary Search Tree](#recoverbinarysearchtree)
+42. [Codec](#serializeanddeserializeabinarytree)
+43. [Serialize And Deserialize N Array Tree](#serializeanddeserializenarraytree)
+44. [Step By Step Directions From A Node To Another](#stepbystepdirectionsfromanodetoanother)
+45. [Sum Root To Leaf Numbers](#sumroottoleafnumbers)
+46. [Vertical Order Traversal Of A Binary Tree](#verticalordertraversalofabinarytree)
 
 ---
 
@@ -77,11 +75,19 @@ Trees are recursive — master DFS (pre/in/post-order), BFS (level-order), and B
 
 ### Problem
 
-Solves the All Nodes Distance Kin Binary Tree problem.
+Given `root` (TreeNode?), `target` (TreeNode?), `k` (integer), `node` (TreeNode?), `parent` (TreeNode?), `visited` (MutableSet<TreeNode>), `result` (list of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, target = input_value, k = 5, node = input_value, parent = input_value, visited = input_value, result = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -231,22 +237,22 @@ class AllNodesDistanceKinBinaryTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -254,11 +260,19 @@ class AllNodesDistanceKinBinaryTree {
 
 ### Problem
 
-Solves the Average Of Levels In Binary Tree problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -326,22 +340,22 @@ class AverageOfLevelsInBinaryTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -349,11 +363,19 @@ class AverageOfLevelsInBinaryTree {
 
 ### Problem
 
-Solves the Balanced Binary Tree problem.
+Given `root` (TreeNode?), `node` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -442,22 +464,22 @@ class BalancedBinaryTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -465,11 +487,19 @@ class BalancedBinaryTree {
 
 ### Problem
 
-Solves the BInary Tree In Order Traversal Iterative problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -532,22 +562,22 @@ class BInaryTreeInOrderTraversalIterative {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -555,11 +585,19 @@ class BInaryTreeInOrderTraversalIterative {
 
 ### Problem
 
-Solves the Binary Tree Level Order Traversal problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -628,22 +666,22 @@ class BinaryTreeLevelOrderTraversal {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -651,11 +689,19 @@ class BinaryTreeLevelOrderTraversal {
 
 ### Problem
 
-Solves the Binary Tree Level Order Traversal_II problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -723,22 +769,22 @@ class BinaryTreeLevelOrderTraversal_II {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -746,11 +792,19 @@ class BinaryTreeLevelOrderTraversal_II {
 
 ### Problem
 
-Solves the Binary Tree Maximum Path Sum problem.
+Given `root` (TreeNode?), `node` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -836,22 +890,22 @@ class BinaryTreeMaximumPathSum {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -859,11 +913,19 @@ class BinaryTreeMaximumPathSum {
 
 ### Problem
 
-Solves the Binary Tree Right Side View problem.
+Given `root` (TreeNode?), `node` (TreeNode?), `level` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value, level = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -951,22 +1013,22 @@ class BinaryTreeRightSideView {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -974,11 +1036,19 @@ class BinaryTreeRightSideView {
 
 ### Problem
 
-Solves the Binary Tree Vertical Order Traversal problem.
+Given `root` (TreeNode?), `node` (TreeNode?), `verticalIndex` (Int = 0), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value, verticalIndex = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -1125,22 +1195,22 @@ class BinaryTreeVerticalOrderTraversal {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -1148,11 +1218,19 @@ class BinaryTreeVerticalOrderTraversal {
 
 ### Problem
 
-Solves the Binary Tree Vertical Order Traversal_Without Sorting problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -1227,22 +1305,22 @@ class BinaryTreeVerticalOrderTraversal_WithoutSorting {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -1250,11 +1328,19 @@ class BinaryTreeVerticalOrderTraversal_WithoutSorting {
 
 ### Problem
 
-Solves the Binary Tree Zig Zag Level Order Traversal problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -1330,22 +1416,22 @@ class BinaryTreeZigZagLevelOrderTraversal {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -1353,11 +1439,19 @@ class BinaryTreeZigZagLevelOrderTraversal {
 
 ### Problem
 
-Solves the Boundary Of Binary Tree problem.
+Given `root` (TreeNode?), `node` (TreeNode?), `result` (list of integers), `isRoot` (boolean), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value, result = [1, 2, 3, 4, 5], isRoot = true
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -1542,22 +1636,22 @@ class BoundaryOfBinaryTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -1565,11 +1659,19 @@ class BoundaryOfBinaryTree {
 
 ### Problem
 
-Helper: push all left nodes.
+Given `node` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -1680,21 +1782,21 @@ class BSTIterator(root: TreeNode?) {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -1703,11 +1805,19 @@ class BSTIterator(root: TreeNode?) {
 
 ### Problem
 
-Solves the Check Completeness Of Binary Tree problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -1774,22 +1884,22 @@ class CheckCompletenessOfBinaryTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -1797,11 +1907,19 @@ class CheckCompletenessOfBinaryTree {
 
 ### Problem
 
-Solves the Closest Binary Search Tree Value problem.
+Given `root` (TreeNode?), `target` (decimal), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, target = 3.14
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -1866,22 +1984,22 @@ class ClosestBinarySearchTreeValue {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -1889,11 +2007,19 @@ class ClosestBinarySearchTreeValue {
 
 ### Problem
 
-Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+Given `inorder` (array of integers), `postorder` (array of integers), `left` (integer), `right` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: inorder = [1, 2, 3, 4, 5], postorder = [1, 2, 3, 4, 5], left = 5, right = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -1992,22 +2118,22 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -2015,11 +2141,19 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
 
 ### Problem
 
-Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
+Given `preorder` (array of integers), `inorder` (array of integers), `left` (integer), `right` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: preorder = [1, 2, 3, 4, 5], inorder = [1, 2, 3, 4, 5], left = 5, right = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -2118,22 +2252,22 @@ class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -2141,11 +2275,19 @@ class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
 
 ### Problem
 
-Solves the Construct Binary Tree From String problem.
+Given `s` (string), `i` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", i = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -2250,22 +2392,22 @@ class ConstructBinaryTreeFromString {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -2273,11 +2415,19 @@ class ConstructBinaryTreeFromString {
 
 ### Problem
 
-Definition for a Node.
+Given `root` (Node?), `node` (Node?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -2388,22 +2538,22 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -2411,11 +2561,19 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
 
 ### Problem
 
-Solves the Count Good Node In BInary Tree problem.
+Given `root` (TreeNode?), `node` (TreeNode?), `maxSoFar` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value, maxSoFar = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -2496,22 +2654,22 @@ class CountGoodNodeInBInaryTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -2519,11 +2677,19 @@ class CountGoodNodeInBInaryTree {
 
 ### Problem
 
-Solves the Tree Node problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -2616,22 +2782,22 @@ class CountNodeEqualsAverage {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2639,11 +2805,19 @@ class CountNodeEqualsAverage {
 
 ### Problem
 
-Solves the Tree Node problem.
+Given `root` (TreeNode?), `key` (integer), `node` (TreeNode), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, key = 5, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -2749,21 +2923,21 @@ class DeleteNodeinABST {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -2772,11 +2946,19 @@ class DeleteNodeinABST {
 
 ### Problem
 
-Solves the Find Largest Value In Each Tree Row problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -2843,22 +3025,22 @@ class FindLargestValueInEachTreeRow {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -2866,11 +3048,19 @@ class FindLargestValueInEachTreeRow {
 
 ### Problem
 
-Solves the Inorder Successor problem.
+Given `root` (TreeNode?), `p` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, p = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2932,22 +3122,22 @@ class InorderSuccessor {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2955,11 +3145,19 @@ class InorderSuccessor {
 
 ### Problem
 
-Solves the Leaf Similar problem.
+Given `root1` (TreeNode?), `root2` (TreeNode?), `node` (TreeNode?), `leafValues` (list of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root1 = input_value, root2 = input_value, node = input_value, leafValues = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -3055,22 +3253,22 @@ class LeafSimilar {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3078,11 +3276,19 @@ class LeafSimilar {
 
 ### Problem
 
-Solves the Longest Univalue Path problem.
+Given `root` (TreeNode?), `node` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -3175,22 +3381,22 @@ class LongestUnivaluePath {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3198,11 +3404,19 @@ class LongestUnivaluePath {
 
 ### Problem
 
-Solves the Lowest Common Ancestor problem.
+Given `root` (TreeNode?), `p` (TreeNode?), `q` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, p = input_value, q = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3260,22 +3474,22 @@ class LowestCommonAncestor {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3283,11 +3497,19 @@ class LowestCommonAncestor {
 
 ### Problem
 
-Solves the Lowest Common Ancestor_III problem.
+Given `p` (Node?), `q` (Node?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: p = input_value, q = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3363,22 +3585,22 @@ class LowestCommonAncestor_III {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3386,11 +3608,19 @@ class LowestCommonAncestor_III {
 
 ### Problem
 
-Solves the Maximum Depth Of Binary Tree problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -3438,22 +3668,22 @@ class MaximumDepthOfBinaryTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -3461,11 +3691,19 @@ class MaximumDepthOfBinaryTree {
 
 ### Problem
 
-Solves the Maximum Sum BSTIn Binary Tree problem.
+Given `root` (TreeNode?), `node` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -3565,22 +3803,22 @@ class MaximumSumBSTInBinaryTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -3588,11 +3826,19 @@ class MaximumSumBSTInBinaryTree {
 
 ### Problem
 
-Solves the Maximum Width Of Binary Tree problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -3659,22 +3905,22 @@ class MaximumWidthOfBinaryTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -3682,11 +3928,19 @@ class MaximumWidthOfBinaryTree {
 
 ### Problem
 
-Solves the Minimum Time To Collect All Apples In ATree problem.
+Given `n` (integer), `edges` (2D matrix), `hasApple` (List<Boolean>), `node` (integer), `parent` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, edges = [1, 2, 3, 4, 5], hasApple = input_value, node = 5, parent = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -3794,21 +4048,21 @@ class MinimumTimeToCollectAllApplesInATree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -3817,11 +4071,19 @@ class MinimumTimeToCollectAllApplesInATree {
 
 ### Problem
 
-Solves the Path Sum problem.
+Given `root` (TreeNode?), `targetSum` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, targetSum = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -3874,22 +4136,22 @@ class PathSum {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3897,11 +4159,19 @@ class PathSum {
 
 ### Problem
 
-Solves the Path Sum_II problem.
+Given `root` (TreeNode?), `targetSum` (integer), `node` (TreeNode?), `currentSum` (integer), `path` (MutableList<Int> = mutableListOf(), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, targetSum = 5, node = input_value, currentSum = 5, path = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -4007,22 +4277,22 @@ class PathSum_II {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -4030,11 +4300,19 @@ class PathSum_II {
 
 ### Problem
 
-Solves the Path Sum III problem.
+Given `root` (TreeNode?), `targetSum` (integer), `node` (TreeNode?), `currentSum` (long integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, targetSum = 5, node = input_value, currentSum = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -4229,22 +4507,22 @@ class PathSumIII {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -4252,11 +4530,19 @@ class PathSumIII {
 
 ### Problem
 
-Solves the Populate Next Right Pointers In Each Node_II problem.
+Given `root` (Node?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -4315,22 +4601,22 @@ class PopulateNextRightPointersInEachNode_II {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -4338,11 +4624,19 @@ class PopulateNextRightPointersInEachNode_II {
 
 ### Problem
 
-Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
+Given `root` (Node?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -4418,22 +4712,22 @@ class PopulateNextRightPointersInEachNode_II_Constant {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -4441,11 +4735,19 @@ class PopulateNextRightPointersInEachNode_II_Constant {
 
 ### Problem
 
-Solves the Node problem.
+Given `root` (Node?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -4514,22 +4816,22 @@ class PopulatingNextRightPointerInEachNode {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -4537,11 +4839,19 @@ class PopulatingNextRightPointerInEachNode {
 
 ### Problem
 
-Solves the Range Sum Of BST problem.
+Given `root` (TreeNode?), `low` (integer), `high` (integer), `node` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, low = 5, high = 5, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -4635,21 +4945,21 @@ class RangeSumOfBST {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -4658,11 +4968,19 @@ class RangeSumOfBST {
 
 ### Problem
 
-Solves the Recover ATree From Pre Order Traversal problem.
+Given `traversal` (string), `depth` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: traversal = "example", depth = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -4770,21 +5088,21 @@ class RecoverATreeFromPreOrderTraversal {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -4793,11 +5111,19 @@ class RecoverATreeFromPreOrderTraversal {
 
 ### Problem
 
-Solves the Recover Binary Search Tree problem.
+Given `root` (TreeNode?), `node` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -4905,22 +5231,22 @@ class RecoverBinarySearchTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -4928,11 +5254,19 @@ class RecoverBinarySearchTree {
 
 ### Problem
 
-Solves the Codec problem.
+Given `root` (TreeNode?), `node` (TreeNode?), `data` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value, data = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -5117,22 +5451,22 @@ class Codec() {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -5140,11 +5474,19 @@ class Codec() {
 
 ### Problem
 
-Solves the Serialize And Deserialize NArray Tree problem.
+Given `root` (Node?), `node` (Node?), `data` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value, data = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -5307,21 +5649,21 @@ class SerializeAndDeserializeNArrayTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -5330,11 +5672,19 @@ class SerializeAndDeserializeNArrayTree {
 
 ### Problem
 
-Solves the Step By Step Directions From ANode To Another problem.
+Given `root` (TreeNode?), `searchKey` (integer), `p` (TreeNode?), `q` (TreeNode?), `startValue` (integer), `destValue` (integer), `node` (TreeNode?), `target` (TreeNode?), `path` (StringBuilder), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, searchKey = 5, p = input_value, q = input_value, startValue = 5, destValue = 5, node = input_value, target = input_value, path = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -5535,22 +5885,22 @@ class StepByStepDirectionsFromANodeToAnother {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -5558,11 +5908,19 @@ class StepByStepDirectionsFromANodeToAnother {
 
 ### Problem
 
-Solves the Sum Root To Leaf Numbers problem.
+Given `root` (TreeNode?), `node` (TreeNode?), `sumSoFar` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value, sumSoFar = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -5653,22 +6011,22 @@ class SumRootToLeafNumbers {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -5676,11 +6034,19 @@ class SumRootToLeafNumbers {
 
 ### Problem
 
-Solves the Vertical Order Traversal Of ABinary Tree problem.
+Given `root` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -5755,21 +6121,21 @@ class VerticalOrderTraversalOfABinaryTree {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---

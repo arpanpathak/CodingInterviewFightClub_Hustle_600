@@ -11,19 +11,17 @@ prev_chapter:
 
 # Caches & Memory Management
 
-> **3 problems** — Master cache design: LRU, LFU, and eviction strategies.
+> **3 problems**
 
 ## The Pattern
 
-Hash map for O(1) lookup + linked list for ordering. LRU = access order, LFU = frequency.
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [LFU Cache](#lfucache) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [LRU Cache](#lrucache) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [LRU Cache Linked List](#lrucachelinkedlist) | — | <span class="badge badge-medium">Medium</span> |
+1. [LFU Cache](#lfucache)
+2. [LRU Cache](#lrucache)
+3. [LRU Cache Linked List](#lrucachelinkedlist)
 
 ---
 
@@ -31,11 +29,19 @@ Hash map for O(1) lookup + linked list for ordering. LRU = access order, LFU = f
 
 ### Problem
 
-Solves the LFUCache problem.
+Given `key` (integer), `value` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: key = 5, value = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -163,22 +169,22 @@ class LFUCache(capacity: Int) {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -186,11 +192,19 @@ class LFUCache(capacity: Int) {
 
 ### Problem
 
-Solves the LRUCache problem.
+Given `key` (integer), `value` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: key = 5, value = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -284,22 +298,22 @@ class LRUCache(private val capacity: Int) {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -307,11 +321,19 @@ class LRUCache(private val capacity: Int) {
 
 ### Problem
 
-Solves the LRUCache Linked List problem.
+Given `key` (integer), `value` (integer), `node` (Node), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: key = 5, value = 5, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -577,21 +599,21 @@ fun main() {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---

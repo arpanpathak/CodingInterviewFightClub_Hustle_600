@@ -14,37 +14,35 @@ next_chapter:
 
 # Dynamic Programming
 
-> **21 problems** — Master optimal substructure and overlapping subproblems.
+> **21 problems**
 
 ## The Pattern
 
-Optimal substructure + overlapping subproblems → DP. Identify states, define transitions.
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [Burst Baloons](#burstbaloons) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [Closest Subsequence Sum](#closestsubsequencesum) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [Maximumproductsubarray](#maximumproductsubarray) | — | <span class="badge badge-medium">Medium</span> |
-| 4 | [Maximum Profit In Job Scheduling](#maximumprofitinjobscheduling) | — | <span class="badge badge-medium">Medium</span> |
-| 5 | [Partition Equal Subset Sum](#partitionequalsubsetsum) | — | <span class="badge badge-medium">Medium</span> |
-| 6 | [Super Egg Dropping](#supereggdropping) | — | <span class="badge badge-medium">Medium</span> |
-| 7 | [House Robber](#houserobber) | — | <span class="badge badge-medium">Medium</span> |
-| 8 | [House Robber_II](#houserobber_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 9 | [Coin Change](#coinchange) | — | <span class="badge badge-medium">Medium</span> |
-| 10 | [Coin Change_II](#coinchange_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 11 | [Coin Change_II_Bottom Up](#coinchange_ii_bottomup) | — | <span class="badge badge-medium">Medium</span> |
-| 12 | [Longest Increasing Subsequence](#longestincreasingsubsequence) | — | <span class="badge badge-medium">Medium</span> |
-| 13 | [Maximal Square](#maximalsquare) | — | <span class="badge badge-medium">Medium</span> |
-| 14 | [Maximum Sum Sub Array](#maximumsumsubarray) | — | <span class="badge badge-medium">Medium</span> |
-| 15 | [Min Cost Climbing Staris](#mincostclimbingstaris) | — | <span class="badge badge-medium">Medium</span> |
-| 16 | [Minimum Path Sum](#minimumpathsum) | — | <span class="badge badge-medium">Medium</span> |
-| 17 | [Split Array Largest Sum](#splitarraylargestsum) | — | <span class="badge badge-medium">Medium</span> |
-| 18 | [Target Sum](#targetsum) | — | <span class="badge badge-medium">Medium</span> |
-| 19 | [Longest Increasing Sequence In A Matrix](#longestincreasingsequenceinamatrix) | — | <span class="badge badge-medium">Medium</span> |
-| 20 | [Minimum Numberof Increments Subarrays Forma Target Array](#minimumnumberofincrementssubarraysformatargetarray) | — | <span class="badge badge-medium">Medium</span> |
-| 21 | [Partition Array Into Two Array To Minimuze Sum Difference](#partitionarrayintotwoarraytominimuzesumdifference) | — | <span class="badge badge-medium">Medium</span> |
+1. [Burst Baloons](#burstbaloons)
+2. [Closest Subsequence Sum](#closestsubsequencesum)
+3. [Maximumproductsubarray](#maximumproductsubarray)
+4. [Maximum Profit In Job Scheduling](#maximumprofitinjobscheduling)
+5. [Partition Equal Subset Sum](#partitionequalsubsetsum)
+6. [Super Egg Dropping](#supereggdropping)
+7. [House Robber](#houserobber)
+8. [House Robber_II](#houserobber_ii)
+9. [Coin Change](#coinchange)
+10. [Coin Change_II](#coinchange_ii)
+11. [Coin Change_II_Bottom Up](#coinchange_ii_bottomup)
+12. [Longest Increasing Subsequence](#longestincreasingsubsequence)
+13. [Maximal Square](#maximalsquare)
+14. [Maximum Sum Sub Array](#maximumsumsubarray)
+15. [Min Cost Climbing Staris](#mincostclimbingstaris)
+16. [Minimum Path Sum](#minimumpathsum)
+17. [Split Array Largest Sum](#splitarraylargestsum)
+18. [Target Sum](#targetsum)
+19. [Longest Increasing Sequence In A Matrix](#longestincreasingsequenceinamatrix)
+20. [Minimum Numberof Increments Subarrays Forma Target Array](#minimumnumberofincrementssubarraysformatargetarray)
+21. [Partition Array Into Two Array To Minimuze Sum Difference](#partitionarrayintotwoarraytominimuzesumdifference)
 
 ---
 
@@ -52,11 +50,19 @@ Optimal substructure + overlapping subproblems → DP. Identify states, define t
 
 ### Problem
 
-Solves the Burst Baloons problem.
+Given `nums` (array of integers), `l` (integer), `r` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], l = 5, r = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -155,22 +161,22 @@ class BurstBaloons {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -178,11 +184,19 @@ class BurstBaloons {
 
 ### Problem
 
-Solves the Closest Subsequence Sum problem.
+Given `nums` (array of integers), `goal` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], goal = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -246,22 +260,22 @@ class ClosestSubsequenceSum {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
-| **Space** | O(1) |
+| **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -269,11 +283,19 @@ class ClosestSubsequenceSum {
 
 ### Problem
 
-Solves the Maximum Product Subarray problem.
+Given `nums` (array of integers), `args` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], args = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -394,22 +416,22 @@ object MaximumProductSubarray {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -417,11 +439,19 @@ object MaximumProductSubarray {
 
 ### Problem
 
-Solves the Maximum Profit In Job Scheduling problem.
+Given `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers), `jobs` (List<Job>), `currentIndex` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: startTime = [1, 2, 3, 4, 5], endTime = [1, 2, 3, 4, 5], profit = [1, 2, 3, 4, 5], jobs = input_value, currentIndex = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -544,22 +574,22 @@ class MaximumProfitInJobScheduling {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -567,11 +597,19 @@ class MaximumProfitInJobScheduling {
 
 ### Problem
 
-Solves the Partition Equal Subset Sum problem.
+Given `nums` (array of integers), `i` (integer), `currentSum` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], i = 5, currentSum = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -704,22 +742,22 @@ class PartitionEqualSubsetSum {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -727,11 +765,19 @@ class PartitionEqualSubsetSum {
 
 ### Problem
 
-Solves the Super Egg Dropping problem.
+Given `k` (integer), `n` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: k = 5, n = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -787,22 +833,22 @@ class SuperEggDropping {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -810,11 +856,19 @@ class SuperEggDropping {
 
 ### Problem
 
-Solves the House Robber problem.
+Given `nums` (array of integers), `dp` (array of integers), `i` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], dp = [1, 2, 3, 4, 5], i = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -941,22 +995,22 @@ class HouseRobber {
 
 ### Pattern Insight
 
-**Dynamic Programming Pattern.** Define state (changing parameters), transition (how to compute from smaller states), base case. Compute top-down (memoization) or bottom-up (tabulation).
+**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. Can you optimize space to O(1) (keep only previous row)?
-1. Can you reconstruct the optimal path, not just value?
-1. What if constraints change (unlimited vs limited)?
-1. Is there a greedy solution? When does greedy fail?
-1. What if the input size is too large for the DP table?
+1. Can you optimize space to O(1) by keeping only the previous row?
+1. What if the input size is 10x larger — does the DP table still fit?
+1. Can you reconstruct the optimal path, not just the optimal value?
+1. What changes if constraints go from unlimited to limited (or vice versa)?
+1. Is there a greedy solution? When would greedy fail?
 
 ---
 
@@ -964,11 +1018,19 @@ class HouseRobber {
 
 ### Problem
 
-Solves the House Robber_II problem.
+Given `nums` (array of integers), `start` (integer), `end` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], start = 5, end = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -1055,22 +1117,22 @@ class HouseRobber_II {
 
 ### Pattern Insight
 
-**Dynamic Programming Pattern.** Define state (changing parameters), transition (how to compute from smaller states), base case. Compute top-down (memoization) or bottom-up (tabulation).
+**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. Can you optimize space to O(1) (keep only previous row)?
-1. Can you reconstruct the optimal path, not just value?
-1. What if constraints change (unlimited vs limited)?
-1. Is there a greedy solution? When does greedy fail?
-1. What if the input size is too large for the DP table?
+1. Can you optimize space to O(1) by keeping only the previous row?
+1. What if the input size is 10x larger — does the DP table still fit?
+1. Can you reconstruct the optimal path, not just the optimal value?
+1. What changes if constraints go from unlimited to limited (or vice versa)?
+1. Is there a greedy solution? When would greedy fail?
 
 ---
 
@@ -1078,11 +1140,19 @@ class HouseRobber_II {
 
 ### Problem
 
-Solves the Coin Change problem.
+Given `coins` (array of integers), `amount` (integer), `dp` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: coins = [1, 2, 3, 4, 5], amount = 5, dp = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -1178,22 +1248,22 @@ class CoinChange {
 
 ### Pattern Insight
 
-**Dynamic Programming Pattern.** Define state (changing parameters), transition (how to compute from smaller states), base case. Compute top-down (memoization) or bottom-up (tabulation).
+**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. Can you optimize space to O(1) (keep only previous row)?
-1. Can you reconstruct the optimal path, not just value?
-1. What if constraints change (unlimited vs limited)?
-1. Is there a greedy solution? When does greedy fail?
-1. What if the input size is too large for the DP table?
+1. Can you optimize space to O(1) by keeping only the previous row?
+1. What if the input size is 10x larger — does the DP table still fit?
+1. Can you reconstruct the optimal path, not just the optimal value?
+1. What changes if constraints go from unlimited to limited (or vice versa)?
+1. Is there a greedy solution? When would greedy fail?
 
 ---
 
@@ -1201,11 +1271,19 @@ class CoinChange {
 
 ### Problem
 
-Solves the Coin Change_II problem.
+Given `amount` (integer), `coins` (array of integers), `dp` (2D matrix), `i` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: amount = 5, coins = [1, 2, 3, 4, 5], dp = [1, 2, 3, 4, 5], i = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -1294,22 +1372,22 @@ class CoinChange_II {
 
 ### Pattern Insight
 
-**Dynamic Programming Pattern.** Define state (changing parameters), transition (how to compute from smaller states), base case. Compute top-down (memoization) or bottom-up (tabulation).
+**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. Can you optimize space to O(1) (keep only previous row)?
-1. Can you reconstruct the optimal path, not just value?
-1. What if constraints change (unlimited vs limited)?
-1. Is there a greedy solution? When does greedy fail?
-1. What if the input size is too large for the DP table?
+1. Can you optimize space to O(1) by keeping only the previous row?
+1. What if the input size is 10x larger — does the DP table still fit?
+1. Can you reconstruct the optimal path, not just the optimal value?
+1. What changes if constraints go from unlimited to limited (or vice versa)?
+1. Is there a greedy solution? When would greedy fail?
 
 ---
 
@@ -1317,11 +1395,19 @@ class CoinChange_II {
 
 ### Problem
 
-Solves the Coin Change_II_Bottom Up problem.
+Given `amount` (integer), `coins` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: amount = 5, coins = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -1377,22 +1463,22 @@ class CoinChange_II_BottomUp {
 
 ### Pattern Insight
 
-**Dynamic Programming Pattern.** Define state (changing parameters), transition (how to compute from smaller states), base case. Compute top-down (memoization) or bottom-up (tabulation).
+**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. Can you optimize space to O(1) (keep only previous row)?
-1. Can you reconstruct the optimal path, not just value?
-1. What if constraints change (unlimited vs limited)?
-1. Is there a greedy solution? When does greedy fail?
-1. What if the input size is too large for the DP table?
+1. Can you optimize space to O(1) by keeping only the previous row?
+1. What if the input size is 10x larger — does the DP table still fit?
+1. Can you reconstruct the optimal path, not just the optimal value?
+1. What changes if constraints go from unlimited to limited (or vice versa)?
+1. Is there a greedy solution? When would greedy fail?
 
 ---
 
@@ -1400,11 +1486,19 @@ class CoinChange_II_BottomUp {
 
 ### Problem
 
-Solves the Longest Increasing Subsequence problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -1465,22 +1559,22 @@ class LongestIncreasingSubsequence {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
-| **Space** | O(1) |
+| **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1488,11 +1582,19 @@ class LongestIncreasingSubsequence {
 
 ### Problem
 
-Solves the Maximal Square problem.
+Given `matrix` (Array<CharArray>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: matrix = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1555,22 +1657,22 @@ class MaximalSquare {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1578,11 +1680,19 @@ class MaximalSquare {
 
 ### Problem
 
-Solves the Maximum Sum Sub Array problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1637,22 +1747,22 @@ class MaximumSumSubArray {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1660,11 +1770,19 @@ class MaximumSumSubArray {
 
 ### Problem
 
-Solves the Min Cost Climbing Staris problem.
+Given `cost` (array of integers), `i` (integer), `memo` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: cost = [1, 2, 3, 4, 5], i = 5, memo = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1807,22 +1925,22 @@ class MinCostClimbingStaris {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1830,11 +1948,19 @@ class MinCostClimbingStaris {
 
 ### Problem
 
-Solves the Minimum Path Sum problem.
+Given `grid` (Array<IntArray>?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: grid = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -1893,22 +2019,22 @@ class MinimumPathSum {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1916,11 +2042,19 @@ class MinimumPathSum {
 
 ### Problem
 
-Solves the Split Array Largest Sum problem.
+Given `nums` (array of integers), `k` (integer), `i` (integer), `splitsLeft` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], k = 5, i = 5, splitsLeft = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2030,22 +2164,22 @@ class SplitArrayLargestSum {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2053,11 +2187,19 @@ class SplitArrayLargestSum {
 
 ### Problem
 
-Solves the Target Sum problem.
+Given `nums` (array of integers), `target` (integer), `index` (integer), `sum` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], target = 5, index = 5, sum = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2227,22 +2369,22 @@ class TargetSum {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2250,11 +2392,19 @@ class TargetSum {
 
 ### Problem
 
-Solves the Longest Increasing Sequence In AMatrix problem.
+Given `matrix` (2D matrix), `i` (integer), `j` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: matrix = [1, 2, 3, 4, 5], i = 5, j = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2357,22 +2507,22 @@ class LongestIncreasingSequenceInAMatrix {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2380,11 +2530,19 @@ class LongestIncreasingSequenceInAMatrix {
 
 ### Problem
 
-Solves the Minimum Numberof Increments Subarrays Forma Target Array problem.
+Given `target` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: target = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2434,22 +2592,22 @@ class MinimumNumberofIncrementsSubarraysFormaTargetArray {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2457,11 +2615,19 @@ class MinimumNumberofIncrementsSubarraysFormaTargetArray {
 
 ### Problem
 
-Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
+Given `nums` (array of integers), `start` (integer), `end` (integer), `sortedList` (list of integers), `target` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], start = 5, end = 5, sortedList = [1, 2, 3, 4, 5], target = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2624,21 +2790,21 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---

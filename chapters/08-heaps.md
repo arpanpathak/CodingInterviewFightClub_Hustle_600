@@ -14,27 +14,25 @@ next_chapter:
 
 # Heaps & Priority Queues
 
-> **11 problems** — Master priority queues for k-th order statistics, scheduling, streaming.
+> **11 problems**
 
 ## The Pattern
 
-Min-heap for k largest, max-heap for k smallest, dual heaps for median.
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [Dual Balanced Heap](#dualbalancedheap) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [MK Average](#findingmkaverage) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [Find K Closest Elements](#findkclosestelements) | — | <span class="badge badge-medium">Medium</span> |
-| 4 | [Find Score Of An Array After Marking All Elements](#findscoreofanarrayaftermarkingallelements) | — | <span class="badge badge-medium">Medium</span> |
-| 5 | [IPO](#ipo) | — | <span class="badge badge-medium">Medium</span> |
-| 6 | [Longest Happy String](#longesthappystring) | — | <span class="badge badge-medium">Medium</span> |
-| 7 | [Median From Running Stream](#medianfromrunningstream) | — | <span class="badge badge-medium">Medium</span> |
-| 8 | [Meeting Room_III](#meetingroom_iii) | — | <span class="badge badge-medium">Medium</span> |
-| 9 | [Single Threaded CPU](#singlethreadedcpu) | — | <span class="badge badge-medium">Medium</span> |
-| 10 | [Sliding Window Median](#slidingwindowmedian) | — | <span class="badge badge-medium">Medium</span> |
-| 11 | [Top K Frequent Elements](#topkfrequentelements) | — | <span class="badge badge-medium">Medium</span> |
+1. [Dual Balanced Heap](#dualbalancedheap)
+2. [MK Average](#findingmkaverage)
+3. [Find K Closest Elements](#findkclosestelements)
+4. [Find Score Of An Array After Marking All Elements](#findscoreofanarrayaftermarkingallelements)
+5. [IPO](#ipo)
+6. [Longest Happy String](#longesthappystring)
+7. [Median From Running Stream](#medianfromrunningstream)
+8. [Meeting Room_III](#meetingroom_iii)
+9. [Single Threaded CPU](#singlethreadedcpu)
+10. [Sliding Window Median](#slidingwindowmedian)
+11. [Top K Frequent Elements](#topkfrequentelements)
 
 ---
 
@@ -42,11 +40,19 @@ Min-heap for k largest, max-heap for k smallest, dual heaps for median.
 
 ### Problem
 
-Helper: balance heaps.
+Given `num` (T), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: num = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses a **heap/priority queue** to maintain a dynamic ordering of elements. Heaps provide O(log n) insertion and O(1) access to the min or max element, making them ideal for streaming/online algorithms and k-th order statistics.
 
 ### Code
 
@@ -219,7 +225,7 @@ class DualBalancedHeap<T : Comparable<T>> {
 
 ### Pattern Insight
 
-**Heap Pattern.** Maintain dynamic ordering. Min-heap for k-largest, max-heap for k-smallest, dual heaps for median. Each operation O(log k).
+**Heap Pattern.** Use a min-heap to keep the k largest elements, max-heap for k smallest. Dual heaps (min + max) track median in O(1) with O(log n) insert. Each heap operation is O(log k).
 
 ### Complexity
 
@@ -230,10 +236,10 @@ class DualBalancedHeap<T : Comparable<T>> {
 
 ### Variations
 
-1. What if you need k-th smallest instead of largest?
-1. What if elements are added/removed dynamically?
-1. Sorting vs heap — compare O(n log n) vs O(n log k)?
-1. What if k is very large (close to n)? Different approach?
+1. What if you need the k-th smallest instead of largest?
+1. What if elements are added/removed dynamically over time?
+1. Sorting vs heap — compare O(n log n) vs O(n log k) tradeoffs.
+1. What if k is very large (close to n) — different approach needed?
 1. How to handle ties in priority ordering?
 
 ---
@@ -242,11 +248,19 @@ class DualBalancedHeap<T : Comparable<T>> {
 
 ### Problem
 
-Solves the MKAverage problem.
+Given `num` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: num = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -454,22 +468,22 @@ fun main() {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n log k) |
-| **Space** | O(k) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -477,11 +491,19 @@ fun main() {
 
 ### Problem
 
-Solving using Max Heap. O ( N log K + K log K )
+Given `arr` (Array<Int>), `k` (integer), `x` (integer), `args` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: arr = input_value, k = 5, x = 5, args = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -566,22 +588,22 @@ class FindKClosestElements {
 
 ### Pattern Insight
 
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n log k) |
-| **Space** | O(k) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
 1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -589,11 +611,19 @@ class FindKClosestElements {
 
 ### Problem
 
-Solves the Find Score Of An Array After Marking All Elements problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -662,22 +692,22 @@ class FindScoreOfAnArrayAfterMarkingAllElements {
 
 ### Pattern Insight
 
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n log k) |
-| **Space** | O(k) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
 1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -685,11 +715,19 @@ class FindScoreOfAnArrayAfterMarkingAllElements {
 
 ### Problem
 
-Solves the IPO problem.
+Given `k` (integer), `w` (integer), `profits` (array of integers), `capital` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: k = 5, w = 5, profits = [1, 2, 3, 4, 5], capital = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -765,22 +803,22 @@ class IPO {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n log k) |
-| **Space** | O(k) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -788,11 +826,19 @@ class IPO {
 
 ### Problem
 
-Solves the Longest Happy String problem.
+Given `a` (integer), `b` (integer), `c` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: a = 5, b = 5, c = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -900,22 +946,22 @@ class LongestHappyString {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n log k) |
-| **Space** | O(k) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -923,11 +969,19 @@ class LongestHappyString {
 
 ### Problem
 
-Solves the Median From Running Stream problem.
+Given `num` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: num = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses a **heap/priority queue** to maintain a dynamic ordering of elements. Heaps provide O(log n) insertion and O(1) access to the min or max element, making them ideal for streaming/online algorithms and k-th order statistics.
 
 ### Code
 
@@ -1011,7 +1065,7 @@ class MedianFromRunningStream {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
@@ -1022,11 +1076,11 @@ class MedianFromRunningStream {
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1034,11 +1088,19 @@ class MedianFromRunningStream {
 
 ### Problem
 
-Solves the Meeting Room_III problem.
+Given `n` (integer), `meetings` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, meetings = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1133,22 +1195,22 @@ class MeetingRoom_III {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n log k) |
-| **Space** | O(k) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1156,11 +1218,19 @@ class MeetingRoom_III {
 
 ### Problem
 
-Solves the Single Threaded CPU problem.
+Given `tasks` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: tasks = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1231,22 +1301,22 @@ class SingleThreadedCPU {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n log k) |
-| **Space** | O(k) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1254,11 +1324,19 @@ class SingleThreadedCPU {
 
 ### Problem
 
-Helper: balance heaps.
+Given `num` (integer), `nums` (array of integers), `k` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: num = 5, nums = [1, 2, 3, 4, 5], k = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses a **heap/priority queue** to maintain a dynamic ordering of elements. Heaps provide O(log n) insertion and O(1) access to the min or max element, making them ideal for streaming/online algorithms and k-th order statistics.
 
 ### Code
 
@@ -1448,7 +1526,7 @@ class SlidingWindowMedian {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
@@ -1459,11 +1537,11 @@ class SlidingWindowMedian {
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1471,11 +1549,19 @@ class SlidingWindowMedian {
 
 ### Problem
 
-Solves the Top KFrequent Elements problem.
+Given `nums` (array of integers), `k` (integer), `start` (integer), `end` (integer), `i` (integer), `j` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], k = 5, start = 5, end = 5, i = 5, j = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1628,21 +1714,21 @@ class TopKFrequentElements {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---

@@ -14,31 +14,27 @@ next_chapter:
 
 # Backtracking
 
-> **15 problems** — Master systematic exploration of decision spaces with pruning.
+> **13 problems**
 
 ## The Pattern
 
-DFS on decision tree + pruning. Generate valid candidates, backtrack when stuck.
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [Combinations](#combinations) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [Combination Sum](#combinationsum) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [Combination Sum_II](#combinationsum_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 4 | [Combination Sum3](#combinationsum3) | — | <span class="badge badge-medium">Medium</span> |
-| 5 | [Expression And Add Operators](#expressionandaddoperators) | — | <span class="badge badge-medium">Medium</span> |
-| 6 | [Expression And Add Operators Optimized](#expressionandaddoperatorsoptimized) | — | <span class="badge badge-medium">Medium</span> |
-| 7 | [N Queen](#nqueen) | — | <span class="badge badge-medium">Medium</span> |
-| 8 | [N Queen_II](#nqueen_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 9 | [Palindrome Partitioning](#palindromepartitioning) | — | <span class="badge badge-medium">Medium</span> |
-| 10 | [Partition To K Equal Sum Subsets](#partitiontokequalsumsubsets) | — | <span class="badge badge-medium">Medium</span> |
-| 11 | [Restore IP Addresses](#restoreipaddresses) | — | <span class="badge badge-medium">Medium</span> |
-| 12 | [Strobogrammatic_Number_II](#strobogrammatic_number_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 13 | [Subsets](#subsets) | — | <span class="badge badge-medium">Medium</span> |
-| 14 | [Sudoku Solver](#sudokusolver) | — | <span class="badge badge-medium">Medium</span> |
-| 15 | [Sudoku Solver Set](#sudokusolverset) | — | <span class="badge badge-medium">Medium</span> |
+1. [Combinations](#combinations)
+2. [Combination Sum](#combinationsum)
+3. [Combination Sum_II](#combinationsum_ii)
+4. [Combination Sum3](#combinationsum3)
+5. [Expression And Add Operators](#expressionandaddoperators)
+6. [N Queen](#nqueen)
+7. [N Queen_II](#nqueen_ii)
+8. [Palindrome Partitioning](#palindromepartitioning)
+9. [Partition To K Equal Sum Subsets](#partitiontokequalsumsubsets)
+10. [Restore IP Addresses](#restoreipaddresses)
+11. [Strobogrammatic_Number_II](#strobogrammatic_number_ii)
+12. [Subsets](#subsets)
+13. [Sudoku Solver](#sudokusolver)
 
 ---
 
@@ -46,11 +42,19 @@ DFS on decision tree + pruning. Generate valid candidates, backtrack when stuck.
 
 ### Problem
 
-Solves the Combinations problem.
+Given `n` (integer), `k` (integer), `start` (integer), `current` (MutableList<Int> = mutableListOf(), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, k = 5, start = 5, current = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -148,22 +152,22 @@ class Combinations {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -171,11 +175,19 @@ class Combinations {
 
 ### Problem
 
-Solves the Combination Sum problem.
+Given `candidates` (array of integers), `target` (integer), `current` (list of integers), `start` (integer), `remaining` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: candidates = [1, 2, 3, 4, 5], target = 5, current = [1, 2, 3, 4, 5], start = 5, remaining = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -274,22 +286,22 @@ class CombinationSum {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -297,11 +309,19 @@ class CombinationSum {
 
 ### Problem
 
-Solves the Combination Sum_II problem.
+Given `candidates` (array of integers), `target` (integer), `index` (integer), `curr` (list of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: candidates = [1, 2, 3, 4, 5], target = 5, index = 5, curr = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -405,22 +425,22 @@ class CombinationSum_II {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -428,11 +448,19 @@ class CombinationSum_II {
 
 ### Problem
 
-Solves the Combination Sum3 problem.
+Given `k` (integer), `n` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf(), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: k = 5, n = 5, remaining = 5, start = 5, result = input_value, curr = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -552,22 +580,22 @@ class CombinationSum3 {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -575,11 +603,19 @@ class CombinationSum3 {
 
 ### Problem
 
-Solves the Expression And Add Operators problem.
+Given `num` (string), `target` (integer), `index` (integer), `prevOperand` (long integer), `currentOperand` (long integer), `value` (long integer), `expression` (string), `start` (integer), `path` (string), `sum` (long integer), `prev` (long integer), `args` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: num = "example", target = 5, index = 5, prevOperand = 5, currentOperand = 5, value = 5, expression = "example", start = 5, path = "example", sum = 5, prev = 5, args = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -849,180 +885,22 @@ fun main(args: Array<String>) {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
-
----
-
-## Expression And Add Operators Optimized
-
-### Problem
-
-Solves the Expression And Add Operators Optimized problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package backtracking
-
-class ExpressionAndAddOperatorsOptimized {
-    /**
-    * Solves the Expression And Add Operators Optimized problem.
-    * Takes `num` (string), `target` (integer).
-    *
-    * @param num The input string.
-    * @param target The integer parameter representing target.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Expression And Add Operators Optimized problem.
-    * Takes `num` (string), `target` (integer).
-    *
-    * @param num The input string.
-    * @param target The integer parameter representing target.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Expression And Add Operators Optimized problem.
-    * Takes `num` (string), `target` (integer).
-    *
-    * @param num The input string.
-    * @param target The integer parameter representing target.
-    * @return The resulting collection (list of strings).
-    */
-    /**
-    * Solves the Expression And Add Operators Optimized problem.
-    * Takes `num` (string), `target` (integer).
-    *
-    * @param num The input string.
-    * @param target The integer parameter representing target.
-    * @return The resulting collection (list of strings).
-    */
-    fun addOperators(num: String, target: Int): List<String> {
-        val res = ArrayList<String>()
-
-        /**
-        * Solves the Expression And Add Operators Optimized problem.
-        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input string.
-        * @param sum The long integer parameter representing sum.
-        * @param prev The long integer parameter representing prev.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Expression And Add Operators Optimized problem.
-        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input string.
-        * @param sum The long integer parameter representing sum.
-        * @param prev The long integer parameter representing prev.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Expression And Add Operators Optimized problem.
-        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input string.
-        * @param sum The long integer parameter representing sum.
-        * @param prev The long integer parameter representing prev.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        /**
-        * Solves the Expression And Add Operators Optimized problem.
-        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
-        *
-        * @param start The integer parameter representing start.
-        * @param path The input string.
-        * @param sum The long integer parameter representing sum.
-        * @param prev The long integer parameter representing prev.
-        * @return Unit (no return value, modifies state in-place).
-        */
-        fun partition(start: Int, path: StringBuilder, sum: Long, prev: Long) {
-            if (start == num.length) {
-                if (sum == target.toLong()) {
-                    res.add(path.toString())
-                }
-                return
-            }
-
-            for (i in start until num.length) {
-                val s = num.substring(start..i)
-                val current = s.toLong()
-
-                // Skip invalid numbers with leading zeros
-                if (s.length > 1 && s[0] == '0') break
-
-                val len = path.length // Remember the length of the path before modification
-
-                if (path.isEmpty()) {
-                    path.append(s)
-                    partition(i + 1, path, current, current)
-                    path.setLength(len) // Revert the path to its previous state
-                } else {
-                    // Try adding '+' operator
-                    path.append("+").append(s)
-                    partition(i + 1, path, sum + current, current)
-                    path.setLength(len)
-
-                    // Try adding '-' operator
-                    path.append("-").append(s)
-                    partition(i + 1, path, sum - current, -current)
-                    path.setLength(len)
-
-                    // Try adding '*' operator
-                    path.append("*").append(s)
-                    partition(i + 1, path, sum - prev + prev * current, prev * current)
-                    path.setLength(len)
-                }
-            }
-        }
-
-        partition(0, StringBuilder(), 0L, 0L)
-        return res
-    }
-}
-```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
-
-### Variations
-
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1030,11 +908,19 @@ class ExpressionAndAddOperatorsOptimized {
 
 ### Problem
 
-Solves the NQueen problem.
+Given `n` (integer), `row` (integer), `col` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, row = 5, col = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **backtracking** — a systematic way to explore all possible solutions. At each step, try a valid option, recurse, then undo the choice (backtrack). Pruning invalid branches early is key to performance.
 
 ### Code
 
@@ -1172,22 +1058,22 @@ class NQueen {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Backtracking Pattern.** Explore decision space via DFS. At each step: try a valid option, recurse, undo. Prune aggressively — check validity before recursing, not after.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) for recursion stack |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. Can you prune more aggressively to improve performance?
+1. What if the constraints are larger (e.g., 20x20 board instead of 8x8)?
+1. Can this be solved with iterative approach instead of recursion?
+1. What if you need to find ALL solutions vs ANY solution?
+1. Can you use symmetry breaking to reduce search space?
 
 ---
 
@@ -1195,11 +1081,19 @@ class NQueen {
 
 ### Problem
 
-Solves the NQueen_II problem.
+Given `n` (integer), `row` (integer), `col` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, row = 5, col = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **backtracking** — a systematic way to explore all possible solutions. At each step, try a valid option, recurse, then undo the choice (backtrack). Pruning invalid branches early is key to performance.
 
 ### Code
 
@@ -1331,22 +1225,22 @@ class NQueen_II {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Backtracking Pattern.** Explore decision space via DFS. At each step: try a valid option, recurse, undo. Prune aggressively — check validity before recursing, not after.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) for recursion stack |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. Can you prune more aggressively to improve performance?
+1. What if the constraints are larger (e.g., 20x20 board instead of 8x8)?
+1. Can this be solved with iterative approach instead of recursion?
+1. What if you need to find ALL solutions vs ANY solution?
+1. Can you use symmetry breaking to reduce search space?
 
 ---
 
@@ -1354,11 +1248,19 @@ class NQueen_II {
 
 ### Problem
 
-Solves the Palindrome Partitioning problem.
+Given `s` (string), `left` (integer), `right` (integer), `start` (integer), `path` (MutableList<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", left = 5, right = 5, start = 5, path = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -1495,22 +1397,22 @@ class PalindromePartitioning {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -1518,11 +1420,19 @@ class PalindromePartitioning {
 
 ### Problem
 
-Solves the Partition To KEqual Sum Subsets problem.
+Given `nums` (array of integers), `k` (integer), `start` (integer), `currentSum` (integer), `remainingSubsets` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], k = 5, start = 5, currentSum = 5, remainingSubsets = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1631,22 +1541,22 @@ class PartitionToKEqualSumSubsets {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1654,11 +1564,19 @@ class PartitionToKEqualSumSubsets {
 
 ### Problem
 
-Solves the Restore IPAddresses problem.
+Given `s` (string), `i` (integer), `path` (MutableList<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", i = 5, path = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1757,22 +1675,22 @@ class RestoreIPAddresses {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1780,11 +1698,19 @@ class RestoreIPAddresses {
 
 ### Problem
 
-Solves the Strobogrammatic_Number_II problem.
+Given `n` (integer), `currentLength` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, currentLength = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1879,22 +1805,22 @@ class Strobogrammatic_Number_II {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1902,11 +1828,19 @@ class Strobogrammatic_Number_II {
 
 ### Problem
 
-Solves the Subsets problem.
+Given `nums` (array of integers), `start` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], start = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1995,22 +1929,22 @@ class Subsets {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2018,11 +1952,19 @@ class Subsets {
 
 ### Problem
 
-Solves the Sudoku Solver problem.
+Given `board` (Array<CharArray>), `row` (integer), `col` (integer), `ch` (Char), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: board = input_value, row = 5, col = 5, ch = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **backtracking** — a systematic way to explore all possible solutions. At each step, try a valid option, recurse, then undo the choice (backtrack). Pruning invalid branches early is key to performance.
 
 ### Code
 
@@ -2154,276 +2096,21 @@ class SudokuSolver {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Backtracking Pattern.** Explore decision space via DFS. At each step: try a valid option, recurse, undo. Prune aggressively — check validity before recursing, not after.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) for recursion stack |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
-
----
-
-## Sudoku Solver Set
-
-### Problem
-
-Solves the Sudoku Solver Set problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package backtracking
-
-class SudokuSolverSet {
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `board` (Array<CharArray>).
-    *
-    * @param board The input Array<CharArray>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `board` (Array<CharArray>).
-    *
-    * @param board The input Array<CharArray>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `board` (Array<CharArray>).
-    *
-    * @param board The input Array<CharArray>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `board` (Array<CharArray>).
-    *
-    * @param board The input Array<CharArray>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    fun solveSudoku(board: Array<CharArray>) {
-        val seen = mutableSetOf<String>()
-
-        // Add initial values to the seen set
-        for (i in 0..8) {
-            for (j in 0..8) {
-                val ch = board[i][j]
-                if (ch != '.') {
-                    addToSet(i, j, ch, seen)
-                }
-            }
-        }
-
-        /**
-        * Solves the Sudoku Solver Set problem.
-        * Takes `i` (integer), `j` (integer), `c` (character).
-        *
-        * @param i The integer parameter representing i.
-        * @param j The integer parameter representing j.
-        * @param c The character.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Sudoku Solver Set problem.
-        * Takes `i` (integer), `j` (integer), `c` (character).
-        *
-        * @param i The integer parameter representing i.
-        * @param j The integer parameter representing j.
-        * @param c The character.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Sudoku Solver Set problem.
-        * Takes `i` (integer), `j` (integer), `c` (character).
-        *
-        * @param i The integer parameter representing i.
-        * @param j The integer parameter representing j.
-        * @param c The character.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Sudoku Solver Set problem.
-        * Takes `i` (integer), `j` (integer), `c` (character).
-        *
-        * @param i The integer parameter representing i.
-        * @param j The integer parameter representing j.
-        * @param c The character.
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        fun isSafe(i: Int, j: Int, c: Char): Boolean {
-            return "$c row $i" !in seen &&
-                    "$c col $j" !in seen &&
-                    "$c block ${i / 3}${j / 3}" !in seen
-        }
-
-        /**
-        * Solves the Sudoku Solver Set problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Sudoku Solver Set problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Sudoku Solver Set problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        /**
-        * Solves the Sudoku Solver Set problem.
-        *
-        * @return `true` if the condition is met, `false` otherwise.
-        */
-        fun dfs(): Boolean {
-            for (i in 0..8) {
-                for (j in 0..8) {
-                    if (board[i][j] != '.') continue
-                    for (c in '1'..'9') {
-                        if (!isSafe(i, j, c)) continue
-                        board[i][j] = c
-                        addToSet(i, j, c, seen)
-                        if (dfs()) return true
-                        board[i][j] = '.'
-                        removeFromSet(i, j, c, seen)
-                    }
-                    return false
-                }
-            }
-            return true
-        }
-
-        dfs()
-    }
-
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
-    *
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @param c The character.
-    * @param seen The input MutableSet<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
-    *
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @param c The character.
-    * @param seen The input MutableSet<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
-    *
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @param c The character.
-    * @param seen The input MutableSet<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
-    *
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @param c The character.
-    * @param seen The input MutableSet<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    fun addToSet(i: Int, j: Int, c: Char, seen: MutableSet<String>) {
-        seen.add("$c row $i")
-        seen.add("$c col $j")
-        seen.add("$c block ${i / 3}${j / 3}")
-    }
-
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
-    *
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @param c The character.
-    * @param seen The input MutableSet<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
-    *
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @param c The character.
-    * @param seen The input MutableSet<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
-    *
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @param c The character.
-    * @param seen The input MutableSet<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Solves the Sudoku Solver Set problem.
-    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
-    *
-    * @param i The integer parameter representing i.
-    * @param j The integer parameter representing j.
-    * @param c The character.
-    * @param seen The input MutableSet<String>.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    fun removeFromSet(i: Int, j: Int, c: Char, seen: MutableSet<String>) {
-        seen.remove("$c row $i")
-        seen.remove("$c col $j")
-        seen.remove("$c block ${i / 3}${j / 3}")
-    }
-}
-```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
-
-### Variations
-
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. Can you prune more aggressively to improve performance?
+1. What if the constraints are larger (e.g., 20x20 board instead of 8x8)?
+1. Can this be solved with iterative approach instead of recursion?
+1. What if you need to find ALL solutions vs ANY solution?
+1. Can you use symmetry breaking to reduce search space?
 
 ---

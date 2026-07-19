@@ -14,73 +14,66 @@ next_chapter:
 
 # String Matching
 
-> **57 problems** — Master string algorithms: pattern matching, DP on strings, and parsing.
+> **52 problems**
 
 ## The Pattern
 
-Two pointers, sliding window, DP (LCS, edit distance), Rabin-Karp, trie for prefix search.
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [Apply Substitutions](#applysubstitutions) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [Break A Palindrome](#breakapalindrome) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [Checkifa Parentheses String Can Be Valid](#checkifaparenthesesstringcanbevalid) | — | <span class="badge badge-medium">Medium</span> |
-| 4 | [Count And Say](#countandsay) | — | <span class="badge badge-medium">Medium</span> |
-| 5 | [Count Words With A Given Prefix](#countwordswithagivenprefix) | — | <span class="badge badge-medium">Medium</span> |
-| 6 | [Count Words With A Given Prefix_Trie](#countwordswithagivenprefix_trie) | — | <span class="badge badge-medium">Medium</span> |
-| 7 | [Count Words With A Given Prefix_Trie_FP](#countwordswithagivenprefix_trie_fp) | — | <span class="badge badge-medium">Medium</span> |
-| 8 | [Custom Sort String](#customsortstring) | — | <span class="badge badge-medium">Medium</span> |
-| 9 | [Decode String](#decodestring) | — | <span class="badge badge-medium">Medium</span> |
-| 10 | [Determine If Strings Are Close](#determineifstringsareclose) | — | <span class="badge badge-medium">Medium</span> |
-| 11 | [Edit Distance](#editdistance) | — | <span class="badge badge-medium">Medium</span> |
-| 12 | [Excel Sheet To Column Number](#excelsheettocolumnnumber) | — | <span class="badge badge-medium">Medium</span> |
-| 13 | [Find All Anagrams](#findallanagrams) | — | <span class="badge badge-medium">Medium</span> |
-| 14 | [Findtheindexofthefirstoccurrenceina String](#findtheindexofthefirstoccurrenceina_string) | — | <span class="badge badge-medium">Medium</span> |
-| 15 | [Find The Index Of The First Occurrence In String_Rabin Karp](#findtheindexofthefirstoccurrenceina_string_rabinkarp) | — | <span class="badge badge-medium">Medium</span> |
-| 16 | [Find Unique Binary String](#finduniquebinarystring) | — | <span class="badge badge-medium">Medium</span> |
-| 17 | [Generate Parantheses](#generateparantheses) | — | <span class="badge badge-medium">Medium</span> |
-| 18 | [Goat Latin](#goatlatin) | — | <span class="badge badge-medium">Medium</span> |
-| 19 | [Greatest Common Divisor Of Strings](#greatestcommondivisorofstrings) | — | <span class="badge badge-medium">Medium</span> |
-| 20 | [Group Anagrams](#groupanagrams) | — | <span class="badge badge-medium">Medium</span> |
-| 21 | [Group Shifted Strings](#groupshiftedstrings) | — | <span class="badge badge-medium">Medium</span> |
-| 22 | [Interleaving String](#interleavingstring) | — | <span class="badge badge-medium">Medium</span> |
-| 23 | [Isomorphic String](#isomorphicstring) | — | <span class="badge badge-medium">Medium</span> |
-| 24 | [Is Subsequence](#issubsequence) | — | <span class="badge badge-medium">Medium</span> |
-| 25 | [Length Of Last Word](#lengthoflastword) | — | <span class="badge badge-medium">Medium</span> |
-| 26 | [Longest Common Prefix](#longestcommonprefix) | — | <span class="badge badge-medium">Medium</span> |
-| 27 | [Longest Common Subsequence](#longestcommonsubsequence) | — | <span class="badge badge-medium">Medium</span> |
-| 28 | [Longest Common Substring](#longestcommonsubstring) | — | <span class="badge badge-medium">Medium</span> |
-| 29 | [Longest Palidnromic Substring](#longestpalidnromicsubstring) | — | <span class="badge badge-medium">Medium</span> |
-| 30 | [Longest Palindromic Subsequence](#longestpalindromicsubsequence) | — | <span class="badge badge-medium">Medium</span> |
-| 31 | [Longest Palindromic Subsequence_Bottom Up](#longestpalindromicsubsequence_bottomup) | — | <span class="badge badge-medium">Medium</span> |
-| 32 | [Longest Repeating Character Replacement](#longestrepeatingcharacterreplacement) | — | <span class="badge badge-medium">Medium</span> |
-| 33 | [Longest String Chain](#longeststringchain) | — | <span class="badge badge-medium">Medium</span> |
-| 34 | [Maximum Lengthofa Concatenated Stringwith Unique Characters](#maximumlengthofaconcatenatedstringwithuniquecharacters) | — | <span class="badge badge-medium">Medium</span> |
-| 35 | [Maximum Value Of A String Is An Array](#maximumvalueofastringisanarray) | — | <span class="badge badge-medium">Medium</span> |
-| 36 | [Merge String Alternatively](#mergestringalternatively) | — | <span class="badge badge-medium">Medium</span> |
-| 37 | [Minimum Deletion To Make Character Frequencies Unique](#minimumdeletiontomakecharacterfrequenciesunique) | — | <span class="badge badge-medium">Medium</span> |
-| 38 | [Minimum Window Substring](#minimumwindowsubstring) | — | <span class="badge badge-medium">Medium</span> |
-| 39 | [Remove All Adjacent Duplicates In String](#removealladjacentduplicatesinstring) | — | <span class="badge badge-medium">Medium</span> |
-| 40 | [Reverse Words In String](#reversewordsinstring) | — | <span class="badge badge-medium">Medium</span> |
-| 41 | [Shortest Common Supersequence](#shortestcommonsupersequence) | — | <span class="badge badge-medium">Medium</span> |
-| 42 | [Simplify Path](#simplifypath) | — | <span class="badge badge-medium">Medium</span> |
-| 43 | [String Compression](#stringcompression) | — | <span class="badge badge-medium">Medium</span> |
-| 44 | [String Compression_II](#stringcompression_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 45 | [Unique Length3 Palindromic Subsequence](#uniquelength3palindromicsubsequence) | — | <span class="badge badge-medium">Medium</span> |
-| 46 | [Unique Substring With Equal Digit Frequency](#uniquesubstringwithequaldigitfrequency) | — | <span class="badge badge-medium">Medium</span> |
-| 47 | [Valid Anagram](#validanagram) | — | <span class="badge badge-medium">Medium</span> |
-| 48 | [Valid Number](#validnumber) | — | <span class="badge badge-medium">Medium</span> |
-| 49 | [Valid Palindrome](#validpalindrome) | — | <span class="badge badge-medium">Medium</span> |
-| 50 | [Valid Palindrome_II](#validpalindrome_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 51 | [Valid Palindrome_III](#validpalindrome_iii) | — | <span class="badge badge-medium">Medium</span> |
-| 52 | [Valid Palindrome_III_Space Optimized](#validpalindrome_iii_spaceoptimized) | — | <span class="badge badge-medium">Medium</span> |
-| 53 | [Validate IP Address](#validateipaddress) | — | <span class="badge badge-medium">Medium</span> |
-| 54 | [Valid Word Abbreviation](#validwordabbreviation) | — | <span class="badge badge-medium">Medium</span> |
-| 55 | [Maximum Numberof Vowelsin Substringof Given Length](#maximumnumberofvowelsinsubstringofgivenlength) | — | <span class="badge badge-medium">Medium</span> |
-| 56 | [Permutations In String](#permutationsinstring) | — | <span class="badge badge-medium">Medium</span> |
-| 57 | [Reverse Vowel Of String](#reversevowelofstring) | — | <span class="badge badge-medium">Medium</span> |
+1. [Apply Substitutions](#applysubstitutions)
+2. [Break A Palindrome](#breakapalindrome)
+3. [Checkifa Parentheses String Can Be Valid](#checkifaparenthesesstringcanbevalid)
+4. [Count And Say](#countandsay)
+5. [Custom Sort String](#customsortstring)
+6. [Decode String](#decodestring)
+7. [Determine If Strings Are Close](#determineifstringsareclose)
+8. [Edit Distance](#editdistance)
+9. [Excel Sheet To Column Number](#excelsheettocolumnnumber)
+10. [Find All Anagrams](#findallanagrams)
+11. [Findtheindexofthefirstoccurrenceina String](#findtheindexofthefirstoccurrenceina_string)
+12. [Find Unique Binary String](#finduniquebinarystring)
+13. [Generate Parantheses](#generateparantheses)
+14. [Goat Latin](#goatlatin)
+15. [Greatest Common Divisor Of Strings](#greatestcommondivisorofstrings)
+16. [Group Anagrams](#groupanagrams)
+17. [Group Shifted Strings](#groupshiftedstrings)
+18. [Interleaving String](#interleavingstring)
+19. [Isomorphic String](#isomorphicstring)
+20. [Is Subsequence](#issubsequence)
+21. [Length Of Last Word](#lengthoflastword)
+22. [Longest Common Prefix](#longestcommonprefix)
+23. [Longest Common Subsequence](#longestcommonsubsequence)
+24. [Longest Common Substring](#longestcommonsubstring)
+25. [Longest Palidnromic Substring](#longestpalidnromicsubstring)
+26. [Longest Palindromic Subsequence](#longestpalindromicsubsequence)
+27. [Longest Palindromic Subsequence_Bottom Up](#longestpalindromicsubsequence_bottomup)
+28. [Longest Repeating Character Replacement](#longestrepeatingcharacterreplacement)
+29. [Longest String Chain](#longeststringchain)
+30. [Maximum Lengthofa Concatenated Stringwith Unique Characters](#maximumlengthofaconcatenatedstringwithuniquecharacters)
+31. [Maximum Value Of A String Is An Array](#maximumvalueofastringisanarray)
+32. [Merge String Alternatively](#mergestringalternatively)
+33. [Minimum Deletion To Make Character Frequencies Unique](#minimumdeletiontomakecharacterfrequenciesunique)
+34. [Minimum Window Substring](#minimumwindowsubstring)
+35. [Remove All Adjacent Duplicates In String](#removealladjacentduplicatesinstring)
+36. [Reverse Words In String](#reversewordsinstring)
+37. [Shortest Common Supersequence](#shortestcommonsupersequence)
+38. [Simplify Path](#simplifypath)
+39. [String Compression](#stringcompression)
+40. [String Compression_II](#stringcompression_ii)
+41. [Unique Length3 Palindromic Subsequence](#uniquelength3palindromicsubsequence)
+42. [Valid Anagram](#validanagram)
+43. [Valid Number](#validnumber)
+44. [Valid Palindrome](#validpalindrome)
+45. [Valid Palindrome_II](#validpalindrome_ii)
+46. [Valid Palindrome_III](#validpalindrome_iii)
+47. [Valid Palindrome_III_Space Optimized](#validpalindrome_iii_spaceoptimized)
+48. [Validate IP Address](#validateipaddress)
+49. [Valid Word Abbreviation](#validwordabbreviation)
+50. [Maximum Numberof Vowelsin Substringof Given Length](#maximumnumberofvowelsinsubstringofgivenlength)
+51. [Permutations In String](#permutationsinstring)
+52. [Reverse Vowel Of String](#reversevowelofstring)
 
 ---
 
@@ -88,11 +81,19 @@ Two pointers, sliding window, DP (LCS, edit distance), Rabin-Karp, trie for pref
 
 ### Problem
 
-Solves the Apply Substitutions problem.
+Given `replacements` (List<List<String>>), `text` (string), `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: replacements = input_value, text = "example", s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -193,21 +194,21 @@ class ApplySubstitutions {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -216,11 +217,19 @@ class ApplySubstitutions {
 
 ### Problem
 
-Solves the Break APalindrome problem.
+Given `palindrome` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: palindrome = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -275,22 +284,22 @@ class BreakAPalindrome {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -298,11 +307,19 @@ class BreakAPalindrome {
 
 ### Problem
 
-Solves the Checkifa Parentheses String Can Be Valid problem.
+Given `s` (string), `locked` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", locked = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -378,22 +395,22 @@ class CheckifaParenthesesStringCanBeValid {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -401,11 +418,19 @@ class CheckifaParenthesesStringCanBeValid {
 
 ### Problem
 
-Solves the Count And Say problem.
+Given `n` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -465,376 +490,22 @@ class CountAndSay {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
-
----
-
-## Count Words With A Given Prefix
-
-### Problem
-
-Solves the Count Words With AGiven Prefix problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string
-
-class CountWordsWithAGivenPrefix {
-    /**
-    * Solves the Count Words With AGiven Prefix problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    fun prefixCount(words: Array<String>, prefix: String): Int {
-        var count = 0
-
-        for (word in words) {
-            if (word.startsWith(prefix)) {
-                count++
-            }
-        }
-
-        return count
-    }
-}
-```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
-
-### Variations
-
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
-1. DFS vs BFS — which is better and why?
-1. What if the graph is too large to fit in memory?
-
----
-
-## Count Words With A Given Prefix_Trie
-
-### Problem
-
-Solves the Count Words With AGiven Prefix_Trie problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package trie
-
-class CountWordsWithAGivenPrefix_Trie {
-    data class TrieNode(
-        val ch: Char = '_',
-        val children: MutableMap<Char, TrieNode> = mutableMapOf(),
-        var prefixCount: Int = 0
-    )
-
-    var root = TrieNode()
-
-    // Method to count the words with the given prefix
-    /**
-    * Solves the Count Words With AGiven Prefix_Trie problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix_Trie problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix_Trie problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix_Trie problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    fun prefixCount(words: Array<String>, prefix: String): Int {
-        // Build the trie using the words
-        buildTrie(words, root)
-
-        // Traverse the trie to find the node corresponding to the given prefix
-        return findPrefixNode(prefix)?.prefixCount ?: 0
-    }
-
-    // Method to build the trie
-    /**
-    * Helper: build trie.
-    *
-    * @param words The input Array<String>.
-    * @param root The TrieNode.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: build trie.
-    *
-    * @param words The input Array<String>.
-    * @param root The TrieNode.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: build trie.
-    *
-    * @param words The input Array<String>.
-    * @param root The TrieNode.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    /**
-    * Helper: build trie.
-    *
-    * @param words The input Array<String>.
-    * @param root The TrieNode.
-    * @return Unit (no return value, modifies state in-place).
-    */
-    private fun buildTrie(words: Array<String>, root: TrieNode) {
-        for (word in words) {
-            var current = root
-            for (ch in word) {
-                // Move to the child node or create a new one
-                current = current.children.getOrPut(ch) { TrieNode(ch) }
-                current.prefixCount++  // Increment prefix count for every node along the way
-            }
-        }
-    }
-
-    // Method to find the node corresponding to the last character of the prefix
-    /**
-    * Helper: find prefix node.
-    *
-    * @param prefix The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Helper: find prefix node.
-    *
-    * @param prefix The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Helper: find prefix node.
-    *
-    * @param prefix The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Helper: find prefix node.
-    *
-    * @param prefix The input string.
-    * @return The result, or `null` if not found.
-    */
-    private fun findPrefixNode(prefix: String): TrieNode? {
-        var current = root
-        for (ch in prefix) {
-            current = current.children[ch] ?: return null  // If prefix doesn't exist, return null
-        }
-        return current
-    }
-}
-```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
-
-### Variations
-
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
-1. DFS vs BFS — which is better and why?
-1. What if the graph is too large to fit in memory?
-
----
-
-## Count Words With A Given Prefix_Trie_FP
-
-### Problem
-
-Solves the Count Words With AGiven Prefix_Trie_FP problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package trie
-
-class CountWordsWithAGivenPrefix_Trie_FP {
-    data class TrieNode(val children: MutableMap<Char, TrieNode> = mutableMapOf(), var prefixCount: Int = 0)
-
-    private val root = TrieNode()
-
-    /**
-    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
-    * Takes `words` (Array<String>), `prefix` (string).
-    *
-    * @param words The input Array<String>.
-    * @param prefix The input string.
-    * @return The computed integer result.
-    */
-    fun prefixCount(words: Array<String>, prefix: String): Int {
-        words.forEach { word ->
-            word.fold(root) { node, ch ->
-                node.children.getOrPut(ch) { TrieNode() }.apply { prefixCount++ }
-            }
-        }
-        return prefixSearch(prefix)?.prefixCount ?: 0
-    }
-
-    /**
-    * Helper: prefix search.
-    *
-    * @param prefix The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Helper: prefix search.
-    *
-    * @param prefix The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Helper: prefix search.
-    *
-    * @param prefix The input string.
-    * @return The result, or `null` if not found.
-    */
-    /**
-    * Helper: prefix search.
-    *
-    * @param prefix The input string.
-    * @return The result, or `null` if not found.
-    */
-    private fun prefixSearch(prefix: String): TrieNode? = prefix.fold(root) { node, ch -> node.children[ch] ?: return null }
-}
-```
-
-### Pattern Insight
-
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
-
-### Variations
-
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
-1. DFS vs BFS — which is better and why?
-1. What if the graph is too large to fit in memory?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -842,11 +513,19 @@ class CountWordsWithAGivenPrefix_Trie_FP {
 
 ### Problem
 
-Solves the Custom Sort String problem.
+Given `order` (string), `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: order = "example", s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -898,22 +577,22 @@ class CustomSortString {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -921,11 +600,19 @@ class CustomSortString {
 
 ### Problem
 
-Solves the Decode String problem.
+Given `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -1069,22 +756,22 @@ class DecodeString {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -1092,11 +779,19 @@ class DecodeString {
 
 ### Problem
 
-Solves the Determine If Strings Are Close problem.
+Given `word1` (string), `word2` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: word1 = "example", word2 = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -1157,22 +852,22 @@ class DetermineIfStringsAreClose {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -1180,11 +875,19 @@ class DetermineIfStringsAreClose {
 
 ### Problem
 
-Solves the Edit Distance problem.
+Given `word1` (string), `word2` (string), `m` (integer), `n` (integer), `args` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: word1 = "example", word2 = "example", m = 5, n = 5, args = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -1313,22 +1016,22 @@ class EditDistance {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1336,11 +1039,19 @@ class EditDistance {
 
 ### Problem
 
-Solves the Excel Sheet To Column Number problem.
+Given `columnTitle` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: columnTitle = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1390,22 +1101,22 @@ class ExcelSheetToColumnNumber {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1413,11 +1124,19 @@ class ExcelSheetToColumnNumber {
 
 ### Problem
 
-Solves the Find All Anagrams problem.
+Given `s` (string), `p` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", p = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -1488,22 +1207,22 @@ class FindAllAnagrams {
 
 ### Pattern Insight
 
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
 1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -1511,11 +1230,19 @@ class FindAllAnagrams {
 
 ### Problem
 
-Solves the findtheindexofthefirstoccurrenceina string problem.
+Given `haystack` (string), `needle` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: haystack = "example", needle = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -1639,199 +1366,22 @@ class `FindTheIndexofTheFirstOccurrenceIna String` {
 
 ### Pattern Insight
 
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
 1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
-
----
-
-## Find The Index Of The First Occurrence In String_Rabin Karp
-
-### Problem
-
-Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string.pattern_matching
-
-import oracle.net.aso.m
-
-class FindTheIndexOfTheFirstOccurrenceInString_RabinKarp {
-    /**
-    * Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
-    * Takes `haystack` (string), `needle` (string).
-    *
-    * @param haystack The input string.
-    * @param needle The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
-    * Takes `haystack` (string), `needle` (string).
-    *
-    * @param haystack The input string.
-    * @param needle The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
-    * Takes `haystack` (string), `needle` (string).
-    *
-    * @param haystack The input string.
-    * @param needle The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
-    * Takes `haystack` (string), `needle` (string).
-    *
-    * @param haystack The input string.
-    * @param needle The input string.
-    * @return The computed integer result.
-    */
-    fun strStr(haystack: String, needle: String): Int {
-        if (needle.isEmpty()) return 0
-        if (haystack.length < needle.length) return -1
-
-        val base = 26
-        val mod = 1_000_000_007
-        val m = needle.length
-        var targetHash = 0L
-        var windowHash = 0L
-        var power = 1L
-
-        // Precompute needle hash and initial window hash
-        for (i in 0 until m) {
-            targetHash = (targetHash * base + charValue(needle[i])) % mod
-            windowHash = (windowHash * base + charValue(haystack[i])) % mod
-            if (i < m - 1) power = (power * base) % mod
-        }
-
-        // Early check for match at index 0
-        if (windowHash == targetHash && matches(haystack, needle, 0)) {
-            return 0
-        }
-
-        // Slide the window and update hash
-        for (i in m until haystack.length) {
-            // Remove leftmost character and add new character
-            windowHash = (windowHash - charValue(haystack[i - m]) * power % mod + mod) % mod
-            windowHash = (windowHash * base + charValue(haystack[i])) % mod
-
-            // Check for match
-            val startIndex = i - m + 1
-            if (windowHash == targetHash && matches(haystack, needle, startIndex)) {
-                return startIndex
-            }
-        }
-
-        return -1
-    }
-
-    /**
-    * Helper: char value.
-    *
-    * @param c The character.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: char value.
-    *
-    * @param c The character.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: char value.
-    *
-    * @param c The character.
-    * @return The computed integer result.
-    */
-    /**
-    * Helper: char value.
-    *
-    * @param c The character.
-    * @return The computed integer result.
-    */
-    private fun charValue(c: Char): Int = c - 'a'
-
-    /**
-    * Helper: matches.
-    *
-    * @param text The input string.
-    * @param pattern The input string.
-    * @param start The integer parameter representing start.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: matches.
-    *
-    * @param text The input string.
-    * @param pattern The input string.
-    * @param start The integer parameter representing start.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: matches.
-    *
-    * @param text The input string.
-    * @param pattern The input string.
-    * @param start The integer parameter representing start.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: matches.
-    *
-    * @param text The input string.
-    * @param pattern The input string.
-    * @param start The integer parameter representing start.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    private fun matches(text: String, pattern: String, start: Int): Boolean {
-        for (i in pattern.indices) {
-            if (text[start + i] != pattern[i]) return false
-        }
-        return true
-    }
-}
-```
-
-### Pattern Insight
-
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
-
-### Variations
-
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
-1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -1839,11 +1389,19 @@ class FindTheIndexOfTheFirstOccurrenceInString_RabinKarp {
 
 ### Problem
 
-Solves the Find Unique Binary String problem.
+Given `nums` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -1895,22 +1453,22 @@ class FindUniqueBinaryString {
 
 ### Pattern Insight
 
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
 1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -1918,11 +1476,19 @@ class FindUniqueBinaryString {
 
 ### Problem
 
-Solves the Generate Parantheses problem.
+Given `n` (integer), `open` (integer), `close` (integer), `current` (StringBuilder), `result` (MutableList<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, open = 5, close = 5, current = input_value, result = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2029,22 +1595,22 @@ class GenerateParantheses {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2052,11 +1618,19 @@ class GenerateParantheses {
 
 ### Problem
 
-Solves the Goat Latin problem.
+Given `sentence` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: sentence = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2113,22 +1687,22 @@ class GoatLatin {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2136,11 +1710,19 @@ class GoatLatin {
 
 ### Problem
 
-Solves the Greatest Common Divisor Of Strings problem.
+Given `a` (integer), `b` (integer), `str1` (string), `str2` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: a = 5, b = 5, str1 = "example", str2 = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -2234,22 +1816,22 @@ class GreatestCommonDivisorOfStrings {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -2257,11 +1839,19 @@ class GreatestCommonDivisorOfStrings {
 
 ### Problem
 
-Solves the Group Anagrams problem.
+Given `strs` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: strs = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -2314,22 +1904,22 @@ class GroupAnagrams {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -2337,11 +1927,19 @@ class GroupAnagrams {
 
 ### Problem
 
-Solves the Group Shifted Strings problem.
+Given `strings` (Array<String>), `str` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: strings = input_value, str = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -2424,22 +2022,22 @@ class GroupShiftedStrings {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -2447,11 +2045,19 @@ class GroupShiftedStrings {
 
 ### Problem
 
-Solves the Interleaving String problem.
+Given `s1` (string), `s2` (string), `s3` (string), `i` (integer), `j` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s1 = "example", s2 = "example", s3 = "example", i = 5, j = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -2557,22 +2163,22 @@ class InterleavingString {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -2580,11 +2186,19 @@ class InterleavingString {
 
 ### Problem
 
-Solves the Isomorphic String problem.
+Given `s` (string), `t` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", t = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -2673,22 +2287,22 @@ class IsomorphicString {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -2696,11 +2310,19 @@ class IsomorphicString {
 
 ### Problem
 
-Solves the Is Subsequence problem.
+Given `s` (string), `t` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", t = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -2761,22 +2383,22 @@ class IsSubsequence {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
-| **Space** | O(1) |
+| **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2784,11 +2406,19 @@ class IsSubsequence {
 
 ### Problem
 
-Solves the Length Of Last Word problem.
+Given `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -2841,22 +2471,22 @@ class LengthOfLastWord {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
-1. DFS vs BFS — which is better and why?
-1. What if the graph is too large to fit in memory?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2864,11 +2494,19 @@ class LengthOfLastWord {
 
 ### Problem
 
-Solves the Longest Common Prefix problem.
+Given `strs` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: strs = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2926,22 +2564,22 @@ class LongestCommonPrefix {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2949,11 +2587,19 @@ class LongestCommonPrefix {
 
 ### Problem
 
-Solves the Longest Common Subsequence problem.
+Given `str1` (string), `str2` (string), `str` (string), `i` (integer), `j` (integer), `args` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: str1 = "example", str2 = "example", str = "example", i = 5, j = 5, args = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -3093,22 +2739,22 @@ class LongestCommonSubsequence {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
-| **Space** | O(1) |
+| **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3116,11 +2762,19 @@ class LongestCommonSubsequence {
 
 ### Problem
 
-Solve the **Longest Common Substring** problem efficiently.
+Given the input, compute the result efficiently.
+
+**Example:**
+
+```
+Input: 
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -3133,21 +2787,21 @@ class LongestCommonSubstring {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -3156,11 +2810,19 @@ class LongestCommonSubstring {
 
 ### Problem
 
-Solves the Longest Palidnromic Substring problem.
+Given `s` (string), `left` (integer), `right` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", left = 5, right = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -3267,21 +2929,21 @@ class LongestPalidnromicSubstring {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -3290,11 +2952,19 @@ class LongestPalidnromicSubstring {
 
 ### Problem
 
-Solves the Longest Palindromic Subsequence problem.
+Given `s` (string), `start` (integer), `length` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", start = 5, length = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -3382,22 +3052,22 @@ class LongestPalindromicSubsequence {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3405,11 +3075,19 @@ class LongestPalindromicSubsequence {
 
 ### Problem
 
-Solves the Longest Palindromic Subsequence_Bottom Up problem.
+Given `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -3470,22 +3148,22 @@ class LongestPalindromicSubsequence_BottomUp {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3493,11 +3171,19 @@ class LongestPalindromicSubsequence_BottomUp {
 
 ### Problem
 
-Solves the Longest Repeating Character Replacement problem.
+Given `s` (string), `k` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", k = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3563,22 +3249,22 @@ class LongestRepeatingCharacterReplacement {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3586,11 +3272,19 @@ class LongestRepeatingCharacterReplacement {
 
 ### Problem
 
-Solves the Longest String Chain problem.
+Given `words` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: words = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -3649,22 +3343,22 @@ class LongestStringChain {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -3672,11 +3366,19 @@ class LongestStringChain {
 
 ### Problem
 
-Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
+Given `arr` (List<String>), `index` (integer), `currentMask` (integer), `currentLength` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: arr = input_value, index = 5, currentMask = 5, currentLength = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -3787,22 +3489,22 @@ class MaximumLengthofaConcatenatedStringwithUniqueCharacters {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -3810,11 +3512,19 @@ class MaximumLengthofaConcatenatedStringwithUniqueCharacters {
 
 ### Problem
 
-Solves the Maximum Value Of AString Is An Array problem.
+Given `strs` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: strs = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -3861,22 +3571,22 @@ class MaximumValueOfAStringIsAnArray {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -3884,11 +3594,19 @@ class MaximumValueOfAStringIsAnArray {
 
 ### Problem
 
-Solves the Merge String Alternatively problem.
+Given `word1` (string), `word2` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: word1 = "example", word2 = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -3945,22 +3663,22 @@ class MergeStringAlternatively {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -3968,11 +3686,19 @@ class MergeStringAlternatively {
 
 ### Problem
 
-Solves the Minimum Deletion To Make Character Frequencies Unique problem.
+Given `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -4030,22 +3756,22 @@ class MinimumDeletionToMakeCharacterFrequenciesUnique {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -4053,11 +3779,19 @@ class MinimumDeletionToMakeCharacterFrequenciesUnique {
 
 ### Problem
 
-Solves the Minimum Window Substring problem.
+Given `s` (string), `t` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", t = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -4157,21 +3891,21 @@ class MinimumWindowSubstring {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -4180,11 +3914,19 @@ class MinimumWindowSubstring {
 
 ### Problem
 
-Solves the Remove All Adjacent Duplicates In String problem.
+Given `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -4237,22 +3979,22 @@ class RemoveAllAdjacentDuplicatesInString {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -4260,11 +4002,19 @@ class RemoveAllAdjacentDuplicatesInString {
 
 ### Problem
 
-Solves the Reverse Words In String problem.
+Given `s` (string), `nums` (MutableList<String>), `i` (integer), `j` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", nums = input_value, i = 5, j = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -4360,22 +4110,22 @@ class ReverseWordsInString {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
-1. DFS vs BFS — which is better and why?
-1. What if the graph is too large to fit in memory?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -4383,11 +4133,19 @@ class ReverseWordsInString {
 
 ### Problem
 
-Solves the Shortest Common Supersequence problem.
+Given `X` (string), `Y` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: X = "example", Y = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -4467,22 +4225,22 @@ class ShortestCommonSupersequence {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -4490,11 +4248,19 @@ class ShortestCommonSupersequence {
 
 ### Problem
 
-Solves the Simplify Path problem.
+Given `path` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: path = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -4564,22 +4330,22 @@ class SimplifyPath {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -4587,11 +4353,19 @@ class SimplifyPath {
 
 ### Problem
 
-Solves the String Compression problem.
+Given `chars` (CharArray), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: chars = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -4705,22 +4479,22 @@ class StringCompression {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -4728,11 +4502,19 @@ class StringCompression {
 
 ### Problem
 
-Solves the String Compression_II problem.
+Given `word` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: word = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -4792,22 +4574,22 @@ class StringCompression_II {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -4815,11 +4597,19 @@ class StringCompression_II {
 
 ### Problem
 
-Solves the Unique Length3Palindromic Subsequence problem.
+Given `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -4890,157 +4680,22 @@ class UniqueLength3PalindromicSubsequence {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
-| **Space** | O(1) |
+| **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
-
----
-
-## Unique Substring With Equal Digit Frequency
-
-### Problem
-
-Solves the Unique Substring With Equal Digit Frequency problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package string.hashtable
-
-class UniqueSubstringWithEqualDigitFrequency {
-    /**
-    * Solves the Unique Substring With Equal Digit Frequency problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Unique Substring With Equal Digit Frequency problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Unique Substring With Equal Digit Frequency problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Unique Substring With Equal Digit Frequency problem.
-    * Takes `s` (string).
-    *
-    * @param s The input string.
-    * @return The computed integer result.
-    */
-    fun equalDigitFrequency(s: String): Int {
-        val n = s.length
-        val uniqueSubstrings = mutableSetOf<String>()
-
-        // Precompute prefix frequency arrays
-        val prefixFreq = Array(n + 1) { IntArray(10) }
-        for (i in 1..n) {
-            for (d in 0..9) {
-                prefixFreq[i][d] = prefixFreq[i - 1][d]
-            }
-            prefixFreq[i][s[i - 1] - '0']++
-        }
-
-        // Iterate over all possible substrings
-        for (i in 0 until n) {
-            for (j in i + 1..n) {
-                val freq = IntArray(10)
-                for (d in 0..9) {
-                    freq[d] = prefixFreq[j][d] - prefixFreq[i][d]
-                }
-
-                if (hasEqualFrequency(freq)) {
-                    uniqueSubstrings.add(s.substring(i, j))
-                }
-            }
-        }
-
-        return uniqueSubstrings.size
-    }
-
-    /**
-    * Helper: has equal frequency.
-    *
-    * @param freq The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: has equal frequency.
-    *
-    * @param freq The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: has equal frequency.
-    *
-    * @param freq The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    /**
-    * Helper: has equal frequency.
-    *
-    * @param freq The input array of integers.
-    * @return `true` if the condition is met, `false` otherwise.
-    */
-    private fun hasEqualFrequency(freq: IntArray): Boolean {
-        var uniqueFreq = -1
-        for (count in freq) {
-            if (count > 0) {
-                if (uniqueFreq == -1) {
-                    uniqueFreq = count
-                } else if (count != uniqueFreq) {
-                    return false
-                }
-            }
-        }
-        return true
-    }
-}
-```
-
-### Pattern Insight
-
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
-
-### Variations
-
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -5048,11 +4703,19 @@ class UniqueSubstringWithEqualDigitFrequency {
 
 ### Problem
 
-Solves the Valid Anagram problem.
+Given `s` (string), `t` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", t = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -5116,22 +4779,22 @@ class ValidAnagram {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -5139,11 +4802,19 @@ class ValidAnagram {
 
 ### Problem
 
-Solves the Valid Number problem.
+Given `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -5215,22 +4886,22 @@ class ValidNumber {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -5238,11 +4909,19 @@ class ValidNumber {
 
 ### Problem
 
-Solves the Valid Palindrome problem.
+Given `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -5304,22 +4983,22 @@ class ValidPalindrome {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can you optimize space to O(1) by keeping only the previous row?
+1. What if the input size is 10x larger — does the DP table still fit?
+1. Can you reconstruct the optimal path, not just the optimal value?
+1. What changes if constraints go from unlimited to limited (or vice versa)?
+1. Is there a greedy solution? When would greedy fail?
 
 ---
 
@@ -5327,11 +5006,19 @@ class ValidPalindrome {
 
 ### Problem
 
-Solves the Valid Palindrome_II problem.
+Given `s` (string), `i` (integer), `j` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", i = 5, j = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -5436,22 +5123,22 @@ class ValidPalindrome_II {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can you optimize space to O(1) by keeping only the previous row?
+1. What if the input size is 10x larger — does the DP table still fit?
+1. Can you reconstruct the optimal path, not just the optimal value?
+1. What changes if constraints go from unlimited to limited (or vice versa)?
+1. Is there a greedy solution? When would greedy fail?
 
 ---
 
@@ -5459,11 +5146,19 @@ class ValidPalindrome_II {
 
 ### Problem
 
-Solves the Valid Palindrome_III problem.
+Given `s` (string), `k` (integer), `start` (integer), `length` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", k = 5, start = 5, length = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -5561,22 +5256,22 @@ class ValidPalindrome_III {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can you optimize space to O(1) by keeping only the previous row?
+1. What if the input size is 10x larger — does the DP table still fit?
+1. Can you reconstruct the optimal path, not just the optimal value?
+1. What changes if constraints go from unlimited to limited (or vice versa)?
+1. Is there a greedy solution? When would greedy fail?
 
 ---
 
@@ -5584,11 +5279,19 @@ class ValidPalindrome_III {
 
 ### Problem
 
-Solves the Valid Palindrome_III_Space Optimized problem.
+Given `s` (string), `k` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", k = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -5653,22 +5356,22 @@ class ValidPalindrome_III_SpaceOptimized {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
+| **Time** | O(n²) |
 | **Space** | O(n²) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
-1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can you optimize space to O(1) by keeping only the previous row?
+1. What if the input size is 10x larger — does the DP table still fit?
+1. Can you reconstruct the optimal path, not just the optimal value?
+1. What changes if constraints go from unlimited to limited (or vice versa)?
+1. Is there a greedy solution? When would greedy fail?
 
 ---
 
@@ -5676,11 +5379,19 @@ class ValidPalindrome_III_SpaceOptimized {
 
 ### Problem
 
-Solves the Validate IPAddress problem.
+Given `queryIP` (string), `ip` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: queryIP = "example", ip = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -5811,22 +5522,22 @@ class ValidateIPAddress {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -5834,11 +5545,19 @@ class ValidateIPAddress {
 
 ### Problem
 
-Solves the Valid Word Abbreviation problem.
+Given `word` (string), `abbr` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: word = "example", abbr = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -5905,22 +5624,22 @@ class ValidWordAbbreviation {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
-1. DFS vs BFS — which is better and why?
-1. What if the graph is too large to fit in memory?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -5928,11 +5647,19 @@ class ValidWordAbbreviation {
 
 ### Problem
 
-Solves the Maximum Numberof Vowelsin Substringof Given Length problem.
+Given `s` (string), `k` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", k = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -5997,21 +5724,21 @@ class MaximumNumberofVowelsinSubstringofGivenLength {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -6020,11 +5747,19 @@ class MaximumNumberofVowelsinSubstringofGivenLength {
 
 ### Problem
 
-Solves the Permutations In String problem.
+Given `s1` (string), `s2` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s1 = "example", s2 = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -6086,22 +5821,22 @@ class PermutationsInString {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -6109,11 +5844,19 @@ class PermutationsInString {
 
 ### Problem
 
-Solves the Reverse Vowel Of String problem.
+Given `s` (string), `i` (integer), `j` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example", i = 5, j = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -6212,21 +5955,21 @@ class ReverseVowelOfString {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---

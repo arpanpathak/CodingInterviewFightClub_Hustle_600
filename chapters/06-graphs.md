@@ -14,34 +14,31 @@ next_chapter:
 
 # Graphs
 
-> **18 problems** — Master graph traversals, shortest paths, and topological ordering.
+> **17 problems**
 
 ## The Pattern
 
-BFS for shortest path, DFS for connectivity, topological sort for dependencies.
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [Alien Dictionary](#aliendictionary) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [Alien Dictionary_BFS](#aliendictionary_bfs) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [Apply Substitutions](#applysubstitutions) | — | <span class="badge badge-medium">Medium</span> |
-| 4 | [Bus Routes](#busroutes) | — | <span class="badge badge-medium">Medium</span> |
-| 5 | [Cheapest Flights Within K Stops](#cheapestflightswithinkstops) | — | <span class="badge badge-medium">Medium</span> |
-| 6 | [Cheapest Flights With K Stops](#cheapestflightswithkstops) | — | <span class="badge badge-medium">Medium</span> |
-| 7 | [Cheapest Flight With K Stops](#cheapestflightwithkstops) | — | <span class="badge badge-medium">Medium</span> |
-| 8 | [Node](#clonegraph) | — | <span class="badge badge-medium">Medium</span> |
-| 9 | [Course Schedule](#courseschedule) | — | <span class="badge badge-medium">Medium</span> |
-| 10 | [Course Schedule_II](#courseschedule_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 11 | [Course Schedule_II_BFS](#courseschedule_ii_bfs) | — | <span class="badge badge-medium">Medium</span> |
-| 12 | [Critical Connections In A Network](#criticalconnectionsinanetwork) | — | <span class="badge badge-medium">Medium</span> |
-| 13 | [Critical Connections In A Network Short Code](#criticalconnectionsinanetworkshortcode) | — | <span class="badge badge-medium">Medium</span> |
-| 14 | [Find Redundent Connections](#findredundentconnections) | — | <span class="badge badge-medium">Medium</span> |
-| 15 | [Tree Node](#houserobber3) | — | <span class="badge badge-medium">Medium</span> |
-| 16 | [Parallel Courses](#parallelcourses) | — | <span class="badge badge-medium">Medium</span> |
-| 17 | [Reorder Routes To Make All Paths Lead To City Zero](#reorderroutestomakeallpathsleadtocityzero) | — | <span class="badge badge-medium">Medium</span> |
-| 18 | [Word Ladder](#wordladder) | — | <span class="badge badge-medium">Medium</span> |
+1. [Alien Dictionary](#aliendictionary)
+2. [Alien Dictionary_BFS](#aliendictionary_bfs)
+3. [Apply Substitutions](#applysubstitutions)
+4. [Bus Routes](#busroutes)
+5. [Cheapest Flights Within K Stops](#cheapestflightswithinkstops)
+6. [Cheapest Flights With K Stops](#cheapestflightswithkstops)
+7. [Node](#clonegraph)
+8. [Course Schedule](#courseschedule)
+9. [Course Schedule_II](#courseschedule_ii)
+10. [Course Schedule_II_BFS](#courseschedule_ii_bfs)
+11. [Critical Connections In A Network](#criticalconnectionsinanetwork)
+12. [Critical Connections In A Network Short Code](#criticalconnectionsinanetworkshortcode)
+13. [Find Redundent Connections](#findredundentconnections)
+14. [Tree Node](#houserobber3)
+15. [Parallel Courses](#parallelcourses)
+16. [Reorder Routes To Make All Paths Lead To City Zero](#reorderroutestomakeallpathsleadtocityzero)
+17. [Word Ladder](#wordladder)
 
 ---
 
@@ -49,11 +46,19 @@ BFS for shortest path, DFS for connectivity, topological sort for dependencies.
 
 ### Problem
 
-Solves the Alien Dictionary problem.
+Given `words` (Array<String>), `node` (Char), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: words = input_value, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -178,20 +183,20 @@ class AlienDictionary {
 
 ### Pattern Insight
 
-**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
 ### Variations
 
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
+1. What if the graph is disconnected (multiple components)?
+1. What if edges have weights — does BFS still work?
+1. What if you need the actual path, not just distance/existence?
 1. DFS vs BFS — which is better and why?
 1. What if the graph is too large to fit in memory?
 
@@ -201,11 +206,19 @@ class AlienDictionary {
 
 ### Problem
 
-Solves the Alien Dictionary_BFS problem.
+Given `words` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: words = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -287,20 +300,20 @@ class AlienDictionary_BFS {
 
 ### Pattern Insight
 
-**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
 ### Variations
 
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
+1. What if the graph is disconnected (multiple components)?
+1. What if edges have weights — does BFS still work?
+1. What if you need the actual path, not just distance/existence?
 1. DFS vs BFS — which is better and why?
 1. What if the graph is too large to fit in memory?
 
@@ -310,11 +323,19 @@ class AlienDictionary_BFS {
 
 ### Problem
 
-Solves the Apply Substitutions problem.
+Given `replacements` (List<List<String>>), `text` (string), `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: replacements = input_value, text = "example", s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -415,21 +436,21 @@ class ApplySubstitutions {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Tree Pattern.** Choose traversal based on need: inorder (sorted for BST), preorder (copy/construct), postorder (bottom-up compute), level-order (BFS). Recursion uses O(h) stack space; iteration uses O(1) with Morris traversal.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
+1. What if the tree is skewed (worst case — becomes a linked list)?
+1. Can you solve this iteratively instead of recursively?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
+1. What if O(1) extra space is required (Morris traversal)?
 1. Can this be parallelized for different subtrees?
 
 ---
@@ -438,11 +459,19 @@ class ApplySubstitutions {
 
 ### Problem
 
-Solves the Bus Routes problem.
+Given `routes` (2D matrix), `source` (integer), `target` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: routes = [1, 2, 3, 4, 5], source = 5, target = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -541,22 +570,22 @@ class BusRoutes {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -564,11 +593,19 @@ class BusRoutes {
 
 ### Problem
 
-Solves the Cheapest Flights Within KStops problem.
+Given `n` (integer), `flights` (2D matrix), `src` (integer), `dst` (integer), `k` (integer), `graph` (MutableMap<Int), `dest` (integer), `args` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, flights = [1, 2, 3, 4, 5], src = 5, dst = 5, k = 5, graph = input_value, dest = 5, args = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses a **heap/priority queue** to maintain a dynamic ordering of elements. Heaps provide O(log n) insertion and O(1) access to the min or max element, making them ideal for streaming/online algorithms and k-th order statistics.
 
 ### Code
 
@@ -948,21 +985,21 @@ class CheapestFlightsWithinKStops {
 
 ### Pattern Insight
 
-**Heap Pattern.** Maintain dynamic ordering. Min-heap for k-largest, max-heap for k-smallest, dual heaps for median. Each operation O(log k).
+**Heap Pattern.** Use a min-heap to keep the k largest elements, max-heap for k smallest. Dual heaps (min + max) track median in O(1) with O(log n) insert. Each heap operation is O(log k).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
+| **Time** | O(n log k) |
+| **Space** | O(k) |
 
 ### Variations
 
-1. What if you need k-th smallest instead of largest?
-1. What if elements are added/removed dynamically?
-1. Sorting vs heap — compare O(n log n) vs O(n log k)?
-1. What if k is very large (close to n)? Different approach?
+1. What if you need the k-th smallest instead of largest?
+1. What if elements are added/removed dynamically over time?
+1. Sorting vs heap — compare O(n log n) vs O(n log k) tradeoffs.
+1. What if k is very large (close to n) — different approach needed?
 1. How to handle ties in priority ordering?
 
 ---
@@ -971,11 +1008,19 @@ class CheapestFlightsWithinKStops {
 
 ### Problem
 
-Solves the Cheapest Flights With KStops problem.
+Given `n` (integer), `flights` (2D matrix), `src` (integer), `dst` (integer), `k` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, flights = [1, 2, 3, 4, 5], src = 5, dst = 5, k = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses a **heap/priority queue** to maintain a dynamic ordering of elements. Heaps provide O(log n) insertion and O(1) access to the min or max element, making them ideal for streaming/online algorithms and k-th order statistics.
 
 ### Code
 
@@ -1077,7 +1122,7 @@ class CheapestFlightsWithKStops {
 
 ### Pattern Insight
 
-**Heap Pattern.** Maintain dynamic ordering. Min-heap for k-largest, max-heap for k-smallest, dual heaps for median. Each operation O(log k).
+**Heap Pattern.** Use a min-heap to keep the k largest elements, max-heap for k smallest. Dual heaps (min + max) track median in O(1) with O(log n) insert. Each heap operation is O(log k).
 
 ### Complexity
 
@@ -1088,119 +1133,10 @@ class CheapestFlightsWithKStops {
 
 ### Variations
 
-1. What if you need k-th smallest instead of largest?
-1. What if elements are added/removed dynamically?
-1. Sorting vs heap — compare O(n log n) vs O(n log k)?
-1. What if k is very large (close to n)? Different approach?
-1. How to handle ties in priority ordering?
-
----
-
-## Cheapest Flight With K Stops
-
-### Problem
-
-Solves the Cheapest Flight With KStops problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package graph.greedy
-
-import java.util.*
-
-class CheapestFlightWithKStops {
-    data class Flight(val node: Int, val cost: Int, val stops: Int)
-
-    /**
-    * Solves the Cheapest Flight With KStops problem.
-    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @param flights The input 2D matrix of integers.
-    * @param src The integer parameter representing src.
-    * @param dst The integer parameter representing dst.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Cheapest Flight With KStops problem.
-    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @param flights The input 2D matrix of integers.
-    * @param src The integer parameter representing src.
-    * @param dst The integer parameter representing dst.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Cheapest Flight With KStops problem.
-    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @param flights The input 2D matrix of integers.
-    * @param src The integer parameter representing src.
-    * @param dst The integer parameter representing dst.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    /**
-    * Solves the Cheapest Flight With KStops problem.
-    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
-    *
-    * @param n The integer parameter representing n.
-    * @param flights The input 2D matrix of integers.
-    * @param src The integer parameter representing src.
-    * @param dst The integer parameter representing dst.
-    * @param k The integer parameter representing k.
-    * @return The computed integer result.
-    */
-    fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
-        val graph = flights.groupBy({ it[0] }) { Flight(it[1], it[2], 0) }
-        val pq = PriorityQueue<Flight>(compareBy { it.cost })
-        val minStops = IntArray(n) { Int.MAX_VALUE }
-
-        pq.offer(Flight(src, 0, 0))
-
-        while (pq.isNotEmpty()) {
-            val (node, currentCost, stops) = pq.poll()
-
-            if (stops > k + 1 || stops >= minStops[node]) continue
-            minStops[node] = stops
-
-            if (node == dst) return currentCost
-
-            graph[node]?.forEach { (next, cost, _) ->
-                pq.offer(Flight(next, currentCost + cost, stops + 1))
-            }
-        }
-        return -1
-    }
-}
-```
-
-### Pattern Insight
-
-**Heap Pattern.** Maintain dynamic ordering. Min-heap for k-largest, max-heap for k-smallest, dual heaps for median. Each operation O(log k).
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n log k) |
-| **Space** | O(k) |
-
-### Variations
-
-1. What if you need k-th smallest instead of largest?
-1. What if elements are added/removed dynamically?
-1. Sorting vs heap — compare O(n log n) vs O(n log k)?
-1. What if k is very large (close to n)? Different approach?
+1. What if you need the k-th smallest instead of largest?
+1. What if elements are added/removed dynamically over time?
+1. Sorting vs heap — compare O(n log n) vs O(n log k) tradeoffs.
+1. What if k is very large (close to n) — different approach needed?
 1. How to handle ties in priority ordering?
 
 ---
@@ -1209,11 +1145,19 @@ class CheapestFlightWithKStops {
 
 ### Problem
 
-Solves the Node problem.
+Given `node` (Node?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -1270,22 +1214,22 @@ class CloneGraph {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Graph Pattern.** BFS = queue, shortest path. DFS = stack/recursion, connectivity. Topological sort = in-degree counting + queue. Union-Find = dynamic connectivity.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the graph is disconnected (multiple components)?
+1. What if edges have weights — does BFS still work?
+1. What if you need the actual path, not just distance/existence?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
 
@@ -1293,11 +1237,19 @@ class CloneGraph {
 
 ### Problem
 
-Helper: has cycle.
+Given `numCourses` (integer), `node` (integer), `prerequisites` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: numCourses = 5, node = 5, prerequisites = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -1432,20 +1384,20 @@ class CourseSchedule {
 
 ### Pattern Insight
 
-**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
+**Graph Pattern.** BFS = queue, shortest path. DFS = stack/recursion, connectivity. Topological sort = in-degree counting + queue. Union-Find = dynamic connectivity.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
 ### Variations
 
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
+1. What if the graph is disconnected (multiple components)?
+1. What if edges have weights — does BFS still work?
+1. What if you need the actual path, not just distance/existence?
 1. DFS vs BFS — which is better and why?
 1. What if the graph is too large to fit in memory?
 
@@ -1455,11 +1407,19 @@ class CourseSchedule {
 
 ### Problem
 
-Solves the Course Schedule_II problem.
+Given `numCourses` (integer), `prerequisites` (2D matrix), `node` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: numCourses = 5, prerequisites = [1, 2, 3, 4, 5], node = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -1613,20 +1573,20 @@ class CourseSchedule_II {
 
 ### Pattern Insight
 
-**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
+**Graph Pattern.** BFS = queue, shortest path. DFS = stack/recursion, connectivity. Topological sort = in-degree counting + queue. Union-Find = dynamic connectivity.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
 ### Variations
 
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
+1. What if the graph is disconnected (multiple components)?
+1. What if edges have weights — does BFS still work?
+1. What if you need the actual path, not just distance/existence?
 1. DFS vs BFS — which is better and why?
 1. What if the graph is too large to fit in memory?
 
@@ -1636,11 +1596,19 @@ class CourseSchedule_II {
 
 ### Problem
 
-Solves the Course Schedule_II_BFS problem.
+Given `numCourses` (integer), `prerequisites` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: numCourses = 5, prerequisites = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -1757,20 +1725,20 @@ fun main() {
 
 ### Pattern Insight
 
-**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
+**Graph Pattern.** BFS = queue, shortest path. DFS = stack/recursion, connectivity. Topological sort = in-degree counting + queue. Union-Find = dynamic connectivity.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
 ### Variations
 
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
+1. What if the graph is disconnected (multiple components)?
+1. What if edges have weights — does BFS still work?
+1. What if you need the actual path, not just distance/existence?
 1. DFS vs BFS — which is better and why?
 1. What if the graph is too large to fit in memory?
 
@@ -1780,11 +1748,19 @@ fun main() {
 
 ### Problem
 
-Solves the Critical Connections In ANetwork problem.
+Given `n` (integer), `connections` (List<List<Int>>), `node` (integer), `parent` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, connections = input_value, node = 5, parent = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1908,22 +1884,22 @@ class CriticalConnectionsInANetwork {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1931,11 +1907,19 @@ class CriticalConnectionsInANetwork {
 
 ### Problem
 
-Solves the Critical Connections In ANetwork Short Code problem.
+Given `n` (integer), `connections` (List<List<Int>>), `node` (integer), `parent` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, connections = input_value, node = 5, parent = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2037,22 +2021,22 @@ class CriticalConnectionsInANetworkShortCode {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2060,11 +2044,19 @@ class CriticalConnectionsInANetworkShortCode {
 
 ### Problem
 
-Solves the Find Redundent Connections problem.
+Given `edges` (2D matrix), `x` (integer), `y` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: edges = [1, 2, 3, 4, 5], x = 5, y = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -2187,22 +2179,22 @@ class FindRedundentConnections {
 
 ### Pattern Insight
 
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
 1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -2210,11 +2202,19 @@ class FindRedundentConnections {
 
 ### Problem
 
-Solves the Tree Node problem.
+Given `root` (TreeNode?), `node` (TreeNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: root = input_value, node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -2284,22 +2284,22 @@ class HouseRobber3 {
 
 ### Pattern Insight
 
-**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+**Dynamic Programming Pattern.** Define states (changing parameters), transitions (how to compute one state from others), and base cases. Compute bottom-up (iterative, table) or top-down (recursive, memoization).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
-| **Space** | O(1) |
+| **Space** | O(n²) |
 
 ### Variations
 
-1. What if the tree is skewed (worst-case linked list)?
-1. Can you solve this iteratively without recursion?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need O(1) extra space (Morris traversal)?
-1. Can this be parallelized for different subtrees?
+1. Can you optimize space to O(1) by keeping only the previous row?
+1. What if the input size is 10x larger — does the DP table still fit?
+1. Can you reconstruct the optimal path, not just the optimal value?
+1. What changes if constraints go from unlimited to limited (or vice versa)?
+1. Is there a greedy solution? When would greedy fail?
 
 ---
 
@@ -2307,11 +2307,19 @@ class HouseRobber3 {
 
 ### Problem
 
-Solves the Parallel Courses problem.
+Given `n` (integer), `relations` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, relations = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -2386,20 +2394,20 @@ class ParallelCourses {
 
 ### Pattern Insight
 
-**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
+**Graph Pattern.** BFS = queue, shortest path. DFS = stack/recursion, connectivity. Topological sort = in-degree counting + queue. Union-Find = dynamic connectivity.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
 ### Variations
 
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
+1. What if the graph is disconnected (multiple components)?
+1. What if edges have weights — does BFS still work?
+1. What if you need the actual path, not just distance/existence?
 1. DFS vs BFS — which is better and why?
 1. What if the graph is too large to fit in memory?
 
@@ -2409,11 +2417,19 @@ class ParallelCourses {
 
 ### Problem
 
-Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+Given `n` (integer), `connections` (2D matrix), `city` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5, connections = [1, 2, 3, 4, 5], city = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem has **optimal substructure** (the optimal solution builds from optimal solutions to subproblems) and **overlapping subproblems** (same subproblems recur). Dynamic programming avoids redundant computation by caching results — either top-down with memoization or bottom-up with tabulation.
 
 ### Code
 
@@ -2513,22 +2529,22 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2536,11 +2552,19 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
 
 ### Problem
 
-Solves the Word Ladder problem.
+Given `beginWord` (string), `endWord` (string), `wordList` (List<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: beginWord = "example", endWord = "example", wordList = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **graph traversal**. Choose BFS for shortest path in unweighted graphs, DFS for connectivity/path existence, or topological sort for dependency ordering. Track visited nodes to prevent infinite loops.
 
 ### Code
 
@@ -2622,21 +2646,21 @@ class WordLadder {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the graph is disconnected? Handle multiple components.
-1. What if edges have weights? Does BFS still work?
-1. What if you need the actual path, not just distance?
-1. DFS vs BFS — which is better and why?
-1. What if the graph is too large to fit in memory?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---

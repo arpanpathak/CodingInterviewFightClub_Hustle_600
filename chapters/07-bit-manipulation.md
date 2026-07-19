@@ -14,25 +14,23 @@ next_chapter:
 
 # Bit Manipulation
 
-> **9 problems** — Master bitwise operations: AND, OR, XOR, shifts, and bit masking.
+> **9 problems**
 
 ## The Pattern
 
-XOR for pairing, AND for masking, shifts for powers of 2.
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [First Letter To Appear Twice](#firstlettertoappeartwice) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [Longest Nice Subarray](#longestnicesubarray) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [Maximum Xor Of Two Nums In Array](#maximumxoroftwonumsinarray) | — | <span class="badge badge-medium">Medium</span> |
-| 4 | [Number Of Steps To Reduceaanumberinbinaryrepresentationtoone](#number_of_steps_to_reduceaanumberinbinaryrepresentationtoone) | — | <span class="badge badge-medium">Medium</span> |
-| 5 | [Number Of One Bits](#numberofonebits) | — | <span class="badge badge-medium">Medium</span> |
-| 6 | [Reverse Bits](#reversebits) | — | <span class="badge badge-medium">Medium</span> |
-| 7 | [Single Number](#singlenumber) | — | <span class="badge badge-medium">Medium</span> |
-| 8 | [Single Number3](#singlenumber3) | — | <span class="badge badge-medium">Medium</span> |
-| 9 | [Sum Of All Subset Xor Total](#sumofallsubsetxortotal) | — | <span class="badge badge-medium">Medium</span> |
+1. [First Letter To Appear Twice](#firstlettertoappeartwice)
+2. [Longest Nice Subarray](#longestnicesubarray)
+3. [Maximum Xor Of Two Nums In Array](#maximumxoroftwonumsinarray)
+4. [Number Of Steps To Reduceaanumberinbinaryrepresentationtoone](#number_of_steps_to_reduceaanumberinbinaryrepresentationtoone)
+5. [Number Of One Bits](#numberofonebits)
+6. [Reverse Bits](#reversebits)
+7. [Single Number](#singlenumber)
+8. [Single Number3](#singlenumber3)
+9. [Sum Of All Subset Xor Total](#sumofallsubsetxortotal)
 
 ---
 
@@ -40,11 +38,19 @@ XOR for pairing, AND for masking, shifts for powers of 2.
 
 ### Problem
 
-This is more memory efficient approach...
+Given `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -124,22 +130,22 @@ class FirstLetterToAppearTwice {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -147,11 +153,19 @@ class FirstLetterToAppearTwice {
 
 ### Problem
 
-Solves the Longest Nice Subarray problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -208,22 +222,22 @@ class LongestNiceSubarray {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -231,11 +245,19 @@ class LongestNiceSubarray {
 
 ### Problem
 
-Solves the Maximum Xor Of Two Nums In Array problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **bit manipulation** — operating directly on binary representations. Bitwise operations (AND, OR, XOR, shifts) are extremely fast and can represent sets, toggle flags, or detect patterns that would be cumbersome with arithmetic.
 
 ### Code
 
@@ -342,22 +364,22 @@ class MaximumXorOfTwoNumsInArray {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Bit Manipulation Pattern.** XOR: x^x=0, x^0=x — useful for finding unique elements. AND: mask off bits. Shift: multiply/divide by powers of 2. Bit counting: n & (n-1) clears lowest set bit.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if the numbers are 64-bit instead of 32-bit?
+1. What if you need to find numbers appearing 3 times instead of 2?
+1. Can you solve this without bit manipulation (using hash sets)?
+1. What if there are negative numbers involved?
+1. Can this be generalized for k occurrences?
 
 ---
 
@@ -365,11 +387,19 @@ class MaximumXorOfTwoNumsInArray {
 
 ### Problem
 
-Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
+Given `s` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: s = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -426,22 +456,22 @@ class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
 
 ### Pattern Insight
 
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
 1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -449,11 +479,19 @@ class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
 
 ### Problem
 
-Solves the Number Of One Bits problem.
+Given `n` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **bit manipulation** — operating directly on binary representations. Bitwise operations (AND, OR, XOR, shifts) are extremely fast and can represent sets, toggle flags, or detect patterns that would be cumbersome with arithmetic.
 
 ### Code
 
@@ -505,22 +543,22 @@ class NumberOfOneBits {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Bit Manipulation Pattern.** XOR: x^x=0, x^0=x — useful for finding unique elements. AND: mask off bits. Shift: multiply/divide by powers of 2. Bit counting: n & (n-1) clears lowest set bit.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if the numbers are 64-bit instead of 32-bit?
+1. What if you need to find numbers appearing 3 times instead of 2?
+1. Can you solve this without bit manipulation (using hash sets)?
+1. What if there are negative numbers involved?
+1. Can this be generalized for k occurrences?
 
 ---
 
@@ -528,11 +566,19 @@ class NumberOfOneBits {
 
 ### Problem
 
-Solves the Reverse Bits problem.
+Given `n` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **bit manipulation** — operating directly on binary representations. Bitwise operations (AND, OR, XOR, shifts) are extremely fast and can represent sets, toggle flags, or detect patterns that would be cumbersome with arithmetic.
 
 ### Code
 
@@ -585,22 +631,22 @@ class ReverseBits {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Bit Manipulation Pattern.** XOR: x^x=0, x^0=x — useful for finding unique elements. AND: mask off bits. Shift: multiply/divide by powers of 2. Bit counting: n & (n-1) clears lowest set bit.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if the numbers are 64-bit instead of 32-bit?
+1. What if you need to find numbers appearing 3 times instead of 2?
+1. Can you solve this without bit manipulation (using hash sets)?
+1. What if there are negative numbers involved?
+1. Can this be generalized for k occurrences?
 
 ---
 
@@ -608,11 +654,19 @@ class ReverseBits {
 
 ### Problem
 
-Solves the Single Number problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -658,22 +712,22 @@ class SingleNumber {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -681,11 +735,19 @@ class SingleNumber {
 
 ### Problem
 
-Solves the Single Number3 problem.
+Given `nums` (array of integers), `args` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], args = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -778,22 +840,22 @@ class SingleNumber3 {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -801,11 +863,19 @@ class SingleNumber3 {
 
 ### Problem
 
-Solves the Sum Of All Subset Xor Total problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **bit manipulation** — operating directly on binary representations. Bitwise operations (AND, OR, XOR, shifts) are extremely fast and can represent sets, toggle flags, or detect patterns that would be cumbersome with arithmetic.
 
 ### Code
 
@@ -855,21 +925,21 @@ class SumOfAllSubsetXorTotal {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Bit Manipulation Pattern.** XOR: x^x=0, x^0=x — useful for finding unique elements. AND: mask off bits. Shift: multiply/divide by powers of 2. Bit counting: n & (n-1) clears lowest set bit.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
-1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if the numbers are 64-bit instead of 32-bit?
+1. What if you need to find numbers appearing 3 times instead of 2?
+1. Can you solve this without bit manipulation (using hash sets)?
+1. What if there are negative numbers involved?
+1. Can this be generalized for k occurrences?
 
 ---

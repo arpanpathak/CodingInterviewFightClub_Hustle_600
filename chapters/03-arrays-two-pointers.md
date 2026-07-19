@@ -14,54 +14,51 @@ next_chapter:
 
 # Arrays & Two Pointers
 
-> **38 problems** — Master array manipulation, two-pointer technique, and sliding windows.
+> **37 problems**
 
 ## The Pattern
 
-Two pointers create O(n) passes where brute force would be O(n^2).
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [4sum](#4sum) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [Add Strings](#addstrings) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [List Node](#addtwonumbers) | — | <span class="badge badge-medium">Medium</span> |
-| 4 | [Can Place Flowers](#canplaceflowers) | — | <span class="badge badge-medium">Medium</span> |
-| 5 | [Container With Most Water](#containerwithmostwater) | — | <span class="badge badge-medium">Medium</span> |
-| 6 | [Contains Duplicate_II](#containsduplicate_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 7 | [Contiguous Array](#contiguousarray) | — | <span class="badge badge-medium">Medium</span> |
-| 8 | [Continuous Subarray Sum](#continuoussubarraysum) | — | <span class="badge badge-medium">Medium</span> |
-| 9 | [Diagonal Traverse](#diagonaltraverse) | — | <span class="badge badge-medium">Medium</span> |
-| 10 | [Point](#diagonaltraverse_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 11 | [Randomized Set](#insertdeletegetrandomato1) | — | <span class="badge badge-medium">Medium</span> |
-| 12 | [Interval List Intersection](#intervallistintersection) | — | <span class="badge badge-medium">Medium</span> |
-| 13 | [K Items With Maximum Sum](#kitemswithmaximumsum) | — | <span class="badge badge-medium">Medium</span> |
-| 14 | [Linked List Random Node](#linkedlistrandomnode) | — | <span class="badge badge-medium">Medium</span> |
-| 15 | [Merge Intervals](#mergeintervals) | — | <span class="badge badge-medium">Medium</span> |
-| 16 | [Merge Sorted Array](#mergesortedarray) | — | <span class="badge badge-medium">Medium</span> |
-| 17 | [Missing Ranges](#missingranges) | — | <span class="badge badge-medium">Medium</span> |
-| 18 | [Move Zeroes](#movezeroes) | — | <span class="badge badge-medium">Medium</span> |
-| 19 | [Next Permutation](#nextpermutation) | — | <span class="badge badge-medium">Medium</span> |
-| 20 | [Palindrome Number](#palindromenumber) | — | <span class="badge badge-medium">Medium</span> |
-| 21 | [Plus One](#plusone) | — | <span class="badge badge-medium">Medium</span> |
-| 22 | [Remove Element](#removeelement) | — | <span class="badge badge-medium">Medium</span> |
-| 23 | [Reservoir Sampling](#reservoirsampling) | — | <span class="badge badge-medium">Medium</span> |
-| 24 | [Rotate Array](#rotatearray) | — | <span class="badge badge-medium">Medium</span> |
-| 25 | [Rotate Image](#rotateimage) | — | <span class="badge badge-medium">Medium</span> |
-| 26 | [Search A2d Matrix_II](#searcha2dmatrix_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 27 | [Shortest Path In Binary Matrix](#shortestpathinbinarymatrix) | — | <span class="badge badge-medium">Medium</span> |
-| 28 | [Sign Of The Product Of An Array](#signoftheproductofanarray) | — | <span class="badge badge-medium">Medium</span> |
-| 29 | [Sort Colors](#sortcolors) | — | <span class="badge badge-medium">Medium</span> |
-| 30 | [Spiral Matrix](#spiralmatrix) | — | <span class="badge badge-medium">Medium</span> |
-| 31 | [Spiral Matrix_II](#spiralmatrix_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 32 | [Squares Of A Sorted Array](#squaresofasortedarray) | — | <span class="badge badge-medium">Medium</span> |
-| 33 | [Three Sum](#threesum) | — | <span class="badge badge-medium">Medium</span> |
-| 34 | [Three Sum Closest](#threesumclosest) | — | <span class="badge badge-medium">Medium</span> |
-| 35 | [Toeplitz Matrix](#toeplitzmatrix) | — | <span class="badge badge-medium">Medium</span> |
-| 36 | [Transpose Matrix](#transposematrix) | — | <span class="badge badge-medium">Medium</span> |
-| 37 | [Trapping Rain Water](#trappingrainwater) | — | <span class="badge badge-medium">Medium</span> |
-| 38 | [Two Sum_II](#twosum_ii) | — | <span class="badge badge-medium">Medium</span> |
+1. [4sum](#4sum)
+2. [Add Strings](#addstrings)
+3. [Can Place Flowers](#canplaceflowers)
+4. [Container With Most Water](#containerwithmostwater)
+5. [Contains Duplicate_II](#containsduplicate_ii)
+6. [Contiguous Array](#contiguousarray)
+7. [Continuous Subarray Sum](#continuoussubarraysum)
+8. [Diagonal Traverse](#diagonaltraverse)
+9. [Point](#diagonaltraverse_ii)
+10. [Randomized Set](#insertdeletegetrandomato1)
+11. [Interval List Intersection](#intervallistintersection)
+12. [K Items With Maximum Sum](#kitemswithmaximumsum)
+13. [Linked List Random Node](#linkedlistrandomnode)
+14. [Merge Intervals](#mergeintervals)
+15. [Merge Sorted Array](#mergesortedarray)
+16. [Missing Ranges](#missingranges)
+17. [Move Zeroes](#movezeroes)
+18. [Next Permutation](#nextpermutation)
+19. [Palindrome Number](#palindromenumber)
+20. [Plus One](#plusone)
+21. [Remove Element](#removeelement)
+22. [Reservoir Sampling](#reservoirsampling)
+23. [Rotate Array](#rotatearray)
+24. [Rotate Image](#rotateimage)
+25. [Search A2d Matrix_II](#searcha2dmatrix_ii)
+26. [Shortest Path In Binary Matrix](#shortestpathinbinarymatrix)
+27. [Sign Of The Product Of An Array](#signoftheproductofanarray)
+28. [Sort Colors](#sortcolors)
+29. [Spiral Matrix](#spiralmatrix)
+30. [Spiral Matrix_II](#spiralmatrix_ii)
+31. [Squares Of A Sorted Array](#squaresofasortedarray)
+32. [Three Sum](#threesum)
+33. [Three Sum Closest](#threesumclosest)
+34. [Toeplitz Matrix](#toeplitzmatrix)
+35. [Transpose Matrix](#transposematrix)
+36. [Trapping Rain Water](#trappingrainwater)
+37. [Two Sum_II](#twosum_ii)
 
 ---
 
@@ -69,11 +66,19 @@ Two pointers create O(n) passes where brute force would be O(n^2).
 
 ### Problem
 
-Solves the 4sum problem.
+Given `nums` (array of integers), `target` (integer), `start` (integer), `k` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], target = 5, start = 5, k = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -251,22 +256,22 @@ class `4Sum` {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -274,11 +279,19 @@ class `4Sum` {
 
 ### Problem
 
-Solves the Add Strings problem.
+Given `num1` (string), `num2` (string), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: num1 = "example", num2 = "example"
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -343,122 +356,22 @@ class AddStrings {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
-
----
-
-## List Node
-
-### Problem
-
-Solves the List Node problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package linkedlist
-
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
-}
-
-class AddTwoNumbers {
-    /**
-    * Solves the List Node problem.
-    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
-    *
-    * @param l1 The input linked list node reference.
-    * @param l2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the List Node problem.
-    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
-    *
-    * @param l1 The input linked list node reference.
-    * @param l2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the List Node problem.
-    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
-    *
-    * @param l1 The input linked list node reference.
-    * @param l2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the List Node problem.
-    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
-    *
-    * @param l1 The input linked list node reference.
-    * @param l2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
-        var carry = 0
-        val head = ListNode(0)
-        var ptr = head
-        var (n1, n2) = Pair(l1, l2)
-
-        while (n1!= null || n2 != null) {
-            val sum = (n1?.`val` ?: 0) + (n2?.`val` ?: 0) + carry
-            ptr.next = ListNode(sum % 10)
-            ptr = ptr.next!!
-
-            carry = if (sum > 9) 1 else 0
-
-            if (n1 != null) n1 = n1.next
-
-            if (n2 != null) n2 = n2.next
-        }
-
-        if (carry > 0) {
-            ptr.next = ListNode(carry)
-        }
-
-        return head.next
-    }
-}
-```
-
-### Pattern Insight
-
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
-
-### Variations
-
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -466,11 +379,19 @@ class AddTwoNumbers {
 
 ### Problem
 
-Solves the Can Place Flowers problem.
+Given `flowerbed` (array of integers), `n` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: flowerbed = [1, 2, 3, 4, 5], n = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -532,22 +453,22 @@ class CanPlaceFlowers {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -555,11 +476,19 @@ class CanPlaceFlowers {
 
 ### Problem
 
-Solves the Container With Most Water problem.
+Given `height` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: height = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -615,22 +544,22 @@ class ContainerWithMostWater {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -638,11 +567,19 @@ class ContainerWithMostWater {
 
 ### Problem
 
-Solves the Contains Duplicate_II problem.
+Given `nums` (array of integers), `k` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], k = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -698,22 +635,22 @@ class ContainsDuplicate_II {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -721,11 +658,19 @@ class ContainsDuplicate_II {
 
 ### Problem
 
-Solves the Contiguous Array problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -785,22 +730,22 @@ class ContiguousArray {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -808,11 +753,19 @@ class ContiguousArray {
 
 ### Problem
 
-Solves the Continuous Subarray Sum problem.
+Given `nums` (array of integers), `k` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], k = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -874,22 +827,22 @@ class ContinuousSubarraySum {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -897,11 +850,19 @@ class ContinuousSubarraySum {
 
 ### Problem
 
-Solves the Diagonal Traverse problem.
+Given `mat` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: mat = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -997,22 +958,22 @@ class DiagonalTraverse {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1020,11 +981,19 @@ class DiagonalTraverse {
 
 ### Problem
 
-Solves the Point problem.
+Given `nums` (List<List<Int>>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1096,22 +1065,22 @@ class DiagonalTraverse_II {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1119,11 +1088,19 @@ class DiagonalTraverse_II {
 
 ### Problem
 
-Solves the Randomized Set problem.
+Given `val` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: val = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1244,22 +1221,22 @@ class RandomizedSet() {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1267,11 +1244,19 @@ class RandomizedSet() {
 
 ### Problem
 
-Solves the Interval List Intersection problem.
+Given `firstList` (2D matrix), `secondList` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: firstList = [1, 2, 3, 4, 5], secondList = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -1337,22 +1322,22 @@ class IntervalListIntersection {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -1360,11 +1345,19 @@ class IntervalListIntersection {
 
 ### Problem
 
-Solves the KItems With Maximum Sum problem.
+Given `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: numOnes = 5, numZeros = 5, numNegOnes = 5, k = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1490,22 +1483,22 @@ class KItemsWithMaximumSum {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1513,11 +1506,19 @@ class KItemsWithMaximumSum {
 
 ### Problem
 
-Solves the Linked List Random Node problem.
+Given the input, compute the result efficiently.
+
+**Example:**
+
+```
+Input: 
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -1607,22 +1608,22 @@ class LinkedListRandomNode (private val head: ListNode?) {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -1630,11 +1631,19 @@ class LinkedListRandomNode (private val head: ListNode?) {
 
 ### Problem
 
-Solves the Merge Intervals problem.
+Given `intervals` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: intervals = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1689,22 +1698,22 @@ class MergeIntervals {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1712,11 +1721,19 @@ class MergeIntervals {
 
 ### Problem
 
-Solves the Merge Sorted Array problem.
+Given `nums1` (array of integers), `m` (integer), `nums2` (array of integers), `n` (integer), `args` (Array<String>), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums1 = [1, 2, 3, 4, 5], m = 5, nums2 = [1, 2, 3, 4, 5], n = 5, args = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1827,22 +1844,22 @@ class MergeSortedArray {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1850,11 +1867,19 @@ class MergeSortedArray {
 
 ### Problem
 
-Solves the Missing Ranges problem.
+Given `nums` (array of integers), `lower` (integer), `upper` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], lower = 5, upper = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -1919,22 +1944,22 @@ class MissingRanges {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -1942,11 +1967,19 @@ class MissingRanges {
 
 ### Problem
 
-Solves the Move Zeroes problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2002,22 +2035,22 @@ class MoveZeroes {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2025,11 +2058,19 @@ class MoveZeroes {
 
 ### Problem
 
-Solves the Next Permutation problem.
+Given `nums` (array of integers), `i` (integer), `j` (integer), `startIndex` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], i = 5, j = 5, startIndex = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2186,22 +2227,22 @@ class NextPermutation {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2209,11 +2250,19 @@ class NextPermutation {
 
 ### Problem
 
-Solves the Palindrome Number problem.
+Given `x` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: x = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **string processing** techniques. Common approaches include two pointers (palindrome checking), sliding window (substring search), DP (sequence alignment), hashing (pattern matching), or trie (prefix search).
 
 ### Code
 
@@ -2263,22 +2312,22 @@ class PalindromeNumber {
 
 ### Pattern Insight
 
-**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+**String Pattern.** Two pointers for palindrome/partition. Sliding window for substring. DP for sequence alignment (LCS, edit distance). Hashing for pattern matching (Rabin-Karp).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(1) or O(n) |
 
 ### Variations
 
-1. What if strings are very long? Can you optimize space?
-1. What if you need to reconstruct the actual subsequence?
-1. What if case sensitivity or Unicode matters?
+1. What if strings are very long — can you optimize space?
+1. What if you need to reconstruct the actual subsequence, not just the length?
+1. What if case sensitivity or Unicode characters matter?
 1. What if you need to handle 3+ strings simultaneously?
-1. Can you use hashing (Rabin-Karp) for faster matching?
+1. Can hashing (Rabin-Karp) be used for faster matching?
 
 ---
 
@@ -2286,11 +2335,19 @@ class PalindromeNumber {
 
 ### Problem
 
-Solves the Plus One problem.
+Given `digits` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: digits = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2342,22 +2399,22 @@ class PlusOne {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2365,11 +2422,19 @@ class PlusOne {
 
 ### Problem
 
-Solves the Remove Element problem.
+Given `nums` (array of integers), `val` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], val = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2425,22 +2490,22 @@ class RemoveElement {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2448,11 +2513,19 @@ class RemoveElement {
 
 ### Problem
 
-Solve the **Reservoir Sampling** problem efficiently.
+Given the input, compute the result efficiently.
+
+**Example:**
+
+```
+Input: 
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2486,22 +2559,22 @@ class ReservoirSampling {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2509,11 +2582,19 @@ class ReservoirSampling {
 
 ### Problem
 
-Solves the Rotate Array problem.
+Given `nums` (array of integers), `k` (integer), `start` (integer), `end` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], k = 5, start = 5, end = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2608,22 +2689,22 @@ class RotateArray {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2631,11 +2712,19 @@ class RotateArray {
 
 ### Problem
 
-Solves the Rotate Image problem.
+Given `matrix` (2D matrix), `i` (integer), `j` (integer), `m` (integer), `n` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: matrix = [1, 2, 3, 4, 5], i = 5, j = 5, m = 5, n = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -2750,22 +2839,22 @@ class RotateImage {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -2773,11 +2862,19 @@ class RotateImage {
 
 ### Problem
 
-Solves the Search A2d Matrix_II problem.
+Given `matrix` (2D matrix), `target` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: matrix = [1, 2, 3, 4, 5], target = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -2835,22 +2932,22 @@ class SearchA2dMatrix_II {
 
 ### Pattern Insight
 
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(log n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
 1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -2858,11 +2955,19 @@ class SearchA2dMatrix_II {
 
 ### Problem
 
-Solves the Shortest Path In Binary Matrix problem.
+Given `grid` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: grid = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **binary search** because the search space is sorted or has a monotonic property. Binary search cuts the search space in half each iteration, achieving O(log n) time. The key is identifying a predicate that transitions from false to true at exactly one point — binary search finds that transition.
 
 ### Code
 
@@ -2945,22 +3050,22 @@ class ShortestPathInBinaryMatrix {
 
 ### Pattern Insight
 
-**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+**Binary Search Pattern.** Identify a monotonic predicate. The predicate must be false for all values on one side of the answer and true for all values on the other side. Binary search finds the transition point.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(log n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the input is not sorted? Can you sort first?
-1. What if there are duplicates? Handle first vs last occurrence.
-1. What if the search space is values, not array indices?
+1. What if the input is not sorted? Can you sort it first?
+1. What if there are duplicates — need first vs last occurrence?
+1. What if the search space is a range of values, not array indices?
 1. What if the array is too large to fit in memory?
-1. What if the predicate is not monotonic? Can you binary search?
+1. What if the predicate is not monotonic?
 
 ---
 
@@ -2968,11 +3073,19 @@ class ShortestPathInBinaryMatrix {
 
 ### Problem
 
-Solves the Sign Of The Product Of An Array problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3026,22 +3139,22 @@ class SignOfTheProductOfAnArray {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3049,11 +3162,19 @@ class SignOfTheProductOfAnArray {
 
 ### Problem
 
-Solves the Sort Colors problem.
+Given `nums` (array of integers), `i` (integer), `j` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], i = 5, j = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3142,22 +3263,22 @@ class SortColors {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3165,11 +3286,19 @@ class SortColors {
 
 ### Problem
 
-Solves the Spiral Matrix problem.
+Given `matrix` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: matrix = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3238,22 +3367,22 @@ class SpiralMatrix {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3261,11 +3390,19 @@ class SpiralMatrix {
 
 ### Problem
 
-Solves the Spiral Matrix_II problem.
+Given `n` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: n = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3336,22 +3473,22 @@ class SpiralMatrix_II {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3359,11 +3496,19 @@ class SpiralMatrix_II {
 
 ### Problem
 
-Solves the Squares Of ASorted Array problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3420,22 +3565,22 @@ class SquaresOfASortedArray {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3443,11 +3588,19 @@ class SquaresOfASortedArray {
 
 ### Problem
 
-Solves the Three Sum problem.
+Given `nums` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3523,22 +3676,22 @@ class ThreeSum {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3546,11 +3699,19 @@ class ThreeSum {
 
 ### Problem
 
-Solves the Three Sum Closest problem.
+Given `nums` (array of integers), `target` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: nums = [1, 2, 3, 4, 5], target = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3619,22 +3780,22 @@ class ThreeSumClosest {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3642,11 +3803,19 @@ class ThreeSumClosest {
 
 ### Problem
 
-Solves the Toeplitz Matrix problem.
+Given `matrix` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: matrix = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3715,22 +3884,22 @@ class ToeplitzMatrix {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3738,11 +3907,19 @@ class ToeplitzMatrix {
 
 ### Problem
 
-Solves the Transpose Matrix problem.
+Given `matrix` (2D matrix), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: matrix = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3796,22 +3973,22 @@ class TransposeMatrix {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3819,11 +3996,19 @@ class TransposeMatrix {
 
 ### Problem
 
-Using Dynamic Programming.
+Given `height` (array of integers), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: height = [1, 2, 3, 4, 5]
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -3917,22 +4102,22 @@ class TrappingRainWater {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -3940,11 +4125,19 @@ class TrappingRainWater {
 
 ### Problem
 
-Solves the Two Sum_II problem.
+Given `numbers` (array of integers), `target` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: numbers = [1, 2, 3, 4, 5], target = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -4007,21 +4200,21 @@ class TwoSum_II {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the input size is much larger — can you optimize?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---

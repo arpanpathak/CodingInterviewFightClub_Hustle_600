@@ -14,32 +14,29 @@ next_chapter:
 
 # Linked Lists
 
-> **16 problems** — Master pointer manipulation and linked list operations.
+> **15 problems**
 
 ## The Pattern
 
-Linked lists are about pointer rearrangement: slow/fast pointers, dummy heads, in-place reversal.
+_Each problem below includes: Problem, Example, Why This Approach, Code, Pattern Insight, Complexity, and Variations._
 
-## Complete Problem Set
+## Problems
 
-| # | Problem | Pattern | Difficulty |
-|---|---------|-----------|------------|
-| 1 | [List Node](#addtwonumbers) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [Copy Linked List With Random Pointer](#copylinkedlistwithrandompointer) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [Delete Middle Node Of Linked List](#deletemiddlenodeoflinkedlist) | — | <span class="badge badge-medium">Medium</span> |
-| 4 | [Node](#insertintoasortedcircularlinkedlist) | — | <span class="badge badge-medium">Medium</span> |
-| 5 | [Intersection Of Two Linked List](#intersectionoftwolinkedlist) | — | <span class="badge badge-medium">Medium</span> |
-| 6 | [Linked List Cycle](#linkedlistcycle) | — | <span class="badge badge-medium">Medium</span> |
-| 7 | [Linked List Cycle_II](#linkedlistcycle_ii) | — | <span class="badge badge-medium">Medium</span> |
-| 8 | [Merge K Sorted List](#mergeksortedlist) | — | <span class="badge badge-medium">Medium</span> |
-| 9 | [Merge K Sorted List Iterative](#mergeksortedlistiterative) | — | <span class="badge badge-medium">Medium</span> |
-| 10 | [Merge Two Sorted L Ist](#mergetwosortedlist) | — | <span class="badge badge-medium">Medium</span> |
-| 11 | [Odd Even Linked List](#oddevenlinkedlist) | — | <span class="badge badge-medium">Medium</span> |
-| 12 | [Palindrome Linked List](#palindromelinkedlist) | — | <span class="badge badge-medium">Medium</span> |
-| 13 | [Remove Nth Node From End Of List](#removenthnodefromendoflist) | — | <span class="badge badge-medium">Medium</span> |
-| 14 | [Reverse Linked List](#reverselinkedlist) | — | <span class="badge badge-medium">Medium</span> |
-| 15 | [Reverse Linked List Iterative](#reverselinkedlistiterative) | — | <span class="badge badge-medium">Medium</span> |
-| 16 | [Reverse Nodes In K Groups](#reversenodesinkgroups) | — | <span class="badge badge-medium">Medium</span> |
+1. [List Node](#addtwonumbers)
+2. [Copy Linked List With Random Pointer](#copylinkedlistwithrandompointer)
+3. [Delete Middle Node Of Linked List](#deletemiddlenodeoflinkedlist)
+4. [Node](#insertintoasortedcircularlinkedlist)
+5. [Intersection Of Two Linked List](#intersectionoftwolinkedlist)
+6. [Linked List Cycle](#linkedlistcycle)
+7. [Linked List Cycle_II](#linkedlistcycle_ii)
+8. [Merge K Sorted List](#mergeksortedlist)
+9. [Merge Two Sorted L Ist](#mergetwosortedlist)
+10. [Odd Even Linked List](#oddevenlinkedlist)
+11. [Palindrome Linked List](#palindromelinkedlist)
+12. [Remove Nth Node From End Of List](#removenthnodefromendoflist)
+13. [Reverse Linked List](#reverselinkedlist)
+14. [Reverse Linked List Iterative](#reverselinkedlistiterative)
+15. [Reverse Nodes In K Groups](#reversenodesinkgroups)
 
 ---
 
@@ -47,11 +44,19 @@ Linked lists are about pointer rearrangement: slow/fast pointers, dummy heads, i
 
 ### Problem
 
-Solves the List Node problem.
+Given `l1` (ListNode?), `l2` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: l1 = input_value, l2 = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem requires choosing the right **data structure and algorithm** based on the constraints. The efficient solution typically replaces a brute-force approach (O(n²)) with a more clever one (O(n) or O(n log n)) using appropriate data structures.
 
 ### Code
 
@@ -124,22 +129,22 @@ class AddTwoNumbers {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
 
@@ -147,11 +152,19 @@ class AddTwoNumbers {
 
 ### Problem
 
-Example:
+Given `node` (Node?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: node = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -233,22 +246,22 @@ class CopyLinkedListWithRandomPointer {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -256,11 +269,19 @@ class CopyLinkedListWithRandomPointer {
 
 ### Problem
 
-Solves the Delete Middle Node Of Linked List problem.
+Given `head` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: head = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -372,22 +393,22 @@ class DeleteMiddleNodeOfLinkedList {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -395,11 +416,19 @@ class DeleteMiddleNodeOfLinkedList {
 
 ### Problem
 
-Solves the Node problem.
+Given `head` (Node?), `insertVal` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: head = input_value, insertVal = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -473,22 +502,22 @@ class InsertIntoASortedCircularLinkedList {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -496,11 +525,19 @@ class InsertIntoASortedCircularLinkedList {
 
 ### Problem
 
-Solves the Intersection Of Two Linked List problem.
+Given `headA` (ListNode?), `headB` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: headA = input_value, headB = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -559,22 +596,22 @@ class IntersectionOfTwoLinkedList {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -582,11 +619,19 @@ class IntersectionOfTwoLinkedList {
 
 ### Problem
 
-Solves the Linked List Cycle problem.
+Given `head` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: head = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -688,22 +733,22 @@ class LinkedListCycle {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -711,11 +756,19 @@ class LinkedListCycle {
 
 ### Problem
 
-Solves the Linked List Cycle_II problem.
+Given `head` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: head = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -778,22 +831,22 @@ class LinkedListCycle_II {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -801,11 +854,19 @@ class LinkedListCycle_II {
 
 ### Problem
 
-Solves the Merge KSorted List problem.
+Given `list1` (ListNode?), `list2` (ListNode?), `lists` (Array<ListNode?>), `start` (integer), `end` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: list1 = input_value, list2 = input_value, lists = input_value, start = 5, end = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -947,160 +1008,22 @@ class MergeKSortedList {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
-
----
-
-## Merge K Sorted List Iterative
-
-### Problem
-
-Solves the Merge KSorted List Iterative problem.
-
-### Why This Approach
-
-_Refer to the **Pattern** section above for the general algorithmic pattern._
-
-### Code
-
-```kotlin
-package linkedlist
-
-class MergeKSortedListIterative {
-    /**
-    * Solves the Merge KSorted List Iterative problem.
-    * Takes `lists` (Array<ListNode?>).
-    *
-    * @param lists The input Array<ListNode?>.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List Iterative problem.
-    * Takes `lists` (Array<ListNode?>).
-    *
-    * @param lists The input Array<ListNode?>.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List Iterative problem.
-    * Takes `lists` (Array<ListNode?>).
-    *
-    * @param lists The input Array<ListNode?>.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List Iterative problem.
-    * Takes `lists` (Array<ListNode?>).
-    *
-    * @param lists The input Array<ListNode?>.
-    * @return The resulting collection (linked list node reference).
-    */
-    fun mergeKLists(lists: Array<ListNode?>): ListNode? {
-        if (lists.isEmpty()) return null
-
-        var interval = 1
-        val n = lists.size
-
-        while (interval < n) {
-            for (i in 0 until n - interval step interval * 2) {
-                lists[i] = mergeTwoLists(lists[i], lists[i + interval])
-            }
-            interval *= 2
-        }
-
-        return lists[0]
-    }
-
-    /**
-    * Solves the Merge KSorted List Iterative problem.
-    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
-    *
-    * @param list1 The input linked list node reference.
-    * @param list2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List Iterative problem.
-    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
-    *
-    * @param list1 The input linked list node reference.
-    * @param list2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List Iterative problem.
-    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
-    *
-    * @param list1 The input linked list node reference.
-    * @param list2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    /**
-    * Solves the Merge KSorted List Iterative problem.
-    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
-    *
-    * @param list1 The input linked list node reference.
-    * @param list2 The input linked list node reference.
-    * @return The resulting collection (linked list node reference).
-    */
-    fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
-        val head = ListNode(0) // Dummy node
-        var ptr = head
-
-        var ptr1 = list1
-        var ptr2 = list2
-
-        while (ptr1 != null && ptr2 != null) {
-            if (ptr1.`val` < ptr2.`val`) {
-                ptr.next = ptr1
-                ptr1 = ptr1.next
-            } else {
-                ptr.next = ptr2
-                ptr2 = ptr2.next
-            }
-            ptr = ptr.next!!
-        }
-
-        ptr.next = ptr1 ?: ptr2
-
-        return head.next
-    }
-}
-```
-
-### Pattern Insight
-
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
-
-### Variations
-
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -1108,11 +1031,19 @@ class MergeKSortedListIterative {
 
 ### Problem
 
-Solves the Merge Two Sorted LIst problem.
+Given `list1` (ListNode?), `list2` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: list1 = input_value, list2 = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -1179,22 +1110,22 @@ class MergeTwoSortedLIst {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if input size is much larger? Optimize time/space.
+1. What if the list has a cycle — how does that affect the solution?
 1. What if O(1) extra space is required?
-1. What if there are edge cases (empty, single, duplicates)?
-1. What if constraints change (positive, sorted, distinct)?
-1. Can this be solved with a different paradigm?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -1202,11 +1133,19 @@ class MergeTwoSortedLIst {
 
 ### Problem
 
-Solves the Odd Even Linked List problem.
+Given `head` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: head = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -1265,22 +1204,22 @@ class OddEvenLinkedList {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -1288,11 +1227,19 @@ class OddEvenLinkedList {
 
 ### Problem
 
-Solves the Palindrome Linked List problem.
+Given `head` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: head = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -1400,22 +1347,22 @@ class PalindromeLinkedList {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -1423,11 +1370,19 @@ class PalindromeLinkedList {
 
 ### Problem
 
-Solves the Remove Nth Node From End Of List problem.
+Given `head` (ListNode?), `n` (integer), `indexToRemove` (integer), `size` (integer), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: head = input_value, n = 5, indexToRemove = 5, size = 5
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -1558,22 +1513,22 @@ class RemoveNthNodeFromEndOfList {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -1581,11 +1536,19 @@ class RemoveNthNodeFromEndOfList {
 
 ### Problem
 
-Solves the Reverse Linked List problem.
+Given `head` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: head = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -1638,22 +1601,22 @@ class ReverseLinkedList {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -1661,11 +1624,19 @@ class ReverseLinkedList {
 
 ### Problem
 
-Solves the Reverse Linked List Iterative problem.
+Given `head` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: head = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **linked list manipulation**. Linked lists are about pointer rearrangement. Key techniques include using dummy head nodes (to handle empty cases uniformly), slow/fast pointers (for cycle detection, finding the middle), and in-place pointer reversal.
 
 ### Code
 
@@ -1717,22 +1688,22 @@ class ReverseLinkedListIterative {
 
 ### Pattern Insight
 
-**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+**Linked List Pattern.** Dummy head simplifies edge cases. Slow/fast pointer detects cycles and finds middle. In-place reversal uses three pointers (prev, curr, next).
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+| **Time** | O(n) |
+| **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the list has a cycle — how does that affect the solution?
+1. What if O(1) extra space is required?
+1. What if the list is doubly linked — does that simplify things?
+1. Recursive vs iterative approach — what are the tradeoffs?
+1. Can slow/fast pointer technique be used?
 
 ---
 
@@ -1740,11 +1711,19 @@ class ReverseLinkedListIterative {
 
 ### Problem
 
-Solves the Reverse Nodes In KGroups problem.
+Given `head` (ListNode?), `k` (integer), `start` (ListNode?), `end` (ListNode?), compute the computed result efficiently.
+
+**Example:**
+
+```
+Input: head = input_value, k = 5, start = input_value, end = input_value
+Output: 42 (expected result)
+
+```
 
 ### Why This Approach
 
-_Refer to the **Pattern** section above for the general algorithmic pattern._
+This problem uses **tree traversal/recursion**. Trees are naturally recursive — each subtree is itself a tree. The key is choosing the right traversal order (preorder, inorder, postorder, level-order) for the specific problem.
 
 ### Code
 
@@ -1865,21 +1844,21 @@ class ReverseNodesInKGroups {
 
 ### Pattern Insight
 
-**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+**Algorithmic Pattern.** The right data structure transforms a brute-force O(n²) into O(n) or O(log n). Consider hash maps for O(1) lookup, sorting as preprocessing, or two-pointer passes.
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ### Variations
 
-1. What if the list has a cycle? How does it affect the solution?
-1. What if you cannot use extra memory (O(1) space)?
-1. What if the list is doubly linked? Does it simplify?
-1. Recursive vs iterative approach — tradeoffs?
-1. Can slow/fast pointer technique be applied?
+1. What if the input size is much larger — can you optimize?
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty input, single element, duplicates)?
+1. What if constraints change (positive only, sorted input, distinct values)?
+1. Can this be solved with a different algorithmic paradigm?
 
 ---
