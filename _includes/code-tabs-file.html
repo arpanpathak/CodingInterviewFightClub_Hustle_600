@@ -1,36 +1,20 @@
 {% comment %}
-  Code tabs that read from _includes/code/ directory.
-  Usage: {% include code-tabs-file.html problem="problem-name" %}
-  Data files: _includes/code/PROBLEM_NAME/{kotlin,java,python,rust,cpp}.txt
+  Code tabs — currently only Kotlin is clean.
+  Java/Python/Rust/C++ have $1 placeholders from previous AI corruption.
+  Only showing Kotlin until regenerated.
 {% endcomment %}
 
-{% assign lang_names = "Kotlin,Java,Python,Rust,C++" | split: "," %}
-{% assign lang_icons = "🟣,🟠,🔵,🦀,⚙️" | split: "," %}
-{% assign lang_codes = "kotlin,java,python,rust,cpp" | split: "," %}
 {% assign problem_key = include.problem %}
+{% capture include_path %}code/{{ problem_key }}/kotlin.txt{% endcapture %}
+{% capture code %}{% include {{ include_path }} %}{% endcapture %}
 
 <div class="code-tabs">
   <div class="tab-nav">
-    {% for lang in lang_codes %}
-      {% capture include_path %}code/{{ problem_key }}/{{ lang }}.txt{% endcapture %}
-      {% capture code %}{% include {{ include_path }} %}{% endcapture %}
-      {% assign trimmed = code | strip %}
-      {% if trimmed != "" %}
-        <button class="tab-btn {% if forloop.first %}active{% endif %}" data-lang="{{ lang }}">
-          <span class="lang-icon">{{ lang_icons[forloop.index0] }}</span> {{ lang_names[forloop.index0] }}
-        </button>
-      {% endif %}
-    {% endfor %}
+    <button class="tab-btn active" data-lang="kotlin">
+      <span class="lang-icon">🟣</span> Kotlin
+    </button>
   </div>
-
-  {% for lang in lang_codes %}
-    {% capture include_path %}code/{{ problem_key }}/{{ lang }}.txt{% endcapture %}
-    {% capture code %}{% include {{ include_path }} %}{% endcapture %}
-    {% assign trimmed = code | strip %}
-    {% if trimmed != "" %}
-      <div class="tab-content {% if forloop.first %}active{% endif %}" data-lang="{{ lang }}">
-        <pre><code>{{ code | escape }}</code></pre>
-      </div>
-    {% endif %}
-  {% endfor %}
+  <div class="tab-content active" data-lang="kotlin">
+    <pre><code>{{ code | escape }}</code></pre>
+  </div>
 </div>
