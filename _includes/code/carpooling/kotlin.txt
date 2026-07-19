@@ -1,6 +1,14 @@
 package simulation
 
 class CarPooling {
+    /**
+    * Solves the Car Pooling problem.
+    * Takes `trips` (2D matrix of integers), `capacity` (integer).
+    *
+    * @param trips The input 2D matrix of integers.
+    * @param capacity The integer parameter representing capacity.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun carPooling(trips: Array<IntArray>, capacity: Int): Boolean {
         var capacity = capacity
         val locations = IntArray(1001)

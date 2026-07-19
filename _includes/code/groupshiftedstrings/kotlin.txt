@@ -1,6 +1,13 @@
 package string.hashtable
 
 class GroupShiftedStrings {
+    /**
+    * Solves the Group Shifted Strings problem.
+    * Takes `strings` (Array<String>).
+    *
+    * @param strings The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
     fun groupStrings(strings: Array<String>): List<List<String>> {
         val map = mutableMapOf<String, MutableList<String>>()
 
@@ -12,6 +19,12 @@ class GroupShiftedStrings {
         return map.values.toList()
     }
 
+    /**
+    * Helper: get key.
+    *
+    * @param str The input string.
+    * @return The resulting string.
+    */
     private fun getKey(str: String): String {
         return buildString {
             for (i in 1 until str.length) {

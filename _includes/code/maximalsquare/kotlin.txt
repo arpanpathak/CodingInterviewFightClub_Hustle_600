@@ -1,6 +1,13 @@
 package array.dp
 
 class MaximalSquare {
+    /**
+    * Solves the Maximal Square problem.
+    * Takes `matrix` (Array<CharArray>).
+    *
+    * @param matrix The input Array<CharArray>.
+    * @return The computed integer result.
+    */
     fun maximalSquare(matrix: Array<CharArray>): Int {
         if (matrix.isEmpty() || matrix[0].isEmpty()) return 0
         val m = matrix.size

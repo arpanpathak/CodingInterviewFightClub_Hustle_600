@@ -13,6 +13,14 @@ import java.nio.file.StandardOpenOption
 object FileWriter {
     private val gson = Gson()
 
+    /**
+    * Solves the File Writer problem.
+    * Takes `fileName` (string), `data` (Any).
+    *
+    * @param fileName The input string.
+    * @param data The Any.
+    * @return Unit (no return value, modifies state in-place).
+    */
     suspend fun appendJsonToFile(fileName: String, data: Any) {
         val gson: Gson = GsonBuilder().setPrettyPrinting().create()  // Configure Gson with pretty printing
         val jsonData = gson.toJson(data) + "\n"
@@ -30,6 +38,13 @@ object FileWriter {
         }
     }
 
+    /**
+    * Helper: append text to file.
+    *
+    * @param fileName The input string.
+    * @param text The input string.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private suspend fun appendTextToFile(fileName: String, text: String) {
         withContext(Dispatchers.IO) {
             val path = Paths.get(fileName)

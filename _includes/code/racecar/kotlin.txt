@@ -5,8 +5,23 @@ import java.util.*
 class Racecar {
 
     // Stack overflow too slow
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun racecar(target: Int): Int {
         val dp = mutableMapOf<Pair<Int,Int>, Int>()
+        /**
+        * Solves the Racecar problem.
+        * Takes `pos` (integer), `speed` (integer).
+        *
+        * @param pos The integer parameter representing pos.
+        * @param speed The integer parameter representing speed.
+        * @return The computed integer result.
+        */
         fun dfs(pos: Int, speed: Int): Int {
             val key = Pair(pos, speed)
             return when {
@@ -25,6 +40,13 @@ class Racecar {
 
     data class State(val position: Int, val speed: Int, val distance: Int = 0)
 
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun racecar_dijkstra(target: Int): Int {
         val pq = PriorityQueue<State>(compareBy { it.distance })
         val visited = mutableSetOf<State>()
@@ -60,6 +82,13 @@ class Racecar {
     }
 
 
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun racecar_bfs(target: Int): Int {
         val queue: Queue<State> = LinkedList()
         val visited = mutableSetOf<State>()

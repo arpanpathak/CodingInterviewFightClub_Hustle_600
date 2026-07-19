@@ -1,6 +1,13 @@
 package grid
 
 class MaxAreaOfIsland {
+    /**
+    * Solves the Max Area Of Island problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun maxAreaOfIsland(grid: Array<IntArray>): Int {
         // Edge case: if the grid is empty, return 0
         if (grid.isEmpty()) return 0
@@ -13,6 +20,14 @@ class MaxAreaOfIsland {
         val directions = arrayOf(-1 to 0,  1 to 0,   0 to -1,  0 to 1)
 
         // DFS helper function to explore the island
+        /**
+        * Solves the Max Area Of Island problem.
+        * Takes `r` (integer), `c` (integer).
+        *
+        * @param r The integer parameter representing r.
+        * @param c The integer parameter representing c.
+        * @return The computed integer result.
+        */
         fun dfs(r: Int, c: Int): Int {
             // If out of bounds or the cell is water (0), return area 0
             if (r < 0 || c < 0 || r >= rows || c >= cols || grid[r][c] == 0) {

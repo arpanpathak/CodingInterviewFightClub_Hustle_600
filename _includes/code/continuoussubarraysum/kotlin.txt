@@ -2,6 +2,14 @@ package array.prefixsum
 
 // Pattern https://leetcode.com/problems/continuous-subarray-sum/discuss/5276981/prefix-sum-hashmap-patterns-7-problems
 class ContinuousSubarraySum {
+    /**
+    * Solves the Continuous Subarray Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun checkSubarraySum(nums: IntArray, k: Int): Boolean {
         val sumsSet: HashSet<Int> = HashSet(nums.size)
         var sum = 0

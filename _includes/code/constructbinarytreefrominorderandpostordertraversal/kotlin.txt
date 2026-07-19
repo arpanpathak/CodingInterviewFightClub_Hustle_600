@@ -1,6 +1,14 @@
 package tree
 
 class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
+    /**
+    * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+    * Takes `inorder` (array of integers), `postorder` (array of integers).
+    *
+    * @param inorder The input array of integers.
+    * @param postorder The input array of integers.
+    * @return The result, or `null` if not found.
+    */
     fun buildTree(inorder: IntArray, postorder: IntArray): TreeNode? {
         // Build Inverted InOrder Index Map
         val rootIndices = mutableMapOf<Int, Int>()
@@ -8,6 +16,14 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
 
         var postIndex = postorder.size - 1
 
+        /**
+        * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+        * Takes `inorder` (array of integers), `postorder` (array of integers).
+        *
+        * @param inorder The input array of integers.
+        * @param postorder The input array of integers.
+        * @return The result, or `null` if not found.
+        */
         fun buildTree(left: Int, right: Int): TreeNode? {
             return when {
                 left > right -> null

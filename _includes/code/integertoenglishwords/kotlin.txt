@@ -10,6 +10,13 @@ class IntegerToEnglishWords {
         )
         private val thousands = arrayOf("", "Thousand", "Million", "Billion")
 
+        /**
+        * Solves the Integer To English Words problem.
+        * Takes `num` (integer).
+        *
+        * @param num The integer parameter representing num.
+        * @return The resulting string.
+        */
         fun numberToWords(num: Int): String {
             if (num == 0) return "Zero"
 
@@ -28,6 +35,12 @@ class IntegerToEnglishWords {
             return result.toString().trim()
         }
 
+        /**
+        * Helper: dfs.
+        *
+        * @param num The integer parameter representing num.
+        * @return The resulting string.
+        */
         private fun dfs(num: Int): String {
             if (num == 0) return ""
             if (num < 20) return lessThan20[num]

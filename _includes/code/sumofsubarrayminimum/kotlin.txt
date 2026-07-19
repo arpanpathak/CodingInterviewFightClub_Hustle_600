@@ -1,6 +1,13 @@
 package stack
 
 class SumOfSubArrayMinimum {
+    /**
+    * Solves the Sum Of Sub Array Minimum problem.
+    * Takes `arr` (array of integers).
+    *
+    * @param arr The input array of integers.
+    * @return The computed integer result.
+    */
     fun sumSubarrayMins(arr: IntArray): Int {
         val n = arr.size
         val stack = ArrayDeque<Int>()

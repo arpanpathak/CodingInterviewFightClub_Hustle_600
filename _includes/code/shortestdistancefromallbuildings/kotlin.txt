@@ -5,6 +5,13 @@ import oracle.net.aso.c
 class ShortestDistanceFromAllBuildings {
     private val directions = listOf(0 to 1, 1 to 0, 0 to -1, -1 to 0)
 
+    /**
+    * Solves the Shortest Distance From All Buildings problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun shortestDistance(grid: Array<IntArray>): Int {
         val rows = grid.size
         val cols = grid[0].size
@@ -25,6 +32,16 @@ class ShortestDistanceFromAllBuildings {
         return if (minDistance == Int.MAX_VALUE) -1 else minDistance
     }
 
+    /**
+    * Helper: bfs.
+    *
+    * @param grid The input 2D matrix of integers.
+    * @param startRow The integer parameter representing startRow.
+    * @param startCol The integer parameter representing startCol.
+    * @param totalDistance The input 2D matrix of integers.
+    * @param emptyLandValue The integer parameter representing emptyLandValue.
+    * @return The computed integer result.
+    */
     private fun bfs(
         grid: Array<IntArray>,
         startRow: Int,

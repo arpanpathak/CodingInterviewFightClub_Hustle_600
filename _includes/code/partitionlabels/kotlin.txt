@@ -2,6 +2,13 @@ package sliding_window
 
 class PartitionLabels {
 
+    /**
+    * Solves the Partition Labels problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun partitionLabels(s: String): List<Int> {
         val partitionLengths = mutableListOf<Int>()
         val lastSeenAt = mutableMapOf<Char, Int> ().apply {
@@ -23,6 +30,12 @@ class PartitionLabels {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
         }
     }

@@ -15,7 +15,7 @@ prev_chapter:
 
 ## The Pattern
 
-Cache design combines: hash map for O(1) lookup + linked list for ordering. LRU uses access order; LFU uses frequency count.
+Hash map for O(1) lookup + linked list for ordering. LRU = access order, LFU = frequency.
 
 ## Complete Problem Set
 
@@ -29,30 +29,13 @@ Cache design combines: hash map for O(1) lookup + linked list for ordering. LRU 
 
 ## LFU Cache
 
-<span id="lfucache"></span>
-
 ### Problem
 
-**Lfucache**
+Solves the LFUCache problem.
 
-**Function:** `Get` takes `key` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `vals`, `freq`, `lists`, `MAX_SIZE`, `min`, `count`, `evict`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -72,6 +55,13 @@ class LFUCache(capacity: Int) {
         lists[1] = LinkedHashSet()
     }
 
+    /**
+    * Solves the LFUCache problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
     fun get(key: Int): Int {
         if (!vals.containsKey(key))
             return -1
@@ -92,6 +82,14 @@ class LFUCache(capacity: Int) {
         return vals[key]!!
     }
 
+    /**
+    * Solves the LFUCache problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun put(key: Int, value: Int) {
         if (MAX_SIZE <= 0)
             return ;
@@ -122,53 +120,20 @@ class LFUCache(capacity: Int) {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n × m) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n × m). The memoization/table stores one entry per state (O(n)).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## LRU Cache
 
-<span id="lrucache"></span>
-
 ### Problem
 
-**Lrucache**
+Solves the LRUCache problem.
 
-**Function:** `Get` takes `key` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- cache[key] = data // Move accessed element to the end to mark it as recently used
-- Eviction policy
-- Remove the least recently used element
-- Insert the new element
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `capacity`, `cache`, `data`
-
-**Execution flow:**
-- cache[key] = data // Move accessed element to the end to mark it as recently used
-- Eviction policy
-- Remove the least recently used element
-- Insert the new element
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -179,6 +144,13 @@ class LRUCache(private val capacity: Int) {
 
     private val cache: LinkedHashMap<Int, Int> = LinkedHashMap()
 
+    /**
+    * Solves the LRUCache problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
     fun get(key: Int): Int {
         val data = cache[key] ?: -1
 
@@ -188,6 +160,14 @@ class LRUCache(private val capacity: Int) {
         return data
     }
 
+    /**
+    * Solves the LRUCache problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun put(key: Int, value: Int) {
         if (cache.containsKey(key)) {
             cache.remove(key)
@@ -204,56 +184,20 @@ class LRUCache(private val capacity: Int) {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n × m) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n × m). The memoization/table stores one entry per state (O(n)).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## LRU Cache Linked List
 
-<span id="lrucachelinkedlist"></span>
-
 ### Problem
 
-**Lrucachelinkedlist**
+Solves the LRUCache Linked List problem.
 
-**Function:** `Get` takes `key` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Hash map for O(1) access
-- Dummy head
-- Dummy tail
-- Key not found
-- Move the node to the head (most recently used)
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `capacity`, `key`, `value`, `prev`, `next`, `cache`, `head`, `tail`
-
-**Execution flow:**
-- Hash map for O(1) access
-- Key not found
-- Move the node to the head (most recently used)
-- Update the value and move to head
-- Create a new node and add to head
-- If capacity is exceeded, remove the tail node (least recently used)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -277,12 +221,27 @@ class LRUCacheLinkedList(private val capacity: Int) {
         tail.prev = head
     }
 
+    /**
+    * Solves the LRUCache Linked List problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
     fun get(key: Int): Int {
         val node = cache[key] ?: return -1 // Key not found
         moveToHead(node) // Move the node to the head (most recently used)
         return node.value
     }
 
+    /**
+    * Solves the LRUCache Linked List problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun put(key: Int, value: Int) {
         val node = cache[key]
         if (node != null) {
@@ -303,6 +262,12 @@ class LRUCacheLinkedList(private val capacity: Int) {
         }
     }
 
+    /**
+    * Helper: add to head.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun addToHead(node: Node) {
         // Add the node to the head of the list
         node.prev = head
@@ -311,18 +276,35 @@ class LRUCacheLinkedList(private val capacity: Int) {
         head.next = node
     }
 
+    /**
+    * Helper: remove node.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun removeNode(node: Node) {
         // Remove the node from the list
         node.prev?.next = node.next
         node.next?.prev = node.prev
     }
 
+    /**
+    * Helper: move to head.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun moveToHead(node: Node) {
         // Move the node to the head of the list
         removeNode(node)
         addToHead(node)
     }
 
+    /**
+    * Helper: remove tail.
+    *
+    * @return The computed result (Node).
+    */
     private fun removeTail(): Node {
         // Remove and return the tail node (least recently used)
         val tailNode = tail.prev!!
@@ -331,6 +313,11 @@ class LRUCacheLinkedList(private val capacity: Int) {
     }
 }
 
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() {
     val lruCache = LRUCache(2)
     lruCache.put(1, 1) // Cache is {1=1}
@@ -351,17 +338,5 @@ fun main() {
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
-
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — Cache design combines: hash map for O(1) lookup + linked list for ordering. LRU uses access order; LFU uses frequency count.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

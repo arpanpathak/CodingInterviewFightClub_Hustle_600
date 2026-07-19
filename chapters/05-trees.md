@@ -18,7 +18,7 @@ next_chapter:
 
 ## The Pattern
 
-Trees are recursive data structures. Master: DFS (pre/in/post-order), BFS (level-order), and BST properties.
+Trees are recursive — master DFS (pre/in/post-order), BFS (level-order), and BST properties.
 
 ## Complete Problem Set
 
@@ -75,44 +75,13 @@ Trees are recursive data structures. Master: DFS (pre/in/post-order), BFS (level
 
 ## All Nodes Distance Kin Binary Tree
 
-<span id="allnodesdistancekinbinarytree"></span>
-
 ### Problem
 
-**Allnodesdistancekinbinarytree**
+Solves the All Nodes Distance Kin Binary Tree problem.
 
-**Function:** `Distance K` takes `root` (TreeNode?), `target` (TreeNode?), `k` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- To store parent references
-- Helper function to perform DFS and populate parent map, then find target
-- Start DFS from the root to populate parentMap and find the target
-- Function to collect nodes at distance K from the target node
-- If distance is 0, add node's value to result
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `parentMap`, `result`
-
-**Execution flow:**
-- To store parent references
-- Helper function to perform DFS and populate parent map, then find target
-- Start DFS from the root to populate parentMap and find the target
-- Function to collect nodes at distance K from the target node
-- If distance is 0, add node's value to result
-- Explore parent node
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -122,10 +91,27 @@ package tree
 class AllNodesDistanceKinBinaryTree {
     val parentMap = mutableMapOf<TreeNode, TreeNode?>()  // To store parent references
 
+    /**
+    * Solves the All Nodes Distance Kin Binary Tree problem.
+    * Takes `root` (binary tree node reference), `target` (binary tree node reference), `k` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun distanceK(root: TreeNode?, target: TreeNode?, k: Int): List<Int> {
         val result = mutableListOf<Int>()
 
         // Helper function to perform DFS and populate parent map, then find target
+        /**
+        * Solves the All Nodes Distance Kin Binary Tree problem.
+        * Takes `node` (binary tree node reference), `parent` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param parent The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(node: TreeNode?, parent: TreeNode?) {
             if (node == null) return
             parentMap[node] = parent
@@ -140,6 +126,15 @@ class AllNodesDistanceKinBinaryTree {
     }
 
     // Function to collect nodes at distance K from the target node
+    /**
+    * Helper: collect nodes at distance k.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @param visited The input MutableSet<TreeNode>.
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun collectNodesAtDistanceK(node: TreeNode?, k: Int, visited: MutableSet<TreeNode>, result: MutableList<Int>) {
         if (node == null || visited.contains(node)) return
         visited.add(node)
@@ -160,40 +155,20 @@ class AllNodesDistanceKinBinaryTree {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Average Of Levels In Binary Tree
 
-<span id="averageoflevelsinbinarytree"></span>
-
 ### Problem
 
-**Averageoflevelsinbinarytree**
+Solves the Average Of Levels In Binary Tree problem.
 
-**Function:** `Average Of Levels` takes `root` (TreeNode?) and returns **doubleArray**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `queue`, `sum`, `size`, `node`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -204,6 +179,13 @@ import tree.TreeNode
 import java.util.*
 
 class AverageOfLevelsInBinaryTree {
+    /**
+    * Solves the Average Of Levels In Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed floating-point result.
+    */
     fun averageOfLevels(root: TreeNode?): DoubleArray {
         var result = mutableListOf<Double>()
 
@@ -238,43 +220,17 @@ class AverageOfLevelsInBinaryTree {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Balanced Binary Tree
 
-<span id="balancedbinarytree"></span>
-
 ### Problem
 
-**Balancedbinarytree**
+Solves the Balanced Binary Tree problem.
 
-**Function:** `Is Balanced` takes `root` (TreeNode?) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- If subtree is unbalanced, return -1 to signal it
-- Return the height of the tree rooted at this node
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `isBalanced` processes the input
-2. Uses helper functions: checkHeight
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `leftHeight`, `rightHeight`
-
-**Execution flow:**
-- If subtree is unbalanced, return -1 to signal it
-- Return the height of the tree rooted at this node
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -284,7 +240,21 @@ package tree
 import kotlin.math.abs
 
 class BalancedBinaryTree {
+    /**
+    * Solves the Balanced Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isBalanced(root: TreeNode?): Boolean {
+        /**
+        * Solves the Balanced Binary Tree problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
         fun checkHeight(node: TreeNode?): Int {
             if (node == null) return 0
 
@@ -312,47 +282,17 @@ class BalancedBinaryTree {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## B Inary Tree In Order Traversal Iterative
 
-<span id="binarytreeinordertraversaliterative"></span>
-
 ### Problem
 
-**Binarytreeinordertraversaliterative**
+Solves the BInary Tree In Order Traversal Iterative problem.
 
-**Function:** `Inorder Traversal` takes `root` (TreeNode?) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Traverse to the leftmost node
-- Visit the node
-- Move to the right subtree
-
-
-
-### Approach
-
-**Stack-Based Approach:**
-1. Process elements left to right
-2. Maintain a stack that tracks relevant previous elements
-3. Pop from stack when current element breaks a monotonic property
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `stack`, `result`, `current`
-
-**Execution flow:**
-- Traverse to the leftmost node
-- Visit the node
-- Move to the right subtree
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -360,6 +300,13 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class BInaryTreeInOrderTraversalIterative {
+    /**
+    * Solves the BInary Tree In Order Traversal Iterative problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun inorderTraversal(root: TreeNode?): List<Int> {
         val stack = ArrayDeque<TreeNode>()
         val result = mutableListOf<Int>()
@@ -392,37 +339,17 @@ class BInaryTreeInOrderTraversalIterative {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Binary Tree Level Order Traversal
 
-<span id="binarytreelevelordertraversal"></span>
-
 ### Problem
 
-**Binarytreelevelordertraversal**
+Solves the Binary Tree Level Order Traversal problem.
 
-**Function:** `Level Order` takes `root` (TreeNode?) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `queue`, `lst`, `size`, `temp`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -434,6 +361,13 @@ import kotlin.collections.ArrayList
 
 
 class BinaryTreeLevelOrderTraversal {
+    /**
+    * Solves the Binary Tree Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun levelOrder(root: TreeNode?): List<List<Int>> {
         val result: MutableList<List<Int>> = ArrayList()
         if (root == null)
@@ -468,37 +402,17 @@ class BinaryTreeLevelOrderTraversal {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Binary Tree Level Order Traversal_II
 
-<span id="binarytreelevelordertraversal_ii"></span>
-
 ### Problem
 
-**Binarytreelevelordertraversal Ii**
+Solves the Binary Tree Level Order Traversal_II problem.
 
-**Function:** `Level Order Bottom` takes `root` (TreeNode?) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `queue`, `size`, `currentLevel`, `node`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -509,6 +423,13 @@ import tree.TreeNode
 import java.util.*
 
 class BinaryTreeLevelOrderTraversal_II {
+    /**
+    * Solves the Binary Tree Level Order Traversal_II problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun levelOrderBottom(root: TreeNode?): List<List<Int>> {
         val result = LinkedList<List<Int>>()
         val queue = LinkedList<TreeNode>()
@@ -543,35 +464,17 @@ class BinaryTreeLevelOrderTraversal_II {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Binary Tree Maximum Path Sum
 
-<span id="binarytreemaximumpathsum"></span>
-
 ### Problem
 
-**Binarytreemaximumpathsum**
+Solves the Binary Tree Maximum Path Sum problem.
 
-**Function:** `Max Path Sum` takes `root` (TreeNode?) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `maxPathSum` processes the input
-2. Uses helper functions: getMaxPathSum
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `ans`, `left`, `right`, `currentMax`, `maxSoFar`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -579,8 +482,22 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class BinaryTreeMaximumPathSum {
+    /**
+    * Solves the Binary Tree Maximum Path Sum problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun maxPathSum(root: TreeNode?): Int {
         var ans = Int.MIN_VALUE
+        /**
+        * Solves the Binary Tree Maximum Path Sum problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
         fun getMaxPathSum(node: TreeNode?): Int {
             if (node == null) return 0
 
@@ -606,37 +523,17 @@ class BinaryTreeMaximumPathSum {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Binary Tree Right Side View
 
-<span id="binarytreerightsideview"></span>
-
 ### Problem
 
-**Binarytreerightsideview**
+Solves the Binary Tree Right Side View problem.
 
-**Function:** `Right Side View` takes `root` (TreeNode?) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `rightSide`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -644,9 +541,24 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class BinaryTreeRightSideView {
+    /**
+    * Solves the Binary Tree Right Side View problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun rightSideView(root: TreeNode?): List<Int> {
         val rightSide = mutableListOf<Int>()
 
+        /**
+        * Solves the Binary Tree Right Side View problem.
+        * Takes `node` (binary tree node reference), `level` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param level The integer parameter representing level.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(node: TreeNode?, level: Int) {
             when {
                 node == null -> return
@@ -666,56 +578,20 @@ class BinaryTreeRightSideView {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Binary Tree Vertical Order Traversal
 
-<span id="binarytreeverticalordertraversal"></span>
-
 ### Problem
 
-**Binarytreeverticalordertraversal**
+Solves the Binary Tree Vertical Order Traversal problem.
 
-**Function:** `Vertical Order` takes `root` (TreeNode?) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- fun verticalOrder(root: TreeNode?): List<List<Int>> {
-- val result = TreeMap<Int, LinkedList<Int>>()
-- //        fun dfs(node: TreeNode?, verticalIndex: Int = 0) {
-- if (node == null)
-- return
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `bucket`, `node`, `verticalIndex`, `result`, `queue`
-
-**Execution flow:**
-- fun verticalOrder(root: TreeNode?): List<List<Int>> {
-- val result = TreeMap<Int, LinkedList<Int>>()
-- //        fun dfs(node: TreeNode?, verticalIndex: Int = 0) {
-- if (node == null)
-- val bucket = result.getOrPut(verticalIndex) { LinkedList() }
-- //            bucket.add(node.`val`)
-- dfs(node.left, verticalIndex - 1)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -725,9 +601,24 @@ package tree
 import java.util.*
 
 class BinaryTreeVerticalOrderTraversal {
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `root` (binary tree node reference).
+*
+* @param root The binary tree node reference (nullable).
+* @return The computed integer result.
+*/
 //    fun verticalOrder(root: TreeNode?): List<List<Int>> {
 //        val result = TreeMap<Int, LinkedList<Int>>()
 //
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `node` (binary tree node reference), `verticalIndex` (Int = 0).
+*
+* @param node The binary tree node reference (nullable).
+* @param verticalIndex The Int = 0.
+* @return Unit (no return value, modifies state in-place).
+*/
 //        fun dfs(node: TreeNode?, verticalIndex: Int = 0) {
 //            if (node == null)
 //                return
@@ -746,6 +637,13 @@ class BinaryTreeVerticalOrderTraversal {
     // Define a data class for holding a node and its vertical index
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
+    /**
+    * Solves the Binary Tree Vertical Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun verticalOrder(root: TreeNode?): List<List<Int>> {
         if (root == null) return emptyList()
 
@@ -779,43 +677,17 @@ class BinaryTreeVerticalOrderTraversal {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Binary Tree Vertical Order Traversal_Without Sorting
 
-<span id="binarytreeverticalordertraversal_withoutsorting"></span>
-
 ### Problem
 
-**Binarytreeverticalordertraversal Withoutsorting**
+Solves the Binary Tree Vertical Order Traversal_Without Sorting problem.
 
-**Function:** `Vertical Order` takes `root` (TreeNode?) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Update min and max column indices
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `node`, `verticalIndex`, `columnTable`, `minColumn`, `maxColumn`, `queue`, `result`
-
-**Execution flow:**
-- Update min and max column indices
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -827,6 +699,13 @@ import java.util.*
 class BinaryTreeVerticalOrderTraversal_WithoutSorting {
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
+    /**
+    * Solves the Binary Tree Vertical Order Traversal_Without Sorting problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun verticalOrder(root: TreeNode?): List<List<Int>> {
         if (root == null) return emptyList()
 
@@ -867,37 +746,17 @@ class BinaryTreeVerticalOrderTraversal_WithoutSorting {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Binary Tree Zig Zag Level Order Traversal
 
-<span id="binarytreezigzaglevelordertraversal"></span>
-
 ### Problem
 
-**Binarytreezigzaglevelordertraversal**
+Solves the Binary Tree Zig Zag Level Order Traversal problem.
 
-**Function:** `Zigzag Level Order` takes `root` (TreeNode?) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `node`, `index`, `result`, `queue`, `level`, `levelSize`, `currentLevel`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -909,6 +768,13 @@ import java.util.*
 class BinaryTreeZigZagLevelOrderTraversal {
     data class IndexedNode(var node: TreeNode?, var index: Int)
 
+    /**
+    * Solves the Binary Tree Zig Zag Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun zigzagLevelOrder(root: TreeNode?): List<List<Int>> {
         val result = mutableListOf<MutableList<Int>>()
         if (root == null) return result
@@ -950,51 +816,17 @@ class BinaryTreeZigZagLevelOrderTraversal {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Boundary Of Binary Tree
 
-<span id="boundaryofbinarytree"></span>
-
 ### Problem
 
-**Boundaryofbinarytree**
+Solves the Boundary Of Binary Tree problem.
 
-**Function:** `Boundary Of Binary Tree` takes `root` (TreeNode?) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Step 1: Add the root node
-- Step 2: Add the left boundary (excluding leaves)
-- Step 3: Add all leaf nodes (excluding root if it is a leaf)
-- Step 4: Add the right boundary (excluding leaves, in reverse order)
-- Don't add leaf nodes to the left boundary
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `boundaryOfBinaryTree` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `rightBoundary`, `current`, `current`
-
-**Execution flow:**
-- Step 1: Add the root node
-- Step 2: Add the left boundary (excluding leaves)
-- Step 3: Add all leaf nodes (excluding root if it is a leaf)
-- Step 4: Add the right boundary (excluding leaves, in reverse order)
-- Don't add leaf nodes to the left boundary
-- Move down the left child, or the right if left is null
-- If it's a leaf node and it's not the root, add it to the result
-- Otherwise, continue the traversal for both subtrees
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1002,6 +834,13 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class BoundaryOfBinaryTree {
+    /**
+    * Solves the Boundary Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun boundaryOfBinaryTree(root: TreeNode?): List<Int> {
         val result = mutableListOf<Int>()
         if (root == null) return result
@@ -1023,6 +862,13 @@ class BoundaryOfBinaryTree {
         return result
     }
 
+    /**
+    * Helper: add left boundary.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun addLeftBoundary(node: TreeNode?, result: MutableList<Int>) {
         var current = node
         while (current != null) {
@@ -1035,6 +881,14 @@ class BoundaryOfBinaryTree {
         }
     }
 
+    /**
+    * Helper: add leaves.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @param isRoot A boolean flag: isRoot.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun addLeaves(node: TreeNode?, result: MutableList<Int>, isRoot: Boolean) {
         if (node == null) return
         // If it's a leaf node and it's not the root, add it to the result
@@ -1047,6 +901,13 @@ class BoundaryOfBinaryTree {
         addLeaves(node.right, result, isRoot = false)
     }
 
+    /**
+    * Helper: add right boundary.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun addRightBoundary(node: TreeNode?, result: MutableList<Int>) {
         var current = node
         while (current != null) {
@@ -1068,53 +929,17 @@ class BoundaryOfBinaryTree {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## BST Iterator
 
-<span id="bstiterator"></span>
-
 ### Problem
 
-**Bstiterator**
+Helper: push all left nodes.
 
-**Function:** `Next` takes none and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Initialize the stack by adding all the leftmost nodes
-- Push all the left nodes of a given node to the stack
-- Returns the next smallest number
-- Pop the node from the stack
-- Push the leftmost nodes of the right child, if any
-
-
-
-### Approach
-
-**Stack-Based Approach:**
-1. Process elements left to right
-2. Maintain a stack that tracks relevant previous elements
-3. Pop from stack when current element breaks a monotonic property
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `stack`, `current`, `node`, `obj`, `param_1`, `param_2`
-
-**Execution flow:**
-- Initialize the stack by adding all the leftmost nodes
-- Push all the left nodes of a given node to the stack
-- Returns the next smallest number
-- Pop the node from the stack
-- Push the leftmost nodes of the right child, if any
-- Returns whether we have a next smallest number
-- If the stack is not empty, there are more nodes to visit
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1130,6 +955,12 @@ class BSTIterator(root: TreeNode?) {
     }
 
     // Push all the left nodes of a given node to the stack
+    /**
+    * Helper: push all left nodes.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun pushAllLeftNodes(node: TreeNode?) {
         var current = node
         while (current != null) {
@@ -1139,6 +970,11 @@ class BSTIterator(root: TreeNode?) {
     }
 
     // Returns the next smallest number
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return The computed integer result.
+    */
     fun next(): Int {
         val node = stack.removeFirst()  // Pop the node from the stack
         pushAllLeftNodes(node.right)  // Push the leftmost nodes of the right child, if any
@@ -1146,6 +982,11 @@ class BSTIterator(root: TreeNode?) {
     }
 
     // Returns whether we have a next smallest number
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun hasNext(): Boolean {
         return stack.isNotEmpty()  // If the stack is not empty, there are more nodes to visit
     }
@@ -1166,49 +1007,17 @@ class BSTIterator(root: TreeNode?) {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Check Completeness Of Binary Tree
 
-<span id="checkcompletenessofbinarytree"></span>
-
 ### Problem
 
-**Checkcompletenessofbinarytree**
+Solves the Check Completeness Of Binary Tree problem.
 
-**Function:** `Is Complete Tree` takes `root` (TreeNode?) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Edge case: An empty tree is considered complete
-- A flag to indicate if a null node has been encountered
-- If we have already seen a null node, we shouldn't encounter any non-null nodes after that.
-- If we encounter a non-null node after a null node, it's not complete
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `queue`, `foundNull`, `current`
-
-**Execution flow:**
-- Edge case: An empty tree is considered complete
-- A flag to indicate if a null node has been encountered
-- If we have already seen a null node, we shouldn't encounter any non-null nodes after that.
-- If we encounter a non-null node after a null node, it's not complete
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1218,6 +1027,13 @@ package tree.bfs
 import tree.TreeNode
 
 class CheckCompletenessOfBinaryTree {
+    /**
+    * Solves the Check Completeness Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isCompleteTree(root: TreeNode?): Boolean {
         if (root == null) return true // Edge case: An empty tree is considered complete
 
@@ -1249,45 +1065,20 @@ class CheckCompletenessOfBinaryTree {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Closest Binary Search Tree Value
 
-<span id="closestbinarysearchtreevalue"></span>
-
 ### Problem
 
-**Closestbinarysearchtreevalue**
+Solves the Closest Binary Search Tree Value problem.
 
-**Function:** `Closest Value` takes `root` (TreeNode?), `target` (Double) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Update closest based on the given conditions:
-- Move to the left or right subtree based on the target
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `closestValue` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `closest`, `current`, `currentValue`
-
-**Execution flow:**
-- Update closest based on the given conditions:
-- Move to the left or right subtree based on the target
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1297,6 +1088,14 @@ package tree.bst
 import kotlin.math.abs
 
 class ClosestBinarySearchTreeValue {
+    /**
+    * Solves the Closest Binary Search Tree Value problem.
+    * Takes `root` (binary tree node reference), `target` (double-precision floating point).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The double-precision floating point parameter representing target.
+    * @return The computed integer result.
+    */
     fun closestValue(root: TreeNode?, target: Double): Int {
         var closest = root?.`val` ?: 0
         var current = root
@@ -1325,47 +1124,17 @@ class ClosestBinarySearchTreeValue {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Construct Binary Tree From Inorder And Post Order Traversal
 
-<span id="constructbinarytreefrominorderandpostordertraversal"></span>
-
 ### Problem
 
-**Constructbinarytreefrominorderandpostordertraversal**
+Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
 
-**Function:** `Build Tree` takes `inorder` (array of integers), `postorder` (array of integers) and returns **TreeNode**.
+### Why This Approach
 
-**Key logic:**
-- Build Inverted InOrder Index Map
-- Build right subtree first
-- Build left subtree
-
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `rootIndices`, `postIndex`, `rootVal`
-
-**Execution flow:**
-- Build Inverted InOrder Index Map
-- Build right subtree first
-- Build left subtree
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1373,6 +1142,14 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
+    /**
+    * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+    * Takes `inorder` (array of integers), `postorder` (array of integers).
+    *
+    * @param inorder The input array of integers.
+    * @param postorder The input array of integers.
+    * @return The result, or `null` if not found.
+    */
     fun buildTree(inorder: IntArray, postorder: IntArray): TreeNode? {
         // Build Inverted InOrder Index Map
         val rootIndices = mutableMapOf<Int, Int>()
@@ -1380,6 +1157,14 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
 
         var postIndex = postorder.size - 1
 
+        /**
+        * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+        * Takes `inorder` (array of integers), `postorder` (array of integers).
+        *
+        * @param inorder The input array of integers.
+        * @param postorder The input array of integers.
+        * @return The result, or `null` if not found.
+        */
         fun buildTree(left: Int, right: Int): TreeNode? {
             return when {
                 left > right -> null
@@ -1402,46 +1187,20 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Construct Binary Tree From Preorder And In Order Traversal
 
-<span id="constructbinarytreefrompreorderandinordertraversal"></span>
-
 ### Problem
 
-**Constructbinarytreefrompreorderandinordertraversal**
+Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
 
-**Function:** `Build Tree` takes `preorder` (array of integers), `inorder` (array of integers) and returns **TreeNode**.
+### Why This Approach
 
-**Key logic:**
-- Build Inverted InOrder Index Map
-
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `rootIndices`, `rootIndex`, `rootVal`
-
-**Execution flow:**
-- Build Inverted InOrder Index Map
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1451,11 +1210,27 @@ package tree
 class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
     private val rootIndices = mutableMapOf<Int, Int>()
 
+    /**
+    * Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
+    * Takes `preorder` (array of integers), `inorder` (array of integers).
+    *
+    * @param preorder The input array of integers.
+    * @param inorder The input array of integers.
+    * @return The result, or `null` if not found.
+    */
     fun buildTree(preorder: IntArray, inorder: IntArray): TreeNode? {
         // Build Inverted InOrder Index Map
         inorder.forEachIndexed { index, value -> rootIndices[value] = index }
         var rootIndex = 0
 
+        /**
+        * Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
+        * Takes `preorder` (array of integers), `inorder` (array of integers).
+        *
+        * @param preorder The input array of integers.
+        * @param inorder The input array of integers.
+        * @return The result, or `null` if not found.
+        */
         fun buildTree(left: Int, right: Int): TreeNode? {
             return when {
                 left > right -> null
@@ -1478,53 +1253,20 @@ class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Construct Binary Tree From String
 
-<span id="constructbinarytreefromstring"></span>
-
 ### Problem
 
-**Constructbinarytreefromstring**
+Solves the Construct Binary Tree From String problem.
 
-**Function:** `Str2Tree` takes `s` (string) and returns **TreeNode**.
+### Why This Approach
 
-**Key logic:**
-- We are only interested in the tree root, not the index
-- Handle negative numbers
-- Skip over digits
-- Check for left child (subtree)
-- Skip '('
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `str2tree` processes the input
-2. Uses helper functions: buildTree
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `currentIndex`, `start`, `valStr`, `root`, `leftResult`, `rightResult`
-
-**Execution flow:**
-- We are only interested in the tree root, not the index
-- Handle negative numbers
-- Skip over digits
-- Check for left child (subtree)
-- Update index after processing left subtree
-- Check for right child (subtree)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1532,12 +1274,26 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class ConstructBinaryTreeFromString {
+    /**
+    * Solves the Construct Binary Tree From String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The result, or `null` if not found.
+    */
     fun str2tree(s: String): TreeNode? {
         if (s.isEmpty()) return null
 
         return buildTree(s, 0).first // We are only interested in the tree root, not the index
     }
 
+    /**
+    * Helper: build tree.
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @return The computed integer result.
+    */
     private fun buildTree(s: String, i: Int): Pair<TreeNode?, Int> {
         if (i >= s.length) return Pair(null, i)
 
@@ -1578,53 +1334,17 @@ class ConstructBinaryTreeFromString {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Convert B Inary Search Tree To Sorted Doubly Linked List
 
-<span id="convertbinarysearchtreetosorteddoublylinkedlist"></span>
-
 ### Problem
 
-**Convertbinarysearchtreetosorteddoublylinkedlist**
+Definition for a Node.
 
-**Function:** `Tree To Doubly List` takes `root` (Node?) and returns **Node**.
+### Why This Approach
 
-**Key logic:**
-- Perform in-order traversal and link nodes
-- Complete the doubly linked list by linking head and tail
-- Traverse left subtree
-- Link the current node with the previous node (tail)
-- This is the first node (head of the doubly linked list)
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `left`, `right`, `head`, `tail`
-
-**Execution flow:**
-- Perform in-order traversal and link nodes
-- Complete the doubly linked list by linking head and tail
-- Traverse left subtree
-- Link the current node with the previous node (tail)
-- This is the first node (head of the doubly linked list)
-- Update the tail to the current node
-- Traverse right subtree
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1646,6 +1366,13 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
     private var head: Node? = null
     private var tail: Node? = null
 
+    /**
+    * Solves the Convert BInary Search Tree To Sorted Doubly Linked List problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun treeToDoublyList(root: Node?): Node? {
         if (root == null) return null
 
@@ -1659,6 +1386,12 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
         return head
     }
 
+    /**
+    * Helper: inorder traversal.
+    *
+    * @param node The Node? (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun inorderTraversal(node: Node?) {
         if (node == null) return
 
@@ -1688,37 +1421,17 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Count Good Node In B Inary Tree
 
-<span id="countgoodnodeinbinarytree"></span>
-
 ### Problem
 
-**Countgoodnodeinbinarytree**
+Solves the Count Good Node In BInary Tree problem.
 
-**Function:** `Good Nodes` takes `root` (TreeNode?) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `newMax`, `good`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1726,10 +1439,24 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class CountGoodNodeInBInaryTree {
+    /**
+    * Solves the Count Good Node In BInary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun goodNodes(root: TreeNode?): Int {
         return dfs(root, Int.MIN_VALUE)
     }
 
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param maxSoFar The integer parameter representing maxSoFar.
+    * @return The computed integer result.
+    */
     private fun dfs(node: TreeNode?, maxSoFar: Int): Int {
         node ?: return 0
         
@@ -1745,38 +1472,20 @@ class CountGoodNodeInBInaryTree {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Tree Node
 
-<span id="countnodeequalsaverage"></span>
-
 ### Problem
 
-**Countnodeequalsaverage**
+Solves the Tree Node problem.
 
-**Function:** `Average Of Subtree` takes `root` (TreeNode?) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `averageOfSubtree` processes the input
-2. Uses helper functions: postOrder
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `sum`, `count`, `count`, `left`, `right`, `nodeSum`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1793,11 +1502,24 @@ data class Result (val sum: Int, val count: Int)
 class CountNodeEqualsAverage {
     var count = 0
 
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun averageOfSubtree(root: TreeNode?): Int {
         postOrder(root)
         return count;
     }
 
+    /**
+    * Helper: post order.
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
     private fun postOrder(root: TreeNode?): Result {
         if (root == null)
             return Result(sum = 0, count = 0)
@@ -1822,35 +1544,17 @@ class CountNodeEqualsAverage {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Tree Node
 
-<span id="deletenodeinabst"></span>
-
 ### Problem
 
-**Deletenodeinabst**
+Solves the Tree Node problem.
 
-**Function:** `Delete Node` takes `root` (TreeNode?), `key` (integer) and returns **TreeNode**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `deleteNode` processes the input
-2. Uses helper functions: minValue
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `current`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1863,6 +1567,14 @@ class TreeNode(var `val`: Int) {
 }
 
 class DeleteNodeinABST {
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference), `key` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param key The integer parameter representing key.
+    * @return The result, or `null` if not found.
+    */
     fun deleteNode(root: TreeNode?, key: Int): TreeNode? {
         when {
             root == null -> return null
@@ -1883,6 +1595,13 @@ class DeleteNodeinABST {
         return root
     }
 
+    /**
+    * Solves the Tree Node problem.
+    * Takes `node` (TreeNode).
+    *
+    * @param node The TreeNode.
+    * @return The computed integer result.
+    */
     fun minValue(node: TreeNode): Int {
         var current = node
         while (current.left != null) {
@@ -1901,37 +1620,17 @@ class DeleteNodeinABST {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Find Largest Value In Each Tree Row
 
-<span id="findlargestvalueineachtreerow"></span>
-
 ### Problem
 
-**Findlargestvalueineachtreerow**
+Solves the Find Largest Value In Each Tree Row problem.
 
-**Function:** `Largest Values` takes `root` (TreeNode?) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `queue`, `size`, `max`, `current`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1942,6 +1641,13 @@ import tree.TreeNode
 import java.util.*
 
 class FindLargestValueInEachTreeRow {
+    /**
+    * Solves the Find Largest Value In Each Tree Row problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun largestValues(root: TreeNode?): List<Int> {
         val result = mutableListOf<Int>()
 
@@ -1975,42 +1681,17 @@ class FindLargestValueInEachTreeRow {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Inorder Successor
 
-<span id="inordersuccessor"></span>
-
 ### Problem
 
-**Inordersuccessor**
+Solves the Inorder Successor problem.
 
-**Function:** `Inorder Successor` takes `root` (TreeNode?), `p` (TreeNode?) and returns **TreeNode**.
+### Why This Approach
 
-**Key logic:**
-- If p's value is less than current, the successor is possibly current
-- If p's value is greater or equal to current, move to the right subtree
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `inorderSuccessor` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `successor`, `current`
-
-**Execution flow:**
-- If p's value is less than current, the successor is possibly current
-- If p's value is greater or equal to current, move to the right subtree
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2018,6 +1699,14 @@ Let's trace through the code to understand how it processes the input:
 package tree.bst
 
 class InorderSuccessor {
+    /**
+    * Solves the Inorder Successor problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun inorderSuccessor(root: TreeNode?, p: TreeNode?): TreeNode? {
         var successor: TreeNode? = null
         var current = root
@@ -2045,37 +1734,17 @@ class InorderSuccessor {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Leaf Similar
 
-<span id="leafsimilar"></span>
-
 ### Problem
 
-**Leafsimilar**
+Solves the Leaf Similar problem.
 
-**Function:** `Leaf Similar` takes `root1` (TreeNode?), `root2` (TreeNode?) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `leaves1`, `leaves2`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2083,6 +1752,14 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class LeafSimilar {
+    /**
+    * Solves the Leaf Similar problem.
+    * Takes `root1` (binary tree node reference), `root2` (binary tree node reference).
+    *
+    * @param root1 The binary tree node reference (nullable).
+    * @param root2 The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun leafSimilar(root1: TreeNode?, root2: TreeNode?): Boolean {
         val leaves1 = mutableListOf<Int>()
         val leaves2 = mutableListOf<Int>()
@@ -2093,6 +1770,14 @@ class LeafSimilar {
         return leaves1 == leaves2
     }
 
+    /**
+    * Solves the Leaf Similar problem.
+    * Takes `node` (binary tree node reference), `leafValues` (mutable list of integers).
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param leafValues The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun dfs(node: TreeNode?, leafValues: MutableList<Int>) {
         if (node != null) {
             if (node.left == null && node.right == null) {
@@ -2109,52 +1794,20 @@ class LeafSimilar {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Longest Univalue Path
 
-<span id="longestunivaluepath"></span>
-
 ### Problem
 
-**Longestunivaluepath**
+Solves the Longest Univalue Path problem.
 
-**Function:** `Longest Univalue Path` takes `root` (TreeNode?) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Get the maximum univalue chain from both left and right
-- Compute the branch lengthes if
-- Take maximum of max found so far , OD
-- We can only propagate the maximum branch chain b/w left and right
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `maxLength`, `left`, `right`, `currentLeft`, `currentRight`
-
-**Execution flow:**
-- Get the maximum univalue chain from both left and right
-- Compute the branch lengthes if
-- Take maximum of max found so far , OD
-- We can only propagate the maximum branch chain b/w left and right
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2163,8 +1816,22 @@ package tree
 
 class LongestUnivaluePath {
 
+    /**
+    * Solves the Longest Univalue Path problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun longestUnivaluePath(root: TreeNode?): Int {
         var maxLength = 0
+        /**
+        * Solves the Longest Univalue Path problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
         fun dfs(node: TreeNode?): Int {
             if (node == null) return 0
 
@@ -2193,37 +1860,20 @@ class LongestUnivaluePath {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Lowest Common Ancestor
 
-<span id="lowestcommonancestor"></span>
-
 ### Problem
 
-**Lowestcommonancestor**
+Solves the Lowest Common Ancestor problem.
 
-**Function:** `Lowest Common Ancestor` takes `root` (TreeNode?), `p` (TreeNode?), `q` (TreeNode?) and returns **TreeNode**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `lowestCommonAncestor` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2231,6 +1881,15 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class LowestCommonAncestor {
+    /**
+    * Solves the Lowest Common Ancestor problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun lowestCommonAncestor(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
         if (root == null || root === p || root === q) return root
 
@@ -2247,47 +1906,20 @@ class LowestCommonAncestor {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(1) space comes from the auxiliary data structures used.
 
 ---
 
 ## Lowest Common Ancestor_III
 
-<span id="lowestcommonancestor_iii"></span>
-
 ### Problem
 
-**Lowestcommonancestor Iii**
+Solves the Lowest Common Ancestor_III problem.
 
-**Function:** `Lowest Common Ancestor` takes `p` (Node?), `q` (Node?) and returns **Node**.
+### Why This Approach
 
-**Key logic:**
-- Move parent1 upwards, or switch to q if it becomes null
-- Move parent2 upwards, or switch to p if it becomes null
-- parent1 and parent2 are now pointing to the same node, which is the LCA
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `lowestCommonAncestor` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `parent`, `parent1`, `parent2`
-
-**Execution flow:**
-- Move parent1 upwards, or switch to q if it becomes null
-- Move parent2 upwards, or switch to p if it becomes null
-- parent1 and parent2 are now pointing to the same node, which is the LCA
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2301,6 +1933,14 @@ class LowestCommonAncestor_III {
         var parent: Node? = null
     }
 
+    /**
+    * Solves the Lowest Common Ancestor_III problem.
+    * Takes `p` (Node?), `q` (Node?).
+    *
+    * @param p The Node? (nullable).
+    * @param q The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun lowestCommonAncestor(p: Node?, q: Node?): Node? {
         var parent1 = p
         var parent2 = q
@@ -2336,32 +1976,17 @@ class LowestCommonAncestor_III {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Maximum Depth Of Binary Tree
 
-<span id="maximumdepthofbinarytree"></span>
-
 ### Problem
 
-**Maximumdepthofbinarytree**
+Solves the Maximum Depth Of Binary Tree problem.
 
-**Function:** `Max Depth` takes `root` (TreeNode?) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `maxDepth` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2369,6 +1994,13 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class MaximumDepthOfBinaryTree {
+    /**
+    * Solves the Maximum Depth Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun maxDepth(root: TreeNode?): Int {
         if (root == null) {
             return 0
@@ -2386,53 +2018,17 @@ class MaximumDepthOfBinaryTree {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Maximum Sum BST In Binary Tree
 
-<span id="maximumsumbstinbinarytree"></span>
-
 ### Problem
 
-**Maximumsumbstinbinarytree**
+Solves the Maximum Sum BSTIn Binary Tree problem.
 
-**Function:** `Max Sum Bst` takes `root` (TreeNode?) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Base case: if the node is null, it's trivially a BST with sum = 0
-- Recursively traverse the left and right subtrees
-- Check if the current node is a valid BST
-- Current node is part of a valid BST
-- Update the global max sum if needed
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `isBST`, `sum`, `min`, `max`, `maxSum`, `left`, `right`, `sum`
-
-**Execution flow:**
-- Base case: if the node is null, it's trivially a BST with sum = 0
-- Recursively traverse the left and right subtrees
-- Check if the current node is a valid BST
-- Current node is part of a valid BST
-- Update the global max sum if needed
-- Return the result for this subtree
-- If it's not a valid BST, return invalid information
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2443,11 +2039,24 @@ class MaximumSumBSTInBinaryTree {
     data class Result(val isBST: Boolean, val sum: Int, val min: Int, val max: Int)
     private var maxSum = 0
 
+    /**
+    * Solves the Maximum Sum BSTIn Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun maxSumBST(root: TreeNode?): Int {
         dfs(root)
         return maxSum
     }
 
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
     private fun dfs(node: TreeNode?): Result {
         // Base case: if the node is null, it's trivially a BST with sum = 0
         if (node == null) {
@@ -2482,40 +2091,20 @@ class MaximumSumBSTInBinaryTree {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Maximum Width Of Binary Tree
 
-<span id="maximumwidthofbinarytree"></span>
-
 ### Problem
 
-**Maximumwidthofbinarytree**
+Solves the Maximum Width Of Binary Tree problem.
 
-**Function:** `Width Of Binary Tree` takes `root` (TreeNode?) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `node`, `index`, `queue`, `max`, `size`, `left`, `right`, `current`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2527,6 +2116,13 @@ import java.util.*
 class MaximumWidthOfBinaryTree {
     data class Node(var node: TreeNode?, var index: Int)
 
+    /**
+    * Solves the Maximum Width Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun widthOfBinaryTree(root: TreeNode?): Int {
         val queue: Queue<Node> = LinkedList<Node>()
         var max = 0
@@ -2559,51 +2155,17 @@ class MaximumWidthOfBinaryTree {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Minimum Time To Collect All Apples In A Tree
 
-<span id="minimumtimetocollectallapplesinatree"></span>
-
 ### Problem
 
-**Minimumtimetocollectallapplesinatree**
+Solves the Minimum Time To Collect All Apples In ATree problem.
 
-**Function:** `Min Time` takes `n` (integer), `edges` (Array<array of integers>), `hasApple` (List<boolean>) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Build the graph as a list of lists (adjacency list representation)
-- DFS function to calculate the total time
-- Use forEach to iterate over each neighbor
-- If the time is greater than 0 or the neighbor has an apple, add the time and return time (2)
-- Start DFS from node 0 with no parent (-1)
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `graph`, `totalTime`, `time`
-
-**Execution flow:**
-- Build the graph as a list of lists (adjacency list representation)
-- DFS function to calculate the total time
-- Use forEach to iterate over each neighbor
-- If the time is greater than 0 or the neighbor has an apple, add the time and return time (2)
-- Start DFS from node 0 with no parent (-1)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2611,6 +2173,15 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class MinimumTimeToCollectAllApplesInATree {
+    /**
+    * Solves the Minimum Time To Collect All Apples In ATree problem.
+    * Takes `n` (integer), `edges` (2D matrix of integers), `hasApple` (List<Boolean>).
+    *
+    * @param n The integer parameter representing n.
+    * @param edges The input 2D matrix of integers.
+    * @param hasApple The input List<Boolean>.
+    * @return The computed integer result.
+    */
     fun minTime(n: Int, edges: Array<IntArray>, hasApple: List<Boolean>): Int {
         // Build the graph as a list of lists (adjacency list representation)
         val graph = Array(n) { mutableListOf<Int>() }
@@ -2620,6 +2191,14 @@ class MinimumTimeToCollectAllApplesInATree {
         }
 
         // DFS function to calculate the total time
+        /**
+        * Solves the Minimum Time To Collect All Apples In ATree problem.
+        * Takes `node` (integer), `parent` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @param parent The integer parameter representing parent.
+        * @return The computed integer result.
+        */
         fun dfs(node: Int, parent: Int): Int {
             var totalTime = 0
             // Use forEach to iterate over each neighbor
@@ -2645,35 +2224,20 @@ class MinimumTimeToCollectAllApplesInATree {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Path Sum
 
-<span id="pathsum"></span>
-
 ### Problem
 
-**Pathsum**
+Solves the Path Sum problem.
 
-**Function:** `Has Path Sum` takes `root` (TreeNode?), `targetSum` (integer) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `hasPathSum` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2681,6 +2245,14 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class PathSum {
+    /**
+    * Solves the Path Sum problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun hasPathSum(root: TreeNode?, targetSum: Int): Boolean {
         return when {
             root == null -> false
@@ -2699,51 +2271,17 @@ class PathSum {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Path Sum_II
 
-<span id="pathsum_ii"></span>
-
 ### Problem
 
-**Pathsum Ii**
+Solves the Path Sum_II problem.
 
-**Function:** `Path Sum` takes `root` (TreeNode?), `targetSum` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Add the current node's value to the path
-- If the node is a leaf and the path sum equals targetSum, add the path to the result
-- copy the current path list and add
-- Continue the search on the left and right subtree
-- Backtrack: remove the current node from the path
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`
-
-**Execution flow:**
-- Add the current node's value to the path
-- If the node is a leaf and the path sum equals targetSum, add the path to the result
-- copy the current path list and add
-- Continue the search on the left and right subtree
-- Backtrack: remove the current node from the path
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2751,9 +2289,26 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class PathSum_II {
+    /**
+    * Solves the Path Sum_II problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
     fun pathSum(root: TreeNode?, targetSum: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+        /**
+        * Solves the Path Sum_II problem.
+        * Takes `node` (binary tree node reference), `currentSum` (integer), `path` (MutableList<Int> = mutableListOf().
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The integer parameter representing currentSum.
+        * @param path The input MutableList<Int> = mutableListOf(.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(node: TreeNode?, currentSum: Int, path: MutableList<Int> = mutableListOf()) {
             if (node == null) return
 
@@ -2783,57 +2338,20 @@ class PathSum_II {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Path Sum III
 
-<span id="pathsumiii"></span>
-
 ### Problem
 
-**Pathsumiii**
+Solves the Path Sum III problem.
 
-**Function:** `Path Sum` takes `root` (TreeNode?), `targetSum` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- O(N^2) solution
-- Count paths with targetSum starting from the current node
-- Start counting paths from the root
-- Revisit I didn't understand
-- HashMap to store prefix sums and their frequencies
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `newSum`, `count`, `prefixSumCount`, `newSum`, `pathCount`
-
-**Execution flow:**
-- O(N^2) solution
-- Count paths with targetSum starting from the current node
-- Start counting paths from the root
-- Revisit I didn't understand
-- HashMap to store prefix sums and their frequencies
-- Initialize with a prefix sum of 0 having occurred once (considering no node)
-- Helper function to perform DFS
-- Calculate the current sum at the current node
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2842,11 +2360,27 @@ package tree
 
 class PathSumIII {
     // O(N^2) solution
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
     fun pathSum(root: TreeNode?, targetSum: Int): Int {
         if (root == null)
             return 0
 
         // Count paths with targetSum starting from the current node
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
         fun dfs(node: TreeNode?, currentSum: Long): Int {
             if (node == null)
                 return 0
@@ -2863,6 +2397,14 @@ class PathSumIII {
 
 
     // Revisit I didn't understand
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
     fun pathSum_prefix_sum(root: TreeNode?, targetSum: Int): Int {
         // HashMap to store prefix sums and their frequencies
         val prefixSumCount = HashMap<Long, Int>()
@@ -2870,6 +2412,14 @@ class PathSumIII {
         prefixSumCount[0L] = 1
 
         // Helper function to perform DFS
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
         fun dfs(node: TreeNode?, currentSum: Long): Int {
             if (node == null) return 0
 
@@ -2902,40 +2452,20 @@ class PathSumIII {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Populate Next Right Pointers In Each Node_II
 
-<span id="populatenextrightpointersineachnode_ii"></span>
-
 ### Problem
 
-**Populatenextrightpointersineachnode Ii**
+Solves the Populate Next Right Pointers In Each Node_II problem.
 
-**Function:** `Connect` takes `root` (Node?) and returns **Node**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `queue`, `prev`, `node`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2945,6 +2475,13 @@ package tree
 import java.util.*
 
 class PopulateNextRightPointersInEachNode_II {
+    /**
+    * Solves the Populate Next Right Pointers In Each Node_II problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun connect(root: Node?): Node? {
         val queue: Queue<Node> = LinkedList()
         root?.let { queue.add(it) }
@@ -2971,46 +2508,17 @@ class PopulateNextRightPointersInEachNode_II {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Populate Next Right Pointers In Each Node_II_Constant
 
-<span id="populatenextrightpointersineachnode_ii_constant"></span>
-
 ### Problem
 
-**Populatenextrightpointersineachnode Ii Constant**
+Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
 
-**Function:** `Connect` takes `root` (Node?) and returns **Node**.
+### Why This Approach
 
-**Key logic:**
-- Traverse the current level
-- Connect left child
-- Connect right child
-- Move to the next level
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `connect` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `current`, `nextLevelStart`, `prev`, `node`
-
-**Execution flow:**
-- Traverse the current level
-- Connect left child
-- Connect right child
-- Move to the next level
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3020,6 +2528,13 @@ package tree
 import java.util.*
 
 class PopulateNextRightPointersInEachNode_II_Constant {
+    /**
+    * Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun connect(root: Node?): Node? {
         var current: Node? = root
 
@@ -3063,37 +2578,17 @@ class PopulateNextRightPointersInEachNode_II_Constant {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Node
 
-<span id="populatingnextrightpointerineachnode"></span>
-
 ### Problem
 
-**Populatingnextrightpointerineachnode**
+Solves the Node problem.
 
-**Function:** `Connect` takes `root` (Node?) and returns **Node**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `next`, `q`, `levelSize`, `prev`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3109,6 +2604,13 @@ class Node(var `val`: Int) {
 }
 
 class PopulatingNextRightPointerInEachNode {
+    /**
+    * Solves the Node problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun connect(root: Node?): Node? {
         root?.let { queue ->
             val q = LinkedList<Node>().apply { offer(queue) }
@@ -3139,37 +2641,17 @@ class PopulatingNextRightPointerInEachNode {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Range Sum Of BST
 
-<span id="rangesumofbst"></span>
-
 ### Problem
 
-**Rangesumofbst**
+Solves the Range Sum Of BST problem.
 
-**Function:** `Range Sum Bst` takes `root` (TreeNode?), `low` (integer), `high` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `sum`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3177,8 +2659,24 @@ Let's trace through the code to understand how it processes the input:
 package graph.bst
 
 class RangeSumOfBST {
+    /**
+    * Solves the Range Sum Of BST problem.
+    * Takes `root` (binary tree node reference), `low` (integer), `high` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param low The integer parameter representing low.
+    * @param high The integer parameter representing high.
+    * @return The computed integer result.
+    */
     fun rangeSumBST(root: TreeNode?, low: Int, high: Int): Int {
         var sum = 0
+        /**
+        * Solves the Range Sum Of BST problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(node: TreeNode?) {
             if (node == null)
                 return
@@ -3201,55 +2699,20 @@ class RangeSumOfBST {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Recover A Tree From Pre Order Traversal
 
-<span id="recoveratreefrompreordertraversal"></span>
-
 ### Problem
 
-**Recoveratreefrompreordertraversal**
+Solves the Recover ATree From Pre Order Traversal problem.
 
-**Function:** `Recover From Preorder` takes `traversal` (string) and returns **TreeNode**.
+### Why This Approach
 
-**Key logic:**
-- Global index to track position in the string
-- Recursive function to build the tree
-- Base case: end of string
-- Read the depth of the current node
-- If the current depth doesn't match the expected depth, backtrack
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `recoverFromPreorder` processes the input
-2. Uses helper functions: buildTree
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `index`, `currentDepth`, `value`, `node`
-
-**Execution flow:**
-- Global index to track position in the string
-- Recursive function to build the tree
-- Base case: end of string
-- Read the depth of the current node
-- If the current depth doesn't match the expected depth, backtrack
-- Rewind the index
-- Read the value of the current node
-- Create the current node
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3257,10 +2720,24 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class RecoverATreeFromPreOrderTraversal {
+    /**
+    * Solves the Recover ATree From Pre Order Traversal problem.
+    * Takes `traversal` (string).
+    *
+    * @param traversal The input string.
+    * @return The result, or `null` if not found.
+    */
     fun recoverFromPreorder(traversal: String): TreeNode? {
         var index = 0 // Global index to track position in the string
 
         // Recursive function to build the tree
+        /**
+        * Solves the Recover ATree From Pre Order Traversal problem.
+        * Takes `depth` (integer).
+        *
+        * @param depth The integer parameter representing depth.
+        * @return The result, or `null` if not found.
+        */
         fun buildTree(depth: Int): TreeNode? {
             if (index >= traversal.length) return null // Base case: end of string
 
@@ -3306,52 +2783,17 @@ class RecoverATreeFromPreOrderTraversal {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Recover Binary Search Tree
 
-<span id="recoverbinarysearchtree"></span>
-
 ### Problem
 
-**Recoverbinarysearchtree**
+Solves the Recover Binary Search Tree problem.
 
-**Key logic:**
-- Helper function to perform in-order traversal
-- Traverse left subtree
-- Identify swapped nodes
-- First out-of-order node
-- Second out-of-order node
+### Why This Approach
 
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `first`, `second`, `prev`, `temp`
-
-**Execution flow:**
-- Helper function to perform in-order traversal
-- Traverse left subtree
-- Identify swapped nodes
-- First out-of-order node
-- Second out-of-order node
-- Update previous node
-- Traverse right subtree
-- Step 1: In-order traversal to find the swapped nodes
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3359,12 +2801,26 @@ Let's trace through the code to understand how it processes the input:
 package tree.bst
 
 class RecoverBinarySearchTree {
+    /**
+    * Solves the Recover Binary Search Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun recoverTree(root: TreeNode?) {
         var first: TreeNode? = null
         var second: TreeNode? = null
         var prev: TreeNode? = null
 
         // Helper function to perform in-order traversal
+        /**
+        * Solves the Recover Binary Search Tree problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(node: TreeNode?) {
             if (node == null) return
 
@@ -3405,67 +2861,61 @@ class RecoverBinarySearchTree {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Codec
 
-<span id="serializeanddeserializeabinarytree"></span>
-
 ### Problem
 
-**Serializeanddeserializeabinarytree**
+Solves the Codec problem.
 
-**Function:** `Serialize` takes `root` (TreeNode?) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Encodes a URL to a shortened URL.
-- Decodes the encoded string to tree using a recursive approach.
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `serializedTree`, `nodes`, `value`, `node`, `ser`, `deser`
-
-**Execution flow:**
-- Encodes a URL to a shortened URL.
-- Decodes the encoded string to tree using a recursive approach.
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
 ```kotlin
 package tree
 
-/**
  * Definition for a binary tree node.
  * class TreeNode(var `val`: Int) {
  *     var left: TreeNode? = null
  *     var right: TreeNode? = null
  * }
- */
 
 class Codec() {
     // Encodes a URL to a shortened URL.
+    * Solves the Codec problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The resulting string.
+    /**
+    * Solves the Codec problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The resulting string.
+    */
     fun serialize(root: TreeNode?): String {
         val serializedTree = StringBuilder()
 
+        * Solves the Codec problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        /**
+        * Solves the Codec problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(node: TreeNode?) {
             if (node == null) {
                 serializedTree.append("null,")
@@ -3482,9 +2932,29 @@ class Codec() {
     }
 
     // Decodes the encoded string to tree using a recursive approach.
+    * Solves the Codec problem.
+    * Takes `data` (string).
+    *
+    * @param data The input string.
+    * @return The result, or `null` if not found.
+    /**
+    * Solves the Codec problem.
+    * Takes `data` (string).
+    *
+    * @param data The input string.
+    * @return The result, or `null` if not found.
+    */
     fun deserialize(data: String): TreeNode? {
         val nodes = data.split(",").toMutableList()
 
+        * Solves the Codec problem.
+        *
+        * @return The result, or `null` if not found.
+        /**
+        * Solves the Codec problem.
+        *
+        * @return The result, or `null` if not found.
+        */
         fun dfsDeserialize(): TreeNode? {
             if (nodes.isEmpty()) return null
             val value = nodes.removeAt(0)
@@ -3502,65 +2972,31 @@ class Codec() {
     }
 }
 
-/**
  * Your Codec object will be instantiated and called as such:
  * var ser = Codec()
  * var deser = Codec()
  * var data = ser.serialize(longUrl)
  * var ans = deser.deserialize(data)
- */
 ```
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Serialize And Deserialize N Array Tree
 
-<span id="serializeanddeserializenarraytree"></span>
-
 ### Problem
 
-**Serializeanddeserializenarraytree**
+Solves the Serialize And Deserialize NArray Tree problem.
 
-**Function:** `Serialize` takes `root` (Node?) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Encodes a tree to a single string.
-- Deserialize with internal DFS
-- Use destructuring declaration
-- Create children using functional approach
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `children`, `tokens`, `index`, `node`
-
-**Execution flow:**
-- Encodes a tree to a single string.
-- Deserialize with internal DFS
-- Use destructuring declaration
-- Create children using functional approach
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3574,9 +3010,23 @@ class SerializeAndDeserializeNArrayTree {
 
     class Codec {
         // Encodes a tree to a single string.
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `root` (Node?).
+        *
+        * @param root The Node? (nullable).
+        * @return The resulting string.
+        */
         fun serialize(root: Node?): String = when (root) {
             null -> ""
             else -> buildString {
+                /**
+                * Solves the Serialize And Deserialize NArray Tree problem.
+                * Takes `node` (Node?).
+                *
+                * @param node The Node? (nullable).
+                * @return Unit (no return value, modifies state in-place).
+                */
                 fun dfs(node: Node?) {
                     node?.let {
                         append("${it.`val`}:${it.children.size}")
@@ -3592,12 +3042,24 @@ class SerializeAndDeserializeNArrayTree {
         }
 
         // Deserialize with internal DFS
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `data` (string).
+        *
+        * @param data The input string.
+        * @return The result, or `null` if not found.
+        */
         fun deserialize(data: String): Node? {
             if (data.isEmpty()) return null
 
             val tokens = data.split(",")
             var index = 0
 
+            /**
+            * Solves the Serialize And Deserialize NArray Tree problem.
+            *
+            * @return The result, or `null` if not found.
+            */
             fun parse(): Node? {
                 if (index >= tokens.size) return null
 
@@ -3621,44 +3083,20 @@ class SerializeAndDeserializeNArrayTree {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Step By Step Directions From A Node To Another
 
-<span id="stepbystepdirectionsfromanodetoanother"></span>
-
 ### Problem
 
-**Stepbystepdirectionsfromanodetoanother**
+Solves the Step By Step Directions From ANode To Another problem.
 
-**Function:** `Find Node` takes `root` (TreeNode?), `searchKey` (integer) and returns **TreeNode**.
+### Why This Approach
 
-**Key logic:**
-- No output for missing source or destination
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `findNode` processes the input
-2. Uses helper functions: lowestCommonAncestor, getDirections, buildPath
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `sourceNode`, `destNode`, `lca`, `sourcePath`, `destPath`, `upMoves`
-
-**Execution flow:**
-- No output for missing source or destination
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3666,6 +3104,14 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class StepByStepDirectionsFromANodeToAnother {
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `searchKey` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param searchKey The integer parameter representing searchKey.
+    * @return The result, or `null` if not found.
+    */
     fun findNode(root: TreeNode?, searchKey: Int): TreeNode? {
         return when {
             root == null -> null
@@ -3674,6 +3120,15 @@ class StepByStepDirectionsFromANodeToAnother {
         }
     }
 
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun lowestCommonAncestor(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
         if (root == null || root === p || root === q) return root
 
@@ -3684,6 +3139,15 @@ class StepByStepDirectionsFromANodeToAnother {
 
     }
 
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `startValue` (integer), `destValue` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param startValue The integer parameter representing startValue.
+    * @param destValue The integer parameter representing destValue.
+    * @return The resulting string.
+    */
     fun getDirections(root: TreeNode?, startValue: Int, destValue: Int): String {
         val sourceNode = findNode(root, startValue)
         val destNode = findNode(root, destValue)
@@ -3704,6 +3168,14 @@ class StepByStepDirectionsFromANodeToAnother {
         return "$upMoves${destPath.toString()}"
     }
 
+    /**
+    * Helper: build path.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param path The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun buildPath(node: TreeNode?, target: TreeNode?, path: StringBuilder): Boolean {
         if (node == null) return false
         if (node === target) return true
@@ -3725,40 +3197,20 @@ class StepByStepDirectionsFromANodeToAnother {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) |
-| **Space** | O(1) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Sum Root To Leaf Numbers
 
-<span id="sumroottoleafnumbers"></span>
-
 ### Problem
 
-**Sumroottoleafnumbers**
+Solves the Sum Root To Leaf Numbers problem.
 
-**Function:** `Sum Numbers` takes `root` (TreeNode?) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `sum`, `newSum`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3766,9 +3218,24 @@ Let's trace through the code to understand how it processes the input:
 package tree
 
 class SumRootToLeafNumbers {
+    /**
+    * Solves the Sum Root To Leaf Numbers problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun sumNumbers(root: TreeNode?): Int {
         var sum = 0
 
+        /**
+        * Solves the Sum Root To Leaf Numbers problem.
+        * Takes `node` (binary tree node reference), `sumSoFar` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param sumSoFar The integer parameter representing sumSoFar.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(node: TreeNode?, sumSoFar: Int) {
             if (node == null) return
             val newSum = (sumSoFar * 10 + node.`val` )
@@ -3791,46 +3258,20 @@ class SumRootToLeafNumbers {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Vertical Order Traversal Of A Binary Tree
 
-<span id="verticalordertraversalofabinarytree"></span>
-
 ### Problem
 
-**Verticalordertraversalofabinarytree**
+Solves the Vertical Order Traversal Of ABinary Tree problem.
 
-**Function:** `Vertical Traversal` takes `root` (TreeNode?) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Update min and max column indices
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `node`, `verticalIndex`, `columnTable`, `minColumn`, `maxColumn`, `queue`, `result`
-
-**Execution flow:**
-- Update min and max column indices
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3842,6 +3283,13 @@ import java.util.*
 class VerticalOrderTraversalOfABinaryTree {
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
+    /**
+    * Solves the Vertical Order Traversal Of ABinary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun verticalTraversal(root: TreeNode?): List<List<Int>> {
         if (root == null) return emptyList()
 
@@ -3881,17 +3329,5 @@ class VerticalOrderTraversalOfABinaryTree {
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — Trees are recursive data structures. Master: DFS (pre/in/post-order), BFS (level-order), and BST properties.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

@@ -1,6 +1,13 @@
 package sliding_window
 
 class LongestSubArraysOfOneAfterDeletingOneElement {
+    /**
+    * Solves the Longest Sub Arrays Of One After Deleting One Element problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun longestSubarray(nums: IntArray): Int {
         var (zeroCount, longestWindow, windowStart) = Triple(0, 0, 0)
 

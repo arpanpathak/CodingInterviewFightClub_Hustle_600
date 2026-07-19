@@ -6,10 +6,23 @@ package binarysearch
  * @return 	     -1 if num is higher than the picked number
  *			      1 if num is lower than the picked number
  *               otherwise return 0
+ /**
+ * Solves the Solution problem.
+ * Takes `num` (integer).
+ *
+ * @param num The integer parameter representing num.
+ * @return The computed integer result.
+ */
  * fun guess(num:Int):Int {}
  */
 
 class Solution:GuessGame() {
+    /**
+    * Implements/overrides the base class method.
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     override fun guessNumber(n:Int):Int {
         var start = 1
         var end = n
@@ -35,10 +48,24 @@ class Solution:GuessGame() {
 
 open class GuessGame {
 
+    /**
+    * Solves the Solution problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     open fun guessNumber(n: Int): Int {
         TODO("Not yet implemented")
     }
 
+    /**
+    * Solves the Solution problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return The computed integer result.
+    */
     fun guess(mid: Int): Int {
         return 0
     }

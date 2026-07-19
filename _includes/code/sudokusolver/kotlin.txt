@@ -1,10 +1,23 @@
 package backtracking
 
 class SudokuSolver {
+    /**
+    * Solves the Sudoku Solver problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun solveSudoku(board: Array<CharArray>) {
         solve(board)
     }
 
+    /**
+    * Helper: solve.
+    *
+    * @param board The input Array<CharArray>.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun solve(board: Array<CharArray>): Boolean {
         for (row in 0..8) {
             for (col in 0..8) {
@@ -23,6 +36,15 @@ class SudokuSolver {
         return true // board solved
     }
 
+    /**
+    * Helper: is valid.
+    *
+    * @param board The input Array<CharArray>.
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param ch The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isValid(board: Array<CharArray>, row: Int, col: Int, ch: Char): Boolean {
         for (i in 0..8) {
             if (board[row][i] == ch || board[i][col] == ch) return false

@@ -1,6 +1,13 @@
 package hashtable
 
 class IntegerToRoman {
+    /**
+    * Solves the Integer To Roman problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return The resulting string.
+    */
     fun intToRoman(num: Int): String {
         val ROMAN_LITERALS = linkedMapOf(
             1 to "I", 5 to "V", 10 to "X", 50 to "L",

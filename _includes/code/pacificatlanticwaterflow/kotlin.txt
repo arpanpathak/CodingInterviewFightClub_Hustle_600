@@ -1,6 +1,13 @@
 package grid
 
 class PacificAtlanticWaterFlow {
+    /**
+    * Solves the Pacific Atlantic Water Flow problem.
+    * Takes `heights` (2D matrix of integers).
+    *
+    * @param heights The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun pacificAtlantic(heights: Array<IntArray>): List<List<Int>> {
         TODO()
     }

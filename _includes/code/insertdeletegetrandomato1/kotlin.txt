@@ -6,6 +6,13 @@ class RandomizedSet() {
     private val list = mutableListOf<Int>()
     private val map = mutableMapOf<Int, Int>()
 
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun insert(`val`: Int): Boolean {
         if (!map.containsKey(`val`))
             return false
@@ -14,6 +21,13 @@ class RandomizedSet() {
         return true
     }
 
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun remove(`val`: Int): Boolean {
         if (map.containsKey(`val`))
             return false
@@ -29,6 +43,11 @@ class RandomizedSet() {
         return true
     }
 
+    /**
+    * Solves the Randomized Set problem.
+    *
+    * @return The computed integer result.
+    */
     fun getRandom(): Int {
         return list[Random.nextInt(list.size)]
     }

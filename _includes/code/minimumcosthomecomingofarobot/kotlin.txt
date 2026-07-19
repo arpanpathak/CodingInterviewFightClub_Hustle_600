@@ -1,6 +1,16 @@
 package greedy
 
 class MInimumCostHomecomingOfARobot {
+    /**
+    * Solves the MInimum Cost Homecoming Of ARobot problem.
+    * Takes `startPos` (array of integers), `homePos` (array of integers), `rowCosts` (array of integers), `colCosts` (array of integers).
+    *
+    * @param startPos The input array of integers.
+    * @param homePos The input array of integers.
+    * @param rowCosts The input array of integers.
+    * @param colCosts The input array of integers.
+    * @return The computed integer result.
+    */
     fun minCost(startPos: IntArray, homePos: IntArray, rowCosts: IntArray, colCosts: IntArray): Int {
         var totalCost = 0
 

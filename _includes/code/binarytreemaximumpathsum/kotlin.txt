@@ -1,8 +1,22 @@
 package tree
 
 class BinaryTreeMaximumPathSum {
+    /**
+    * Solves the Binary Tree Maximum Path Sum problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun maxPathSum(root: TreeNode?): Int {
         var ans = Int.MIN_VALUE
+        /**
+        * Solves the Binary Tree Maximum Path Sum problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
         fun getMaxPathSum(node: TreeNode?): Int {
             if (node == null) return 0
 

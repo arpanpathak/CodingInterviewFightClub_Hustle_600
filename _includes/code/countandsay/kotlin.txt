@@ -1,6 +1,13 @@
 package string
 
 class CountAndSay {
+    /**
+    * Solves the Count And Say problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting string.
+    */
     fun countAndSay(n: Int): String {
         var result = "1"
         repeat(n - 1) {

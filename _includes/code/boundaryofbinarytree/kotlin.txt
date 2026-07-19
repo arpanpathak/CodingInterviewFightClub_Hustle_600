@@ -1,6 +1,13 @@
 package tree
 
 class BoundaryOfBinaryTree {
+    /**
+    * Solves the Boundary Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun boundaryOfBinaryTree(root: TreeNode?): List<Int> {
         val result = mutableListOf<Int>()
         if (root == null) return result
@@ -22,6 +29,13 @@ class BoundaryOfBinaryTree {
         return result
     }
 
+    /**
+    * Helper: add left boundary.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun addLeftBoundary(node: TreeNode?, result: MutableList<Int>) {
         var current = node
         while (current != null) {
@@ -34,6 +48,14 @@ class BoundaryOfBinaryTree {
         }
     }
 
+    /**
+    * Helper: add leaves.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @param isRoot A boolean flag: isRoot.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun addLeaves(node: TreeNode?, result: MutableList<Int>, isRoot: Boolean) {
         if (node == null) return
         // If it's a leaf node and it's not the root, add it to the result
@@ -46,6 +68,13 @@ class BoundaryOfBinaryTree {
         addLeaves(node.right, result, isRoot = false)
     }
 
+    /**
+    * Helper: add right boundary.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun addRightBoundary(node: TreeNode?, result: MutableList<Int>) {
         var current = node
         while (current != null) {

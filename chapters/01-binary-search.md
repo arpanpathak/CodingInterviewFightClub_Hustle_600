@@ -15,7 +15,7 @@ next_chapter:
 
 ## The Pattern
 
-Sorted array + search → Binary Search. The key insight: find a predicate that splits the search space into 'yes' and 'no', then binary search finds the transition point.
+Sorted array + search → Binary Search. Find a predicate that splits the search space into yes/no.
 
 ## Complete Problem Set
 
@@ -47,54 +47,27 @@ Sorted array + search → Binary Search. The key insight: find a predicate that 
 
 ## Apartmenthunting
 
-<span id="apartmenthunting"></span>
-
 ### Problem
 
-**Apartmenthunting**
+Solve the **Apartmenthunting** problem efficiently.
 
-**Function:** `Find Best Block` takes `blocks` (List<Map<string), `Boolean>>` (?), `requirements` (List<string>) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
-- Ensure all required amenities are present
-- Return -1 if any required amenity is not present in any block
-- Step 2: Determine the optimal block
-- N * R * Log(K) , K = number of unique amininties present across all the blocks
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This searches for an exact target value in a sorted structure.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `amenityMap`, `bestBlock`, `bestMaxDistance`, `maxDistance`, `pos`, `insertPoint`, `leftDistance`, `rightDistance`
-
-**Execution flow:**
-- Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
-- Ensure all required amenities are present
-- Return -1 if any required amenity is not present in any block
-- Step 2: Determine the optimal block
-- N * R * Log(K) , K = number of unique amininties present across all the blocks
-- Check if the current block has the smallest maximum distance
-- Function to find the minimum distance to the closest block with the given amenity
-- Custom Binary Search implementation
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
 ```kotlin
 package binarysearch
 
+/**
+* Solves the apartmenthunting problem.
+* Takes `blocks` (List<Map<String), `requirements` (list of strings).
+*
+* @param blocks The input List<Map<String.
+* @param requirements The input list of strings.
+* @return The computed integer result.
+*/
 fun findBestBlock(blocks: List<Map<String, Boolean>>, requirements: List<String>): Int {
     // Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
     val amenityMap = mutableMapOf<String, MutableList<Int>>()
@@ -132,6 +105,14 @@ fun findBestBlock(blocks: List<Map<String, Boolean>>, requirements: List<String>
 }
 
 // Function to find the minimum distance to the closest block with the given amenity
+/**
+* Solves the apartmenthunting problem.
+* Takes `blockIndex` (integer), `blocksWithAmenity` (list of integers).
+*
+* @param blockIndex The integer parameter representing blockIndex.
+* @param blocksWithAmenity The input list of integers.
+* @return The computed integer result.
+*/
 fun closestDistance(blockIndex: Int, blocksWithAmenity: List<Int>): Int {
     val pos = blocksWithAmenity.binarySearch(blockIndex)
     return if (pos >= 0) 0
@@ -144,6 +125,14 @@ fun closestDistance(blockIndex: Int, blocksWithAmenity: List<Int>): Int {
 }
 
 // Custom Binary Search implementation
+/**
+* Solves the apartmenthunting problem.
+* Takes `arr` (list of integers), `target` (integer).
+*
+* @param arr The input list of integers.
+* @param target The integer parameter representing target.
+* @return The computed integer result.
+*/
 fun binarySearch(arr: List<Int>, target: Int): Int {
     var (low, high) = listOf(0, arr.lastIndex)
 
@@ -161,6 +150,11 @@ fun binarySearch(arr: List<Int>, target: Int): Int {
 
 
 
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() {
     val blocks = listOf(
         mapOf("gym" to false, "school" to true, "store" to false),
@@ -184,35 +178,17 @@ fun main() {
 | **Time** | O(log n) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
-
 ---
 
 ## Capacity To Ship Package Within D Days
 
-<span id="capacitytoshippackagewithinddays"></span>
-
 ### Problem
 
-**Capacitytoshippackagewithinddays**
+Solves the Capacity To Ship Package Within DDays problem.
 
-**Function:** `Feasible` takes `weights` (array of integers), `mid` (integer), `days` (integer) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `feasible` processes the input
-2. Uses helper functions: shipWithinDays
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `mid`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -220,6 +196,15 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class CapacityToShipPackageWithinDDays {
+    /**
+    * Solves the Capacity To Ship Package Within DDays problem.
+    * Takes `weights` (array of integers), `mid` (integer), `days` (integer).
+    *
+    * @param weights The input array of integers.
+    * @param mid The integer parameter representing mid.
+    * @param days The integer parameter representing days.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun feasible(weights: IntArray, mid:Int, days: Int): Boolean {
         var (daysNeeded, currentLoad) = 1 to 0
         weights.forEach { weight ->
@@ -233,6 +218,14 @@ class CapacityToShipPackageWithinDDays {
         return daysNeeded <= days
     }
 
+    /**
+    * Solves the Capacity To Ship Package Within DDays problem.
+    * Takes `weights` (array of integers), `days` (integer).
+    *
+    * @param weights The input array of integers.
+    * @param days The integer parameter representing days.
+    * @return The computed integer result.
+    */
     fun shipWithinDays(weights: IntArray, days: Int): Int {
         var (sum, max) = 0 to 0
 
@@ -263,47 +256,17 @@ class CapacityToShipPackageWithinDDays {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Closest Sebsequence Sum
 
-<span id="closestsebsequencesum"></span>
-
 ### Problem
 
-**Closestsebsequencesum**
+Solves the Closest Sebsequence Sum problem.
 
-**Function:** `Min Abs Difference` takes `nums` (array of integers), `goal` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- exclude
-- include
-- exact match found
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This searches for an exact target value in a sorted structure.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `leftSums`, `rightSums`, `n`, `mid`, `minDiff`, `target`, `idx`, `insertPoint`
-
-**Execution flow:**
-- exact match found
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -313,12 +276,30 @@ package binarysearch
 import kotlin.math.abs
 
 class ClosestSebsequenceSum {
+    /**
+    * Solves the Closest Sebsequence Sum problem.
+    * Takes `nums` (array of integers), `goal` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param goal The integer parameter representing goal.
+    * @return The computed integer result.
+    */
     fun minAbsDifference(nums: IntArray, goal: Int): Int {
         val leftSums = mutableListOf<Int>()
         val rightSums = mutableListOf<Int>()
         val n = nums.size
         val mid = n / 2
 
+        /**
+        * Solves the Closest Sebsequence Sum problem.
+        * Takes `start` (integer), `end` (integer), `currentSum` (integer), `result` (mutable list of integers).
+        *
+        * @param start The integer parameter representing start.
+        * @param end The integer parameter representing end.
+        * @param currentSum The integer parameter representing currentSum.
+        * @param result The input mutable list of integers.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(start: Int, end: Int, currentSum: Int, result: MutableList<Int>) {
             if (start == end) {
                 result.add(currentSum)
@@ -358,54 +339,17 @@ class ClosestSebsequenceSum {
 | **Time** | O(log n) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
-
 ---
 
 ## Find First And Last Position
 
-<span id="findfirstandlastposition"></span>
-
 ### Problem
 
-**Findfirstandlastposition**
+Solves the Find First And Last Position problem.
 
-**Function:** `Search Range` takes `nums` (array of integers), `target` (integer) and returns **array of integers**.
+### Why This Approach
 
-**Key logic:**
-- Find the first occurrence
-- If the first occurrence is not found, return [-1, -1]
-- Find the last occurrence
-- Adjust the search range based on whether we are looking for the first or last occurrence
-- Move left to find the first occurrence
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This searches for an exact target value in a sorted structure.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `left`, `right`, `result`, `mid`
-
-**Execution flow:**
-- Find the first occurrence
-- If the first occurrence is not found, return [-1, -1]
-- Find the last occurrence
-- Adjust the search range based on whether we are looking for the first or last occurrence
-- Move left to find the first occurrence
-- Move right to find the last occurrence
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -414,6 +358,14 @@ package binarysearch
 
 class FindFirstAndLastPosition {
 
+    /**
+    * Solves the Find First And Last Position problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun searchRange(nums: IntArray, target: Int): IntArray {
         val result = intArrayOf(-1, -1)
 
@@ -429,6 +381,14 @@ class FindFirstAndLastPosition {
         return result
     }
 
+    /**
+    * Helper: binary search.
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @param findFirst A boolean flag: findFirst.
+    * @return The computed integer result.
+    */
     private fun binarySearch(nums: IntArray, target: Int, findFirst: Boolean): Int {
         var left = 0
         var right = nums.lastIndex
@@ -463,45 +423,17 @@ class FindFirstAndLastPosition {
 | **Time** | O(log n) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
-
 ---
 
 ## Find K Closest Elements
 
-<span id="findkclosestelements"></span>
-
 ### Problem
 
-**Findkclosestelements**
+Solving using Max Heap. O ( N log K + K log K )
 
-**Function:** `Find Closest Elements` takes `arr` (Array<integer>), `k` (integer), `x` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Remove the farthest element
-- We could also do
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `priorityQueue`, `diffA`, `diffB`, `result`, `testClass`
-
-**Execution flow:**
-- Remove the farthest element
-- We could also do
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -550,6 +482,12 @@ class FindKClosestElements {
 
         companion object {
             @JvmStatic
+            /**
+            * Entry point for the program.
+            *
+            * @param args The input Array<String>.
+            * @return Unit (no return value, modifies state in-place).
+            */
             fun main(args: Array<String>) {
                 val testClass = FindKClosestElements()
 
@@ -567,37 +505,17 @@ class FindKClosestElements {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Find Minimum In Rotated Sorted Array
 
-<span id="findminimuminrotatedsortedarray"></span>
-
 ### Problem
 
-**Findminimuminrotatedsortedarray**
+Solves the Find Minimum In Rotated Sorted Array problem.
 
-**Function:** `Find Min` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `mid`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -605,6 +523,13 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class FindMinimumInRotatedSortedArray {
+    /**
+    * Solves the Find Minimum In Rotated Sorted Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun findMin(nums: IntArray): Int {
         var (left, right) = 0 to nums.size - 1
         while (left < right) {
@@ -624,40 +549,20 @@ class FindMinimumInRotatedSortedArray {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Find Peak Element
 
-<span id="findpeakelement"></span>
-
 ### Problem
 
-**Findpeakelement**
+Solves the Find Peak Element problem.
 
-**Function:** `Find Peak Element` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `mid`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -665,6 +570,13 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class FindPeakElement {
+    /**
+    * Solves the Find Peak Element problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun findPeakElement(nums: IntArray): Int {
         var left = 0
         var right = nums.lastIndex
@@ -688,53 +600,20 @@ class FindPeakElement {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
-| **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Find Peak Element Better Solution
 
-<span id="findpeakelementbettersolution"></span>
-
 ### Problem
 
-**Findpeakelementbettersolution**
+Solves the Find Peak Element Better Solution problem.
 
-**Function:** `Find Peak Element` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Safely handle boundaries
-- Found peak
-- Move to the right
-- Move to the left
-- Single peak element when the range narrows down
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `mid`, `leftNeighbor`, `rightNeighbor`
-
-**Execution flow:**
-- Safely handle boundaries
-- Move to the right
-- Move to the left
-- Single peak element when the range narrows down
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -742,6 +621,13 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class FindPeakElementBetterSolution {
+    /**
+    * Solves the Find Peak Element Better Solution problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun findPeakElement(nums: IntArray): Int? {
         if (nums.isEmpty()) return null
 
@@ -770,46 +656,20 @@ class FindPeakElementBetterSolution {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
-| **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Version Control
 
-<span id="firstbadversion"></span>
-
 ### Problem
 
-**Firstbadversion**
+Solves the Version Control problem.
 
-**Function:** `Is Bad Version` takes `mid` (integer) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Return dummy value
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `start`, `end`, `mid`
-
-**Execution flow:**
-- Return dummy value
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -817,13 +677,33 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 abstract class VersionControl {
+    /**
+    * Solves the Version Control problem.
+    * Takes `mid` (integer).
+    *
+    * @param mid The integer parameter representing mid.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isBadVersion(mid: Int): Boolean {
         return false // Return dummy value
     }
 
+    /**
+    * Solves the Version Control problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     abstract fun firstBadVersion(n: Int) : Int
 }
 class FirstBadVersion: VersionControl() {
+    /**
+    * Implements/overrides the base class method.
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     override fun firstBadVersion(n: Int) : Int {
         var start = 1
         var end = n
@@ -845,40 +725,20 @@ class FirstBadVersion: VersionControl() {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Solution
 
-<span id="guessnumberhigherorlower"></span>
-
 ### Problem
 
-**Guessnumberhigherorlower**
+The API guess is defined in the parent class.
 
-**Function:** `Guess` takes `num` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `start`, `end`, `mid`, `distance`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -891,10 +751,23 @@ package binarysearch
  * @return 	     -1 if num is higher than the picked number
  *			      1 if num is lower than the picked number
  *               otherwise return 0
+ /**
+ * Solves the Solution problem.
+ * Takes `num` (integer).
+ *
+ * @param num The integer parameter representing num.
+ * @return The computed integer result.
+ */
  * fun guess(num:Int):Int {}
  */
 
 class Solution:GuessGame() {
+    /**
+    * Implements/overrides the base class method.
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     override fun guessNumber(n:Int):Int {
         var start = 1
         var end = n
@@ -920,10 +793,24 @@ class Solution:GuessGame() {
 
 open class GuessGame {
 
+    /**
+    * Solves the Solution problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     open fun guessNumber(n: Int): Int {
         TODO("Not yet implemented")
     }
 
+    /**
+    * Solves the Solution problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return The computed integer result.
+    */
     fun guess(mid: Int): Int {
         return 0
     }
@@ -934,48 +821,20 @@ open class GuessGame {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## House Robber_IV
 
-<span id="houserobber_iv"></span>
-
 ### Problem
 
-**Houserobber Iv**
+Solves the House Robber_IV problem.
 
-**Function:** `Min Capability` takes `nums` (array of integers), `k` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- skip adjacent
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This uses a **feasibility function** that checks if a candidate value satisfies the constraint, making it a 'minimize/maximize with binary search' pattern.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `robbed`, `i`, `mid`
-
-**Execution flow:**
-- skip adjacent
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -983,10 +842,25 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class HouseRobber_IV {
+    /**
+    * Solves the House Robber_IV problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun minCapability(nums: IntArray, k: Int): Int {
         var left = nums.minOrNull() ?: 0
         var right = nums.maxOrNull() ?: 0
 
+        /**
+        * Solves the House Robber_IV problem.
+        * Takes `cap` (integer).
+        *
+        * @param cap The integer parameter representing cap.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun canRob(cap: Int): Boolean {
             var robbed = 0
             var i = 0
@@ -1019,40 +893,20 @@ class HouseRobber_IV {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## K Th Missing Positive Number
 
-<span id="kthmissingpositivenumber"></span>
-
 ### Problem
 
-**Kthmissingpositivenumber**
+Solves the KTh Missing Positive Number problem.
 
-**Function:** `Find Kth Positive` takes `arr` (array of integers), `k` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `mid`, `missingCount`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1060,6 +914,14 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class KThMissingPositiveNumber {
+    /**
+    * Solves the KTh Missing Positive Number problem.
+    * Takes `arr` (array of integers), `k` (integer).
+    *
+    * @param arr The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun findKthPositive(arr: IntArray, k: Int): Int {
         var (left, right) = 0 to arr.size
 
@@ -1082,12 +944,8 @@ class KThMissingPositiveNumber {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
@@ -1115,33 +973,30 @@ Explanation:
 So the minimum k is 4.
 ```
 
-**Why binary search?** The eating speed `k` is a positive integer. If speed `k` works (Koko finishes in ≤ h hours), then any speed larger than `k` also works (she eats faster, finishes earlier). This **monotonic property** — feasibility increases with `k` — means we can binary search for the minimum feasible speed.
+**Why binary search?** The eating speed `k` is a positive integer. If speed `k` works (Koko finishes in ≤ h hours), then any speed larger than `k` also works. This **monotonic property** means we can binary search for the minimum feasible speed.
 
 **The search space:**
 - **Lower bound:** `1` (she must eat at least 1 banana per hour)
-- **Upper bound:** `max(piles)` (eating faster than the largest pile doesn't help because the bottleneck is the biggest single pile)
+- **Upper bound:** `max(piles)` (eating faster than the largest pile doesn't help)
 - **Feasibility function:** `canEatAllBananas(k)` computes whether speed `k` lets Koko finish in ≤ `h` hours
 
 **Dry run:**
 ```
 piles = [3, 6, 7, 11], h = 8
+
 Binary search on k in [1, 11]:
 
   Step 1: left=1, right=11, mid = 1 + (11-1)/2 = 6
-    canEatAllBananas(6): ceil(3/6)+ceil(6/6)+ceil(7/6)+ceil(11/6) = 1+1+2+2 = 6 ≤ 8 ✅
-    → Too fast, try slower: right = 6
+    Hours at k=6: ceil(3/6)+ceil(6/6)+ceil(7/6)+ceil(11/6) = 1+1+2+2 = 6 ≤ 8  → right = 6
 
   Step 2: left=1, right=6, mid = 1 + (6-1)/2 = 3
-    canEatAllBananas(3): ceil(3/3)+ceil(6/3)+ceil(7/3)+ceil(11/3) = 1+2+3+4 = 10 > 8 ❌
-    → Too slow, need faster: left = 4
+    Hours at k=3: 1+2+3+4 = 10 > 8  → left = 4
 
   Step 3: left=4, right=6, mid = 4 + (6-4)/2 = 5
-    canEatAllBananas(5): ceil(3/5)+ceil(6/5)+ceil(7/5)+ceil(11/5) = 1+2+2+3 = 8 ≤ 8 ✅
-    → Still fast enough: right = 5
+    Hours at k=5: 1+2+2+3 = 8 ≤ 8  → right = 5
 
   Step 4: left=4, right=5, mid = 4 + (5-4)/2 = 4
-    canEatAllBananas(4): ceil(3/4)+ceil(6/4)+ceil(7/4)+ceil(11/4) = 1+2+2+3 = 8 ≤ 8 ✅
-    → Fast enough: right = 4
+    Hours at k=4: 1+2+2+3 = 8 ≤ 8  → right = 4
 
   Step 5: left=4, right=4, loop exits. Return 4.
 ```
@@ -1174,31 +1029,41 @@ class KokoEatingBanana {
      *                           piles.length <= h <= 10^9
      *                           1 <= piles[i] <= 10^9
      * @param h     Hours available before guards return
-     *              Constraints: h >= piles.length
+     *              Constraints: h >= piles.length (must be able to eat at least
+     *              one pile per hour in worst case)
      * @return      Minimum integer eating speed k
      *
      * Time  Complexity: O(n log m) where n = piles.size, m = max(piles)
      * Space Complexity: O(1)
      */
     fun minEatingSpeed(piles: IntArray, h: Int): Int {
+        // ── Step 1: Define binary search bounds ──
         // Left: slowest possible speed (1 banana/hour)
         var left = 1
         // Right: fastest useful speed = largest pile
+        // (eating faster doesn't reduce total hours because
+        //  the bottleneck is always the biggest pile)
         var right = piles.maxOrNull()!!
 
-        // Binary search: answer is always in [left, right]
+        // ── Step 2: Binary search for minimum feasible speed ──
+        // Loop invariant: answer is always in [left, right]
         while (left < right) {
             // Safe midpoint: avoids overflow from (left + right)
             val mid = left + (right - left) / 2
 
             if (canEatAllBananas(piles, h, mid)) {
-                // Speed mid works — try slower speed
+                // Speed `mid` works — we can finish in ≤ h hours.
+                // Try an even slower speed by bringing right bound down.
+                // We keep mid in range because it might be the answer.
                 right = mid
             } else {
-                // Speed mid too slow — need faster
+                // Speed `mid` is too slow — cannot finish in time.
+                // Need to eat faster, so move left bound past mid.
                 left = mid + 1
             }
         }
+
+        // left == right == the minimum feasible speed
         return left
     }
 
@@ -1206,34 +1071,46 @@ class KokoEatingBanana {
      * Checks whether eating speed `k` lets Koko finish all piles
      * within `h` hours.
      *
-     * Hours per pile = ceil(pile / k).
+     * For each pile, the hours needed = ceil(pile / k).
      * Total hours = sum of ceil(pile / k) for all piles.
      * Feasible if total hours <= h.
      *
+     * Why ceil(pile / k)?
+     *   Koko eats k bananas per hour from one pile.
+     *   If pile has 7 bananas and k=4:
+     *     Hour 1: eats 4, pile left = 3
+     *     Hour 2: eats 3 (the rest), pile done
+     *     Total: 2 hours = ceil(7/4) = ceil(1.75) = 2 ✓
+     *
      * Integer ceil trick: (pile + k - 1) / k
-     *   (7 + 4 - 1) / 4 = 10 / 4 = 2 (integer division truncates)
+     *   (7 + 4 - 1) / 4 = 10 / 4 = 2 ✓ (integer division truncates)
      *
      * @param piles Array of banana piles
-     * @param h     Hours available
+     * @param h     Hours available (piles.size <= h)
      * @param k     Eating speed in bananas per hour
      * @return      True if total hours needed <= h
      */
     private fun canEatAllBananas(piles: IntArray, h: Int, k: Int): Boolean {
         var totalHours = 0
         for (pile in piles) {
+            // Integer ceil division: (pile + k - 1) / k
             totalHours += (pile + k - 1) / k
-            if (totalHours > h) return false  // early exit
+            
+            // Early exit optimization: if we've already exceeded h,
+            // no need to process remaining piles
+            if (totalHours > h) return false
         }
         return totalHours <= h
     }
 }
+
 ```
 
 ### Complexity Analysis
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n log m) — binary search over [1, max(piles)] takes log₂m iterations. Each iteration scans n piles. Total = O(n) × O(log m) = O(n log m) |
+| **Time** | O(n log m) — binary search over [1, max(piles)] takes log₂m iterations. Each iteration scans n piles. |
 | **Space** | O(1) — only integer variables regardless of input size |
 
 ### Pattern Insight
@@ -1253,39 +1130,13 @@ This is a **"minimize X such that predicate(X) is true"** problem. The predicate
 
 ## Median Of Two Sorted A Rrays
 
-<span id="medianoftwosortedarrays"></span>
-
 ### Problem
 
-**Medianoftwosortedarrays**
+Solves the Median Of Two Sorted ARrays problem.
 
-**Function:** `Find Median Sorted Arrays` takes `nums1` (array of integers), `nums2` (array of integers) and returns **double**.
+### Why This Approach
 
-**Key logic:**
-- These are the challenges that I need to somewhoe solve to get
-- Use getOrNull with the Elvis operator to handle boundaries
-- Check if we have found the correct partition
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `m`, `n`, `start`, `end`, `partitionX`, `partitionY`, `leftX`, `rightX`
-
-**Execution flow:**
-- These are the challenges that I need to somewhoe solve to get
-- Use getOrNull with the Elvis operator to handle boundaries
-- Check if we have found the correct partition
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1294,6 +1145,14 @@ package binarysearch
 
 // These are the challenges that I need to somewhoe solve to get
 class MedianOfTwoSortedARrays {
+    /**
+    * Solves the Median Of Two Sorted ARrays problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed floating-point result.
+    */
     fun findMedianSortedArrays(nums1: IntArray, nums2: IntArray): Double {
 
         if (nums1.size > nums2.size ) {
@@ -1338,40 +1197,20 @@ class MedianOfTwoSortedARrays {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Random Pick With Weight
 
-<span id="randompickwithweight"></span>
-
 ### Problem
 
-**Randompickwithweight**
+Solves the Random Pick With Weight problem.
 
-**Function:** `Pick Index` takes none and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `prefixSum`, `totalSum`, `w`, `randomPick`, `mid`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1392,6 +1231,11 @@ class RandomPickWithWeight (w: IntArray) {
         totalSum = prefixSum.last()
     }
 
+    /**
+    * Solves the Random Pick With Weight problem.
+    *
+    * @return The computed integer result.
+    */
     fun pickIndex(): Int {
         val randomPick = Random.nextInt(totalSum)
         var (start, end) = 0 to w.size
@@ -1414,48 +1258,20 @@ class RandomPickWithWeight (w: IntArray) {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Search A2d Matrix
 
-<span id="searcha2dmatrix"></span>
-
 ### Problem
 
-**Searcha2Dmatrix**
+Solves the Search A2d Matrix problem.
 
-**Function:** `Search Matrix` takes `matrix` (Array<array of integers>), `target` (integer) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Convert 1D index to 2D
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This searches for an exact target value in a sorted structure.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `mid`, `midValue`
-
-**Execution flow:**
-- Convert 1D index to 2D
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1463,6 +1279,14 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class SearchA2dMatrix {
+    /**
+    * Solves the Search A2d Matrix problem.
+    * Takes `matrix` (2D matrix of integers), `target` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
         if (matrix.isEmpty() || matrix[0].isEmpty()) return false
 
@@ -1490,58 +1314,20 @@ class SearchA2dMatrix {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Search In Rotated Array_II
 
-<span id="searchinrotatedarray_ii"></span>
-
 ### Problem
 
-**Searchinrotatedarray Ii**
+Solves the Search In Rotated Array_II problem.
 
-**Function:** `Search` takes `nums` (array of integers), `target` (integer) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Handle duplicates: skip the duplicates
-- Left portion is sorted
-- Target in left portion
-- Target in right portion
-- Right portion is sorted
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This searches for an exact target value in a sorted structure.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `mid`
-
-**Execution flow:**
-- Handle duplicates: skip the duplicates
-- Left portion is sorted
-- Target in left portion
-- Target in right portion
-- Right portion is sorted
-- Target in right portion
-- Target in left portion
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1549,6 +1335,14 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class SearchInRotatedArray_II {
+    /**
+    * Solves the Search In Rotated Array_II problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun search(nums: IntArray, target: Int): Boolean {
         var left = 0
         var right = nums.lastIndex
@@ -1593,50 +1387,20 @@ class SearchInRotatedArray_II {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Search In Rotated Sorted Array
 
-<span id="searchinrotatedsortedarray"></span>
-
 ### Problem
 
-**Searchinrotatedsortedarray**
+Solves the Search In Rotated Sorted Array problem.
 
-**Function:** `Search` takes `nums` (array of integers), `target` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Determine if Left half is sorted
-- Right half is sorted
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This searches for an exact target value in a sorted structure.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `mid`
-
-**Execution flow:**
-- Determine if Left half is sorted
-- Right half is sorted
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1644,6 +1408,14 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class SearchInRotatedSortedArray {
+    /**
+    * Solves the Search In Rotated Sorted Array problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun search(nums: IntArray, target: Int): Int {
         var (start, end) = listOf(0, nums.lastIndex)
 
@@ -1679,42 +1451,20 @@ class SearchInRotatedSortedArray {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Search Insertion Position
 
-<span id="searchinsertionposition"></span>
-
 ### Problem
 
-**Searchinsertionposition**
+Solves the Search Insertion Position problem.
 
-**Function:** `Search Insert` takes `nums` (array of integers), `target` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This searches for an exact target value in a sorted structure.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `start`, `end`, `mid`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1722,6 +1472,14 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class SearchInsertionPosition {
+    /**
+    * Solves the Search Insertion Position problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun searchInsert(nums: IntArray, target: Int): Int {
         var start = 0
         var end = nums.size - 1
@@ -1745,54 +1503,20 @@ class SearchInsertionPosition {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Single Element In A Sorted Array
 
-<span id="singleelementinasortedarray"></span>
-
 ### Problem
 
-**Singleelementinasortedarray**
+Solves the Single Element In ASorted Array problem.
 
-**Function:** `Single Non Duplicate` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Ensure mid is even for checking pair with the next element
-- Check if the pair is valid
-- Move to the right half
-- Move to the left half
-- low == high will give the unique element
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `low`, `high`, `mid`
-
-**Execution flow:**
-- Ensure mid is even for checking pair with the next element
-- Check if the pair is valid
-- Move to the right half
-- Move to the left half
-- low == high will give the unique element
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1800,6 +1524,13 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class SingleElementInASortedArray {
+    /**
+    * Solves the Single Element In ASorted Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun singleNonDuplicate(nums: IntArray): Int {
         var low = 0
         var high = nums.size - 1
@@ -1828,54 +1559,20 @@ class SingleElementInASortedArray {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Valley Element
 
-<span id="valleyelement"></span>
-
 ### Problem
 
-**Valleyelement**
+Solves the Valley Element problem.
 
-**Function:** `Find Valley Element Binary` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Safely handle boundaries
-- Found valley
-- Move to the right
-- Move to the left
-- No valley found (unlikely for a valid array)
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `mid`, `leftNeighbor`, `rightNeighbor`
-
-**Execution flow:**
-- Safely handle boundaries
-- Found valley
-- Move to the right
-- Move to the left
-- No valley found (unlikely for a valid array)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1883,6 +1580,13 @@ Let's trace through the code to understand how it processes the input:
 package binarysearch
 
 class ValleyElement {
+    /**
+    * Solves the Valley Element problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun findValleyElementBinary(nums: IntArray): Int? {
         if (nums.isEmpty()) return null
 
@@ -1911,19 +1615,7 @@ class ValleyElement {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — Sorted array + search → Binary Search. The key insight: find a predicate that splits the search space into 'yes' and 'no', then binary search finds the transition point.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

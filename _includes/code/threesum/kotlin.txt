@@ -2,6 +2,13 @@ package array.twopointer
 
 
 class ThreeSum {
+    /**
+    * Solves the Three Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun threeSum(nums: IntArray): List<List<Int>> {
         val result = mutableSetOf<List<Int>>()
         nums.sort()

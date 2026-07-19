@@ -24,6 +24,13 @@ class FirstLetterToAppearTwice {
         return 'x'
     }
 
+    /**
+    * Solves the First Letter To Appear Twice problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed result (character).
+    */
     fun repeatedCharacterBitset(s: String): Char {
 
         val seen = BitSet(26)  // BitSet for 26 lowercase English letters

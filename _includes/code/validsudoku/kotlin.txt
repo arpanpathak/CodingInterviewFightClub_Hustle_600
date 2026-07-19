@@ -3,6 +3,13 @@ package array.hashtable
 import javax.swing.UIManager.put
 
 class ValidSudoku {
+    /**
+    * Solves the Valid Sudoku problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isValidSudoku(board: Array<CharArray>): Boolean {
         // Initialize sets for rows, columns, and subgrids
         val rows = Array(9) { mutableSetOf<Char>() }

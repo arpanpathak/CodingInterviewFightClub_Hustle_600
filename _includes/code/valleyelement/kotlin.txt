@@ -1,6 +1,13 @@
 package binarysearch
 
 class ValleyElement {
+    /**
+    * Solves the Valley Element problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun findValleyElementBinary(nums: IntArray): Int? {
         if (nums.isEmpty()) return null
 

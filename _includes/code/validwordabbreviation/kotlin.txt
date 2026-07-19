@@ -1,6 +1,14 @@
 package string
 
 class ValidWordAbbreviation {
+    /**
+    * Solves the Valid Word Abbreviation problem.
+    * Takes `word` (string), `abbr` (string).
+    *
+    * @param word The input string.
+    * @param abbr The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun validWordAbbreviation(word: String, abbr: String): Boolean {
         var i = 0
         var j = 0

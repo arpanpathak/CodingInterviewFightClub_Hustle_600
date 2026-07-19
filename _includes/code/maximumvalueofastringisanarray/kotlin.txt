@@ -1,6 +1,13 @@
 package string
 
 class MaximumValueOfAStringIsAnArray {
+    /**
+    * Solves the Maximum Value Of AString Is An Array problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The computed integer result.
+    */
     fun maximumValue(strs: Array<String>): Int {
         return strs.maxOf {
             val numericValue = it.toIntOrNull()

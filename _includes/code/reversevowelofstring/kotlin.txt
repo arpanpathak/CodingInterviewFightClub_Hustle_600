@@ -1,6 +1,13 @@
 package string
 
 class ReverseVowelOfString {
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun reverseVowels(s: String): String {
         val vowels = setOf('a', 'e', 'i', 'o', 'u')
         val result = StringBuilder(s)
@@ -20,6 +27,15 @@ class ReverseVowelOfString {
         return result.toString()
     }
 
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (StringBuilder), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun swap(s: StringBuilder, i: Int, j: Int) {
         s[j] = s[i].also { s[i] = s[j]}
     }

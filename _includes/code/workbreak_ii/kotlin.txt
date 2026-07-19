@@ -1,10 +1,26 @@
 package hashtable
 
 class WorkBreak_II {
+    /**
+    * Solves the Work Break_II problem.
+    * Takes `s` (string), `wordDict` (List<String?>?).
+    *
+    * @param s The input string.
+    * @param wordDict The input List<String?>?.
+    * @return The resulting collection (list of strings).
+    */
     fun wordBreak(s: String, wordDict: List<String?>?): List<String> {
         val set = wordDict?.toSet() ?: emptySet()
         val result = mutableListOf<String>()
 
+        /**
+        * Solves the Work Break_II problem.
+        * Takes `i` (integer), `current` (StringBuilder).
+        *
+        * @param i The integer parameter representing i.
+        * @param current The input string.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun permute(i: Int, current: StringBuilder) {
             if (i == s.length) {
                 result.add(current.toString().trim())

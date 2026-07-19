@@ -13,6 +13,13 @@ class CricketResourcesCalculator(var maxOvers: Int, var maxWickets: Int) {
         }
     }
 
+    /**
+    * Helper: compute resources.
+    *
+    * @param ballsLeft The integer parameter representing ballsLeft.
+    * @param wicketsRemaining The integer parameter representing wicketsRemaining.
+    * @return The computed floating-point result.
+    */
     private fun computeResources(ballsLeft: Int, wicketsRemaining: Int): Double =
         when {
             ballsLeft == 0 || wicketsRemaining == 0 -> memo[ballsLeft][wicketsRemaining]
@@ -25,10 +32,29 @@ class CricketResourcesCalculator(var maxOvers: Int, var maxWickets: Int) {
             }
         }
 
+    /**
+    * Solves the Cricket Resources Calculator problem.
+    * Takes `ballsLeft` (integer), `wicketsRemaining` (integer).
+    *
+    * @param ballsLeft The integer parameter representing ballsLeft.
+    * @param wicketsRemaining The integer parameter representing wicketsRemaining.
+    * @return The computed floating-point result.
+    */
     fun getResource(ballsLeft: Int, wicketsRemaining: Int): Double {
         return computeResources(ballsLeft, wicketsRemaining)
     }
 
+    /**
+    * Solves the Cricket Resources Calculator problem.
+    * Takes `firstInningsScore` (integer), `oversPlayed` (double-precision floating point), `wicketsLost` (integer), `oversAvailable` (double-precision floating point), `wicketsRemaining` (integer).
+    *
+    * @param firstInningsScore The integer parameter representing firstInningsScore.
+    * @param oversPlayed The double-precision floating point parameter representing oversPlayed.
+    * @param wicketsLost The integer parameter representing wicketsLost.
+    * @param oversAvailable The double-precision floating point parameter representing oversAvailable.
+    * @param wicketsRemaining The integer parameter representing wicketsRemaining.
+    * @return The computed integer result.
+    */
     fun calculateTargetScore(firstInningsScore: Int, oversPlayed: Double, wicketsLost: Int, oversAvailable: Double, wicketsRemaining: Int): Int {
         val ballsPlayed = (oversPlayed * 6).toInt()
         val ballsAvailable = (oversAvailable * 6).toInt()
@@ -39,6 +65,11 @@ class CricketResourcesCalculator(var maxOvers: Int, var maxWickets: Int) {
     }
 }
 
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() {
     val calculator = CricketResourcesCalculator(50, 10)
     val firstInningsScore = 300

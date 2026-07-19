@@ -1,6 +1,13 @@
 package grid
 
 class IslandPerimeter {
+    /**
+    * Solves the Island Perimeter problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun islandPerimeter(grid: Array<IntArray>): Int {
         var perimeter = 0
 

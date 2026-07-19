@@ -1,6 +1,13 @@
 package stack
 
 class MinimumAddtoMakeParenthesesValid {
+    /**
+    * Solves the Minimum Addto Make Parentheses Valid problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun minAddToMakeValid(s: String): Int {
         var minCount = 0
         val stack = mutableListOf<Char>()

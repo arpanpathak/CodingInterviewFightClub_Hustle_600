@@ -1,9 +1,23 @@
 package array.Combinatorics
 
 class Permutations {
+    /**
+    * Solves the Permutations problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun permute(nums: IntArray): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+        /**
+        * Solves the Permutations problem.
+        * Takes `nums` (array of integers).
+        *
+        * @param nums The input array of integers.
+        * @return The computed integer result.
+        */
         fun permute(nums: IntArray, start: Int) {
             if (start == nums.lastIndex) {
                 result.add(nums.copyOf().toList())

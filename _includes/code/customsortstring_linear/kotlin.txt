@@ -1,6 +1,14 @@
 package string.sorting
 
 class CustomSortString_Linear {
+    /**
+    * Solves the Custom Sort String_Linear problem.
+    * Takes `order` (string), `s` (string).
+    *
+    * @param order The input string.
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun customSortString(order: String, s: String): String {
         // Count frequency of each character
         val countMap = s.groupingBy { it }.eachCount().toMutableMap()

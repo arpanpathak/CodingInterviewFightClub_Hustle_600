@@ -18,7 +18,7 @@ next_chapter:
 
 ## The Pattern
 
-Backtracking = DFS on decision tree + pruning. Generate all candidates, explore valid ones, backtrack when stuck.
+DFS on decision tree + pruning. Generate valid candidates, backtrack when stuck.
 
 ## Complete Problem Set
 
@@ -44,26 +44,13 @@ Backtracking = DFS on decision tree + pruning. Generate all candidates, explore 
 
 ## Combinations
 
-<span id="combinations"></span>
-
 ### Problem
 
-**Combinations**
+Solves the Combinations problem.
 
-**Function:** `Combine` takes `n` (integer), `k` (integer) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `combine` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -71,9 +58,25 @@ Let's trace through the code to understand how it processes the input:
 package array.Combinatorics
 
 class Combinations {
+    /**
+    * Solves the Combinations problem.
+    * Takes `n` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun combine(n: Int, k: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+        /**
+        * Solves the Combinations problem.
+        * Takes `n` (integer), `k` (integer).
+        *
+        * @param n The integer parameter representing n.
+        * @param k The integer parameter representing k.
+        * @return The computed integer result.
+        */
         fun combine(start: Int, n: Int, k: Int, current: MutableList<Int> = mutableListOf()) {
             if (current.size == k) {
                 result.add(current.toList())
@@ -102,42 +105,17 @@ class Combinations {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Combination Sum
 
-<span id="combinationsum"></span>
-
 ### Problem
 
-**Combinationsum**
+Solves the Combination Sum problem.
 
-**Function:** `Combination Sum` takes `candidates` (array of integers), `target` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Include current candidate
-- Exclude and move to next
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `combinationSum` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`
-
-**Execution flow:**
-- Include current candidate
-- Exclude and move to next
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -145,9 +123,26 @@ Let's trace through the code to understand how it processes the input:
 package array.backtracking
 
 class CombinationSum {
+    /**
+    * Solves the Combination Sum problem.
+    * Takes `candidates` (array of integers), `target` (integer).
+    *
+    * @param candidates The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+        /**
+        * Solves the Combination Sum problem.
+        * Takes `current` (mutable list of integers), `start` (integer), `remaining` (integer).
+        *
+        * @param current The input mutable list of integers.
+        * @param start The integer parameter representing start.
+        * @param remaining The integer parameter representing remaining.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun findCombinations(current: MutableList<Int>, start: Int, remaining: Int) {
             when {
                 remaining == 0 -> result.add(ArrayList(current))
@@ -173,45 +168,17 @@ class CombinationSum {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Combination Sum_II
 
-<span id="combinationsum_ii"></span>
-
 ### Problem
 
-**Combinationsum Ii**
+Solves the Combination Sum_II problem.
 
-**Function:** `Combination Sum2` takes `candidates` (array of integers), `target` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Skip duplicates
-- Prune the search
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `results`
-
-**Execution flow:**
-- Skip duplicates
-- Prune the search
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -219,10 +186,27 @@ Let's trace through the code to understand how it processes the input:
 package array.backtracking
 
 class CombinationSum_II {
+    /**
+    * Solves the Combination Sum_II problem.
+    * Takes `candidates` (array of integers), `target` (integer).
+    *
+    * @param candidates The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun combinationSum2(candidates: IntArray, target: Int): List<List<Int>> {
         val results = mutableListOf<List<Int>>()
         candidates.sort()
 
+        /**
+        * Solves the Combination Sum_II problem.
+        * Takes `index` (integer), `target` (integer), `curr` (mutable list of integers).
+        *
+        * @param index The integer parameter representing index.
+        * @param target The integer parameter representing target.
+        * @param curr The input mutable list of integers.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(index: Int, target: Int, curr: MutableList<Int>) {
             if (target == 0) {
                 results.add(ArrayList(curr))
@@ -249,40 +233,20 @@ class CombinationSum_II {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Combination Sum3
 
-<span id="combinationsum3"></span>
-
 ### Problem
 
-**Combinationsum3**
+Solves the Combination Sum3 problem.
 
-**Function:** `Combination Sum3` takes `k` (integer), `n` (integer) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -290,12 +254,31 @@ Let's trace through the code to understand how it processes the input:
 package array.backtracking
 
 class CombinationSum3 {
+    /**
+    * Solves the Combination Sum3 problem.
+    * Takes `k` (integer), `n` (integer).
+    *
+    * @param k The integer parameter representing k.
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun combinationSum3(k: Int, n: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         dfs(k,n, 1, result)
         return result
     }
 
+    /**
+    * Solves the Combination Sum3 problem.
+    * Takes `k` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf().
+    *
+    * @param k The integer parameter representing k.
+    * @param remaining The integer parameter representing remaining.
+    * @param start The integer parameter representing start.
+    * @param result The input MutableList<List<Int>>.
+    * @param curr The input MutableList<Int> = mutableListOf(.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun dfs(
         k: Int,
         remaining: Int,
@@ -328,54 +311,20 @@ class CombinationSum3 {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Expression And Add Operators
 
-<span id="expressionandaddoperators"></span>
-
 ### Problem
 
-**Expressionandaddoperators**
+Solves the Expression And Add Operators problem.
 
-**Function:** `Add Operators` takes `num` (string), `target` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Extending the current operand by one digit
-- Avoid cases where numbers start with '0'
-- No operator added, just extend the current operand
-- Add '+'
-- Add '-'
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `currentDigit`, `newOperand`, `currentOperand`, `res`, `s`, `current`, `test`
-
-**Execution flow:**
-- Extending the current operand by one digit
-- Avoid cases where numbers start with '0'
-- No operator added, just extend the current operand
-- Skip numbers with leading zeros
-- ANother leetcode solution https://leetcode.com/problems/expression-add-operators/discuss/951147/Kotlin-C%2B%2B%3A-O(n4n)-time-and-O(n)-time-with-backtracking
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -383,9 +332,28 @@ Let's trace through the code to understand how it processes the input:
 package backtracking
 
 class ExpressionAndAddOperators {
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
     fun addOperators(num: String, target: Int): List<String> {
         val result = mutableListOf<String>()
 
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `index` (integer), `prevOperand` (long integer), `currentOperand` (long integer), `value` (long integer), `expression` (string).
+        *
+        * @param index The integer parameter representing index.
+        * @param prevOperand The long integer parameter representing prevOperand.
+        * @param currentOperand The long integer parameter representing currentOperand.
+        * @param value The long integer parameter representing value.
+        * @param expression The input string.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(index: Int, prevOperand: Long, currentOperand: Long, value: Long, expression: String) {
             if (index == num.length) {
                 if (value == target.toLong() && currentOperand == 0L) {
@@ -425,9 +393,27 @@ class ExpressionAndAddOperators {
     }
 
     // ANother leetcode solution https://leetcode.com/problems/expression-add-operators/discuss/951147/Kotlin-C%2B%2B%3A-O(n4n)-time-and-O(n)-time-with-backtracking
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
     fun addOperators2(num: String, target: Int): List<String> {
         val res = ArrayList<String>()
 
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `start` (integer), `path` (string), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun partition(start: Int, path: String, sum: Long, prev: Long) {
             if (start == num.length) {
                 if (sum == target.toLong()) {
@@ -464,6 +450,12 @@ class ExpressionAndAddOperators {
 }
 
 
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main(args: Array<String>) {
     val test = ExpressionAndAddOperators()
 
@@ -475,52 +467,20 @@ fun main(args: Array<String>) {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Expression And Add Operators Optimized
 
-<span id="expressionandaddoperatorsoptimized"></span>
-
 ### Problem
 
-**Expressionandaddoperatorsoptimized**
+Solves the Expression And Add Operators Optimized problem.
 
-**Function:** `Add Operators` takes `num` (string), `target` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Skip invalid numbers with leading zeros
-- Remember the length of the path before modification
-- Revert the path to its previous state
-- Try adding '+' operator
-- Try adding '-' operator
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `addOperators` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `res`, `s`, `current`, `len`
-
-**Execution flow:**
-- Skip invalid numbers with leading zeros
-- Remember the length of the path before modification
-- Revert the path to its previous state
-- Try adding '+' operator
-- Try adding '-' operator
-- Try adding '*' operator
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -528,9 +488,27 @@ Let's trace through the code to understand how it processes the input:
 package backtracking
 
 class ExpressionAndAddOperatorsOptimized {
+    /**
+    * Solves the Expression And Add Operators Optimized problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
     fun addOperators(num: String, target: Int): List<String> {
         val res = ArrayList<String>()
 
+        /**
+        * Solves the Expression And Add Operators Optimized problem.
+        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun partition(start: Int, path: StringBuilder, sum: Long, prev: Long) {
             if (start == num.length) {
                 if (sum == target.toLong()) {
@@ -584,47 +562,17 @@ class ExpressionAndAddOperatorsOptimized {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## N Queen
 
-<span id="nqueen"></span>
-
 ### Problem
 
-**Nqueen**
+Solves the NQueen problem.
 
-**Function:** `Solve Nqueens` takes `n` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Initialize with -1 indicating no queens are placed
-- Convert the board configuration to the required output format
-- Remove the queen (backtrack)
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `placed`, `results`, `board`, `prevCol`
-
-**Execution flow:**
-- Initialize with -1 indicating no queens are placed
-- Convert the board configuration to the required output format
-- Remove the queen (backtrack)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -636,10 +584,24 @@ import javax.swing.text.html.HTML.Attribute.N
 class NQueen {
     private lateinit var placed: IntArray
 
+    /**
+    * Solves the NQueen problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (List<List<String>).
+    */
     fun solveNQueens(n: Int): List<List<String>> {
         val results = mutableListOf<List<String>>()
         placed = IntArray(n) { -1 } // Initialize with -1 indicating no queens are placed
 
+        /**
+        * Solves the NQueen problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(row: Int) {
             if (row == n) {
                 // Convert the board configuration to the required output format
@@ -664,6 +626,13 @@ class NQueen {
         return results
     }
 
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isSafe(row: Int, col: Int): Boolean {
         for (prevRow in 0 until row) {
             val prevCol = placed[prevRow]
@@ -680,48 +649,20 @@ class NQueen {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## N Queen_II
 
-<span id="nqueen_ii"></span>
-
 ### Problem
 
-**Nqueen Ii**
+Solves the NQueen_II problem.
 
-**Function:** `Total Nqueens` takes `n` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Initialize with -1 indicating no queens are placed
-- Found a valid solution, increment the count
-- Remove the queen (backtrack)
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `totalNQueens` processes the input
-2. Uses helper functions: isSafe
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `placed`, `solutionCount`, `prevCol`
-
-**Execution flow:**
-- Initialize with -1 indicating no queens are placed
-- Found a valid solution, increment the count
-- Remove the queen (backtrack)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -731,10 +672,24 @@ package backtracking
 class NQueen_II {
     private lateinit var placed: IntArray
 
+    /**
+    * Solves the NQueen_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun totalNQueens(n: Int): Int {
         placed = IntArray(n) { -1 } // Initialize with -1 indicating no queens are placed
         var solutionCount = 0
 
+        /**
+        * Solves the NQueen_II problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun backtrack(row: Int) {
             if (row == n) {
                 // Found a valid solution, increment the count
@@ -755,6 +710,13 @@ class NQueen_II {
         return solutionCount
     }
 
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isSafe(row: Int, col: Int): Boolean {
         for (prevRow in 0 until row) {
             val prevCol = placed[prevRow]
@@ -774,37 +736,17 @@ class NQueen_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Palindrome Partitioning
 
-<span id="palindromepartitioning"></span>
-
 ### Problem
 
-**Palindromepartitioning**
+Solves the Palindrome Partitioning problem.
 
-**Function:** `Partition` takes `s` (string) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -812,9 +754,25 @@ Let's trace through the code to understand how it processes the input:
 package backtracking
 
 class PalindromePartitioning {
+    /**
+    * Solves the Palindrome Partitioning problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting collection (List<List<String>).
+    */
     fun partition(s: String): List<List<String>> {
         val result = mutableListOf<List<String>>()
 
+        /**
+        * Solves the Palindrome Partitioning problem.
+        * Takes `s` (string), `left` (integer), `right` (integer).
+        *
+        * @param s The input string.
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun isPalindrome(s: String, left: Int, right: Int): Boolean {
             var (l, r) = left to right
             while (l < r) {
@@ -823,6 +781,14 @@ class PalindromePartitioning {
             return true
         }
 
+        /**
+        * Solves the Palindrome Partitioning problem.
+        * Takes `start` (integer), `path` (MutableList<String>).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input MutableList<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(start: Int, path: MutableList<String>) {
             if (start == s.length) {
                 result.add(ArrayList(path))
@@ -847,44 +813,20 @@ class PalindromePartitioning {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Partition To K Equal Sum Subsets
 
-<span id="partitiontokequalsumsubsets"></span>
-
 ### Problem
 
-**Partitiontokequalsumsubsets**
+Solves the Partition To KEqual Sum Subsets problem.
 
-**Function:** `Can Partition Ksubsets` takes `nums` (array of integers), `k` (integer) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- backtracking
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `canPartitionKSubsets` processes the input
-2. Uses helper functions: backtrack
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `totalSum`, `targetSum`, `used`
-
-**Execution flow:**
-- backtracking
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -892,6 +834,14 @@ Let's trace through the code to understand how it processes the input:
 package backtracking
 
 class PartitionToKEqualSumSubsets {
+    /**
+    * Solves the Partition To KEqual Sum Subsets problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canPartitionKSubsets(nums: IntArray, k: Int): Boolean {
         val totalSum = nums.sum()
         if (totalSum % k !=0) return false
@@ -899,6 +849,15 @@ class PartitionToKEqualSumSubsets {
         val targetSum = totalSum / k
         val used = BooleanArray(nums.size)
 
+        /**
+        * Solves the Partition To KEqual Sum Subsets problem.
+        * Takes `start` (integer), `currentSum` (integer), `remainingSubsets` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param currentSum The integer parameter representing currentSum.
+        * @param remainingSubsets The integer parameter representing remainingSubsets.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun backtrack(start: Int, currentSum: Int, remainingSubsets: Int): Boolean {
             if (remainingSubsets == 0)
                 return true
@@ -930,43 +889,17 @@ class PartitionToKEqualSumSubsets {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Restore IP Addresses
 
-<span id="restoreipaddresses"></span>
-
 ### Problem
 
-**Restoreipaddresses**
+Solves the Restore IPAddresses problem.
 
-**Function:** `Restore Ip Addresses` takes `s` (string) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Skip invalid segments
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `segment`
-
-**Execution flow:**
-- Skip invalid segments
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -974,9 +907,24 @@ Let's trace through the code to understand how it processes the input:
 package backtracking
 
 class RestoreIPAddresses {
+    /**
+    * Solves the Restore IPAddresses problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting collection (list of strings).
+    */
     fun restoreIpAddresses(s: String): List<String> {
         val result = mutableListOf<String>()
 
+        /**
+        * Solves the Restore IPAddresses problem.
+        * Takes `i` (integer), `path` (MutableList<String>).
+        *
+        * @param i The integer parameter representing i.
+        * @param path The input MutableList<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(i: Int, path: MutableList<String>) {
             if (path.size == 4) {
                 if (i == s.length) {
@@ -1007,48 +955,20 @@ class RestoreIPAddresses {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Strobogrammatic_Number_II
 
-<span id="strobogrammatic_number_ii"></span>
-
 ### Problem
 
-**Strobogrammatic Number Ii**
+Solves the Strobogrammatic_Number_II problem.
 
-**Function:** `Find Strobogrammatic` takes `n` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Avoid leading zeros
-- Generate the inner strobogrammatic numbers
-- Append the current pair to the inner numbers
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `findStrobogrammatic` processes the input
-2. Uses helper functions: generateStrobogrammatic
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `pairs`, `result`, `innerNumbers`
-
-**Execution flow:**
-- Avoid leading zeros
-- Generate the inner strobogrammatic numbers
-- Append the current pair to the inner numbers
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1056,8 +976,22 @@ Let's trace through the code to understand how it processes the input:
 package backtracking
 
 class Strobogrammatic_Number_II {
+    /**
+    * Solves the Strobogrammatic_Number_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (list of strings).
+    */
     fun findStrobogrammatic(n: Int): List<String> {
         val pairs = listOf("0" to "0", "1" to "1", "6" to "9", "8" to "8", "9" to "6")
+        /**
+        * Solves the Strobogrammatic_Number_II problem.
+        * Takes `currentLength` (integer).
+        *
+        * @param currentLength The integer parameter representing currentLength.
+        * @return The resulting collection (list of strings).
+        */
         fun generateStrobogrammatic(currentLength: Int): List<String> {
             if (currentLength == 0) return listOf("")
             if (currentLength == 1) return listOf("0", "1", "8")
@@ -1092,49 +1026,17 @@ class Strobogrammatic_Number_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Subsets
 
-<span id="subsets"></span>
-
 ### Problem
 
-**Subsets**
+Solves the Subsets problem.
 
-**Function:** `Subsets` takes `nums` (array of integers) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Backtracking helper function
-- Add the current subset to the result
-- Include nums[i] in the current subset
-- Recurse for the next elements
-- Backtrack: remove last added element
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `subsets` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `currentSubset`
-
-**Execution flow:**
-- Backtracking helper function
-- Add the current subset to the result
-- Include nums[i] in the current subset
-- Recurse for the next elements
-- Backtrack: remove last added element
-- Start the backtracking process from index 0
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1142,11 +1044,25 @@ Let's trace through the code to understand how it processes the input:
 package array.Combinatorics
 
 class Subsets {
+    /**
+    * Solves the Subsets problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun subsets(nums: IntArray): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         val currentSubset = mutableListOf<Int>()
 
         // Backtracking helper function
+        /**
+        * Solves the Subsets problem.
+        * Takes `start` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun backtrack(start: Int) {
             result.add(ArrayList(currentSubset))  // Add the current subset to the result
 
@@ -1172,44 +1088,17 @@ class Subsets {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Sudoku Solver
 
-<span id="sudokusolver"></span>
-
 ### Problem
 
-**Sudokusolver**
+Solves the Sudoku Solver problem.
 
-**Function:** `Solve` takes `board` (Array<CharArray>) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- backtrack
-- no valid number found
-- board solved
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `solve` processes the input
-2. Uses helper functions: isValid
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `boxRow`, `boxCol`
-
-**Execution flow:**
-- no valid number found
-- board solved
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1217,10 +1106,23 @@ Let's trace through the code to understand how it processes the input:
 package backtracking
 
 class SudokuSolver {
+    /**
+    * Solves the Sudoku Solver problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun solveSudoku(board: Array<CharArray>) {
         solve(board)
     }
 
+    /**
+    * Helper: solve.
+    *
+    * @param board The input Array<CharArray>.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun solve(board: Array<CharArray>): Boolean {
         for (row in 0..8) {
             for (col in 0..8) {
@@ -1239,6 +1141,15 @@ class SudokuSolver {
         return true // board solved
     }
 
+    /**
+    * Helper: is valid.
+    *
+    * @param board The input Array<CharArray>.
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param ch The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isValid(board: Array<CharArray>, row: Int, col: Int, ch: Char): Boolean {
         for (i in 0..8) {
             if (board[row][i] == ch || board[i][col] == ch) return false
@@ -1258,43 +1169,17 @@ class SudokuSolver {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Sudoku Solver Set
 
-<span id="sudokusolverset"></span>
-
 ### Problem
 
-**Sudokusolverset**
+Solves the Sudoku Solver Set problem.
 
-**Function:** `Is Safe` takes `i` (integer), `j` (integer), `c` (Char) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Add initial values to the seen set
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `seen`, `ch`
-
-**Execution flow:**
-- Add initial values to the seen set
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1302,6 +1187,13 @@ Let's trace through the code to understand how it processes the input:
 package backtracking
 
 class SudokuSolverSet {
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun solveSudoku(board: Array<CharArray>) {
         val seen = mutableSetOf<String>()
 
@@ -1315,12 +1207,26 @@ class SudokuSolverSet {
             }
         }
 
+        /**
+        * Solves the Sudoku Solver Set problem.
+        * Takes `i` (integer), `j` (integer), `c` (character).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @param c The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun isSafe(i: Int, j: Int, c: Char): Boolean {
             return "$c row $i" !in seen &&
                     "$c col $j" !in seen &&
                     "$c block ${i / 3}${j / 3}" !in seen
         }
 
+        /**
+        * Solves the Sudoku Solver Set problem.
+        *
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun dfs(): Boolean {
             for (i in 0..8) {
                 for (j in 0..8) {
@@ -1342,12 +1248,32 @@ class SudokuSolverSet {
         dfs()
     }
 
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun addToSet(i: Int, j: Int, c: Char, seen: MutableSet<String>) {
         seen.add("$c row $i")
         seen.add("$c col $j")
         seen.add("$c block ${i / 3}${j / 3}")
     }
 
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun removeFromSet(i: Int, j: Int, c: Char, seen: MutableSet<String>) {
         seen.remove("$c row $i")
         seen.remove("$c col $j")
@@ -1360,19 +1286,7 @@ class SudokuSolverSet {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — Backtracking = DFS on decision tree + pruning. Generate all candidates, explore valid ones, backtrack when stuck.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---

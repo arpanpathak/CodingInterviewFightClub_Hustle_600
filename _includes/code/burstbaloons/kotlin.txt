@@ -2,10 +2,25 @@ package array.dp
 
 // Time COmplexity O(N^3) Space O(N^2)
 class BurstBaloons {
+    /**
+    * Solves the Burst Baloons problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun maxCoins(nums: IntArray): Int {
         if (nums.isEmpty()) return 0
         val dp = Array(nums.size) { IntArray(nums.size) }
 
+        /**
+        * Solves the Burst Baloons problem.
+        * Takes `l` (integer), `r` (integer).
+        *
+        * @param l The integer parameter representing l.
+        * @param r The integer parameter representing r.
+        * @return The computed integer result.
+        */
         fun dfs(l: Int, r: Int): Int {
             when {
                 l > r -> return 0

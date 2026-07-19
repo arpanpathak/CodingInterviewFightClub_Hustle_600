@@ -3,6 +3,14 @@ package string.pattern_matching
 import oracle.net.aso.m
 
 class FindTheIndexOfTheFirstOccurrenceInString_RabinKarp {
+    /**
+    * Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
     fun strStr(haystack: String, needle: String): Int {
         if (needle.isEmpty()) return 0
         if (haystack.length < needle.length) return -1
@@ -42,8 +50,22 @@ class FindTheIndexOfTheFirstOccurrenceInString_RabinKarp {
         return -1
     }
 
+    /**
+    * Helper: char value.
+    *
+    * @param c The character.
+    * @return The computed integer result.
+    */
     private fun charValue(c: Char): Int = c - 'a'
 
+    /**
+    * Helper: matches.
+    *
+    * @param text The input string.
+    * @param pattern The input string.
+    * @param start The integer parameter representing start.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun matches(text: String, pattern: String, start: Int): Boolean {
         for (i in pattern.indices) {
             if (text[start + i] != pattern[i]) return false

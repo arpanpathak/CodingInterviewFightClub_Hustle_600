@@ -1,6 +1,13 @@
 package string
 
 class ValidateIPAddress {
+    /**
+    * Solves the Validate IPAddress problem.
+    * Takes `queryIP` (string).
+    *
+    * @param queryIP The input string.
+    * @return The resulting string.
+    */
     fun validIPAddress(queryIP: String): String {
         return when {
             isValidIPv4(queryIP) -> "IPv4"
@@ -9,6 +16,12 @@ class ValidateIPAddress {
         }
     }
 
+    /**
+    * Helper: is valid ipv4.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isValidIPv4(ip: String): Boolean {
         if (ip.startsWith('.') || ip.endsWith('.')) return false
 
@@ -29,6 +42,12 @@ class ValidateIPAddress {
         }
     }
 
+    /**
+    * Helper: is valid ipv6.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isValidIPv6(ip: String): Boolean {
         if (ip.startsWith(':') || ip.endsWith(':')) return false
 

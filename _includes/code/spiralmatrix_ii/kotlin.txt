@@ -2,6 +2,13 @@ package array
 
 class SpiralMatrix_II {
     class Solution {
+        /**
+        * Solves the Spiral Matrix_II problem.
+        * Takes `n` (integer).
+        *
+        * @param n The integer parameter representing n.
+        * @return The computed integer result.
+        */
         fun generateMatrix(n: Int): Array<IntArray> {
             val matrix = Array(n) { IntArray(n) }
             var (top, bottom, left, right, num) = arrayOf(0, n - 1, 0, n - 1, 1)

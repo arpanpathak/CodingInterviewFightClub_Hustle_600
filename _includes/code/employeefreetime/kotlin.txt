@@ -3,6 +3,13 @@ package sorting
 class Interval(var start: Int, var end: Int)
 
 class EmployeeFreeTime {
+    /**
+    * Solves the Interval problem.
+    * Takes `schedule` (ArrayList<ArrayList<Interval>>).
+    *
+    * @param schedule The input ArrayList<ArrayList<Interval>>.
+    * @return The computed integer result.
+    */
     fun employeeFreeTime(schedule: ArrayList<ArrayList<Interval>>): ArrayList<Interval> {
         val allIntervals = schedule.flatten().sortedBy { it.start }
         val freeTime = arrayListOf<Interval>()

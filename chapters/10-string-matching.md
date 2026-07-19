@@ -18,7 +18,7 @@ next_chapter:
 
 ## The Pattern
 
-String problems use: two pointers, sliding window, DP (LCS, edit distance), KMP/Rabin-Karp for pattern matching, and trie for prefix search.
+Two pointers, sliding window, DP (LCS, edit distance), Rabin-Karp, trie for prefix search.
 
 ## Complete Problem Set
 
@@ -86,39 +86,13 @@ String problems use: two pointers, sliding window, DP (LCS, edit distance), KMP/
 
 ## Apply Substitutions
 
-<span id="applysubstitutions"></span>
-
 ### Problem
 
-**Applysubstitutions**
+Solves the Apply Substitutions problem.
 
-**Function:** `Apply Substitutions` takes `replacements` (List<List<string>>), `text` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Replace if found, else keep original
-- Move past the placeholder
-- Continue resolving if changed
-
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `map`, `sb`, `i`, `key`, `result`
-
-**Execution flow:**
-- Replace if found, else keep original
-- Move past the placeholder
-- Continue resolving if changed
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -126,6 +100,14 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ApplySubstitutions {
+    /**
+    * Solves the Apply Substitutions problem.
+    * Takes `replacements` (List<List<String>>), `text` (string).
+    *
+    * @param replacements The input List<List<String>>.
+    * @param text The input string.
+    * @return The resulting string.
+    */
     fun applySubstitutions(replacements: List<List<String>>, text: String): String {
         val map = mutableMapOf<String, String>()
 
@@ -133,6 +115,13 @@ class ApplySubstitutions {
             map[key] = value
         }
 
+        /**
+        * Solves the Apply Substitutions problem.
+        * Takes `s` (string).
+        *
+        * @param s The input string.
+        * @return The resulting string.
+        */
         fun resolve(s: String): String {
             val sb = StringBuilder()
             var i = 0
@@ -161,43 +150,20 @@ class ApplySubstitutions {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Break A Palindrome
 
-<span id="breakapalindrome"></span>
-
 ### Problem
 
-**Breakapalindrome**
+Solves the Break APalindrome problem.
 
-**Function:** `Break Palindrome` takes `palindrome` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- If all characters are 'a', change the last character to 'b'
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `breakPalindrome` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `arr`
-
-**Execution flow:**
-- If all characters are 'a', change the last character to 'b'
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -205,6 +171,13 @@ Let's trace through the code to understand how it processes the input:
 package string.greedy
 
 class BreakAPalindrome {
+    /**
+    * Solves the Break APalindrome problem.
+    * Takes `palindrome` (string).
+    *
+    * @param palindrome The input string.
+    * @return The resulting string.
+    */
     fun breakPalindrome(palindrome: String): String {
         if (palindrome.length == 1) return ""
 
@@ -229,48 +202,17 @@ class BreakAPalindrome {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Checkifa Parentheses String Can Be Valid
 
-<span id="checkifaparenthesesstringcanbevalid"></span>
-
 ### Problem
 
-**Checkifaparenthesesstringcanbevalid**
+Solves the Checkifa Parentheses String Can Be Valid problem.
 
-**Function:** `Can Be Valid` takes `s` (string), `locked` (string) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Odd number of brackets
-- Second pass: Right to left
-- If it's locked as ')' or can be treated as ')'
-- If at any point we have more opening parentheses than closing
-- If both counts are valid, the string is balanced
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `canBeValid` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `openCount`, `closeCount`
-
-**Execution flow:**
-- Odd number of brackets
-- Second pass: Right to left
-- If it's locked as ')' or can be treated as ')'
-- If at any point we have more opening parentheses than closing
-- If both counts are valid, the string is balanced
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -278,6 +220,14 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class CheckifaParenthesesStringCanBeValid {
+    /**
+    * Solves the Checkifa Parentheses String Can Be Valid problem.
+    * Takes `s` (string), `locked` (string).
+    *
+    * @param s The input string.
+    * @param locked The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canBeValid(s: String, locked: String): Boolean {
         // Odd number of brackets
         if (s.length % 2 !=0) return false
@@ -319,34 +269,17 @@ class CheckifaParenthesesStringCanBeValid {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Count And Say
 
-<span id="countandsay"></span>
-
 ### Problem
 
-**Countandsay**
+Solves the Count And Say problem.
 
-**Function:** `Count And Say` takes `n` (integer) and returns **string**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `countAndSay` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `nextSequence`, `count`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -354,6 +287,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class CountAndSay {
+    /**
+    * Solves the Count And Say problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting string.
+    */
     fun countAndSay(n: Int): String {
         var result = "1"
         repeat(n - 1) {
@@ -383,34 +323,17 @@ class CountAndSay {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Count Words With A Given Prefix
 
-<span id="countwordswithagivenprefix"></span>
-
 ### Problem
 
-**Countwordswithagivenprefix**
+Solves the Count Words With AGiven Prefix problem.
 
-**Function:** `Prefix Count` takes `words` (Array<string>), `prefix` (string) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `prefixCount` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `count`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -418,6 +341,14 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class CountWordsWithAGivenPrefix {
+    /**
+    * Solves the Count Words With AGiven Prefix problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         var count = 0
 
@@ -439,54 +370,17 @@ class CountWordsWithAGivenPrefix {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Count Words With A Given Prefix_Trie
 
-<span id="countwordswithagivenprefix_trie"></span>
-
 ### Problem
 
-**Countwordswithagivenprefix Trie**
+Solves the Count Words With AGiven Prefix_Trie problem.
 
-**Function:** `Prefix Count` takes `words` (Array<string>), `prefix` (string) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Method to count the words with the given prefix
-- Build the trie using the words
-- Traverse the trie to find the node corresponding to the given prefix
-- Method to build the trie
-- Move to the child node or create a new one
-
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `ch`, `children`, `prefixCount`, `root`, `current`, `current`
-
-**Execution flow:**
-- Method to count the words with the given prefix
-- Build the trie using the words
-- Traverse the trie to find the node corresponding to the given prefix
-- Method to build the trie
-- Move to the child node or create a new one
-- Increment prefix count for every node along the way
-- Method to find the node corresponding to the last character of the prefix
-- If prefix doesn't exist, return null
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -503,6 +397,14 @@ class CountWordsWithAGivenPrefix_Trie {
     var root = TrieNode()
 
     // Method to count the words with the given prefix
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         // Build the trie using the words
         buildTrie(words, root)
@@ -512,6 +414,13 @@ class CountWordsWithAGivenPrefix_Trie {
     }
 
     // Method to build the trie
+    /**
+    * Helper: build trie.
+    *
+    * @param words The input Array<String>.
+    * @param root The TrieNode.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun buildTrie(words: Array<String>, root: TrieNode) {
         for (word in words) {
             var current = root
@@ -524,6 +433,12 @@ class CountWordsWithAGivenPrefix_Trie {
     }
 
     // Method to find the node corresponding to the last character of the prefix
+    /**
+    * Helper: find prefix node.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
     private fun findPrefixNode(prefix: String): TrieNode? {
         var current = root
         for (ch in prefix) {
@@ -538,40 +453,20 @@ class CountWordsWithAGivenPrefix_Trie {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Count Words With A Given Prefix_Trie_FP
 
-<span id="countwordswithagivenprefix_trie_fp"></span>
-
 ### Problem
 
-**Countwordswithagivenprefix Trie Fp**
+Solves the Count Words With AGiven Prefix_Trie_FP problem.
 
-**Function:** `Prefix Count` takes `words` (Array<string>), `prefix` (string) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `children`, `prefixCount`, `root`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -583,6 +478,14 @@ class CountWordsWithAGivenPrefix_Trie_FP {
 
     private val root = TrieNode()
 
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         words.forEach { word ->
             word.fold(root) { node, ch ->
@@ -592,6 +495,12 @@ class CountWordsWithAGivenPrefix_Trie_FP {
         return prefixSearch(prefix)?.prefixCount ?: 0
     }
 
+    /**
+    * Helper: prefix search.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
     private fun prefixSearch(prefix: String): TrieNode? = prefix.fold(root) { node, ch -> node.children[ch] ?: return null }
 }
 ```
@@ -600,40 +509,20 @@ class CountWordsWithAGivenPrefix_Trie_FP {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Custom Sort String
 
-<span id="customsortstring"></span>
-
 ### Problem
 
-**Customsortstring**
+Solves the Custom Sort String problem.
 
-**Function:** `Custom Sort String` takes `order` (string), `s` (string) and returns **string**.
+### Why This Approach
 
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `orderMap`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -641,6 +530,14 @@ Let's trace through the code to understand how it processes the input:
 package string.sorting
 
 class CustomSortString {
+    /**
+    * Solves the Custom Sort String problem.
+    * Takes `order` (string), `s` (string).
+    *
+    * @param order The input string.
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun customSortString(order: String, s: String): String {
         val orderMap = mutableMapOf<Char, Int>()
         order.forEachIndexed{ index, ch -> orderMap[ch] = index }
@@ -655,49 +552,20 @@ class CustomSortString {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Decode String
 
-<span id="decodestring"></span>
-
 ### Problem
 
-**Decodestring**
+Solves the Decode String problem.
 
-**Function:** `Decode String` takes `s` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Skip the opening bracket '['
-- Skip the closing bracket ']'
-- Short code
-
-
-
-### Approach
-
-**Stack-Based Approach:**
-1. Process elements left to right
-2. Maintain a stack that tracks relevant previous elements
-3. Pop from stack when current element breaks a monotonic property
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `index`, `result`, `ch`, `k`, `nestedDecodedString`, `index`, `result`, `num`
-
-**Execution flow:**
-- Skip the opening bracket '['
-- Skip the closing bracket ']'
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -707,6 +575,13 @@ package string.stack
 class DecodeString {
     private var index = 0
 
+    /**
+    * Solves the Decode String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun decodeString(s: String): String {
         val result = StringBuilder()
 
@@ -737,8 +612,20 @@ class DecodeString {
     }
 
     // Short code
+    /**
+    * Solves the Decode String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun decodeString1(s: String): String {
         var index = 0
+        /**
+        * Solves the Decode String problem.
+        *
+        * @return The resulting string.
+        */
         fun decode(): String {
             val result = StringBuilder()
             var num = 0
@@ -770,37 +657,17 @@ class DecodeString {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Determine If Strings Are Close
 
-<span id="determineifstringsareclose"></span>
-
 ### Problem
 
-**Determineifstringsareclose**
+Solves the Determine If Strings Are Close problem.
 
-**Function:** `Close Strings` takes `word1` (string), `word2` (string) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `freq1`, `freq2`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -808,6 +675,14 @@ Let's trace through the code to understand how it processes the input:
 package string.hashtable
 
 class DetermineIfStringsAreClose {
+    /**
+    * Solves the Determine If Strings Are Close problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun closeStrings(word1: String, word2: String): Boolean {
         if (word1.length != word2.length)
             return false
@@ -831,41 +706,20 @@ class DetermineIfStringsAreClose {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Edit Distance
 
-<span id="editdistance"></span>
-
 ### Problem
 
-**Editdistance**
+Solves the Edit Distance problem.
 
-**Function:** `Min Distance` takes `word1` (string), `word2` (string) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `state`, `insert`, `remove`, `replace`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -875,10 +729,26 @@ package string.dynamic_programming
 class EditDistance {
     private var dp = mutableMapOf<String,Int>()
 
+    /**
+    * Solves the Edit Distance problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The computed integer result.
+    */
     fun minDistance(word1: String, word2: String): Int {
         return minDistance(word1, word2, word1.length, word2.length)
     }
 
+    /**
+    * Solves the Edit Distance problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The computed integer result.
+    */
     fun minDistance(word1: String, word2: String, m: Int, n: Int): Int {
         val state = "$m.$n"
 
@@ -898,6 +768,12 @@ class EditDistance {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
         }
     }
@@ -908,37 +784,20 @@ class EditDistance {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n × m) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n × m). The memoization/table stores one entry per state (O(n)).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Excel Sheet To Column Number
 
-<span id="excelsheettocolumnnumber"></span>
-
 ### Problem
 
-**Excelsheettocolumnnumber**
+Solves the Excel Sheet To Column Number problem.
 
-**Function:** `Title To Number` takes `columnTitle` (string) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `titleToNumber` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `base`, `sum`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -946,6 +805,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ExcelSheetToColumnNumber {
+    /**
+    * Solves the Excel Sheet To Column Number problem.
+    * Takes `columnTitle` (string).
+    *
+    * @param columnTitle The input string.
+    * @return The computed integer result.
+    */
     fun titleToNumber(columnTitle: String): Int {
         var base = 1
         var sum = 0
@@ -965,46 +831,17 @@ class ExcelSheetToColumnNumber {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Find All Anagrams
 
-<span id="findallanagrams"></span>
-
 ### Problem
 
-**Findallanagrams**
+Solves the Find All Anagrams problem.
 
-**Function:** `Find Anagrams` takes `s` (string), `p` (string) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Initialize frequency counts for p and the first window of s
-- Compare the initial window and check every subsequent window
-- Add new character to the window
-- Remove the old character from the window
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `findAnagrams` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `pCount`, `sCount`
-
-**Execution flow:**
-- Initialize frequency counts for p and the first window of s
-- Compare the initial window and check every subsequent window
-- Add new character to the window
-- Remove the old character from the window
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1012,6 +849,14 @@ Let's trace through the code to understand how it processes the input:
 package string.sliding_window
 
 class FindAllAnagrams {
+    /**
+    * Solves the Find All Anagrams problem.
+    * Takes `s` (string), `p` (string).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @return The computed integer result.
+    */
     fun findAnagrams(s: String, p: String): List<Int> {
         val result = mutableListOf<Int>()
         if (s.length < p.length) return result
@@ -1048,54 +893,17 @@ class FindAllAnagrams {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Findtheindexofthefirstoccurrenceina String
 
-<span id="findtheindexofthefirstoccurrenceina_string"></span>
-
 ### Problem
 
-**Findtheindexofthefirstoccurrenceina String**
+Solves the findtheindexofthefirstoccurrenceina string problem.
 
-**Function:** `Str Str` takes `haystack` (string), `needle` (string) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- If the needle is empty, return 0
-- Use 'to' to assign both m and n in one line
-- Step 1: Build the LPS array for the needle
-- Step 2: Search for the needle in the haystack using KMP algorithm
-- Pairing to initialize indices for haystack and needle
-
-
-
-### Approach
-
-**Stack-Based Approach:**
-1. Process elements left to right
-2. Maintain a stack that tracks relevant previous elements
-3. Pop from stack when current element breaks a monotonic property
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `lps`, `lps`
-
-**Execution flow:**
-- If the needle is empty, return 0
-- Use 'to' to assign both m and n in one line
-- Step 1: Build the LPS array for the needle
-- Step 2: Search for the needle in the haystack using KMP algorithm
-- Pairing to initialize indices for haystack and needle
-- Characters match
-- Mismatch after some matches, use LPS array to skip ahead
-- No matches yet, move to the next character in the haystack
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1105,6 +913,14 @@ package string.pattern_matching
 import oracle.net.aso.m
 
 class `FindTheIndexofTheFirstOccurrenceIna String` {
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
     fun strStr(haystack: String, needle: String): Int {
         // If the needle is empty, return 0
         if (needle.isEmpty()) return 0
@@ -1137,6 +953,13 @@ class `FindTheIndexofTheFirstOccurrenceIna String` {
     }
 
     // Function to build the LPS (Longest Prefix Suffix) array for the needle
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `needle` (string).
+    *
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
     fun buildLPS(needle: String): IntArray {
         val lps = IntArray(needle.length)
         var (i, j) = 0 to 1
@@ -1164,51 +987,17 @@ class `FindTheIndexofTheFirstOccurrenceIna String` {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Find The Index Of The First Occurrence In String_Rabin Karp
 
-<span id="findtheindexofthefirstoccurrenceina_string_rabinkarp"></span>
-
 ### Problem
 
-**Findtheindexofthefirstoccurrenceina String Rabinkarp**
+Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
 
-**Function:** `Str Str` takes `haystack` (string), `needle` (string) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Precompute needle hash and initial window hash
-- Early check for match at index 0
-- Slide the window and update hash
-- Remove leftmost character and add new character
-- Check for match
-
-
-
-### Approach
-
-**Stack-Based Approach:**
-1. Process elements left to right
-2. Maintain a stack that tracks relevant previous elements
-3. Pop from stack when current element breaks a monotonic property
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `base`, `mod`, `m`, `targetHash`, `windowHash`, `power`, `startIndex`
-
-**Execution flow:**
-- Precompute needle hash and initial window hash
-- Early check for match at index 0
-- Slide the window and update hash
-- Remove leftmost character and add new character
-- Check for match
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1218,6 +1007,14 @@ package string.pattern_matching
 import oracle.net.aso.m
 
 class FindTheIndexOfTheFirstOccurrenceInString_RabinKarp {
+    /**
+    * Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
     fun strStr(haystack: String, needle: String): Int {
         if (needle.isEmpty()) return 0
         if (haystack.length < needle.length) return -1
@@ -1257,8 +1054,22 @@ class FindTheIndexOfTheFirstOccurrenceInString_RabinKarp {
         return -1
     }
 
+    /**
+    * Helper: char value.
+    *
+    * @param c The character.
+    * @return The computed integer result.
+    */
     private fun charValue(c: Char): Int = c - 'a'
 
+    /**
+    * Helper: matches.
+    *
+    * @param text The input string.
+    * @param pattern The input string.
+    * @param start The integer parameter representing start.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun matches(text: String, pattern: String, start: Int): Boolean {
         for (i in pattern.indices) {
             if (text[start + i] != pattern[i]) return false
@@ -1275,40 +1086,17 @@ class FindTheIndexOfTheFirstOccurrenceInString_RabinKarp {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Find Unique Binary String
 
-<span id="finduniquebinarystring"></span>
-
 ### Problem
 
-**Finduniquebinarystring**
+Solves the Find Unique Binary String problem.
 
-**Function:** `Find Different Binary String` takes `nums` (Array<string>) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Cantor’s Diagonalization Trick
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `findDifferentBinaryString` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `n`, `sb`
-
-**Execution flow:**
-- Cantor’s Diagonalization Trick
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1317,6 +1105,13 @@ package string
 
 // Cantor’s Diagonalization Trick
 class FindUniqueBinaryString {
+    /**
+    * Solves the Find Unique Binary String problem.
+    * Takes `nums` (Array<String>).
+    *
+    * @param nums The input Array<String>.
+    * @return The resulting string.
+    */
     fun findDifferentBinaryString(nums: Array<String>): String {
         val n = nums.size
         val sb = StringBuilder()
@@ -1337,39 +1132,17 @@ class FindUniqueBinaryString {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Generate Parantheses
 
-<span id="generateparantheses"></span>
-
 ### Problem
 
-**Generateparantheses**
+Solves the Generate Parantheses problem.
 
-**Function:** `Generate Parenthesis` takes `n` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- backtrack
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `generateParenthesis` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`
-
-**Execution flow:**
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1379,12 +1152,29 @@ package string.backtracking
 import java.lang.StringBuilder
 
 class GenerateParantheses {
+    /**
+    * Solves the Generate Parantheses problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (list of strings).
+    */
     fun generateParenthesis(n: Int): List<String> {
         val result = mutableListOf<String>()
         generate(n, n, StringBuilder(), result)
         return result
     }
 
+    /**
+    * Solves the Generate Parantheses problem.
+    * Takes `open` (integer), `close` (integer), `current` (StringBuilder), `result` (MutableList<String>).
+    *
+    * @param open The integer parameter representing open.
+    * @param close The integer parameter representing close.
+    * @param current The input string.
+    * @param result The input MutableList<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun generate(open: Int, close: Int, current: StringBuilder, result: MutableList<String>) {
         if (open == 0 && close == 0) {
             result.add(current.toString())
@@ -1413,49 +1203,17 @@ class GenerateParantheses {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Goat Latin
 
-<span id="goatlatin"></span>
-
 ### Problem
 
-**Goatlatin**
+Solves the Goat Latin problem.
 
-**Function:** `To Goat Latin` takes `sentence` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Define a set of vowels for faster lookup
-- Process the sentence word by word
-- Check if the word starts with a vowel
-- If the word starts with a vowel, append "ma" and the appropriate number of 'a's
-- If the word starts with a consonant, move the first letter to the end, append "ma", and the appropriate number of 'a's
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `toGoatLatin` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `vowels`
-
-**Execution flow:**
-- Define a set of vowels for faster lookup
-- Process the sentence word by word
-- Check if the word starts with a vowel
-- If the word starts with a vowel, append "ma" and the appropriate number of 'a's
-- If the word starts with a consonant, move the first letter to the end, append "ma", and the appropriate number of 'a's
-- Join the words back into a single string
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1463,6 +1221,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class GoatLatin {
+    /**
+    * Solves the Goat Latin problem.
+    * Takes `sentence` (string).
+    *
+    * @param sentence The input string.
+    * @return The resulting string.
+    */
     fun toGoatLatin(sentence: String): String {
         // Define a set of vowels for faster lookup
         val vowels = setOf('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
@@ -1489,41 +1254,17 @@ class GoatLatin {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Greatest Common Divisor Of Strings
 
-<span id="greatestcommondivisorofstrings"></span>
-
 ### Problem
 
-**Greatestcommondivisorofstrings**
+Solves the Greatest Common Divisor Of Strings problem.
 
-**Function:** `Gcd` takes `a` (integer), `b` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Dhoyasha Foggy I didn't understand.
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `gcd` processes the input
-2. Uses helper functions: gcdOfStrings
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `gcdLength`
-
-**Execution flow:**
-- Dhoyasha Foggy I didn't understand.
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1531,6 +1272,14 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class GreatestCommonDivisorOfStrings {
+    /**
+    * Solves the Greatest Common Divisor Of Strings problem.
+    * Takes `a` (integer), `b` (integer).
+    *
+    * @param a The integer parameter representing a.
+    * @param b The integer parameter representing b.
+    * @return The computed integer result.
+    */
     fun gcd(a: Int, b: Int): Int {
         return when {
             a == b -> a
@@ -1539,6 +1288,14 @@ class GreatestCommonDivisorOfStrings {
         }
     }
 
+    /**
+    * Solves the Greatest Common Divisor Of Strings problem.
+    * Takes `str1` (string), `str2` (string).
+    *
+    * @param str1 The input string.
+    * @param str2 The input string.
+    * @return The resulting string.
+    */
     fun gcdOfStrings(str1: String, str2: String): String {
         // Dhoyasha Foggy I didn't understand.
         if ((str1 + str2) != (str2 + str1))
@@ -1558,47 +1315,17 @@ class GreatestCommonDivisorOfStrings {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Group Anagrams
 
-<span id="groupanagrams"></span>
-
 ### Problem
 
-**Groupanagrams**
+Solves the Group Anagrams problem.
 
-**Function:** `Group Anagrams` takes `strs` (Array<string>) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Using List<Int> as the key
-- Count the frequency of each character
-- Return the list of grouped anagrams
-
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `anagramMap`, `count`
-
-**Execution flow:**
-- Using List<Int> as the key
-- Count the frequency of each character
-- Return the list of grouped anagrams
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1606,6 +1333,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class GroupAnagrams {
+    /**
+    * Solves the Group Anagrams problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
     fun groupAnagrams(strs: Array<String>): List<List<String>> {
         val anagramMap = mutableMapOf<List<Int>, MutableList<String>>()  // Using List<Int> as the key
         for (word in strs) {
@@ -1625,40 +1359,20 @@ class GroupAnagrams {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Group Shifted Strings
 
-<span id="groupshiftedstrings"></span>
-
 ### Problem
 
-**Groupshiftedstrings**
+Solves the Group Shifted Strings problem.
 
-**Function:** `Group Strings` takes `strings` (Array<string>) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `map`, `key`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1666,6 +1380,13 @@ Let's trace through the code to understand how it processes the input:
 package string.hashtable
 
 class GroupShiftedStrings {
+    /**
+    * Solves the Group Shifted Strings problem.
+    * Takes `strings` (Array<String>).
+    *
+    * @param strings The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
     fun groupStrings(strings: Array<String>): List<List<String>> {
         val map = mutableMapOf<String, MutableList<String>>()
 
@@ -1677,6 +1398,12 @@ class GroupShiftedStrings {
         return map.values.toList()
     }
 
+    /**
+    * Helper: get key.
+    *
+    * @param str The input string.
+    * @return The resulting string.
+    */
     private fun getKey(str: String): String {
         return buildString {
             for (i in 1 until str.length) {
@@ -1691,40 +1418,20 @@ class GroupShiftedStrings {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Interleaving String
 
-<span id="interleavingstring"></span>
-
 ### Problem
 
-**Interleavingstring**
+Solves the Interleaving String problem.
 
-**Function:** `Is Interleave` takes `s1` (string), `s2` (string), `s3` (string) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Top-Down DP (Memoization) Approach:**
-1. Define a recursive function that explores all possibilities
-2. Cache results in a table/dictionary to avoid redundant work
-3. The state is defined by the function parameters that change between calls
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `memo`, `k`, `result`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1732,11 +1439,28 @@ Let's trace through the code to understand how it processes the input:
 package string.dynamic_programming
 
 class InterleavingString {
+    /**
+    * Solves the Interleaving String problem.
+    * Takes `s1` (string), `s2` (string), `s3` (string).
+    *
+    * @param s1 The input string.
+    * @param s2 The input string.
+    * @param s3 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isInterleave(s1: String, s2: String, s3: String): Boolean {
         if (s1.length + s2.length != s3.length) return false
 
         val memo = mutableMapOf<Pair<Int, Int>, Boolean>()
 
+        /**
+        * Solves the Interleaving String problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun dfs(i: Int, j: Int): Boolean {
             if (i == s1.length && j == s2.length) return true
             if (memo.containsKey(i to j)) return memo[i to j]!!
@@ -1764,40 +1488,20 @@ class InterleavingString {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n × m) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n × m). The memoization/table stores one entry per state (O(n)).
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Isomorphic String
 
-<span id="isomorphicstring"></span>
-
 ### Problem
 
-**Isomorphicstring**
+Solves the Isomorphic String problem.
 
-**Function:** `Encode` takes `s` (string) and returns **string**.
+### Why This Approach
 
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `map`, `sb`, `code`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1805,6 +1509,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class IsomorphicString {
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun encode(s: String): String {
         val map = mutableMapOf<Char, Int>()
         val sb = StringBuilder()
@@ -1818,6 +1529,14 @@ class IsomorphicString {
         return sb.toString()
     }
 
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isIsomorphic(s: String, t: String): Boolean {
         return encode(s) == encode(t)
     }
@@ -1828,43 +1547,20 @@ class IsomorphicString {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Is Subsequence
 
-<span id="issubsequence"></span>
-
 ### Problem
 
-**Issubsequence**
+Solves the Is Subsequence problem.
 
-**Function:** `Is Subsequence` takes `s` (string), `t` (string) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Match found
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `isSubsequence` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `i`, `j`
-
-**Execution flow:**
-- Match found
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1872,6 +1568,14 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class IsSubsequence {
+    /**
+    * Solves the Is Subsequence problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isSubsequence(s: String, t: String): Boolean {
         var i = 0
         var j = 0
@@ -1898,40 +1602,17 @@ class IsSubsequence {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Length Of Last Word
 
-<span id="lengthoflastword"></span>
-
 ### Problem
 
-**Lengthoflastword**
+Solves the Length Of Last Word problem.
 
-**Function:** `Length Of Last Word` takes `s` (string) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- skip trailing spaces
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `lengthOfLastWord` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `i`, `len`
-
-**Execution flow:**
-- skip trailing spaces
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1939,6 +1620,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class LengthOfLastWord {
+    /**
+    * Solves the Length Of Last Word problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun lengthOfLastWord(s: String): Int {
         var i = s.length - 1
         var len = 0
@@ -1961,46 +1649,17 @@ class LengthOfLastWord {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Longest Common Prefix
 
-<span id="longestcommonprefix"></span>
-
 ### Problem
 
-**Longestcommonprefix**
+Solves the Longest Common Prefix problem.
 
-**Function:** `Longest Common Prefix` takes `strs` (Array<string>) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Use the first string as the reference
-- Compare this character with the corresponding character in all other strings
-- If the current string is shorter or the characters don't match, return the prefix so far
-- If no mismatch is found, the entire first string is the common prefix
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `longestCommonPrefix` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `char`
-
-**Execution flow:**
-- Use the first string as the reference
-- Compare this character with the corresponding character in all other strings
-- If the current string is shorter or the characters don't match, return the prefix so far
-- If no mismatch is found, the entire first string is the common prefix
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2008,6 +1667,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class LongestCommonPrefix {
+    /**
+    * Solves the Longest Common Prefix problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting string.
+    */
     fun longestCommonPrefix(strs: Array<String>): String {
         if (strs.isEmpty()) return ""
 
@@ -2035,40 +1701,17 @@ class LongestCommonPrefix {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Longest Common Subsequence
 
-<span id="longestcommonsubsequence"></span>
-
 ### Problem
 
-**Longestcommonsubsequence**
+Solves the Longest Common Subsequence problem.
 
-**Function:** `Lcs` takes `str1` (string), `str2` (string) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Print in reverse order
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `lcs` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `M`
-
-**Execution flow:**
-- Print in reverse order
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2079,6 +1722,14 @@ class LongestCommonSubsequence {
     companion object {
         private lateinit var M: Array<IntArray>
 
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str1` (string), `str2` (string).
+        *
+        * @param str1 The input string.
+        * @param str2 The input string.
+        * @return The computed integer result.
+        */
         fun lcs(str1: String, str2: String): Int {
             M = Array(str1.length + 1) { IntArray(str2.length + 1) }
             for (i in 1..str1.length) {
@@ -2093,6 +1744,15 @@ class LongestCommonSubsequence {
             return M[str1.length][str2.length]
         }
 
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str` (string), `i` (integer), `j` (integer).
+        *
+        * @param str The input string.
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun printLCS(str: String, i: Int, j: Int) {
             if (i <= 0 || j <= 0) return
             if (M[i][j] != M[i][j - 1] && M[i][j] != M[i - 1][j] && M[i][j] == M[i - 1][j - 1] + 1) {
@@ -2106,6 +1766,12 @@ class LongestCommonSubsequence {
         }
 
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
             println(lcs("abcxgzggmn", "acttvvmnvt"))
             printLCS("acttvvmnvt", "abcxgzggmn".length, "acttvvmnvt".length) // Print in reverse order
@@ -2121,29 +1787,17 @@ class LongestCommonSubsequence {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Longest Common Substring
 
-<span id="longestcommonsubstring"></span>
-
 ### Problem
 
-**Longestcommonsubstring**
+Solve the **Longest Common Substring** problem efficiently.
 
+### Why This Approach
 
-
-### Approach
-
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2161,49 +1815,17 @@ class LongestCommonSubstring {
 | **Time** | O(n) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Longest Palidnromic Substring
 
-<span id="longestpalidnromicsubstring"></span>
-
 ### Problem
 
-**Longestpalidnromicsubstring**
+Solves the Longest Palidnromic Substring problem.
 
-**Function:** `Longest Palindrome` takes `s` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Helper function to expand around the center
-- Return the length of the palindrome
-- Check for odd length palindrome (center is s[i])
-- Check for even length palindrome (center is between s[i] and s[i + 1])
-- Calculate the start of the palindrome
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `longestPalindrome` processes the input
-2. Uses helper functions: expandAroundCenter
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `start`, `maxLength`, `l`, `r`, `len1`, `len2`, `len`
-
-**Execution flow:**
-- Helper function to expand around the center
-- Return the length of the palindrome
-- Check for odd length palindrome (center is s[i])
-- Check for even length palindrome (center is between s[i] and s[i + 1])
-- Calculate the start of the palindrome
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2211,6 +1833,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class LongestPalidnromicSubstring {
+    /**
+    * Solves the Longest Palidnromic Substring problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun longestPalindrome(s: String): String {
         if (s.isEmpty()) return ""
 
@@ -2218,6 +1847,14 @@ class LongestPalidnromicSubstring {
         var maxLength = 1
 
         // Helper function to expand around the center
+        /**
+        * Solves the Longest Palidnromic Substring problem.
+        * Takes `left` (integer), `right` (integer).
+        *
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return The computed integer result.
+        */
         fun expandAroundCenter(left: Int, right: Int): Int {
             var l = left
             var r = right
@@ -2255,44 +1892,17 @@ class LongestPalidnromicSubstring {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Longest Palindromic Subsequence
 
-<span id="longestpalindromicsubsequence"></span>
-
 ### Problem
 
-**Longestpalindromicsubsequence**
+Solves the Longest Palindromic Subsequence problem.
 
-**Function:** `Longest Palindrome Subseq` takes `s` (string) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Value already cached
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `end`
-
-**Execution flow:**
-- Value already cached
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2300,9 +1910,24 @@ Let's trace through the code to understand how it processes the input:
 package string.dynamic_programming
 
 class LongestPalindromicSubsequence {
+    /**
+    * Solves the Longest Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun longestPalindromeSubseq(s: String): Int {
         val dp = Array(s.length) { IntArray(s.length) }
 
+        /**
+        * Solves the Longest Palindromic Subsequence problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
         fun lps(start: Int, length: Int): Int {
             if (length <= 1) return length
             val end = start + length - 1
@@ -2322,58 +1947,20 @@ class LongestPalindromicSubsequence {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n × m) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n) space. Each cell requires O(1) or O(n) work, totaling O(n × m).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Longest Palindromic Subsequence_Bottom Up
 
-<span id="longestpalindromicsubsequence_bottomup"></span>
-
 ### Problem
 
-**Longestpalindromicsubsequence Bottomup**
+Solves the Longest Palindromic Subsequence_Bottom Up problem.
 
-**Function:** `Longest Palindrome Subseq` takes `s` (string) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Bottom-up fill the dp table for substrings of increasing length
-- Iterate over all substring lengths
-- Iterate over all possible start indices
-- Calculate the end index of the substring
-- Base case: single character is a palindrome of length 1
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `n`, `dp`, `end`
-
-**Execution flow:**
-- Bottom-up fill the dp table for substrings of increasing length
-- Iterate over all substring lengths
-- Iterate over all possible start indices
-- Calculate the end index of the substring
-- Base case: single character is a palindrome of length 1
-- Palindrome formed by adding the two matching characters
-- Max of ignoring one end
-- The result is stored in dp[0][n-1] (the entire string)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2381,6 +1968,13 @@ Let's trace through the code to understand how it processes the input:
 package string.dynamic_programming
 
 class LongestPalindromicSubsequence_BottomUp {
+    /**
+    * Solves the Longest Palindromic Subsequence_Bottom Up problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun longestPalindromeSubseq(s: String): Int {
         val n = s.length
         val dp = Array(n) { IntArray(n) }
@@ -2411,34 +2005,17 @@ class LongestPalindromicSubsequence_BottomUp {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n²) space. Each cell requires O(1) or O(n) work, totaling O(n³).
-
 ---
 
 ## Longest Repeating Character Replacement
 
-<span id="longestrepeatingcharacterreplacement"></span>
-
 ### Problem
 
-**Longestrepeatingcharacterreplacement**
+Solves the Longest Repeating Character Replacement problem.
 
-**Function:** `Character Replacement` takes `s` (string), `k` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `characterReplacement` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `count`, `maxLength`, `left`, `maxCount`, `char`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2446,6 +2023,14 @@ Let's trace through the code to understand how it processes the input:
 package sliding_window
 
 class LongestRepeatingCharacterReplacement {
+    /**
+    * Solves the Longest Repeating Character Replacement problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun characterReplacement(s: String, k: Int): Int {
         val count = IntArray(26)
         var maxLength = 0
@@ -2477,48 +2062,17 @@ class LongestRepeatingCharacterReplacement {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Longest String Chain
 
-<span id="longeststringchain"></span>
-
 ### Problem
 
-**Longeststringchain**
+Solves the Longest String Chain problem.
 
-**Function:** `Longest Str Chain` takes `words` (Array<string>) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Sort words by length
-- Default length of chain ending at word is 1
-- Remove one character
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `maxLen`, `prev`
-
-**Execution flow:**
-- Sort words by length
-- Default length of chain ending at word is 1
-- Remove one character
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2526,6 +2080,13 @@ Let's trace through the code to understand how it processes the input:
 package string.dynamic_programming
 
 class LongestStringChain {
+    /**
+    * Solves the Longest String Chain problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The computed integer result.
+    */
     fun longestStrChain(words: Array<String>): Int {
         words.sortBy { it.length }  // Sort words by length
         val dp = mutableMapOf<String, Int>()
@@ -2554,34 +2115,17 @@ class LongestStringChain {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## Maximum Lengthofa Concatenated Stringwith Unique Characters
 
-<span id="maximumlengthofaconcatenatedstringwithuniquecharacters"></span>
-
 ### Problem
 
-**Maximumlengthofaconcatenatedstringwithuniquecharacters**
+Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
 
-**Function:** `Max Length` takes `arr` (List<string>) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `maxLength` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `maxLen`, `uniqueStrings`, `str`, `newMask`, `canAdd`, `bit`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2589,10 +2133,26 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class MaximumLengthofaConcatenatedStringwithUniqueCharacters {
+    /**
+    * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
+    * Takes `arr` (list of strings).
+    *
+    * @param arr The input list of strings.
+    * @return The computed integer result.
+    */
     fun maxLength(arr: List<String>): Int {
         var maxLen = 0
         val uniqueStrings = arr.filter { it.toCharArray().toSet().size == it.length }
 
+        /**
+        * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
+        * Takes `index` (integer), `currentMask` (integer), `currentLength` (integer).
+        *
+        * @param index The integer parameter representing index.
+        * @param currentMask The integer parameter representing currentMask.
+        * @param currentLength The integer parameter representing currentLength.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun backtrack(index: Int, currentMask: Int, currentLength: Int) {
             if (index == uniqueStrings.size) {
                 if (currentLength > maxLen) {
@@ -2633,34 +2193,17 @@ class MaximumLengthofaConcatenatedStringwithUniqueCharacters {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Maximum Value Of A String Is An Array
 
-<span id="maximumvalueofastringisanarray"></span>
-
 ### Problem
 
-**Maximumvalueofastringisanarray**
+Solves the Maximum Value Of AString Is An Array problem.
 
-**Function:** `Maximum Value` takes `strs` (Array<string>) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `maximumValue` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `numericValue`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2668,6 +2211,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class MaximumValueOfAStringIsAnArray {
+    /**
+    * Solves the Maximum Value Of AString Is An Array problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The computed integer result.
+    */
     fun maximumValue(strs: Array<String>): Int {
         return strs.maxOf {
             val numericValue = it.toIntOrNull()
@@ -2684,34 +2234,17 @@ class MaximumValueOfAStringIsAnArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Merge String Alternatively
 
-<span id="mergestringalternatively"></span>
-
 ### Problem
 
-**Mergestringalternatively**
+Solves the Merge String Alternatively problem.
 
-**Function:** `Merge Alternately` takes `word1` (string), `word2` (string) and returns **string**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `mergeAlternately` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `mergedString`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2719,6 +2252,14 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class MergeStringAlternatively {
+    /**
+    * Solves the Merge String Alternatively problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The resulting string.
+    */
     fun mergeAlternately(word1: String, word2: String): String {
         val mergedString = StringBuilder()
 
@@ -2741,34 +2282,17 @@ class MergeStringAlternatively {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Minimum Deletion To Make Character Frequencies Unique
 
-<span id="minimumdeletiontomakecharacterfrequenciesunique"></span>
-
 ### Problem
 
-**Minimumdeletiontomakecharacterfrequenciesunique**
+Solves the Minimum Deletion To Make Character Frequencies Unique problem.
 
-**Function:** `Min Deletions` takes `s` (string) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `minDeletions` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `freq`, `seen`, `deletions`, `currentFreq`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2776,6 +2300,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class MinimumDeletionToMakeCharacterFrequenciesUnique {
+    /**
+    * Solves the Minimum Deletion To Make Character Frequencies Unique problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun minDeletions(s: String): Int {
         val freq = IntArray(26)
         for (ch in s) freq[ch - 'a']++
@@ -2803,54 +2334,17 @@ class MinimumDeletionToMakeCharacterFrequenciesUnique {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Minimum Window Substring
 
-<span id="minimumwindowsubstring"></span>
-
 ### Problem
 
-**Minimumwindowsubstring**
+Solves the Minimum Window Substring problem.
 
-**Function:** `Min Window` takes `s` (string), `t` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Return early if either string is empty
-- Frequency map for characters in t (required characters)
-- Frequency map for the current window in s
-- Track the number of characters matched from the required set
-- Destructuring initialization for left and right pointers
-
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `required`, `window`, `matched`, `rightChar`, `currentLength`, `leftChar`
-
-**Execution flow:**
-- Return early if either string is empty
-- Frequency map for characters in t (required characters)
-- Frequency map for the current window in s
-- Track the number of characters matched from the required set
-- Destructuring initialization for left and right pointers
-- Initialize minLength and minStart in a single line
-- Sliding window logic
-- Expand the window by moving the right pointer
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2858,6 +2352,14 @@ Let's trace through the code to understand how it processes the input:
 package string.sliding_window
 
 class MinimumWindowSubstring {
+    /**
+    * Solves the Minimum Window Substring problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return The resulting string.
+    */
     fun minWindow(s: String, t: String): String {
         // Return early if either string is empty
         if (s.isEmpty() || t.isEmpty()) return ""
@@ -2920,40 +2422,20 @@ class MinimumWindowSubstring {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Remove All Adjacent Duplicates In String
 
-<span id="removealladjacentduplicatesinstring"></span>
-
 ### Problem
 
-**Removealladjacentduplicatesinstring**
+Solves the Remove All Adjacent Duplicates In String problem.
 
-**Function:** `Remove Duplicates` takes `s` (string) and returns **string**.
+### Why This Approach
 
-
-
-### Approach
-
-**Stack-Based Approach:**
-1. Process elements left to right
-2. Maintain a stack that tracks relevant previous elements
-3. Pop from stack when current element breaks a monotonic property
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `stack`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2961,6 +2443,13 @@ Let's trace through the code to understand how it processes the input:
 package string.stack
 
 class RemoveAllAdjacentDuplicatesInString {
+    /**
+    * Solves the Remove All Adjacent Duplicates In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun removeDuplicates(s: String): String {
         val stack = ArrayDeque<Char>()
 
@@ -2983,43 +2472,17 @@ class RemoveAllAdjacentDuplicatesInString {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Reverse Words In String
 
-<span id="reversewordsinstring"></span>
-
 ### Problem
 
-**Reversewordsinstring**
+Solves the Reverse Words In String problem.
 
-**Function:** `Reverse Words` takes `s` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Two pointers
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `words`
-
-**Execution flow:**
-- Two pointers
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3027,6 +2490,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ReverseWordsInString {
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun reverseWords(s: String): String {
         val words = s.split(" ").filter { it.isNotEmpty() }.toMutableList()
 
@@ -3043,6 +2513,15 @@ class ReverseWordsInString {
 
     }
 
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `nums` (MutableList<String>), `i` (integer), `j` (integer).
+    *
+    * @param nums The input MutableList<String>.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun swap(nums: MutableList<String>, i: Int, j: Int) {
         nums[j] = nums[i].also { nums[i] = nums[j] }
     }
@@ -3053,57 +2532,20 @@ class ReverseWordsInString {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Shortest Common Supersequence
 
-<span id="shortestcommonsupersequence"></span>
-
 ### Problem
 
-**Shortestcommonsupersequence**
+Solves the Shortest Common Supersequence problem.
 
-**Function:** `Shortest Common Supersequence` takes `X` (string), `Y` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Add remaining characters from X or Y
-- Reverse the result and return as string
-- abc, axyzabc, yzmnbc
-- yzmnbcaxyzabc
-- a -> b -> c
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `scs`
-
-**Execution flow:**
-- Add remaining characters from X or Y
-- Reverse the result and return as string
-- abc, axyzabc, yzmnbc
-- yzmnbcaxyzabc
-- a -> b -> c
-- a -> x -> y -> x -> (a -> b -> c)
-- y -> z -> m -> n -> b -> c
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3111,6 +2553,14 @@ Let's trace through the code to understand how it processes the input:
 package string.dynamic_programming
 
 class ShortestCommonSupersequence {
+    /**
+    * Solves the Shortest Common Supersequence problem.
+    * Takes `X` (string), `Y` (string).
+    *
+    * @param X The input string.
+    * @param Y The input string.
+    * @return The resulting string.
+    */
     fun shortestCommonSupersequence(X: String, Y: String): String? {
         val (m, n) = X.length to Y.length
         val dp = Array(m + 1) { IntArray(n + 1) }
@@ -3156,52 +2606,17 @@ class ShortestCommonSupersequence {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n²) space. Each cell requires O(1) or O(n) work, totaling O(n³).
-
 ---
 
 ## Simplify Path
 
-<span id="simplifypath"></span>
-
 ### Problem
 
-**Simplifypath**
+Solves the Simplify Path problem.
 
-**Function:** `Simplify Path` takes `path` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Split the path by "/"
-- Initialize a mutable list to store valid directory names
-- Ignore empty or current directory tokens
-- Pop from the list if it's not empty (go back to the parent directory)
-- Push valid directory names onto the list
-
-
-
-### Approach
-
-**Stack-Based Approach:**
-1. Process elements left to right
-2. Maintain a stack that tracks relevant previous elements
-3. Pop from stack when current element breaks a monotonic property
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `tokens`, `stack`
-
-**Execution flow:**
-- Split the path by "/"
-- Initialize a mutable list to store valid directory names
-- Ignore empty or current directory tokens
-- Pop from the list if it's not empty (go back to the parent directory)
-- Push valid directory names onto the list
-- Rebuild the simplified path from the list
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3209,6 +2624,13 @@ Let's trace through the code to understand how it processes the input:
 package string.stack
 
 class SimplifyPath {
+    /**
+    * Solves the Simplify Path problem.
+    * Takes `path` (string).
+    *
+    * @param path The input string.
+    * @return The resulting string.
+    */
     fun simplifyPath(path: String): String {
         // Split the path by "/"
         val tokens = path.split("/")
@@ -3248,41 +2670,17 @@ class SimplifyPath {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## String Compression
 
-<span id="stringcompression"></span>
-
 ### Problem
 
-**Stringcompression**
+Solves the String Compression problem.
 
-**Function:** `Compress` takes `chars` (CharArray) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Data Compression Algorithm
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `compress` processes the input
-2. Uses helper functions: string_compression_inline
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `count`, `sb`, `partitionLength`, `i`, `currentChar`, `count`
-
-**Execution flow:**
-- Data Compression Algorithm
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3292,6 +2690,13 @@ package string
 // Data Compression Algorithm
 
 class StringCompression {
+    /**
+    * Solves the String Compression problem.
+    * Takes `chars` (CharArray).
+    *
+    * @param chars The input CharArray.
+    * @return The computed integer result.
+    */
     fun compress(chars: CharArray): Int {
         var count = 0
         val sb = StringBuilder()
@@ -3314,6 +2719,13 @@ class StringCompression {
         return sb.length
     }
 
+    /**
+    * Solves the String Compression problem.
+    * Takes `chars` (CharArray).
+    *
+    * @param chars The input CharArray.
+    * @return The computed integer result.
+    */
     fun string_compression_inline(chars: CharArray): Int {
         var partitionLength = 0
         var i = 0
@@ -3345,34 +2757,17 @@ class StringCompression {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## String Compression_II
 
-<span id="stringcompression_ii"></span>
-
 ### Problem
 
-**Stringcompression Ii**
+Solves the String Compression_II problem.
 
-**Function:** `Compressed String` takes `word` (string) and returns **string**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `compressedString` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `compressed`, `i`, `ch`, `count`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3380,6 +2775,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class StringCompression_II {
+    /**
+    * Solves the String Compression_II problem.
+    * Takes `word` (string).
+    *
+    * @param word The input string.
+    * @return The resulting string.
+    */
     fun compressedString(word: String): String {
         val compressed = StringBuilder()
 
@@ -3409,49 +2811,17 @@ class StringCompression_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Unique Length3 Palindromic Subsequence
 
-<span id="uniquelength3palindromicsubsequence"></span>
-
 ### Problem
 
-**Uniquelength3Palindromicsubsequence**
+Solves the Unique Length3Palindromic Subsequence problem.
 
-**Function:** `Count Palindromic Subsequence` takes `s` (string) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Step 1: Record positions of each character
-- Step 2: Process each character's occurrences
-- Skip if there's no room between the first and last occurrence
-- Count distinct characters between first and last occurrence
-
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `charPositions`, `count`, `start`, `end`, `distinctChars`
-
-**Execution flow:**
-- Step 1: Record positions of each character
-- Step 2: Process each character's occurrences
-- Skip if there's no room between the first and last occurrence
-- Count distinct characters between first and last occurrence
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3459,6 +2829,13 @@ Let's trace through the code to understand how it processes the input:
 package string.hashtable
 
 class UniqueLength3PalindromicSubsequence {
+    /**
+    * Solves the Unique Length3Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun countPalindromicSubsequence(s: String): Int {
         val charPositions = mutableMapOf<Char, MutableList<Int>>()
 
@@ -3496,46 +2873,20 @@ class UniqueLength3PalindromicSubsequence {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Unique Substring With Equal Digit Frequency
 
-<span id="uniquesubstringwithequaldigitfrequency"></span>
-
 ### Problem
 
-**Uniquesubstringwithequaldigitfrequency**
+Solves the Unique Substring With Equal Digit Frequency problem.
 
-**Function:** `Equal Digit Frequency` takes `s` (string) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Precompute prefix frequency arrays
-- Iterate over all possible substrings
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `equalDigitFrequency` processes the input
-2. Uses helper functions: hasEqualFrequency
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `n`, `uniqueSubstrings`, `prefixFreq`, `freq`, `uniqueFreq`
-
-**Execution flow:**
-- Precompute prefix frequency arrays
-- Iterate over all possible substrings
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3543,6 +2894,13 @@ Let's trace through the code to understand how it processes the input:
 package string.hashtable
 
 class UniqueSubstringWithEqualDigitFrequency {
+    /**
+    * Solves the Unique Substring With Equal Digit Frequency problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun equalDigitFrequency(s: String): Int {
         val n = s.length
         val uniqueSubstrings = mutableSetOf<String>()
@@ -3573,6 +2931,12 @@ class UniqueSubstringWithEqualDigitFrequency {
         return uniqueSubstrings.size
     }
 
+    /**
+    * Helper: has equal frequency.
+    *
+    * @param freq The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun hasEqualFrequency(freq: IntArray): Boolean {
         var uniqueFreq = -1
         for (count in freq) {
@@ -3596,40 +2960,17 @@ class UniqueSubstringWithEqualDigitFrequency {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Valid Anagram
 
-<span id="validanagram"></span>
-
 ### Problem
 
-**Validanagram**
+Solves the Valid Anagram problem.
 
-**Function:** `Is Anagram` takes `s` (string), `t` (string) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Check if all counts are zero
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `isAnagram` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `charCount`
-
-**Execution flow:**
-- Check if all counts are zero
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3637,6 +2978,14 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ValidAnagram {
+    /**
+    * Solves the Valid Anagram problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isAnagram(s: String, t: String): Boolean {
         if (s.length != t.length) return false
 
@@ -3666,51 +3015,17 @@ class ValidAnagram {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Valid Number
 
-<span id="validnumber"></span>
-
 ### Problem
 
-**Validnumber**
+Solves the Valid Number problem.
 
-**Function:** `Is Number` takes `s` (string) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Initialize variables
-- Remove leading/trailing spaces
-- Ensure digits appear after 'e'
-- Can't have multiple dots or dots after 'e'
-- Can't have multiple 'e' or 'e' without preceding number
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `isNumber` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `str`, `c`
-
-**Execution flow:**
-- Initialize variables
-- Remove leading/trailing spaces
-- Ensure digits appear after 'e'
-- Can't have multiple dots or dots after 'e'
-- Can't have multiple 'e' or 'e' without preceding number
-- Reset this to ensure we validate digits after 'e'
-- Sign only valid at start or after 'e'
-- Invalid character
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3718,6 +3033,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ValidNumber {
+    /**
+    * Solves the Valid Number problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isNumber(s: String): Boolean {
         // Initialize variables
         var (hasNum, hasDot, hasE, hasDigitsAfterE) = listOf(false, false, false, false)
@@ -3759,37 +3081,17 @@ class ValidNumber {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Valid Palindrome
 
-<span id="validpalindrome"></span>
-
 ### Problem
 
-**Validpalindrome**
+Solves the Valid Palindrome problem.
 
-**Function:** `Is Palindrome` takes `s` (string) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `isAlpha`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3797,6 +3099,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ValidPalindrome {
+    /**
+    * Solves the Valid Palindrome problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isPalindrome(s: String): Boolean {
         var left = 0
         var right = s.lastIndex
@@ -3825,40 +3134,20 @@ class ValidPalindrome {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
-| **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Valid Palindrome_II
 
-<span id="validpalindrome_ii"></span>
-
 ### Problem
 
-**Validpalindrome Ii**
+Solves the Valid Palindrome_II problem.
 
-**Function:** `Valid Palindrome` takes `s` (string) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `left`, `right`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3866,6 +3155,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ValidPalindrome_II {
+    /**
+    * Solves the Valid Palindrome_II problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun validPalindrome(s: String): Boolean {
         var left = 0
         var right = s.lastIndex
@@ -3882,6 +3178,15 @@ class ValidPalindrome_II {
         return true
     }
 
+    /**
+    * Solves the Valid Palindrome_II problem.
+    * Takes `s` (string), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isPalindrome(s: String, i: Int, j: Int): Boolean {
         var left = i
         var right = j
@@ -3901,49 +3206,20 @@ class ValidPalindrome_II {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
-| **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Valid Palindrome_III
 
-<span id="validpalindrome_iii"></span>
-
 ### Problem
 
-**Validpalindrome Iii**
+Solves the Valid Palindrome_III problem.
 
-**Function:** `Is Valid Palindrome` takes `s` (string), `k` (integer) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Calculate the length of the longest palindromic subsequence
-- Check if the number of deletions required is less than or equal to k
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `end`, `lpsLength`
-
-**Execution flow:**
-- Calculate the length of the longest palindromic subsequence
-- Check if the number of deletions required is less than or equal to k
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -3951,9 +3227,25 @@ Let's trace through the code to understand how it processes the input:
 package string.dynamic_programming
 
 class ValidPalindrome_III {
+    /**
+    * Solves the Valid Palindrome_III problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isValidPalindrome(s: String, k: Int): Boolean {
         val dp = Array(s.length) { IntArray(s.length) { 0 } }
 
+        /**
+        * Solves the Valid Palindrome_III problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
         fun lps(start: Int, length: Int): Int {
             val end = start + length - 1
             return when {
@@ -3979,57 +3271,20 @@ class ValidPalindrome_III {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n × m) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n) space. Each cell requires O(1) or O(n) work, totaling O(n × m).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Valid Palindrome_III_Space Optimized
 
-<span id="validpalindrome_iii_spaceoptimized"></span>
-
 ### Problem
 
-**Validpalindrome Iii Spaceoptimized**
+Solves the Valid Palindrome_III_Space Optimized problem.
 
-**Function:** `Is Valid Palindrome` takes `s` (string), `k` (integer) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Initialize with 1 because each character is a palindrome of length 1
-- Stores the value of dp[i+1][j-1] from the 2D DP approach
-- Store the current dp[j] before updating it
-- If characters match, add 2 to the LPS length of the inner substring
-- Otherwise, take the maximum of excluding s[i] or s[j]
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `n`, `dp`, `prev`, `temp`, `lpsLength`
-
-**Execution flow:**
-- Initialize with 1 because each character is a palindrome of length 1
-- Stores the value of dp[i+1][j-1] from the 2D DP approach
-- Store the current dp[j] before updating it
-- If characters match, add 2 to the LPS length of the inner substring
-- Otherwise, take the maximum of excluding s[i] or s[j]
-- Update prev for the next iteration
-- The length of the LPS for the entire string
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -4037,6 +3292,14 @@ Let's trace through the code to understand how it processes the input:
 package string.dynamic_programming
 
 class ValidPalindrome_III_SpaceOptimized {
+    /**
+    * Solves the Valid Palindrome_III_Space Optimized problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isValidPalindrome(s: String, k: Int): Boolean {
         val n = s.length
         val dp = IntArray(n) { 1 } // Initialize with 1 because each character is a palindrome of length 1
@@ -4067,35 +3330,17 @@ class ValidPalindrome_III_SpaceOptimized {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## Validate IP Address
 
-<span id="validateipaddress"></span>
-
 ### Problem
 
-**Validateipaddress**
+Solves the Validate IPAddress problem.
 
-**Function:** `Valid Ipaddress` takes `queryIP` (string) and returns **string**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `validIPAddress` processes the input
-2. Uses helper functions: isValidIPv4, isValidIPv6
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `segments`, `segments`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -4103,6 +3348,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ValidateIPAddress {
+    /**
+    * Solves the Validate IPAddress problem.
+    * Takes `queryIP` (string).
+    *
+    * @param queryIP The input string.
+    * @return The resulting string.
+    */
     fun validIPAddress(queryIP: String): String {
         return when {
             isValidIPv4(queryIP) -> "IPv4"
@@ -4111,6 +3363,12 @@ class ValidateIPAddress {
         }
     }
 
+    /**
+    * Helper: is valid ipv4.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isValidIPv4(ip: String): Boolean {
         if (ip.startsWith('.') || ip.endsWith('.')) return false
 
@@ -4131,6 +3389,12 @@ class ValidateIPAddress {
         }
     }
 
+    /**
+    * Helper: is valid ipv6.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isValidIPv6(ip: String): Boolean {
         if (ip.startsWith(':') || ip.endsWith(':')) return false
 
@@ -4155,40 +3419,17 @@ class ValidateIPAddress {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Valid Word Abbreviation
 
-<span id="validwordabbreviation"></span>
-
 ### Problem
 
-**Validwordabbreviation**
+Solves the Valid Word Abbreviation problem.
 
-**Function:** `Valid Word Abbreviation` takes `word` (string), `abbr` (string) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Leading zero check
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `validWordAbbreviation` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `i`, `j`, `count`
-
-**Execution flow:**
-- Leading zero check
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -4196,6 +3437,14 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ValidWordAbbreviation {
+    /**
+    * Solves the Valid Word Abbreviation problem.
+    * Takes `word` (string), `abbr` (string).
+    *
+    * @param word The input string.
+    * @param abbr The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun validWordAbbreviation(word: String, abbr: String): Boolean {
         var i = 0
         var j = 0
@@ -4228,34 +3477,17 @@ class ValidWordAbbreviation {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Maximum Numberof Vowelsin Substringof Given Length
 
-<span id="maximumnumberofvowelsinsubstringofgivenlength"></span>
-
 ### Problem
 
-**Maximumnumberofvowelsinsubstringofgivenlength**
+Solves the Maximum Numberof Vowelsin Substringof Given Length problem.
 
-**Function:** `Max Vowels` takes `s` (string), `k` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `maxVowels` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `vowels`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -4263,6 +3495,14 @@ Let's trace through the code to understand how it processes the input:
 package string.sliding_window
 
 class MaximumNumberofVowelsinSubstringofGivenLength {
+    /**
+    * Solves the Maximum Numberof Vowelsin Substringof Given Length problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun maxVowels(s: String, k: Int): Int {
         var (vowelWindowCount, maxCount) = Pair(0,0)
         val vowels = setOf('a', 'e', 'i', 'o', 'u')
@@ -4293,34 +3533,17 @@ class MaximumNumberofVowelsinSubstringofGivenLength {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Permutations In String
 
-<span id="permutationsinstring"></span>
-
 ### Problem
 
-**Permutationsinstring**
+Solves the Permutations In String problem.
 
-**Function:** `Check Inclusion` takes `s1` (string), `s2` (string) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `checkInclusion` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `targetFreq`, `windowFreq`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -4328,6 +3551,14 @@ Let's trace through the code to understand how it processes the input:
 package string.hashtable
 
 class PermutationsInString {
+    /**
+    * Solves the Permutations In String problem.
+    * Takes `s1` (string), `s2` (string).
+    *
+    * @param s1 The input string.
+    * @param s2 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun checkInclusion(s1: String, s2: String): Boolean {
         val targetFreq = IntArray(26)
         val windowFreq = IntArray(26)
@@ -4355,37 +3586,17 @@ class PermutationsInString {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Reverse Vowel Of String
 
-<span id="reversevowelofstring"></span>
-
 ### Problem
 
-**Reversevowelofstring**
+Solves the Reverse Vowel Of String problem.
 
-**Function:** `Reverse Vowels` takes `s` (string) and returns **string**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `vowels`, `result`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -4393,6 +3604,13 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ReverseVowelOfString {
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun reverseVowels(s: String): String {
         val vowels = setOf('a', 'e', 'i', 'o', 'u')
         val result = StringBuilder(s)
@@ -4412,6 +3630,15 @@ class ReverseVowelOfString {
         return result.toString()
     }
 
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (StringBuilder), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun swap(s: StringBuilder, i: Int, j: Int) {
         s[j] = s[i].also { s[i] = s[j]}
     }
@@ -4422,19 +3649,7 @@ class ReverseVowelOfString {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — String problems use: two pointers, sliding window, DP (LCS, edit distance), KMP/Rabin-Karp for pattern matching, and trie for prefix search.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

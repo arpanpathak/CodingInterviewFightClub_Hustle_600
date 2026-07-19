@@ -1,11 +1,25 @@
 package array.dp
 
 class HouseRobber {
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun rob(nums: IntArray): Int {
         val dp = IntArray(nums.size) { -1 }
         return rob(dp, nums, 0)
     }
 
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun rob(dp: IntArray, nums: IntArray, i: Int): Int {
         return when {
             i >= nums.size -> 0
@@ -17,6 +31,13 @@ class HouseRobber {
         }
     }
 
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun rob_iterative(nums: IntArray): Int {
         if (nums.isEmpty()) return 0
 

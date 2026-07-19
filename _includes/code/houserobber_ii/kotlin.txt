@@ -1,6 +1,13 @@
 package array.dp
 
 class HouseRobber_II {
+    /**
+    * Solves the House Robber_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun rob(nums: IntArray): Int {
         return when {
             nums.size == 1 -> nums[0]

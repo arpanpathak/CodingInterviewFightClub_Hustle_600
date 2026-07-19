@@ -1,6 +1,14 @@
 package tree
 
 class PathSum {
+    /**
+    * Solves the Path Sum problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun hasPathSum(root: TreeNode?, targetSum: Int): Boolean {
         return when {
             root == null -> false

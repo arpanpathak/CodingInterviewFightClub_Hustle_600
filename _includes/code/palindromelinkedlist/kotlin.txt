@@ -2,6 +2,13 @@ package linkedlist
 
 class PalindromeLinkedList {
     class Solution {
+        /**
+        * Solves the Palindrome Linked List problem.
+        * Takes `head` (linked list node reference).
+        *
+        * @param head The input linked list node reference.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun isPalindrome(head: ListNode?): Boolean {
             if (head?.next == null) return true // Edge case: empty or single node
 
@@ -32,6 +39,12 @@ class PalindromeLinkedList {
             return true
         }
 
+        /**
+        * Helper: reverse list.
+        *
+        * @param head The input linked list node reference.
+        * @return The resulting collection (linked list node reference).
+        */
         private fun reverseList(head: ListNode?): ListNode? {
             var prev: ListNode? = null
             var curr = head

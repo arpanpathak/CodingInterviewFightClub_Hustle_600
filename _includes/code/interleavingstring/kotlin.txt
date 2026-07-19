@@ -1,11 +1,28 @@
 package string.dynamic_programming
 
 class InterleavingString {
+    /**
+    * Solves the Interleaving String problem.
+    * Takes `s1` (string), `s2` (string), `s3` (string).
+    *
+    * @param s1 The input string.
+    * @param s2 The input string.
+    * @param s3 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isInterleave(s1: String, s2: String, s3: String): Boolean {
         if (s1.length + s2.length != s3.length) return false
 
         val memo = mutableMapOf<Pair<Int, Int>, Boolean>()
 
+        /**
+        * Solves the Interleaving String problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun dfs(i: Int, j: Int): Boolean {
             if (i == s1.length && j == s2.length) return true
             if (memo.containsKey(i to j)) return memo[i to j]!!

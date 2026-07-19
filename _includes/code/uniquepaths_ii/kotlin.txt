@@ -3,6 +3,13 @@ package grid.dynamic_programming
 import oracle.net.aso.m
 
 class UniquePaths_II {
+    /**
+    * Solves the Unique Paths_II problem.
+    * Takes `obstacleGrid` (2D matrix of integers).
+    *
+    * @param obstacleGrid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun uniquePathsWithObstacles(obstacleGrid: Array<IntArray>): Int {
         val (R, C) = obstacleGrid.size to obstacleGrid[0].size
         val dp = Array(R) { IntArray(C) }.apply { this[0][0] = 1 }

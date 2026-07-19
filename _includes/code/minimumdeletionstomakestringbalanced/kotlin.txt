@@ -1,6 +1,13 @@
 package stack
 
 class MinimumDeletionsToMakeStringBalanced {
+    /**
+    * Solves the Minimum Deletions To Make String Balanced problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun minimumDeletions(s: String): Int {
         val stack = ArrayDeque<Char>()
         var deletions = 0

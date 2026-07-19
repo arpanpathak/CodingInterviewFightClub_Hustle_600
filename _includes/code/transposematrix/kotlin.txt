@@ -1,6 +1,13 @@
 package array
 
 class TransposeMatrix {
+    /**
+    * Solves the Transpose Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun transpose(matrix: Array<IntArray>): Array<IntArray> {
         val rows = matrix.size
         val cols = matrix[0].size

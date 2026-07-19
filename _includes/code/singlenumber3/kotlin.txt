@@ -1,6 +1,13 @@
 package bitset
 
 class SingleNumber3 {
+    /**
+    * Solves the Single Number3 problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun singleNumber(nums: IntArray): IntArray {
         var xorSum = 0
         for (num in nums) {
@@ -23,6 +30,12 @@ class SingleNumber3 {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
             val test = SingleNumber3()
 

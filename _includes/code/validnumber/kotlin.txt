@@ -1,6 +1,13 @@
 package string
 
 class ValidNumber {
+    /**
+    * Solves the Valid Number problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isNumber(s: String): Boolean {
         // Initialize variables
         var (hasNum, hasDot, hasE, hasDigitsAfterE) = listOf(false, false, false, false)

@@ -1,6 +1,14 @@
 package math
 
 class AddStrings {
+    /**
+    * Solves the Add Strings problem.
+    * Takes `num1` (string), `num2` (string).
+    *
+    * @param num1 The input string.
+    * @param num2 The input string.
+    * @return The resulting string.
+    */
     fun addStrings(num1: String, num2: String): String {
         val sb = StringBuilder()
         var (i, j) = num1.length - 1 to num2.length - 1

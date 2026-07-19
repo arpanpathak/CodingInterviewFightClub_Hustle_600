@@ -1,6 +1,14 @@
 package string
 
 class ApplySubstitutions {
+    /**
+    * Solves the Apply Substitutions problem.
+    * Takes `replacements` (List<List<String>>), `text` (string).
+    *
+    * @param replacements The input List<List<String>>.
+    * @param text The input string.
+    * @return The resulting string.
+    */
     fun applySubstitutions(replacements: List<List<String>>, text: String): String {
         val map = mutableMapOf<String, String>()
 
@@ -8,6 +16,13 @@ class ApplySubstitutions {
             map[key] = value
         }
 
+        /**
+        * Solves the Apply Substitutions problem.
+        * Takes `s` (string).
+        *
+        * @param s The input string.
+        * @return The resulting string.
+        */
         fun resolve(s: String): String {
             val sb = StringBuilder()
             var i = 0

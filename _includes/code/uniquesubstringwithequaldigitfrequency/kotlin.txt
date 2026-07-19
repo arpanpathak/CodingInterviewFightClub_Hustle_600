@@ -1,6 +1,13 @@
 package string.hashtable
 
 class UniqueSubstringWithEqualDigitFrequency {
+    /**
+    * Solves the Unique Substring With Equal Digit Frequency problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun equalDigitFrequency(s: String): Int {
         val n = s.length
         val uniqueSubstrings = mutableSetOf<String>()
@@ -31,6 +38,12 @@ class UniqueSubstringWithEqualDigitFrequency {
         return uniqueSubstrings.size
     }
 
+    /**
+    * Helper: has equal frequency.
+    *
+    * @param freq The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun hasEqualFrequency(freq: IntArray): Boolean {
         var uniqueFreq = -1
         for (count in freq) {

@@ -14,6 +14,13 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
     private val url = ALPACA_MARKET_WEBSOCKET_STREAM_URL
     private val httpClient = OkHttpClient()
 
+    /**
+    * Solves the Alpaca Web Socket Factory problem.
+    * Takes `streams` (list of strings).
+    *
+    * @param streams The input list of strings.
+    * @return The resulting string.
+    */
     fun createWebSocket(streams: List<String>): Channel<String> {
         val request = Request.Builder()
             .url(url)
@@ -23,18 +30,40 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
 
         val messageChannel = Channel<String>(Channel.UNLIMITED)
         val webSocketListener = object : WebSocketListener() {
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param response The Response.
+            * @return Unit (no return value, modifies state in-place).
+            */
             override fun onOpen(webSocket: WebSocket, response: Response) {
                 println("Connected to the server!")
                 authenticate(webSocket)
                 subscribeToStreams(webSocket, streams)
             }
 
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param text The input string.
+            * @return Unit (no return value, modifies state in-place).
+            */
             override fun onMessage(webSocket: WebSocket, text: String) {
                 scope.launch {
                     messageChannel.send(text)
                 }
             }
 
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param code The integer parameter representing code.
+            * @param reason The input string.
+            * @return Unit (no return value, modifies state in-place).
+            */
             override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
                 println("Closing: $code / $reason")
                 webSocket.close(1000, null)  // Ensure normal closure
@@ -43,6 +72,14 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
                 }
             }
 
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param t The Throwable.
+            * @param response The Response? (nullable).
+            * @return Unit (no return value, modifies state in-place).
+            */
             override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
                 println("Error: " + t.message)
             }
@@ -52,6 +89,12 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
         return messageChannel
     }
 
+    /**
+    * Helper: authenticate.
+    *
+    * @param webSocket The WebSocket.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun authenticate(webSocket: WebSocket) {
         webSocket.send("""
             {
@@ -64,6 +107,13 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
         """.trimIndent())
     }
 
+    /**
+    * Helper: subscribe to streams.
+    *
+    * @param webSocket The WebSocket.
+    * @param streams The input list of strings.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun subscribeToStreams(webSocket: WebSocket, streams: List<String>) {
         val formattedStreams = streams.joinToString(separator = "\",\"", prefix = "\"", postfix = "\"")
         webSocket.send("""

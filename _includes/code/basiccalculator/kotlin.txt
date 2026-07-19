@@ -6,6 +6,12 @@ class BasicCalculator {
     private val operators = setOf('(' , '+', '-')
 
     // Function to get precedence of operators
+    /**
+    * Helper: precedence.
+    *
+    * @param op The character.
+    * @return The computed integer result.
+    */
     private fun precedence(op: Char): Int {
         return when (op) {
             '+', '-' -> 1
@@ -14,6 +20,12 @@ class BasicCalculator {
     }
 
     // Function to convert infix to postfix with unary operators handled
+    /**
+    * Helper: infix to postfix.
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     private fun infixToPostfix(s: String): String {
         val stack = Stack<Char>()
         val postfix = StringBuilder()
@@ -70,6 +82,12 @@ class BasicCalculator {
     }
 
     // Function to evaluate postfix expression
+    /**
+    * Helper: evaluate postfix.
+    *
+    * @param postfix The input string.
+    * @return The computed integer result.
+    */
     private fun evaluatePostfix(postfix: String): Int {
         val stack = Stack<Int>()
         var i = 0
@@ -101,6 +119,13 @@ class BasicCalculator {
         return stack.pop()
     }
 
+    /**
+    * Solves the Basic Calculator problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun calculate(s: String): Int {
         val postfix = infixToPostfix(s.replace(" ", "")) // Convert infix expression to postfix
         return evaluatePostfix(postfix) // Evaluate the postfix expression

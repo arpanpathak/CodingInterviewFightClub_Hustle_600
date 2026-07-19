@@ -12,6 +12,13 @@ class MinCostToConnectAllPointsKruskal {
     class UnionFind(size: Int) {
         private val nodes = Array(size) { UnionFindNode(it, 0) }
 
+        /**
+        * Solves the Min Cost To Connect All Points Kruskal problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
         fun find(x: Int): Int {
             if (nodes[x].parent != x) {
                 nodes[x].parent = find(nodes[x].parent)
@@ -19,6 +26,14 @@ class MinCostToConnectAllPointsKruskal {
             return nodes[x].parent
         }
 
+        /**
+        * Solves the Min Cost To Connect All Points Kruskal problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun union(x: Int, y: Int) {
             val rootX = find(x)
             val rootY = find(y)
@@ -35,6 +50,13 @@ class MinCostToConnectAllPointsKruskal {
         }
     }
 
+    /**
+    * Solves the Min Cost To Connect All Points Kruskal problem.
+    * Takes `points` (2D matrix of integers).
+    *
+    * @param points The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun minCostConnectPoints(points: Array<IntArray>): Int {
         val edges = mutableListOf<Edge>()
         for (i in points.indices) {

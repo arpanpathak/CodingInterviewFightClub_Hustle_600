@@ -1,6 +1,13 @@
 package linkedlist
 
 class LinkedListCycle {
+    /**
+    * Solves the Linked List Cycle problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun hasCycle(head: ListNode?): Boolean {
         if (head == null || head.next == null) return false
 
@@ -19,6 +26,13 @@ class LinkedListCycle {
     }
 
     // Better version
+    /**
+    * Solves the Linked List Cycle problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun hasCycle2(head: ListNode?): Boolean {
         var slow = head
         var fast = head

@@ -3,6 +3,13 @@ package string
 // Data Compression Algorithm
 
 class StringCompression {
+    /**
+    * Solves the String Compression problem.
+    * Takes `chars` (CharArray).
+    *
+    * @param chars The input CharArray.
+    * @return The computed integer result.
+    */
     fun compress(chars: CharArray): Int {
         var count = 0
         val sb = StringBuilder()
@@ -25,6 +32,13 @@ class StringCompression {
         return sb.length
     }
 
+    /**
+    * Solves the String Compression problem.
+    * Takes `chars` (CharArray).
+    *
+    * @param chars The input CharArray.
+    * @return The computed integer result.
+    */
     fun string_compression_inline(chars: CharArray): Int {
         var partitionLength = 0
         var i = 0

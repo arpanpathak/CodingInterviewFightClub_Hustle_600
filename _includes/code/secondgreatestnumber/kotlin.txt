@@ -2,6 +2,13 @@ package facebook
 
 class SecondGreatestNumber {
 
+    /**
+    * Solves the Second Greatest Number problem.
+    * Takes `digits` (mutable list of integers).
+    *
+    * @param digits The input mutable list of integers.
+    * @return The computed integer result.
+    */
     fun secondGreatestNumber(digits: MutableList<Int>): Int? {
         digits.sortBy{ -it }
         for (i in digits.size - 1 downTo 1) {
@@ -17,6 +24,12 @@ class SecondGreatestNumber {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
             val test = SecondGreatestNumber()
 

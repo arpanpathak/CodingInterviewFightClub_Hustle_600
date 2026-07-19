@@ -1,6 +1,13 @@
 package simulation
 
 class CountCollisionsOnARoad {
+    /**
+    * Solves the Count Collisions On ARoad problem.
+    * Takes `directions` (string).
+    *
+    * @param directions The input string.
+    * @return The computed integer result.
+    */
     fun countCollisions(directions: String): Int {
         TODO()
     }

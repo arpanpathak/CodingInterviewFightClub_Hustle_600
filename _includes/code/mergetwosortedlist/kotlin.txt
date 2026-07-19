@@ -1,6 +1,14 @@
 package linkedlist
 
 class MergeTwoSortedLIst {
+    /**
+    * Solves the Merge Two Sorted LIst problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         val head = ListNode(0) // dummy node
         var ptr = head

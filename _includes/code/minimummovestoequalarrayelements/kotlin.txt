@@ -1,6 +1,13 @@
 package math
 
 class MinimumMovesToEqualArrayElements {
+    /**
+    * Solves the Minimum Moves To Equal Array Elements problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun minMoves(nums: IntArray): Int {
         val min = nums.minOrNull() ?: 0
         return nums.sumOf { it - min }

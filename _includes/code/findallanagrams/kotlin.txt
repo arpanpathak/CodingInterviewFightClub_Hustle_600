@@ -1,6 +1,14 @@
 package string.sliding_window
 
 class FindAllAnagrams {
+    /**
+    * Solves the Find All Anagrams problem.
+    * Takes `s` (string), `p` (string).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @return The computed integer result.
+    */
     fun findAnagrams(s: String, p: String): List<Int> {
         val result = mutableListOf<Int>()
         if (s.length < p.length) return result

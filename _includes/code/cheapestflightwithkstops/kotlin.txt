@@ -5,6 +5,17 @@ import java.util.*
 class CheapestFlightWithKStops {
     data class Flight(val node: Int, val cost: Int, val stops: Int)
 
+    /**
+    * Solves the Cheapest Flight With KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         val graph = flights.groupBy({ it[0] }) { Flight(it[1], it[2], 0) }
         val pq = PriorityQueue<Flight>(compareBy { it.cost })

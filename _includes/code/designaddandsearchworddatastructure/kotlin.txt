@@ -9,6 +9,13 @@ class DesignAddAndSearchWordDataStructure {
 
         private val root = TrieNode()
 
+        /**
+        * Solves the Design Add And Search Word Data Structure problem.
+        * Takes `word` (string).
+        *
+        * @param word The input string.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun addWord(word: String) {
             var current = root
             for (ch in word) {
@@ -17,7 +24,22 @@ class DesignAddAndSearchWordDataStructure {
             current.isEnd = true
         }
 
+        /**
+        * Solves the Design Add And Search Word Data Structure problem.
+        * Takes `word` (string).
+        *
+        * @param word The input string.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun search(word: String): Boolean {
+            /**
+            * Solves the Design Add And Search Word Data Structure problem.
+            * Takes `index` (integer), `node` (TrieNode).
+            *
+            * @param index The integer parameter representing index.
+            * @param node The TrieNode.
+            * @return `true` if the condition is met, `false` otherwise.
+            */
             fun dfs(index: Int, node: TrieNode): Boolean {
                 when {
                     index == word.length -> return node.isEnd

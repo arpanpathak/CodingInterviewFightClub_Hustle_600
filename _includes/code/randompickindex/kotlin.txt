@@ -16,6 +16,13 @@ class RandomPickIndex(nums: IntArray) {
         }
     }
 
+    /**
+    * Solves the Random Pick Index problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun pick(target: Int): Int {
         // Randomly pick an index from the stored indices
         val indices = targetIndices[target] ?: return -1  // If target not found, return -1

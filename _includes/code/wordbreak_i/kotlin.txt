@@ -4,6 +4,14 @@ class WordBreak_I {
     // TrieNode class as a data class
     data class TrieNode(val children: MutableMap<Char, TrieNode> = mutableMapOf(), var endOfWord: Boolean = false)
 
+    /**
+    * Solves the Word Break_I problem.
+    * Takes `s` (string), `wordDict` (list of strings).
+    *
+    * @param s The input string.
+    * @param wordDict The input list of strings.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun wordBreak(s: String, wordDict: List<String>): Boolean {
         val root = TrieNode()
 
@@ -19,6 +27,13 @@ class WordBreak_I {
         val dp = mutableMapOf<Int, Boolean>().apply  { this[s.length] = true} // Base case: empty suffix can always be segmented
 
         // Recursive function to check if string s[i..] can be segmented
+        /**
+        * Solves the Word Break_I problem.
+        * Takes `i` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun canSegment(i: Int): Boolean {
             dp[i]?.let {  return it }// Already marked as segmentable
             var node = root

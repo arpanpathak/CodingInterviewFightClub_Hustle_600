@@ -1,6 +1,13 @@
 package math.geometry.binarysearch
 
 class SeperateSquares_I {
+    /**
+    * Solves the Seperate Squares_I problem.
+    * Takes `squares` (2D matrix of integers).
+    *
+    * @param squares The input 2D matrix of integers.
+    * @return The computed floating-point result.
+    */
     fun separateSquares(squares: Array<IntArray>): Double {
         var (low, high, totalArea) = listOf(Double.MAX_VALUE, Double.MAX_VALUE, 0.0)
 
@@ -11,6 +18,13 @@ class SeperateSquares_I {
             totalArea += side * side
         }
 
+        /**
+        * Solves the Seperate Squares_I problem.
+        * Takes `yLine` (double-precision floating point).
+        *
+        * @param yLine The double-precision floating point parameter representing yLine.
+        * @return The computed floating-point result.
+        */
         fun areaBelow(yLine: Double): Double {
             var area = 0.0
             for ((_,y,l) in squares) {

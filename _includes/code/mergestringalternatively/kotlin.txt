@@ -1,6 +1,14 @@
 package string
 
 class MergeStringAlternatively {
+    /**
+    * Solves the Merge String Alternatively problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The resulting string.
+    */
     fun mergeAlternately(word1: String, word2: String): String {
         val mergedString = StringBuilder()
 

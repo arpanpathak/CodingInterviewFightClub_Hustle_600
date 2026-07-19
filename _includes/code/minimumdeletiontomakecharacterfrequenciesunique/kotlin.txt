@@ -1,6 +1,13 @@
 package string
 
 class MinimumDeletionToMakeCharacterFrequenciesUnique {
+    /**
+    * Solves the Minimum Deletion To Make Character Frequencies Unique problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun minDeletions(s: String): Int {
         val freq = IntArray(26)
         for (ch in s) freq[ch - 'a']++

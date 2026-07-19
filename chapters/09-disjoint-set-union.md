@@ -14,11 +14,11 @@ next_chapter:
 
 # Disjoint Set Union
 
-> **3 problems** — Master union-find for connectivity problems and dynamic graph components.
+> **3 problems** — Master union-find for connectivity and dynamic graph components.
 
 ## The Pattern
 
-DSU tracks connected components. Union by rank and path compression give near-O(1) operations.
+DSU tracks connected components. Union by rank + path compression = near-O(1).
 
 ## Complete Problem Set
 
@@ -32,39 +32,13 @@ DSU tracks connected components. Union by rank and path compression give near-O(
 
 ## Account Merge
 
-<span id="accountmerge"></span>
-
 ### Problem
 
-**Accountmerge**
+Solves the Account Merge problem.
 
-**Function:** `Find` takes `x` (T) and returns **T**.
+### Why This Approach
 
-**Key logic:**
-- Add emails to Union-Find, map them to their owner's name, and union them in one pass
-- Group emails by their root parent
-- Construct the result
-
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `parent`, `rank`, `nodes`, `node`, `rootX`, `rootY`, `nodeX`, `nodeY`
-
-**Execution flow:**
-- Add emails to Union-Find, map them to their owner's name, and union them in one pass
-- Group emails by their root parent
-- Construct the result
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -78,10 +52,24 @@ class AccountMerge {
 
         private val nodes = mutableMapOf<T, Node<T>>()
 
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun add(x: T) {
             nodes.putIfAbsent(x, Node(x, 0))
         }
 
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return The computed result (T).
+        */
         fun find(x: T): T {
             val node = nodes[x] ?: throw IllegalAccessException("Value $x not found")
 
@@ -91,6 +79,14 @@ class AccountMerge {
             return node.parent
         }
 
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T), `y` (T).
+        *
+        * @param x The T.
+        * @param y The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun union(x: T, y: T) {
             val rootX = find(x)
             val rootY = find(y)
@@ -109,6 +105,13 @@ class AccountMerge {
         }
     }
 
+    /**
+    * Solves the Account Merge problem.
+    * Takes `accounts` (List<List<String>>).
+    *
+    * @param accounts The input List<List<String>>.
+    * @return The resulting collection (List<List<String>).
+    */
     fun accountsMerge(accounts: List<List<String>>): List<List<String>> {
         val emailToName = mutableMapOf<String, String>()
         val uf = UnionFind<String>()
@@ -143,46 +146,20 @@ class AccountMerge {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Number Of Island_II
 
-<span id="numberofisland_ii"></span>
-
 ### Problem
 
-**Numberofisland Ii**
+Solves the Number Of Island_II problem.
 
-**Function:** `Find` takes `x` (Pair<integer), `Int>` (?) and returns **Pair**.
+### Why This Approach
 
-**Key logic:**
-- Path compression
-
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `parent`, `rank`, `count`, `rootX`, `rootY`, `uf`, `result`, `directions`
-
-**Execution flow:**
-- Path compression
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -195,6 +172,13 @@ class NumberOfIsland_II {
         val rank = mutableMapOf<Pair<Int, Int>, Int>()
         var count = 0
 
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `x` (Pair<Int).
+        *
+        * @param x The Pair<Int.
+        * @return The computed integer result.
+        */
         fun find(x: Pair<Int, Int>): Pair<Int, Int> {
             if (parent[x] != x) {
                 parent[x] = find(parent[x]!!) // Path compression
@@ -202,6 +186,14 @@ class NumberOfIsland_II {
             return parent[x]!!
         }
 
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `x` (Pair<Int), `y` (Pair<Int).
+        *
+        * @param x The Pair<Int.
+        * @param y The Pair<Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun union(x: Pair<Int, Int>, y: Pair<Int, Int>) {
             val rootX = find(x)
             val rootY = find(y)
@@ -218,6 +210,13 @@ class NumberOfIsland_II {
             count--
         }
 
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `position` (Pair<Int).
+        *
+        * @param position The Pair<Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun addLand(position: Pair<Int, Int>) {
             if (parent.containsKey(position)) return
             parent[position] = position
@@ -226,6 +225,15 @@ class NumberOfIsland_II {
         }
     }
 
+    /**
+    * Solves the Number Of Island_II problem.
+    * Takes `m` (integer), `n` (integer), `positions` (2D matrix of integers).
+    *
+    * @param m The integer parameter representing m.
+    * @param n The integer parameter representing n.
+    * @param positions The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun numIslands2(m: Int, n: Int, positions: Array<IntArray>): List<Int> {
         val uf = UnionFind()
         val result = mutableListOf<Int>()
@@ -257,40 +265,20 @@ class NumberOfIsland_II {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Union Find
 
-<span id="unionfind"></span>
-
 ### Problem
 
-**Unionfind**
+Solves the Union Find problem.
 
-**Function:** `Find` takes `x` (T) and returns **T**.
+### Why This Approach
 
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `parent`, `rank`, `nodes`, `node`, `rootX`, `rootY`, `nodeX`, `nodeY`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -302,10 +290,24 @@ class UnionFind<T> {
 
     private val nodes = mutableMapOf<T, Node<T>>()
 
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun add(x: T) {
         nodes.putIfAbsent(x, Node(x, 0))
     }
 
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return The computed result (T).
+    */
     fun find(x: T): T {
         val node = nodes[x] ?: throw IllegalAccessException("Value $x not found")
 
@@ -315,6 +317,14 @@ class UnionFind<T> {
         return node.parent
     }
 
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T), `y` (T).
+    *
+    * @param x The T.
+    * @param y The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun union(x: T, y: T) {
         val rootX = find(x)
         val rootY = find(y)
@@ -338,19 +348,7 @@ class UnionFind<T> {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — DSU tracks connected components. Union by rank and path compression give near-O(1) operations.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---

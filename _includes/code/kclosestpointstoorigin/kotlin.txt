@@ -3,6 +3,14 @@ package quicksort
 import kotlin.random.Random
 
 class KClosestPointsToOrigin {
+    /**
+    * Solves the KClosest Points To Origin problem.
+    * Takes `points` (2D matrix of integers), `K` (integer).
+    *
+    * @param points The input 2D matrix of integers.
+    * @param K The integer parameter representing K.
+    * @return The computed integer result.
+    */
     fun kClosest(points: Array<IntArray>, K: Int): Array<IntArray> {
         var (start, end) = Pair( 0, points.size - 1)
 
@@ -21,6 +29,14 @@ class KClosestPointsToOrigin {
     }
 
     // Randomized Quicksort function
+    /**
+    * Helper: quick sort.
+    *
+    * @param points The input 2D matrix of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
     private fun quickSort(points: Array<IntArray>, start: Int, end: Int): Int {
         var partitionIndex = start
         val randomIndex = Random.nextInt(start, end + 1)
@@ -40,11 +56,25 @@ class KClosestPointsToOrigin {
     }
 
     // Helper function to swap elements in the array using `also`
+    /**
+    * Helper: swap.
+    *
+    * @param points The input 2D matrix of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun swap(points: Array<IntArray>, i: Int, j: Int) {
         points[j] = points[i].also { points[i] = points[j] }
     }
 
     // Helper function to calculate the squared Euclidean distance
+    /**
+    * Helper: calculate distance.
+    *
+    * @param point The input array of integers.
+    * @return The computed integer result.
+    */
     private fun calculateDistance(point: IntArray): Int {
         return point[0] * point[0] + point[1] * point[1]
     }

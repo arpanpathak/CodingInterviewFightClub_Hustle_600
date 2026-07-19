@@ -1,6 +1,13 @@
 package numbers
 
 class PalindromeNumber {
+    /**
+    * Solves the Palindrome Number problem.
+    * Takes `x` (integer).
+    *
+    * @param x The integer parameter representing x.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isPalindrome(x: Int): Boolean {
         var (reduced, sum) = listOf(x, 0, 1)
 

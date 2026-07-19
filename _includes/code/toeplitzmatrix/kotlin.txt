@@ -1,6 +1,13 @@
 package array
 
 class ToeplitzMatrix {
+    /**
+    * Solves the Toeplitz Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isToeplitzMatrix(matrix: Array<IntArray>): Boolean {
         val m = matrix.size
         val n = matrix[0].size

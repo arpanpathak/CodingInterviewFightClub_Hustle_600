@@ -18,7 +18,7 @@ next_chapter:
 
 ## The Pattern
 
-Two pointers create an O(n) pass where a brute force would be O(n²). The pointers track a window, boundary, or comparison pair.
+Two pointers create O(n) passes where brute force would be O(n^2).
 
 ## Complete Problem Set
 
@@ -67,43 +67,13 @@ Two pointers create an O(n) pass where a brute force would be O(n²). The pointe
 
 ## 4sum
 
-<span id="4sum"></span>
-
 ### Problem
 
-**4Sum**
+Solves the 4sum problem.
 
-**Function:** `Four Sum` takes `nums` (array of integers), `target` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- If we've run out of numbers to add, return res.
-- The average of the remaining k values is at least target / k.
-- Early termination if the smallest number is too large or the largest is too small.
-- Base case: 2Sum (optimized with two pointers)
-- Skip duplicates
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `fourSum` processes the input
-2. Uses helper functions: kSum, twoSum
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `res`, `averageValue`, `res`, `seen`, `complement`
-
-**Execution flow:**
-- If we've run out of numbers to add, return res.
-- The average of the remaining k values is at least target / k.
-- Early termination if the smallest number is too large or the largest is too small.
-- Base case: 2Sum (optimized with two pointers)
-- Skip duplicates
-- Recursively reduce to (k-1)Sum
-- Skip duplicates
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -111,11 +81,28 @@ Let's trace through the code to understand how it processes the input:
 package array.twopointer
 
 class `4Sum` {
+    /**
+    * Solves the 4sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun fourSum(nums: IntArray, target: Int): List<List<Int>> {
         nums.sort()
         return kSum(nums, target.toLong(), 0, 4)
     }
 
+    /**
+    * Helper: k sum.
+    *
+    * @param nums The input array of integers.
+    * @param target The long integer parameter representing target.
+    * @param start The integer parameter representing start.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     private fun kSum(
         nums: IntArray,
         target: Long,
@@ -155,6 +142,14 @@ class `4Sum` {
         return res
     }
 
+    /**
+    * Helper: two sum.
+    *
+    * @param nums The input array of integers.
+    * @param target The long integer parameter representing target.
+    * @param start The integer parameter representing start.
+    * @return The computed integer result.
+    */
     private fun twoSum(
         nums: IntArray,
         target: Long,
@@ -186,49 +181,17 @@ class `4Sum` {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Add Strings
 
-<span id="addstrings"></span>
-
 ### Problem
 
-**Addstrings**
+Solves the Add Strings problem.
 
-**Function:** `Add Strings` takes `num1` (string), `num2` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Process digits from right to left
-- Get the current digits (or 0 if we've run out of digits)
-- Calculate the sum of digits and the carry
-- New carry for the next iteration
-- Append the current digit (sum % 10)
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `addStrings` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `sb`, `carry`, `digit1`, `digit2`, `sum`
-
-**Execution flow:**
-- Process digits from right to left
-- Get the current digits (or 0 if we've run out of digits)
-- Calculate the sum of digits and the carry
-- New carry for the next iteration
-- Append the current digit (sum % 10)
-- The string is built in reverse order, so we need to reverse it
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -236,6 +199,14 @@ Let's trace through the code to understand how it processes the input:
 package math
 
 class AddStrings {
+    /**
+    * Solves the Add Strings problem.
+    * Takes `num1` (string), `num2` (string).
+    *
+    * @param num1 The input string.
+    * @param num2 The input string.
+    * @return The resulting string.
+    */
     fun addStrings(num1: String, num2: String): String {
         val sb = StringBuilder()
         var (i, j) = num1.length - 1 to num2.length - 1
@@ -266,34 +237,17 @@ class AddStrings {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## List Node
 
-<span id="addtwonumbers"></span>
-
 ### Problem
 
-**Addtwonumbers**
+Solves the List Node problem.
 
-**Function:** `Add Two Numbers` takes `l1` (ListNode?), `l2` (ListNode?) and returns **ListNode**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `addTwoNumbers` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `next`, `carry`, `head`, `ptr`, `sum`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -305,6 +259,14 @@ class ListNode(var `val`: Int) {
 }
 
 class AddTwoNumbers {
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         var carry = 0
         val head = ListNode(0)
@@ -339,34 +301,17 @@ class AddTwoNumbers {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Can Place Flowers
 
-<span id="canplaceflowers"></span>
-
 ### Problem
 
-**Canplaceflowers**
+Solves the Can Place Flowers problem.
 
-**Function:** `Can Place Flowers` takes `flowerbed` (array of integers), `n` (integer) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `canPlaceFlowers` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `flowers`, `isLeftEmpty`, `isRightEmpty`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -374,6 +319,14 @@ Let's trace through the code to understand how it processes the input:
 package array.greedy
 
 class CanPlaceFlowers {
+    /**
+    * Solves the Can Place Flowers problem.
+    * Takes `flowerbed` (array of integers), `n` (integer).
+    *
+    * @param flowerbed The input array of integers.
+    * @param n The integer parameter representing n.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canPlaceFlowers(flowerbed: IntArray, n: Int): Boolean {
         var flowers = 0
         for (i in 0 until flowerbed.size) {
@@ -401,37 +354,17 @@ class CanPlaceFlowers {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Container With Most Water
 
-<span id="containerwithmostwater"></span>
-
 ### Problem
 
-**Containerwithmostwater**
+Solves the Container With Most Water problem.
 
-**Function:** `Max Area` takes `height` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `maxWater`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -439,6 +372,13 @@ Let's trace through the code to understand how it processes the input:
 package array.greedy
 
 class ContainerWithMostWater {
+    /**
+    * Solves the Container With Most Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
     fun maxArea(height: IntArray): Int {
         var (start, end) = Pair(0, height.lastIndex)
         var maxWater = 0
@@ -461,40 +401,20 @@ class ContainerWithMostWater {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Contains Duplicate_II
 
-<span id="containsduplicate_ii"></span>
-
 ### Problem
 
-**Containsduplicate Ii**
+Solves the Contains Duplicate_II problem.
 
-**Function:** `Contains Nearby Duplicate` takes `nums` (array of integers), `k` (integer) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `map`, `previousIndex`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -502,6 +422,14 @@ Let's trace through the code to understand how it processes the input:
 package array.hashtable
 
 class ContainsDuplicate_II {
+    /**
+    * Solves the Contains Duplicate_II problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun containsNearbyDuplicate(nums: IntArray, k: Int): Boolean {
         val map = mutableMapOf<Int, Int>()
         for (i in nums.indices) {
@@ -520,40 +448,20 @@ class ContainsDuplicate_II {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Contiguous Array
 
-<span id="contiguousarray"></span>
-
 ### Problem
 
-**Contiguousarray**
+Solves the Contiguous Array problem.
 
-**Function:** `Find Max Length` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `map`, `sum`, `maxLen`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -561,6 +469,13 @@ Let's trace through the code to understand how it processes the input:
 package array.prefixsum
 
 class ContiguousArray {
+    /**
+    * Solves the Contiguous Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun findMaxLength(nums: IntArray): Int {
         val map = mutableMapOf<Int, Int>()
         var sum = 0
@@ -587,43 +502,20 @@ class ContiguousArray {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Continuous Subarray Sum
 
-<span id="continuoussubarraysum"></span>
-
 ### Problem
 
-**Continuoussubarraysum**
+Solves the Continuous Subarray Sum problem.
 
-**Function:** `Check Subarray Sum` takes `nums` (array of integers), `k` (integer) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Pattern https://leetcode.com/problems/continuous-subarray-sum/discuss/5276981/prefix-sum-hashmap-patterns-7-problems
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `checkSubarraySum` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `sumsSet`, `sum`, `prevSum`
-
-**Execution flow:**
-- Pattern https://leetcode.com/problems/continuous-subarray-sum/discuss/5276981/prefix-sum-hashmap-patterns-7-problems
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -632,6 +524,14 @@ package array.prefixsum
 
 // Pattern https://leetcode.com/problems/continuous-subarray-sum/discuss/5276981/prefix-sum-hashmap-patterns-7-problems
 class ContinuousSubarraySum {
+    /**
+    * Solves the Continuous Subarray Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun checkSubarraySum(nums: IntArray, k: Int): Boolean {
         val sumsSet: HashSet<Int> = HashSet(nums.size)
         var sum = 0
@@ -658,50 +558,17 @@ class ContinuousSubarraySum {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Diagonal Traverse
 
-<span id="diagonaltraverse"></span>
-
 ### Problem
 
-**Diagonaltraverse**
+Solves the Diagonal Traverse problem.
 
-**Function:** `Find Diagonal Order` takes `mat` (Array<array of integers>) and returns **array of integers**.
+### Why This Approach
 
-**Key logic:**
-- Enum to represent the direction of diagonal traversal: UP or DOWN
-- Number of rows in the matrix
-- Number of columns in the matrix
-- List to store the diagonal traversal result
-- Row index
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `findDiagonalOrder` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `m`, `n`, `result`, `i`, `j`, `direction`
-
-**Execution flow:**
-- Enum to represent the direction of diagonal traversal: UP or DOWN
-- Number of rows in the matrix
-- Number of columns in the matrix
-- List to store the diagonal traversal result
-- Column index
-- Start moving diagonally in the UP direction
-- Continue traversing until we collect all matrix elements
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -714,6 +581,13 @@ class DiagonalTraverse {
         UP, DOWN
     }
 
+    /**
+    * Solves the Diagonal Traverse problem.
+    * Takes `mat` (2D matrix of integers).
+    *
+    * @param mat The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun findDiagonalOrder(mat: Array<IntArray>): IntArray {
         val m = mat.size        // Number of rows in the matrix
         val n = mat[0].size     // Number of columns in the matrix
@@ -774,47 +648,17 @@ class DiagonalTraverse {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Point
 
-<span id="diagonaltraverse_ii"></span>
-
 ### Problem
 
-**Diagonaltraverse Ii**
+Solves the Point problem.
 
-**Function:** `Find Diagonal Order` takes `nums` (List<List<integer>>) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Start with the first element
-- Move to the next row (i+1, j)
-- Move to the next column (i, j+1)
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `row`, `col`, `result`, `queue`, `visited`
-
-**Execution flow:**
-- Start with the first element
-- Move to the next row (i+1, j)
-- Move to the next column (i, j+1)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -826,6 +670,13 @@ import java.util.*
 data class Point(val row: Int, val col: Int)
 
 class DiagonalTraverse_II {
+    /**
+    * Solves the Point problem.
+    * Takes `nums` (2D list of integers).
+    *
+    * @param nums The input 2D list of integers.
+    * @return The computed integer result.
+    */
     fun findDiagonalOrder(nums: List<List<Int>>): List<Int> {
         val result = mutableListOf<Int>()
         val queue: Queue<Pair<Int, Int>> = LinkedList()
@@ -863,37 +714,17 @@ class DiagonalTraverse_II {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Randomized Set
 
-<span id="insertdeletegetrandomato1"></span>
-
 ### Problem
 
-**Insertdeletegetrandomato1**
+Solves the Randomized Set problem.
 
-**Function:** `Insert` takes ``val`` (integer) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `list`, `map`, `index`, `lastElement`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -906,6 +737,13 @@ class RandomizedSet() {
     private val list = mutableListOf<Int>()
     private val map = mutableMapOf<Int, Int>()
 
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun insert(`val`: Int): Boolean {
         if (!map.containsKey(`val`))
             return false
@@ -914,6 +752,13 @@ class RandomizedSet() {
         return true
     }
 
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun remove(`val`: Int): Boolean {
         if (map.containsKey(`val`))
             return false
@@ -929,6 +774,11 @@ class RandomizedSet() {
         return true
     }
 
+    /**
+    * Solves the Randomized Set problem.
+    *
+    * @return The computed integer result.
+    */
     fun getRandom(): Int {
         return list[Random.nextInt(list.size)]
     }
@@ -940,37 +790,20 @@ class RandomizedSet() {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Interval List Intersection
 
-<span id="intervallistintersection"></span>
-
 ### Problem
 
-**Intervallistintersection**
+Solves the Interval List Intersection problem.
 
-**Function:** `Interval Intersection` takes `firstList` (Array<array of integers>), `secondList` (Array<array of integers>) and returns **Array**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `intervalIntersection` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `startMax`, `endMin`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -978,6 +811,14 @@ Let's trace through the code to understand how it processes the input:
 package array.twopointer
 
 class IntervalListIntersection {
+    /**
+    * Solves the Interval List Intersection problem.
+    * Takes `firstList` (2D matrix of integers), `secondList` (2D matrix of integers).
+    *
+    * @param firstList The input 2D matrix of integers.
+    * @param secondList The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun intervalIntersection(firstList: Array<IntArray>, secondList: Array<IntArray>): Array<IntArray> {
         val result = mutableListOf<IntArray>()
 
@@ -1009,41 +850,17 @@ class IntervalListIntersection {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## K Items With Maximum Sum
 
-<span id="kitemswithmaximumsum"></span>
-
 ### Problem
 
-**Kitemswithmaximumsum**
+Solves the KItems With Maximum Sum problem.
 
-**Function:** `K Items With Maximum Sum` takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Alternative way
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `kItemsWithMaximumSum` processes the input
-2. Uses helper functions: kItemsWithMaximumSumAlternative
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `remainingSum`
-
-**Execution flow:**
-- Alternative way
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1051,6 +868,16 @@ Let's trace through the code to understand how it processes the input:
 package array.greedy
 
 class KItemsWithMaximumSum {
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun kItemsWithMaximumSum(numOnes: Int, numZeros: Int, numNegOnes: Int, k: Int): Int {
         var (K, ones, zeroes, negatives, sum) = listOf( k, numOnes,numZeros, numNegOnes, 0 )
         while (K-- > 0) {
@@ -1071,6 +898,16 @@ class KItemsWithMaximumSum {
     }
 
     // Alternative way
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun kItemsWithMaximumSumAlternative(numOnes: Int, numZeros: Int, numNegOnes: Int, k: Int): Int {
 
         if(k <= numOnes)
@@ -1094,45 +931,17 @@ class KItemsWithMaximumSum {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Linked List Random Node
 
-<span id="linkedlistrandomnode"></span>
-
 ### Problem
 
-**Linkedlistrandomnode**
+Solves the Linked List Random Node problem.
 
-**Function:** `Get Random` takes none and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Another possible solution
-- Select the current node if Random.nextInt(count) == count - 1
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `head`, `ptr`, `current`, `result`, `count`
-
-**Execution flow:**
-- Another possible solution
-- Select the current node if Random.nextInt(count) == count - 1
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1143,6 +952,11 @@ import linkedlist.ListNode
 import kotlin.random.Random
 
 class LinkedListRandomNode (private val head: ListNode?) {
+    /**
+    * Solves the Linked List Random Node problem.
+    *
+    * @return The computed integer result.
+    */
     fun getRandom(): Int {
         var (count, result) = 0 to 0
         var ptr = head
@@ -1161,6 +975,11 @@ class LinkedListRandomNode (private val head: ListNode?) {
     }
 
     // Another possible solution
+    /**
+    * Solves the Linked List Random Node problem.
+    *
+    * @return The computed integer result.
+    */
     fun getRandom_2(): Int {
         var current = head
         var result = current?.`val` ?: throw IllegalArgumentException("List is empty")
@@ -1187,40 +1006,17 @@ class LinkedListRandomNode (private val head: ListNode?) {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Merge Intervals
 
-<span id="mergeintervals"></span>
-
 ### Problem
 
-**Mergeintervals**
+Solves the Merge Intervals problem.
 
-**Function:** `Merge` takes `intervals` (Array<array of integers>) and returns **Array**.
+### Why This Approach
 
-**Key logic:**
-- Sort the internals by start
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `merge` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `index`
-
-**Execution flow:**
-- Sort the internals by start
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1228,6 +1024,13 @@ Let's trace through the code to understand how it processes the input:
 package array
 
 class MergeIntervals {
+    /**
+    * Solves the Merge Intervals problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun merge(intervals: Array<IntArray>): Array<IntArray> {
         // Sort the internals by start
         intervals.sortWith(compareBy { it[0] })
@@ -1252,42 +1055,17 @@ class MergeIntervals {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Merge Sorted Array
 
-<span id="mergesortedarray"></span>
-
 ### Problem
 
-**Mergesortedarray**
+Solves the Merge Sorted Array problem.
 
-**Function:** `Merge` takes `nums1` (array of integers), `m` (integer), `nums2` (array of integers), `n` (integer) and returns **nothing (modifies in-place)**.
+### Why This Approach
 
-**Key logic:**
-- Declaring a 2d Array in Kotlin is tricky
-- Not that Bad. It's still idiomatic and nice....
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `merge` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `testClass`, `arr`
-
-**Execution flow:**
-- Declaring a 2d Array in Kotlin is tricky
-- Not that Bad. It's still idiomatic and nice....
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1299,6 +1077,16 @@ import kotlin.math.max
 
 class MergeSortedArray {
 
+    /**
+    * Solves the Merge Sorted Array problem.
+    * Takes `nums1` (array of integers), `m` (integer), `nums2` (array of integers), `n` (integer).
+    *
+    * @param nums1 The input array of integers.
+    * @param m The integer parameter representing m.
+    * @param nums2 The input array of integers.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
         var (x, y, ptr) = listOf(m-1, n-1, m + n - 1)
 
@@ -1318,6 +1106,12 @@ class MergeSortedArray {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
             val testClass = MergeSortedArray()
 
@@ -1339,34 +1133,17 @@ class MergeSortedArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Missing Ranges
 
-<span id="missingranges"></span>
-
 ### Problem
 
-**Missingranges**
+Solves the Missing Ranges problem.
 
-**Function:** `Find Missing Ranges` takes `nums` (array of integers), `lower` (integer), `upper` (integer) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `findMissingRanges` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `currentRangePointer`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1374,6 +1151,15 @@ Let's trace through the code to understand how it processes the input:
 package array
 
 class MissingRanges {
+    /**
+    * Solves the Missing Ranges problem.
+    * Takes `nums` (array of integers), `lower` (integer), `upper` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param lower The integer parameter representing lower.
+    * @param upper The integer parameter representing upper.
+    * @return The computed integer result.
+    */
     fun findMissingRanges(nums: IntArray, lower: Int, upper: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         var currentRangePointer = lower
@@ -1400,42 +1186,17 @@ class MissingRanges {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Move Zeroes
 
-<span id="movezeroes"></span>
-
 ### Problem
 
-**Movezeroes**
+Solves the Move Zeroes problem.
 
-**Function:** `Move Zeroes` takes `nums` (array of integers) and returns **nothing (modifies in-place)**.
+### Why This Approach
 
-**Key logic:**
-- Move all non-zero elements to the front
-- Fill the rest of the array with zeros
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `moveZeroes` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `nonZeroPointer`
-
-**Execution flow:**
-- Move all non-zero elements to the front
-- Fill the rest of the array with zeros
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1443,6 +1204,13 @@ Let's trace through the code to understand how it processes the input:
 package array
 
 class MoveZeroes {
+    /**
+    * Solves the Move Zeroes problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun moveZeroes(nums: IntArray): Unit {
         var nonZeroPointer = 0
 
@@ -1468,54 +1236,17 @@ class MoveZeroes {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Next Permutation
 
-<span id="nextpermutation"></span>
-
 ### Problem
 
-**Nextpermutation**
+Solves the Next Permutation problem.
 
-**Function:** `Next Permutation` takes `nums` (array of integers) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Find increasing sequence right to left
-- Intuition: By traversing from right to left and finding the first pair where nums[index] < nums[index + 1],
-- we identify the pivot point where the next permutation should change.
-- If no such point exists (i.e., the array is in descending order), the array is the highest permutation
-- and should be reversed to form the lowest permutation.
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `index`, `pivot`, `indexToSwap`
-
-**Execution flow:**
-- Find increasing sequence right to left
-- Intuition: By traversing from right to left and finding the first pair where nums[index] < nums[index + 1],
-- we identify the pivot point where the next permutation should change.
-- If no such point exists (i.e., the array is in descending order), the array is the highest permutation
-- and should be reversed to form the lowest permutation.
-- If all the sequence from right to left
-- index is reduced by 1 in while loop. Hence incrementing to get the highest number
-- in this increasing sequence
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1523,10 +1254,27 @@ Let's trace through the code to understand how it processes the input:
 package array.Combinatorics
 
 class NextPermutation {
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers), `i` (integer), `j` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun swap(nums: IntArray, i: Int, j: Int) {
         nums[j] = nums[i].also { nums[i] = nums[j] }
     }
 
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers), `startIndex` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param startIndex The integer parameter representing startIndex.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun reverse(nums: IntArray, startIndex: Int) {
         var (left, right) = Pair(startIndex, nums.lastIndex)
         while(left < right) {
@@ -1534,6 +1282,13 @@ class NextPermutation {
         }
     }
 
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun nextPermutation(nums: IntArray): Boolean {
         var index = nums.lastIndex - 1
 
@@ -1578,35 +1333,20 @@ class NextPermutation {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Palindrome Number
 
-<span id="palindromenumber"></span>
-
 ### Problem
 
-**Palindromenumber**
+Solves the Palindrome Number problem.
 
-**Function:** `Is Palindrome` takes `x` (integer) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `isPalindrome` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1614,6 +1354,13 @@ Let's trace through the code to understand how it processes the input:
 package numbers
 
 class PalindromeNumber {
+    /**
+    * Solves the Palindrome Number problem.
+    * Takes `x` (integer).
+    *
+    * @param x The integer parameter representing x.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isPalindrome(x: Int): Boolean {
         var (reduced, sum) = listOf(x, 0, 1)
 
@@ -1633,32 +1380,17 @@ class PalindromeNumber {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Plus One
 
-<span id="plusone"></span>
-
 ### Problem
 
-**Plusone**
+Solves the Plus One problem.
 
-**Function:** `Plus One` takes `digits` (array of integers) and returns **array of integers**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `plusOne` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1666,6 +1398,13 @@ Let's trace through the code to understand how it processes the input:
 package math
 
 class PlusOne {
+    /**
+    * Solves the Plus One problem.
+    * Takes `digits` (array of integers).
+    *
+    * @param digits The input array of integers.
+    * @return The computed integer result.
+    */
     fun plusOne(digits: IntArray): IntArray {
         for (i in digits.lastIndex downTo 0) {
             if (digits[i] < 9) {
@@ -1687,34 +1426,17 @@ class PlusOne {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Remove Element
 
-<span id="removeelement"></span>
-
 ### Problem
 
-**Removeelement**
+Solves the Remove Element problem.
 
-**Function:** `Remove Element` takes `nums` (array of integers), ``val`` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `removeElement` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `i`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1722,6 +1444,14 @@ Let's trace through the code to understand how it processes the input:
 package array
 
 class RemoveElement {
+    /**
+    * Solves the Remove Element problem.
+    * Takes `nums` (array of integers), ``val`` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param `val` The integer parameter representing `val`.
+    * @return The computed integer result.
+    */
     fun removeElement(nums: IntArray, `val`: Int): Int {
         var i = 0
 
@@ -1743,37 +1473,17 @@ class RemoveElement {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Reservoir Sampling
 
-<span id="reservoirsampling"></span>
-
 ### Problem
 
-**Reservoirsampling**
+Solve the **Reservoir Sampling** problem efficiently.
 
-**Key logic:**
-- Replace item
+### Why This Approach
 
-
-
-### Approach
-
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `reservoir`, `count`, `index`
-
-**Execution flow:**
-- Replace item
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1812,41 +1522,17 @@ class ReservoirSampling {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Rotate Array
 
-<span id="rotatearray"></span>
-
 ### Problem
 
-**Rotatearray**
+Solves the Rotate Array problem.
 
-**Function:** `Rotate` takes `nums` (array of integers), `k` (integer) and returns **nothing (modifies in-place)**.
+### Why This Approach
 
-**Key logic:**
-- In case k is greater than n
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `rotate` processes the input
-2. Uses helper functions: reverse
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `n`, `steps`, `s`, `e`
-
-**Execution flow:**
-- In case k is greater than n
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1854,6 +1540,14 @@ Let's trace through the code to understand how it processes the input:
 package array.twopointer
 
 class RotateArray {
+    /**
+    * Solves the Rotate Array problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun rotate(nums: IntArray, k: Int): Unit {
         val n = nums.size
         val steps = k % n // In case k is greater than n
@@ -1863,6 +1557,14 @@ class RotateArray {
         reverse(nums, steps, n - 1)
     }
 
+    /**
+    * Helper: reverse.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun reverse(nums: IntArray, start: Int, end: Int): Unit {
         var s = start
         var e = end
@@ -1882,34 +1584,17 @@ class RotateArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Rotate Image
 
-<span id="rotateimage"></span>
-
 ### Problem
 
-**Rotateimage**
+Solves the Rotate Image problem.
 
-**Function:** `Rotate` takes `matrix` (Array<array of integers>) and returns **nothing (modifies in-place)**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `rotate` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `l`, `r`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1917,6 +1602,13 @@ Let's trace through the code to understand how it processes the input:
 package array
 
 class RotateImage {
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun rotate(matrix: Array<IntArray>): Unit {
         for (i in matrix.indices)
             for (j in i until matrix[i].size) {
@@ -1934,6 +1626,17 @@ class RotateImage {
         }
     }
 
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers), `i` (integer), `j` (integer), `m` (integer), `n` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param m The integer parameter representing m.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun swap(matrix: Array<IntArray>, i: Int, j: Int, m: Int, n: Int) {
         matrix[i][j] = matrix[m][n].also { matrix[m][n] = matrix[i][j] }
     }
@@ -1957,32 +1660,17 @@ class RotateImage {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Search A2d Matrix_II
 
-<span id="searcha2dmatrix_ii"></span>
-
 ### Problem
 
-**Searcha2Dmatrix Ii**
+Solves the Search A2d Matrix_II problem.
 
-**Function:** `Search Matrix` takes `matrix` (Array<array of integers>), `target` (integer) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `searchMatrix` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1990,6 +1678,14 @@ Let's trace through the code to understand how it processes the input:
 package array
 
 class SearchA2dMatrix_II {
+    /**
+    * Solves the Search A2d Matrix_II problem.
+    * Takes `matrix` (2D matrix of integers), `target` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
         var (row, col) = matrix.size - 1 to 0
 
@@ -2013,54 +1709,17 @@ class SearchA2dMatrix_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Shortest Path In Binary Matrix
 
-<span id="shortestpathinbinarymatrix"></span>
-
 ### Problem
 
-**Shortestpathinbinarymatrix**
+Solves the Shortest Path In Binary Matrix problem.
 
-**Function:** `Shortest Path Binary Matrix` takes `grid` (Array<array of integers>) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Early return if start or end is blocked
-- Directions for 8 neighbors (horizontal, vertical, and diagonal)
-- Left, right, up, down
-- Diagonal directions
-- Start at (0,0) with distance 1
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `row`, `col`, `dist`, `n`, `m`, `directions`, `queue`
-
-**Execution flow:**
-- Early return if start or end is blocked
-- Directions for 8 neighbors (horizontal, vertical, and diagonal)
-- Left, right, up, down
-- Diagonal directions
-- Start at (0,0) with distance 1
-- If we reached the bottom-right corner
-- Explore all 8 possible directions
-- Skip invalid positions or visited cells
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2072,6 +1731,13 @@ import java.util.*
 class ShortestPathInBinaryMatrix {
     data class State(val row: Int, val col: Int, val dist: Int)
 
+    /**
+    * Solves the Shortest Path In Binary Matrix problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun shortestPathBinaryMatrix(grid: Array<IntArray>): Int {
         val n = grid.size
         val m = grid[0].size
@@ -2120,34 +1786,17 @@ class ShortestPathInBinaryMatrix {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Sign Of The Product Of An Array
 
-<span id="signoftheproductofanarray"></span>
-
 ### Problem
 
-**Signoftheproductofanarray**
+Solves the Sign Of The Product Of An Array problem.
 
-**Function:** `Array Sign` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `arraySign` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `negativeCount`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2155,6 +1804,13 @@ Let's trace through the code to understand how it processes the input:
 package array
 
 class SignOfTheProductOfAnArray {
+    /**
+    * Solves the Sign Of The Product Of An Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun arraySign(nums: IntArray): Int {
         var negativeCount = 0
 
@@ -2178,34 +1834,17 @@ class SignOfTheProductOfAnArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Sort Colors
 
-<span id="sortcolors"></span>
-
 ### Problem
 
-**Sortcolors**
+Solves the Sort Colors problem.
 
-**Function:** `Sort Colors` takes `nums` (array of integers) and returns **nothing (modifies in-place)**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `sortColors` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `i`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2213,7 +1852,22 @@ Let's trace through the code to understand how it processes the input:
 package array.sorting
 
 class SortColors {
+    /**
+    * Solves the Sort Colors problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun sortColors(nums: IntArray): Unit {
+        /**
+        * Solves the Sort Colors problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun swap(i: Int, j: Int) {
             nums[i] = nums[j].also { nums[j] = nums[i] }
         }
@@ -2239,46 +1893,17 @@ class SortColors {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Spiral Matrix
 
-<span id="spiralmatrix"></span>
-
 ### Problem
 
-**Spiralmatrix**
+Solves the Spiral Matrix problem.
 
-**Function:** `Spiral Order` takes `matrix` (Array<array of integers>) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Traverse top row
-- Traverse right column
-- Traverse bottom row
-- Traverse left column
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `spiralOrder` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `count`, `totalElements`
-
-**Execution flow:**
-- Traverse top row
-- Traverse right column
-- Traverse bottom row
-- Traverse left column
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2286,6 +1911,13 @@ Let's trace through the code to understand how it processes the input:
 package array
 
 class SpiralMatrix {
+    /**
+    * Solves the Spiral Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun spiralOrder(matrix: Array<IntArray>): List<Int> {
         if (matrix.isEmpty()) return emptyList()
 
@@ -2324,46 +1956,17 @@ class SpiralMatrix {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Spiral Matrix_II
 
-<span id="spiralmatrix_ii"></span>
-
 ### Problem
 
-**Spiralmatrix Ii**
+Solves the Spiral Matrix_II problem.
 
-**Function:** `Generate Matrix` takes `n` (integer) and returns **Array**.
+### Why This Approach
 
-**Key logic:**
-- Fill top row
-- Fill right column
-- Fill bottom row
-- Fill left column
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `generateMatrix` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `matrix`
-
-**Execution flow:**
-- Fill top row
-- Fill right column
-- Fill bottom row
-- Fill left column
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2372,6 +1975,13 @@ package array
 
 class SpiralMatrix_II {
     class Solution {
+        /**
+        * Solves the Spiral Matrix_II problem.
+        * Takes `n` (integer).
+        *
+        * @param n The integer parameter representing n.
+        * @return The computed integer result.
+        */
         fun generateMatrix(n: Int): Array<IntArray> {
             val matrix = Array(n) { IntArray(n) }
             var (top, bottom, left, right, num) = arrayOf(0, n - 1, 0, n - 1, 1)
@@ -2411,37 +2021,17 @@ class SpiralMatrix_II {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Squares Of A Sorted Array
 
-<span id="squaresofasortedarray"></span>
-
 ### Problem
 
-**Squaresofasortedarray**
+Solves the Squares Of ASorted Array problem.
 
-**Function:** `Sorted Squares` takes `nums` (array of integers) and returns **array of integers**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2451,6 +2041,13 @@ package array.sorting
 import kotlin.math.abs
 
 class SquaresOfASortedArray {
+    /**
+    * Solves the Squares Of ASorted Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun sortedSquares(nums: IntArray): IntArray {
         val result = IntArray(nums.size)
 
@@ -2472,48 +2069,20 @@ class SquaresOfASortedArray {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Three Sum
 
-<span id="threesum"></span>
-
 ### Problem
 
-**Threesum**
+Solves the Three Sum problem.
 
-**Function:** `Three Sum` takes `nums` (array of integers) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Skip duplicates for the second and third numbers
-- This can be done using set too . Reducing it to 2 sum problem.
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`, `start`, `end`, `sum`
-
-**Execution flow:**
-- Skip duplicates for the second and third numbers
-- This can be done using set too . Reducing it to 2 sum problem.
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2522,6 +2091,13 @@ package array.twopointer
 
 
 class ThreeSum {
+    /**
+    * Solves the Three Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun threeSum(nums: IntArray): List<List<Int>> {
         val result = mutableSetOf<List<Int>>()
         nums.sort()
@@ -2563,42 +2139,20 @@ class ThreeSum {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Three Sum Closest
 
-<span id="threesumclosest"></span>
-
 ### Problem
 
-**Threesumclosest**
+Solves the Three Sum Closest problem.
 
-**Function:** `Three Sum Closest` takes `nums` (array of integers), `target` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This searches for an exact target value in a sorted structure.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `closestSum`, `left`, `right`, `sum`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2608,6 +2162,14 @@ package array.twopointer
 import kotlin.math.abs
 
 class ThreeSumClosest {
+    /**
+    * Solves the Three Sum Closest problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun threeSumClosest(nums: IntArray, target: Int): Int {
         nums.sort()
         var closestSum = nums[0] + nums[1] + nums[2]
@@ -2637,37 +2199,20 @@ class ThreeSumClosest {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Toeplitz Matrix
 
-<span id="toeplitzmatrix"></span>
-
 ### Problem
 
-**Toeplitzmatrix**
+Solves the Toeplitz Matrix problem.
 
-**Function:** `Is Toeplitz Matrix` takes `matrix` (Array<array of integers>) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `isToeplitzMatrix` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `m`, `n`, `row`, `col`, `i`, `j`, `first`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2675,6 +2220,13 @@ Let's trace through the code to understand how it processes the input:
 package array
 
 class ToeplitzMatrix {
+    /**
+    * Solves the Toeplitz Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isToeplitzMatrix(matrix: Array<IntArray>): Boolean {
         val m = matrix.size
         val n = matrix[0].size
@@ -2713,34 +2265,17 @@ class ToeplitzMatrix {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Transpose Matrix
 
-<span id="transposematrix"></span>
-
 ### Problem
 
-**Transposematrix**
+Solves the Transpose Matrix problem.
 
-**Function:** `Transpose` takes `matrix` (Array<array of integers>) and returns **Array**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `transpose` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `rows`, `cols`, `transposed`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2748,6 +2283,13 @@ Let's trace through the code to understand how it processes the input:
 package array
 
 class TransposeMatrix {
+    /**
+    * Solves the Transpose Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun transpose(matrix: Array<IntArray>): Array<IntArray> {
         val rows = matrix.size
         val cols = matrix[0].size
@@ -2771,50 +2313,17 @@ class TransposeMatrix {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Trapping Rain Water
 
-<span id="trappingrainwater"></span>
-
 ### Problem
 
-**Trappingrainwater**
+Using Dynamic Programming.
 
-**Function:** `Trap` takes `height` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Another way
-- return (0 until n).sumOf { index ->
-- maxOf(minOf(leftMax[index], rightMax[index]) - height[index], 0)
-- }
-- Two pointer method.
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `h`, `leftMax`, `rightMax`, `minLeftRight`
-
-**Execution flow:**
-- Another way
-- return (0 until n).sumOf { index ->
-- maxOf(minOf(leftMax[index], rightMax[index]) - height[index], 0)
-- Two pointer method.
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2858,6 +2367,13 @@ class TrappingRainWater {
     }
 
     // Two pointer method.
+    /**
+    * Solves the Trapping Rain Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
     fun trapConstantSpace(height: IntArray): Int {
         var (left, right, leftMax, rightMax, waterTrapped) = listOf(0, height.lastIndex, 0, 0, 0)
 
@@ -2882,42 +2398,20 @@ class TrappingRainWater {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Two Sum_II
 
-<span id="twosum_ii"></span>
-
 ### Problem
 
-**Twosum Ii**
+Solves the Two Sum_II problem.
 
-**Function:** `Two Sum` takes `numbers` (array of integers), `target` (integer) and returns **array of integers**.
+### Why This Approach
 
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This searches for an exact target value in a sorted structure.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `start`, `end`, `sum`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -2925,6 +2419,14 @@ Let's trace through the code to understand how it processes the input:
 package array.twopointer
 
 class TwoSum_II {
+    /**
+    * Solves the Two Sum_II problem.
+    * Takes `numbers` (array of integers), `target` (integer).
+    *
+    * @param numbers The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun twoSum(numbers: IntArray, target: Int): IntArray {
         var start = 0
         var end = numbers.lastIndex
@@ -2950,19 +2452,7 @@ class TwoSum_II {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — Two pointers create an O(n) pass where a brute force would be O(n²). The pointers track a window, boundary, or comparison pair.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

@@ -1,6 +1,13 @@
 package array.dp
 
 class MinimumNumberofIncrementsSubarraysFormaTargetArray {
+    /**
+    * Solves the Minimum Numberof Increments Subarrays Forma Target Array problem.
+    * Takes `target` (array of integers).
+    *
+    * @param target The input array of integers.
+    * @return The computed integer result.
+    */
     fun minNumberOperations(target: IntArray): Int {
         var operations = target[0]
 

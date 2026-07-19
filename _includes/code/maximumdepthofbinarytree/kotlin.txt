@@ -1,6 +1,13 @@
 package tree
 
 class MaximumDepthOfBinaryTree {
+    /**
+    * Solves the Maximum Depth Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun maxDepth(root: TreeNode?): Int {
         if (root == null) {
             return 0

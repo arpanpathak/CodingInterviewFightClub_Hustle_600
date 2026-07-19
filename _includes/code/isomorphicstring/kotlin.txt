@@ -1,6 +1,13 @@
 package string
 
 class IsomorphicString {
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun encode(s: String): String {
         val map = mutableMapOf<Char, Int>()
         val sb = StringBuilder()
@@ -14,6 +21,14 @@ class IsomorphicString {
         return sb.toString()
     }
 
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isIsomorphic(s: String, t: String): Boolean {
         return encode(s) == encode(t)
     }

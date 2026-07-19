@@ -18,7 +18,7 @@ next_chapter:
 
 ## The Pattern
 
-Linked lists are about pointer rearrangement. Key patterns: slow/fast pointers, dummy heads, recursion, and in-place reversal.
+Linked lists are about pointer rearrangement: slow/fast pointers, dummy heads, in-place reversal.
 
 ## Complete Problem Set
 
@@ -45,26 +45,13 @@ Linked lists are about pointer rearrangement. Key patterns: slow/fast pointers, 
 
 ## List Node
 
-<span id="addtwonumbers"></span>
-
 ### Problem
 
-**Addtwonumbers**
+Solves the List Node problem.
 
-**Function:** `Add Two Numbers` takes `l1` (ListNode?), `l2` (ListNode?) and returns **ListNode**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `addTwoNumbers` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `next`, `carry`, `head`, `ptr`, `sum`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -76,6 +63,14 @@ class ListNode(var `val`: Int) {
 }
 
 class AddTwoNumbers {
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         var carry = 0
         val head = ListNode(0)
@@ -110,47 +105,17 @@ class AddTwoNumbers {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Copy Linked List With Random Pointer
 
-<span id="copylinkedlistwithrandompointer"></span>
-
 ### Problem
 
-**Copylinkedlistwithrandompointer**
+Example:
 
-**Function:** `Copy Random List` takes `node` (Node?) and returns **Node**.
+### Why This Approach
 
-**Key logic:**
-- Step 1: Create deep copies of all nodes and store the mapping
-- Step 2: Set the next and random pointers for the copied nodes
-- Return the head of the new copied list
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `ti`, `v`, `next`, `random`, `next`, `random`, `nodeMap`, `ptr`
-
-**Execution flow:**
-- Step 1: Create deep copies of all nodes and store the mapping
-- Step 2: Set the next and random pointers for the copied nodes
-- Return the head of the new copied list
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -175,6 +140,13 @@ class CopyLinkedListWithRandomPointer {
     }
 
     class Solution {
+        /**
+        * Solves the Copy Linked List With Random Pointer problem.
+        * Takes `node` (Node?).
+        *
+        * @param node The Node? (nullable).
+        * @return The result, or `null` if not found.
+        */
         fun copyRandomList(node: Node?): Node? {
             if (node == null) return null
 
@@ -209,43 +181,17 @@ class CopyLinkedListWithRandomPointer {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Delete Middle Node Of Linked List
 
-<span id="deletemiddlenodeoflinkedlist"></span>
-
 ### Problem
 
-**Deletemiddlenodeoflinkedlist**
+Solves the Delete Middle Node Of Linked List problem.
 
-**Function:** `Delete Middle` takes `head` (ListNode?) and returns **ListNode**.
+### Why This Approach
 
-**Key logic:**
-- Two Pass Approach
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `currentNode`, `prevNode`, `index`, `n`
-
-**Execution flow:**
-- Two Pass Approach
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -255,6 +201,13 @@ package linkedlist
 class DeleteMiddleNodeOfLinkedList {
     
     // Two Pass Approach
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun deleteMiddle(head: ListNode?): ListNode? {
         var currentNode = head
         var prevNode: ListNode? = null
@@ -280,6 +233,13 @@ class DeleteMiddleNodeOfLinkedList {
         return head
     }
 
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun deleteMiddleTwoPointer(head: ListNode?): ListNode? {
         var (slow, fast, prev) = listOf(head, head, null)
 
@@ -306,37 +266,17 @@ class DeleteMiddleNodeOfLinkedList {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Node
 
-<span id="insertintoasortedcircularlinkedlist"></span>
-
 ### Problem
 
-**Insertintoasortedcircularlinkedlist**
+Solves the Node problem.
 
-**Function:** `Insert` takes `head` (Node?), `insertVal` (integer) and returns **Node**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `next`, `newNode`, `current`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -348,6 +288,14 @@ class Node(var `val`: Int) {
 }
 
 class InsertIntoASortedCircularLinkedList {
+    /**
+    * Solves the Node problem.
+    * Takes `head` (Node?), `insertVal` (integer).
+    *
+    * @param head The Node? (nullable).
+    * @param insertVal The integer parameter representing insertVal.
+    * @return The result, or `null` if not found.
+    */
     fun insert(head: Node?, insertVal: Int): Node? {
         val newNode = Node(insertVal)
         if (head == null) return newNode.apply { next = newNode }
@@ -383,45 +331,17 @@ class InsertIntoASortedCircularLinkedList {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Intersection Of Two Linked List
 
-<span id="intersectionoftwolinkedlist"></span>
-
 ### Problem
 
-**Intersectionoftwolinkedlist**
+Solves the Intersection Of Two Linked List problem.
 
-**Function:** `Get Intersection Node` takes `headA` (ListNode?), `headB` (ListNode?) and returns **ListNode**.
+### Why This Approach
 
-**Key logic:**
-- Traverse both lists. When one pointer reaches the end, redirect it to the head of the other list.
-- This will return the intersection node, or null if no intersection.
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `pA`, `pB`
-
-**Execution flow:**
-- Traverse both lists. When one pointer reaches the end, redirect it to the head of the other list.
-- This will return the intersection node, or null if no intersection.
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -429,6 +349,14 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class IntersectionOfTwoLinkedList {
+    /**
+    * Solves the Intersection Of Two Linked List problem.
+    * Takes `headA` (linked list node reference), `headB` (linked list node reference).
+    *
+    * @param headA The input linked list node reference.
+    * @param headB The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
         if (headA == null || headB == null) return null
 
@@ -453,43 +381,17 @@ class IntersectionOfTwoLinkedList {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Linked List Cycle
 
-<span id="linkedlistcycle"></span>
-
 ### Problem
 
-**Linkedlistcycle**
+Solves the Linked List Cycle problem.
 
-**Function:** `Has Cycle` takes `head` (ListNode?) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Better version
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `slow`, `fast`, `slow`, `fast`
-
-**Execution flow:**
-- Better version
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -497,6 +399,13 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class LinkedListCycle {
+    /**
+    * Solves the Linked List Cycle problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun hasCycle(head: ListNode?): Boolean {
         if (head == null || head.next == null) return false
 
@@ -515,6 +424,13 @@ class LinkedListCycle {
     }
 
     // Better version
+    /**
+    * Solves the Linked List Cycle problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun hasCycle2(head: ListNode?): Boolean {
         var slow = head
         var fast = head
@@ -540,48 +456,17 @@ class LinkedListCycle {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Linked List Cycle_II
 
-<span id="linkedlistcycle_ii"></span>
-
 ### Problem
 
-**Linkedlistcycle Ii**
+Solves the Linked List Cycle_II problem.
 
-**Function:** `Detect Cycle` takes `head` (ListNode?) and returns **ListNode**.
+### Why This Approach
 
-**Key logic:**
-- Phase 1: Detect if a cycle exists
-- Cycle detected
-- Phase 2: Find the start of the cycle
-- No cycle
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `slow`, `fast`, `entry`
-
-**Execution flow:**
-- Phase 1: Detect if a cycle exists
-- Cycle detected
-- Phase 2: Find the start of the cycle
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -589,6 +474,13 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class LinkedListCycle_II {
+    /**
+    * Solves the Linked List Cycle_II problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun detectCycle(head: ListNode?): ListNode? {
         var slow = head
         var fast = head
@@ -621,40 +513,17 @@ class LinkedListCycle_II {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Merge K Sorted List
 
-<span id="mergeksortedlist"></span>
-
 ### Problem
 
-**Mergeksortedlist**
+Solves the Merge KSorted List problem.
 
-**Function:** `Merge Two Lists` takes `list1` (ListNode?), `list2` (ListNode?) and returns **ListNode**.
+### Why This Approach
 
-**Key logic:**
-- dummy node
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `mergeTwoLists` processes the input
-2. Uses helper functions: mergeKLists, merge
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `head`, `ptr`, `ptr1`, `ptr2`, `mid`, `left`, `right`
-
-**Execution flow:**
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -662,6 +531,14 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class MergeKSortedList {
+    /**
+    * Solves the Merge KSorted List problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         val head = ListNode(0) // dummy node
         var ptr = head
@@ -685,9 +562,24 @@ class MergeKSortedList {
         return head.next
     }
 
+    /**
+    * Solves the Merge KSorted List problem.
+    * Takes `lists` (Array<ListNode?>).
+    *
+    * @param lists The input Array<ListNode?>.
+    * @return The resulting collection (linked list node reference).
+    */
     fun mergeKLists(lists: Array<ListNode?>): ListNode? {
         if (lists.isEmpty())
             return null
+        /**
+        * Solves the Merge KSorted List problem.
+        * Takes `start` (integer), `end` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param end The integer parameter representing end.
+        * @return The resulting collection (linked list node reference).
+        */
         fun merge(start: Int, end: Int): ListNode? {
             if (start == end)
                 return lists[start]
@@ -709,40 +601,17 @@ class MergeKSortedList {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Merge K Sorted List Iterative
 
-<span id="mergeksortedlistiterative"></span>
-
 ### Problem
 
-**Mergeksortedlistiterative**
+Solves the Merge KSorted List Iterative problem.
 
-**Function:** `Merge Klists` takes `lists` (Array<ListNode?>) and returns **ListNode**.
+### Why This Approach
 
-**Key logic:**
-- Dummy node
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `mergeKLists` processes the input
-2. Uses helper functions: mergeTwoLists
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `interval`, `n`, `step`, `head`, `ptr`, `ptr1`, `ptr2`
-
-**Execution flow:**
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -750,6 +619,13 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class MergeKSortedListIterative {
+    /**
+    * Solves the Merge KSorted List Iterative problem.
+    * Takes `lists` (Array<ListNode?>).
+    *
+    * @param lists The input Array<ListNode?>.
+    * @return The resulting collection (linked list node reference).
+    */
     fun mergeKLists(lists: Array<ListNode?>): ListNode? {
         if (lists.isEmpty()) return null
 
@@ -766,6 +642,14 @@ class MergeKSortedListIterative {
         return lists[0]
     }
 
+    /**
+    * Solves the Merge KSorted List Iterative problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         val head = ListNode(0) // Dummy node
         var ptr = head
@@ -798,39 +682,17 @@ class MergeKSortedListIterative {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Merge Two Sorted L Ist
 
-<span id="mergetwosortedlist"></span>
-
 ### Problem
 
-**Mergetwosortedlist**
+Solves the Merge Two Sorted LIst problem.
 
-**Function:** `Merge Two Lists` takes `list1` (ListNode?), `list2` (ListNode?) and returns **ListNode**.
+### Why This Approach
 
-**Key logic:**
-- dummy node
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `mergeTwoLists` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `head`, `ptr`, `ptr1`, `ptr2`
-
-**Execution flow:**
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -838,6 +700,14 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class MergeTwoSortedLIst {
+    /**
+    * Solves the Merge Two Sorted LIst problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         val head = ListNode(0) // dummy node
         var ptr = head
@@ -870,37 +740,17 @@ class MergeTwoSortedLIst {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Odd Even Linked List
 
-<span id="oddevenlinkedlist"></span>
-
 ### Problem
 
-**Oddevenlinkedlist**
+Solves the Odd Even Linked List problem.
 
-**Function:** `Odd Even List` takes `head` (ListNode?) and returns **ListNode**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `odd`, `even`, `evenHead`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -908,6 +758,13 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class OddEvenLinkedList {
+    /**
+    * Solves the Odd Even Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun oddEvenList(head: ListNode?): ListNode? {
         var odd = head
         var even = head?.next
@@ -936,51 +793,17 @@ class OddEvenLinkedList {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Palindrome Linked List
 
-<span id="palindromelinkedlist"></span>
-
 ### Problem
 
-**Palindromelinkedlist**
+Solves the Palindrome Linked List problem.
 
-**Function:** `Is Palindrome` takes `head` (ListNode?) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Edge case: empty or single node
-- Step 1: Find the middle
-- Step 2: Reverse second half
-- Step 3: Compare both halves
-- Step 4: Restore original list (optional)
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `slow`, `fast`, `secondHalf`, `firstHalf`, `temp`, `prev`, `curr`, `next`
-
-**Execution flow:**
-- Edge case: empty or single node
-- Step 1: Find the middle
-- Step 2: Reverse second half
-- Step 3: Compare both halves
-- Step 4: Restore original list (optional)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -989,6 +812,13 @@ package linkedlist
 
 class PalindromeLinkedList {
     class Solution {
+        /**
+        * Solves the Palindrome Linked List problem.
+        * Takes `head` (linked list node reference).
+        *
+        * @param head The input linked list node reference.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun isPalindrome(head: ListNode?): Boolean {
             if (head?.next == null) return true // Edge case: empty or single node
 
@@ -1019,6 +849,12 @@ class PalindromeLinkedList {
             return true
         }
 
+        /**
+        * Helper: reverse list.
+        *
+        * @param head The input linked list node reference.
+        * @return The resulting collection (linked list node reference).
+        */
         private fun reverseList(head: ListNode?): ListNode? {
             var prev: ListNode? = null
             var curr = head
@@ -1041,45 +877,17 @@ class PalindromeLinkedList {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Remove Nth Node From End Of List
 
-<span id="removenthnodefromendoflist"></span>
-
 ### Problem
 
-**Removenthnodefromendoflist**
+Solves the Remove Nth Node From End Of List problem.
 
-**Function:** `Remove Nth From End` takes `head` (ListNode?), `n` (integer) and returns **ListNode**.
+### Why This Approach
 
-**Key logic:**
-- Move first n + 1 steps ahead
-- Move first to the end, maintaining the gap of size n
-- Remove the nth node from the end
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `removeNthFromEnd` processes the input
-2. Uses helper functions: removeNthFromFront, removeNthFromEndTwoPointer
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `size`, `ptr`, `indexToRemove`, `ptr`, `prev`, `dummy`, `first`, `second`
-
-**Execution flow:**
-- Move first n + 1 steps ahead
-- Move first to the end, maintaining the gap of size n
-- Remove the nth node from the end
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1087,6 +895,14 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class RemoveNthNodeFromEndOfList {
+    /**
+    * Solves the Remove Nth Node From End Of List problem.
+    * Takes `head` (linked list node reference), `n` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (linked list node reference).
+    */
     fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
         var size = 0
         var ptr = head
@@ -1100,6 +916,14 @@ class RemoveNthNodeFromEndOfList {
         return removeNthFromFront(head, indexToRemove, size)
     }
 
+    /**
+    * Helper: remove nth from front.
+    *
+    * @param head The input linked list node reference.
+    * @param indexToRemove The integer parameter representing indexToRemove.
+    * @param size The integer parameter representing size.
+    * @return The resulting collection (linked list node reference).
+    */
     private fun removeNthFromFront(head: ListNode?, indexToRemove: Int, size: Int): ListNode? {
         var ptr = head
         var prev: ListNode? = null
@@ -1151,37 +975,17 @@ class RemoveNthNodeFromEndOfList {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Reverse Linked List
 
-<span id="reverselinkedlist"></span>
-
 ### Problem
 
-**Reverselinkedlist**
+Solves the Reverse Linked List problem.
 
-**Function:** `Reverse List` takes `head` (ListNode?) and returns **ListNode**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `reversedHead`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1189,6 +993,13 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class ReverseLinkedList {
+    /**
+    * Solves the Reverse Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun reverseList(head: ListNode?): ListNode? {
         if (head?.next == null) {
             return head
@@ -1211,37 +1022,17 @@ class ReverseLinkedList {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Reverse Linked List Iterative
 
-<span id="reverselinkedlistiterative"></span>
-
 ### Problem
 
-**Reverselinkedlistiterative**
+Solves the Reverse Linked List Iterative problem.
 
-**Function:** `Reverse List` takes `head` (ListNode?) and returns **ListNode**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `prev`, `current`, `nextTemp`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1249,6 +1040,13 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class ReverseLinkedListIterative {
+    /**
+    * Solves the Reverse Linked List Iterative problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun reverseList(head: ListNode?): ListNode? {
         var prev: ListNode? = null
         var current = head
@@ -1270,52 +1068,17 @@ class ReverseLinkedListIterative {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Reverse Nodes In K Groups
 
-<span id="reversenodesinkgroups"></span>
-
 ### Problem
 
-**Reversenodesinkgroups**
+Solves the Reverse Nodes In KGroups problem.
 
-**Function:** `Reverse Kgroup` takes `head` (ListNode?), `k` (integer) and returns **ListNode**.
+### Why This Approach
 
-**Key logic:**
-- Move `end` k steps forward
-- Not enough nodes to reverse
-- Store the next group start
-- Reverse the current group
-- Connect the reversed group back to the list
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `reverseKGroup` processes the input
-2. Uses helper functions: reverse
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dummy`, `start`, `end`, `nextGroupStart`, `prev`, `current`, `stop`, `next`
-
-**Execution flow:**
-- Move `end` k steps forward
-- Not enough nodes to reverse
-- Store the next group start
-- Reverse the current group
-- Connect the reversed group back to the list
-- Move `start` to `newEnd` (which was the original `start` before reversing)
-- Set `end` back to `start` for the next iteration
-- `end` is the new start and `start` is the new end after reversing
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1323,6 +1086,14 @@ Let's trace through the code to understand how it processes the input:
 package linkedlist
 
 class ReverseNodesInKGroups {
+    /**
+    * Solves the Reverse Nodes In KGroups problem.
+    * Takes `head` (linked list node reference), `k` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param k The integer parameter representing k.
+    * @return The resulting collection (linked list node reference).
+    */
     fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
         if (head == null || k == 1) return head
 
@@ -1357,6 +1128,13 @@ class ReverseNodesInKGroups {
         return dummy.next
     }
 
+    /**
+    * Helper: reverse.
+    *
+    * @param start The input linked list node reference.
+    * @param end The input linked list node reference.
+    * @return The resulting collection (Pair<ListNode?, ListNode?>).
+    */
     private fun reverse(start: ListNode?, end: ListNode?): Pair<ListNode?, ListNode?> {
         var prev: ListNode? = null
         var current = start
@@ -1380,17 +1158,5 @@ class ReverseNodesInKGroups {
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — Linked lists are about pointer rearrangement. Key patterns: slow/fast pointers, dummy heads, recursion, and in-place reversal.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

@@ -14,11 +14,11 @@ next_chapter:
 
 # Heaps & Priority Queues
 
-> **11 problems** — Master priority queues for k-th order statistics, scheduling, and streaming data.
+> **11 problems** — Master priority queues for k-th order statistics, scheduling, streaming.
 
 ## The Pattern
 
-Heaps maintain the min/max of a dynamic set. Use min-heap for k largest, max-heap for k smallest, dual heaps for median.
+Min-heap for k largest, max-heap for k smallest, dual heaps for median.
 
 ## Complete Problem Set
 
@@ -40,41 +40,13 @@ Heaps maintain the min/max of a dynamic set. Use min-heap for k largest, max-hea
 
 ## Dual Balanced Heap
 
-<span id="dualbalancedheap"></span>
-
 ### Problem
 
-**Dualbalancedheap**
+Helper: balance heaps.
 
-**Function:** `Get Median` takes none and returns **T**.
+### Why This Approach
 
-**Key logic:**
-- Min-heap for the larger half
-- Max-heap for the smaller half
-- Handling generic types requires a custom approach for averaging or choosing one of the elements.
-- Simplification: you may need to define how to combine two elements for real applications.
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `minHeap`, `maxHeap`
-
-**Execution flow:**
-- Min-heap for the larger half
-- Max-heap for the smaller half
-- Handling generic types requires a custom approach for averaging or choosing one of the elements.
-- Simplification: you may need to define how to combine two elements for real applications.
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -87,6 +59,11 @@ class DualBalancedHeap<T : Comparable<T>> {
     private val minHeap = PriorityQueue<T>() // Min-heap for the larger half
     private val maxHeap = PriorityQueue<T>(compareByDescending { it }) // Max-heap for the smaller half
 
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun balanceHeaps() {
         if (maxHeap.size > minHeap.size + 1) {
             minHeap.add(maxHeap.poll())
@@ -95,6 +72,13 @@ class DualBalancedHeap<T : Comparable<T>> {
         }
     }
 
+    /**
+    * Solves the Dual Balanced Heap problem.
+    * Takes `num` (T).
+    *
+    * @param num The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun add(num: T) {
         if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
             maxHeap.add(num)
@@ -104,6 +88,13 @@ class DualBalancedHeap<T : Comparable<T>> {
         balanceHeaps()
     }
 
+    /**
+    * Solves the Dual Balanced Heap problem.
+    * Takes `num` (T).
+    *
+    * @param num The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun remove(num: T) {
         if (maxHeap.contains(num)) {
             maxHeap.remove(num)
@@ -113,6 +104,11 @@ class DualBalancedHeap<T : Comparable<T>> {
         balanceHeaps()
     }
 
+    /**
+    * Solves the Dual Balanced Heap problem.
+    *
+    * @return The result, or `null` if not found.
+    */
     fun getMedian(): T? {
         return if (maxHeap.size == minHeap.size) {
             // Handling generic types requires a custom approach for averaging or choosing one of the elements.
@@ -123,6 +119,11 @@ class DualBalancedHeap<T : Comparable<T>> {
         }
     }
 
+    /**
+    * Solves the Dual Balanced Heap problem.
+    *
+    * @return The computed integer result.
+    */
     fun size(): Int {
         return maxHeap.size + minHeap.size
     }
@@ -136,54 +137,17 @@ class DualBalancedHeap<T : Comparable<T>> {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## MK Average
 
-<span id="findingmkaverage"></span>
-
 ### Problem
 
-**Findingmkaverage**
+Solves the MKAverage problem.
 
-**Function:** `Calculate Mkaverage` takes none and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- max heap (for k smallest elements)
-- min heap (for k largest elements)
-- Sum of the middle elements
-- Add to deque
-- Add to one of the heaps
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `m`, `k`, `deque`, `lowHeap`, `highHeap`, `sum`, `oldest`, `middleCount`
-
-**Execution flow:**
-- max heap (for k smallest elements)
-- min heap (for k largest elements)
-- Sum of the middle elements
-- Add to deque
-- Add to one of the heaps
-- Add to lowHeap (max heap)
-- Add to highHeap (min heap)
-- Maintain the window size of m
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -198,6 +162,13 @@ class MKAverage(private val m: Int, private val k: Int) {
     private val highHeap = PriorityQueue<Int>() // min heap (for k largest elements)
     private var sum = 0L // Sum of the middle elements
 
+    /**
+    * Solves the MKAverage problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun addElement(num: Int) {
         // Add to deque
         deque.add(num)
@@ -230,6 +201,11 @@ class MKAverage(private val m: Int, private val k: Int) {
         recalculateMiddleSum()
     }
 
+    /**
+    * Solves the MKAverage problem.
+    *
+    * @return The computed integer result.
+    */
     fun calculateMKAverage(): Int {
         return if (deque.size < m) {
             -1
@@ -240,6 +216,11 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Balance heaps to ensure there are k elements in each of the heaps
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun balanceHeaps() {
         // Ensure lowHeap has k elements and highHeap has k elements
         if (lowHeap.size > k) {
@@ -251,6 +232,11 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Recalculate the sum of the middle elements in the sliding window
+    /**
+    * Helper: recalculate middle sum.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun recalculateMiddleSum() {
         sum = 0L
         val remainingElements = mutableListOf<Int>()
@@ -264,6 +250,11 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 }
 
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() {
     val obj = MKAverage(3, 1)
     obj.addElement(3)
@@ -288,45 +279,17 @@ fun main() {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Find K Closest Elements
 
-<span id="findkclosestelements"></span>
-
 ### Problem
 
-**Findkclosestelements**
+Solving using Max Heap. O ( N log K + K log K )
 
-**Function:** `Find Closest Elements` takes `arr` (Array<integer>), `k` (integer), `x` (integer) and returns **List**.
+### Why This Approach
 
-**Key logic:**
-- Remove the farthest element
-- We could also do
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `priorityQueue`, `diffA`, `diffB`, `result`, `testClass`
-
-**Execution flow:**
-- Remove the farthest element
-- We could also do
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -375,6 +338,12 @@ class FindKClosestElements {
 
         companion object {
             @JvmStatic
+            /**
+            * Entry point for the program.
+            *
+            * @param args The input Array<String>.
+            * @return Unit (no return value, modifies state in-place).
+            */
             fun main(args: Array<String>) {
                 val testClass = FindKClosestElements()
 
@@ -392,37 +361,17 @@ class FindKClosestElements {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Find Score Of An Array After Marking All Elements
 
-<span id="findscoreofanarrayaftermarkingallelements"></span>
-
 ### Problem
 
-**Findscoreofanarrayaftermarkingallelements**
+Solves the Find Score Of An Array After Marking All Elements problem.
 
-**Function:** `Find Score` takes `nums` (array of integers) and returns **Long**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `n`, `marked`, `minHeap`, `score`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -432,6 +381,13 @@ package heap
 import java.util.*
 
 class FindScoreOfAnArrayAfterMarkingAllElements {
+    /**
+    * Solves the Find Score Of An Array After Marking All Elements problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun findScore(nums: IntArray): Long {
         val n = nums.size
         val marked = BooleanArray(n) { false }
@@ -468,37 +424,17 @@ class FindScoreOfAnArrayAfterMarkingAllElements {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## IPO
 
-<span id="ipo"></span>
-
 ### Problem
 
-**Ipo**
+Solves the IPO problem.
 
-**Function:** `Find Maximized Capital` takes `k` (integer), `w` (integer), `profits` (array of integers), `capital` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `capital`, `profit`, `projects`, `maxHeap`, `currentCapital`, `i`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -510,6 +446,16 @@ import java.util.*
 class IPO {
     data class Project(val capital: Int, val profit: Int)
 
+    /**
+    * Solves the IPO problem.
+    * Takes `k` (integer), `w` (integer), `profits` (array of integers), `capital` (array of integers).
+    *
+    * @param k The integer parameter representing k.
+    * @param w The integer parameter representing w.
+    * @param profits The input array of integers.
+    * @param capital The input array of integers.
+    * @return The computed integer result.
+    */
     fun findMaximizedCapital(k: Int, w: Int, profits: IntArray, capital: IntArray): Int {
         val projects = capital.indices
             .map { Project(capital[it], profits[it]) }
@@ -539,54 +485,17 @@ class IPO {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Longest Happy String
 
-<span id="longesthappystring"></span>
-
 ### Problem
 
-**Longesthappystring**
+Solves the Longest Happy String problem.
 
-**Function:** `Longest Diverse String` takes `a` (integer), `b` (integer), `c` (integer) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Use a priority queue to always get the character with highest remaining count
-- Add non-zero counts to the queue
-- Build the result
-- Get the character with highest remaining count
-- If we already have two consecutive of the same character,
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `pq`, `lastChar`, `lastCount`
-
-**Execution flow:**
-- Use a priority queue to always get the character with highest remaining count
-- Add non-zero counts to the queue
-- Build the result
-- Get the character with highest remaining count
-- If we already have two consecutive of the same character,
-- we need to use the second highest count character
-- Put the character back with reduced count
-- Put the original highest character back
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -596,6 +505,15 @@ package heap
 import java.util.*
 
 class LongestHappyString {
+    /**
+    * Solves the Longest Happy String problem.
+    * Takes `a` (integer), `b` (integer), `c` (integer).
+    *
+    * @param a The integer parameter representing a.
+    * @param b The integer parameter representing b.
+    * @param c The integer parameter representing c.
+    * @return The resulting string.
+    */
     fun longestDiverseString(a: Int, b: Int, c: Int): String {
         // Use a priority queue to always get the character with highest remaining count
         val pq = PriorityQueue<Pair<Char, Int>> { p1, p2 -> p2.second - p1.second }
@@ -663,45 +581,17 @@ class LongestHappyString {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Median From Running Stream
 
-<span id="medianfromrunningstream"></span>
-
 ### Problem
 
-**Medianfromrunningstream**
+Solves the Median From Running Stream problem.
 
-**Function:** `Find Median` takes none and returns **double**.
+### Why This Approach
 
-**Key logic:**
-- Min-heap for the larger half
-- Max-heap for the smaller half
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `minHeap`, `maxHeap`
-
-**Execution flow:**
-- Min-heap for the larger half
-- Max-heap for the smaller half
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -716,6 +606,13 @@ class MedianFromRunningStream {
     private val maxHeap = PriorityQueue<Int>(compareBy() { -it }) // Max-heap for the smaller half
 
 
+    /**
+    * Solves the Median From Running Stream problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun addNum(num: Int) {
         minHeap.offer(num)
         maxHeap.offer(minHeap.poll())
@@ -725,6 +622,11 @@ class MedianFromRunningStream {
         }
     }
 
+    /**
+    * Solves the Median From Running Stream problem.
+    *
+    * @return The computed floating-point result.
+    */
     fun findMedian(): Double {
         return if (minHeap.size > maxHeap.size) {
             minHeap.peek().toDouble()
@@ -742,53 +644,17 @@ class MedianFromRunningStream {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Meeting Room_III
 
-<span id="meetingroom_iii"></span>
-
 ### Problem
 
-**Meetingroom Iii**
+Solves the Meeting Room_III problem.
 
-**Function:** `Most Booked` takes `n` (integer), `meetings` (Array<array of integers>) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Sort meetings by start time
-- Initialize available rooms
-- Free up any rooms that are now available
-- If a room is available, use it
-- If all rooms are busy, use the one that will become available first
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `endTime`, `index`, `roomUsage`, `busyRooms`, `availableRooms`, `duration`, `room`, `earliestRoom`
-
-**Execution flow:**
-- Sort meetings by start time
-- Initialize available rooms
-- Free up any rooms that are now available
-- If a room is available, use it
-- If all rooms are busy, use the one that will become available first
-- The new end time is the earliest available time plus the duration
-- Find the room with maximum usage (if tied, return the smallest index)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -800,6 +666,14 @@ import java.util.*
 class MeetingRoom_III {
     data class Room(val endTime: Long, val index: Int)
 
+    /**
+    * Solves the Meeting Room_III problem.
+    * Takes `n` (integer), `meetings` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param meetings The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun mostBooked(n: Int, meetings: Array<IntArray>): Int {
         // Sort meetings by start time
         meetings.sortWith(compareBy { it[0] })
@@ -856,37 +730,17 @@ class MeetingRoom_III {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Single Threaded CPU
 
-<span id="singlethreadedcpu"></span>
-
 ### Problem
 
-**Singlethreadedcpu**
+Solves the Single Threaded CPU problem.
 
-**Function:** `Get Order` takes `tasks` (Array<array of integers>) and returns **array of integers**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `enqueueTime`, `processingTime`, `index`, `allTasks`, `pq`, `result`, `time`, `i`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -898,6 +752,13 @@ import java.util.*
 class SingleThreadedCPU {
     data class Task(val enqueueTime: Int, val processingTime: Int, val index: Int)
 
+    /**
+    * Solves the Single Threaded CPU problem.
+    * Takes `tasks` (2D matrix of integers).
+    *
+    * @param tasks The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun getOrder(tasks: Array<IntArray>): IntArray {
         val allTasks = tasks.mapIndexed { i, (enq, proc) -> Task(enq, proc, i) }
             .sortedBy { it.enqueueTime }
@@ -934,47 +795,17 @@ class SingleThreadedCPU {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Sliding Window Median
 
-<span id="slidingwindowmedian"></span>
-
 ### Problem
 
-**Slidingwindowmedian**
+Helper: balance heaps.
 
-**Function:** `Get Median` takes none and returns **double**.
+### Why This Approach
 
-**Key logic:**
-- Min-heap for the larger half
-- Max-heap for the smaller half
-- TreeMap to track delayed removals
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `minHeap`, `maxHeap`, `delayedRemoval`, `result`
-
-**Execution flow:**
-- Min-heap for the larger half
-- Max-heap for the smaller half
-- TreeMap to track delayed removals
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -988,6 +819,11 @@ class SlidingWindowMedian {
     private val maxHeap = PriorityQueue<Double> ( compareBy{-it} ) // Max-heap for the smaller half
     private val delayedRemoval = TreeMap<Double, Int>() // TreeMap to track delayed removals
 
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun balanceHeaps() {
         if (maxHeap.size > minHeap.size + 1) {
             minHeap.add(maxHeap.poll())
@@ -996,6 +832,12 @@ class SlidingWindowMedian {
         }
     }
 
+    /**
+    * Helper: add.
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun add(num: Int) {
         if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
             maxHeap.add(num.toDouble())
@@ -1005,6 +847,12 @@ class SlidingWindowMedian {
         balanceHeaps()
     }
 
+    /**
+    * Helper: remove.
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun remove(num: Int) {
         if (num <= maxHeap.peek()) {
             maxHeap.remove(num.toDouble())
@@ -1014,6 +862,11 @@ class SlidingWindowMedian {
         balanceHeaps()
     }
 
+    /**
+    * Helper: get median.
+    *
+    * @return The computed floating-point result.
+    */
     private fun getMedian(): Double {
         return if (maxHeap.size == minHeap.size) {
             (maxHeap.peek().toDouble() + minHeap.peek().toDouble()) / 2.0
@@ -1022,6 +875,14 @@ class SlidingWindowMedian {
         }
     }
 
+    /**
+    * Solves the Sliding Window Median problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed floating-point result.
+    */
     fun medianSlidingWindow(nums: IntArray, k: Int): DoubleArray {
         val result = DoubleArray(nums.size - k + 1)
 
@@ -1049,47 +910,17 @@ class SlidingWindowMedian {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Top K Frequent Elements
 
-<span id="topkfrequentelements"></span>
-
 ### Problem
 
-**Topkfrequentelements**
+Solves the Top KFrequent Elements problem.
 
-**Function:** `Top Kfrequent` takes `nums` (array of integers), `k` (integer) and returns **array of integers**.
+### Why This Approach
 
-**Key logic:**
-- Randomized Quick Partition...
-- Swap pivot with the end
-- Swap back the pivot to the correct position
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `map`, `uniqueNums`, `start`, `end`, `partitionIndex`, `randomIndex`, `pivot`, `partitionIndex`
-
-**Execution flow:**
-- Randomized Quick Partition...
-- Swap pivot with the end
-- Swap back the pivot to the correct position
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1102,6 +933,14 @@ import kotlin.random.Random
 class TopKFrequentElements {
     private val map = HashMap<Int, Int>()
 
+    /**
+    * Solves the Top KFrequent Elements problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun topKFrequent(nums: IntArray, k: Int): IntArray {
         nums.forEach { map[it] = map.getOrPut(it) { 0 } + 1 }
 
@@ -1122,6 +961,14 @@ class TopKFrequentElements {
     }
 
     // Randomized Quick Partition...
+    /**
+    * Helper: partition.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
     private fun partition(nums: IntArray, start: Int, end: Int): Int {
         val randomIndex = Random.nextInt(start, end + 1)
         swap(nums, randomIndex, end)  // Swap pivot with the end
@@ -1138,6 +985,14 @@ class TopKFrequentElements {
         return partitionIndex
     }
 
+    /**
+    * Helper: swap.
+    *
+    * @param nums The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun swap(nums: IntArray, i: Int, j: Int) {
        nums[i] = nums[j].also { nums[i] = it }
     }
@@ -1148,19 +1003,7 @@ class TopKFrequentElements {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — Heaps maintain the min/max of a dynamic set. Use min-heap for k largest, max-heap for k smallest, dual heaps for median.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

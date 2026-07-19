@@ -1,6 +1,13 @@
 package bitset
 
 class SumOfAllSubsetXorTotal {
+    /**
+    * Solves the Sum Of All Subset Xor Total problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun subsetXORSum(nums: IntArray): Int {
         var result = 0
         // Capture each bit that is set in any of the elements

@@ -4,6 +4,13 @@ class MinStack() {
     private val stack = ArrayDeque<Int>()
     private val minStack = ArrayDeque<Int>()
 
+    /**
+    * Solves the Min Stack problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun push(`val`: Int) {
         stack.add(`val`)
         if (minStack.isEmpty() || `val` <= minStack.last()) {
@@ -11,6 +18,11 @@ class MinStack() {
         }
     }
 
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun pop() {
         if (stack.isNotEmpty()) {
             val poppedValue = stack.removeLast()
@@ -20,10 +32,20 @@ class MinStack() {
         }
     }
 
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return The computed integer result.
+    */
     fun top(): Int {
         return stack.last()
     }
 
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return The computed integer result.
+    */
     fun getMin(): Int {
         return minStack.last()
     }

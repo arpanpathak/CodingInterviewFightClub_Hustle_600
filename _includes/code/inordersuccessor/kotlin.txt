@@ -1,6 +1,14 @@
 package tree.bst
 
 class InorderSuccessor {
+    /**
+    * Solves the Inorder Successor problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun inorderSuccessor(root: TreeNode?, p: TreeNode?): TreeNode? {
         var successor: TreeNode? = null
         var current = root

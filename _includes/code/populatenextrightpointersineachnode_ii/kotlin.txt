@@ -3,6 +3,13 @@ package tree
 import java.util.*
 
 class PopulateNextRightPointersInEachNode_II {
+    /**
+    * Solves the Populate Next Right Pointers In Each Node_II problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun connect(root: Node?): Node? {
         val queue: Queue<Node> = LinkedList()
         root?.let { queue.add(it) }

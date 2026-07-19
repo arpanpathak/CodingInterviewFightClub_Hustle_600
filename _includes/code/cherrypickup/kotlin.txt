@@ -6,6 +6,13 @@ class CherryPickup {
     private lateinit var grid: Array<IntArray>
     private var n: Int = 0
 
+    /**
+    * Solves the Cherry Pickup problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun cherryPickup(grid: Array<IntArray>): Int {
         this.grid = grid
         n = grid.size
@@ -13,6 +20,14 @@ class CherryPickup {
         return maxOf(0, dfs(0, 0, 0))
     }
 
+    /**
+    * Helper: dfs.
+    *
+    * @param row The integer parameter representing row.
+    * @param col1 The integer parameter representing col1.
+    * @param col2 The integer parameter representing col2.
+    * @return The computed integer result.
+    */
     private fun dfs(row: Int, col1: Int, col2: Int): Int {
         val row2 = row + col1 - col2
         val state = Triple(row, col1, col2)
@@ -37,17 +52,48 @@ class CherryPickup {
         }.also { dp[state] = it }
     }
 
+/**
+* Helper: is invalid position.
+*
+* @param row The integer parameter representing row.
+* @param row2 The integer parameter representing row2.
+* @param col1 The integer parameter representing col1.
+* @param col2 The integer parameter representing col2.
+* @return Unit (no return value, modifies state in-place).
+*/
 //    private fun isInvalidPosition(row: Int, row2: Int, col1: Int, col2: Int) =
 //        row >= n || row2 >= n || col1 >= n || col2 >= n || grid[row][col1] == -1 || grid[row2][col2] == -1
 
+    /**
+    * Helper: is invalid position.
+    *
+    * @param row The integer parameter representing row.
+    * @param row2 The integer parameter representing row2.
+    * @param col1 The integer parameter representing col1.
+    * @param col2 The integer parameter representing col2.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun isInvalidPosition(row: Int, row2: Int, col1: Int, col2: Int) =
         listOf(row, row2, col1, col2).any { it >= n } || grid[row][col1] == -1 || grid[row2][col2] == -1
 
+    /**
+    * Helper: is final position.
+    *
+    * @param row The integer parameter representing row.
+    * @param col1 The integer parameter representing col1.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun isFinalPosition(row: Int, col1: Int) =
         row == n - 1 && col1 == n - 1
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
 
         }

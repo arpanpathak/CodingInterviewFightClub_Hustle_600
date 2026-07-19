@@ -1,6 +1,13 @@
 package string
 
 class ReverseWordsInString {
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun reverseWords(s: String): String {
         val words = s.split(" ").filter { it.isNotEmpty() }.toMutableList()
 
@@ -17,6 +24,15 @@ class ReverseWordsInString {
 
     }
 
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `nums` (MutableList<String>), `i` (integer), `j` (integer).
+    *
+    * @param nums The input MutableList<String>.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun swap(nums: MutableList<String>, i: Int, j: Int) {
         nums[j] = nums[i].also { nums[i] = nums[j] }
     }

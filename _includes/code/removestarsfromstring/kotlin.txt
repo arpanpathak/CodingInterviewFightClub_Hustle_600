@@ -1,6 +1,13 @@
 package stack
 
 class RemoveStarsFromString {
+    /**
+    * Solves the Remove Stars From String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun removeStars(s: String): String {
         val stack = mutableListOf<Char>()
 

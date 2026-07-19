@@ -1,6 +1,13 @@
 package array.hashtable
 
 class DivideArrayIntoEqualPairs {
+    /**
+    * Solves the Divide Array Into Equal Pairs problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun divideArray(nums: IntArray): Boolean {
         val freqMap = mutableMapOf<Int, Int>()
 

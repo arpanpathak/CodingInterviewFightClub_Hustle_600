@@ -1,6 +1,14 @@
 package string
 
 class ValidAnagram {
+    /**
+    * Solves the Valid Anagram problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isAnagram(s: String, t: String): Boolean {
         if (s.length != t.length) return false
 

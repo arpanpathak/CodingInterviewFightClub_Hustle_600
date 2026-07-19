@@ -7,22 +7,19 @@ data class Contacts(
     val phone: String
 )
 
-/**
  * Data class representing a user.
  * Inner class Contacts is used to represent contact details of the user.
- */
 data class User(
     val name: String,
     val age: Int,
     val contacts: Contacts,
     val attributes: Map<String, Any>?  // Optional dynamic attributes
 ) {
-    /**
      * Data class for storing user contact details.
-     */
 
 }
 
+ * Main function to deserialize JSON into a User object and display the data.
 /**
  * Main function to deserialize JSON into a User object and display the data.
  */

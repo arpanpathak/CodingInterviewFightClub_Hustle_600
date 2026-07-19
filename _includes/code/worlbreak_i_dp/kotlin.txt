@@ -3,10 +3,25 @@ package hashtable
 class WorlBreak_I_DP {
     enum class State { UNVISITED, FOUND, NOT_FOUND }
 
+    /**
+    * Solves the Worl Break_I_DP problem.
+    * Takes `s` (string), `wordDict` (list of strings).
+    *
+    * @param s The input string.
+    * @param wordDict The input list of strings.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun wordBreak(s: String, wordDict: List<String>): Boolean {
         val set = wordDict.toHashSet()
         val dp = Array(s.length + 1) { State.UNVISITED }
 
+        /**
+        * Solves the Worl Break_I_DP problem.
+        * Takes `i` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @return The computed result (State).
+        */
         fun canPartition(i: Int): State {
             val currentState = dp[i]
             when  {

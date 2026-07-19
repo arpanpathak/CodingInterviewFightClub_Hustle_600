@@ -7,6 +7,13 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 class HttpApiCall {
+    /**
+    * Solves the Http Api Call problem.
+    * Takes `url` (string).
+    *
+    * @param url The input string.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun callApi(url: String) {
         try {
             val urlObj = URL(url)
@@ -29,6 +36,13 @@ class HttpApiCall {
         }
     }
 
+    /**
+    * Solves the Http Api Call problem.
+    * Takes `url` (string).
+    *
+    * @param url The input string.
+    * @return The resulting string.
+    */
     fun fetchUrl(url: String): String {
         val client = OkHttpClient()
         val request = Request.Builder()
@@ -45,6 +59,12 @@ class HttpApiCall {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
             val url = "https://jsonplaceholder.typicode.com/posts/1" // This URL points to a specific post in the JSONPlaceholder API
 

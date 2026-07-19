@@ -3,6 +3,13 @@ package tree.bfs
 import tree.TreeNode
 
 class CheckCompletenessOfBinaryTree {
+    /**
+    * Solves the Check Completeness Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isCompleteTree(root: TreeNode?): Boolean {
         if (root == null) return true // Edge case: An empty tree is considered complete
 

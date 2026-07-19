@@ -1,6 +1,13 @@
 package array
 
 class SpiralMatrix {
+    /**
+    * Solves the Spiral Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun spiralOrder(matrix: Array<IntArray>): List<Int> {
         if (matrix.isEmpty()) return emptyList()
 

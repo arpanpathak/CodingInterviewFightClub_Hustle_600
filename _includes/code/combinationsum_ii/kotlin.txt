@@ -1,10 +1,27 @@
 package array.backtracking
 
 class CombinationSum_II {
+    /**
+    * Solves the Combination Sum_II problem.
+    * Takes `candidates` (array of integers), `target` (integer).
+    *
+    * @param candidates The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun combinationSum2(candidates: IntArray, target: Int): List<List<Int>> {
         val results = mutableListOf<List<Int>>()
         candidates.sort()
 
+        /**
+        * Solves the Combination Sum_II problem.
+        * Takes `index` (integer), `target` (integer), `curr` (mutable list of integers).
+        *
+        * @param index The integer parameter representing index.
+        * @param target The integer parameter representing target.
+        * @param curr The input mutable list of integers.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(index: Int, target: Int, curr: MutableList<Int>) {
             if (target == 0) {
                 results.add(ArrayList(curr))

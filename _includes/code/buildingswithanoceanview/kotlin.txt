@@ -1,6 +1,13 @@
 package stack
 
 class BuildingsWithAnOceanView {
+    /**
+    * Solves the Buildings With An Ocean View problem.
+    * Takes `heights` (array of integers).
+    *
+    * @param heights The input array of integers.
+    * @return The computed integer result.
+    */
     fun findBuildings(heights: IntArray): IntArray {
         val result = mutableListOf<Int>()
 

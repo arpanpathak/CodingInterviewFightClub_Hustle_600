@@ -1,6 +1,14 @@
 package array.dp
 
 class CoinChange_II_BottomUp {
+    /**
+    * Solves the Coin Change_II_Bottom Up problem.
+    * Takes `amount` (integer), `coins` (array of integers).
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
     fun change(amount: Int, coins: IntArray): Int {
         val dp = IntArray(amount + 1) { 0 }
         dp[0] = 1  // Base case: 1 way to make amount 0 (using no coins)

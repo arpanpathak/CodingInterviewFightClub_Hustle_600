@@ -1,6 +1,13 @@
 package grid
 
 class MakingALargeIsland {
+    /**
+    * Solves the Making ALarge Island problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun largestIsland(grid: Array<IntArray>): Int {
         val n = grid.size
         val directions = listOf(0 to 1, 0 to -1, 1 to 0, -1 to 0) // Dx, Dy
@@ -8,6 +15,15 @@ class MakingALargeIsland {
         var maxArea = 0
         var islandId = 2
 
+        /**
+        * Solves the Making ALarge Island problem.
+        * Takes `r` (integer), `c` (integer), `id` (integer).
+        *
+        * @param r The integer parameter representing r.
+        * @param c The integer parameter representing c.
+        * @param id The integer parameter representing id.
+        * @return The computed integer result.
+        */
         fun dfs(r: Int, c: Int, id: Int): Int {
             if (r !in grid.indices || c !in grid[0].indices || grid[r][c] != 1) return 0
             grid[r][c] = id
@@ -30,6 +46,14 @@ class MakingALargeIsland {
         }
 
         // Second pass: check conversion of 0s to 1s
+        /**
+        * Solves the Making ALarge Island problem.
+        * Takes `r` (integer), `c` (integer).
+        *
+        * @param r The integer parameter representing r.
+        * @param c The integer parameter representing c.
+        * @return The computed integer result.
+        */
         fun calculatePotentialArea(r: Int, c: Int): Int {
             val uniqueIslands = mutableSetOf<Int>()
             var potentialSize = 1

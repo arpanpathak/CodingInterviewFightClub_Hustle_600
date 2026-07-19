@@ -1,6 +1,13 @@
 package sliding_window
 
 class MaximumErasureValue {
+    /**
+    * Solves the Maximum Erasure Value problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun maximumUniqueSubarray(nums: IntArray): Int {
         val set = mutableSetOf<Int>()
         var ( windowSum, windowStart, maxSum) = listOf( 0, 0, 0)

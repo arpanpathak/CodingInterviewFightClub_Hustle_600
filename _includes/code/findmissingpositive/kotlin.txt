@@ -1,6 +1,13 @@
 package array.hashtable
 
 class FindMissingPositive {
+    /**
+    * Solves the Find Missing Positive problem.
+    * Takes `A` (array of integers).
+    *
+    * @param A The input array of integers.
+    * @return The computed integer result.
+    */
     fun firstMissingPositive(A: IntArray): Int {
         for (i in A.indices) {
             var current = A[i]

@@ -18,7 +18,7 @@ next_chapter:
 
 ## The Pattern
 
-Graph problems reduce to choosing the right traversal: BFS for shortest path, DFS for connectivity, topological sort for dependencies.
+BFS for shortest path, DFS for connectivity, topological sort for dependencies.
 
 ## Complete Problem Set
 
@@ -47,46 +47,13 @@ Graph problems reduce to choosing the right traversal: BFS for shortest path, DF
 
 ## Alien Dictionary
 
-<span id="aliendictionary"></span>
-
 ### Problem
 
-**Aliendictionary**
+Solves the Alien Dictionary problem.
 
-**Function:** `Alien Order` takes `words` (Array<string>) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- 0 = visiting, 1 = visited, -1 = not visited
-- Step 1: Build the graph and visited map
-- Step 2: Build edges between characters
-- Check if the second word is a prefix of the first
-- Invalid case, prefix conflict
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `graph`, `visited`, `result`
-
-**Execution flow:**
-- 0 = visiting, 1 = visited, -1 = not visited
-- Step 1: Build the graph and visited map
-- Step 2: Build edges between characters
-- Check if the second word is a prefix of the first
-- Invalid case, prefix conflict
-- Step 3: Perform DFS to find topological sort
-- Cycle detected
-- Already visited
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -98,6 +65,13 @@ class AlienDictionary {
         NOT_VISITED, VISITING, VISITED
     }
 
+    /**
+    * Solves the Alien Dictionary problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
     fun alienOrder(words: Array<String>): String {
         val graph = mutableMapOf<Char, MutableSet<Char>>()
         val visited = mutableMapOf<Char, State>()  // 0 = visiting, 1 = visited, -1 = not visited
@@ -129,6 +103,13 @@ class AlienDictionary {
         }
 
         // Step 3: Perform DFS to find topological sort
+        /**
+        * Solves the Alien Dictionary problem.
+        * Takes `node` (character).
+        *
+        * @param node The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun dfs(node: Char): Boolean {
             if (visited[node] == State.VISITING) return false  // Cycle detected
             if (visited[node] == State.VISITED) return true  // Already visited
@@ -157,46 +138,20 @@ class AlienDictionary {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Alien Dictionary_BFS
 
-<span id="aliendictionary_bfs"></span>
-
 ### Problem
 
-**Aliendictionary Bfs**
+Solves the Alien Dictionary_BFS problem.
 
-**Function:** `Alien Order` takes `words` (Array<string>) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Handle invalid case (e.g., "abc" before "ab")
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `graph`, `inDegree`, `currentWord`, `nextWord`, `minLength`, `currentChar`, `nextChar`, `queue`
-
-**Execution flow:**
-- Handle invalid case (e.g., "abc" before "ab")
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -204,6 +159,13 @@ Let's trace through the code to understand how it processes the input:
 package graph.topological_sort
 
 class AlienDictionary_BFS {
+    /**
+    * Solves the Alien Dictionary_BFS problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
     fun alienOrder(words: Array<String>): String {
         val graph = mutableMapOf<Char, HashSet<Char>>()
         val inDegree = mutableMapOf<Char, Int>()
@@ -252,50 +214,20 @@ class AlienDictionary_BFS {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Apply Substitutions
 
-<span id="applysubstitutions"></span>
-
 ### Problem
 
-**Applysubstitutions**
+Solves the Apply Substitutions problem.
 
-**Function:** `Apply Substitutions` takes `replacements` (List<List<string>>), `text` (string) and returns **string**.
+### Why This Approach
 
-**Key logic:**
-- Replace if found, else keep original
-- Move past the placeholder
-- Continue resolving if changed
-
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `map`, `sb`, `i`, `key`, `result`
-
-**Execution flow:**
-- Replace if found, else keep original
-- Move past the placeholder
-- Continue resolving if changed
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -303,6 +235,14 @@ Let's trace through the code to understand how it processes the input:
 package string
 
 class ApplySubstitutions {
+    /**
+    * Solves the Apply Substitutions problem.
+    * Takes `replacements` (List<List<String>>), `text` (string).
+    *
+    * @param replacements The input List<List<String>>.
+    * @param text The input string.
+    * @return The resulting string.
+    */
     fun applySubstitutions(replacements: List<List<String>>, text: String): String {
         val map = mutableMapOf<String, String>()
 
@@ -310,6 +250,13 @@ class ApplySubstitutions {
             map[key] = value
         }
 
+        /**
+        * Solves the Apply Substitutions problem.
+        * Takes `s` (string).
+        *
+        * @param s The input string.
+        * @return The resulting string.
+        */
         fun resolve(s: String): String {
             val sb = StringBuilder()
             var i = 0
@@ -338,51 +285,20 @@ class ApplySubstitutions {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Bus Routes
 
-<span id="busroutes"></span>
-
 ### Problem
 
-**Busroutes**
+Solves the Bus Routes problem.
 
-**Function:** `Num Buses To Destination` takes `routes` (Array<array of integers>), `source` (integer), `target` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Stop -> List of buses passing through
-- Build the graph
-- Explore all buses passing through the current stop
-- (1) =>
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `stop`, `busCount`, `graph`, `queue`, `visitedBuses`, `visitedStops`
-
-**Execution flow:**
-- Stop -> List of buses passing through
-- Build the graph
-- Explore all buses passing through the current stop
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -396,6 +312,15 @@ import java.util.*
 class BusRoutes {
     data class Node(val stop: Int, val busCount: Int)
 
+    /**
+    * Solves the Bus Routes problem.
+    * Takes `routes` (2D matrix of integers), `source` (integer), `target` (integer).
+    *
+    * @param routes The input 2D matrix of integers.
+    * @param source The integer parameter representing source.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun numBusesToDestination(routes: Array<IntArray>, source: Int, target: Int): Int {
         if (source == target) return 0
 
@@ -450,55 +375,17 @@ class BusRoutes {
 | **Time** | O(V + E) |
 | **Space** | O(V) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Cheapest Flights Within K Stops
 
-<span id="cheapestflightswithinkstops"></span>
-
 ### Problem
 
-**Cheapestflightswithinkstops**
+Solves the Cheapest Flights Within KStops problem.
 
-**Function:** `Find Cheapest Price` takes `n` (integer), `flights` (Array<array of integers>), `src` (integer), `dst` (integer), `k` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Define the Node class to encapsulate flight details
-- Graph map where each integer key maps to a list of Node objects
-- Solving using Bellman Ford
-- Build the graph from the input flights
-- Append the destination and cost to the list of nodes for the source
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dest`, `price`, `graph`, `from`, `to`, `cost`, `dp`, `cheapest`
-
-**Execution flow:**
-- Define the Node class to encapsulate flight details
-- Graph map where each integer key maps to a list of Node objects
-- Solving using Bellman Ford
-- Build the graph from the input flights
-- Append the destination and cost to the list of nodes for the source
-- DP table for storing minimum cost to each node with up to i flights
-- Cost to reach source from itself is 0
-- Perform relaxation for each possible number of stops
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -515,6 +402,17 @@ class CheapestFlightsWithinKStops {
     private var graph = mutableMapOf<Int, MutableList<Node>>()
 
     // Solving using Bellman Ford
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         flights.forEach { flight ->
@@ -546,6 +444,17 @@ class CheapestFlightsWithinKStops {
         return if (cheapest == Int.MAX_VALUE) -1 else cheapest
     }
 
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun findCheapestPriceBfs(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         flights.forEach { flight ->
@@ -562,6 +471,14 @@ class CheapestFlightsWithinKStops {
     }
 
 
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @return The computed integer result.
+    */
     fun dijkstra(graph: MutableMap<Int, MutableList<Node>>, src: Int): Map<Int, Int> {
         val dist = mutableMapOf<Int, Int>().apply {
             graph.keys.forEach { this[it] = Int.MAX_VALUE }
@@ -590,6 +507,16 @@ class CheapestFlightsWithinKStops {
         return dist
     }
 
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `src` (integer), `dest` (integer), `n` (integer), `k` (integer).
+    *
+    * @param src The integer parameter representing src.
+    * @param dest The integer parameter representing dest.
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun bfs(src: Int, dest: Int, n: Int, k: Int ): IntArray {
         // To track the minimum cost to reach each destination
         val minCost = IntArray(n) { Int.MAX_VALUE }
@@ -621,6 +548,15 @@ class CheapestFlightsWithinKStops {
     // Solve using Dijkstra
     data class State(val node: Int, val cost: Int, val stops: Int)
 
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer), `k` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun dijkstraWithMaxKStops(graph: MutableMap<Int, MutableList<Node>>, src: Int, k: Int): Map<Int, Int> {
         val pq = PriorityQueue<State>(compareBy { it.cost })
         pq.offer(State(src, 0, 0))
@@ -649,6 +585,12 @@ class CheapestFlightsWithinKStops {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
 
         }
@@ -663,53 +605,17 @@ class CheapestFlightsWithinKStops {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n²) space. Each cell requires O(1) or O(n) work, totaling O(n³).
-
 ---
 
 ## Cheapest Flights With K Stops
 
-<span id="cheapestflightswithkstops"></span>
-
 ### Problem
 
-**Cheapestflightswithkstops**
+Solves the Cheapest Flights With KStops problem.
 
-**Function:** `Find Cheapest Price` takes `n` (integer), `flights` (Array<array of integers>), `src` (integer), `dst` (integer), `k` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Define the Node class to encapsulate flight details
-- Define the State class for priority queue elements
-- Build the graph from the input flights
-- E + EK log
-- Initialize the priority queue and cost tracking
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dest`, `cost`, `node`, `cost`, `stops`, `graph`, `from`, `to`
-
-**Execution flow:**
-- Define the Node class to encapsulate flight details
-- Define the State class for priority queue elements
-- Build the graph from the input flights
-- Initialize the priority queue and cost tracking
-- Skip if the number of stops exceeds the limit or if the path is not optimal
-- Return the cost if the destination is reached
-- Explore neighbors
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -725,6 +631,17 @@ class CheapestFlightsWithKStops {
     // Define the State class for priority queue elements
     data class State(val node: Int, val cost: Int, val stops: Int)
 
+    /**
+    * Solves the Cheapest Flights With KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         val graph = mutableMapOf<Int, MutableList<Node>>()
@@ -772,37 +689,17 @@ class CheapestFlightsWithKStops {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Cheapest Flight With K Stops
 
-<span id="cheapestflightwithkstops"></span>
-
 ### Problem
 
-**Cheapestflightwithkstops**
+Solves the Cheapest Flight With KStops problem.
 
-**Function:** `Find Cheapest Price` takes `n` (integer), `flights` (Array<array of integers>), `src` (integer), `dst` (integer), `k` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `node`, `cost`, `stops`, `graph`, `pq`, `minStops`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -814,6 +711,17 @@ import java.util.*
 class CheapestFlightWithKStops {
     data class Flight(val node: Int, val cost: Int, val stops: Int)
 
+    /**
+    * Solves the Cheapest Flight With KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         val graph = flights.groupBy({ it[0] }) { Flight(it[1], it[2], 0) }
         val pq = PriorityQueue<Flight>(compareBy { it.cost })
@@ -845,37 +753,17 @@ class CheapestFlightWithKStops {
 | **Time** | O(n log k) |
 | **Space** | O(k) |
 
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
-
 ---
 
 ## Node
 
-<span id="clonegraph"></span>
-
 ### Problem
 
-**Clonegraph**
+Solves the Node problem.
 
-**Function:** `Clone Graph` takes `node` (Node?) and returns **Node**.
+### Why This Approach
 
-
-
-### Approach
-
-**Hash Map Approach:**
-1. Use a hash map for O(1) average lookups
-2. Store key-value pairs where the key enables fast retrieval
-3. Trade off memory for time
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `neighbors`, `map`, `clonedNode`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -887,6 +775,13 @@ data class Node(val `val`: Int, val neighbors: MutableList<Node?> = mutableListO
 class CloneGraph {
     val map = mutableMapOf<Node, Node>()
 
+    /**
+    * Solves the Node problem.
+    * Takes `node` (Node?).
+    *
+    * @param node The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun cloneGraph(node: Node?): Node? {
 
         if (node == null) return null
@@ -906,48 +801,20 @@ class CloneGraph {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(n) space comes from the auxiliary data structures used.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Course Schedule
 
-<span id="courseschedule"></span>
-
 ### Problem
 
-**Courseschedule**
+Helper: has cycle.
 
-**Function:** `Has Cycle` takes `numCourses` (integer) and returns **boolean**.
+### Why This Approach
 
-**Key logic:**
-- Define dfs function inside hasCycle to limit its scope
-- Reset graph for each invocation to handle multiple calls
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `graph`, `status`
-
-**Execution flow:**
-- Define dfs function inside hasCycle to limit its scope
-- Reset graph for each invocation to handle multiple calls
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -959,8 +826,21 @@ class CourseSchedule {
     private lateinit var status: Array<NodeStatus>
     private enum class NodeStatus { UNVISITED, EXPLORING, DONE }
 
+    /**
+    * Helper: has cycle.
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun hasCycle(numCourses: Int): Boolean {
         // Define dfs function inside hasCycle to limit its scope
+        /**
+        * Solves the Course Schedule problem.
+        * Takes `node` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun dfs(node: Int): Boolean = when (status[node]) {
             NodeStatus.EXPLORING -> true
             NodeStatus.DONE -> false
@@ -982,6 +862,14 @@ class CourseSchedule {
         return false
     }
 
+    /**
+    * Solves the Course Schedule problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
         // Reset graph for each invocation to handle multiple calls
         graph = mutableMapOf()
@@ -1000,56 +888,20 @@ class CourseSchedule {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Course Schedule_II
 
-<span id="courseschedule_ii"></span>
-
 ### Problem
 
-**Courseschedule Ii**
+Solves the Course Schedule_II problem.
 
-**Function:** `Find Order` takes `numCourses` (integer), `prerequisites` (Array<array of integers>) and returns **array of integers**.
+### Why This Approach
 
-**Key logic:**
-- Initialize graph, status, and result array
-- Build the graph
-- Attempt to find a topological order
-- Nested DFS function for checking cycles and building the result
-- If an already visited node re-appears then it means we looped back to an exploring node
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `graph`, `status`, `result`, `index`
-
-**Execution flow:**
-- Initialize graph, status, and result array
-- Build the graph
-- Attempt to find a topological order
-- Nested DFS function for checking cycles and building the result
-- If an already visited node re-appears then it means we looped back to an exploring node
-- If an already done node re-appears it doesn't mean cycle rather it means
-- we fully explored the node previously and found no cycle in the path.
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1064,6 +916,14 @@ class CourseSchedule_II {
 
     private enum class NodeStatus { UNVISITED, EXPLORING, DONE }
 
+    /**
+    * Solves the Course Schedule_II problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
         // Initialize graph, status, and result array
         status = Array(numCourses) { NodeStatus.UNVISITED }
@@ -1083,8 +943,21 @@ class CourseSchedule_II {
         return result
     }
 
+    /**
+    * Helper: has cycle.
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun hasCycle(numCourses: Int): Boolean {
         // Nested DFS function for checking cycles and building the result
+        /**
+        * Solves the Course Schedule_II problem.
+        * Takes `node` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun dfs(node: Int): Boolean {
             when (status[node]) {
                 // If an already visited node re-appears then it means we looped back to an exploring node
@@ -1121,57 +994,20 @@ class CourseSchedule_II {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Course Schedule_II_BFS
 
-<span id="courseschedule_ii_bfs"></span>
-
 ### Problem
 
-**Courseschedule Ii Bfs**
+Solves the Course Schedule_II_BFS problem.
 
-**Function:** `Find Order` takes `numCourses` (integer), `prerequisites` (Array<array of integers>) and returns **array of integers**.
+### Why This Approach
 
-**Key logic:**
-- Build the graph and calculate in-degrees
-- Initialize queue with courses having no prerequisites
-- Perform BFS (Kahn's Algorithm)
-- Test 1: Simple case
-- Test 2: Multiple dependencies
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `graph`, `inDegree`, `result`, `queue`, `solver`, `result1`, `result2`, `result3`
-
-**Execution flow:**
-- Build the graph and calculate in-degrees
-- Initialize queue with courses having no prerequisites
-- Perform BFS (Kahn's Algorithm)
-- Test 1: Simple case
-- Test 2: Multiple dependencies
-- Test 3: Cycle in the graph (no valid order)
-- Test 4: No prerequisites
-- Test 5: Self-loop (invalid schedule)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1179,6 +1015,14 @@ Let's trace through the code to understand how it processes the input:
 package graph.topological_sort
 
 class CourseSchedule_II_BFS {
+    /**
+    * Solves the Course Schedule_II_BFS problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
         val graph = Array<MutableList<Int>>(numCourses) { mutableListOf() }
         val inDegree = IntArray(numCourses)
@@ -1207,6 +1051,11 @@ class CourseSchedule_II_BFS {
     }
 }
 
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() {
     val solver = graph.topological_sort.CourseSchedule_II_BFS()
 
@@ -1238,40 +1087,20 @@ fun main() {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Critical Connections In A Network
 
-<span id="criticalconnectionsinanetwork"></span>
-
 ### Problem
 
-**Criticalconnectionsinanetwork**
+Solves the Critical Connections In ANetwork problem.
 
-**Function:** `Critical Connections` takes `n` (integer), `connections` (List<List<integer>>) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `G`, `result`, `depth`, `label`, `low`, `visited`, `i`, `j`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1286,6 +1115,14 @@ class CriticalConnectionsInANetwork {
     private lateinit var low: IntArray
     private lateinit var visited: BooleanArray
 
+    /**
+    * Solves the Critical Connections In ANetwork problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
     fun criticalConnections(n: Int, connections: List<List<Int>>): List<List<Int>> {
         G = Array(n) { mutableListOf() }
         result = mutableListOf()
@@ -1310,6 +1147,13 @@ class CriticalConnectionsInANetwork {
         return result
     }
 
+    /**
+    * Helper: dfs.
+    *
+    * @param node The integer parameter representing node.
+    * @param parent The integer parameter representing parent.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun dfs(node: Int, parent: Int) {
         visited[node] = true
         label[node] = depth
@@ -1337,40 +1181,20 @@ class CriticalConnectionsInANetwork {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Critical Connections In A Network Short Code
 
-<span id="criticalconnectionsinanetworkshortcode"></span>
-
 ### Problem
 
-**Criticalconnectionsinanetworkshortcode**
+Solves the Critical Connections In ANetwork Short Code problem.
 
-**Function:** `Critical Connections` takes `n` (integer), `connections` (List<List<integer>>) and returns **List**.
+### Why This Approach
 
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `graph`, `result`, `labels`, `low`, `time`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1378,6 +1202,14 @@ Let's trace through the code to understand how it processes the input:
 package graph.articulation_point
 
 class CriticalConnectionsInANetworkShortCode {
+    /**
+    * Solves the Critical Connections In ANetwork Short Code problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
     fun criticalConnections(n: Int, connections: List<List<Int>>): List<List<Int>> {
         val graph = Array(n) { mutableListOf<Int>() }.apply {
             connections.forEach { (u, v) -> this[u].add(v); this[v].add(u) }
@@ -1387,6 +1219,14 @@ class CriticalConnectionsInANetworkShortCode {
         val low = IntArray(n)
         var time = 0
 
+        /**
+        * Solves the Critical Connections In ANetwork Short Code problem.
+        * Takes `node` (integer), `parent` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @param parent The integer parameter representing parent.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(node: Int, parent: Int) {
             labels[node] = time.also { low[node] = it; time++ }
             graph[node].forEach { neighbour ->
@@ -1410,38 +1250,20 @@ class CriticalConnectionsInANetworkShortCode {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Find Redundent Connections
 
-<span id="findredundentconnections"></span>
-
 ### Problem
 
-**Findredundentconnections**
+Solves the Find Redundent Connections problem.
 
-**Function:** `Find Redundant Connection` takes `edges` (Array<array of integers>) and returns **array of integers**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `findRedundantConnection` processes the input
-2. Uses helper functions: find, union
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `parent`, `rootX`, `rootY`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1449,14 +1271,36 @@ Let's trace through the code to understand how it processes the input:
 package graph.mst
 
 class FindRedundentConnections {
+    /**
+    * Solves the Find Redundent Connections problem.
+    * Takes `edges` (2D matrix of integers).
+    *
+    * @param edges The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun findRedundantConnection(edges: Array<IntArray>): IntArray {
         val parent = IntArray(1001) { it }
 
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
         fun find(x: Int): Int {
             if (parent[x] != x) parent[x] = find(parent[x])
             return parent[x]
         }
 
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun union(x: Int, y: Int): Boolean {
             val rootX = find(x)
             val rootY = find(y)
@@ -1481,45 +1325,17 @@ class FindRedundentConnections {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Tree Node
 
-<span id="houserobber3"></span>
-
 ### Problem
 
-**Houserobber3**
+Solves the Tree Node problem.
 
-**Function:** `Rob` takes `root` (TreeNode?) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- If we rob this house then we can't rob children
-- If we don't rob then we could rob children and add them up
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `right`, `toRob`, `notToRob`, `result`
-
-**Execution flow:**
-- If we rob this house then we can't rob children
-- If we don't rob then we could rob children and add them up
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1534,6 +1350,13 @@ class TreeNode(var `val`: Int) {
 }
 
 class HouseRobber3 {
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun rob(root: TreeNode?): Int {
         fun dfs (node: TreeNode?): IntArray {
             if (node == null)
@@ -1563,48 +1386,20 @@ class HouseRobber3 {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Parallel Courses
 
-<span id="parallelcourses"></span>
-
 ### Problem
 
-**Parallelcourses**
+Solves the Parallel Courses problem.
 
-**Function:** `Minimum Semesters` takes `n` (integer), `relations` (Array<array of integers>) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- One-based index
-- Add courses with no prerequisites (in-degree 0)
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `inDegree`, `graph`, `queue`, `semesters`, `completed`, `size`, `course`
-
-**Execution flow:**
-- One-based index
-- Add courses with no prerequisites (in-degree 0)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1612,6 +1407,14 @@ Let's trace through the code to understand how it processes the input:
 package graph.cycle
 
 class ParallelCourses {
+    /**
+    * Solves the Parallel Courses problem.
+    * Takes `n` (integer), `relations` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param relations The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun minimumSemesters(n: Int, relations: Array<IntArray>): Int {
         val inDegree = IntArray(n + 1) // One-based index
         val graph = Array(n + 1) { mutableListOf<Int>() }
@@ -1649,54 +1452,20 @@ class ParallelCourses {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Reorder Routes To Make All Paths Lead To City Zero
 
-<span id="reorderroutestomakeallpathsleadtocityzero"></span>
-
 ### Problem
 
-**Reorderroutestomakeallpathsleadtocityzero**
+Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
 
-**Function:** `Min Reorder` takes `n` (integer), `connections` (Array<array of integers>) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Build adjacency list as an undirected graph
-- Forward edge
-- Backward edge
-- Forward edge needs reversal
-- Start DFS from city 0
-
-
-
-### Approach
-
-**DFS (Depth-First Search) Approach:**
-1. Recursively explore each path until reaching a base case
-2. Backtrack when stuck to try alternative paths
-3. DFS is useful for connectivity, path existence, and exhaustive search
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `graph`, `changes`, `visited`, `neighbor`
-
-**Execution flow:**
-- Build adjacency list as an undirected graph
-- Forward edge
-- Backward edge
-- Forward edge needs reversal
-- Start DFS from city 0
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1704,6 +1473,14 @@ Let's trace through the code to understand how it processes the input:
 package graph
 
 class ReorderRoutesToMakeAllPathsLeadToCityZero {
+    /**
+    * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+    * Takes `n` (integer), `connections` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun minReorder(n: Int, connections: Array<IntArray>): Int {
         val graph = Array(n) { mutableListOf<IntArray>() }
 
@@ -1716,6 +1493,13 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
         var changes = 0
         val visited = BooleanArray(n)
 
+        /**
+        * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+        * Takes `city` (integer).
+        *
+        * @param city The integer parameter representing city.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun dfs(city: Int) {
             visited[city] = true
             for (edge in graph[city]) {
@@ -1738,57 +1522,20 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
+| **Time** | O(n²) |
+| **Space** | O(1) |
 
 ---
 
 ## Word Ladder
 
-<span id="wordladder"></span>
-
 ### Problem
 
-**Wordladder**
+Solves the Word Ladder problem.
 
-**Function:** `Ladder Length` takes `beginWord` (string), `endWord` (string), `wordList` (List<string>) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- if end word is not word bank then it's not possible
-- Store the word list in a set for O(1) lookups
-- Queue to store word and level (distance)
-- Start with the beginWord and level 1
-- Check all possible transformations by changing each character
-
-
-
-### Approach
-
-**BFS (Breadth-First Search) Approach:**
-1. Use a queue to process nodes level by level
-2. Track visited nodes to avoid cycles
-3. BFS guarantees shortest path in unweighted graphs
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `wordSet`, `queue`, `originalChar`, `newWord`
-
-**Execution flow:**
-- if end word is not word bank then it's not possible
-- Store the word list in a set for O(1) lookups
-- Queue to store word and level (distance)
-- Start with the beginWord and level 1
-- Check all possible transformations by changing each character
-- Create a new word by replacing the i-th character
-- If the new word is the end word, return the result
-- If the new word is in the word set, we can add it to the queue
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1798,6 +1545,15 @@ package graph
 import java.util.*
 
 class WordLadder {
+    /**
+    * Solves the Word Ladder problem.
+    * Takes `beginWord` (string), `endWord` (string), `wordList` (list of strings).
+    *
+    * @param beginWord The input string.
+    * @param endWord The input string.
+    * @param wordList The input list of strings.
+    * @return The computed integer result.
+    */
     fun ladderLength(beginWord: String, endWord: String, wordList: List<String>): Int {
         if (endWord !in wordList) return 0 // if end word is not word bank then it's not possible
 
@@ -1838,17 +1594,5 @@ class WordLadder {
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
-
-**Analysis:**
-
-Each node and edge is visited at most once, giving O(V + E) for a graph with V vertices and E edges. The O(V) space stores visited tracking and the queue/stack.
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — Graph problems reduce to choosing the right traversal: BFS for shortest path, DFS for connectivity, topological sort for dependencies.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

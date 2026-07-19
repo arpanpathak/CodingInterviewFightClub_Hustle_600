@@ -5,6 +5,16 @@ import kotlin.math.max
 
 class MergeSortedArray {
 
+    /**
+    * Solves the Merge Sorted Array problem.
+    * Takes `nums1` (array of integers), `m` (integer), `nums2` (array of integers), `n` (integer).
+    *
+    * @param nums1 The input array of integers.
+    * @param m The integer parameter representing m.
+    * @param nums2 The input array of integers.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
         var (x, y, ptr) = listOf(m-1, n-1, m + n - 1)
 
@@ -24,6 +34,12 @@ class MergeSortedArray {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
             val testClass = MergeSortedArray()
 

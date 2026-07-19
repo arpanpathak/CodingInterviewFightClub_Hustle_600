@@ -13,6 +13,13 @@ class Trie {
 
     val root = TrieNode()
 
+    /**
+    * Solves the Trie problem.
+    * Takes `word` (string).
+    *
+    * @param word The input string.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun insert(word: String) {
         var currentNode = root
 
@@ -21,6 +28,13 @@ class Trie {
         currentNode.isWord = true
     }
 
+    /**
+    * Solves the Trie problem.
+    * Takes `word` (string).
+    *
+    * @param word The input string.
+    * @return The resulting collection (list of strings).
+    */
     fun search(word: String): List<String> {
         val results = mutableListOf<String>()
         var currentNode = root
@@ -33,6 +47,15 @@ class Trie {
         return results
     }
 
+    /**
+    * Solves the Trie problem.
+    * Takes `node` (TrieNode?), `prefix` (string), `results` (MutableList<String>).
+    *
+    * @param node The TrieNode? (nullable).
+    * @param prefix The input string.
+    * @param results The input MutableList<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun collectWords(node: TrieNode?, prefix: String, results: MutableList<String>) {
         if (node == null)
             return
@@ -46,6 +69,14 @@ class Trie {
 }
 
 class SearchSuggestionSystem {
+    /**
+    * Solves the Trie problem.
+    * Takes `products` (Array<String>), `searchWord` (string).
+    *
+    * @param products The input Array<String>.
+    * @param searchWord The input string.
+    * @return The resulting collection (List<List<String>).
+    */
     fun suggestedProducts(products: Array<String>, searchWord: String): List<List<String>> {
         val trie = Trie()
         val result = mutableListOf<List<String>>()

@@ -1,6 +1,13 @@
 package tree
 
 class BInaryTreeInOrderTraversalIterative {
+    /**
+    * Solves the BInary Tree In Order Traversal Iterative problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun inorderTraversal(root: TreeNode?): List<Int> {
         val stack = ArrayDeque<TreeNode>()
         val result = mutableListOf<Int>()

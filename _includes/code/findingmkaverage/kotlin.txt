@@ -8,6 +8,13 @@ class MKAverage(private val m: Int, private val k: Int) {
     private val highHeap = PriorityQueue<Int>() // min heap (for k largest elements)
     private var sum = 0L // Sum of the middle elements
 
+    /**
+    * Solves the MKAverage problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun addElement(num: Int) {
         // Add to deque
         deque.add(num)
@@ -40,6 +47,11 @@ class MKAverage(private val m: Int, private val k: Int) {
         recalculateMiddleSum()
     }
 
+    /**
+    * Solves the MKAverage problem.
+    *
+    * @return The computed integer result.
+    */
     fun calculateMKAverage(): Int {
         return if (deque.size < m) {
             -1
@@ -50,6 +62,11 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Balance heaps to ensure there are k elements in each of the heaps
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun balanceHeaps() {
         // Ensure lowHeap has k elements and highHeap has k elements
         if (lowHeap.size > k) {
@@ -61,6 +78,11 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Recalculate the sum of the middle elements in the sliding window
+    /**
+    * Helper: recalculate middle sum.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun recalculateMiddleSum() {
         sum = 0L
         val remainingElements = mutableListOf<Int>()
@@ -74,6 +96,11 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 }
 
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() {
     val obj = MKAverage(3, 1)
     obj.addElement(3)

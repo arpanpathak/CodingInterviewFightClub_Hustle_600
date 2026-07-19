@@ -1,6 +1,14 @@
 package binarysearch
 
 class SearchA2dMatrix {
+    /**
+    * Solves the Search A2d Matrix problem.
+    * Takes `matrix` (2D matrix of integers), `target` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
         if (matrix.isEmpty() || matrix[0].isEmpty()) return false
 

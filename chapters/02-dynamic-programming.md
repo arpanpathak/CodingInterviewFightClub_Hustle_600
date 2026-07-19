@@ -14,22 +14,22 @@ next_chapter:
 
 # Dynamic Programming
 
-> **21 problems** — Master optimal substructure and overlapping subproblems. DP solves complex problems by breaking them into simpler subproblems.
+> **21 problems** — Master optimal substructure and overlapping subproblems.
 
 ## The Pattern
 
-Optimal substructure + overlapping subproblems → DP. Identify states, define transitions, compute bottom-up or top-down with memoization.
+Optimal substructure + overlapping subproblems → DP. Identify states, define transitions.
 
 ## Complete Problem Set
 
 | # | Problem | Pattern | Difficulty |
 |---|---------|-----------|------------|
-| 1 | [Closest Subsequence Sum](#closestsubsequencesum) | — | <span class="badge badge-medium">Medium</span> |
-| 2 | [Maximumproductsubarray](#maximumproductsubarray) | — | <span class="badge badge-medium">Medium</span> |
-| 3 | [Maximum Profit In Job Scheduling](#maximumprofitinjobscheduling) | — | <span class="badge badge-medium">Medium</span> |
-| 4 | [Partition Equal Subset Sum](#partitionequalsubsetsum) | — | <span class="badge badge-medium">Medium</span> |
-| 5 | [Super Egg Dropping](#supereggdropping) | — | <span class="badge badge-medium">Medium</span> |
-| 6 | [Burst Baloons](#burstbaloons) | — | <span class="badge badge-medium">Medium</span> |
+| 1 | [Burst Baloons](#burstbaloons) | — | <span class="badge badge-medium">Medium</span> |
+| 2 | [Closest Subsequence Sum](#closestsubsequencesum) | — | <span class="badge badge-medium">Medium</span> |
+| 3 | [Maximumproductsubarray](#maximumproductsubarray) | — | <span class="badge badge-medium">Medium</span> |
+| 4 | [Maximum Profit In Job Scheduling](#maximumprofitinjobscheduling) | — | <span class="badge badge-medium">Medium</span> |
+| 5 | [Partition Equal Subset Sum](#partitionequalsubsetsum) | — | <span class="badge badge-medium">Medium</span> |
+| 6 | [Super Egg Dropping](#supereggdropping) | — | <span class="badge badge-medium">Medium</span> |
 | 7 | [House Robber](#houserobber) | — | <span class="badge badge-medium">Medium</span> |
 | 8 | [House Robber_II](#houserobber_ii) | — | <span class="badge badge-medium">Medium</span> |
 | 9 | [Coin Change](#coinchange) | — | <span class="badge badge-medium">Medium</span> |
@@ -48,28 +48,84 @@ Optimal substructure + overlapping subproblems → DP. Identify states, define t
 
 ---
 
-## Closest Subsequence Sum
-
-<span id="closestsubsequencesum"></span>
+## Burst Baloons
 
 ### Problem
 
-**Closestsubsequencesum**
+Solves the Burst Baloons problem.
 
-**Function:** `Min Abs Difference` takes `nums` (array of integers), `goal` (integer) and returns **integer**.
+### Why This Approach
 
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
+### Code
 
-### Approach
+```kotlin
+package array.dp
 
-**Solution Approach:**
-1. The main function `minAbsDifference` processes the input
+// Time COmplexity O(N^3) Space O(N^2)
+class BurstBaloons {
+    /**
+    * Solves the Burst Baloons problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    fun maxCoins(nums: IntArray): Int {
+        if (nums.isEmpty()) return 0
+        val dp = Array(nums.size) { IntArray(nums.size) }
 
-### Code Walkthrough
+        /**
+        * Solves the Burst Baloons problem.
+        * Takes `l` (integer), `r` (integer).
+        *
+        * @param l The integer parameter representing l.
+        * @param r The integer parameter representing r.
+        * @return The computed integer result.
+        */
+        fun dfs(l: Int, r: Int): Int {
+            when {
+                l > r -> return 0
+                dp[l][r] != 0 -> return dp[l][r]
+            }
 
-Let's trace through the code to understand how it processes the input:
+            var res = 0
+            for (mid in l..r) {
+                // Calculate the maximum coins for this partition
+                val left = if (l == 0) 1 else nums[l - 1]
+                val right = if (r == nums.size - 1) 1 else nums[r + 1]
 
-**Key variables:** `possibleSums`, `newSums`, `minDiff`
+                res = maxOf(res, dfs(l, mid - 1) +
+                        left * nums[mid] * right +
+                        dfs(mid + 1, r))
+            }
+
+            return res.also {  dp[l][r] = res }
+        }
+        return dfs(0, nums.size - 1)
+    }
+}
+```
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(n³) |
+| **Space** | O(n²) |
+
+---
+
+## Closest Subsequence Sum
+
+### Problem
+
+Solves the Closest Subsequence Sum problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -79,6 +135,14 @@ package array.Combinatorics
 import kotlin.math.abs
 
 class ClosestSubsequenceSum {
+    /**
+    * Solves the Closest Subsequence Sum problem.
+    * Takes `nums` (array of integers), `goal` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param goal The integer parameter representing goal.
+    * @return The computed integer result.
+    */
     fun minAbsDifference(nums: IntArray, goal: Int): Int {
         var possibleSums = mutableSetOf(0)
         for (num in nums) {
@@ -106,51 +170,17 @@ class ClosestSubsequenceSum {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Maximumproductsubarray
 
-<span id="maximumproductsubarray"></span>
-
 ### Problem
 
-**Maximumproductsubarray**
+Solves the Maximum Product Subarray problem.
 
-**Function:** `Max Product` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Edge case: empty array
-- Initialize trackers with first element
-- Tracks maximum product ending at current position
-- Tracks minimum product ending at current position (for negative numbers)
-- Stores the overall maximum product found
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `maxProduct` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `m`, `maxSoFar`, `minSoFar`, `result`, `currentNum`, `tempMax`, `tests`, `output`
-
-**Execution flow:**
-- Edge case: empty array
-- Initialize trackers with first element
-- Tracks maximum product ending at current position
-- Tracks minimum product ending at current position (for negative numbers)
-- Stores the overall maximum product found
-- Calculate new maximum product ending at current position:
-- 1. currentNum alone (start new subarray)
-- 2. currentNum * previous max (extend positive product)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -160,6 +190,13 @@ package dynamic_programming
 import dynamic_programming.MaximumProductSubarray.maxProduct
 
 object MaximumProductSubarray {
+    /**
+    * Solves the Maximum Product Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun maxProduct(nums: IntArray): Int {
         // Edge case: empty array
         if (nums.isEmpty()) return 0
@@ -199,6 +236,12 @@ object MaximumProductSubarray {
     }
 
     @JvmStatic
+    /**
+    * Entry point for the program.
+    *
+    * @param args The input Array<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun main(args: Array<String>) {
         val tests = listOf(
             intArrayOf(2, 3, -2, 4) to 6,     // Regular case
@@ -224,54 +267,17 @@ object MaximumProductSubarray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Maximum Profit In Job Scheduling
 
-<span id="maximumprofitinjobscheduling"></span>
-
 ### Problem
 
-**Maximumprofitinjobscheduling**
+Solves the Maximum Profit In Job Scheduling problem.
 
-**Function:** `Job Scheduling` takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Create a list of jobs and sort them by end time
-- Initialize dp array
-- Profit if the current job is not included
-- Find the last non-overlapping job
-- Profit if the current job is included
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `start`, `end`, `profit`, `jobs`, `dp`, `prevJobIndex`, `currentProfit`, `currentJob`
-
-**Execution flow:**
-- Create a list of jobs and sort them by end time
-- Initialize dp array
-- Profit if the current job is not included
-- Find the last non-overlapping job
-- Profit if the current job is included
-- Take the maximum profit between including and excluding the current job
-- Search in the right half
-- Search in the left half
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -281,6 +287,15 @@ package dynamic_programming
 class MaximumProfitInJobScheduling {
     data class Job(val start: Int, val end: Int, val profit: Int)
 
+    /**
+    * Solves the Maximum Profit In Job Scheduling problem.
+    * Takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers).
+    *
+    * @param startTime The input array of integers.
+    * @param endTime The input array of integers.
+    * @param profit The input array of integers.
+    * @return The computed integer result.
+    */
     fun jobScheduling(startTime: IntArray, endTime: IntArray, profit: IntArray): Int {
         // Create a list of jobs and sort them by end time
         val jobs = startTime.indices.map { Job(startTime[it], endTime[it], profit[it]) }
@@ -307,6 +322,13 @@ class MaximumProfitInJobScheduling {
         return dp[dp.size - 1]
     }
 
+    /**
+    * Helper: find last non overlapping job.
+    *
+    * @param jobs The input List<Job>.
+    * @param currentIndex The integer parameter representing currentIndex.
+    * @return The computed integer result.
+    */
     private fun findLastNonOverlappingJob(jobs: List<Job>, currentIndex: Int): Int {
         val currentJob = jobs[currentIndex]
         var low = 0
@@ -332,40 +354,20 @@ class MaximumProfitInJobScheduling {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
-| **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Partition Equal Subset Sum
 
-<span id="partitionequalsubsetsum"></span>
-
 ### Problem
 
-**Partitionequalsubsetsum**
+Solves the Partition Equal Subset Sum problem.
 
-**Function:** `Can Partition` takes `nums` (array of integers) and returns **boolean**.
+### Why This Approach
 
-
-
-### Approach
-
-**Top-Down DP (Memoization) Approach:**
-1. Define a recursive function that explores all possibilities
-2. Cache results in a table/dictionary to avoid redundant work
-3. The state is defined by the function parameters that change between calls
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `sum`, `target`, `dp`, `sum`, `target`, `dp`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -373,6 +375,13 @@ Let's trace through the code to understand how it processes the input:
 package dynamic_programming
 
 class PartitionEqualSubsetSum {
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canPartition(nums: IntArray): Boolean {
         val sum = nums.sum()
         if (sum % 2 != 0)   return false
@@ -380,6 +389,14 @@ class PartitionEqualSubsetSum {
         val dp = Array(nums.size) { IntArray(target + 1) { -1 } }
 
 
+        /**
+        * Solves the Partition Equal Subset Sum problem.
+        * Takes `i` (integer), `currentSum` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param currentSum The integer parameter representing currentSum.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun dfs(i: Int, currentSum: Int): Boolean = when {
             currentSum == target -> true
             dp[i][currentSum] != -1 -> dp[i][currentSum] == 1
@@ -392,6 +409,13 @@ class PartitionEqualSubsetSum {
         return dfs(0, 0)
     }
 
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canPartitionBottomUp(nums: IntArray): Boolean {
         val sum = nums.sum()
         if (sum % 2 != 0)   return false
@@ -415,38 +439,17 @@ class PartitionEqualSubsetSum {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n²) space. Each cell requires O(1) or O(n) work, totaling O(n³).
-
 ---
 
 ## Super Egg Dropping
 
-<span id="supereggdropping"></span>
-
 ### Problem
 
-**Supereggdropping**
+Solves the Super Egg Dropping problem.
 
-**Function:** `Super Egg Drop` takes `k` (integer), `n` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `m`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -454,6 +457,14 @@ Let's trace through the code to understand how it processes the input:
 package dynamic_programming
 
 class SuperEggDropping {
+    /**
+    * Solves the Super Egg Dropping problem.
+    * Takes `k` (integer), `n` (integer).
+    *
+    * @param k The integer parameter representing k.
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun superEggDrop(k: Int, n: Int): Int {
         val dp = Array(k + 1) { IntArray(n + 1) }
         var m = 0
@@ -475,120 +486,17 @@ class SuperEggDropping {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n²) space. Each cell requires O(1) or O(n) work, totaling O(n³).
-
----
-
-## Burst Baloons
-
-<span id="burstbaloons"></span>
-
-### Problem
-
-**Burstbaloons**
-
-**Function:** `Max Coins` takes `nums` (array of integers) and returns **integer**.
-
-**Key logic:**
-- Time COmplexity O(N^3) Space O(N^2)
-- Calculate the maximum coins for this partition
-
-
-
-### Approach
-
-**Top-Down DP (Memoization) Approach:**
-1. Define a recursive function that explores all possibilities
-2. Cache results in a table/dictionary to avoid redundant work
-3. The state is defined by the function parameters that change between calls
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `res`, `left`, `right`
-
-**Execution flow:**
-- Time COmplexity O(N^3) Space O(N^2)
-- Calculate the maximum coins for this partition
-
-### Code
-
-```kotlin
-package array.dp
-
-// Time COmplexity O(N^3) Space O(N^2)
-class BurstBaloons {
-    fun maxCoins(nums: IntArray): Int {
-        if (nums.isEmpty()) return 0
-        val dp = Array(nums.size) { IntArray(nums.size) }
-
-        fun dfs(l: Int, r: Int): Int {
-            when {
-                l > r -> return 0
-                dp[l][r] != 0 -> return dp[l][r]
-            }
-
-            var res = 0
-            for (mid in l..r) {
-                // Calculate the maximum coins for this partition
-                val left = if (l == 0) 1 else nums[l - 1]
-                val right = if (r == nums.size - 1) 1 else nums[r + 1]
-
-                res = maxOf(res, dfs(l, mid - 1) +
-                        left * nums[mid] * right +
-                        dfs(mid + 1, r))
-            }
-
-            return res.also {  dp[l][r] = res }
-        }
-        return dfs(0, nums.size - 1)
-    }
-}
-```
-
-### Complexity
-
-| Metric | Value |
-|--------|-------|
-| **Time** | O(n³) |
-| **Space** | O(n²) |
-
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n²) space. Each cell requires O(1) or O(n) work, totaling O(n³).
-
 ---
 
 ## House Robber
 
-<span id="houserobber"></span>
-
 ### Problem
 
-**Houserobber**
+Solves the House Robber problem.
 
-**Function:** `Rob` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `include`, `exclude`, `temp`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -596,11 +504,25 @@ Let's trace through the code to understand how it processes the input:
 package array.dp
 
 class HouseRobber {
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun rob(nums: IntArray): Int {
         val dp = IntArray(nums.size) { -1 }
         return rob(dp, nums, 0)
     }
 
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun rob(dp: IntArray, nums: IntArray, i: Int): Int {
         return when {
             i >= nums.size -> 0
@@ -612,6 +534,13 @@ class HouseRobber {
         }
     }
 
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun rob_iterative(nums: IntArray): Int {
         if (nums.isEmpty()) return 0
 
@@ -636,49 +565,17 @@ class HouseRobber {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## House Robber_II
 
-<span id="houserobber_ii"></span>
-
 ### Problem
 
-**Houserobber Ii**
+Solves the House Robber_II problem.
 
-**Function:** `Rob` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Initialize an array to store the maximum amount that can be robbed up to each house
-- Base cases
-- Fill the dp array from start + 2 to end
-- The last element of dp array contains the maximum amount that can be robbed
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`
-
-**Execution flow:**
-- Initialize an array to store the maximum amount that can be robbed up to each house
-- Fill the dp array from start + 2 to end
-- The last element of dp array contains the maximum amount that can be robbed
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -686,6 +583,13 @@ Let's trace through the code to understand how it processes the input:
 package array.dp
 
 class HouseRobber_II {
+    /**
+    * Solves the House Robber_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun rob(nums: IntArray): Int {
         return when {
             nums.size == 1 -> nums[0]
@@ -742,38 +646,17 @@ class HouseRobber_II {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## Coin Change
 
-<span id="coinchange"></span>
-
 ### Problem
 
-**Coinchange**
+Solves the Coin Change problem.
 
-**Function:** `Coin Change` takes `coins` (array of integers), `amount` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `minCoins`, `result`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -781,11 +664,26 @@ Let's trace through the code to understand how it processes the input:
 package array.dp
 
 class CoinChange {
+    /**
+    * Solves the Coin Change problem.
+    * Takes `coins` (array of integers), `amount` (integer).
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
     fun coinChange(coins: IntArray, amount: Int): Int {
         val dp = IntArray(amount + 1) { -1 }
         return coinChange(coins, amount, dp).let { if (it != Int.MAX_VALUE) it else -1 }
     }
 
+    /**
+    * Helper: coin change.
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
     private fun coinChange(coins: IntArray, amount: Int, dp: IntArray): Int {
         return when {
             amount == 0 -> 0
@@ -814,38 +712,17 @@ class CoinChange {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## Coin Change_II
 
-<span id="coinchange_ii"></span>
-
 ### Problem
 
-**Coinchange Ii**
+Solves the Coin Change_II problem.
 
-**Function:** `Change` takes `amount` (integer), `coins` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -853,11 +730,26 @@ Let's trace through the code to understand how it processes the input:
 package array.dp
 
 class CoinChange_II {
+    /**
+    * Solves the Coin Change_II problem.
+    * Takes `amount` (integer), `coins` (array of integers).
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
     fun change(amount: Int, coins: IntArray): Int {
         val dp = Array(amount + 1) { IntArray(coins.size) { -1 } }
         return change(dp, amount, coins, 0)
     }
 
+    /**
+    * Helper: change.
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
     private fun change(dp: Array<IntArray>, amount: Int, coins: IntArray, i: Int): Int {
         return when {
             amount < 0 || (i == coins.size && amount > 0) -> 0
@@ -876,47 +768,20 @@ class CoinChange_II {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n × m) |
-| **Space** | O(n) |
-
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n) space. Each cell requires O(1) or O(n) work, totaling O(n × m).
+| **Time** | O(n³) |
+| **Space** | O(n²) |
 
 ---
 
 ## Coin Change_II_Bottom Up
 
-<span id="coinchange_ii_bottomup"></span>
-
 ### Problem
 
-**Coinchange Ii Bottomup**
+Solves the Coin Change_II_Bottom Up problem.
 
-**Function:** `Change` takes `amount` (integer), `coins` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Base case: 1 way to make amount 0 (using no coins)
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`
-
-**Execution flow:**
-- Base case: 1 way to make amount 0 (using no coins)
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -924,6 +789,14 @@ Let's trace through the code to understand how it processes the input:
 package array.dp
 
 class CoinChange_II_BottomUp {
+    /**
+    * Solves the Coin Change_II_Bottom Up problem.
+    * Takes `amount` (integer), `coins` (array of integers).
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
     fun change(amount: Int, coins: IntArray): Int {
         val dp = IntArray(amount + 1) { 0 }
         dp[0] = 1  // Base case: 1 way to make amount 0 (using no coins)
@@ -945,51 +818,17 @@ class CoinChange_II_BottomUp {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## Longest Increasing Subsequence
 
-<span id="longestincreasingsubsequence"></span>
-
 ### Problem
 
-**Longestincreasingsubsequence**
+Solves the Longest Increasing Subsequence problem.
 
-**Function:** `Length Of Lis` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Patience sorting algorithm
-- Find the smallest element in the tree which is greater than or equal to num
-- If such an element is found, it means num can replace it to potentially
-- form a new valid increasing subsequence or extend the current one
-- Add num to the tree. If num is not replacing any element,
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `lengthOfLIS` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `tree`
-
-**Execution flow:**
-- Patience sorting algorithm
-- Find the smallest element in the tree which is greater than or equal to num
-- If such an element is found, it means num can replace it to potentially
-- form a new valid increasing subsequence or extend the current one
-- Add num to the tree. If num is not replacing any element,
-- it is extending the subsequence with a new larger element.
-- The size of the tree at the end will represent the length of the longest
-- increasing subsequence
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1000,6 +839,13 @@ import java.util.*
 
 // Patience sorting algorithm
 class LongestIncreasingSubsequence {
+    /**
+    * Solves the Longest Increasing Subsequence problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun lengthOfLIS(nums: IntArray): Int {
         val tree = TreeSet<Int>()
         nums.forEach { num ->
@@ -1027,38 +873,17 @@ class LongestIncreasingSubsequence {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Maximal Square
 
-<span id="maximalsquare"></span>
-
 ### Problem
 
-**Maximalsquare**
+Solves the Maximal Square problem.
 
-**Function:** `Maximal Square` takes `matrix` (Array<CharArray>) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `m`, `n`, `dp`, `maxSize`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1066,6 +891,13 @@ Let's trace through the code to understand how it processes the input:
 package array.dp
 
 class MaximalSquare {
+    /**
+    * Solves the Maximal Square problem.
+    * Takes `matrix` (Array<CharArray>).
+    *
+    * @param matrix The input Array<CharArray>.
+    * @return The computed integer result.
+    */
     fun maximalSquare(matrix: Array<CharArray>): Int {
         if (matrix.isEmpty() || matrix[0].isEmpty()) return 0
         val m = matrix.size
@@ -1098,42 +930,17 @@ class MaximalSquare {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n²) space. Each cell requires O(1) or O(n) work, totaling O(n³).
-
 ---
 
 ## Maximum Sum Sub Array
 
-<span id="maximumsumsubarray"></span>
-
 ### Problem
 
-**Maximumsumsubarray**
+Solves the Maximum Sum Sub Array problem.
 
-**Function:** `Max Sub Array` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Kaden's Algorithm Dynamic Programming
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Execution flow:**
-- Kaden's Algorithm Dynamic Programming
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1142,6 +949,13 @@ package array.dp
 
 class MaximumSumSubArray {
     // Kaden's Algorithm Dynamic Programming
+    /**
+    * Solves the Maximum Sum Sub Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun maxSubArray(nums: IntArray): Int {
         if (nums.isEmpty())
             return 0
@@ -1165,53 +979,17 @@ class MaximumSumSubArray {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## Min Cost Climbing Staris
 
-<span id="mincostclimbingstaris"></span>
-
 ### Problem
 
-**Mincostclimbingstaris**
+Solves the Min Cost Climbing Staris problem.
 
-**Function:** `Min Cost Climbing Stairs_Iterative` takes `cost` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Handle base cases
-- Initialize the dp array with the size of the cost array
-- Base cases
-- Fill the dp array
-- The result is the minimum cost to reach the last or the second-to-last step
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `dp`, `prev2`, `prev1`, `cur`, `memo`, `n`
-
-**Execution flow:**
-- Handle base cases
-- Initialize the dp array with the size of the cost array
-- Fill the dp array
-- The result is the minimum cost to reach the last or the second-to-last step
-- Handle base cases
-- Initialize the dp array with the size of the cost array
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1219,6 +997,13 @@ Let's trace through the code to understand how it processes the input:
 package array.dp
 
 class MinCostClimbingStaris {
+    /**
+    * Solves the Min Cost Climbing Staris problem.
+    * Takes `cost` (array of integers).
+    *
+    * @param cost The input array of integers.
+    * @return The computed integer result.
+    */
     fun minCostClimbingStairs_iterative(cost: IntArray): Int {
         // Handle base cases
         if (cost.size <= 2) return cost.min()
@@ -1276,6 +1061,14 @@ class MinCostClimbingStaris {
         // We can start from step 0 or step 1, hence we take the minimum of both
         return minOf(minCost(cost, n - 1, memo), minCost(cost, n - 2, memo))
     }
+    /**
+    * Helper: min cost.
+    *
+    * @param cost The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param memo The input array of integers.
+    * @return The computed integer result.
+    */
     private fun minCost(cost: IntArray, i: Int, memo: IntArray): Int {
         // Base cases
         if (i < 0) return 0
@@ -1299,38 +1092,17 @@ class MinCostClimbingStaris {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## Minimum Path Sum
 
-<span id="minimumpathsum"></span>
-
 ### Problem
 
-**Minimumpathsum**
+Solves the Minimum Path Sum problem.
 
-**Function:** `Min Path Sum` takes `grid` (Array<array of integers>?) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1338,6 +1110,13 @@ Let's trace through the code to understand how it processes the input:
 package array.dp
 
 class MinimumPathSum {
+    /**
+    * Solves the Minimum Path Sum problem.
+    * Takes `grid` (nullable 2D matrix).
+    *
+    * @param grid The input nullable 2D matrix.
+    * @return The computed integer result.
+    */
     fun minPathSum(grid: Array<IntArray>?): Int {
         if (grid.isNullOrEmpty()) return 0
 
@@ -1366,45 +1145,17 @@ class MinimumPathSum {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n²) space. Each cell requires O(1) or O(n) work, totaling O(n³).
-
 ---
 
 ## Split Array Largest Sum
 
-<span id="splitarraylargestsum"></span>
-
 ### Problem
 
-**Splitarraylargestsum**
+Solves the Split Array Largest Sum problem.
 
-**Function:** `Split Array` takes `nums` (array of integers), `k` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Last split takes remaining sum
-- Prune unnecessary recursion
-
-
-
-### Approach
-
-**Top-Down DP (Memoization) Approach:**
-1. Define a recursive function that explores all possibilities
-2. Cache results in a table/dictionary to avoid redundant work
-3. The state is defined by the function parameters that change between calls
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `n`, `prefixSum`, `memo`, `minLargestSum`, `currentSum`, `largestInRemainingSplits`, `maxSplitSum`
-
-**Execution flow:**
-- Last split takes remaining sum
-- Prune unnecessary recursion
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1412,6 +1163,14 @@ Let's trace through the code to understand how it processes the input:
 package array.dp
 
 class SplitArrayLargestSum {
+    /**
+    * Solves the Split Array Largest Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun splitArray(nums: IntArray, k: Int): Int {
         val n = nums.size
         val prefixSum = IntArray(n + 1)
@@ -1421,6 +1180,14 @@ class SplitArrayLargestSum {
 
         val memo = mutableMapOf<Pair<Int, Int>, Int>()
 
+        /**
+        * Solves the Split Array Largest Sum problem.
+        * Takes `i` (integer), `splitsLeft` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param splitsLeft The integer parameter representing splitsLeft.
+        * @return The computed integer result.
+        */
         fun dfs(i: Int, splitsLeft: Int): Int {
             if (splitsLeft == 1) return prefixSum[n] - prefixSum[i] // Last split takes remaining sum
             if (i == n) return Int.MAX_VALUE
@@ -1455,48 +1222,17 @@ class SplitArrayLargestSum {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## Target Sum
 
-<span id="targetsum"></span>
-
 ### Problem
 
-**Targetsum**
+Solves the Target Sum problem.
 
-**Function:** `Find Target Sum Ways` takes `nums` (array of integers), `target` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- If the target sum is not reachable, return 0
-- If the sumAll + target is not non-negative or even, it's impossible to partition
-- DP array to store the number of ways to reach each sum
-
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dp`, `state`, `count`, `sumAll`, `newTarget`, `dp`
-
-**Execution flow:**
-- If the target sum is not reachable, return 0
-- If the sumAll + target is not non-negative or even, it's impossible to partition
-- DP array to store the number of ways to reach each sum
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1507,10 +1243,27 @@ package array.dp
 class TargetSum {
     private val dp = mutableMapOf<String, Int>()
 
+    /**
+    * Solves the Target Sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun findTargetSumWays(nums: IntArray, target: Int): Int {
         return ways(nums, target, 0, 0)
     }
 
+    /**
+    * Helper: ways.
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @param index The integer parameter representing index.
+    * @param sum The integer parameter representing sum.
+    * @return The computed integer result.
+    */
     private fun ways(nums: IntArray, target: Int, index: Int, sum: Int): Int {
         val state = "$index $sum"
         return when {
@@ -1542,6 +1295,14 @@ class TargetSum {
      * @param target The target sum to achieve.
      * @return The number of ways to achieve the target sum using plus or minus signs.
      */
+    /**
+    * Solves the Target Sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun findTargetSumWays_subsetSum(nums: IntArray, target: Int): Int {
         val sumAll = nums.sum()
         // If the target sum is not reachable, return 0
@@ -1571,37 +1332,17 @@ class TargetSum {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## Longest Increasing Sequence In A Matrix
 
-<span id="longestincreasingsequenceinamatrix"></span>
-
 ### Problem
 
-**Longestincreasingsequenceinamatrix**
+Solves the Longest Increasing Sequence In AMatrix problem.
 
-**Function:** `Longest Increasing Path` takes `matrix` (Array<array of integers>) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Top-Down DP (Memoization) Approach:**
-1. Define a recursive function that explores all possibilities
-2. Cache results in a table/dictionary to avoid redundant work
-3. The state is defined by the function parameters that change between calls
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `dirs`, `cache`, `max`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1611,10 +1352,25 @@ package array.dp
 class LongestIncreasingSequenceInAMatrix {
     private val dirs = arrayOf(0 to 1, 1 to 0, -1 to 0, 0 to -1)
 
+    /**
+    * Solves the Longest Increasing Sequence In AMatrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun longestIncreasingPath(matrix: Array<IntArray>): Int {
         val (m, n) = matrix.size to matrix[0].size
         val cache = Array(m) { IntArray(n) }
 
+        /**
+        * Solves the Longest Increasing Sequence In AMatrix problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return The computed integer result.
+        */
         fun dfs(i: Int, j: Int): Int {
             if (cache[i][j] != 0) return cache[i][j]
 
@@ -1649,38 +1405,17 @@ class LongestIncreasingSequenceInAMatrix {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-The DP table has dimensions proportional to the input size, giving O(n²) space. Each cell requires O(1) or O(n) work, totaling O(n³).
-
 ---
 
 ## Minimum Numberof Increments Subarrays Forma Target Array
 
-<span id="minimumnumberofincrementssubarraysformatargetarray"></span>
-
 ### Problem
 
-**Minimumnumberofincrementssubarraysformatargetarray**
+Solves the Minimum Numberof Increments Subarrays Forma Target Array problem.
 
-**Function:** `Min Number Operations` takes `target` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Bottom-Up DP (Tabulation) Approach:**
-1. Define the DP table dimensions based on state variables
-2. Initialize base cases
-3. Fill the table iteratively from smallest to largest subproblems
-4. The answer is in dp[final_state]
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `operations`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1688,6 +1423,13 @@ Let's trace through the code to understand how it processes the input:
 package array.dp
 
 class MinimumNumberofIncrementsSubarraysFormaTargetArray {
+    /**
+    * Solves the Minimum Numberof Increments Subarrays Forma Target Array problem.
+    * Takes `target` (array of integers).
+    *
+    * @param target The input array of integers.
+    * @return The computed integer result.
+    */
     fun minNumberOperations(target: IntArray): Int {
         var operations = target[0]
 
@@ -1707,49 +1449,17 @@ class MinimumNumberofIncrementsSubarraysFormaTargetArray {
 | **Time** | O(n³) |
 | **Space** | O(n²) |
 
-**Analysis:**
-
-We compute each state exactly once and each state takes O(1) to O(n) transitions, giving O(n³). The memoization/table stores one entry per state (O(n²)).
-
 ---
 
 ## Partition Array Into Two Array To Minimuze Sum Difference
 
-<span id="partitionarrayintotwoarraytominimuzesumdifference"></span>
-
 ### Problem
 
-**Partitionarrayintotwoarraytominimuzesumdifference**
+Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
 
-**Function:** `Minimum Difference` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Early exit if perfect match found
-- Exact match
-- Remove duplicates if adjacent values are equal
-
-
-
-### Approach
-
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
-
-This searches for an exact target value in a sorted structure.
-
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `n`, `totalSum`, `halfSize`, `leftSubsets`, `rightSubsets`, `minDiff`, `leftSums`, `rightSums`
-
-**Execution flow:**
-- Early exit if perfect match found
-- Exact match
-- Remove duplicates if adjacent values are equal
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -1759,6 +1469,13 @@ package array.dp
 import kotlin.math.abs
 
 class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
+    /**
+    * Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun minimumDifference(nums: IntArray): Int {
         val n = nums.size
         val totalSum = nums.sum()
@@ -1790,6 +1507,14 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
         return minDiff
     }
 
+    /**
+    * Helper: generate subsets by size.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
     private fun generateSubsetsBySize(nums: IntArray, start: Int, end: Int): Array<MutableList<Int>?> {
         val size = end - start
         val subsets = Array<MutableList<Int>?>(size + 1) { mutableListOf() }
@@ -1809,6 +1534,13 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
         return subsets
     }
 
+    /**
+    * Helper: find closest values.
+    *
+    * @param sortedList The input list of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     private fun findClosestValues(sortedList: List<Int>, target: Int): List<Int> {
         val index = sortedList.binarySearch(target)
         if (index >= 0) return listOf(sortedList[index])  // Exact match
@@ -1828,17 +1560,5 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
 |--------|-------|
 | **Time** | O(log n) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — Optimal substructure + overlapping subproblems → DP. Identify states, define transitions, compute bottom-up or top-down with memoization.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

@@ -1,3 +1,9 @@
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main(args: Array<String>) {
     println("Hello World!")
 

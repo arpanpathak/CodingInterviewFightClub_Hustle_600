@@ -1,14 +1,36 @@
 package graph.mst
 
 class FindRedundentConnections {
+    /**
+    * Solves the Find Redundent Connections problem.
+    * Takes `edges` (2D matrix of integers).
+    *
+    * @param edges The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun findRedundantConnection(edges: Array<IntArray>): IntArray {
         val parent = IntArray(1001) { it }
 
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
         fun find(x: Int): Int {
             if (parent[x] != x) parent[x] = find(parent[x])
             return parent[x]
         }
 
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun union(x: Int, y: Int): Boolean {
             val rootX = find(x)
             val rootY = find(y)

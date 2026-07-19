@@ -1,6 +1,14 @@
 package grid.dynamic_programming
 
 class UniquePaths_I {
+    /**
+    * Solves the Unique Paths_I problem.
+    * Takes `m` (integer), `n` (integer).
+    *
+    * @param m The integer parameter representing m.
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun uniquePaths(m: Int, n: Int): Int {
         val dp = Array(m) { IntArray(n){1} }
 

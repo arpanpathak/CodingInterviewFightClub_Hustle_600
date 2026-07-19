@@ -3,6 +3,15 @@ package greedy
 class MaxProfiAssigningWork {
     data class Task(val difficulty: Int, val profit: Int)
 
+    /**
+    * Solves the Max Profi Assigning Work problem.
+    * Takes `difficulty` (array of integers), `profit` (array of integers), `worker` (array of integers).
+    *
+    * @param difficulty The input array of integers.
+    * @param profit The input array of integers.
+    * @param worker The input array of integers.
+    * @return The computed integer result.
+    */
     fun maxProfitAssignment(difficulty: IntArray, profit: IntArray, worker: IntArray): Int {
         // Create a list of tasks, each task being a pair of difficulty and profit
         val tasks = difficulty.zip(profit).map { Task(it.first, it.second) }.sortedBy { it.difficulty }

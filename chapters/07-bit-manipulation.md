@@ -18,7 +18,7 @@ next_chapter:
 
 ## The Pattern
 
-Bit manipulation exploits binary representation. Key ops: XOR for pairing, AND for masking, shifts for powers of 2.
+XOR for pairing, AND for masking, shifts for powers of 2.
 
 ## Complete Problem Set
 
@@ -38,41 +38,13 @@ Bit manipulation exploits binary representation. Key ops: XOR for pairing, AND f
 
 ## First Letter To Appear Twice
 
-<span id="firstlettertoappeartwice"></span>
-
 ### Problem
 
-**Firstlettertoappeartwice**
+This is more memory efficient approach...
 
-**Function:** `Repeated Character` takes `s` (string) and returns **Char**.
+### Why This Approach
 
-**Key logic:**
-- BitSet for 26 lowercase English letters
-- Calculate the index for the character
-- Check if the bit at index is already set
-- Set the bit at index
-- Return null if no repeated character is found
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `repeatedCharacter` processes the input
-2. Uses helper functions: repeatedCharacterBitset
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `bits`, `ascii`, `bit`, `seen`, `index`
-
-**Execution flow:**
-- BitSet for 26 lowercase English letters
-- Calculate the index for the character
-- Check if the bit at index is already set
-- Set the bit at index
-- Return null if no repeated character is found
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -103,6 +75,13 @@ class FirstLetterToAppearTwice {
         return 'x'
     }
 
+    /**
+    * Solves the First Letter To Appear Twice problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed result (character).
+    */
     fun repeatedCharacterBitset(s: String): Char {
 
         val seen = BitSet(26)  // BitSet for 26 lowercase English letters
@@ -129,34 +108,17 @@ class FirstLetterToAppearTwice {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Longest Nice Subarray
 
-<span id="longestnicesubarray"></span>
-
 ### Problem
 
-**Longestnicesubarray**
+Solves the Longest Nice Subarray problem.
 
-**Function:** `Longest Nice Subarray` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `longestNiceSubarray` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `left`, `bitMask`, `maxLen`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -164,6 +126,13 @@ Let's trace through the code to understand how it processes the input:
 package bitset
 
 class LongestNiceSubarray {
+    /**
+    * Solves the Longest Nice Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun longestNiceSubarray(nums: IntArray): Int {
         var left = 0
         var bitMask = 0
@@ -190,35 +159,17 @@ class LongestNiceSubarray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Maximum Xor Of Two Nums In Array
 
-<span id="maximumxoroftwonumsinarray"></span>
-
 ### Problem
 
-**Maximumxoroftwonumsinarray**
+Solves the Maximum Xor Of Two Nums In Array problem.
 
-**Function:** `Find Maximum Xor` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `findMaximumXOR` processes the input
-2. Uses helper functions: buildTrie
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `children`, `root`, `max`, `curNode`, `curSum`, `curBit`, `root`, `ptr`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -228,6 +179,13 @@ package bitset
 class MaximumXorOfTwoNumsInArray {
     data class Trie(val children: Array<Trie?> = arrayOfNulls(2))
 
+    /**
+    * Solves the Maximum Xor Of Two Nums In Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun findMaximumXOR(nums: IntArray): Int {
         val root = buildTrie(nums)
 
@@ -251,6 +209,12 @@ class MaximumXorOfTwoNumsInArray {
         return max
     }
 
+    /**
+    * Helper: build trie.
+    *
+    * @param nums The input array of integers.
+    * @return The computed result (Trie).
+    */
     private fun buildTrie(nums: IntArray): Trie {
         val root = Trie()
 
@@ -278,46 +242,17 @@ class MaximumXorOfTwoNumsInArray {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Number Of Steps To Reduceaanumberinbinaryrepresentationtoone
 
-<span id="number_of_steps_to_reduceaanumberinbinaryrepresentationtoone"></span>
-
 ### Problem
 
-**Number Of Steps To Reduceaanumberinbinaryrepresentationtoone**
+Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
 
-**Function:** `Num Steps` takes `s` (string) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Add 1 (makes it even) + divide by 2
-- Propagate carry
-- Just divide by 2
-- Handle remaining carry at the first digit
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `numSteps` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `steps`, `carry`, `digit`
-
-**Execution flow:**
-- Add 1 (makes it even) + divide by 2
-- Propagate carry
-- Just divide by 2
-- Handle remaining carry at the first digit
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -325,6 +260,13 @@ Let's trace through the code to understand how it processes the input:
 package bitset
 
 class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
+    /**
+    * Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun numSteps(s: String): Int {
         var steps = 0
         var carry = 0
@@ -351,34 +293,17 @@ class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Number Of One Bits
 
-<span id="numberofonebits"></span>
-
 ### Problem
 
-**Numberofonebits**
+Solves the Number Of One Bits problem.
 
-**Function:** `Hamming Weight` takes `n` (integer) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `hammingWeight` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `number`, `count`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -386,6 +311,13 @@ Let's trace through the code to understand how it processes the input:
 package bitset
 
 class NumberOfOneBits {
+    /**
+    * Solves the Number Of One Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun hammingWeight(n: Int): Int {
         var number = n
         var count = 0
@@ -407,44 +339,17 @@ class NumberOfOneBits {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Reverse Bits
 
-<span id="reversebits"></span>
-
 ### Problem
 
-**Reversebits**
+Solves the Reverse Bits problem.
 
-**Function:** `Reverse Bits` takes `n` (integer) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Extract the last bit
-- Shift left and add the bit
-- Unsigned right shift n
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `reverseBits` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `num`, `result`, `bit`
-
-**Execution flow:**
-- Extract the last bit
-- Shift left and add the bit
-- Unsigned right shift n
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -452,6 +357,13 @@ Let's trace through the code to understand how it processes the input:
 package bitset
 
 class ReverseBits {
+    /**
+    * Solves the Reverse Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun reverseBits(n: Int): Int {
         var num = n
         var result = 0
@@ -474,34 +386,17 @@ class ReverseBits {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Single Number
 
-<span id="singlenumber"></span>
-
 ### Problem
 
-**Singlenumber**
+Solves the Single Number problem.
 
-**Function:** `Single Number` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `singleNumber` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `xorSum`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -509,6 +404,13 @@ Let's trace through the code to understand how it processes the input:
 package bitset
 
 class SingleNumber {
+    /**
+    * Solves the Single Number problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun singleNumber(nums: IntArray): Int {
         var xorSum = 0
         nums.forEach { xorSum = xorSum xor it}
@@ -521,37 +423,20 @@ class SingleNumber {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
+| **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n). The O(1) space comes from the auxiliary data structures used.
 
 ---
 
 ## Single Number3
 
-<span id="singlenumber3"></span>
-
 ### Problem
 
-**Singlenumber3**
+Solves the Single Number3 problem.
 
-**Function:** `Single Number` takes `nums` (array of integers) and returns **array of integers**.
+### Why This Approach
 
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `singleNumber` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `xorSum`, `rightmostSetBit`, `test`
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -559,6 +444,13 @@ Let's trace through the code to understand how it processes the input:
 package bitset
 
 class SingleNumber3 {
+    /**
+    * Solves the Single Number3 problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun singleNumber(nums: IntArray): IntArray {
         var xorSum = 0
         for (num in nums) {
@@ -581,6 +473,12 @@ class SingleNumber3 {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
             val test = SingleNumber3()
 
@@ -597,46 +495,17 @@ class SingleNumber3 {
 | **Time** | O(n²) |
 | **Space** | O(1) |
 
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
 ---
 
 ## Sum Of All Subset Xor Total
 
-<span id="sumofallsubsetxortotal"></span>
-
 ### Problem
 
-**Sumofallsubsetxortotal**
+Solves the Sum Of All Subset Xor Total problem.
 
-**Function:** `Subset Xorsum` takes `nums` (array of integers) and returns **integer**.
+### Why This Approach
 
-**Key logic:**
-- Capture each bit that is set in any of the elements
-- Update the result by OR-ing each number
-- Multiply by the number of subset XOR totals that will have each bit set
-- Shift by (n-1) to account for all subsets
-
-
-
-### Approach
-
-**Solution Approach:**
-1. The main function `subsetXORSum` processes the input
-
-### Code Walkthrough
-
-Let's trace through the code to understand how it processes the input:
-
-**Key variables:** `result`
-
-**Execution flow:**
-- Capture each bit that is set in any of the elements
-- Update the result by OR-ing each number
-- Multiply by the number of subset XOR totals that will have each bit set
-- Shift by (n-1) to account for all subsets
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -644,6 +513,13 @@ Let's trace through the code to understand how it processes the input:
 package bitset
 
 class SumOfAllSubsetXorTotal {
+    /**
+    * Solves the Sum Of All Subset Xor Total problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun subsetXORSum(nums: IntArray): Int {
         var result = 0
         // Capture each bit that is set in any of the elements
@@ -662,17 +538,5 @@ class SumOfAllSubsetXorTotal {
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
-
-**Analysis:**
-
-The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
-
----
-
-## Key Takeaways
-
-1. **Core pattern recognition** — Bit manipulation exploits binary representation. Key ops: XOR for pairing, AND for masking, shifts for powers of 2.
-2. **Practice systematically** — Work through each problem to internalize the patterns
-3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
 ---

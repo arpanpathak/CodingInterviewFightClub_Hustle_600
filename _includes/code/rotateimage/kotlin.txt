@@ -1,6 +1,13 @@
 package array
 
 class RotateImage {
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun rotate(matrix: Array<IntArray>): Unit {
         for (i in matrix.indices)
             for (j in i until matrix[i].size) {
@@ -18,6 +25,17 @@ class RotateImage {
         }
     }
 
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers), `i` (integer), `j` (integer), `m` (integer), `n` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param m The integer parameter representing m.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun swap(matrix: Array<IntArray>, i: Int, j: Int, m: Int, n: Int) {
         matrix[i][j] = matrix[m][n].also { matrix[m][n] = matrix[i][j] }
     }
@@ -32,4 +50,3 @@ class RotateImage {
  * 2,5,8
  * 3,6,9
  */
-

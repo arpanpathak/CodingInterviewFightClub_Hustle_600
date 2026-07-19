@@ -1,6 +1,13 @@
 package string
 
 class StringCompression_II {
+    /**
+    * Solves the String Compression_II problem.
+    * Takes `word` (string).
+    *
+    * @param word The input string.
+    * @return The resulting string.
+    */
     fun compressedString(word: String): String {
         val compressed = StringBuilder()
 

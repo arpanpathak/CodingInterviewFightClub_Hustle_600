@@ -8,6 +8,13 @@ class MedianFromRunningStream {
     private val maxHeap = PriorityQueue<Int>(compareBy() { -it }) // Max-heap for the smaller half
 
 
+    /**
+    * Solves the Median From Running Stream problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun addNum(num: Int) {
         minHeap.offer(num)
         maxHeap.offer(minHeap.poll())
@@ -17,6 +24,11 @@ class MedianFromRunningStream {
         }
     }
 
+    /**
+    * Solves the Median From Running Stream problem.
+    *
+    * @return The computed floating-point result.
+    */
     fun findMedian(): Double {
         return if (minHeap.size > maxHeap.size) {
             minHeap.peek().toDouble()
