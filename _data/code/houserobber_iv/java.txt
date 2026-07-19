@@ -1,0 +1,6 @@
+// Java translation of HouseRobber_IV
+// Original: HouseRobber_IV.kt
+public class HouseRobber_IV {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

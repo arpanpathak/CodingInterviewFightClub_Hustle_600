@@ -1,0 +1,3 @@
+# Python translation of GuessNumberHigherOrLower
+# Original: GuessNumberHigherOrLower.kt
+# TODO: Full Python implementation

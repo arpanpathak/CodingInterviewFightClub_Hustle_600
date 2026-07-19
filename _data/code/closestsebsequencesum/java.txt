@@ -1,0 +1,6 @@
+// Java translation of ClosestSebsequenceSum
+// Original: ClosestSebsequenceSum.kt
+public class ClosestSebsequenceSum {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

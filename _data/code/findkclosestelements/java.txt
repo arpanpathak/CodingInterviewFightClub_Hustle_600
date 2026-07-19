@@ -1,0 +1,6 @@
+// Java translation of FindKClosestElements
+// Original: FindKClosestElements.kt
+public class FindKClosestElements {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

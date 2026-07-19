@@ -1,0 +1,6 @@
+// Java translation of KokoEatingBanana
+// Original: KokoEatingBanana.kt
+public class KokoEatingBanana {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

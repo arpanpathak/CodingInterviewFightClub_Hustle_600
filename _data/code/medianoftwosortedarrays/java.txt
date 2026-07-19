@@ -1,0 +1,6 @@
+// Java translation of MedianOfTwoSortedARrays
+// Original: MedianOfTwoSortedARrays.kt
+public class MedianOfTwoSortedARrays {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

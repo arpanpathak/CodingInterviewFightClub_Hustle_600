@@ -1,0 +1,6 @@
+// Java translation of KThMissingPositiveNumber
+// Original: KThMissingPositiveNumber.kt
+public class KThMissingPositiveNumber {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

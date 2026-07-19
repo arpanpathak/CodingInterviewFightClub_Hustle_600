@@ -1,0 +1,6 @@
+// Java translation of ValleyElement
+// Original: ValleyElement.kt
+public class ValleyElement {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

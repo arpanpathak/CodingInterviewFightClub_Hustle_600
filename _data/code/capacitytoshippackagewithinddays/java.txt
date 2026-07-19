@@ -1,0 +1,6 @@
+// Java translation of CapacityToShipPackageWithinDDays
+// Original: CapacityToShipPackageWithinDDays.kt
+public class CapacityToShipPackageWithinDDays {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

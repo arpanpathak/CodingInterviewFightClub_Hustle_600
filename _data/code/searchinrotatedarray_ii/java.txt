@@ -1,0 +1,6 @@
+// Java translation of SearchInRotatedArray_II
+// Original: SearchInRotatedArray_II.kt
+public class SearchInRotatedArray_II {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

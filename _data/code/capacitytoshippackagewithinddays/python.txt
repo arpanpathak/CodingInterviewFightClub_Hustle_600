@@ -1,0 +1,3 @@
+# Python translation of CapacityToShipPackageWithinDDays
+# Original: CapacityToShipPackageWithinDDays.kt
+# TODO: Full Python implementation

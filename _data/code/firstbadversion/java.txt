@@ -1,0 +1,6 @@
+// Java translation of FirstBadVersion
+// Original: FirstBadVersion.kt
+public class FirstBadVersion {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

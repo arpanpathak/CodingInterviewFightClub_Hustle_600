@@ -1,0 +1,6 @@
+// Java translation of SearchA2dMatrix
+// Original: SearchA2dMatrix.kt
+public class SearchA2dMatrix {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

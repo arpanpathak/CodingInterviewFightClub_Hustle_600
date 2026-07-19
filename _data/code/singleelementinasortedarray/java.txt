@@ -1,0 +1,6 @@
+// Java translation of SingleElementInASortedArray
+// Original: SingleElementInASortedArray.kt
+public class SingleElementInASortedArray {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

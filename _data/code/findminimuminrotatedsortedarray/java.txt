@@ -1,0 +1,6 @@
+// Java translation of FindMinimumInRotatedSortedArray
+// Original: FindMinimumInRotatedSortedArray.kt
+public class FindMinimumInRotatedSortedArray {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

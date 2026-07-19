@@ -1,0 +1,36 @@
+{% comment %}
+  Improved code tabs that read from _data files.
+  Usage: {% include code-tabs-file.html problem="problem-name" %}
+  Data files go in: _data/code/PROBLEM_NAME/*.txt
+{% endcomment %}
+
+{% assign lang_order = "kotlin,java,python,rust,cpp" | split: "," %}
+{% assign lang_names = "Kotlin,Java,Python,Rust,C++" | split: "," %}
+{% assign lang_icons = "🟣,🟠,🔵,🦀,⚙️" | split: "," %}
+{% assign lang_codes = "kotlin,java,python,rust,cpp" | split: "," %}
+
+{% assign problem_key = include.problem | slugify %}
+
+<div class="code-tabs">
+  <div class="tab-nav">
+    {% for lang in lang_codes %}
+      {% assign file_path = "_data/code/" | append: problem_key | append: "/" | append: lang | append: ".txt" %}
+      {% capture code %}{% include_relative {{ file_path }} %}{% endcapture %}
+      {% if code.size > 0 %}
+        <button class="tab-btn {% if forloop.first %}active{% endif %}" data-lang="{{ lang }}">
+          <span class="lang-icon">{{ lang_icons[forloop.index0] }}</span> {{ lang_names[forloop.index0] }}
+        </button>
+      {% endif %}
+    {% endfor %}
+  </div>
+  
+  {% for lang in lang_codes %}
+    {% assign file_path = "_data/code/" | append: problem_key | append: "/" | append: lang | append: ".txt" %}
+    {% capture code %}{% include_relative {{ file_path }} %}{% endcapture %}
+    {% if code.size > 0 %}
+      <div class="tab-content {% if forloop.first %}active{% endif %}" data-lang="{{ lang }}">
+        <pre><code>{{ code | escape }}</code></pre>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

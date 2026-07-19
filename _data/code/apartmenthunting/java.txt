@@ -1,0 +1,6 @@
+// Java translation of ApartmentHunting
+// Original: ApartmentHunting.kt
+public class ApartmentHunting {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

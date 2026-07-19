@@ -1,0 +1,6 @@
+// Java translation of SearchInsertionPosition
+// Original: SearchInsertionPosition.kt
+public class SearchInsertionPosition {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

@@ -1,0 +1,6 @@
+// Java translation of RandomPickWithWeight
+// Original: RandomPickWithWeight.kt
+public class RandomPickWithWeight {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}

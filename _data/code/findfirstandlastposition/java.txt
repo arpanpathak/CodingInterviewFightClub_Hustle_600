@@ -1,0 +1,6 @@
+// Java translation of FindFirstAndLastPosition
+// Original: FindFirstAndLastPosition.kt
+public class FindFirstAndLastPosition {
+    // See Kotlin source for full implementation
+    // TODO: Java implementation
+}
