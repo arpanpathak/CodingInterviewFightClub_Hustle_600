@@ -642,62 +642,82 @@ Each iteration halves the search space, giving O(log n) time. Only constant extr
 
 ## Koko Eating Banana
 
-<span id="kokoeatingbanana"></span>
+**Problem:** Koko loves bananas. There are `n` piles, the `i`-th pile has `piles[i]` bananas. The guards have gone and will return in `h` hours.
 
-### Problem
+Koko can decide her eating speed `k` (bananas per hour). Each hour, she chooses one pile and eats `k` bananas from it. If the pile has fewer than `k` bananas, she eats the entire pile and cannot eat more that hour.
 
-**Kokoeatingbanana**
+Return the **minimum integer `k`** such that Koko can eat all bananas within `h` hours.
 
-**Function:** `Min Eating Speed` takes `piles` (array of integers), `h` (integer) and returns **integer**.
+**Input constraints:**
+- `1 <= piles.length <= 10^4`
+- `piles.length <= h <= 10^9`
+- `1 <= piles[i] <= 10^9`
 
-**Key logic:**
-- Left is the slowest speed, right is the fastest speed
-- Binary search to find the minimum valid eating speed
-- If Koko can eat all bananas at speed `mid`, try slower speeds
-- Otherwise, try faster speeds
-- Helper function to check if Koko can finish all bananas in `h` hours at speed `k`
+**Example:**
+```
+Input: piles = [3, 6, 7, 11], h = 8
+Output: 4
 
+Explanation:
+- At k = 4:  pile 0: ceil(3/4)=1h, pile 1: ceil(6/4)=2h, pile 2: ceil(7/4)=2h, pile 3: ceil(11/4)=3h. Total = 1+2+2+3 = 8h ✅
+- At k = 3:  ceil(3/3)=1h + ceil(6/3)=2h + ceil(7/3)=3h + ceil(11/3)=4h = 10h > 8h ❌
+So the minimum k is 4.
+```
 
+**Why binary search?** The eating speed `k` is a positive integer. If speed `k` works (Koko finishes in ≤ h hours), then any speed larger than `k` also works (she eats faster, finishes earlier). This **monotonic property** — feasibility increases with `k` — means we can binary search for the minimum feasible speed.
 
-### Approach
+**The search space:**
+- **Lower bound:** `1` (she must eat at least 1 banana per hour)
+- **Upper bound:** `max(piles)` (eating faster than the largest pile doesn't help — the bottleneck is the biggest single pile)
+- **Feasibility function:** `canEatAllBananas(k)` computes whether speed `k` lets Koko finish in ≤ `h` hours
 
-**Binary Search Approach:**
-1. Define the search space and feasibility predicate
-2. Repeatedly halve the search range until finding the optimal value
-3. The predicate must be monotonic for binary search to work
+**Dry run:**
+```
+piles = [3, 6, 7, 11], h = 8
+Binary search on k in [1, 11]:
 
+  Step 1: left=1, right=11, mid = 1 + (11-1)/2 = 6
+    canEatAllBananas(6): ceil(3/6)+ceil(6/6)+ceil(7/6)+ceil(11/6) = 1+1+2+2 = 6 ≤ 8 ✅
+    → Too fast, try slower: right = 6
 
-### Code Walkthrough
+  Step 2: left=1, right=6, mid = 1 + (6-1)/2 = 3
+    canEatAllBananas(3): ceil(3/3)+ceil(6/3)+ceil(7/3)+ceil(11/3) = 1+2+3+4 = 10 > 8 ❌
+    → Too slow, need faster: left = 4
 
-Let's trace through the code to understand how it processes the input:
+  Step 3: left=4, right=6, mid = 4 + (6-4)/2 = 5
+    canEatAllBananas(5): ceil(3/5)+ceil(6/5)+ceil(7/5)+ceil(11/5) = 1+2+2+3 = 8 ≤ 8 ✅
+    → Still fast enough: right = 5
 
-**Key variables:** `left`, `right`, `mid`, `totalHours`
+  Step 4: left=4, right=5, mid = 4 + (5-4)/2 = 4
+    canEatAllBananas(4): ceil(3/4)+ceil(6/4)+ceil(7/4)+ceil(11/4) = 1+2+2+3 = 8 ≤ 8 ✅
+    → Fast enough: right = 4
 
-**Execution flow:**
-- Left is the slowest speed, right is the fastest speed
-- Binary search to find the minimum valid eating speed
-- If Koko can eat all bananas at speed `mid`, try slower speeds
-- Otherwise, try faster speeds
-- Helper function to check if Koko can finish all bananas in `h` hours at speed `k`
-- Add the number of hours it takes to finish this pile at speed `k`
-- Same as Math.ceil(pile / k)
+  Step 5: left=4, right=4, loop exits. Return 4.
+```
 
-### Code
+**Code:**
 
 {% include code-tabs-file.html problem="kokoeatingbanana" %}
 
-### Complexity
+**Complexity Analysis:**
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
-| **Space** | O(1) |
+| **Time** | O(n log m) — binary search over range [1, max(piles)] takes log₂ m iterations. Each iteration runs `canEatAllBananas` which scans all n piles in O(n). So total = O(n) × O(log m) = O(n log m) |
+| **Space** | O(1) — only a few integer variables regardless of input size |
 
-**Analysis:**
+**Key insight for the pattern:**
+This is a **"minimize X such that predicate(X) is true"** problem — one of binary search's most powerful applications beyond simple array search. The predicate `canEatAllBananas(k)` is monotonic (once true at k, true for all larger k). We binary search for the first k where the predicate becomes true.
 
-Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
+**Variations:**
+1. What if Koko can eat from multiple piles simultaneously?
+2. What if piles are refilled at a constant rate?
+3. What if there's a maximum speed limit enforced?
+4. What if Koko can skip hours but must meet a minimum daily consumption?
+5. What if each pile has a spoilage time?
 
 ---
+
 
 ## Median Of Two Sorted A Rrays
 

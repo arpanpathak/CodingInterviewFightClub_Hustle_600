@@ -1,32 +1,98 @@
 package binarysearch
 
+/**
+ * Problem: Koko loves bananas. There are n piles, pile i has piles[i] bananas.
+ * Guards return in h hours. Koko eats at speed k bananas/hour.
+ * Find minimum k to finish all bananas within h hours.
+ *
+ * Pattern: Binary search on answer (minimize k such that canEatAll(k) is feasible).
+ * The predicate canEatAll(k) is monotonic: if speed k works, any speed > k also works.
+ *
+ * Search space: k ∈ [1, max(piles)]
+ * - Lower bound: must eat at least 1 banana/hour
+ * - Upper bound: eating faster than largest pile doesn't help further
+ */
 class KokoEatingBanana {
+
+    /**
+     * Finds the minimum integer eating speed k such that Koko
+     * can eat all piles within h hours.
+     *
+     * @param piles Array where piles[i] = number of bananas in pile i
+     *              Constraints: 1 <= piles.length <= 10^4
+     *                           piles.length <= h <= 10^9
+     *                           1 <= piles[i] <= 10^9
+     * @param h     Hours available before guards return
+     *              Constraints: h >= piles.length (must be able to eat at least
+     *              one pile per hour in worst case)
+     * @return      Minimum integer eating speed k
+     *
+     * Time  Complexity: O(n log m) where n = piles.size, m = max(piles)
+     * Space Complexity: O(1)
+     */
     fun minEatingSpeed(piles: IntArray, h: Int): Int {
-        // Left is the slowest speed, right is the fastest speed
+        // ── Step 1: Define binary search bounds ──
+        // Left: slowest possible speed (1 banana/hour)
         var left = 1
+        // Right: fastest useful speed = largest pile
+        // (eating faster doesn't reduce total hours because
+        //  the bottleneck is always the biggest pile)
         var right = piles.maxOrNull()!!
 
-        // Binary search to find the minimum valid eating speed
+        // ── Step 2: Binary search for minimum feasible speed ──
+        // Loop invariant: answer is always in [left, right]
         while (left < right) {
+            // Safe midpoint: avoids overflow from (left + right)
             val mid = left + (right - left) / 2
+
             if (canEatAllBananas(piles, h, mid)) {
-                // If Koko can eat all bananas at speed `mid`, try slower speeds
+                // Speed `mid` works — we can finish in ≤ h hours.
+                // Try an even slower speed by bringing right bound down.
+                // We keep mid in range because it might be the answer.
                 right = mid
             } else {
-                // Otherwise, try faster speeds
+                // Speed `mid` is too slow — cannot finish in time.
+                // Need to eat faster, so move left bound past mid.
                 left = mid + 1
             }
         }
 
+        // left == right == the minimum feasible speed
         return left
     }
 
-    // Helper function to check if Koko can finish all bananas in `h` hours at speed `k`
+    /**
+     * Checks whether eating speed `k` lets Koko finish all piles
+     * within `h` hours.
+     *
+     * For each pile, the hours needed = ceil(pile / k).
+     * Total hours = sum of ceil(pile / k) for all piles.
+     * Feasible if total hours <= h.
+     *
+     * Why ceil(pile / k)?
+     *   Koko eats k bananas per hour from one pile.
+     *   If pile has 7 bananas and k=4:
+     *     Hour 1: eats 4, pile left = 3
+     *     Hour 2: eats 3 (the rest), pile done
+     *     Total: 2 hours = ceil(7/4) = ceil(1.75) = 2 ✓
+     *
+     * Integer ceil trick: (pile + k - 1) / k
+     *   (7 + 4 - 1) / 4 = 10 / 4 = 2 ✓ (integer division truncates)
+     *
+     * @param piles Array of banana piles
+     * @param h     Hours available (piles.size <= h)
+     * @param k     Eating speed in bananas per hour
+     * @return      True if total hours needed <= h
+     */
     private fun canEatAllBananas(piles: IntArray, h: Int, k: Int): Boolean {
         var totalHours = 0
         for (pile in piles) {
-            // Add the number of hours it takes to finish this pile at speed `k`
-            totalHours += (pile + k - 1) / k // Same as Math.ceil(pile / k)
+            // Integer ceil division: (pile + k - 1) / k
+            totalHours += (pile + k - 1) / k
+            
+            // Early exit optimization: if we've already exceeded h,
+            // no need to process remaining piles
+            if (totalHours > h) return false
         }
         return totalHours <= h
     }
