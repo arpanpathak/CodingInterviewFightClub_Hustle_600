@@ -6,5 +6,5 @@ gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 
 group :jekyll_plugins do
-  gem "jekyll-remote-theme"
+  # gem "jekyll-remote-theme" — removed; using custom Night Owl CSS instead
 end

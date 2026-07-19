@@ -1,26 +1,55 @@
-/* Coding Interview Fight Club - Book Styles */
+/*
+ * ═══════════════════════════════════════════════════════════════
+ *  Coding Interview Fight Club — Night Owl Theme
+ *  Inspired by Sarah Drasner's Night Owl VS Code theme
+ * ═══════════════════════════════════════════════════════════════
+ */
 
 :root {
-  --primary: #e74c3c;
-  --primary-dark: #c0392b;
-  --secondary: #2c3e50;
-  --accent: #f39c12;
-  --bg: #0f0f1a;
-  --bg-card: #1a1a2e;
-  --bg-code: #16213e;
-  --text: #e0e0e0;
-  --text-muted: #a0a0b0;
-  --text-bright: #ffffff;
-  --border: #2a2a4a;
-  --success: #2ecc71;
-  --info: #3498db;
-  --warning: #f39c12;
-  --danger: #e74c3c;
-  --kotlin: #7F52FF;
-  --java: #007396;
-  --python: #3776AB;
-  --rust: #DEA584;
-  --cpp: #00599C;
+  /* Night Owl background palette */
+  --bg: #011627;            /* Deep navy — main background */
+  --bg-card: #0a1f2e;       /* Slightly lighter card bg */
+  --bg-code: #0d2b3e;       /* Code block background */
+  --bg-hover: #1a2d3d;      /* Hover state */
+  --bg-tab: #0a1f2e;        /* Tab navigation bg */
+
+  /* Night Owl text palette */
+  --text: #d6deeb;          /* Main text — soft white-blue */
+  --text-muted: #7e8e9e;    /* Muted text */
+  --text-bright: #ffffff;   /* Bright white headings */
+  --text-dim: #5f7e97;      /* Dimmer text for less emphasis */
+
+  /* Night Owl accent colors */
+  --primary: #c792ea;       /* Purple — primary accent */
+  --primary-dark: #a06ed6;  /* Darker purple */
+  --secondary: #2d3a4a;     /* Secondary bg */
+  --accent: #ffcb8b;        /* Orange/yellow — highlights */
+  --accent2: #7fd5ea;       /* Cyan */
+  --accent3: #addb67;       /* Green */
+
+  /* Night Owl syntax colors */
+  --syntax-purple: #c792ea;
+  --syntax-orange: #f78c6c;
+  --syntax-blue: #82aaff;
+  --syntax-cyan: #7fd5ea;
+  --syntax-green: #addb67;
+  --syntax-yellow: #ffcb8b;
+  --syntax-red: #ff5874;
+  --syntax-grey: #637777;
+
+  /* Functional colors */
+  --border: #1d3b53;
+  --success: #addb67;
+  --info: #82aaff;
+  --warning: #ffcb8b;
+  --danger: #ff5874;
+
+  /* Language colors */
+  --kotlin: #c792ea;
+  --java: #f78c6c;
+  --python: #7fd5ea;
+  --rust: #dea584;
+  --cpp: #82aaff;
 }
 
 * { box-sizing: border-box; }
@@ -29,86 +58,123 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.8;
   font-size: 16px;
   margin: 0;
   padding: 0;
 }
 
-/* Typography */
+/* ═══ Typography ═══ */
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-bright);
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 
-h1 { font-size: 2.5rem; border-bottom: 3px solid var(--primary); padding-bottom: 0.5rem; }
-h2 { font-size: 1.8rem; border-bottom: 2px solid var(--border); padding-bottom: 0.3rem; }
-h3 { font-size: 1.4rem; color: var(--accent); }
-h4 { font-size: 1.2rem; color: var(--info); }
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid var(--primary);
+  padding-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom-color: var(--primary);
+}
 
-p { margin: 1rem 0; }
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.3rem;
+  color: var(--accent2);
+}
 
-a { color: var(--info); text-decoration: none; transition: color 0.2s; }
-a:hover { color: var(--accent); text-decoration: underline; }
+h3 {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: var(--syntax-blue);
+}
+
+p { margin: 1.2rem 0; }
+
+a {
+  color: var(--accent2);
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
 
 strong { color: var(--text-bright); font-weight: 700; }
 em { color: var(--accent); }
 
+/* ═══ Blockquotes ═══ */
 blockquote {
   border-left: 4px solid var(--primary);
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
   background: var(--bg-card);
   border-radius: 0 8px 8px 0;
+  color: var(--text-muted);
 }
 
 blockquote p { margin: 0; }
 
+/* ═══ Inline Code ═══ */
 code {
   background: var(--bg-code);
   padding: 0.2em 0.4em;
   border-radius: 4px;
-  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
   font-size: 0.9em;
-  color: var(--accent);
+  color: var(--syntax-orange);
 }
 
 pre {
   background: var(--bg-code);
-  padding: 1rem;
+  padding: 1.25rem;
   border-radius: 8px;
   overflow-x: auto;
   border: 1px solid var(--border);
-  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
   font-size: 0.85rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 pre code {
   background: none;
   padding: 0;
   color: var(--text);
+  font-size: inherit;
 }
 
-/* Layout */
+/* ═══ Layout ═══ */
 .container {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Header */
+/* ═══ Header ═══ */
 .site-header {
-  background: linear-gradient(135deg, var(--secondary) 0%, #1a1a2e 100%);
-  border-bottom: 3px solid var(--primary);
-  padding: 1rem 0;
+  background: linear-gradient(135deg, #011627 0%, #0a1f2e 100%);
+  border-bottom: 2px solid var(--border);
+  padding: 0.8rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .site-header .container {
@@ -119,13 +185,15 @@ pre code {
 }
 
 .site-title {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
-  color: var(--text-bright) !important;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-decoration: none !important;
+  border: none !important;
 }
-
-.site-title:hover { color: var(--primary) !important; }
 
 .nav-links {
   display: flex;
@@ -135,19 +203,23 @@ pre code {
   padding: 0;
 }
 
+.nav-links li { margin: 0; }
+
 .nav-links a {
   color: var(--text-muted);
   font-size: 0.9rem;
   font-weight: 500;
   transition: color 0.2s;
+  border: none;
 }
+.nav-links a:hover { color: var(--text-bright); }
 
-.nav-links a:hover { color: var(--text-bright); text-decoration: none; }
-
-/* Sidebar / Table of Contents */
+/* ═══ Sidebar / Table of Contents ═══ */
 .toc-wrapper {
   position: sticky;
   top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
 .toc {
@@ -155,15 +227,13 @@ pre code {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.5rem;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
 }
 
 .toc h3 {
   margin-top: 0;
-  font-size: 1rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
 }
 
@@ -173,40 +243,47 @@ pre code {
   margin: 0;
 }
 
-.toc li { margin: 0.3rem 0; }
+.toc li { margin: 0.2rem 0; }
 
 .toc a {
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   display: block;
   padding: 0.2rem 0;
   border-left: 2px solid transparent;
   padding-left: 0.5rem;
   transition: all 0.2s;
+  border-bottom: none;
 }
 
 .toc a:hover {
   color: var(--text-bright);
   border-left-color: var(--primary);
-  text-decoration: none;
 }
 
-.toc .toc-h2 { padding-left: 1rem; }
-.toc .toc-h3 { padding-left: 1.5rem; font-size: 0.8rem; }
+.toc .toc-h2 { padding-left: 1rem; font-size: 0.82rem; }
+.toc .toc-h3 { padding-left: 1.7rem; font-size: 0.78rem; color: var(--text-dim); }
 
-/* Code Tabs System */
+/* Smooth scrollbar for TOC */
+.toc-wrapper::-webkit-scrollbar { width: 4px; }
+.toc-wrapper::-webkit-scrollbar-track { background: transparent; }
+.toc-wrapper::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* ═══ Code Tabs — Night Owl Style ═══ */
 .code-tabs {
   margin: 1.5rem 0;
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .tab-nav {
   display: flex;
-  background: var(--bg-card);
+  background: var(--bg-tab);
   border-bottom: 1px solid var(--border);
   overflow-x: auto;
+  gap: 0;
 }
 
 .tab-btn {
@@ -224,28 +301,34 @@ pre code {
   border-bottom: 2px solid transparent;
 }
 
-.tab-btn:hover { color: var(--text-bright); background: rgba(255,255,255,0.05); }
+.tab-btn:hover { color: var(--text-bright); background: var(--bg-hover); }
 
 .tab-btn.active {
-  color: var(--text-bright);
+  color: var(--primary);
   border-bottom-color: var(--primary);
+  background: rgba(199, 146, 234, 0.08);
 }
 
 .tab-btn .lang-icon { margin-right: 0.4rem; }
 
 .tab-content { display: none; }
-
 .tab-content.active { display: block; }
 
 .tab-content pre {
   margin: 0;
   border-radius: 0;
   border: none;
-  max-height: 500px;
+  max-height: 600px;
   overflow-y: auto;
+  background: var(--bg-code);
 }
 
-/* Info/Note/Tip Boxes */
+.tab-content pre code {
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+/* ═══ Info/Tip/Warning/Danger Boxes ═══ */
 .info-box, .tip-box, .warning-box, .danger-box {
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
@@ -253,17 +336,17 @@ pre code {
   border-left: 4px solid;
 }
 
-.info-box { background: rgba(52, 152, 219, 0.1); border-color: var(--info); }
-.tip-box { background: rgba(46, 204, 113, 0.1); border-color: var(--success); }
-.warning-box { background: rgba(243, 156, 18, 0.1); border-color: var(--warning); }
-.danger-box { background: rgba(231, 76, 60, 0.1); border-color: var(--danger); }
+.info-box { background: rgba(130, 170, 255, 0.08); border-color: var(--info); }
+.tip-box { background: rgba(173, 219, 103, 0.08); border-color: var(--success); }
+.warning-box { background: rgba(255, 203, 139, 0.08); border-color: var(--warning); }
+.danger-box { background: rgba(255, 88, 116, 0.08); border-color: var(--danger); }
 
 .info-box strong { color: var(--info); }
 .tip-box strong { color: var(--success); }
 .warning-box strong { color: var(--warning); }
 .danger-box strong { color: var(--danger); }
 
-/* Diagrams */
+/* ═══ ASCII Diagrams ═══ */
 .diagram {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -283,28 +366,32 @@ pre code {
   margin: 0;
 }
 
-/* Tables */
+/* ═══ Tables ═══ */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
+  font-size: 0.9rem;
 }
 
 th, td {
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
 }
 
 th {
   background: var(--bg-card);
-  color: var(--text-bright);
+  color: var(--accent2);
   font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
 }
 
-tr:hover { background: rgba(255,255,255,0.02); }
+tr:hover { background: rgba(255,255,255,0.015); }
 
-/* Cards */
+/* ═══ Cards ═══ */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -320,25 +407,26 @@ tr:hover { background: rgba(255,255,255,0.02); }
   transition: all 0.3s;
 }
 
-.card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 20px rgba(199,146,234,0.1); }
 
 .card h4 { margin-top: 0; }
 
-/* Progress / Status Badges */
+/* ═══ Badges ═══ */
 .badge {
   display: inline-block;
-  padding: 0.2rem 0.6rem;
+  padding: 0.2rem 0.7rem;
   border-radius: 20px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
-.badge-easy { background: rgba(46, 204, 113, 0.2); color: var(--success); }
-.badge-medium { background: rgba(243, 156, 18, 0.2); color: var(--warning); }
-.badge-hard { background: rgba(231, 76, 60, 0.2); color: var(--danger); }
+.badge-easy { background: rgba(173, 219, 103, 0.15); color: var(--success); }
+.badge-medium { background: rgba(255, 203, 139, 0.15); color: var(--warning); }
+.badge-hard { background: rgba(255, 88, 116, 0.15); color: var(--danger); }
 
-/* Footer */
+/* ═══ Footer ═══ */
 .site-footer {
   margin-top: 4rem;
   padding: 2rem 0;
@@ -348,7 +436,7 @@ tr:hover { background: rgba(255,255,255,0.02); }
   font-size: 0.85rem;
 }
 
-/* Navigation arrows */
+/* ═══ Chapter Navigation ═══ */
 .chapter-nav {
   display: flex;
   justify-content: space-between;
@@ -364,32 +452,41 @@ tr:hover { background: rgba(255,255,255,0.02); }
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.3s;
+  border-bottom: none;
 }
 
 .chapter-nav a:hover {
   border-color: var(--primary);
-  background: rgba(231, 76, 60, 0.1);
-  text-decoration: none;
+  background: rgba(199, 146, 234, 0.08);
+  color: var(--primary);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .container { padding: 1rem; }
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.4rem; }
-  .site-header .container { flex-direction: column; gap: 0.5rem; }
-  .nav-links { flex-wrap: wrap; justify-content: center; }
-  .tab-btn { padding: 0.5rem 0.8rem; font-size: 0.75rem; }
+/* ═══ Copy Button ═══ */
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.7rem;
+  z-index: 10;
+  transition: all 0.2s;
+  font-family: inherit;
 }
 
-/* Focus mode for ADHD */
-.focus-mode .diagram { border-color: var(--accent); border-width: 2px; }
-.focus-mode blockquote { border-left-width: 6px; }
+.copy-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-bright);
+  border-color: var(--primary);
+}
 
-/* Smooth scroll */
-html { scroll-behavior: smooth; }
+pre { position: relative; }
 
-/* mermaid diagrams */
+/* ═══ Mermaid Diagrams ═══ */
 .mermaid {
   background: var(--bg-card);
   padding: 1rem;
@@ -397,7 +494,7 @@ html { scroll-behavior: smooth; }
   margin: 1.5rem 0;
 }
 
-/* Keyboard shortcut */
+/* ═══ Keyboard Shortcuts ═══ */
 kbd {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -407,3 +504,27 @@ kbd {
   font-size: 0.85em;
   color: var(--text-bright);
 }
+
+/* ═══ Horizontal Rule ═══ */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* ═══ Responsive ═══ */
+@media (max-width: 768px) {
+  .container { padding: 1rem; }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  .site-header .container { flex-direction: column; gap: 0.5rem; }
+  .nav-links { flex-wrap: wrap; justify-content: center; }
+  .tab-btn { padding: 0.5rem 0.8rem; font-size: 0.72rem; }
+}
+
+/* ═══ Focus Mode for ADHD ═══ */
+.focus-mode .diagram { border-color: var(--accent); border-width: 2px; }
+.focus-mode blockquote { border-left-width: 6px; }
+
+/* ═══ Smooth Scroll ═══ */
+html { scroll-behavior: smooth; }

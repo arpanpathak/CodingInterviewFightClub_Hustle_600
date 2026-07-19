@@ -8,10 +8,8 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 
-# Night Owl theme
-remote_theme: pages-themes/hacker@v0.2.0
+# Night Owl Theme — custom CSS, no remote theme
 plugins:
-  - jekyll-remote-theme
   - jemoji
 
 # Custom settings
