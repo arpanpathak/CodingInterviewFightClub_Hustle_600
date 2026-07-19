@@ -9,9 +9,57 @@ class ValidPalindrome_III {
     * @param k The integer parameter representing k.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Valid Palindrome_III problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_III problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_III problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isValidPalindrome(s: String, k: Int): Boolean {
         val dp = Array(s.length) { IntArray(s.length) { 0 } }
 
+        /**
+        * Solves the Valid Palindrome_III problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Valid Palindrome_III problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Valid Palindrome_III problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Valid Palindrome_III problem.
         * Takes `start` (integer), `length` (integer).

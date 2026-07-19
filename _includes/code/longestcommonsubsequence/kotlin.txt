@@ -12,6 +12,30 @@ class LongestCommonSubsequence {
         * @param str2 The input string.
         * @return The computed integer result.
         */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str1` (string), `str2` (string).
+        *
+        * @param str1 The input string.
+        * @param str2 The input string.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str1` (string), `str2` (string).
+        *
+        * @param str1 The input string.
+        * @param str2 The input string.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str1` (string), `str2` (string).
+        *
+        * @param str1 The input string.
+        * @param str2 The input string.
+        * @return The computed integer result.
+        */
         fun lcs(str1: String, str2: String): Int {
             M = Array(str1.length + 1) { IntArray(str2.length + 1) }
             for (i in 1..str1.length) {
@@ -35,6 +59,33 @@ class LongestCommonSubsequence {
         * @param j The integer parameter representing j.
         * @return Unit (no return value, modifies state in-place).
         */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str` (string), `i` (integer), `j` (integer).
+        *
+        * @param str The input string.
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str` (string), `i` (integer), `j` (integer).
+        *
+        * @param str The input string.
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str` (string), `i` (integer), `j` (integer).
+        *
+        * @param str The input string.
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun printLCS(str: String, i: Int, j: Int) {
             if (i <= 0 || j <= 0) return
             if (M[i][j] != M[i][j - 1] && M[i][j] != M[i - 1][j] && M[i][j] == M[i - 1][j - 1] + 1) {
@@ -48,6 +99,24 @@ class LongestCommonSubsequence {
         }
 
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Entry point for the program.
         *

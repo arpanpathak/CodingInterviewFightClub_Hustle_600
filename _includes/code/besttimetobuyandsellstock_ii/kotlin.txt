@@ -8,6 +8,27 @@ class BestTimeToBuyAndSellStock_II {
     * @param prices The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Best Time To Buy And Sell Stock_II problem.
+    * Takes `prices` (array of integers).
+    *
+    * @param prices The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Best Time To Buy And Sell Stock_II problem.
+    * Takes `prices` (array of integers).
+    *
+    * @param prices The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Best Time To Buy And Sell Stock_II problem.
+    * Takes `prices` (array of integers).
+    *
+    * @param prices The input array of integers.
+    * @return The computed integer result.
+    */
     fun maxProfit(prices: IntArray): Int {
         var maxProfit = 0
         for (i in 1..prices.lastIndex) {

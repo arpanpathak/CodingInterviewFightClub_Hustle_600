@@ -12,6 +12,24 @@ class BasicCalculator {
     * @param op The character.
     * @return The computed integer result.
     */
+    /**
+    * Helper: precedence.
+    *
+    * @param op The character.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: precedence.
+    *
+    * @param op The character.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: precedence.
+    *
+    * @param op The character.
+    * @return The computed integer result.
+    */
     private fun precedence(op: Char): Int {
         return when (op) {
             '+', '-' -> 1
@@ -20,6 +38,24 @@ class BasicCalculator {
     }
 
     // Function to convert infix to postfix with unary operators handled
+    /**
+    * Helper: infix to postfix.
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Helper: infix to postfix.
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Helper: infix to postfix.
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     /**
     * Helper: infix to postfix.
     *
@@ -88,6 +124,24 @@ class BasicCalculator {
     * @param postfix The input string.
     * @return The computed integer result.
     */
+    /**
+    * Helper: evaluate postfix.
+    *
+    * @param postfix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: evaluate postfix.
+    *
+    * @param postfix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: evaluate postfix.
+    *
+    * @param postfix The input string.
+    * @return The computed integer result.
+    */
     private fun evaluatePostfix(postfix: String): Int {
         val stack = Stack<Int>()
         var i = 0
@@ -119,6 +173,27 @@ class BasicCalculator {
         return stack.pop()
     }
 
+    /**
+    * Solves the Basic Calculator problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Basic Calculator problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Basic Calculator problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Basic Calculator problem.
     * Takes `s` (string).

@@ -108,6 +108,30 @@ class ApplySubstitutions {
     * @param text The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Apply Substitutions problem.
+    * Takes `replacements` (List<List<String>>), `text` (string).
+    *
+    * @param replacements The input List<List<String>>.
+    * @param text The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Apply Substitutions problem.
+    * Takes `replacements` (List<List<String>>), `text` (string).
+    *
+    * @param replacements The input List<List<String>>.
+    * @param text The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Apply Substitutions problem.
+    * Takes `replacements` (List<List<String>>), `text` (string).
+    *
+    * @param replacements The input List<List<String>>.
+    * @param text The input string.
+    * @return The resulting string.
+    */
     fun applySubstitutions(replacements: List<List<String>>, text: String): String {
         val map = mutableMapOf<String, String>()
 
@@ -115,6 +139,27 @@ class ApplySubstitutions {
             map[key] = value
         }
 
+        /**
+        * Solves the Apply Substitutions problem.
+        * Takes `s` (string).
+        *
+        * @param s The input string.
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Apply Substitutions problem.
+        * Takes `s` (string).
+        *
+        * @param s The input string.
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Apply Substitutions problem.
+        * Takes `s` (string).
+        *
+        * @param s The input string.
+        * @return The resulting string.
+        */
         /**
         * Solves the Apply Substitutions problem.
         * Takes `s` (string).
@@ -146,10 +191,9 @@ class ApplySubstitutions {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
 
 ### Complexity
 
@@ -160,13 +204,14 @@ class ApplySubstitutions {
 
 ### Variations
 
-1. What if the tree is not balanced (skewed)? Worst-case complexity?
-1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need to handle both BST and non-BST trees?
-1. Can this be solved with Morris traversal (O(1) space)?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
+
 ## Break A Palindrome
 
 ### Problem
@@ -183,6 +228,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string.greedy
 
 class BreakAPalindrome {
+    /**
+    * Solves the Break APalindrome problem.
+    * Takes `palindrome` (string).
+    *
+    * @param palindrome The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Break APalindrome problem.
+    * Takes `palindrome` (string).
+    *
+    * @param palindrome The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Break APalindrome problem.
+    * Takes `palindrome` (string).
+    *
+    * @param palindrome The input string.
+    * @return The resulting string.
+    */
     /**
     * Solves the Break APalindrome problem.
     * Takes `palindrome` (string).
@@ -207,10 +273,9 @@ class BreakAPalindrome {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -221,13 +286,14 @@ class BreakAPalindrome {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
+
 ## Checkifa Parentheses String Can Be Valid
 
 ### Problem
@@ -244,6 +310,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string
 
 class CheckifaParenthesesStringCanBeValid {
+    /**
+    * Solves the Checkifa Parentheses String Can Be Valid problem.
+    * Takes `s` (string), `locked` (string).
+    *
+    * @param s The input string.
+    * @param locked The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Checkifa Parentheses String Can Be Valid problem.
+    * Takes `s` (string), `locked` (string).
+    *
+    * @param s The input string.
+    * @param locked The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Checkifa Parentheses String Can Be Valid problem.
+    * Takes `s` (string), `locked` (string).
+    *
+    * @param s The input string.
+    * @param locked The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Checkifa Parentheses String Can Be Valid problem.
     * Takes `s` (string), `locked` (string).
@@ -286,10 +376,9 @@ class CheckifaParenthesesStringCanBeValid {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -300,14 +389,66 @@ class CheckifaParenthesesStringCanBeValid {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
-ount++
+
+## Count And Say
+
+### Problem
+
+Solves the Count And Say problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string
+
+class CountAndSay {
+    /**
+    * Solves the Count And Say problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Count And Say problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Count And Say problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Count And Say problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting string.
+    */
+    fun countAndSay(n: Int): String {
+        var result = "1"
+        repeat(n - 1) {
+            val nextSequence = buildString {
+                var count = 1
+                for (i in 1 until result.length) {
+                    if (result[i] == result[i - 1]) {
+                        count++
                     } else {
                         append(count).append(result[i - 1])
                         count = 1
@@ -322,10 +463,9 @@ ount++
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -336,19 +476,79 @@ ount++
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-  }
+
+## Count Words With A Given Prefix
+
+### Problem
+
+Solves the Count Words With AGiven Prefix problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string
+
+class CountWordsWithAGivenPrefix {
+    /**
+    * Solves the Count Words With AGiven Prefix problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    fun prefixCount(words: Array<String>, prefix: String): Int {
+        var count = 0
+
+        for (word in words) {
+            if (word.startsWith(prefix)) {
+                count++
+            }
+        }
 
         return count
     }
 }
 ```
+
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -356,6 +556,14 @@ ount++
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
 
@@ -392,6 +600,30 @@ class CountWordsWithAGivenPrefix_Trie {
     * @param prefix The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         // Build the trie using the words
         buildTrie(words, root)
@@ -401,6 +633,27 @@ class CountWordsWithAGivenPrefix_Trie {
     }
 
     // Method to build the trie
+    /**
+    * Helper: build trie.
+    *
+    * @param words The input Array<String>.
+    * @param root The TrieNode.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: build trie.
+    *
+    * @param words The input Array<String>.
+    * @param root The TrieNode.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: build trie.
+    *
+    * @param words The input Array<String>.
+    * @param root The TrieNode.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: build trie.
     *
@@ -426,6 +679,24 @@ class CountWordsWithAGivenPrefix_Trie {
     * @param prefix The input string.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Helper: find prefix node.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Helper: find prefix node.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Helper: find prefix node.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
     private fun findPrefixNode(prefix: String): TrieNode? {
         var current = root
         for (ch in prefix) {
@@ -436,10 +707,9 @@ class CountWordsWithAGivenPrefix_Trie {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Trie (prefix tree). Store strings in a tree structure for O(L) prefix lookups.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -450,13 +720,14 @@ class CountWordsWithAGivenPrefix_Trie {
 
 ### Variations
 
-1. What if you need to reconstruct the actual subsequence/path?
-1. What if the strings are very long? Can you optimize space?
-1. What if case sensitivity or character encoding matters?
-1. What if you need to handle multiple strings (3+)?
-1. What if there are wildcards or regex patterns involved?
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
+
 ## Count Words With A Given Prefix_Trie_FP
 
 ### Problem
@@ -485,6 +756,30 @@ class CountWordsWithAGivenPrefix_Trie_FP {
     * @param prefix The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         words.forEach { word ->
             word.fold(root) { node, ch ->
@@ -500,14 +795,31 @@ class CountWordsWithAGivenPrefix_Trie_FP {
     * @param prefix The input string.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Helper: prefix search.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Helper: prefix search.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Helper: prefix search.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
     private fun prefixSearch(prefix: String): TrieNode? = prefix.fold(root) { node, ch -> node.children[ch] ?: return null }
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -518,14 +830,61 @@ class CountWordsWithAGivenPrefix_Trie_FP {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
-e resulting string.
+
+## Custom Sort String
+
+### Problem
+
+Solves the Custom Sort String problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string.sorting
+
+class CustomSortString {
+    /**
+    * Solves the Custom Sort String problem.
+    * Takes `order` (string), `s` (string).
+    *
+    * @param order The input string.
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Custom Sort String problem.
+    * Takes `order` (string), `s` (string).
+    *
+    * @param order The input string.
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Custom Sort String problem.
+    * Takes `order` (string), `s` (string).
+    *
+    * @param order The input string.
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Custom Sort String problem.
+    * Takes `order` (string), `s` (string).
+    *
+    * @param order The input string.
+    * @param s The input string.
+    * @return The resulting string.
     */
     fun customSortString(order: String, s: String): String {
         val orderMap = mutableMapOf<Char, Int>()
@@ -537,10 +896,9 @@ e resulting string.
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -551,14 +909,150 @@ e resulting string.
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
-repeat(num))
+
+## Decode String
+
+### Problem
+
+Solves the Decode String problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string.stack
+
+class DecodeString {
+    private var index = 0
+
+    /**
+    * Solves the Decode String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Decode String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Decode String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Decode String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    fun decodeString(s: String): String {
+        val result = StringBuilder()
+
+        while (index < s.length && s[index] != ']') {
+            val ch = s[index]
+            when {
+                !ch.isDigit() -> {
+                    result.append(ch)
+                    index++
+                }
+                else -> {
+                    var k = 0
+                    while (index < s.length && s[index].isDigit()) {
+                        k = k * 10 + (s[index++] - '0')
+                    }
+                    index++ // Skip the opening bracket '['
+                    val nestedDecodedString = decodeString(s)
+                    index++ // Skip the closing bracket ']'
+
+                    repeat(k) {
+                        result.append(nestedDecodedString)
+                    }
+                }
+            }
+        }
+
+        return result.toString()
+    }
+
+    // Short code
+    /**
+    * Solves the Decode String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Decode String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Decode String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Decode String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    fun decodeString1(s: String): String {
+        var index = 0
+        /**
+        * Solves the Decode String problem.
+        *
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Decode String problem.
+        *
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Decode String problem.
+        *
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Decode String problem.
+        *
+        * @return The resulting string.
+        */
+        fun decode(): String {
+            val result = StringBuilder()
+            var num = 0
+            while (index < s.length) {
+                when (val char = s[index]) {
+                    in '0'..'9' -> num = num * 10 + (char - '0')
+                    '[' -> {
+                        index++
+                        val decodedString = decode()
+                        result.append(decodedString.repeat(num))
                         num = 0
                     }
                     ']' -> return result.toString()
@@ -573,12 +1067,24 @@ repeat(num))
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -606,6 +1112,30 @@ class DetermineIfStringsAreClose {
     * @param word2 The input string.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Determine If Strings Are Close problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Determine If Strings Are Close problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Determine If Strings Are Close problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun closeStrings(word1: String, word2: String): Boolean {
         if (word1.length != word2.length)
             return false
@@ -625,12 +1155,24 @@ class DetermineIfStringsAreClose {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -660,10 +1202,58 @@ class EditDistance {
     * @param word2 The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Edit Distance problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Edit Distance problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Edit Distance problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The computed integer result.
+    */
     fun minDistance(word1: String, word2: String): Int {
         return minDistance(word1, word2, word1.length, word2.length)
     }
 
+    /**
+    * Solves the Edit Distance problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Edit Distance problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Edit Distance problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Edit Distance problem.
     * Takes `word1` (string), `word2` (string).
@@ -697,11 +1287,33 @@ class EditDistance {
         * @param args The input Array<String>.
         * @return Unit (no return value, modifies state in-place).
         */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
         }
     }
 }
 ```
+
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -709,6 +1321,14 @@ class EditDistance {
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -735,6 +1355,27 @@ class ExcelSheetToColumnNumber {
     * @param columnTitle The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Excel Sheet To Column Number problem.
+    * Takes `columnTitle` (string).
+    *
+    * @param columnTitle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Excel Sheet To Column Number problem.
+    * Takes `columnTitle` (string).
+    *
+    * @param columnTitle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Excel Sheet To Column Number problem.
+    * Takes `columnTitle` (string).
+    *
+    * @param columnTitle The input string.
+    * @return The computed integer result.
+    */
     fun titleToNumber(columnTitle: String): Int {
         var base = 1
         var sum = 0
@@ -747,12 +1388,24 @@ class ExcelSheetToColumnNumber {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -772,6 +1425,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string.sliding_window
 
 class FindAllAnagrams {
+    /**
+    * Solves the Find All Anagrams problem.
+    * Takes `s` (string), `p` (string).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find All Anagrams problem.
+    * Takes `s` (string), `p` (string).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find All Anagrams problem.
+    * Takes `s` (string), `p` (string).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Find All Anagrams problem.
     * Takes `s` (string), `p` (string).
@@ -809,10 +1486,9 @@ class FindAllAnagrams {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
 
 ### Complexity
 
@@ -823,14 +1499,81 @@ class FindAllAnagrams {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---
-             haystack[i] == needle[j] -> {  // Characters match
+
+## Findtheindexofthefirstoccurrenceina String
+
+### Problem
+
+Solves the findtheindexofthefirstoccurrenceina string problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string.pattern_matching
+
+import oracle.net.aso.m
+
+class `FindTheIndexofTheFirstOccurrenceIna String` {
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    fun strStr(haystack: String, needle: String): Int {
+        // If the needle is empty, return 0
+        if (needle.isEmpty()) return 0
+
+        // Use 'to' to assign both m and n in one line
+        val (m, n) = needle.length to haystack.length
+
+        // Step 1: Build the LPS array for the needle
+        val lps = buildLPS(needle)
+        println(needle)
+        println(lps.contentToString())
+        // Step 2: Search for the needle in the haystack using KMP algorithm
+        var (i, j) = 0 to 0  // Pairing to initialize indices for haystack and needle
+
+        while (i < n) {
+            when {
+                haystack[i] == needle[j] -> {  // Characters match
                     i++
                     j++
                 }
@@ -846,6 +1589,27 @@ class FindAllAnagrams {
     }
 
     // Function to build the LPS (Longest Prefix Suffix) array for the needle
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `needle` (string).
+    *
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `needle` (string).
+    *
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `needle` (string).
+    *
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
     /**
     * Solves the findtheindexofthefirstoccurrenceina string problem.
     * Takes `needle` (string).
@@ -873,12 +1637,24 @@ class FindAllAnagrams {
         //   i             1
 ```
 
+### Pattern Insight
+
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---
 
@@ -900,6 +1676,30 @@ package string.pattern_matching
 import oracle.net.aso.m
 
 class FindTheIndexOfTheFirstOccurrenceInString_RabinKarp {
+    /**
+    * Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Find The Index Of The First Occurrence In String_Rabin Karp problem.
     * Takes `haystack` (string), `needle` (string).
@@ -953,8 +1753,50 @@ class FindTheIndexOfTheFirstOccurrenceInString_RabinKarp {
     * @param c The character.
     * @return The computed integer result.
     */
+    /**
+    * Helper: char value.
+    *
+    * @param c The character.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: char value.
+    *
+    * @param c The character.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: char value.
+    *
+    * @param c The character.
+    * @return The computed integer result.
+    */
     private fun charValue(c: Char): Int = c - 'a'
 
+    /**
+    * Helper: matches.
+    *
+    * @param text The input string.
+    * @param pattern The input string.
+    * @param start The integer parameter representing start.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: matches.
+    *
+    * @param text The input string.
+    * @param pattern The input string.
+    * @param start The integer parameter representing start.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: matches.
+    *
+    * @param text The input string.
+    * @param pattern The input string.
+    * @param start The integer parameter representing start.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: matches.
     *
@@ -972,12 +1814,24 @@ class FindTheIndexOfTheFirstOccurrenceInString_RabinKarp {
 }
 ```
 
+### Pattern Insight
+
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---
 
@@ -1005,6 +1859,27 @@ class FindUniqueBinaryString {
     * @param nums The input Array<String>.
     * @return The resulting string.
     */
+    /**
+    * Solves the Find Unique Binary String problem.
+    * Takes `nums` (Array<String>).
+    *
+    * @param nums The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Find Unique Binary String problem.
+    * Takes `nums` (Array<String>).
+    *
+    * @param nums The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Find Unique Binary String problem.
+    * Takes `nums` (Array<String>).
+    *
+    * @param nums The input Array<String>.
+    * @return The resulting string.
+    */
     fun findDifferentBinaryString(nums: Array<String>): String {
         val n = nums.size
         val sb = StringBuilder()
@@ -1018,12 +1893,24 @@ class FindUniqueBinaryString {
 }
 ```
 
+### Pattern Insight
+
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---
 
@@ -1052,12 +1939,63 @@ class GenerateParantheses {
     * @param n The integer parameter representing n.
     * @return The resulting collection (list of strings).
     */
+    /**
+    * Solves the Generate Parantheses problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Generate Parantheses problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Generate Parantheses problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (list of strings).
+    */
     fun generateParenthesis(n: Int): List<String> {
         val result = mutableListOf<String>()
         generate(n, n, StringBuilder(), result)
         return result
     }
 
+    /**
+    * Solves the Generate Parantheses problem.
+    * Takes `open` (integer), `close` (integer), `current` (StringBuilder), `result` (MutableList<String>).
+    *
+    * @param open The integer parameter representing open.
+    * @param close The integer parameter representing close.
+    * @param current The input string.
+    * @param result The input MutableList<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Generate Parantheses problem.
+    * Takes `open` (integer), `close` (integer), `current` (StringBuilder), `result` (MutableList<String>).
+    *
+    * @param open The integer parameter representing open.
+    * @param close The integer parameter representing close.
+    * @param current The input string.
+    * @param result The input MutableList<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Generate Parantheses problem.
+    * Takes `open` (integer), `close` (integer), `current` (StringBuilder), `result` (MutableList<String>).
+    *
+    * @param open The integer parameter representing open.
+    * @param close The integer parameter representing close.
+    * @param current The input string.
+    * @param result The input MutableList<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Generate Parantheses problem.
     * Takes `open` (integer), `close` (integer), `current` (StringBuilder), `result` (MutableList<String>).
@@ -1089,12 +2027,24 @@ class GenerateParantheses {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1121,6 +2071,27 @@ class GoatLatin {
     * @param sentence The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Goat Latin problem.
+    * Takes `sentence` (string).
+    *
+    * @param sentence The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Goat Latin problem.
+    * Takes `sentence` (string).
+    *
+    * @param sentence The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Goat Latin problem.
+    * Takes `sentence` (string).
+    *
+    * @param sentence The input string.
+    * @return The resulting string.
+    */
     fun toGoatLatin(sentence: String): String {
         // Define a set of vowels for faster lookup
         val vowels = setOf('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
@@ -1140,12 +2111,24 @@ class GoatLatin {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1173,6 +2156,30 @@ class GreatestCommonDivisorOfStrings {
     * @param b The integer parameter representing b.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Greatest Common Divisor Of Strings problem.
+    * Takes `a` (integer), `b` (integer).
+    *
+    * @param a The integer parameter representing a.
+    * @param b The integer parameter representing b.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Greatest Common Divisor Of Strings problem.
+    * Takes `a` (integer), `b` (integer).
+    *
+    * @param a The integer parameter representing a.
+    * @param b The integer parameter representing b.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Greatest Common Divisor Of Strings problem.
+    * Takes `a` (integer), `b` (integer).
+    *
+    * @param a The integer parameter representing a.
+    * @param b The integer parameter representing b.
+    * @return The computed integer result.
+    */
     fun gcd(a: Int, b: Int): Int {
         return when {
             a == b -> a
@@ -1181,6 +2188,30 @@ class GreatestCommonDivisorOfStrings {
         }
     }
 
+    /**
+    * Solves the Greatest Common Divisor Of Strings problem.
+    * Takes `str1` (string), `str2` (string).
+    *
+    * @param str1 The input string.
+    * @param str2 The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Greatest Common Divisor Of Strings problem.
+    * Takes `str1` (string), `str2` (string).
+    *
+    * @param str1 The input string.
+    * @param str2 The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Greatest Common Divisor Of Strings problem.
+    * Takes `str1` (string), `str2` (string).
+    *
+    * @param str1 The input string.
+    * @param str2 The input string.
+    * @return The resulting string.
+    */
     /**
     * Solves the Greatest Common Divisor Of Strings problem.
     * Takes `str1` (string), `str2` (string).
@@ -1201,12 +2232,24 @@ class GreatestCommonDivisorOfStrings {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -1233,6 +2276,27 @@ class GroupAnagrams {
     * @param strs The input Array<String>.
     * @return The resulting collection (List<List<String>).
     */
+    /**
+    * Solves the Group Anagrams problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Group Anagrams problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Group Anagrams problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
     fun groupAnagrams(strs: Array<String>): List<List<String>> {
         val anagramMap = mutableMapOf<List<Int>, MutableList<String>>()  // Using List<Int> as the key
         for (word in strs) {
@@ -1248,10 +2312,9 @@ class GroupAnagrams {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -1262,14 +2325,96 @@ class GroupAnagrams {
 
 ### Variations
 
-1. What if the tree is not balanced (skewed)? Worst-case complexity?
-1. What if you need to do this iteratively (no recursion)?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need to handle both BST and non-BST trees?
-1. Can this be solved with Morris traversal (O(1) space)?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
- for (i in 1 until str.length) {
+
+## Group Shifted Strings
+
+### Problem
+
+Solves the Group Shifted Strings problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string.hashtable
+
+class GroupShiftedStrings {
+    /**
+    * Solves the Group Shifted Strings problem.
+    * Takes `strings` (Array<String>).
+    *
+    * @param strings The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Group Shifted Strings problem.
+    * Takes `strings` (Array<String>).
+    *
+    * @param strings The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Group Shifted Strings problem.
+    * Takes `strings` (Array<String>).
+    *
+    * @param strings The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Group Shifted Strings problem.
+    * Takes `strings` (Array<String>).
+    *
+    * @param strings The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
+    fun groupStrings(strings: Array<String>): List<List<String>> {
+        val map = mutableMapOf<String, MutableList<String>>()
+
+        for (str in strings) {
+            val key = getKey(str)
+            map.computeIfAbsent(key) { mutableListOf() }.add(str)
+        }
+
+        return map.values.toList()
+    }
+
+    /**
+    * Helper: get key.
+    *
+    * @param str The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Helper: get key.
+    *
+    * @param str The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Helper: get key.
+    *
+    * @param str The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Helper: get key.
+    *
+    * @param str The input string.
+    * @return The resulting string.
+    */
+    private fun getKey(str: String): String {
+        return buildString {
+            for (i in 1 until str.length) {
                 append( ((str[i] - str[i - 1] + 26) % 26).toString() )
             }
         }
@@ -1277,12 +2422,24 @@ class GroupAnagrams {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -1311,11 +2468,62 @@ class InterleavingString {
     * @param s3 The input string.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Interleaving String problem.
+    * Takes `s1` (string), `s2` (string), `s3` (string).
+    *
+    * @param s1 The input string.
+    * @param s2 The input string.
+    * @param s3 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Interleaving String problem.
+    * Takes `s1` (string), `s2` (string), `s3` (string).
+    *
+    * @param s1 The input string.
+    * @param s2 The input string.
+    * @param s3 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Interleaving String problem.
+    * Takes `s1` (string), `s2` (string), `s3` (string).
+    *
+    * @param s1 The input string.
+    * @param s2 The input string.
+    * @param s3 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isInterleave(s1: String, s2: String, s3: String): Boolean {
         if (s1.length + s2.length != s3.length) return false
 
         val memo = mutableMapOf<Pair<Int, Int>, Boolean>()
 
+        /**
+        * Solves the Interleaving String problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Interleaving String problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Interleaving String problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Interleaving String problem.
         * Takes `i` (integer), `j` (integer).
@@ -1347,10 +2555,9 @@ class InterleavingString {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -1361,14 +2568,102 @@ class InterleavingString {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
-the condition is met, `false` otherwise.
+
+## Isomorphic String
+
+### Problem
+
+Solves the Isomorphic String problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string
+
+class IsomorphicString {
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    fun encode(s: String): String {
+        val map = mutableMapOf<Char, Int>()
+        val sb = StringBuilder()
+        var code = 0
+
+        for (c in s) {
+            if (c !in map) map[c] = code++
+            sb.append(map[c]).append(" ")
+        }
+
+        return sb.toString()
+    }
+
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Isomorphic String problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
     */
     fun isIsomorphic(s: String, t: String): Boolean {
         return encode(s) == encode(t)
@@ -1376,12 +2671,24 @@ the condition is met, `false` otherwise.
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -1409,6 +2716,30 @@ class IsSubsequence {
     * @param t The input string.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Is Subsequence problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Is Subsequence problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Is Subsequence problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isSubsequence(s: String, t: String): Boolean {
         var i = 0
         var j = 0
@@ -1428,12 +2759,24 @@ class IsSubsequence {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -1460,6 +2803,27 @@ class LengthOfLastWord {
     * @param s The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Length Of Last Word problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Length Of Last Word problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Length Of Last Word problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun lengthOfLastWord(s: String): Int {
         var i = s.length - 1
         var len = 0
@@ -1475,12 +2839,24 @@ class LengthOfLastWord {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
 
@@ -1500,6 +2876,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string
 
 class LongestCommonPrefix {
+    /**
+    * Solves the Longest Common Prefix problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Common Prefix problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Common Prefix problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting string.
+    */
     /**
     * Solves the Longest Common Prefix problem.
     * Takes `strs` (Array<String>).
@@ -1527,12 +2924,24 @@ class LongestCommonPrefix {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1555,6 +2964,30 @@ class LongestCommonSubsequence {
     companion object {
         private lateinit var M: Array<IntArray>
 
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str1` (string), `str2` (string).
+        *
+        * @param str1 The input string.
+        * @param str2 The input string.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str1` (string), `str2` (string).
+        *
+        * @param str1 The input string.
+        * @param str2 The input string.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str1` (string), `str2` (string).
+        *
+        * @param str1 The input string.
+        * @param str2 The input string.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Longest Common Subsequence problem.
         * Takes `str1` (string), `str2` (string).
@@ -1586,6 +3019,33 @@ class LongestCommonSubsequence {
         * @param j The integer parameter representing j.
         * @return Unit (no return value, modifies state in-place).
         */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str` (string), `i` (integer), `j` (integer).
+        *
+        * @param str The input string.
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str` (string), `i` (integer), `j` (integer).
+        *
+        * @param str The input string.
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Longest Common Subsequence problem.
+        * Takes `str` (string), `i` (integer), `j` (integer).
+        *
+        * @param str The input string.
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun printLCS(str: String, i: Int, j: Int) {
             if (i <= 0 || j <= 0) return
             if (M[i][j] != M[i][j - 1] && M[i][j] != M[i - 1][j] && M[i][j] == M[i - 1][j - 1] + 1) {
@@ -1605,6 +3065,24 @@ class LongestCommonSubsequence {
         * @param args The input Array<String>.
         * @return Unit (no return value, modifies state in-place).
         */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
             println(lcs("abcxgzggmn", "acttvvmnvt"))
             printLCS("acttvvmnvt", "abcxgzggmn".length, "acttvvmnvt".length) // Print in reverse order
@@ -1613,12 +3091,24 @@ class LongestCommonSubsequence {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -1641,10 +3131,9 @@ class LongestCommonSubstring {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
 
 ### Complexity
 
@@ -1655,14 +3144,112 @@ class LongestCommonSubstring {
 
 ### Variations
 
-1. What if the tree is not balanced (skewed)? Worst-case complexity?
-1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need to handle both BST and non-BST trees?
-1. Can this be solved with Morris traversal (O(1) space)?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
-1])
+
+## Longest Palidnromic Substring
+
+### Problem
+
+Solves the Longest Palidnromic Substring problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string
+
+class LongestPalidnromicSubstring {
+    /**
+    * Solves the Longest Palidnromic Substring problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Palidnromic Substring problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Palidnromic Substring problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Palidnromic Substring problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    fun longestPalindrome(s: String): String {
+        if (s.isEmpty()) return ""
+
+        var start = 0
+        var maxLength = 1
+
+        // Helper function to expand around the center
+        /**
+        * Solves the Longest Palidnromic Substring problem.
+        * Takes `left` (integer), `right` (integer).
+        *
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Palidnromic Substring problem.
+        * Takes `left` (integer), `right` (integer).
+        *
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Palidnromic Substring problem.
+        * Takes `left` (integer), `right` (integer).
+        *
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Palidnromic Substring problem.
+        * Takes `left` (integer), `right` (integer).
+        *
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return The computed integer result.
+        */
+        fun expandAroundCenter(left: Int, right: Int): Int {
+            var l = left
+            var r = right
+            while (l >= 0 && r < s.length && s[l] == s[r]) {
+                l--
+                r++
+            }
+            // Return the length of the palindrome
+            return r - l - 1
+        }
+
+        for (i in 0 until s.length) {
+            // Check for odd length palindrome (center is s[i])
+            val len1 = expandAroundCenter(i, i)
+            // Check for even length palindrome (center is between s[i] and s[i + 1])
             val len2 = expandAroundCenter(i, i + 1)
 
             val len = maxOf(len1, len2)
@@ -1678,12 +3265,24 @@ class LongestCommonSubstring {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1710,9 +3309,54 @@ class LongestPalindromicSubsequence {
     * @param s The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Longest Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun longestPalindromeSubseq(s: String): Int {
         val dp = Array(s.length) { IntArray(s.length) }
 
+        /**
+        * Solves the Longest Palindromic Subsequence problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Palindromic Subsequence problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Palindromic Subsequence problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Longest Palindromic Subsequence problem.
         * Takes `start` (integer), `length` (integer).
@@ -1736,12 +3380,24 @@ class LongestPalindromicSubsequence {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -1761,6 +3417,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string.dynamic_programming
 
 class LongestPalindromicSubsequence_BottomUp {
+    /**
+    * Solves the Longest Palindromic Subsequence_Bottom Up problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Palindromic Subsequence_Bottom Up problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Palindromic Subsequence_Bottom Up problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Longest Palindromic Subsequence_Bottom Up problem.
     * Takes `s` (string).
@@ -1791,12 +3468,24 @@ class LongestPalindromicSubsequence_BottomUp {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -1816,6 +3505,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package sliding_window
 
 class LongestRepeatingCharacterReplacement {
+    /**
+    * Solves the Longest Repeating Character Replacement problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Repeating Character Replacement problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Repeating Character Replacement problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Longest Repeating Character Replacement problem.
     * Takes `s` (string), `k` (integer).
@@ -1848,10 +3561,9 @@ class LongestRepeatingCharacterReplacement {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -1862,14 +3574,51 @@ class LongestRepeatingCharacterReplacement {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-tStringChain {
+
+## Longest String Chain
+
+### Problem
+
+Solves the Longest String Chain problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string.dynamic_programming
+
+class LongestStringChain {
+    /**
+    * Solves the Longest String Chain problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest String Chain problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest String Chain problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Longest String Chain problem.
     * Takes `words` (Array<String>).
@@ -1898,12 +3647,24 @@ tStringChain {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -1930,10 +3691,58 @@ class MaximumLengthofaConcatenatedStringwithUniqueCharacters {
     * @param arr The input list of strings.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
+    * Takes `arr` (list of strings).
+    *
+    * @param arr The input list of strings.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
+    * Takes `arr` (list of strings).
+    *
+    * @param arr The input list of strings.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
+    * Takes `arr` (list of strings).
+    *
+    * @param arr The input list of strings.
+    * @return The computed integer result.
+    */
     fun maxLength(arr: List<String>): Int {
         var maxLen = 0
         val uniqueStrings = arr.filter { it.toCharArray().toSet().size == it.length }
 
+        /**
+        * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
+        * Takes `index` (integer), `currentMask` (integer), `currentLength` (integer).
+        *
+        * @param index The integer parameter representing index.
+        * @param currentMask The integer parameter representing currentMask.
+        * @param currentLength The integer parameter representing currentLength.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
+        * Takes `index` (integer), `currentMask` (integer), `currentLength` (integer).
+        *
+        * @param index The integer parameter representing index.
+        * @param currentMask The integer parameter representing currentMask.
+        * @param currentLength The integer parameter representing currentLength.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
+        * Takes `index` (integer), `currentMask` (integer), `currentLength` (integer).
+        *
+        * @param index The integer parameter representing index.
+        * @param currentMask The integer parameter representing currentMask.
+        * @param currentLength The integer parameter representing currentLength.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Maximum Lengthofa Concatenated Stringwith Unique Characters problem.
         * Takes `index` (integer), `currentMask` (integer), `currentLength` (integer).
@@ -1976,12 +3785,24 @@ class MaximumLengthofaConcatenatedStringwithUniqueCharacters {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -2008,6 +3829,27 @@ class MaximumValueOfAStringIsAnArray {
     * @param strs The input Array<String>.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Maximum Value Of AString Is An Array problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Value Of AString Is An Array problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Value Of AString Is An Array problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The computed integer result.
+    */
     fun maximumValue(strs: Array<String>): Int {
         return strs.maxOf {
             val numericValue = it.toIntOrNull()
@@ -2017,10 +3859,9 @@ class MaximumValueOfAStringIsAnArray {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -2031,14 +3872,66 @@ class MaximumValueOfAStringIsAnArray {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
- in 0 until maxOf(word1.length, word2.length)) {
+
+## Merge String Alternatively
+
+### Problem
+
+Solves the Merge String Alternatively problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string
+
+class MergeStringAlternatively {
+    /**
+    * Solves the Merge String Alternatively problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Merge String Alternatively problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Merge String Alternatively problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Merge String Alternatively problem.
+    * Takes `word1` (string), `word2` (string).
+    *
+    * @param word1 The input string.
+    * @param word2 The input string.
+    * @return The resulting string.
+    */
+    fun mergeAlternately(word1: String, word2: String): String {
+        val mergedString = StringBuilder()
+
+        for (i in 0 until maxOf(word1.length, word2.length)) {
             if (i < word1.length)
                 mergedString.append(word1[i])
             if (i < word2.length)
@@ -2050,12 +3943,24 @@ class MaximumValueOfAStringIsAnArray {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -2075,6 +3980,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string
 
 class MinimumDeletionToMakeCharacterFrequenciesUnique {
+    /**
+    * Solves the Minimum Deletion To Make Character Frequencies Unique problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Deletion To Make Character Frequencies Unique problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Deletion To Make Character Frequencies Unique problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Minimum Deletion To Make Character Frequencies Unique problem.
     * Takes `s` (string).
@@ -2102,12 +4028,24 @@ class MinimumDeletionToMakeCharacterFrequenciesUnique {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2127,6 +4065,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string.sliding_window
 
 class MinimumWindowSubstring {
+    /**
+    * Solves the Minimum Window Substring problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Minimum Window Substring problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Minimum Window Substring problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return The resulting string.
+    */
     /**
     * Solves the Minimum Window Substring problem.
     * Takes `s` (string), `t` (string).
@@ -2193,12 +4155,24 @@ class MinimumWindowSubstring {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -2225,6 +4199,27 @@ class RemoveAllAdjacentDuplicatesInString {
     * @param s The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Remove All Adjacent Duplicates In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Remove All Adjacent Duplicates In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Remove All Adjacent Duplicates In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun removeDuplicates(s: String): String {
         val stack = ArrayDeque<Char>()
 
@@ -2240,6 +4235,10 @@ class RemoveAllAdjacentDuplicatesInString {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
@@ -2249,17 +4248,101 @@ class RemoveAllAdjacentDuplicatesInString {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
-rim()
+
+## Reverse Words In String
+
+### Problem
+
+Solves the Reverse Words In String problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string
+
+class ReverseWordsInString {
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    fun reverseWords(s: String): String {
+        val words = s.split(" ").filter { it.isNotEmpty() }.toMutableList()
+
+        // Two pointers
+        var (start, end) = Pair(0, words.lastIndex)
+
+        while (start < end) {
+            words[end] = words[start].also { words[start] = words[end] }
+            start++
+            end--
+        }
+
+        return words.joinToString(separator = " ").trim()
 
     }
 
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `nums` (MutableList<String>), `i` (integer), `j` (integer).
+    *
+    * @param nums The input MutableList<String>.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `nums` (MutableList<String>), `i` (integer), `j` (integer).
+    *
+    * @param nums The input MutableList<String>.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Reverse Words In String problem.
+    * Takes `nums` (MutableList<String>), `i` (integer), `j` (integer).
+    *
+    * @param nums The input MutableList<String>.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Reverse Words In String problem.
     * Takes `nums` (MutableList<String>), `i` (integer), `j` (integer).
@@ -2275,6 +4358,10 @@ rim()
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
@@ -2284,14 +4371,86 @@ rim()
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
-  // Reverse the result and return as string
+
+## Shortest Common Supersequence
+
+### Problem
+
+Solves the Shortest Common Supersequence problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string.dynamic_programming
+
+class ShortestCommonSupersequence {
+    /**
+    * Solves the Shortest Common Supersequence problem.
+    * Takes `X` (string), `Y` (string).
+    *
+    * @param X The input string.
+    * @param Y The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Shortest Common Supersequence problem.
+    * Takes `X` (string), `Y` (string).
+    *
+    * @param X The input string.
+    * @param Y The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Shortest Common Supersequence problem.
+    * Takes `X` (string), `Y` (string).
+    *
+    * @param X The input string.
+    * @param Y The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Shortest Common Supersequence problem.
+    * Takes `X` (string), `Y` (string).
+    *
+    * @param X The input string.
+    * @param Y The input string.
+    * @return The resulting string.
+    */
+    fun shortestCommonSupersequence(X: String, Y: String): String? {
+        val (m, n) = X.length to Y.length
+        val dp = Array(m + 1) { IntArray(n + 1) }
+
+        for (i in 1..m) for (j in 1..n) {
+            dp[i][j] = if (X[i - 1] == Y[j - 1]) dp[i - 1][j - 1] + 1 else maxOf(dp[i - 1][j], dp[i][j - 1])
+        }
+
+        val scs = StringBuilder()
+        var (i, j) = m to n
+
+        while (i > 0 && j > 0) {
+            when {
+                X[i - 1] == Y[j - 1] -> { scs.append(X[i - 1]); i--; j-- }
+                dp[i - 1][j] > dp[i][j - 1] -> { scs.append(X[i - 1]); i-- }
+                else -> { scs.append(Y[j - 1]); j-- }
+            }
+        }
+
+        // Add remaining characters from X or Y
+        while (i > 0) { scs.append(X[i - 1]); i-- }
+        while (j > 0) { scs.append(Y[j - 1]); j-- }
+
+        // Reverse the result and return as string
         return scs.reverse().toString()
     }
 }
@@ -2306,12 +4465,24 @@ rim()
 // y -> z -> m -> n -> b -> c
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2331,6 +4502,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string.stack
 
 class SimplifyPath {
+    /**
+    * Solves the Simplify Path problem.
+    * Takes `path` (string).
+    *
+    * @param path The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Simplify Path problem.
+    * Takes `path` (string).
+    *
+    * @param path The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Simplify Path problem.
+    * Takes `path` (string).
+    *
+    * @param path The input string.
+    * @return The resulting string.
+    */
     /**
     * Solves the Simplify Path problem.
     * Takes `path` (string).
@@ -2370,12 +4562,24 @@ class SimplifyPath {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2397,6 +4601,27 @@ package string
 // Data Compression Algorithm
 
 class StringCompression {
+    /**
+    * Solves the String Compression problem.
+    * Takes `chars` (CharArray).
+    *
+    * @param chars The input CharArray.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the String Compression problem.
+    * Takes `chars` (CharArray).
+    *
+    * @param chars The input CharArray.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the String Compression problem.
+    * Takes `chars` (CharArray).
+    *
+    * @param chars The input CharArray.
+    * @return The computed integer result.
+    */
     /**
     * Solves the String Compression problem.
     * Takes `chars` (CharArray).
@@ -2433,6 +4658,27 @@ class StringCompression {
     * @param chars The input CharArray.
     * @return The computed integer result.
     */
+    /**
+    * Solves the String Compression problem.
+    * Takes `chars` (CharArray).
+    *
+    * @param chars The input CharArray.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the String Compression problem.
+    * Takes `chars` (CharArray).
+    *
+    * @param chars The input CharArray.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the String Compression problem.
+    * Takes `chars` (CharArray).
+    *
+    * @param chars The input CharArray.
+    * @return The computed integer result.
+    */
     fun string_compression_inline(chars: CharArray): Int {
         var partitionLength = 0
         var i = 0
@@ -2457,10 +4703,9 @@ class StringCompression {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -2468,6 +4713,14 @@ class StringCompression {
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -2487,6 +4740,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string
 
 class StringCompression_II {
+    /**
+    * Solves the String Compression_II problem.
+    * Takes `word` (string).
+    *
+    * @param word The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the String Compression_II problem.
+    * Takes `word` (string).
+    *
+    * @param word The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the String Compression_II problem.
+    * Takes `word` (string).
+    *
+    * @param word The input string.
+    * @return The resulting string.
+    */
     /**
     * Solves the String Compression_II problem.
     * Takes `word` (string).
@@ -2516,6 +4790,10 @@ class StringCompression_II {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
@@ -2525,14 +4803,19 @@ class StringCompression_II {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
-romic Subsequence problem.
+
+## Unique Length3 Palindromic Subsequence
+
+### Problem
+
+Solves the Unique Length3Palindromic Subsequence problem.
 
 ### Why This Approach
 
@@ -2544,6 +4827,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string.hashtable
 
 class UniqueLength3PalindromicSubsequence {
+    /**
+    * Solves the Unique Length3Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Unique Length3Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Unique Length3Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Unique Length3Palindromic Subsequence problem.
     * Takes `s` (string).
@@ -2584,10 +4888,9 @@ class UniqueLength3PalindromicSubsequence {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -2598,14 +4901,67 @@ class UniqueLength3PalindromicSubsequence {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
- prefixFreq[i - 1][d]
+
+## Unique Substring With Equal Digit Frequency
+
+### Problem
+
+Solves the Unique Substring With Equal Digit Frequency problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string.hashtable
+
+class UniqueSubstringWithEqualDigitFrequency {
+    /**
+    * Solves the Unique Substring With Equal Digit Frequency problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Unique Substring With Equal Digit Frequency problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Unique Substring With Equal Digit Frequency problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Unique Substring With Equal Digit Frequency problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    fun equalDigitFrequency(s: String): Int {
+        val n = s.length
+        val uniqueSubstrings = mutableSetOf<String>()
+
+        // Precompute prefix frequency arrays
+        val prefixFreq = Array(n + 1) { IntArray(10) }
+        for (i in 1..n) {
+            for (d in 0..9) {
+                prefixFreq[i][d] = prefixFreq[i - 1][d]
             }
             prefixFreq[i][s[i - 1] - '0']++
         }
@@ -2633,6 +4989,24 @@ class UniqueLength3PalindromicSubsequence {
     * @param freq The input array of integers.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Helper: has equal frequency.
+    *
+    * @param freq The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: has equal frequency.
+    *
+    * @param freq The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: has equal frequency.
+    *
+    * @param freq The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun hasEqualFrequency(freq: IntArray): Boolean {
         var uniqueFreq = -1
         for (count in freq) {
@@ -2649,12 +5023,24 @@ class UniqueLength3PalindromicSubsequence {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -2674,6 +5060,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string
 
 class ValidAnagram {
+    /**
+    * Solves the Valid Anagram problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Anagram problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Anagram problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Valid Anagram problem.
     * Takes `s` (string), `t` (string).
@@ -2704,12 +5114,24 @@ class ValidAnagram {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2729,6 +5151,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string
 
 class ValidNumber {
+    /**
+    * Solves the Valid Number problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Number problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Number problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Valid Number problem.
     * Takes `s` (string).
@@ -2770,6 +5213,10 @@ class ValidNumber {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
@@ -2779,14 +5226,69 @@ class ValidNumber {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-a(s[left]) -> left++
+
+## Valid Palindrome
+
+### Problem
+
+Solves the Valid Palindrome problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string
+
+class ValidPalindrome {
+    /**
+    * Solves the Valid Palindrome problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    fun isPalindrome(s: String): Boolean {
+        var left = 0
+        var right = s.lastIndex
+        val isAlpha = {ch: Char -> Character.isAlphabetic(ch.code) || Character.isDigit(ch.code)}
+
+        while (left < right) {
+            when {
+                isAlpha(s[left]) && isAlpha(s[right])
+                        && s[left].lowercaseChar() != s[right].lowercaseChar() -> return false
+                isAlpha(s[left]) && !isAlpha(s[right]) ->  right --
+                isAlpha(s[right]) && !isAlpha(s[left]) -> left++
                 else -> {
                     left++
                     right--
@@ -2800,12 +5302,24 @@ a(s[left]) -> left++
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -2825,6 +5339,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string
 
 class ValidPalindrome_II {
+    /**
+    * Solves the Valid Palindrome_II problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_II problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_II problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Valid Palindrome_II problem.
     * Takes `s` (string).
@@ -2857,6 +5392,33 @@ class ValidPalindrome_II {
     * @param j The integer parameter representing j.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Valid Palindrome_II problem.
+    * Takes `s` (string), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_II problem.
+    * Takes `s` (string), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_II problem.
+    * Takes `s` (string), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isPalindrome(s: String, i: Int, j: Int): Boolean {
         var left = i
         var right = j
@@ -2872,12 +5434,24 @@ class ValidPalindrome_II {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -2905,9 +5479,57 @@ class ValidPalindrome_III {
     * @param k The integer parameter representing k.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Valid Palindrome_III problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_III problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_III problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isValidPalindrome(s: String, k: Int): Boolean {
         val dp = Array(s.length) { IntArray(s.length) { 0 } }
 
+        /**
+        * Solves the Valid Palindrome_III problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Valid Palindrome_III problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Valid Palindrome_III problem.
+        * Takes `start` (integer), `length` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param length The integer parameter representing length.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Valid Palindrome_III problem.
         * Takes `start` (integer), `length` (integer).
@@ -2937,12 +5559,24 @@ class ValidPalindrome_III {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -2962,6 +5596,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string.dynamic_programming
 
 class ValidPalindrome_III_SpaceOptimized {
+    /**
+    * Solves the Valid Palindrome_III_Space Optimized problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_III_Space Optimized problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_III_Space Optimized problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Valid Palindrome_III_Space Optimized problem.
     * Takes `s` (string), `k` (integer).
@@ -2993,12 +5651,24 @@ class ValidPalindrome_III_SpaceOptimized {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -3025,6 +5695,27 @@ class ValidateIPAddress {
     * @param queryIP The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Validate IPAddress problem.
+    * Takes `queryIP` (string).
+    *
+    * @param queryIP The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Validate IPAddress problem.
+    * Takes `queryIP` (string).
+    *
+    * @param queryIP The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Validate IPAddress problem.
+    * Takes `queryIP` (string).
+    *
+    * @param queryIP The input string.
+    * @return The resulting string.
+    */
     fun validIPAddress(queryIP: String): String {
         return when {
             isValidIPv4(queryIP) -> "IPv4"
@@ -3033,6 +5724,24 @@ class ValidateIPAddress {
         }
     }
 
+    /**
+    * Helper: is valid ipv4.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid ipv4.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid ipv4.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: is valid ipv4.
     *
@@ -3065,6 +5774,24 @@ class ValidateIPAddress {
     * @param ip The input string.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Helper: is valid ipv6.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid ipv6.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid ipv6.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isValidIPv6(ip: String): Boolean {
         if (ip.startsWith(':') || ip.endsWith(':')) return false
 
@@ -3082,12 +5809,24 @@ class ValidateIPAddress {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -3107,6 +5846,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string
 
 class ValidWordAbbreviation {
+    /**
+    * Solves the Valid Word Abbreviation problem.
+    * Takes `word` (string), `abbr` (string).
+    *
+    * @param word The input string.
+    * @param abbr The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Word Abbreviation problem.
+    * Takes `word` (string), `abbr` (string).
+    *
+    * @param word The input string.
+    * @param abbr The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Word Abbreviation problem.
+    * Takes `word` (string), `abbr` (string).
+    *
+    * @param word The input string.
+    * @param abbr The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Valid Word Abbreviation problem.
     * Takes `word` (string), `abbr` (string).
@@ -3140,12 +5903,24 @@ class ValidWordAbbreviation {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
 
@@ -3165,6 +5940,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string.sliding_window
 
 class MaximumNumberofVowelsinSubstringofGivenLength {
+    /**
+    * Solves the Maximum Numberof Vowelsin Substringof Given Length problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Numberof Vowelsin Substringof Given Length problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Numberof Vowelsin Substringof Given Length problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Maximum Numberof Vowelsin Substringof Given Length problem.
     * Takes `s` (string), `k` (integer).
@@ -3196,12 +5995,24 @@ class MaximumNumberofVowelsinSubstringofGivenLength {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -3221,6 +6032,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package string.hashtable
 
 class PermutationsInString {
+    /**
+    * Solves the Permutations In String problem.
+    * Takes `s1` (string), `s2` (string).
+    *
+    * @param s1 The input string.
+    * @param s2 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Permutations In String problem.
+    * Takes `s1` (string), `s2` (string).
+    *
+    * @param s1 The input string.
+    * @param s2 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Permutations In String problem.
+    * Takes `s1` (string), `s2` (string).
+    *
+    * @param s1 The input string.
+    * @param s2 The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Permutations In String problem.
     * Takes `s1` (string), `s2` (string).
@@ -3249,10 +6084,9 @@ class PermutationsInString {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -3263,14 +6097,110 @@ class PermutationsInString {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
- The integer parameter representing i.
+
+## Reverse Vowel Of String
+
+### Problem
+
+Solves the Reverse Vowel Of String problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package string
+
+class ReverseVowelOfString {
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    fun reverseVowels(s: String): String {
+        val vowels = setOf('a', 'e', 'i', 'o', 'u')
+        val result = StringBuilder(s)
+
+        var (start, end) = Pair(0, s.lastIndex)
+
+        while (start < end) {
+            if (s[start] in vowels && s[end] in vowels) {
+                swap (result, start++, end--)
+            } else if (s[start].lowercaseChar() !in vowels)  {
+                start++
+            } else {
+                end--
+            }
+        }
+
+        return result.toString()
+    }
+
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (StringBuilder), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (StringBuilder), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (StringBuilder), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Reverse Vowel Of String problem.
+    * Takes `s` (StringBuilder), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
     * @param j The integer parameter representing j.
     * @return Unit (no return value, modifies state in-place).
     */
@@ -3280,11 +6210,23 @@ class PermutationsInString {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---

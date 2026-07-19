@@ -11,6 +11,30 @@ class KClosestPointsToOrigin {
     * @param K The integer parameter representing K.
     * @return The computed integer result.
     */
+    /**
+    * Solves the KClosest Points To Origin problem.
+    * Takes `points` (2D matrix of integers), `K` (integer).
+    *
+    * @param points The input 2D matrix of integers.
+    * @param K The integer parameter representing K.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KClosest Points To Origin problem.
+    * Takes `points` (2D matrix of integers), `K` (integer).
+    *
+    * @param points The input 2D matrix of integers.
+    * @param K The integer parameter representing K.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KClosest Points To Origin problem.
+    * Takes `points` (2D matrix of integers), `K` (integer).
+    *
+    * @param points The input 2D matrix of integers.
+    * @param K The integer parameter representing K.
+    * @return The computed integer result.
+    */
     fun kClosest(points: Array<IntArray>, K: Int): Array<IntArray> {
         var (start, end) = Pair( 0, points.size - 1)
 
@@ -29,6 +53,30 @@ class KClosestPointsToOrigin {
     }
 
     // Randomized Quicksort function
+    /**
+    * Helper: quick sort.
+    *
+    * @param points The input 2D matrix of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: quick sort.
+    *
+    * @param points The input 2D matrix of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: quick sort.
+    *
+    * @param points The input 2D matrix of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
     /**
     * Helper: quick sort.
     *
@@ -64,11 +112,53 @@ class KClosestPointsToOrigin {
     * @param j The integer parameter representing j.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: swap.
+    *
+    * @param points The input 2D matrix of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: swap.
+    *
+    * @param points The input 2D matrix of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: swap.
+    *
+    * @param points The input 2D matrix of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun swap(points: Array<IntArray>, i: Int, j: Int) {
         points[j] = points[i].also { points[i] = points[j] }
     }
 
     // Helper function to calculate the squared Euclidean distance
+    /**
+    * Helper: calculate distance.
+    *
+    * @param point The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: calculate distance.
+    *
+    * @param point The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: calculate distance.
+    *
+    * @param point The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Helper: calculate distance.
     *

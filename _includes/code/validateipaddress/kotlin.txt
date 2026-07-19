@@ -8,6 +8,27 @@ class ValidateIPAddress {
     * @param queryIP The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Validate IPAddress problem.
+    * Takes `queryIP` (string).
+    *
+    * @param queryIP The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Validate IPAddress problem.
+    * Takes `queryIP` (string).
+    *
+    * @param queryIP The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Validate IPAddress problem.
+    * Takes `queryIP` (string).
+    *
+    * @param queryIP The input string.
+    * @return The resulting string.
+    */
     fun validIPAddress(queryIP: String): String {
         return when {
             isValidIPv4(queryIP) -> "IPv4"
@@ -16,6 +37,24 @@ class ValidateIPAddress {
         }
     }
 
+    /**
+    * Helper: is valid ipv4.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid ipv4.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid ipv4.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: is valid ipv4.
     *
@@ -42,6 +81,24 @@ class ValidateIPAddress {
         }
     }
 
+    /**
+    * Helper: is valid ipv6.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid ipv6.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid ipv6.
+    *
+    * @param ip The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: is valid ipv6.
     *

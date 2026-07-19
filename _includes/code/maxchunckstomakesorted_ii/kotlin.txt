@@ -9,6 +9,27 @@ class MaxChuncksToMakeSorted_II {
         * @param arr The input array of integers.
         * @return The computed integer result.
         */
+        /**
+        * Solves the Max Chuncks To Make Sorted_II problem.
+        * Takes `arr` (array of integers).
+        *
+        * @param arr The input array of integers.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Max Chuncks To Make Sorted_II problem.
+        * Takes `arr` (array of integers).
+        *
+        * @param arr The input array of integers.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Max Chuncks To Make Sorted_II problem.
+        * Takes `arr` (array of integers).
+        *
+        * @param arr The input array of integers.
+        * @return The computed integer result.
+        */
         fun maxChunksToSorted(arr: IntArray): Int {
             val n = arr.size
 

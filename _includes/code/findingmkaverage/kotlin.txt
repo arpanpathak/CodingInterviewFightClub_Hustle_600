@@ -15,6 +15,27 @@ class MKAverage(private val m: Int, private val k: Int) {
     * @param num The integer parameter representing num.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the MKAverage problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the MKAverage problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the MKAverage problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun addElement(num: Int) {
         // Add to deque
         deque.add(num)
@@ -52,6 +73,21 @@ class MKAverage(private val m: Int, private val k: Int) {
     *
     * @return The computed integer result.
     */
+    /**
+    * Solves the MKAverage problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the MKAverage problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the MKAverage problem.
+    *
+    * @return The computed integer result.
+    */
     fun calculateMKAverage(): Int {
         return if (deque.size < m) {
             -1
@@ -62,6 +98,21 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Balance heaps to ensure there are k elements in each of the heaps
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: balance heaps.
     *
@@ -83,6 +134,21 @@ class MKAverage(private val m: Int, private val k: Int) {
     *
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: recalculate middle sum.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: recalculate middle sum.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: recalculate middle sum.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun recalculateMiddleSum() {
         sum = 0L
         val remainingElements = mutableListOf<Int>()
@@ -96,6 +162,21 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 }
 
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 /**
 * Entry point for the program.
 *

@@ -71,6 +71,30 @@ class AddTwoNumbers {
     * @param l2 The input linked list node reference.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         var carry = 0
         val head = ListNode(0)
@@ -98,10 +122,9 @@ class AddTwoNumbers {
 }
 ```
 
-
 ### Pattern Insight
 
-Study the code and identify the algorithmic pattern.
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
 
 ### Complexity
 
@@ -112,8 +135,14 @@ Study the code and identify the algorithmic pattern.
 
 ### Variations
 
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
+
 ## Copy Linked List With Random Pointer
 
 ### Problem
@@ -154,6 +183,27 @@ class CopyLinkedListWithRandomPointer {
         * @param node The Node? (nullable).
         * @return The result, or `null` if not found.
         */
+        /**
+        * Solves the Copy Linked List With Random Pointer problem.
+        * Takes `node` (Node?).
+        *
+        * @param node The Node? (nullable).
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Copy Linked List With Random Pointer problem.
+        * Takes `node` (Node?).
+        *
+        * @param node The Node? (nullable).
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Copy Linked List With Random Pointer problem.
+        * Takes `node` (Node?).
+        *
+        * @param node The Node? (nullable).
+        * @return The result, or `null` if not found.
+        */
         fun copyRandomList(node: Node?): Node? {
             if (node == null) return null
 
@@ -181,10 +231,9 @@ class CopyLinkedListWithRandomPointer {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
 
 ### Complexity
 
@@ -195,36 +244,251 @@ class CopyLinkedListWithRandomPointer {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
-y
 
-| Metric | Value |
-|--------|-------|
-| **Time** | O(V + E) |
-| **Space** | O(V) |
+## Delete Middle Node Of Linked List
 
-### Variations
+### Problem
 
+Solves the Delete Middle Node Of Linked List problem.
 
----
-ent?.next = newNode
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package linkedlist
+
+class DeleteMiddleNodeOfLinkedList {
+    
+    // Two Pass Approach
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    fun deleteMiddle(head: ListNode?): ListNode? {
+        var currentNode = head
+        var prevNode: ListNode? = null
+        var index = 0
+        var n =0
+        while (currentNode != null) {
+            n++
+            currentNode = currentNode.next
+
+        }
+
+        currentNode = head
+        while (currentNode != null) {
+            if (index++ == n/2)
+                break
+            prevNode = currentNode
+            currentNode = currentNode.next
+        }
+
+        if (prevNode != null)
+            prevNode.next = currentNode
+
+        return head
+    }
+
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    fun deleteMiddleTwoPointer(head: ListNode?): ListNode? {
+        var (slow, fast, prev) = listOf(head, head, null)
+
+        if (head?.next == null)
+            return null
+
+        while (fast?.next != null ) {
+            prev = slow
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+
+        prev?.next = slow?.next
+
         return head
     }
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
+
+---
+
+## Node
+
+### Problem
+
+Solves the Node problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package linkedlist
+
+class Node(var `val`: Int) {
+    var next: Node? = null
+}
+
+class InsertIntoASortedCircularLinkedList {
+    /**
+    * Solves the Node problem.
+    * Takes `head` (Node?), `insertVal` (integer).
+    *
+    * @param head The Node? (nullable).
+    * @param insertVal The integer parameter representing insertVal.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `head` (Node?), `insertVal` (integer).
+    *
+    * @param head The Node? (nullable).
+    * @param insertVal The integer parameter representing insertVal.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `head` (Node?), `insertVal` (integer).
+    *
+    * @param head The Node? (nullable).
+    * @param insertVal The integer parameter representing insertVal.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `head` (Node?), `insertVal` (integer).
+    *
+    * @param head The Node? (nullable).
+    * @param insertVal The integer parameter representing insertVal.
+    * @return The result, or `null` if not found.
+    */
+    fun insert(head: Node?, insertVal: Int): Node? {
+        val newNode = Node(insertVal)
+        if (head == null) return newNode.apply { next = newNode }
+
+        var current: Node? = head
+        do {
+            when {
+                current?.`val`!! <= insertVal && insertVal <= current?.next?.`val`!! -> {
+                    newNode.next = current?.next
+                    current?.next = newNode
+                    return head
+                }
+                current?.`val`!! > current?.next?.`val`!! && (insertVal >= current?.`val`!! || insertVal <= current?.next?.`val`!!) -> {
+                    newNode.next = current?.next
+                    current?.next = newNode
+                    return head
+                }
+            }
+            current = current?.next
+        } while (current != head)
+
+        newNode.next = current?.next
+        current?.next = newNode
+        return head
+    }
+}
+```
+
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(V + E) |
+| **Space** | O(V) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -252,6 +516,30 @@ class IntersectionOfTwoLinkedList {
     * @param headB The input linked list node reference.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the Intersection Of Two Linked List problem.
+    * Takes `headA` (linked list node reference), `headB` (linked list node reference).
+    *
+    * @param headA The input linked list node reference.
+    * @param headB The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Intersection Of Two Linked List problem.
+    * Takes `headA` (linked list node reference), `headB` (linked list node reference).
+    *
+    * @param headA The input linked list node reference.
+    * @param headB The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Intersection Of Two Linked List problem.
+    * Takes `headA` (linked list node reference), `headB` (linked list node reference).
+    *
+    * @param headA The input linked list node reference.
+    * @param headB The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
         if (headA == null || headB == null) return null
 
@@ -269,15 +557,9 @@ class IntersectionOfTwoLinkedList {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
-
-
-### Pattern Insight
-
-**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
 
 ### Complexity
 
@@ -288,13 +570,14 @@ class IntersectionOfTwoLinkedList {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
+
 ## Linked List Cycle
 
 ### Problem
@@ -311,6 +594,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package linkedlist
 
 class LinkedListCycle {
+    /**
+    * Solves the Linked List Cycle problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Linked List Cycle problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Linked List Cycle problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Linked List Cycle problem.
     * Takes `head` (linked list node reference).
@@ -343,6 +647,27 @@ class LinkedListCycle {
     * @param head The input linked list node reference.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Linked List Cycle problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Linked List Cycle problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Linked List Cycle problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun hasCycle2(head: ListNode?): Boolean {
         var slow = head
         var fast = head
@@ -361,10 +686,9 @@ class LinkedListCycle {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
 
 ### Complexity
 
@@ -372,6 +696,14 @@ class LinkedListCycle {
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -391,6 +723,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package linkedlist
 
 class LinkedListCycle_II {
+    /**
+    * Solves the Linked List Cycle_II problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Linked List Cycle_II problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Linked List Cycle_II problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     /**
     * Solves the Linked List Cycle_II problem.
     * Takes `head` (linked list node reference).
@@ -423,6 +776,10 @@ class LinkedListCycle_II {
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
@@ -432,14 +789,23 @@ class LinkedListCycle_II {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
+## Merge K Sorted List
+
+### Problem
+
+Solves the Merge KSorted List problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -447,6 +813,30 @@ class LinkedListCycle_II {
 package linkedlist
 
 class MergeKSortedList {
+    /**
+    * Solves the Merge KSorted List problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Merge KSorted List problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Merge KSorted List problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     /**
     * Solves the Merge KSorted List problem.
     * Takes `list1` (linked list node reference), `list2` (linked list node reference).
@@ -485,9 +875,54 @@ class MergeKSortedList {
     * @param lists The input Array<ListNode?>.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the Merge KSorted List problem.
+    * Takes `lists` (Array<ListNode?>).
+    *
+    * @param lists The input Array<ListNode?>.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Merge KSorted List problem.
+    * Takes `lists` (Array<ListNode?>).
+    *
+    * @param lists The input Array<ListNode?>.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Merge KSorted List problem.
+    * Takes `lists` (Array<ListNode?>).
+    *
+    * @param lists The input Array<ListNode?>.
+    * @return The resulting collection (linked list node reference).
+    */
     fun mergeKLists(lists: Array<ListNode?>): ListNode? {
         if (lists.isEmpty())
             return null
+        /**
+        * Solves the Merge KSorted List problem.
+        * Takes `start` (integer), `end` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param end The integer parameter representing end.
+        * @return The resulting collection (linked list node reference).
+        */
+        /**
+        * Solves the Merge KSorted List problem.
+        * Takes `start` (integer), `end` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param end The integer parameter representing end.
+        * @return The resulting collection (linked list node reference).
+        */
+        /**
+        * Solves the Merge KSorted List problem.
+        * Takes `start` (integer), `end` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param end The integer parameter representing end.
+        * @return The resulting collection (linked list node reference).
+        */
         /**
         * Solves the Merge KSorted List problem.
         * Takes `start` (integer), `end` (integer).
@@ -510,12 +945,24 @@ class MergeKSortedList {
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -542,6 +989,27 @@ class MergeKSortedListIterative {
     * @param lists The input Array<ListNode?>.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the Merge KSorted List Iterative problem.
+    * Takes `lists` (Array<ListNode?>).
+    *
+    * @param lists The input Array<ListNode?>.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Merge KSorted List Iterative problem.
+    * Takes `lists` (Array<ListNode?>).
+    *
+    * @param lists The input Array<ListNode?>.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Merge KSorted List Iterative problem.
+    * Takes `lists` (Array<ListNode?>).
+    *
+    * @param lists The input Array<ListNode?>.
+    * @return The resulting collection (linked list node reference).
+    */
     fun mergeKLists(lists: Array<ListNode?>): ListNode? {
         if (lists.isEmpty()) return null
 
@@ -558,6 +1026,30 @@ class MergeKSortedListIterative {
         return lists[0]
     }
 
+    /**
+    * Solves the Merge KSorted List Iterative problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Merge KSorted List Iterative problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Merge KSorted List Iterative problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     /**
     * Solves the Merge KSorted List Iterative problem.
     * Takes `list1` (linked list node reference), `list2` (linked list node reference).
@@ -591,12 +1083,24 @@ class MergeKSortedListIterative {
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -616,6 +1120,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package linkedlist
 
 class MergeTwoSortedLIst {
+    /**
+    * Solves the Merge Two Sorted LIst problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Merge Two Sorted LIst problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Merge Two Sorted LIst problem.
+    * Takes `list1` (linked list node reference), `list2` (linked list node reference).
+    *
+    * @param list1 The input linked list node reference.
+    * @param list2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     /**
     * Solves the Merge Two Sorted LIst problem.
     * Takes `list1` (linked list node reference), `list2` (linked list node reference).
@@ -649,15 +1177,9 @@ class MergeTwoSortedLIst {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Linked list manipulation. Use pointer rearrangement to achieve O(1) space solutions.
-
-
-### Pattern Insight
-
-**Pattern:** Linked list manipulation. Use pointer rearrangement to achieve O(1) space solutions.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -665,6 +1187,14 @@ class MergeTwoSortedLIst {
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -684,6 +1214,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package linkedlist
 
 class OddEvenLinkedList {
+    /**
+    * Solves the Odd Even Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Odd Even Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Odd Even Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     /**
     * Solves the Odd Even Linked List problem.
     * Takes `head` (linked list node reference).
@@ -712,6 +1263,10 @@ class OddEvenLinkedList {
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
@@ -721,14 +1276,23 @@ class OddEvenLinkedList {
 
 ### Variations
 
-1. What if the list is circular? How does detection change?
-1. What if you can't use extra memory (O(1) space constraint)?
-1. What if the list is doubly linked? Any simplifications?
-1. What if you need to do this recursively vs iteratively?
-1. What if multiple operations need to be supported (LRU cache pattern)?
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
-l algorithmic pattern._
+
+## Palindrome Linked List
+
+### Problem
+
+Solves the Palindrome Linked List problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
 
 ### Code
 
@@ -737,6 +1301,27 @@ package linkedlist
 
 class PalindromeLinkedList {
     class Solution {
+        /**
+        * Solves the Palindrome Linked List problem.
+        * Takes `head` (linked list node reference).
+        *
+        * @param head The input linked list node reference.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Palindrome Linked List problem.
+        * Takes `head` (linked list node reference).
+        *
+        * @param head The input linked list node reference.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Palindrome Linked List problem.
+        * Takes `head` (linked list node reference).
+        *
+        * @param head The input linked list node reference.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Palindrome Linked List problem.
         * Takes `head` (linked list node reference).
@@ -780,6 +1365,24 @@ class PalindromeLinkedList {
         * @param head The input linked list node reference.
         * @return The resulting collection (linked list node reference).
         */
+        /**
+        * Helper: reverse list.
+        *
+        * @param head The input linked list node reference.
+        * @return The resulting collection (linked list node reference).
+        */
+        /**
+        * Helper: reverse list.
+        *
+        * @param head The input linked list node reference.
+        * @return The resulting collection (linked list node reference).
+        */
+        /**
+        * Helper: reverse list.
+        *
+        * @param head The input linked list node reference.
+        * @return The resulting collection (linked list node reference).
+        */
         private fun reverseList(head: ListNode?): ListNode? {
             var prev: ListNode? = null
             var curr = head
@@ -795,12 +1398,24 @@ class PalindromeLinkedList {
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -828,6 +1443,30 @@ class RemoveNthNodeFromEndOfList {
     * @param n The integer parameter representing n.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the Remove Nth Node From End Of List problem.
+    * Takes `head` (linked list node reference), `n` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Remove Nth Node From End Of List problem.
+    * Takes `head` (linked list node reference), `n` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Remove Nth Node From End Of List problem.
+    * Takes `head` (linked list node reference), `n` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (linked list node reference).
+    */
     fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
         var size = 0
         var ptr = head
@@ -841,6 +1480,30 @@ class RemoveNthNodeFromEndOfList {
         return removeNthFromFront(head, indexToRemove, size)
     }
 
+    /**
+    * Helper: remove nth from front.
+    *
+    * @param head The input linked list node reference.
+    * @param indexToRemove The integer parameter representing indexToRemove.
+    * @param size The integer parameter representing size.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Helper: remove nth from front.
+    *
+    * @param head The input linked list node reference.
+    * @param indexToRemove The integer parameter representing indexToRemove.
+    * @param size The integer parameter representing size.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Helper: remove nth from front.
+    *
+    * @param head The input linked list node reference.
+    * @param indexToRemove The integer parameter representing indexToRemove.
+    * @param size The integer parameter representing size.
+    * @return The resulting collection (linked list node reference).
+    */
     /**
     * Helper: remove nth from front.
     *
@@ -893,12 +1556,24 @@ class RemoveNthNodeFromEndOfList {
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -925,6 +1600,27 @@ class ReverseLinkedList {
     * @param head The input linked list node reference.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the Reverse Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Reverse Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Reverse Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun reverseList(head: ListNode?): ListNode? {
         if (head?.next == null) {
             return head
@@ -940,12 +1636,24 @@ class ReverseLinkedList {
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -972,6 +1680,27 @@ class ReverseLinkedListIterative {
     * @param head The input linked list node reference.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the Reverse Linked List Iterative problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Reverse Linked List Iterative problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Reverse Linked List Iterative problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun reverseList(head: ListNode?): ListNode? {
         var prev: ListNode? = null
         var current = head
@@ -986,6 +1715,10 @@ class ReverseLinkedListIterative {
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
@@ -995,14 +1728,71 @@ class ReverseLinkedListIterative {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
- {
+
+## Reverse Nodes In K Groups
+
+### Problem
+
+Solves the Reverse Nodes In KGroups problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package linkedlist
+
+class ReverseNodesInKGroups {
+    /**
+    * Solves the Reverse Nodes In KGroups problem.
+    * Takes `head` (linked list node reference), `k` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param k The integer parameter representing k.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Reverse Nodes In KGroups problem.
+    * Takes `head` (linked list node reference), `k` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param k The integer parameter representing k.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Reverse Nodes In KGroups problem.
+    * Takes `head` (linked list node reference), `k` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param k The integer parameter representing k.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Reverse Nodes In KGroups problem.
+    * Takes `head` (linked list node reference), `k` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param k The integer parameter representing k.
+    * @return The resulting collection (linked list node reference).
+    */
+    fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
+        if (head == null || k == 1) return head
+
+        val dummy = ListNode(0)
+        dummy.next = head
+        var start: ListNode? = dummy
+        var end: ListNode? = dummy
+
+        while (end?.next != null) {
             // Move `end` k steps forward
             for (i in 0 until k) {
                 end = end?.next
@@ -1035,6 +1825,27 @@ class ReverseLinkedListIterative {
     * @param end The input linked list node reference.
     * @return The resulting collection (Pair<ListNode?, ListNode?>).
     */
+    /**
+    * Helper: reverse.
+    *
+    * @param start The input linked list node reference.
+    * @param end The input linked list node reference.
+    * @return The resulting collection (Pair<ListNode?, ListNode?>).
+    */
+    /**
+    * Helper: reverse.
+    *
+    * @param start The input linked list node reference.
+    * @param end The input linked list node reference.
+    * @return The resulting collection (Pair<ListNode?, ListNode?>).
+    */
+    /**
+    * Helper: reverse.
+    *
+    * @param start The input linked list node reference.
+    * @param end The input linked list node reference.
+    * @return The resulting collection (Pair<ListNode?, ListNode?>).
+    */
     private fun reverse(start: ListNode?, end: ListNode?): Pair<ListNode?, ListNode?> {
         var prev: ListNode? = null
         var current = start
@@ -1052,11 +1863,23 @@ class ReverseLinkedListIterative {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---

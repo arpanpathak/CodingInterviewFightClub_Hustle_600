@@ -66,9 +66,57 @@ class Combinations {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Combinations problem.
+    * Takes `n` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Combinations problem.
+    * Takes `n` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Combinations problem.
+    * Takes `n` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun combine(n: Int, k: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+        /**
+        * Solves the Combinations problem.
+        * Takes `n` (integer), `k` (integer).
+        *
+        * @param n The integer parameter representing n.
+        * @param k The integer parameter representing k.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Combinations problem.
+        * Takes `n` (integer), `k` (integer).
+        *
+        * @param n The integer parameter representing n.
+        * @param k The integer parameter representing k.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Combinations problem.
+        * Takes `n` (integer), `k` (integer).
+        *
+        * @param n The integer parameter representing n.
+        * @param k The integer parameter representing k.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Combinations problem.
         * Takes `n` (integer), `k` (integer).
@@ -98,10 +146,9 @@ class Combinations {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -112,13 +159,14 @@ class Combinations {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Combination Sum
 
 ### Problem
@@ -143,9 +191,60 @@ class CombinationSum {
     * @param target The integer parameter representing target.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Combination Sum problem.
+    * Takes `candidates` (array of integers), `target` (integer).
+    *
+    * @param candidates The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Combination Sum problem.
+    * Takes `candidates` (array of integers), `target` (integer).
+    *
+    * @param candidates The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Combination Sum problem.
+    * Takes `candidates` (array of integers), `target` (integer).
+    *
+    * @param candidates The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+        /**
+        * Solves the Combination Sum problem.
+        * Takes `current` (mutable list of integers), `start` (integer), `remaining` (integer).
+        *
+        * @param current The input mutable list of integers.
+        * @param start The integer parameter representing start.
+        * @param remaining The integer parameter representing remaining.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Combination Sum problem.
+        * Takes `current` (mutable list of integers), `start` (integer), `remaining` (integer).
+        *
+        * @param current The input mutable list of integers.
+        * @param start The integer parameter representing start.
+        * @param remaining The integer parameter representing remaining.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Combination Sum problem.
+        * Takes `current` (mutable list of integers), `start` (integer), `remaining` (integer).
+        *
+        * @param current The input mutable list of integers.
+        * @param start The integer parameter representing start.
+        * @param remaining The integer parameter representing remaining.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Combination Sum problem.
         * Takes `current` (mutable list of integers), `start` (integer), `remaining` (integer).
@@ -173,10 +272,9 @@ class CombinationSum {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Backtracking / DFS. Explore all possibilities, pruning when constraints are violated.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -187,13 +285,14 @@ class CombinationSum {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Combination Sum_II
 
 ### Problem
@@ -218,10 +317,61 @@ class CombinationSum_II {
     * @param target The integer parameter representing target.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Combination Sum_II problem.
+    * Takes `candidates` (array of integers), `target` (integer).
+    *
+    * @param candidates The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Combination Sum_II problem.
+    * Takes `candidates` (array of integers), `target` (integer).
+    *
+    * @param candidates The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Combination Sum_II problem.
+    * Takes `candidates` (array of integers), `target` (integer).
+    *
+    * @param candidates The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun combinationSum2(candidates: IntArray, target: Int): List<List<Int>> {
         val results = mutableListOf<List<Int>>()
         candidates.sort()
 
+        /**
+        * Solves the Combination Sum_II problem.
+        * Takes `index` (integer), `target` (integer), `curr` (mutable list of integers).
+        *
+        * @param index The integer parameter representing index.
+        * @param target The integer parameter representing target.
+        * @param curr The input mutable list of integers.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Combination Sum_II problem.
+        * Takes `index` (integer), `target` (integer), `curr` (mutable list of integers).
+        *
+        * @param index The integer parameter representing index.
+        * @param target The integer parameter representing target.
+        * @param curr The input mutable list of integers.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Combination Sum_II problem.
+        * Takes `index` (integer), `target` (integer), `curr` (mutable list of integers).
+        *
+        * @param index The integer parameter representing index.
+        * @param target The integer parameter representing target.
+        * @param curr The input mutable list of integers.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Combination Sum_II problem.
         * Takes `index` (integer), `target` (integer), `curr` (mutable list of integers).
@@ -253,10 +403,9 @@ class CombinationSum_II {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Backtracking / DFS. Explore all possibilities, pruning when constraints are violated.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -267,14 +416,121 @@ class CombinationSum_II {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
- && remaining == 0) {
+
+## Combination Sum3
+
+### Problem
+
+Solves the Combination Sum3 problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array.backtracking
+
+class CombinationSum3 {
+    /**
+    * Solves the Combination Sum3 problem.
+    * Takes `k` (integer), `n` (integer).
+    *
+    * @param k The integer parameter representing k.
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Combination Sum3 problem.
+    * Takes `k` (integer), `n` (integer).
+    *
+    * @param k The integer parameter representing k.
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Combination Sum3 problem.
+    * Takes `k` (integer), `n` (integer).
+    *
+    * @param k The integer parameter representing k.
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Combination Sum3 problem.
+    * Takes `k` (integer), `n` (integer).
+    *
+    * @param k The integer parameter representing k.
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    fun combinationSum3(k: Int, n: Int): List<List<Int>> {
+        val result = mutableListOf<List<Int>>()
+        dfs(k,n, 1, result)
+        return result
+    }
+
+    /**
+    * Solves the Combination Sum3 problem.
+    * Takes `k` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf().
+    *
+    * @param k The integer parameter representing k.
+    * @param remaining The integer parameter representing remaining.
+    * @param start The integer parameter representing start.
+    * @param result The input MutableList<List<Int>>.
+    * @param curr The input MutableList<Int> = mutableListOf(.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Combination Sum3 problem.
+    * Takes `k` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf().
+    *
+    * @param k The integer parameter representing k.
+    * @param remaining The integer parameter representing remaining.
+    * @param start The integer parameter representing start.
+    * @param result The input MutableList<List<Int>>.
+    * @param curr The input MutableList<Int> = mutableListOf(.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Combination Sum3 problem.
+    * Takes `k` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf().
+    *
+    * @param k The integer parameter representing k.
+    * @param remaining The integer parameter representing remaining.
+    * @param start The integer parameter representing start.
+    * @param result The input MutableList<List<Int>>.
+    * @param curr The input MutableList<Int> = mutableListOf(.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Combination Sum3 problem.
+    * Takes `k` (integer), `remaining` (integer), `start` (integer), `result` (MutableList<List<Int>>), `curr` (MutableList<Int> = mutableListOf().
+    *
+    * @param k The integer parameter representing k.
+    * @param remaining The integer parameter representing remaining.
+    * @param start The integer parameter representing start.
+    * @param result The input MutableList<List<Int>>.
+    * @param curr The input MutableList<Int> = mutableListOf(.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    fun dfs(
+        k: Int,
+        remaining: Int,
+        start: Int,
+        result: MutableList<List<Int>>,
+        curr: MutableList<Int> = mutableListOf(),
+    ) {
+
+        if (curr.size == k && remaining == 0) {
             result.add(curr.toList())
             return
         }
@@ -294,12 +550,24 @@ class CombinationSum_II {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -327,9 +595,66 @@ class ExpressionAndAddOperators {
     * @param target The integer parameter representing target.
     * @return The resulting collection (list of strings).
     */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
     fun addOperators(num: String, target: Int): List<String> {
         val result = mutableListOf<String>()
 
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `index` (integer), `prevOperand` (long integer), `currentOperand` (long integer), `value` (long integer), `expression` (string).
+        *
+        * @param index The integer parameter representing index.
+        * @param prevOperand The long integer parameter representing prevOperand.
+        * @param currentOperand The long integer parameter representing currentOperand.
+        * @param value The long integer parameter representing value.
+        * @param expression The input string.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `index` (integer), `prevOperand` (long integer), `currentOperand` (long integer), `value` (long integer), `expression` (string).
+        *
+        * @param index The integer parameter representing index.
+        * @param prevOperand The long integer parameter representing prevOperand.
+        * @param currentOperand The long integer parameter representing currentOperand.
+        * @param value The long integer parameter representing value.
+        * @param expression The input string.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `index` (integer), `prevOperand` (long integer), `currentOperand` (long integer), `value` (long integer), `expression` (string).
+        *
+        * @param index The integer parameter representing index.
+        * @param prevOperand The long integer parameter representing prevOperand.
+        * @param currentOperand The long integer parameter representing currentOperand.
+        * @param value The long integer parameter representing value.
+        * @param expression The input string.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Expression And Add Operators problem.
         * Takes `index` (integer), `prevOperand` (long integer), `currentOperand` (long integer), `value` (long integer), `expression` (string).
@@ -388,9 +713,63 @@ class ExpressionAndAddOperators {
     * @param target The integer parameter representing target.
     * @return The resulting collection (list of strings).
     */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
     fun addOperators2(num: String, target: Int): List<String> {
         val res = ArrayList<String>()
 
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `start` (integer), `path` (string), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `start` (integer), `path` (string), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `start` (integer), `path` (string), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Expression And Add Operators problem.
         * Takes `start` (integer), `path` (string), `sum` (long integer), `prev` (long integer).
@@ -443,6 +822,24 @@ class ExpressionAndAddOperators {
 * @param args The input Array<String>.
 * @return Unit (no return value, modifies state in-place).
 */
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main(args: Array<String>) {
     val test = ExpressionAndAddOperators()
 
@@ -450,10 +847,9 @@ fun main(args: Array<String>) {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Backtracking / DFS. Explore all possibilities, pruning when constraints are violated.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -464,13 +860,14 @@ fun main(args: Array<String>) {
 
 ### Variations
 
-1. What if the tree is not balanced (skewed)? Worst-case complexity?
-1. What if you need to do this iteratively (no recursion)?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need to handle both BST and non-BST trees?
-1. Can this be solved with Morris traversal (O(1) space)?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Expression And Add Operators Optimized
 
 ### Problem
@@ -495,9 +892,63 @@ class ExpressionAndAddOperatorsOptimized {
     * @param target The integer parameter representing target.
     * @return The resulting collection (list of strings).
     */
+    /**
+    * Solves the Expression And Add Operators Optimized problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Expression And Add Operators Optimized problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Expression And Add Operators Optimized problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
     fun addOperators(num: String, target: Int): List<String> {
         val res = ArrayList<String>()
 
+        /**
+        * Solves the Expression And Add Operators Optimized problem.
+        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Expression And Add Operators Optimized problem.
+        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Expression And Add Operators Optimized problem.
+        * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Expression And Add Operators Optimized problem.
         * Takes `start` (integer), `path` (StringBuilder), `sum` (long integer), `prev` (long integer).
@@ -554,10 +1005,9 @@ class ExpressionAndAddOperatorsOptimized {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Backtracking / DFS. Explore all possibilities, pruning when constraints are violated.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -568,14 +1018,145 @@ class ExpressionAndAddOperatorsOptimized {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
- `false` otherwise.
+
+## N Queen
+
+### Problem
+
+Solves the NQueen problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package backtracking
+
+import javax.swing.text.html.HTML.Attribute.N
+
+class NQueen {
+    private lateinit var placed: IntArray
+
+    /**
+    * Solves the NQueen problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the NQueen problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the NQueen problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the NQueen problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (List<List<String>).
+    */
+    fun solveNQueens(n: Int): List<List<String>> {
+        val results = mutableListOf<List<String>>()
+        placed = IntArray(n) { -1 } // Initialize with -1 indicating no queens are placed
+
+        /**
+        * Solves the NQueen problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the NQueen problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the NQueen problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the NQueen problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        fun dfs(row: Int) {
+            if (row == n) {
+                // Convert the board configuration to the required output format
+                val board = List(n) { CharArray(n) { '.' } }
+                for (r in placed.indices) {
+                    board[r][placed[r]] = 'Q'
+                }
+                results.add(board.map { it.joinToString("") })
+                return
+            }
+
+            for (col in 0 until n) {
+                if (isSafe(row, col)) {
+                    placed[row] = col
+                    dfs(row + 1)
+                    placed[row] = -1 // Remove the queen (backtrack)
+                }
+            }
+        }
+
+        dfs(0)
+        return results
+    }
+
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
     */
     private fun isSafe(row: Int, col: Int): Boolean {
         for (prevRow in 0 until row) {
@@ -589,12 +1170,24 @@ class ExpressionAndAddOperatorsOptimized {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -623,10 +1216,52 @@ class NQueen_II {
     * @param n The integer parameter representing n.
     * @return The computed integer result.
     */
+    /**
+    * Solves the NQueen_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the NQueen_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the NQueen_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun totalNQueens(n: Int): Int {
         placed = IntArray(n) { -1 } // Initialize with -1 indicating no queens are placed
         var solutionCount = 0
 
+        /**
+        * Solves the NQueen_II problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the NQueen_II problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the NQueen_II problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the NQueen_II problem.
         * Takes `row` (integer).
@@ -661,6 +1296,27 @@ class NQueen_II {
     * @param col The integer parameter representing col.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isSafe(row: Int, col: Int): Boolean {
         for (prevRow in 0 until row) {
             val prevCol = placed[prevRow]
@@ -673,12 +1329,24 @@ class NQueen_II {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -705,9 +1373,57 @@ class PalindromePartitioning {
     * @param s The input string.
     * @return The resulting collection (List<List<String>).
     */
+    /**
+    * Solves the Palindrome Partitioning problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Palindrome Partitioning problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Palindrome Partitioning problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting collection (List<List<String>).
+    */
     fun partition(s: String): List<List<String>> {
         val result = mutableListOf<List<String>>()
 
+        /**
+        * Solves the Palindrome Partitioning problem.
+        * Takes `s` (string), `left` (integer), `right` (integer).
+        *
+        * @param s The input string.
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Palindrome Partitioning problem.
+        * Takes `s` (string), `left` (integer), `right` (integer).
+        *
+        * @param s The input string.
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Palindrome Partitioning problem.
+        * Takes `s` (string), `left` (integer), `right` (integer).
+        *
+        * @param s The input string.
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Palindrome Partitioning problem.
         * Takes `s` (string), `left` (integer), `right` (integer).
@@ -725,6 +1441,30 @@ class PalindromePartitioning {
             return true
         }
 
+        /**
+        * Solves the Palindrome Partitioning problem.
+        * Takes `start` (integer), `path` (MutableList<String>).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input MutableList<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Palindrome Partitioning problem.
+        * Takes `start` (integer), `path` (MutableList<String>).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input MutableList<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Palindrome Partitioning problem.
+        * Takes `start` (integer), `path` (MutableList<String>).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input MutableList<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Palindrome Partitioning problem.
         * Takes `start` (integer), `path` (MutableList<String>).
@@ -753,12 +1493,24 @@ class PalindromePartitioning {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -786,6 +1538,30 @@ class PartitionToKEqualSumSubsets {
     * @param k The integer parameter representing k.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Partition To KEqual Sum Subsets problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition To KEqual Sum Subsets problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition To KEqual Sum Subsets problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canPartitionKSubsets(nums: IntArray, k: Int): Boolean {
         val totalSum = nums.sum()
         if (totalSum % k !=0) return false
@@ -793,6 +1569,33 @@ class PartitionToKEqualSumSubsets {
         val targetSum = totalSum / k
         val used = BooleanArray(nums.size)
 
+        /**
+        * Solves the Partition To KEqual Sum Subsets problem.
+        * Takes `start` (integer), `currentSum` (integer), `remainingSubsets` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param currentSum The integer parameter representing currentSum.
+        * @param remainingSubsets The integer parameter representing remainingSubsets.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Partition To KEqual Sum Subsets problem.
+        * Takes `start` (integer), `currentSum` (integer), `remainingSubsets` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param currentSum The integer parameter representing currentSum.
+        * @param remainingSubsets The integer parameter representing remainingSubsets.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Partition To KEqual Sum Subsets problem.
+        * Takes `start` (integer), `currentSum` (integer), `remainingSubsets` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param currentSum The integer parameter representing currentSum.
+        * @param remainingSubsets The integer parameter representing remainingSubsets.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Partition To KEqual Sum Subsets problem.
         * Takes `start` (integer), `currentSum` (integer), `remainingSubsets` (integer).
@@ -826,12 +1629,24 @@ class PartitionToKEqualSumSubsets {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -858,9 +1673,54 @@ class RestoreIPAddresses {
     * @param s The input string.
     * @return The resulting collection (list of strings).
     */
+    /**
+    * Solves the Restore IPAddresses problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Restore IPAddresses problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Restore IPAddresses problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting collection (list of strings).
+    */
     fun restoreIpAddresses(s: String): List<String> {
         val result = mutableListOf<String>()
 
+        /**
+        * Solves the Restore IPAddresses problem.
+        * Takes `i` (integer), `path` (MutableList<String>).
+        *
+        * @param i The integer parameter representing i.
+        * @param path The input MutableList<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Restore IPAddresses problem.
+        * Takes `i` (integer), `path` (MutableList<String>).
+        *
+        * @param i The integer parameter representing i.
+        * @param path The input MutableList<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Restore IPAddresses problem.
+        * Takes `i` (integer), `path` (MutableList<String>).
+        *
+        * @param i The integer parameter representing i.
+        * @param path The input MutableList<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Restore IPAddresses problem.
         * Takes `i` (integer), `path` (MutableList<String>).
@@ -895,12 +1755,24 @@ class RestoreIPAddresses {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -927,8 +1799,50 @@ class Strobogrammatic_Number_II {
     * @param n The integer parameter representing n.
     * @return The resulting collection (list of strings).
     */
+    /**
+    * Solves the Strobogrammatic_Number_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Strobogrammatic_Number_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Strobogrammatic_Number_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (list of strings).
+    */
     fun findStrobogrammatic(n: Int): List<String> {
         val pairs = listOf("0" to "0", "1" to "1", "6" to "9", "8" to "8", "9" to "6")
+        /**
+        * Solves the Strobogrammatic_Number_II problem.
+        * Takes `currentLength` (integer).
+        *
+        * @param currentLength The integer parameter representing currentLength.
+        * @return The resulting collection (list of strings).
+        */
+        /**
+        * Solves the Strobogrammatic_Number_II problem.
+        * Takes `currentLength` (integer).
+        *
+        * @param currentLength The integer parameter representing currentLength.
+        * @return The resulting collection (list of strings).
+        */
+        /**
+        * Solves the Strobogrammatic_Number_II problem.
+        * Takes `currentLength` (integer).
+        *
+        * @param currentLength The integer parameter representing currentLength.
+        * @return The resulting collection (list of strings).
+        */
         /**
         * Solves the Strobogrammatic_Number_II problem.
         * Takes `currentLength` (integer).
@@ -963,12 +1877,24 @@ class Strobogrammatic_Number_II {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -995,11 +1921,53 @@ class Subsets {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Subsets problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Subsets problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Subsets problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun subsets(nums: IntArray): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         val currentSubset = mutableListOf<Int>()
 
         // Backtracking helper function
+        /**
+        * Solves the Subsets problem.
+        * Takes `start` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Subsets problem.
+        * Takes `start` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Subsets problem.
+        * Takes `start` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Subsets problem.
         * Takes `start` (integer).
@@ -1025,12 +1993,24 @@ class Subsets {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1057,10 +2037,49 @@ class SudokuSolver {
     * @param board The input Array<CharArray>.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Sudoku Solver problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun solveSudoku(board: Array<CharArray>) {
         solve(board)
     }
 
+    /**
+    * Helper: solve.
+    *
+    * @param board The input Array<CharArray>.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: solve.
+    *
+    * @param board The input Array<CharArray>.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: solve.
+    *
+    * @param board The input Array<CharArray>.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: solve.
     *
@@ -1094,6 +2113,33 @@ class SudokuSolver {
     * @param ch The character.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Helper: is valid.
+    *
+    * @param board The input Array<CharArray>.
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param ch The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid.
+    *
+    * @param board The input Array<CharArray>.
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param ch The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid.
+    *
+    * @param board The input Array<CharArray>.
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param ch The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun isValid(board: Array<CharArray>, row: Int, col: Int, ch: Char): Boolean {
         for (i in 0..8) {
             if (board[row][i] == ch || board[i][col] == ch) return false
@@ -1106,12 +2152,24 @@ class SudokuSolver {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1131,6 +2189,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package backtracking
 
 class SudokuSolverSet {
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Sudoku Solver Set problem.
     * Takes `board` (Array<CharArray>).
@@ -1160,12 +2239,54 @@ class SudokuSolverSet {
         * @param c The character.
         * @return `true` if the condition is met, `false` otherwise.
         */
+        /**
+        * Solves the Sudoku Solver Set problem.
+        * Takes `i` (integer), `j` (integer), `c` (character).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @param c The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Sudoku Solver Set problem.
+        * Takes `i` (integer), `j` (integer), `c` (character).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @param c The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Sudoku Solver Set problem.
+        * Takes `i` (integer), `j` (integer), `c` (character).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @param c The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun isSafe(i: Int, j: Int, c: Char): Boolean {
             return "$c row $i" !in seen &&
                     "$c col $j" !in seen &&
                     "$c block ${i / 3}${j / 3}" !in seen
         }
 
+        /**
+        * Solves the Sudoku Solver Set problem.
+        *
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Sudoku Solver Set problem.
+        *
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Sudoku Solver Set problem.
+        *
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Sudoku Solver Set problem.
         *
@@ -1202,12 +2323,72 @@ class SudokuSolverSet {
     * @param seen The input MutableSet<String>.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun addToSet(i: Int, j: Int, c: Char, seen: MutableSet<String>) {
         seen.add("$c row $i")
         seen.add("$c col $j")
         seen.add("$c block ${i / 3}${j / 3}")
     }
 
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Sudoku Solver Set problem.
     * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
@@ -1226,11 +2407,23 @@ class SudokuSolverSet {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---

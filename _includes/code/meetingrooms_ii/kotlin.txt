@@ -8,6 +8,27 @@ class MeetingRooms_II {
     * @param intervals The input 2D matrix of integers.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Meeting Rooms_II problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Meeting Rooms_II problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Meeting Rooms_II problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canAttendMeetings(intervals: Array<IntArray>): Boolean {
         intervals.sortBy { it[0] }  // Sort by the start time of each interval
 

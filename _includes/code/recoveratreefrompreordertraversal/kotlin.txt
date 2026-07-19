@@ -8,10 +8,52 @@ class RecoverATreeFromPreOrderTraversal {
     * @param traversal The input string.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Recover ATree From Pre Order Traversal problem.
+    * Takes `traversal` (string).
+    *
+    * @param traversal The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Recover ATree From Pre Order Traversal problem.
+    * Takes `traversal` (string).
+    *
+    * @param traversal The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Recover ATree From Pre Order Traversal problem.
+    * Takes `traversal` (string).
+    *
+    * @param traversal The input string.
+    * @return The result, or `null` if not found.
+    */
     fun recoverFromPreorder(traversal: String): TreeNode? {
         var index = 0 // Global index to track position in the string
 
         // Recursive function to build the tree
+        /**
+        * Solves the Recover ATree From Pre Order Traversal problem.
+        * Takes `depth` (integer).
+        *
+        * @param depth The integer parameter representing depth.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Recover ATree From Pre Order Traversal problem.
+        * Takes `depth` (integer).
+        *
+        * @param depth The integer parameter representing depth.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Recover ATree From Pre Order Traversal problem.
+        * Takes `depth` (integer).
+        *
+        * @param depth The integer parameter representing depth.
+        * @return The result, or `null` if not found.
+        */
         /**
         * Solves the Recover ATree From Pre Order Traversal problem.
         * Takes `depth` (integer).

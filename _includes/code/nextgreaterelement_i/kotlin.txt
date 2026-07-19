@@ -9,6 +9,30 @@ class NextGreaterElement_I {
     * @param nums2 The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Next Greater Element_I problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Next Greater Element_I problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Next Greater Element_I problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
     fun nextGreaterElement(nums1: IntArray, nums2: IntArray): IntArray {
         val stack = ArrayDeque<Int>() // Stack to keep track of elements in nums2
         val nextGreaterMap = mutableMapOf<Int, Int>() // Map to store the next greater element for each element in nums2

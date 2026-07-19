@@ -44,6 +44,27 @@ class TrappingRainWater {
     * @param height The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Trapping Rain Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Trapping Rain Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Trapping Rain Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
     fun trapConstantSpace(height: IntArray): Int {
         var (left, right, leftMax, rightMax, waterTrapped) = listOf(0, height.lastIndex, 0, 0, 0)
 

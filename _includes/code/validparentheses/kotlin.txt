@@ -8,6 +8,27 @@ class ValidParentheses {
     * @param s The input string.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Valid Parentheses problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Parentheses problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Parentheses problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isValid(s: String): Boolean {
         val stack = mutableListOf<Char>()
         val openingBraces = listOf('(', '[', '{')

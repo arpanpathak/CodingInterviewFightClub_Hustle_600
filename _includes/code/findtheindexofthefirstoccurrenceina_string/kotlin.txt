@@ -11,6 +11,30 @@ class `FindTheIndexofTheFirstOccurrenceIna String` {
     * @param needle The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `haystack` (string), `needle` (string).
+    *
+    * @param haystack The input string.
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
     fun strStr(haystack: String, needle: String): Int {
         // If the needle is empty, return 0
         if (needle.isEmpty()) return 0
@@ -43,6 +67,27 @@ class `FindTheIndexofTheFirstOccurrenceIna String` {
     }
 
     // Function to build the LPS (Longest Prefix Suffix) array for the needle
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `needle` (string).
+    *
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `needle` (string).
+    *
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the findtheindexofthefirstoccurrenceina string problem.
+    * Takes `needle` (string).
+    *
+    * @param needle The input string.
+    * @return The computed integer result.
+    */
     /**
     * Solves the findtheindexofthefirstoccurrenceina string problem.
     * Takes `needle` (string).

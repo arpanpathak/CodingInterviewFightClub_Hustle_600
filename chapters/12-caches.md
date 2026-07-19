@@ -62,6 +62,27 @@ class LFUCache(capacity: Int) {
     * @param key The integer parameter representing key.
     * @return The computed integer result.
     */
+    /**
+    * Solves the LFUCache problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the LFUCache problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the LFUCache problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
     fun get(key: Int): Int {
         if (!vals.containsKey(key))
             return -1
@@ -82,6 +103,30 @@ class LFUCache(capacity: Int) {
         return vals[key]!!
     }
 
+    /**
+    * Solves the LFUCache problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the LFUCache problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the LFUCache problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the LFUCache problem.
     * Takes `key` (integer), `value` (integer).
@@ -116,10 +161,9 @@ class LFUCache(capacity: Int) {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -130,13 +174,14 @@ class LFUCache(capacity: Int) {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## LRU Cache
 
 ### Problem
@@ -163,6 +208,27 @@ class LRUCache(private val capacity: Int) {
     * @param key The integer parameter representing key.
     * @return The computed integer result.
     */
+    /**
+    * Solves the LRUCache problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the LRUCache problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the LRUCache problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
     fun get(key: Int): Int {
         val data = cache[key] ?: -1
 
@@ -172,6 +238,30 @@ class LRUCache(private val capacity: Int) {
         return data
     }
 
+    /**
+    * Solves the LRUCache problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the LRUCache problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the LRUCache problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the LRUCache problem.
     * Takes `key` (integer), `value` (integer).
@@ -192,10 +282,9 @@ class LRUCache(private val capacity: Int) {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -206,13 +295,14 @@ class LRUCache(private val capacity: Int) {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## LRU Cache Linked List
 
 ### Problem
@@ -252,12 +342,57 @@ class LRUCacheLinkedList(private val capacity: Int) {
     * @param key The integer parameter representing key.
     * @return The computed integer result.
     */
+    /**
+    * Solves the LRUCache Linked List problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the LRUCache Linked List problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the LRUCache Linked List problem.
+    * Takes `key` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @return The computed integer result.
+    */
     fun get(key: Int): Int {
         val node = cache[key] ?: return -1 // Key not found
         moveToHead(node) // Move the node to the head (most recently used)
         return node.value
     }
 
+    /**
+    * Solves the LRUCache Linked List problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the LRUCache Linked List problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the LRUCache Linked List problem.
+    * Takes `key` (integer), `value` (integer).
+    *
+    * @param key The integer parameter representing key.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the LRUCache Linked List problem.
     * Takes `key` (integer), `value` (integer).
@@ -292,6 +427,24 @@ class LRUCacheLinkedList(private val capacity: Int) {
     * @param node The Node.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: add to head.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: add to head.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: add to head.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun addToHead(node: Node) {
         // Add the node to the head of the list
         node.prev = head
@@ -300,6 +453,24 @@ class LRUCacheLinkedList(private val capacity: Int) {
         head.next = node
     }
 
+    /**
+    * Helper: remove node.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: remove node.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: remove node.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: remove node.
     *
@@ -318,12 +489,45 @@ class LRUCacheLinkedList(private val capacity: Int) {
     * @param node The Node.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: move to head.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: move to head.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: move to head.
+    *
+    * @param node The Node.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun moveToHead(node: Node) {
         // Move the node to the head of the list
         removeNode(node)
         addToHead(node)
     }
 
+    /**
+    * Helper: remove tail.
+    *
+    * @return The computed result (Node).
+    */
+    /**
+    * Helper: remove tail.
+    *
+    * @return The computed result (Node).
+    */
+    /**
+    * Helper: remove tail.
+    *
+    * @return The computed result (Node).
+    */
     /**
     * Helper: remove tail.
     *
@@ -337,6 +541,21 @@ class LRUCacheLinkedList(private val capacity: Int) {
     }
 }
 
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 /**
 * Entry point for the program.
 *
@@ -356,10 +575,9 @@ fun main() {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
 
 ### Complexity
 
@@ -370,10 +588,10 @@ fun main() {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---

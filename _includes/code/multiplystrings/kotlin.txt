@@ -9,6 +9,30 @@ class MultiplyStrings {
     * @param num2 The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Multiply Strings problem.
+    * Takes `num1` (string), `num2` (string).
+    *
+    * @param num1 The input string.
+    * @param num2 The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Multiply Strings problem.
+    * Takes `num1` (string), `num2` (string).
+    *
+    * @param num1 The input string.
+    * @param num2 The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Multiply Strings problem.
+    * Takes `num1` (string), `num2` (string).
+    *
+    * @param num1 The input string.
+    * @param num2 The input string.
+    * @return The resulting string.
+    */
     fun multiply(num1: String, num2: String): String {
         if (num1 == "0" || num2 == "0") return "0"
 

@@ -10,11 +10,65 @@ package microsoft
 * @param D The integer parameter representing D.
 * @return The computed integer result.
 */
+/**
+* Solves the validtime problem.
+* Takes `A` (integer), `B` (integer), `C` (integer), `D` (integer).
+*
+* @param A The integer parameter representing A.
+* @param B The integer parameter representing B.
+* @param C The integer parameter representing C.
+* @param D The integer parameter representing D.
+* @return The computed integer result.
+*/
+/**
+* Solves the validtime problem.
+* Takes `A` (integer), `B` (integer), `C` (integer), `D` (integer).
+*
+* @param A The integer parameter representing A.
+* @param B The integer parameter representing B.
+* @param C The integer parameter representing C.
+* @param D The integer parameter representing D.
+* @return The computed integer result.
+*/
+/**
+* Solves the validtime problem.
+* Takes `A` (integer), `B` (integer), `C` (integer), `D` (integer).
+*
+* @param A The integer parameter representing A.
+* @param B The integer parameter representing B.
+* @param C The integer parameter representing C.
+* @param D The integer parameter representing D.
+* @return The computed integer result.
+*/
 fun solution(A: Int, B: Int, C: Int, D: Int): Int {
     val digits = listOf(A, B, C, D)
     val permutations = mutableSetOf<String>()
 
     // Generate all permutations of the digits
+    /**
+    * Solves the validtime problem.
+    * Takes `current` (list of integers), `remaining` (list of integers).
+    *
+    * @param current The input list of integers.
+    * @param remaining The input list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the validtime problem.
+    * Takes `current` (list of integers), `remaining` (list of integers).
+    *
+    * @param current The input list of integers.
+    * @param remaining The input list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the validtime problem.
+    * Takes `current` (list of integers), `remaining` (list of integers).
+    *
+    * @param current The input list of integers.
+    * @param remaining The input list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the validtime problem.
     * Takes `current` (list of integers), `remaining` (list of integers).

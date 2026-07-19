@@ -10,11 +10,59 @@ class PathSumIII {
     * @param targetSum The integer parameter representing targetSum.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
     fun pathSum(root: TreeNode?, targetSum: Int): Int {
         if (root == null)
             return 0
 
         // Count paths with targetSum starting from the current node
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Path Sum III problem.
         * Takes `node` (binary tree node reference), `currentSum` (long integer).
@@ -47,6 +95,30 @@ class PathSumIII {
     * @param targetSum The integer parameter representing targetSum.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
     fun pathSum_prefix_sum(root: TreeNode?, targetSum: Int): Int {
         // HashMap to store prefix sums and their frequencies
         val prefixSumCount = HashMap<Long, Int>()
@@ -54,6 +126,30 @@ class PathSumIII {
         prefixSumCount[0L] = 1
 
         // Helper function to perform DFS
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Path Sum III problem.
         * Takes `node` (binary tree node reference), `currentSum` (long integer).

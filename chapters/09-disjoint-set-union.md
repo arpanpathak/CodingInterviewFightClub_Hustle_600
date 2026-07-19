@@ -59,10 +59,52 @@ class AccountMerge {
         * @param x The T.
         * @return Unit (no return value, modifies state in-place).
         */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun add(x: T) {
             nodes.putIfAbsent(x, Node(x, 0))
         }
 
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return The computed result (T).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return The computed result (T).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return The computed result (T).
+        */
         /**
         * Solves the Account Merge problem.
         * Takes `x` (T).
@@ -79,6 +121,30 @@ class AccountMerge {
             return node.parent
         }
 
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T), `y` (T).
+        *
+        * @param x The T.
+        * @param y The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T), `y` (T).
+        *
+        * @param x The T.
+        * @param y The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T), `y` (T).
+        *
+        * @param x The T.
+        * @param y The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Account Merge problem.
         * Takes `x` (T), `y` (T).
@@ -105,6 +171,27 @@ class AccountMerge {
         }
     }
 
+    /**
+    * Solves the Account Merge problem.
+    * Takes `accounts` (List<List<String>>).
+    *
+    * @param accounts The input List<List<String>>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Account Merge problem.
+    * Takes `accounts` (List<List<String>>).
+    *
+    * @param accounts The input List<List<String>>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Account Merge problem.
+    * Takes `accounts` (List<List<String>>).
+    *
+    * @param accounts The input List<List<String>>.
+    * @return The resulting collection (List<List<String>).
+    */
     /**
     * Solves the Account Merge problem.
     * Takes `accounts` (List<List<String>>).
@@ -142,10 +229,9 @@ class AccountMerge {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -156,13 +242,14 @@ class AccountMerge {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Number Of Island_II
 
 ### Problem
@@ -191,6 +278,27 @@ class NumberOfIsland_II {
         * @param x The Pair<Int.
         * @return The computed integer result.
         */
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `x` (Pair<Int).
+        *
+        * @param x The Pair<Int.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `x` (Pair<Int).
+        *
+        * @param x The Pair<Int.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `x` (Pair<Int).
+        *
+        * @param x The Pair<Int.
+        * @return The computed integer result.
+        */
         fun find(x: Pair<Int, Int>): Pair<Int, Int> {
             if (parent[x] != x) {
                 parent[x] = find(parent[x]!!) // Path compression
@@ -198,6 +306,30 @@ class NumberOfIsland_II {
             return parent[x]!!
         }
 
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `x` (Pair<Int), `y` (Pair<Int).
+        *
+        * @param x The Pair<Int.
+        * @param y The Pair<Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `x` (Pair<Int), `y` (Pair<Int).
+        *
+        * @param x The Pair<Int.
+        * @param y The Pair<Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `x` (Pair<Int), `y` (Pair<Int).
+        *
+        * @param x The Pair<Int.
+        * @param y The Pair<Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Number Of Island_II problem.
         * Takes `x` (Pair<Int), `y` (Pair<Int).
@@ -229,6 +361,27 @@ class NumberOfIsland_II {
         * @param position The Pair<Int.
         * @return Unit (no return value, modifies state in-place).
         */
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `position` (Pair<Int).
+        *
+        * @param position The Pair<Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `position` (Pair<Int).
+        *
+        * @param position The Pair<Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Number Of Island_II problem.
+        * Takes `position` (Pair<Int).
+        *
+        * @param position The Pair<Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun addLand(position: Pair<Int, Int>) {
             if (parent.containsKey(position)) return
             parent[position] = position
@@ -237,6 +390,33 @@ class NumberOfIsland_II {
         }
     }
 
+    /**
+    * Solves the Number Of Island_II problem.
+    * Takes `m` (integer), `n` (integer), `positions` (2D matrix of integers).
+    *
+    * @param m The integer parameter representing m.
+    * @param n The integer parameter representing n.
+    * @param positions The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Number Of Island_II problem.
+    * Takes `m` (integer), `n` (integer), `positions` (2D matrix of integers).
+    *
+    * @param m The integer parameter representing m.
+    * @param n The integer parameter representing n.
+    * @param positions The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Number Of Island_II problem.
+    * Takes `m` (integer), `n` (integer), `positions` (2D matrix of integers).
+    *
+    * @param m The integer parameter representing m.
+    * @param n The integer parameter representing n.
+    * @param positions The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Number Of Island_II problem.
     * Takes `m` (integer), `n` (integer), `positions` (2D matrix of integers).
@@ -273,15 +453,9 @@ class NumberOfIsland_II {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
-
-
-### Pattern Insight
-
-**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -292,13 +466,14 @@ class NumberOfIsland_II {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Union Find
 
 ### Problem
@@ -326,10 +501,52 @@ class UnionFind<T> {
     * @param x The T.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun add(x: T) {
         nodes.putIfAbsent(x, Node(x, 0))
     }
 
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return The computed result (T).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return The computed result (T).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return The computed result (T).
+    */
     /**
     * Solves the Union Find problem.
     * Takes `x` (T).
@@ -346,6 +563,30 @@ class UnionFind<T> {
         return node.parent
     }
 
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T), `y` (T).
+    *
+    * @param x The T.
+    * @param y The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T), `y` (T).
+    *
+    * @param x The T.
+    * @param y The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T), `y` (T).
+    *
+    * @param x The T.
+    * @param y The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Union Find problem.
     * Takes `x` (T), `y` (T).
@@ -373,10 +614,9 @@ class UnionFind<T> {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
 
 ### Complexity
 
@@ -387,10 +627,10 @@ class UnionFind<T> {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---

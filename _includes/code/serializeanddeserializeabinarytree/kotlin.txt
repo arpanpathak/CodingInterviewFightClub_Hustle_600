@@ -20,6 +20,27 @@ class Codec() {
     * @param root The binary tree node reference (nullable).
     * @return The resulting string.
     */
+    /**
+    * Solves the Codec problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Codec problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Codec problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The resulting string.
+    */
     fun serialize(root: TreeNode?): String {
         val serializedTree = StringBuilder()
 
@@ -28,6 +49,27 @@ class Codec() {
         *
         * @param node The binary tree node reference (nullable).
         * @return Unit (no return value, modifies state in-place).
+        /**
+        * Solves the Codec problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Codec problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Codec problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Codec problem.
         * Takes `node` (binary tree node reference).
@@ -63,12 +105,48 @@ class Codec() {
     * @param data The input string.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Codec problem.
+    * Takes `data` (string).
+    *
+    * @param data The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Codec problem.
+    * Takes `data` (string).
+    *
+    * @param data The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Codec problem.
+    * Takes `data` (string).
+    *
+    * @param data The input string.
+    * @return The result, or `null` if not found.
+    */
     fun deserialize(data: String): TreeNode? {
         val nodes = data.split(",").toMutableList()
 
         * Solves the Codec problem.
         *
         * @return The result, or `null` if not found.
+        /**
+        * Solves the Codec problem.
+        *
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Codec problem.
+        *
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Codec problem.
+        *
+        * @return The result, or `null` if not found.
+        */
         /**
         * Solves the Codec problem.
         *

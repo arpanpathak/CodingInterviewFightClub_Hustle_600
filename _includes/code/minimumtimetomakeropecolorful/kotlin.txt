@@ -9,6 +9,30 @@ class MinimumTimeToMakeRopeColorful {
     * @param neededTime The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Minimum Time To Make Rope Colorful problem.
+    * Takes `colors` (string), `neededTime` (array of integers).
+    *
+    * @param colors The input string.
+    * @param neededTime The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Time To Make Rope Colorful problem.
+    * Takes `colors` (string), `neededTime` (array of integers).
+    *
+    * @param colors The input string.
+    * @param neededTime The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Time To Make Rope Colorful problem.
+    * Takes `colors` (string), `neededTime` (array of integers).
+    *
+    * @param colors The input string.
+    * @param neededTime The input array of integers.
+    * @return The computed integer result.
+    */
     fun minCost(colors: String, neededTime: IntArray): Int {
         var minTime = 0
         for (i in 1 until neededTime.size) {

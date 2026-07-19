@@ -18,6 +18,30 @@ class CountWordsWithAGivenPrefix_Trie {
     * @param prefix The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         // Build the trie using the words
         buildTrie(words, root)
@@ -27,6 +51,27 @@ class CountWordsWithAGivenPrefix_Trie {
     }
 
     // Method to build the trie
+    /**
+    * Helper: build trie.
+    *
+    * @param words The input Array<String>.
+    * @param root The TrieNode.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: build trie.
+    *
+    * @param words The input Array<String>.
+    * @param root The TrieNode.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: build trie.
+    *
+    * @param words The input Array<String>.
+    * @param root The TrieNode.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: build trie.
     *
@@ -46,6 +91,24 @@ class CountWordsWithAGivenPrefix_Trie {
     }
 
     // Method to find the node corresponding to the last character of the prefix
+    /**
+    * Helper: find prefix node.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Helper: find prefix node.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Helper: find prefix node.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
     /**
     * Helper: find prefix node.
     *

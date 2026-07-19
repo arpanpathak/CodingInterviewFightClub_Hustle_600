@@ -10,6 +10,27 @@ class DeleteMiddleNodeOfLinkedList {
     * @param head The input linked list node reference.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun deleteMiddle(head: ListNode?): ListNode? {
         var currentNode = head
         var prevNode: ListNode? = null
@@ -35,6 +56,27 @@ class DeleteMiddleNodeOfLinkedList {
         return head
     }
 
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Delete Middle Node Of Linked List problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     /**
     * Solves the Delete Middle Node Of Linked List problem.
     * Takes `head` (linked list node reference).

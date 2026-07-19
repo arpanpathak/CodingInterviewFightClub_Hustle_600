@@ -13,6 +13,27 @@ class RandomizedSet() {
     * @param `val` The integer parameter representing `val`.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun insert(`val`: Int): Boolean {
         if (!map.containsKey(`val`))
             return false
@@ -21,6 +42,27 @@ class RandomizedSet() {
         return true
     }
 
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Randomized Set problem.
     * Takes ``val`` (integer).
@@ -43,6 +85,21 @@ class RandomizedSet() {
         return true
     }
 
+    /**
+    * Solves the Randomized Set problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    *
+    * @return The computed integer result.
+    */
     /**
     * Solves the Randomized Set problem.
     *

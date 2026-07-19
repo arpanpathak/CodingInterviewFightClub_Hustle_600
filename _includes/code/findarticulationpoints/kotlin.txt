@@ -15,6 +15,30 @@ class FindArticulationPoints {
     * @param connections The input 2D list of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Find Articulation Points problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Articulation Points problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Articulation Points problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
     fun findCutVertices(n: Int, connections: List<List<Int>>): Set<Int> {
         G = Array(n) { mutableListOf() }
         time = 0
@@ -35,6 +59,30 @@ class FindArticulationPoints {
         return cutVertices
     }
 
+    /**
+    * Helper: dfs.
+    *
+    * @param node The integer parameter representing node.
+    * @param parent The integer parameter representing parent.
+    * @param cutVertices The input MutableSet<Int>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The integer parameter representing node.
+    * @param parent The integer parameter representing parent.
+    * @param cutVertices The input MutableSet<Int>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The integer parameter representing node.
+    * @param parent The integer parameter representing parent.
+    * @param cutVertices The input MutableSet<Int>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: dfs.
     *

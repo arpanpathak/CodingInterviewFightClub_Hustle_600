@@ -5,6 +5,21 @@ package grid.dynamic_programming
 *
 * @return Unit (no return value, modifies state in-place).
 */
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() {
     println("Isn't it cool Kotlin doesn't even require a main class ? ")
 }

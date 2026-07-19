@@ -9,6 +9,30 @@ class ExclusiveTimeOfFunctions {
     * @param logs The input list of strings.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Exclusive Time Of Functions problem.
+    * Takes `n` (integer), `logs` (list of strings).
+    *
+    * @param n The integer parameter representing n.
+    * @param logs The input list of strings.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Exclusive Time Of Functions problem.
+    * Takes `n` (integer), `logs` (list of strings).
+    *
+    * @param n The integer parameter representing n.
+    * @param logs The input list of strings.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Exclusive Time Of Functions problem.
+    * Takes `n` (integer), `logs` (list of strings).
+    *
+    * @param n The integer parameter representing n.
+    * @param logs The input list of strings.
+    * @return The computed integer result.
+    */
     fun exclusiveTime(n: Int, logs: List<String>): IntArray {
         val result = IntArray(n)
         val stack = mutableListOf<Int>()

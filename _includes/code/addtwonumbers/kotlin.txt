@@ -13,6 +13,30 @@ class AddTwoNumbers {
     * @param l2 The input linked list node reference.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         var carry = 0
         val head = ListNode(0)

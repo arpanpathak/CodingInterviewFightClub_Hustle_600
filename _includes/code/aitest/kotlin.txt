@@ -10,6 +10,21 @@ import java.sql.SQLException
 *
 * @return Unit (no return value, modifies state in-place).
 */
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() {
     val jdbcUrl = "jdbc:oracle:thin:@localhost:1521/FREEPDB1" // Update with your DB connection details
     val username = "SYSTEM" // or "SYSTEM"
@@ -46,6 +61,30 @@ fun main() {
     }
 }
 
+/**
+* Solves the aitest problem.
+* Takes `connection` (Connection), `tableName` (string).
+*
+* @param connection The Connection.
+* @param tableName The input string.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Solves the aitest problem.
+* Takes `connection` (Connection), `tableName` (string).
+*
+* @param connection The Connection.
+* @param tableName The input string.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Solves the aitest problem.
+* Takes `connection` (Connection), `tableName` (string).
+*
+* @param connection The Connection.
+* @param tableName The input string.
+* @return Unit (no return value, modifies state in-place).
+*/
 /**
 * Solves the aitest problem.
 * Takes `connection` (Connection), `tableName` (string).

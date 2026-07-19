@@ -21,6 +21,21 @@ import net.jacobpeterson.alpaca.model.properties.EndpointAPIType
 *
 * @return Unit (no return value, modifies state in-place).
 */
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() = runBlocking {
     val alpacaAPI = AlpacaAPI(
         "PKN1UPZO3EU9F72CC9DI",
@@ -51,10 +66,52 @@ fun main() = runBlocking {
 * @param api The AlpacaAPI.
 * @return The computed result (Account).
 */
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `api` (AlpacaAPI).
+*
+* @param api The AlpacaAPI.
+* @return The computed result (Account).
+*/
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `api` (AlpacaAPI).
+*
+* @param api The AlpacaAPI.
+* @return The computed result (Account).
+*/
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `api` (AlpacaAPI).
+*
+* @param api The AlpacaAPI.
+* @return The computed result (Account).
+*/
 suspend fun fetchAccount(api: AlpacaAPI): Account {
     return api.account().get()  // Simulated API call
 }
 
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `api` (AlpacaAPI).
+*
+* @param api The AlpacaAPI.
+* @return The computed result (Order).
+*/
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `api` (AlpacaAPI).
+*
+* @param api The AlpacaAPI.
+* @return The computed result (Order).
+*/
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `api` (AlpacaAPI).
+*
+* @param api The AlpacaAPI.
+* @return The computed result (Order).
+*/
 /**
 * Solves the alpacasdkexamples problem.
 * Takes `api` (AlpacaAPI).
@@ -81,6 +138,30 @@ suspend fun placeOrder(api: AlpacaAPI): Order {
 * @param order The Order.
 * @return The resulting collection (Map<String, Any>).
 */
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `account` (Account), `order` (Order).
+*
+* @param account The Account.
+* @param order The Order.
+* @return The resulting collection (Map<String, Any>).
+*/
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `account` (Account), `order` (Order).
+*
+* @param account The Account.
+* @param order The Order.
+* @return The resulting collection (Map<String, Any>).
+*/
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `account` (Account), `order` (Order).
+*
+* @param account The Account.
+* @param order The Order.
+* @return The resulting collection (Map<String, Any>).
+*/
 fun mergeData(account: Account, order: Order): Map<String, Any> {
     return mapOf(
         "Account" to account,
@@ -88,6 +169,27 @@ fun mergeData(account: Account, order: Order): Map<String, Any> {
     )
 }
 
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `api` (AlpacaAPI).
+*
+* @param api The AlpacaAPI.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `api` (AlpacaAPI).
+*
+* @param api The AlpacaAPI.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Solves the alpacasdkexamples problem.
+* Takes `api` (AlpacaAPI).
+*
+* @param api The AlpacaAPI.
+* @return Unit (no return value, modifies state in-place).
+*/
 /**
 * Solves the alpacasdkexamples problem.
 * Takes `api` (AlpacaAPI).

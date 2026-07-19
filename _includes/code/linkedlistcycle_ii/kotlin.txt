@@ -8,6 +8,27 @@ class LinkedListCycle_II {
     * @param head The input linked list node reference.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the Linked List Cycle_II problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Linked List Cycle_II problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Linked List Cycle_II problem.
+    * Takes `head` (linked list node reference).
+    *
+    * @param head The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     fun detectCycle(head: ListNode?): ListNode? {
         var slow = head
         var fast = head

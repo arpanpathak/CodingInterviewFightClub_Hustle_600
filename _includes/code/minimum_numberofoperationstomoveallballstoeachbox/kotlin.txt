@@ -8,6 +8,27 @@ class `Minimum NumberofOperationstoMoveAllBallstoEachBox` {
     * @param boxes The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the minimum numberofoperationstomoveallballstoeachbox problem.
+    * Takes `boxes` (string).
+    *
+    * @param boxes The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the minimum numberofoperationstomoveallballstoeachbox problem.
+    * Takes `boxes` (string).
+    *
+    * @param boxes The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the minimum numberofoperationstomoveallballstoeachbox problem.
+    * Takes `boxes` (string).
+    *
+    * @param boxes The input string.
+    * @return The computed integer result.
+    */
     fun minOperations(boxes: String): IntArray {
         val n = boxes.length
         val result = IntArray(n) { 0 }

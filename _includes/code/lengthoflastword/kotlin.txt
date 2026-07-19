@@ -8,6 +8,27 @@ class LengthOfLastWord {
     * @param s The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Length Of Last Word problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Length Of Last Word problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Length Of Last Word problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun lengthOfLastWord(s: String): Int {
         var i = s.length - 1
         var len = 0

@@ -12,10 +12,52 @@ class NQueen {
     * @param n The integer parameter representing n.
     * @return The resulting collection (List<List<String>).
     */
+    /**
+    * Solves the NQueen problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the NQueen problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the NQueen problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (List<List<String>).
+    */
     fun solveNQueens(n: Int): List<List<String>> {
         val results = mutableListOf<List<String>>()
         placed = IntArray(n) { -1 } // Initialize with -1 indicating no queens are placed
 
+        /**
+        * Solves the NQueen problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the NQueen problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the NQueen problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the NQueen problem.
         * Takes `row` (integer).
@@ -47,6 +89,27 @@ class NQueen {
         return results
     }
 
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: is safe.
     *

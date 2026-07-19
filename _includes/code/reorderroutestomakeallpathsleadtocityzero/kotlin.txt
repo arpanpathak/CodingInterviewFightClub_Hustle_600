@@ -9,6 +9,30 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
     * @param connections The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+    * Takes `n` (integer), `connections` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+    * Takes `n` (integer), `connections` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+    * Takes `n` (integer), `connections` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun minReorder(n: Int, connections: Array<IntArray>): Int {
         val graph = Array(n) { mutableListOf<IntArray>() }
 
@@ -21,6 +45,27 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
         var changes = 0
         val visited = BooleanArray(n)
 
+        /**
+        * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+        * Takes `city` (integer).
+        *
+        * @param city The integer parameter representing city.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+        * Takes `city` (integer).
+        *
+        * @param city The integer parameter representing city.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+        * Takes `city` (integer).
+        *
+        * @param city The integer parameter representing city.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
         * Takes `city` (integer).

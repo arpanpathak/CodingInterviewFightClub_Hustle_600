@@ -25,6 +25,14 @@ The modern tech interview is less about finding a competent coder and more about
 
 > Signals that an interviewer is looking for a candidate (Who am I? I conducted 46 coding interviews and attended 13 debriefs.)
 
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
+
 ---
 
 ## Advanced Graph Algorithms
@@ -309,6 +317,14 @@ fun countWays(coins: IntArray, k: Int, m: Int): Int {
 > **"We don't complain about the game. We learn the rules. We master them. And we win."**
 
 **Now go get that bag. 🥊💰**
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 

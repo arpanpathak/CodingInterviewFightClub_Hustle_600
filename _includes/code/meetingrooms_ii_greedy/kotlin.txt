@@ -10,6 +10,27 @@ class MeetingRooms_II_greedy {
     * @param intervals The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Meeting Rooms_II_greedy problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Meeting Rooms_II_greedy problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Meeting Rooms_II_greedy problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun minMeetingRooms(intervals: Array<IntArray>): Int {
         intervals.sortBy { it[0] }
 

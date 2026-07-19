@@ -10,6 +10,27 @@ class SlidingPuzzle {
     * @param board The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Sliding Puzzle problem.
+    * Takes `board` (2D matrix of integers).
+    *
+    * @param board The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sliding Puzzle problem.
+    * Takes `board` (2D matrix of integers).
+    *
+    * @param board The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sliding Puzzle problem.
+    * Takes `board` (2D matrix of integers).
+    *
+    * @param board The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun slidingPuzzle(board: Array<IntArray>): Int {
         val target = "123450"
         val start = board.flatMap { it.asIterable() }.joinToString("")

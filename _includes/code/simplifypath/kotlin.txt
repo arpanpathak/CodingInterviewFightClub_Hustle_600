@@ -8,6 +8,27 @@ class SimplifyPath {
     * @param path The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Simplify Path problem.
+    * Takes `path` (string).
+    *
+    * @param path The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Simplify Path problem.
+    * Takes `path` (string).
+    *
+    * @param path The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Simplify Path problem.
+    * Takes `path` (string).
+    *
+    * @param path The input string.
+    * @return The resulting string.
+    */
     fun simplifyPath(path: String): String {
         // Split the path by "/"
         val tokens = path.split("/")

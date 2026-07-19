@@ -16,6 +16,27 @@ class PopulatingNextRightPointerInEachNode {
     * @param root The Node? (nullable).
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Node problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun connect(root: Node?): Node? {
         root?.let { queue ->
             val q = LinkedList<Node>().apply { offer(queue) }

@@ -10,11 +10,53 @@ class SumOfSubArrayRanges {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Sum Of Sub Array Ranges problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sum Of Sub Array Ranges problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sum Of Sub Array Ranges problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun subArrayRanges(nums: IntArray): Long {
         val n = nums.size
         var answer: Long = 0
 
         // Helper function to calculate the sum of all minimums or maximums
+        /**
+        * Solves the Sum Of Sub Array Ranges problem.
+        * Takes `comparator` ((Int).
+        *
+        * @param comparator The (Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Sum Of Sub Array Ranges problem.
+        * Takes `comparator` ((Int).
+        *
+        * @param comparator The (Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Sum Of Sub Array Ranges problem.
+        * Takes `comparator` ((Int).
+        *
+        * @param comparator The (Int.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Sum Of Sub Array Ranges problem.
         * Takes `comparator` ((Int).

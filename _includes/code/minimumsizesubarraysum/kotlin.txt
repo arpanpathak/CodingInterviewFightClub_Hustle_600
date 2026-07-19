@@ -9,6 +9,30 @@ class MinimumSizeSubarraySum {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Minimum Size Subarray Sum problem.
+    * Takes `target` (integer), `nums` (array of integers).
+    *
+    * @param target The integer parameter representing target.
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Size Subarray Sum problem.
+    * Takes `target` (integer), `nums` (array of integers).
+    *
+    * @param target The integer parameter representing target.
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Size Subarray Sum problem.
+    * Takes `target` (integer), `nums` (array of integers).
+    *
+    * @param target The integer parameter representing target.
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun minSubArrayLen(target: Int, nums: IntArray): Int {
         var (windowStart, windowSum) = 0 to 0
         var minLength = Int.MAX_VALUE

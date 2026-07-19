@@ -10,6 +10,27 @@ class MinimumRemoveToMakeValidParentheses {
     * @param s The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Minimum Remove To Make Valid Parentheses problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Minimum Remove To Make Valid Parentheses problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Minimum Remove To Make Valid Parentheses problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun minRemoveToMakeValid(s: String): String {
         val stack = mutableListOf<Int>()
         val toRemove = mutableSetOf<Int>()

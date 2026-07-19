@@ -10,6 +10,27 @@ import java.util.concurrent.Executors
 * @param numTransactions The integer parameter representing numTransactions.
 * @return The computed floating-point result.
 */
+/**
+* Solves the scaletransactions problem.
+* Takes `numTransactions` (integer).
+*
+* @param numTransactions The integer parameter representing numTransactions.
+* @return The computed floating-point result.
+*/
+/**
+* Solves the scaletransactions problem.
+* Takes `numTransactions` (integer).
+*
+* @param numTransactions The integer parameter representing numTransactions.
+* @return The computed floating-point result.
+*/
+/**
+* Solves the scaletransactions problem.
+* Takes `numTransactions` (integer).
+*
+* @param numTransactions The integer parameter representing numTransactions.
+* @return The computed floating-point result.
+*/
 fun generateTransactions(numTransactions: Int): List<Double> {
     return List(numTransactions) { Math.random() * 1000 } // Random transactions between 0 to 1000
 }
@@ -22,10 +43,46 @@ fun generateTransactions(numTransactions: Int): List<Double> {
 * @param transactions The input List<Double>.
 * @return The computed floating-point result.
 */
+/**
+* Solves the scaletransactions problem.
+* Takes `transactions` (List<Double>).
+*
+* @param transactions The input List<Double>.
+* @return The computed floating-point result.
+*/
+/**
+* Solves the scaletransactions problem.
+* Takes `transactions` (List<Double>).
+*
+* @param transactions The input List<Double>.
+* @return The computed floating-point result.
+*/
+/**
+* Solves the scaletransactions problem.
+* Takes `transactions` (List<Double>).
+*
+* @param transactions The input List<Double>.
+* @return The computed floating-point result.
+*/
 fun sumTransactions(transactions: List<Double>): Double {
     return transactions.sum()
 }
 
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 /**
 * Entry point for the program.
 *

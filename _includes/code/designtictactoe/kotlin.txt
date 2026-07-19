@@ -16,6 +16,33 @@ class TicTacToe(n: Int) {
     * @param player The integer parameter representing player.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Tic Tac Toe problem.
+    * Takes `row` (integer), `col` (integer), `player` (integer).
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param player The integer parameter representing player.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Tic Tac Toe problem.
+    * Takes `row` (integer), `col` (integer), `player` (integer).
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param player The integer parameter representing player.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Tic Tac Toe problem.
+    * Takes `row` (integer), `col` (integer), `player` (integer).
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param player The integer parameter representing player.
+    * @return The computed integer result.
+    */
     fun move(row: Int, col: Int, player: Int): Int {
         val mark = if (player == 1) 1 else -1
 

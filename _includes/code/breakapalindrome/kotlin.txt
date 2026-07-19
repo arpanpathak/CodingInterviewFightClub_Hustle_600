@@ -8,6 +8,27 @@ class BreakAPalindrome {
     * @param palindrome The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Break APalindrome problem.
+    * Takes `palindrome` (string).
+    *
+    * @param palindrome The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Break APalindrome problem.
+    * Takes `palindrome` (string).
+    *
+    * @param palindrome The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Break APalindrome problem.
+    * Takes `palindrome` (string).
+    *
+    * @param palindrome The input string.
+    * @return The resulting string.
+    */
     fun breakPalindrome(palindrome: String): String {
         if (palindrome.length == 1) return ""
 

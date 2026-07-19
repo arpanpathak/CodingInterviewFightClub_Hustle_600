@@ -12,6 +12,27 @@ class MovingAverage(private val size: Int) {
     * @param `val` The integer parameter representing `val`.
     * @return The computed floating-point result.
     */
+    /**
+    * Solves the Moving Average problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Moving Average problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Moving Average problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return The computed floating-point result.
+    */
     fun next(`val`: Int): Double {
         window.add(`val`)
         sum += `val`

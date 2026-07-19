@@ -8,6 +8,27 @@ class MaximumValueOfAnOrderedTriplet_II {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Maximum Value Of An Ordered Triplet_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Value Of An Ordered Triplet_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Value Of An Ordered Triplet_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun maximumTripletValue(nums: IntArray): Long {
         val n = nums.size
         var maxTripletValue: Long = 0

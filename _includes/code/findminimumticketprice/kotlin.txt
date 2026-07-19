@@ -9,6 +9,30 @@ class FindMinimumTicketPrice {
     * @param returnPrices The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Find Minimum Ticket Price problem.
+    * Takes `departure` (array of integers), `returnPrices` (array of integers).
+    *
+    * @param departure The input array of integers.
+    * @param returnPrices The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Minimum Ticket Price problem.
+    * Takes `departure` (array of integers), `returnPrices` (array of integers).
+    *
+    * @param departure The input array of integers.
+    * @param returnPrices The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Minimum Ticket Price problem.
+    * Takes `departure` (array of integers), `returnPrices` (array of integers).
+    *
+    * @param departure The input array of integers.
+    * @param returnPrices The input array of integers.
+    * @return The computed integer result.
+    */
     fun findMinimumTicketCost(departure: IntArray, returnPrices: IntArray): Int {
         val n = returnPrices.size
         var minReturnPrice = Int.MAX_VALUE

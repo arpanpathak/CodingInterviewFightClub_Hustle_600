@@ -21,6 +21,30 @@ class AutoCompleteTrie {
     * @param hotness The Int = 1.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `word` (string), `hotness` (Int = 1).
+    *
+    * @param word The input string.
+    * @param hotness The Int = 1.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `word` (string), `hotness` (Int = 1).
+    *
+    * @param word The input string.
+    * @param hotness The Int = 1.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `word` (string), `hotness` (Int = 1).
+    *
+    * @param word The input string.
+    * @param hotness The Int = 1.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun append(word: String, hotness: Int = 1) {
         var currentNode = root
 
@@ -32,6 +56,30 @@ class AutoCompleteTrie {
         currentNode.hotness += hotness
     }
 
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `word` (string), `limit` (Int = 3).
+    *
+    * @param word The input string.
+    * @param limit The Int = 3.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `word` (string), `limit` (Int = 3).
+    *
+    * @param word The input string.
+    * @param limit The Int = 3.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `word` (string), `limit` (Int = 3).
+    *
+    * @param word The input string.
+    * @param limit The Int = 3.
+    * @return The resulting collection (list of strings).
+    */
     /**
     * Solves the Auto Complete Trie problem.
     * Takes `word` (string), `limit` (Int = 3).
@@ -65,6 +113,33 @@ class AutoCompleteTrie {
     * @param results The input MutableList<SearchResultItem>.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `node` (TrieNode?), `prefix` (string), `results` (MutableList<SearchResultItem>).
+    *
+    * @param node The TrieNode? (nullable).
+    * @param prefix The input string.
+    * @param results The input MutableList<SearchResultItem>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `node` (TrieNode?), `prefix` (string), `results` (MutableList<SearchResultItem>).
+    *
+    * @param node The TrieNode? (nullable).
+    * @param prefix The input string.
+    * @param results The input MutableList<SearchResultItem>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `node` (TrieNode?), `prefix` (string), `results` (MutableList<SearchResultItem>).
+    *
+    * @param node The TrieNode? (nullable).
+    * @param prefix The input string.
+    * @param results The input MutableList<SearchResultItem>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun collectWords(node: TrieNode?, prefix: String, results: MutableList<SearchResultItem>) {
         if (node == null)
             return
@@ -85,6 +160,27 @@ class AutocompleteSystem(sentences: Array<String>, times: IntArray) {
         sentences.forEachIndexed{ index, word-> trie.append(word, times[index] ) }
     }
 
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `c` (character).
+    *
+    * @param c The character.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `c` (character).
+    *
+    * @param c The character.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Auto Complete Trie problem.
+    * Takes `c` (character).
+    *
+    * @param c The character.
+    * @return The resulting collection (list of strings).
+    */
     /**
     * Solves the Auto Complete Trie problem.
     * Takes `c` (character).

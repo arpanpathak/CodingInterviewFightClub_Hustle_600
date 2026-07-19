@@ -11,10 +11,67 @@ class LongestCommonSubarray {
     * @param nums2 The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Longest Common Subarray problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Common Subarray problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Common Subarray problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
     fun findLength(nums1: IntArray, nums2: IntArray): Int {
         return dp(nums1, nums2, nums1.lastIndex, nums2.lastIndex, Int.MIN_VALUE)
     }
 
+    /**
+    * Solves the Longest Common Subarray problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers), `i` (integer), `j` (integer), `max` (integer).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param max The integer parameter representing max.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Common Subarray problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers), `i` (integer), `j` (integer), `max` (integer).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param max The integer parameter representing max.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Common Subarray problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers), `i` (integer), `j` (integer), `max` (integer).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param max The integer parameter representing max.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Longest Common Subarray problem.
     * Takes `nums1` (array of integers), `nums2` (array of integers), `i` (integer), `j` (integer), `max` (integer).
@@ -41,6 +98,30 @@ class LongestCommonSubarray {
         return maxSoFar
     }
 
+    /**
+    * Solves the Longest Common Subarray problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Common Subarray problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Common Subarray problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Longest Common Subarray problem.
     * Takes `nums1` (array of integers), `nums2` (array of integers).

@@ -17,11 +17,50 @@ class CountNodeEqualsAverage {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun averageOfSubtree(root: TreeNode?): Int {
         postOrder(root)
         return count;
     }
 
+    /**
+    * Helper: post order.
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
+    /**
+    * Helper: post order.
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
+    /**
+    * Helper: post order.
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
     /**
     * Helper: post order.
     *

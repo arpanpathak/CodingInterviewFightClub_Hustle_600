@@ -9,6 +9,30 @@ class StepByStepDirectionsFromANodeToAnother {
     * @param searchKey The integer parameter representing searchKey.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `searchKey` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param searchKey The integer parameter representing searchKey.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `searchKey` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param searchKey The integer parameter representing searchKey.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `searchKey` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param searchKey The integer parameter representing searchKey.
+    * @return The result, or `null` if not found.
+    */
     fun findNode(root: TreeNode?, searchKey: Int): TreeNode? {
         return when {
             root == null -> null
@@ -17,6 +41,33 @@ class StepByStepDirectionsFromANodeToAnother {
         }
     }
 
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
     /**
     * Solves the Step By Step Directions From ANode To Another problem.
     * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
@@ -36,6 +87,33 @@ class StepByStepDirectionsFromANodeToAnother {
 
     }
 
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `startValue` (integer), `destValue` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param startValue The integer parameter representing startValue.
+    * @param destValue The integer parameter representing destValue.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `startValue` (integer), `destValue` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param startValue The integer parameter representing startValue.
+    * @param destValue The integer parameter representing destValue.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `startValue` (integer), `destValue` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param startValue The integer parameter representing startValue.
+    * @param destValue The integer parameter representing destValue.
+    * @return The resulting string.
+    */
     /**
     * Solves the Step By Step Directions From ANode To Another problem.
     * Takes `root` (binary tree node reference), `startValue` (integer), `destValue` (integer).
@@ -65,6 +143,30 @@ class StepByStepDirectionsFromANodeToAnother {
         return "$upMoves${destPath.toString()}"
     }
 
+    /**
+    * Helper: build path.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param path The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: build path.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param path The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: build path.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param path The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: build path.
     *

@@ -10,9 +10,54 @@ class BinaryTreeVerticalOrderTraversal {
 * @param root The binary tree node reference (nullable).
 * @return The computed integer result.
 */
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `root` (binary tree node reference).
+*
+* @param root The binary tree node reference (nullable).
+* @return The computed integer result.
+*/
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `root` (binary tree node reference).
+*
+* @param root The binary tree node reference (nullable).
+* @return The computed integer result.
+*/
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `root` (binary tree node reference).
+*
+* @param root The binary tree node reference (nullable).
+* @return The computed integer result.
+*/
 //    fun verticalOrder(root: TreeNode?): List<List<Int>> {
 //        val result = TreeMap<Int, LinkedList<Int>>()
 //
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `node` (binary tree node reference), `verticalIndex` (Int = 0).
+*
+* @param node The binary tree node reference (nullable).
+* @param verticalIndex The Int = 0.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `node` (binary tree node reference), `verticalIndex` (Int = 0).
+*
+* @param node The binary tree node reference (nullable).
+* @param verticalIndex The Int = 0.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `node` (binary tree node reference), `verticalIndex` (Int = 0).
+*
+* @param node The binary tree node reference (nullable).
+* @param verticalIndex The Int = 0.
+* @return Unit (no return value, modifies state in-place).
+*/
 /**
 * Solves the Binary Tree Vertical Order Traversal problem.
 * Takes `node` (binary tree node reference), `verticalIndex` (Int = 0).
@@ -39,6 +84,27 @@ class BinaryTreeVerticalOrderTraversal {
     // Define a data class for holding a node and its vertical index
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
+    /**
+    * Solves the Binary Tree Vertical Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Vertical Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Vertical Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     /**
     * Solves the Binary Tree Vertical Order Traversal problem.
     * Takes `root` (binary tree node reference).

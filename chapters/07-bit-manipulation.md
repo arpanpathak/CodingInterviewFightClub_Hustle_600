@@ -82,6 +82,27 @@ class FirstLetterToAppearTwice {
     * @param s The input string.
     * @return The computed result (character).
     */
+    /**
+    * Solves the First Letter To Appear Twice problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed result (character).
+    */
+    /**
+    * Solves the First Letter To Appear Twice problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed result (character).
+    */
+    /**
+    * Solves the First Letter To Appear Twice problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed result (character).
+    */
     fun repeatedCharacterBitset(s: String): Char {
 
         val seen = BitSet(26)  // BitSet for 26 lowercase English letters
@@ -101,10 +122,9 @@ class FirstLetterToAppearTwice {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -115,13 +135,14 @@ class FirstLetterToAppearTwice {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Longest Nice Subarray
 
 ### Problem
@@ -138,6 +159,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package bitset
 
 class LongestNiceSubarray {
+    /**
+    * Solves the Longest Nice Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Nice Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Nice Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Longest Nice Subarray problem.
     * Takes `nums` (array of integers).
@@ -164,10 +206,9 @@ class LongestNiceSubarray {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -178,13 +219,14 @@ class LongestNiceSubarray {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Maximum Xor Of Two Nums In Array
 
 ### Problem
@@ -203,6 +245,27 @@ package bitset
 class MaximumXorOfTwoNumsInArray {
     data class Trie(val children: Array<Trie?> = arrayOfNulls(2))
 
+    /**
+    * Solves the Maximum Xor Of Two Nums In Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Xor Of Two Nums In Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Xor Of Two Nums In Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Maximum Xor Of Two Nums In Array problem.
     * Takes `nums` (array of integers).
@@ -239,6 +302,24 @@ class MaximumXorOfTwoNumsInArray {
     * @param nums The input array of integers.
     * @return The computed result (Trie).
     */
+    /**
+    * Helper: build trie.
+    *
+    * @param nums The input array of integers.
+    * @return The computed result (Trie).
+    */
+    /**
+    * Helper: build trie.
+    *
+    * @param nums The input array of integers.
+    * @return The computed result (Trie).
+    */
+    /**
+    * Helper: build trie.
+    *
+    * @param nums The input array of integers.
+    * @return The computed result (Trie).
+    */
     private fun buildTrie(nums: IntArray): Trie {
         val root = Trie()
 
@@ -259,10 +340,9 @@ class MaximumXorOfTwoNumsInArray {
 }
 ```
 
-
 ### Pattern Insight
 
-Study the code and identify the algorithmic pattern.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -273,9 +353,65 @@ Study the code and identify the algorithmic pattern.
 
 ### Variations
 
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-    if (digit % 2 == 1) {
+
+## Number Of Steps To Reduceaanumberinbinaryrepresentationtoone
+
+### Problem
+
+Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package bitset
+
+class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
+    /**
+    * Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the number of steps to reduceaanumberinbinaryrepresentationtoone problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    fun numSteps(s: String): Int {
+        var steps = 0
+        var carry = 0
+
+        for (i in s.length - 1 downTo 1) {
+            val digit = (s[i] - '0') + carry
+            if (digit % 2 == 1) {
                 steps += 2  // Add 1 (makes it even) + divide by 2
                 carry = 1   // Propagate carry
             } else {
@@ -288,12 +424,24 @@ Study the code and identify the algorithmic pattern.
 }
 ```
 
+### Pattern Insight
+
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---
 
@@ -320,6 +468,27 @@ class NumberOfOneBits {
     * @param n The integer parameter representing n.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Number Of One Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Number Of One Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Number Of One Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun hammingWeight(n: Int): Int {
         var number = n
         var count = 0
@@ -334,15 +503,9 @@ class NumberOfOneBits {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
-
-
-### Pattern Insight
-
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -353,13 +516,14 @@ class NumberOfOneBits {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Reverse Bits
 
 ### Problem
@@ -383,6 +547,27 @@ class ReverseBits {
     * @param n The integer parameter representing n.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Reverse Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Reverse Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Reverse Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun reverseBits(n: Int): Int {
         var num = n
         var result = 0
@@ -398,12 +583,24 @@ class ReverseBits {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -430,6 +627,27 @@ class SingleNumber {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Single Number problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Number problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Number problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun singleNumber(nums: IntArray): Int {
         var xorSum = 0
         nums.forEach { xorSum = xorSum xor it}
@@ -438,10 +656,9 @@ class SingleNumber {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -452,14 +669,53 @@ class SingleNumber {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
- * Solves the Single Number3 problem.
+
+## Single Number3
+
+### Problem
+
+Solves the Single Number3 problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package bitset
+
+class SingleNumber3 {
+    /**
+    * Solves the Single Number3 problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Number3 problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Number3 problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Number3 problem.
     * Takes `nums` (array of integers).
     *
     * @param nums The input array of integers.
@@ -493,6 +749,24 @@ class SingleNumber {
         * @param args The input Array<String>.
         * @return Unit (no return value, modifies state in-place).
         */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
             val test = SingleNumber3()
 
@@ -502,12 +776,24 @@ class SingleNumber {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -534,6 +820,27 @@ class SumOfAllSubsetXorTotal {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Sum Of All Subset Xor Total problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sum Of All Subset Xor Total problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sum Of All Subset Xor Total problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun subsetXORSum(nums: IntArray): Int {
         var result = 0
         // Capture each bit that is set in any of the elements
@@ -546,11 +853,23 @@ class SumOfAllSubsetXorTotal {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---

@@ -8,9 +8,45 @@ class BasicCalculator_III {
     * @param s The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Basic Calculator_III problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Basic Calculator_III problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Basic Calculator_III problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun calculate1(s: String): Int {
         var index = 0
 
+        /**
+        * Solves the Basic Calculator_III problem.
+        *
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Basic Calculator_III problem.
+        *
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Basic Calculator_III problem.
+        *
+        * @return The computed integer result.
+        */
         /**
         * Solves the Basic Calculator_III problem.
         *
@@ -61,9 +97,45 @@ class BasicCalculator_III {
     * @param s The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Basic Calculator_III problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Basic Calculator_III problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Basic Calculator_III problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun calculate(s: String): Int {
         var index = 0
 
+        /**
+        * Solves the Basic Calculator_III problem.
+        *
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Basic Calculator_III problem.
+        *
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Basic Calculator_III problem.
+        *
+        * @return The computed integer result.
+        */
         /**
         * Solves the Basic Calculator_III problem.
         *

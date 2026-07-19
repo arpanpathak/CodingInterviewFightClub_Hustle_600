@@ -9,6 +9,30 @@ class SearchInRotatedArray_II {
     * @param target The integer parameter representing target.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Search In Rotated Array_II problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Search In Rotated Array_II problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Search In Rotated Array_II problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun search(nums: IntArray, target: Int): Boolean {
         var left = 0
         var right = nums.lastIndex

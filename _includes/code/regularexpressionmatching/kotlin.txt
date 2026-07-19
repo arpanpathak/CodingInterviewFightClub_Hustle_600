@@ -11,10 +11,64 @@ class RegularExpressionMatching {
     * @param p The input string.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Regular Expression Matching problem.
+    * Takes `s` (string), `p` (string).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Regular Expression Matching problem.
+    * Takes `s` (string), `p` (string).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Regular Expression Matching problem.
+    * Takes `s` (string), `p` (string).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isMatch(s: String, p: String): Boolean {
         return dfs(s, p, 0, 0)
     }
 
+    /**
+    * Solves the Regular Expression Matching problem.
+    * Takes `s` (string), `p` (string), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Regular Expression Matching problem.
+    * Takes `s` (string), `p` (string), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Regular Expression Matching problem.
+    * Takes `s` (string), `p` (string), `i` (integer), `j` (integer).
+    *
+    * @param s The input string.
+    * @param p The input string.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Regular Expression Matching problem.
     * Takes `s` (string), `p` (string), `i` (integer), `j` (integer).

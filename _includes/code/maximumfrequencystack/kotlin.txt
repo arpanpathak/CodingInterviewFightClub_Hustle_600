@@ -12,6 +12,27 @@ class FreqStack() {
     * @param `val` The integer parameter representing `val`.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Freq Stack problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Freq Stack problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Freq Stack problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun push(`val`: Int) {
         val count = (freq[`val`]?:0) + 1
         freq[`val`] = count
@@ -23,6 +44,21 @@ class FreqStack() {
 
     }
 
+    /**
+    * Solves the Freq Stack problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Freq Stack problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Freq Stack problem.
+    *
+    * @return The computed integer result.
+    */
     /**
     * Solves the Freq Stack problem.
     *

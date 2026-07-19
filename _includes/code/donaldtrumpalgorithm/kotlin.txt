@@ -13,6 +13,33 @@ class DonaldTrumpAlgorithm {
     * @param bornInUsa A boolean flag: bornInUsa.
     * @return The computed result (CitizenshipStatus).
     */
+    /**
+    * Solves the Donald Trump Algorithm problem.
+    * Takes `fatherStatus` (ParentStatus), `motherStatus` (ParentStatus), `bornInUsa` (boolean (true/false)).
+    *
+    * @param fatherStatus The ParentStatus.
+    * @param motherStatus The ParentStatus.
+    * @param bornInUsa A boolean flag: bornInUsa.
+    * @return The computed result (CitizenshipStatus).
+    */
+    /**
+    * Solves the Donald Trump Algorithm problem.
+    * Takes `fatherStatus` (ParentStatus), `motherStatus` (ParentStatus), `bornInUsa` (boolean (true/false)).
+    *
+    * @param fatherStatus The ParentStatus.
+    * @param motherStatus The ParentStatus.
+    * @param bornInUsa A boolean flag: bornInUsa.
+    * @return The computed result (CitizenshipStatus).
+    */
+    /**
+    * Solves the Donald Trump Algorithm problem.
+    * Takes `fatherStatus` (ParentStatus), `motherStatus` (ParentStatus), `bornInUsa` (boolean (true/false)).
+    *
+    * @param fatherStatus The ParentStatus.
+    * @param motherStatus The ParentStatus.
+    * @param bornInUsa A boolean flag: bornInUsa.
+    * @return The computed result (CitizenshipStatus).
+    */
     fun determineChildCitizenship(fatherStatus: ParentStatus, motherStatus: ParentStatus, bornInUsa: Boolean): CitizenshipStatus =
         if (bornInUsa) {
             when {
@@ -21,6 +48,21 @@ class DonaldTrumpAlgorithm {
             }
         } else CitizenshipStatus.NOT_A_CITIZEN
 
+    /**
+    * Entry point for the program.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Entry point for the program.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Entry point for the program.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Entry point for the program.
     *

@@ -12,6 +12,27 @@ class SingleThreadedCPU {
     * @param tasks The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Single Threaded CPU problem.
+    * Takes `tasks` (2D matrix of integers).
+    *
+    * @param tasks The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Threaded CPU problem.
+    * Takes `tasks` (2D matrix of integers).
+    *
+    * @param tasks The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Threaded CPU problem.
+    * Takes `tasks` (2D matrix of integers).
+    *
+    * @param tasks The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun getOrder(tasks: Array<IntArray>): IntArray {
         val allTasks = tasks.mapIndexed { i, (enq, proc) -> Task(enq, proc, i) }
             .sortedBy { it.enqueueTime }

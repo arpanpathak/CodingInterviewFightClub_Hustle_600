@@ -8,6 +8,27 @@ class NumberOfOneBits {
     * @param n The integer parameter representing n.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Number Of One Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Number Of One Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Number Of One Bits problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun hammingWeight(n: Int): Int {
         var number = n
         var count = 0

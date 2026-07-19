@@ -9,6 +9,30 @@ class RemoveNthNodeFromEndOfList {
     * @param n The integer parameter representing n.
     * @return The resulting collection (linked list node reference).
     */
+    /**
+    * Solves the Remove Nth Node From End Of List problem.
+    * Takes `head` (linked list node reference), `n` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Remove Nth Node From End Of List problem.
+    * Takes `head` (linked list node reference), `n` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the Remove Nth Node From End Of List problem.
+    * Takes `head` (linked list node reference), `n` (integer).
+    *
+    * @param head The input linked list node reference.
+    * @param n The integer parameter representing n.
+    * @return The resulting collection (linked list node reference).
+    */
     fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
         var size = 0
         var ptr = head
@@ -22,6 +46,30 @@ class RemoveNthNodeFromEndOfList {
         return removeNthFromFront(head, indexToRemove, size)
     }
 
+    /**
+    * Helper: remove nth from front.
+    *
+    * @param head The input linked list node reference.
+    * @param indexToRemove The integer parameter representing indexToRemove.
+    * @param size The integer parameter representing size.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Helper: remove nth from front.
+    *
+    * @param head The input linked list node reference.
+    * @param indexToRemove The integer parameter representing indexToRemove.
+    * @param size The integer parameter representing size.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Helper: remove nth from front.
+    *
+    * @param head The input linked list node reference.
+    * @param indexToRemove The integer parameter representing indexToRemove.
+    * @param size The integer parameter representing size.
+    * @return The resulting collection (linked list node reference).
+    */
     /**
     * Helper: remove nth from front.
     *

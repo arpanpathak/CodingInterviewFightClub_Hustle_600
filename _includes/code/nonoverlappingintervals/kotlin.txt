@@ -8,6 +8,27 @@ class NonOverlappingIntervals {
     * @param intervals The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Non Overlapping Intervals problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Non Overlapping Intervals problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Non Overlapping Intervals problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun eraseOverlapIntervals(intervals: Array<IntArray>): Int {
         intervals.sortWith(compareBy { it[0] })
 

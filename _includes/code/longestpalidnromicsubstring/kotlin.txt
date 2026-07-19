@@ -8,6 +8,27 @@ class LongestPalidnromicSubstring {
     * @param s The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Longest Palidnromic Substring problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Palidnromic Substring problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Palidnromic Substring problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun longestPalindrome(s: String): String {
         if (s.isEmpty()) return ""
 
@@ -15,6 +36,30 @@ class LongestPalidnromicSubstring {
         var maxLength = 1
 
         // Helper function to expand around the center
+        /**
+        * Solves the Longest Palidnromic Substring problem.
+        * Takes `left` (integer), `right` (integer).
+        *
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Palidnromic Substring problem.
+        * Takes `left` (integer), `right` (integer).
+        *
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Palidnromic Substring problem.
+        * Takes `left` (integer), `right` (integer).
+        *
+        * @param left The integer parameter representing left.
+        * @param right The integer parameter representing right.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Longest Palidnromic Substring problem.
         * Takes `left` (integer), `right` (integer).

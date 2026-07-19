@@ -10,8 +10,56 @@ class RangeSumOfBST {
     * @param high The integer parameter representing high.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Range Sum Of BST problem.
+    * Takes `root` (binary tree node reference), `low` (integer), `high` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param low The integer parameter representing low.
+    * @param high The integer parameter representing high.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Range Sum Of BST problem.
+    * Takes `root` (binary tree node reference), `low` (integer), `high` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param low The integer parameter representing low.
+    * @param high The integer parameter representing high.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Range Sum Of BST problem.
+    * Takes `root` (binary tree node reference), `low` (integer), `high` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param low The integer parameter representing low.
+    * @param high The integer parameter representing high.
+    * @return The computed integer result.
+    */
     fun rangeSumBST(root: TreeNode?, low: Int, high: Int): Int {
         var sum = 0
+        /**
+        * Solves the Range Sum Of BST problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Range Sum Of BST problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Range Sum Of BST problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Range Sum Of BST problem.
         * Takes `node` (binary tree node reference).

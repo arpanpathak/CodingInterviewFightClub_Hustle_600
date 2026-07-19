@@ -8,6 +8,27 @@ class RemoveAllAdjacentDuplicatesInString {
     * @param s The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Remove All Adjacent Duplicates In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Remove All Adjacent Duplicates In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Remove All Adjacent Duplicates In String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun removeDuplicates(s: String): String {
         val stack = ArrayDeque<Char>()
 

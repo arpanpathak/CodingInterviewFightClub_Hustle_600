@@ -13,6 +13,30 @@ class CountWordsWithAGivenPrefix_Trie_FP {
     * @param prefix The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Words With AGiven Prefix_Trie_FP problem.
+    * Takes `words` (Array<String>), `prefix` (string).
+    *
+    * @param words The input Array<String>.
+    * @param prefix The input string.
+    * @return The computed integer result.
+    */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         words.forEach { word ->
             word.fold(root) { node, ch ->
@@ -22,6 +46,24 @@ class CountWordsWithAGivenPrefix_Trie_FP {
         return prefixSearch(prefix)?.prefixCount ?: 0
     }
 
+    /**
+    * Helper: prefix search.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Helper: prefix search.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Helper: prefix search.
+    *
+    * @param prefix The input string.
+    * @return The result, or `null` if not found.
+    */
     /**
     * Helper: prefix search.
     *

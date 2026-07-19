@@ -11,6 +11,27 @@ class FindWinnerOnATicTacToeGame {
     * @param moves The input 2D matrix of integers.
     * @return The resulting string.
     */
+    /**
+    * Solves the Find Winner On ATic Tac Toe Game problem.
+    * Takes `moves` (2D matrix of integers).
+    *
+    * @param moves The input 2D matrix of integers.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Find Winner On ATic Tac Toe Game problem.
+    * Takes `moves` (2D matrix of integers).
+    *
+    * @param moves The input 2D matrix of integers.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Find Winner On ATic Tac Toe Game problem.
+    * Takes `moves` (2D matrix of integers).
+    *
+    * @param moves The input 2D matrix of integers.
+    * @return The resulting string.
+    */
     fun tictactoe(moves: Array<IntArray>): String {
         for ((i, move) in moves.withIndex()) {
             val player = players[i % 2] // Alternate between Player A and B
@@ -39,6 +60,27 @@ class FindWinnerOnATicTacToeGame {
     * @param player The character.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Helper: check row.
+    *
+    * @param row The integer parameter representing row.
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: check row.
+    *
+    * @param row The integer parameter representing row.
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: check row.
+    *
+    * @param row The integer parameter representing row.
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun checkRow(row: Int, player: Char): Boolean {
         for (col in 0 until 3) {
             if (board[row][col] != player) return false
@@ -47,6 +89,27 @@ class FindWinnerOnATicTacToeGame {
     }
 
     // Check if the entire column is filled by the player
+    /**
+    * Helper: check column.
+    *
+    * @param col The integer parameter representing col.
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: check column.
+    *
+    * @param col The integer parameter representing col.
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: check column.
+    *
+    * @param col The integer parameter representing col.
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: check column.
     *
@@ -68,6 +131,24 @@ class FindWinnerOnATicTacToeGame {
     * @param player The character.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Helper: check diagonal.
+    *
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: check diagonal.
+    *
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: check diagonal.
+    *
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun checkDiagonal(player: Char): Boolean {
         for (i in 0 until 3) {
             if (board[i][i] != player) return false
@@ -76,6 +157,24 @@ class FindWinnerOnATicTacToeGame {
     }
 
     // Check if the anti-diagonal is filled by the player
+    /**
+    * Helper: check anti diagonal.
+    *
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: check anti diagonal.
+    *
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: check anti diagonal.
+    *
+    * @param player The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: check anti diagonal.
     *

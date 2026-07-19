@@ -8,9 +8,54 @@ class BinaryTreeRightSideView {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Binary Tree Right Side View problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Right Side View problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Right Side View problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun rightSideView(root: TreeNode?): List<Int> {
         val rightSide = mutableListOf<Int>()
 
+        /**
+        * Solves the Binary Tree Right Side View problem.
+        * Takes `node` (binary tree node reference), `level` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param level The integer parameter representing level.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Binary Tree Right Side View problem.
+        * Takes `node` (binary tree node reference), `level` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param level The integer parameter representing level.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Binary Tree Right Side View problem.
+        * Takes `node` (binary tree node reference), `level` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param level The integer parameter representing level.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Binary Tree Right Side View problem.
         * Takes `node` (binary tree node reference), `level` (integer).

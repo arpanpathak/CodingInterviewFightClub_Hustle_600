@@ -8,6 +8,27 @@ class RobotBoundedInCircle {
     * @param instructions The input string.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Robot Bounded In Circle problem.
+    * Takes `instructions` (string).
+    *
+    * @param instructions The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Robot Bounded In Circle problem.
+    * Takes `instructions` (string).
+    *
+    * @param instructions The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Robot Bounded In Circle problem.
+    * Takes `instructions` (string).
+    *
+    * @param instructions The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isRobotBounded(instructions: String): Boolean {
         var (x, y) = 0 to 0
         var dir = 0

@@ -11,6 +11,27 @@ class FindLargestValueInEachTreeRow {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Find Largest Value In Each Tree Row problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Largest Value In Each Tree Row problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Largest Value In Each Tree Row problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun largestValues(root: TreeNode?): List<Int> {
         val result = mutableListOf<Int>()
 

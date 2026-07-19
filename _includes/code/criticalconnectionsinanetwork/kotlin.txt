@@ -16,6 +16,30 @@ class CriticalConnectionsInANetwork {
     * @param connections The input 2D list of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Critical Connections In ANetwork problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Critical Connections In ANetwork problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Critical Connections In ANetwork problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
     fun criticalConnections(n: Int, connections: List<List<Int>>): List<List<Int>> {
         G = Array(n) { mutableListOf() }
         result = mutableListOf()
@@ -40,6 +64,27 @@ class CriticalConnectionsInANetwork {
         return result
     }
 
+    /**
+    * Helper: dfs.
+    *
+    * @param node The integer parameter representing node.
+    * @param parent The integer parameter representing parent.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The integer parameter representing node.
+    * @param parent The integer parameter representing parent.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The integer parameter representing node.
+    * @param parent The integer parameter representing parent.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: dfs.
     *

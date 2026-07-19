@@ -8,6 +8,27 @@ class UniqueNumberOfOccurences {
     * @param arr The input array of integers.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Unique Number Of Occurences problem.
+    * Takes `arr` (array of integers).
+    *
+    * @param arr The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Unique Number Of Occurences problem.
+    * Takes `arr` (array of integers).
+    *
+    * @param arr The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Unique Number Of Occurences problem.
+    * Takes `arr` (array of integers).
+    *
+    * @param arr The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun uniqueOccurrences(arr: IntArray): Boolean {
         val map = mutableMapOf<Int, Int>()
 

@@ -10,8 +10,50 @@ class DiameterOfBinaryTree {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Diameter Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Diameter Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Diameter Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun diameterOfBinaryTree(root: TreeNode?): Int {
         var max = 0
+        /**
+        * Solves the Diameter Of Binary Tree problem.
+        * Takes `root` (binary tree node reference).
+        *
+        * @param root The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Diameter Of Binary Tree problem.
+        * Takes `root` (binary tree node reference).
+        *
+        * @param root The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Diameter Of Binary Tree problem.
+        * Takes `root` (binary tree node reference).
+        *
+        * @param root The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
         /**
         * Solves the Diameter Of Binary Tree problem.
         * Takes `root` (binary tree node reference).

@@ -8,6 +8,27 @@ class SingleElementInASortedArray {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Single Element In ASorted Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Element In ASorted Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Element In ASorted Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun singleNonDuplicate(nums: IntArray): Int {
         var low = 0
         var high = nums.size - 1

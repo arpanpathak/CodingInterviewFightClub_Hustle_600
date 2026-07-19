@@ -11,6 +11,27 @@ class MinStack() {
     * @param `val` The integer parameter representing `val`.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Min Stack problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Min Stack problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Min Stack problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun push(`val`: Int) {
         stack.add(`val`)
         if (minStack.isEmpty() || `val` <= minStack.last()) {
@@ -18,6 +39,21 @@ class MinStack() {
         }
     }
 
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Min Stack problem.
     *
@@ -37,10 +73,40 @@ class MinStack() {
     *
     * @return The computed integer result.
     */
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return The computed integer result.
+    */
     fun top(): Int {
         return stack.last()
     }
 
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Stack problem.
+    *
+    * @return The computed integer result.
+    */
     /**
     * Solves the Min Stack problem.
     *

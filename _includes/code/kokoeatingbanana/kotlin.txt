@@ -30,6 +30,30 @@ class KokoEatingBanana {
      * Time  Complexity: O(n log m) where n = piles.size, m = max(piles)
      * Space Complexity: O(1)
      */
+    /**
+    * Solves the Koko Eating Banana problem.
+    * Takes `piles` (array of integers), `h` (integer).
+    *
+    * @param piles The input array of integers.
+    * @param h The integer parameter representing h.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Koko Eating Banana problem.
+    * Takes `piles` (array of integers), `h` (integer).
+    *
+    * @param piles The input array of integers.
+    * @param h The integer parameter representing h.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Koko Eating Banana problem.
+    * Takes `piles` (array of integers), `h` (integer).
+    *
+    * @param piles The input array of integers.
+    * @param h The integer parameter representing h.
+    * @return The computed integer result.
+    */
     fun minEatingSpeed(piles: IntArray, h: Int): Int {
         // ── Step 1: Define binary search bounds ──
         // Left: slowest possible speed (1 banana/hour)
@@ -84,6 +108,30 @@ class KokoEatingBanana {
      * @param k     Eating speed in bananas per hour
      * @return      True if total hours needed <= h
      */
+    /**
+    * Helper: can eat all bananas.
+    *
+    * @param piles The input array of integers.
+    * @param h The integer parameter representing h.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: can eat all bananas.
+    *
+    * @param piles The input array of integers.
+    * @param h The integer parameter representing h.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: can eat all bananas.
+    *
+    * @param piles The input array of integers.
+    * @param h The integer parameter representing h.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun canEatAllBananas(piles: IntArray, h: Int, k: Int): Boolean {
         var totalHours = 0
         for (pile in piles) {

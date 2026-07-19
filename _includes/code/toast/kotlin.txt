@@ -9,6 +9,30 @@ class Toast {
     * @param S The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Toast problem.
+    * Takes `A` (Array<String>), `S` (string).
+    *
+    * @param A The input Array<String>.
+    * @param S The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Toast problem.
+    * Takes `A` (Array<String>), `S` (string).
+    *
+    * @param A The input Array<String>.
+    * @param S The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Toast problem.
+    * Takes `A` (Array<String>), `S` (string).
+    *
+    * @param A The input Array<String>.
+    * @param S The input string.
+    * @return The computed integer result.
+    */
     fun solution(A: Array<String>, S: String): Int {
         // Create a frequency map for the characters in S
         val sCharCount = mutableMapOf<Char, Int>()

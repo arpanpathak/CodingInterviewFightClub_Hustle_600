@@ -15,6 +15,30 @@ class DesignANumberContainerSystem {
     * @param number The integer parameter representing number.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Design ANumber Container System problem.
+    * Takes `index` (integer), `number` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param number The integer parameter representing number.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Design ANumber Container System problem.
+    * Takes `index` (integer), `number` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param number The integer parameter representing number.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Design ANumber Container System problem.
+    * Takes `index` (integer), `number` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param number The integer parameter representing number.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun change(index: Int, number: Int) {
         // If the index was previously associated with a number, remove it from that number's set
         indexToNumber[index]?.let { previousNumber ->
@@ -29,6 +53,27 @@ class DesignANumberContainerSystem {
     }
 
     // Find the smallest index where the given number is stored
+    /**
+    * Solves the Design ANumber Container System problem.
+    * Takes `number` (integer).
+    *
+    * @param number The integer parameter representing number.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Design ANumber Container System problem.
+    * Takes `number` (integer).
+    *
+    * @param number The integer parameter representing number.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Design ANumber Container System problem.
+    * Takes `number` (integer).
+    *
+    * @param number The integer parameter representing number.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Design ANumber Container System problem.
     * Takes `number` (integer).

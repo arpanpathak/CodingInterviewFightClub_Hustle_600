@@ -8,10 +8,49 @@ class SudokuSolver {
     * @param board The input Array<CharArray>.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Sudoku Solver problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun solveSudoku(board: Array<CharArray>) {
         solve(board)
     }
 
+    /**
+    * Helper: solve.
+    *
+    * @param board The input Array<CharArray>.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: solve.
+    *
+    * @param board The input Array<CharArray>.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: solve.
+    *
+    * @param board The input Array<CharArray>.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: solve.
     *
@@ -36,6 +75,33 @@ class SudokuSolver {
         return true // board solved
     }
 
+    /**
+    * Helper: is valid.
+    *
+    * @param board The input Array<CharArray>.
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param ch The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid.
+    *
+    * @param board The input Array<CharArray>.
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param ch The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is valid.
+    *
+    * @param board The input Array<CharArray>.
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @param ch The character.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: is valid.
     *

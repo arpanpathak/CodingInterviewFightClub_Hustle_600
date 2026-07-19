@@ -10,6 +10,27 @@ class MinimumReplacementToSortTheArray {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Minimum Replacement To Sort The Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Replacement To Sort The Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Replacement To Sort The Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun minimumReplacement(nums: IntArray): Long {
         var answer = 0L
         val n = nums.size

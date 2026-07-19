@@ -19,6 +19,27 @@ class MinCostToConnectAllPointsKruskal {
         * @param x The integer parameter representing x.
         * @return The computed integer result.
         */
+        /**
+        * Solves the Min Cost To Connect All Points Kruskal problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Min Cost To Connect All Points Kruskal problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Min Cost To Connect All Points Kruskal problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
         fun find(x: Int): Int {
             if (nodes[x].parent != x) {
                 nodes[x].parent = find(nodes[x].parent)
@@ -26,6 +47,30 @@ class MinCostToConnectAllPointsKruskal {
             return nodes[x].parent
         }
 
+        /**
+        * Solves the Min Cost To Connect All Points Kruskal problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Min Cost To Connect All Points Kruskal problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Min Cost To Connect All Points Kruskal problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Min Cost To Connect All Points Kruskal problem.
         * Takes `x` (integer), `y` (integer).
@@ -50,6 +95,27 @@ class MinCostToConnectAllPointsKruskal {
         }
     }
 
+    /**
+    * Solves the Min Cost To Connect All Points Kruskal problem.
+    * Takes `points` (2D matrix of integers).
+    *
+    * @param points The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Cost To Connect All Points Kruskal problem.
+    * Takes `points` (2D matrix of integers).
+    *
+    * @param points The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Cost To Connect All Points Kruskal problem.
+    * Takes `points` (2D matrix of integers).
+    *
+    * @param points The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Min Cost To Connect All Points Kruskal problem.
     * Takes `points` (2D matrix of integers).

@@ -22,6 +22,27 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
     * @param root The Node? (nullable).
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Convert BInary Search Tree To Sorted Doubly Linked List problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Convert BInary Search Tree To Sorted Doubly Linked List problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Convert BInary Search Tree To Sorted Doubly Linked List problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun treeToDoublyList(root: Node?): Node? {
         if (root == null) return null
 
@@ -35,6 +56,24 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
         return head
     }
 
+    /**
+    * Helper: inorder traversal.
+    *
+    * @param node The Node? (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: inorder traversal.
+    *
+    * @param node The Node? (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: inorder traversal.
+    *
+    * @param node The Node? (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: inorder traversal.
     *

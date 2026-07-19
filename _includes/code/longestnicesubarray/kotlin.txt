@@ -8,6 +8,27 @@ class LongestNiceSubarray {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Longest Nice Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Nice Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Nice Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun longestNiceSubarray(nums: IntArray): Int {
         var left = 0
         var bitMask = 0

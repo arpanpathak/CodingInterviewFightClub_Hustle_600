@@ -17,6 +17,27 @@ class IntegerToEnglishWords {
         * @param num The integer parameter representing num.
         * @return The resulting string.
         */
+        /**
+        * Solves the Integer To English Words problem.
+        * Takes `num` (integer).
+        *
+        * @param num The integer parameter representing num.
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Integer To English Words problem.
+        * Takes `num` (integer).
+        *
+        * @param num The integer parameter representing num.
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Integer To English Words problem.
+        * Takes `num` (integer).
+        *
+        * @param num The integer parameter representing num.
+        * @return The resulting string.
+        */
         fun numberToWords(num: Int): String {
             if (num == 0) return "Zero"
 
@@ -35,6 +56,24 @@ class IntegerToEnglishWords {
             return result.toString().trim()
         }
 
+        /**
+        * Helper: dfs.
+        *
+        * @param num The integer parameter representing num.
+        * @return The resulting string.
+        */
+        /**
+        * Helper: dfs.
+        *
+        * @param num The integer parameter representing num.
+        * @return The resulting string.
+        */
+        /**
+        * Helper: dfs.
+        *
+        * @param num The integer parameter representing num.
+        * @return The resulting string.
+        */
         /**
         * Helper: dfs.
         *

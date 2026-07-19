@@ -21,6 +21,39 @@ class CheapestFlightsWithinKStops {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         flights.forEach { flight ->
@@ -63,6 +96,39 @@ class CheapestFlightsWithinKStops {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun findCheapestPriceBfs(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         flights.forEach { flight ->
@@ -79,6 +145,30 @@ class CheapestFlightsWithinKStops {
     }
 
 
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Cheapest Flights Within KStops problem.
     * Takes `graph` (MutableMap<Int), `src` (integer).
@@ -115,6 +205,36 @@ class CheapestFlightsWithinKStops {
         return dist
     }
 
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `src` (integer), `dest` (integer), `n` (integer), `k` (integer).
+    *
+    * @param src The integer parameter representing src.
+    * @param dest The integer parameter representing dest.
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `src` (integer), `dest` (integer), `n` (integer), `k` (integer).
+    *
+    * @param src The integer parameter representing src.
+    * @param dest The integer parameter representing dest.
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `src` (integer), `dest` (integer), `n` (integer), `k` (integer).
+    *
+    * @param src The integer parameter representing src.
+    * @param dest The integer parameter representing dest.
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Cheapest Flights Within KStops problem.
     * Takes `src` (integer), `dest` (integer), `n` (integer), `k` (integer).
@@ -165,6 +285,33 @@ class CheapestFlightsWithinKStops {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer), `k` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer), `k` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer), `k` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun dijkstraWithMaxKStops(graph: MutableMap<Int, MutableList<Node>>, src: Int, k: Int): Map<Int, Int> {
         val pq = PriorityQueue<State>(compareBy { it.cost })
         pq.offer(State(src, 0, 0))
@@ -193,6 +340,24 @@ class CheapestFlightsWithinKStops {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Entry point for the program.
         *

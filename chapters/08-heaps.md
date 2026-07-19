@@ -64,6 +64,21 @@ class DualBalancedHeap<T : Comparable<T>> {
     *
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun balanceHeaps() {
         if (maxHeap.size > minHeap.size + 1) {
             minHeap.add(maxHeap.poll())
@@ -72,6 +87,27 @@ class DualBalancedHeap<T : Comparable<T>> {
         }
     }
 
+    /**
+    * Solves the Dual Balanced Heap problem.
+    * Takes `num` (T).
+    *
+    * @param num The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Dual Balanced Heap problem.
+    * Takes `num` (T).
+    *
+    * @param num The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Dual Balanced Heap problem.
+    * Takes `num` (T).
+    *
+    * @param num The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Dual Balanced Heap problem.
     * Takes `num` (T).
@@ -95,6 +131,27 @@ class DualBalancedHeap<T : Comparable<T>> {
     * @param num The T.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Dual Balanced Heap problem.
+    * Takes `num` (T).
+    *
+    * @param num The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Dual Balanced Heap problem.
+    * Takes `num` (T).
+    *
+    * @param num The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Dual Balanced Heap problem.
+    * Takes `num` (T).
+    *
+    * @param num The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun remove(num: T) {
         if (maxHeap.contains(num)) {
             maxHeap.remove(num)
@@ -104,6 +161,21 @@ class DualBalancedHeap<T : Comparable<T>> {
         balanceHeaps()
     }
 
+    /**
+    * Solves the Dual Balanced Heap problem.
+    *
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Dual Balanced Heap problem.
+    *
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Dual Balanced Heap problem.
+    *
+    * @return The result, or `null` if not found.
+    */
     /**
     * Solves the Dual Balanced Heap problem.
     *
@@ -124,16 +196,30 @@ class DualBalancedHeap<T : Comparable<T>> {
     *
     * @return The computed integer result.
     */
+    /**
+    * Solves the Dual Balanced Heap problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Dual Balanced Heap problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Dual Balanced Heap problem.
+    *
+    * @return The computed integer result.
+    */
     fun size(): Int {
         return maxHeap.size + minHeap.size
     }
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
+**Heap Pattern.** Maintain dynamic ordering. Min-heap for k-largest, max-heap for k-smallest, dual heaps for median. Each operation O(log k).
 
 ### Complexity
 
@@ -144,13 +230,14 @@ class DualBalancedHeap<T : Comparable<T>> {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if you need k-th smallest instead of largest?
+1. What if elements are added/removed dynamically?
+1. Sorting vs heap — compare O(n log n) vs O(n log k)?
+1. What if k is very large (close to n)? Different approach?
+1. How to handle ties in priority ordering?
 
 ---
+
 ## MK Average
 
 ### Problem
@@ -174,6 +261,27 @@ class MKAverage(private val m: Int, private val k: Int) {
     private val highHeap = PriorityQueue<Int>() // min heap (for k largest elements)
     private var sum = 0L // Sum of the middle elements
 
+    /**
+    * Solves the MKAverage problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the MKAverage problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the MKAverage problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the MKAverage problem.
     * Takes `num` (integer).
@@ -218,6 +326,21 @@ class MKAverage(private val m: Int, private val k: Int) {
     *
     * @return The computed integer result.
     */
+    /**
+    * Solves the MKAverage problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the MKAverage problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the MKAverage problem.
+    *
+    * @return The computed integer result.
+    */
     fun calculateMKAverage(): Int {
         return if (deque.size < m) {
             -1
@@ -228,6 +351,21 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Balance heaps to ensure there are k elements in each of the heaps
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: balance heaps.
     *
@@ -244,6 +382,21 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Recalculate the sum of the middle elements in the sliding window
+    /**
+    * Helper: recalculate middle sum.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: recalculate middle sum.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: recalculate middle sum.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: recalculate middle sum.
     *
@@ -267,6 +420,21 @@ class MKAverage(private val m: Int, private val k: Int) {
 *
 * @return Unit (no return value, modifies state in-place).
 */
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() {
     val obj = MKAverage(3, 1)
     obj.addElement(3)
@@ -284,10 +452,9 @@ fun main() {
  */
 ```
 
-
 ### Pattern Insight
 
-Study the code and identify the algorithmic pattern.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -298,8 +465,14 @@ Study the code and identify the algorithmic pattern.
 
 ### Variations
 
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Find K Closest Elements
 
 ### Problem
@@ -363,6 +536,24 @@ class FindKClosestElements {
             * @param args The input Array<String>.
             * @return Unit (no return value, modifies state in-place).
             */
+            /**
+            * Entry point for the program.
+            *
+            * @param args The input Array<String>.
+            * @return Unit (no return value, modifies state in-place).
+            */
+            /**
+            * Entry point for the program.
+            *
+            * @param args The input Array<String>.
+            * @return Unit (no return value, modifies state in-place).
+            */
+            /**
+            * Entry point for the program.
+            *
+            * @param args The input Array<String>.
+            * @return Unit (no return value, modifies state in-place).
+            */
             fun main(args: Array<String>) {
                 val testClass = FindKClosestElements()
 
@@ -373,15 +564,9 @@ class FindKClosestElements {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
-
-
-### Pattern Insight
-
-**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
 
 ### Complexity
 
@@ -392,14 +577,81 @@ class FindKClosestElements {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---
- = true
+
+## Find Score Of An Array After Marking All Elements
+
+### Problem
+
+Solves the Find Score Of An Array After Marking All Elements problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package heap
+
+import java.util.*
+
+class FindScoreOfAnArrayAfterMarkingAllElements {
+    /**
+    * Solves the Find Score Of An Array After Marking All Elements problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Score Of An Array After Marking All Elements problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Score Of An Array After Marking All Elements problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Score Of An Array After Marking All Elements problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    fun findScore(nums: IntArray): Long {
+        val n = nums.size
+        val marked = BooleanArray(n) { false }
+
+        val minHeap = PriorityQueue<Pair<Int, Int>> { a, b ->
+            if (a.first == b.first) a.second - b.second else a.first - b.first
+        }
+
+        nums.forEachIndexed { index, value -> minHeap.add(Pair(value, index)) }
+
+        var score = 0L
+
+        while (minHeap.isNotEmpty()) {
+            val (value, index) = minHeap.poll()
+
+            if (marked[index]) continue
+
+            score += value
+
+            marked[index] = true
+            if (index > 0) marked[index - 1] = true
             if (index < n - 1) marked[index + 1] = true
         }
 
@@ -408,12 +660,24 @@ class FindKClosestElements {
 }
 ```
 
+### Pattern Insight
+
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n log k) |
 | **Space** | O(k) |
+
+### Variations
+
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---
 
@@ -447,6 +711,36 @@ class IPO {
     * @param capital The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the IPO problem.
+    * Takes `k` (integer), `w` (integer), `profits` (array of integers), `capital` (array of integers).
+    *
+    * @param k The integer parameter representing k.
+    * @param w The integer parameter representing w.
+    * @param profits The input array of integers.
+    * @param capital The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the IPO problem.
+    * Takes `k` (integer), `w` (integer), `profits` (array of integers), `capital` (array of integers).
+    *
+    * @param k The integer parameter representing k.
+    * @param w The integer parameter representing w.
+    * @param profits The input array of integers.
+    * @param capital The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the IPO problem.
+    * Takes `k` (integer), `w` (integer), `profits` (array of integers), `capital` (array of integers).
+    *
+    * @param k The integer parameter representing k.
+    * @param w The integer parameter representing w.
+    * @param profits The input array of integers.
+    * @param capital The input array of integers.
+    * @return The computed integer result.
+    */
     fun findMaximizedCapital(k: Int, w: Int, profits: IntArray, capital: IntArray): Int {
         val projects = capital.indices
             .map { Project(capital[it], profits[it]) }
@@ -469,10 +763,9 @@ class IPO {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -483,13 +776,14 @@ class IPO {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Longest Happy String
 
 ### Problem
@@ -508,6 +802,33 @@ package heap
 import java.util.*
 
 class LongestHappyString {
+    /**
+    * Solves the Longest Happy String problem.
+    * Takes `a` (integer), `b` (integer), `c` (integer).
+    *
+    * @param a The integer parameter representing a.
+    * @param b The integer parameter representing b.
+    * @param c The integer parameter representing c.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Happy String problem.
+    * Takes `a` (integer), `b` (integer), `c` (integer).
+    *
+    * @param a The integer parameter representing a.
+    * @param b The integer parameter representing b.
+    * @param c The integer parameter representing c.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Happy String problem.
+    * Takes `a` (integer), `b` (integer), `c` (integer).
+    *
+    * @param a The integer parameter representing a.
+    * @param b The integer parameter representing b.
+    * @param c The integer parameter representing c.
+    * @return The resulting string.
+    */
     /**
     * Solves the Longest Happy String problem.
     * Takes `a` (integer), `b` (integer), `c` (integer).
@@ -577,10 +898,9 @@ class LongestHappyString {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Dijkstra / priority-queue BFS. Use a min-heap to always expand the cheapest node first.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -591,14 +911,91 @@ class LongestHappyString {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
-edian From Running Stream problem.
+
+## Median From Running Stream
+
+### Problem
+
+Solves the Median From Running Stream problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package heap
+
+import java.util.*
+import kotlin.Comparator
+
+class MedianFromRunningStream {
+    private val minHeap = PriorityQueue<Int>() // Min-heap for the larger half
+    private val maxHeap = PriorityQueue<Int>(compareBy() { -it }) // Max-heap for the smaller half
+
+
+    /**
+    * Solves the Median From Running Stream problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Median From Running Stream problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Median From Running Stream problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Median From Running Stream problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    fun addNum(num: Int) {
+        minHeap.offer(num)
+        maxHeap.offer(minHeap.poll())
+
+        if (minHeap.size < maxHeap.size) {
+            minHeap.offer(maxHeap.poll())
+        }
+    }
+
+    /**
+    * Solves the Median From Running Stream problem.
+    *
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Median From Running Stream problem.
+    *
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Median From Running Stream problem.
+    *
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Median From Running Stream problem.
     *
     * @return The computed floating-point result.
     */
@@ -612,12 +1009,24 @@ edian From Running Stream problem.
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n log k) |
 | **Space** | O(k) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -641,6 +1050,30 @@ import java.util.*
 class MeetingRoom_III {
     data class Room(val endTime: Long, val index: Int)
 
+    /**
+    * Solves the Meeting Room_III problem.
+    * Takes `n` (integer), `meetings` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param meetings The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Meeting Room_III problem.
+    * Takes `n` (integer), `meetings` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param meetings The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Meeting Room_III problem.
+    * Takes `n` (integer), `meetings` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param meetings The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Meeting Room_III problem.
     * Takes `n` (integer), `meetings` (2D matrix of integers).
@@ -698,12 +1131,24 @@ class MeetingRoom_III {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n log k) |
 | **Space** | O(k) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -727,6 +1172,27 @@ import java.util.*
 class SingleThreadedCPU {
     data class Task(val enqueueTime: Int, val processingTime: Int, val index: Int)
 
+    /**
+    * Solves the Single Threaded CPU problem.
+    * Takes `tasks` (2D matrix of integers).
+    *
+    * @param tasks The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Threaded CPU problem.
+    * Takes `tasks` (2D matrix of integers).
+    *
+    * @param tasks The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Single Threaded CPU problem.
+    * Takes `tasks` (2D matrix of integers).
+    *
+    * @param tasks The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Single Threaded CPU problem.
     * Takes `tasks` (2D matrix of integers).
@@ -763,12 +1229,24 @@ class SingleThreadedCPU {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n log k) |
 | **Space** | O(k) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -799,6 +1277,21 @@ class SlidingWindowMedian {
     *
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: balance heaps.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun balanceHeaps() {
         if (maxHeap.size > minHeap.size + 1) {
             minHeap.add(maxHeap.poll())
@@ -807,6 +1300,24 @@ class SlidingWindowMedian {
         }
     }
 
+    /**
+    * Helper: add.
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: add.
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: add.
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: add.
     *
@@ -828,6 +1339,24 @@ class SlidingWindowMedian {
     * @param num The integer parameter representing num.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: remove.
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: remove.
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: remove.
+    *
+    * @param num The integer parameter representing num.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun remove(num: Int) {
         if (num <= maxHeap.peek()) {
             maxHeap.remove(num.toDouble())
@@ -842,6 +1371,21 @@ class SlidingWindowMedian {
     *
     * @return The computed floating-point result.
     */
+    /**
+    * Helper: get median.
+    *
+    * @return The computed floating-point result.
+    */
+    /**
+    * Helper: get median.
+    *
+    * @return The computed floating-point result.
+    */
+    /**
+    * Helper: get median.
+    *
+    * @return The computed floating-point result.
+    */
     private fun getMedian(): Double {
         return if (maxHeap.size == minHeap.size) {
             (maxHeap.peek().toDouble() + minHeap.peek().toDouble()) / 2.0
@@ -850,6 +1394,30 @@ class SlidingWindowMedian {
         }
     }
 
+    /**
+    * Solves the Sliding Window Median problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Sliding Window Median problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Sliding Window Median problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed floating-point result.
+    */
     /**
     * Solves the Sliding Window Median problem.
     * Takes `nums` (array of integers), `k` (integer).
@@ -878,12 +1446,24 @@ class SlidingWindowMedian {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n log k) |
 | **Space** | O(k) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -908,6 +1488,30 @@ import kotlin.random.Random
 class TopKFrequentElements {
     private val map = HashMap<Int, Int>()
 
+    /**
+    * Solves the Top KFrequent Elements problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Top KFrequent Elements problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Top KFrequent Elements problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Top KFrequent Elements problem.
     * Takes `nums` (array of integers), `k` (integer).
@@ -944,6 +1548,30 @@ class TopKFrequentElements {
     * @param end The integer parameter representing end.
     * @return The computed integer result.
     */
+    /**
+    * Helper: partition.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: partition.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: partition.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
     private fun partition(nums: IntArray, start: Int, end: Int): Int {
         val randomIndex = Random.nextInt(start, end + 1)
         swap(nums, randomIndex, end)  // Swap pivot with the end
@@ -968,11 +1596,39 @@ class TopKFrequentElements {
     * @param j The integer parameter representing j.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: swap.
+    *
+    * @param nums The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: swap.
+    *
+    * @param nums The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: swap.
+    *
+    * @param nums The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun swap(nums: IntArray, i: Int, j: Int) {
        nums[i] = nums[j].also { nums[i] = it }
     }
 }
 ```
+
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -980,5 +1636,13 @@ class TopKFrequentElements {
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---

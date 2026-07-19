@@ -25,6 +25,27 @@ class CopyLinkedListWithRandomPointer {
         * @param node The Node? (nullable).
         * @return The result, or `null` if not found.
         */
+        /**
+        * Solves the Copy Linked List With Random Pointer problem.
+        * Takes `node` (Node?).
+        *
+        * @param node The Node? (nullable).
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Copy Linked List With Random Pointer problem.
+        * Takes `node` (Node?).
+        *
+        * @param node The Node? (nullable).
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Copy Linked List With Random Pointer problem.
+        * Takes `node` (Node?).
+        *
+        * @param node The Node? (nullable).
+        * @return The result, or `null` if not found.
+        */
         fun copyRandomList(node: Node?): Node? {
             if (node == null) return null
 

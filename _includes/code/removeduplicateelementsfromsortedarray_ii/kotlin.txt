@@ -8,6 +8,27 @@ class RemoveDuplicateElementsFromSortedArray_II {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Remove Duplicate Elements From Sorted Array_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Remove Duplicate Elements From Sorted Array_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Remove Duplicate Elements From Sorted Array_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun removeDuplicates(nums: IntArray): Int {
         var index = 0
         var count = 1

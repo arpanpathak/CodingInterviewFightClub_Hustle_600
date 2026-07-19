@@ -10,6 +10,27 @@ class SmallestSubsequenceOfDistinctCharacters {
     * @param s The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Smallest Subsequence Of Distinct Characters problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Smallest Subsequence Of Distinct Characters problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Smallest Subsequence Of Distinct Characters problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The resulting string.
+    */
     fun smallestSubsequence(s: String): String {
         val lastIndex = IntArray(26) {-1}
         val inStack = BooleanArray(26)

@@ -11,6 +11,27 @@ class LongestIncreasingSubsequence {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Longest Increasing Subsequence problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Increasing Subsequence problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Increasing Subsequence problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun lengthOfLIS(nums: IntArray): Int {
         val tree = TreeSet<Int>()
         nums.forEach { num ->

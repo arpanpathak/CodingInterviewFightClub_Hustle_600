@@ -8,6 +8,27 @@ class SudokuSolverSet {
     * @param board The input Array<CharArray>.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `board` (Array<CharArray>).
+    *
+    * @param board The input Array<CharArray>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun solveSudoku(board: Array<CharArray>) {
         val seen = mutableSetOf<String>()
 
@@ -30,12 +51,54 @@ class SudokuSolverSet {
         * @param c The character.
         * @return `true` if the condition is met, `false` otherwise.
         */
+        /**
+        * Solves the Sudoku Solver Set problem.
+        * Takes `i` (integer), `j` (integer), `c` (character).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @param c The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Sudoku Solver Set problem.
+        * Takes `i` (integer), `j` (integer), `c` (character).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @param c The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Sudoku Solver Set problem.
+        * Takes `i` (integer), `j` (integer), `c` (character).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @param c The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun isSafe(i: Int, j: Int, c: Char): Boolean {
             return "$c row $i" !in seen &&
                     "$c col $j" !in seen &&
                     "$c block ${i / 3}${j / 3}" !in seen
         }
 
+        /**
+        * Solves the Sudoku Solver Set problem.
+        *
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Sudoku Solver Set problem.
+        *
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Sudoku Solver Set problem.
+        *
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Sudoku Solver Set problem.
         *
@@ -72,12 +135,72 @@ class SudokuSolverSet {
     * @param seen The input MutableSet<String>.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun addToSet(i: Int, j: Int, c: Char, seen: MutableSet<String>) {
         seen.add("$c row $i")
         seen.add("$c col $j")
         seen.add("$c block ${i / 3}${j / 3}")
     }
 
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sudoku Solver Set problem.
+    * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).
+    *
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param c The character.
+    * @param seen The input MutableSet<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Sudoku Solver Set problem.
     * Takes `i` (integer), `j` (integer), `c` (character), `seen` (MutableSet<String>).

@@ -11,6 +11,30 @@ class FenwickTree(size: Int) {
     * @param value The integer parameter representing value.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Fenwick Tree problem.
+    * Takes `index` (integer), `value` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Fenwick Tree problem.
+    * Takes `index` (integer), `value` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Fenwick Tree problem.
+    * Takes `index` (integer), `value` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun update(index: Int, value: Int) {
         var i = index + 1
         while (i < tree.size) {
@@ -19,6 +43,27 @@ class FenwickTree(size: Int) {
         }
     }
 
+    /**
+    * Solves the Fenwick Tree problem.
+    * Takes `index` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Fenwick Tree problem.
+    * Takes `index` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Fenwick Tree problem.
+    * Takes `index` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Fenwick Tree problem.
     * Takes `index` (integer).
@@ -36,6 +81,30 @@ class FenwickTree(size: Int) {
         return sum
     }
 
+    /**
+    * Solves the Fenwick Tree problem.
+    * Takes `left` (integer), `right` (integer).
+    *
+    * @param left The integer parameter representing left.
+    * @param right The integer parameter representing right.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Fenwick Tree problem.
+    * Takes `left` (integer), `right` (integer).
+    *
+    * @param left The integer parameter representing left.
+    * @param right The integer parameter representing right.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Fenwick Tree problem.
+    * Takes `left` (integer), `right` (integer).
+    *
+    * @param left The integer parameter representing left.
+    * @param right The integer parameter representing right.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Fenwick Tree problem.
     * Takes `left` (integer), `right` (integer).

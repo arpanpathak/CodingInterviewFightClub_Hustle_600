@@ -12,10 +12,52 @@ class UnionFind<T> {
     * @param x The T.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun add(x: T) {
         nodes.putIfAbsent(x, Node(x, 0))
     }
 
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return The computed result (T).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return The computed result (T).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T).
+    *
+    * @param x The T.
+    * @return The computed result (T).
+    */
     /**
     * Solves the Union Find problem.
     * Takes `x` (T).
@@ -32,6 +74,30 @@ class UnionFind<T> {
         return node.parent
     }
 
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T), `y` (T).
+    *
+    * @param x The T.
+    * @param y The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T), `y` (T).
+    *
+    * @param x The T.
+    * @param y The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Union Find problem.
+    * Takes `x` (T), `y` (T).
+    *
+    * @param x The T.
+    * @param y The T.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Union Find problem.
     * Takes `x` (T), `y` (T).

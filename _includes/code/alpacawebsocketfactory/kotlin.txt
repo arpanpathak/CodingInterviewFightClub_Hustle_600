@@ -21,6 +21,27 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
     * @param streams The input list of strings.
     * @return The resulting string.
     */
+    /**
+    * Solves the Alpaca Web Socket Factory problem.
+    * Takes `streams` (list of strings).
+    *
+    * @param streams The input list of strings.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Alpaca Web Socket Factory problem.
+    * Takes `streams` (list of strings).
+    *
+    * @param streams The input list of strings.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Alpaca Web Socket Factory problem.
+    * Takes `streams` (list of strings).
+    *
+    * @param streams The input list of strings.
+    * @return The resulting string.
+    */
     fun createWebSocket(streams: List<String>): Channel<String> {
         val request = Request.Builder()
             .url(url)
@@ -30,6 +51,27 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
 
         val messageChannel = Channel<String>(Channel.UNLIMITED)
         val webSocketListener = object : WebSocketListener() {
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param response The Response.
+            * @return Unit (no return value, modifies state in-place).
+            */
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param response The Response.
+            * @return Unit (no return value, modifies state in-place).
+            */
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param response The Response.
+            * @return Unit (no return value, modifies state in-place).
+            */
             /**
             * Implements/overrides the base class method.
             *
@@ -50,12 +92,57 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
             * @param text The input string.
             * @return Unit (no return value, modifies state in-place).
             */
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param text The input string.
+            * @return Unit (no return value, modifies state in-place).
+            */
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param text The input string.
+            * @return Unit (no return value, modifies state in-place).
+            */
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param text The input string.
+            * @return Unit (no return value, modifies state in-place).
+            */
             override fun onMessage(webSocket: WebSocket, text: String) {
                 scope.launch {
                     messageChannel.send(text)
                 }
             }
 
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param code The integer parameter representing code.
+            * @param reason The input string.
+            * @return Unit (no return value, modifies state in-place).
+            */
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param code The integer parameter representing code.
+            * @param reason The input string.
+            * @return Unit (no return value, modifies state in-place).
+            */
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param code The integer parameter representing code.
+            * @param reason The input string.
+            * @return Unit (no return value, modifies state in-place).
+            */
             /**
             * Implements/overrides the base class method.
             *
@@ -80,6 +167,30 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
             * @param response The Response? (nullable).
             * @return Unit (no return value, modifies state in-place).
             */
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param t The Throwable.
+            * @param response The Response? (nullable).
+            * @return Unit (no return value, modifies state in-place).
+            */
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param t The Throwable.
+            * @param response The Response? (nullable).
+            * @return Unit (no return value, modifies state in-place).
+            */
+            /**
+            * Implements/overrides the base class method.
+            *
+            * @param webSocket The WebSocket.
+            * @param t The Throwable.
+            * @param response The Response? (nullable).
+            * @return Unit (no return value, modifies state in-place).
+            */
             override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
                 println("Error: " + t.message)
             }
@@ -89,6 +200,24 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
         return messageChannel
     }
 
+    /**
+    * Helper: authenticate.
+    *
+    * @param webSocket The WebSocket.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: authenticate.
+    *
+    * @param webSocket The WebSocket.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: authenticate.
+    *
+    * @param webSocket The WebSocket.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: authenticate.
     *
@@ -107,6 +236,27 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
         """.trimIndent())
     }
 
+    /**
+    * Helper: subscribe to streams.
+    *
+    * @param webSocket The WebSocket.
+    * @param streams The input list of strings.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: subscribe to streams.
+    *
+    * @param webSocket The WebSocket.
+    * @param streams The input list of strings.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: subscribe to streams.
+    *
+    * @param webSocket The WebSocket.
+    * @param streams The input list of strings.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: subscribe to streams.
     *

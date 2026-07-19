@@ -13,6 +13,30 @@ class InsertIntoASortedCircularLinkedList {
     * @param insertVal The integer parameter representing insertVal.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Node problem.
+    * Takes `head` (Node?), `insertVal` (integer).
+    *
+    * @param head The Node? (nullable).
+    * @param insertVal The integer parameter representing insertVal.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `head` (Node?), `insertVal` (integer).
+    *
+    * @param head The Node? (nullable).
+    * @param insertVal The integer parameter representing insertVal.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `head` (Node?), `insertVal` (integer).
+    *
+    * @param head The Node? (nullable).
+    * @param insertVal The integer parameter representing insertVal.
+    * @return The result, or `null` if not found.
+    */
     fun insert(head: Node?, insertVal: Int): Node? {
         val newNode = Node(insertVal)
         if (head == null) return newNode.apply { next = newNode }

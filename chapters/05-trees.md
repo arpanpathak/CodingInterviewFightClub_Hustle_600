@@ -100,10 +100,61 @@ class AllNodesDistanceKinBinaryTree {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the All Nodes Distance Kin Binary Tree problem.
+    * Takes `root` (binary tree node reference), `target` (binary tree node reference), `k` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the All Nodes Distance Kin Binary Tree problem.
+    * Takes `root` (binary tree node reference), `target` (binary tree node reference), `k` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the All Nodes Distance Kin Binary Tree problem.
+    * Takes `root` (binary tree node reference), `target` (binary tree node reference), `k` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun distanceK(root: TreeNode?, target: TreeNode?, k: Int): List<Int> {
         val result = mutableListOf<Int>()
 
         // Helper function to perform DFS and populate parent map, then find target
+        /**
+        * Solves the All Nodes Distance Kin Binary Tree problem.
+        * Takes `node` (binary tree node reference), `parent` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param parent The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the All Nodes Distance Kin Binary Tree problem.
+        * Takes `node` (binary tree node reference), `parent` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param parent The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the All Nodes Distance Kin Binary Tree problem.
+        * Takes `node` (binary tree node reference), `parent` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param parent The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the All Nodes Distance Kin Binary Tree problem.
         * Takes `node` (binary tree node reference), `parent` (binary tree node reference).
@@ -135,6 +186,33 @@ class AllNodesDistanceKinBinaryTree {
     * @param result The input mutable list of integers.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: collect nodes at distance k.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @param visited The input MutableSet<TreeNode>.
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: collect nodes at distance k.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @param visited The input MutableSet<TreeNode>.
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: collect nodes at distance k.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @param visited The input MutableSet<TreeNode>.
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun collectNodesAtDistanceK(node: TreeNode?, k: Int, visited: MutableSet<TreeNode>, result: MutableList<Int>) {
         if (node == null || visited.contains(node)) return
         visited.add(node)
@@ -151,10 +229,9 @@ class AllNodesDistanceKinBinaryTree {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Tree traversal. Choose DFS for depth exploration, BFS for level-order processing.
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
 
 ### Complexity
 
@@ -165,13 +242,14 @@ class AllNodesDistanceKinBinaryTree {
 
 ### Variations
 
-1. What if the tree is not balanced (skewed)? Worst-case complexity?
-1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need to handle both BST and non-BST trees?
-1. Can this be solved with Morris traversal (O(1) space)?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
+
 ## Average Of Levels In Binary Tree
 
 ### Problem
@@ -191,6 +269,27 @@ import tree.TreeNode
 import java.util.*
 
 class AverageOfLevelsInBinaryTree {
+    /**
+    * Solves the Average Of Levels In Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Average Of Levels In Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Average Of Levels In Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed floating-point result.
+    */
     /**
     * Solves the Average Of Levels In Binary Tree problem.
     * Takes `root` (binary tree node reference).
@@ -225,15 +324,9 @@ class AverageOfLevelsInBinaryTree {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
-
-
-### Pattern Insight
-
-**Pattern:** Tree traversal. Choose DFS for depth exploration, BFS for level-order processing.
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
 
 ### Complexity
 
@@ -244,13 +337,14 @@ class AverageOfLevelsInBinaryTree {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
+
 ## Balanced Binary Tree
 
 ### Problem
@@ -276,7 +370,49 @@ class BalancedBinaryTree {
     * @param root The binary tree node reference (nullable).
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Balanced Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Balanced Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Balanced Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isBalanced(root: TreeNode?): Boolean {
+        /**
+        * Solves the Balanced Binary Tree problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Balanced Binary Tree problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Balanced Binary Tree problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
         /**
         * Solves the Balanced Binary Tree problem.
         * Takes `node` (binary tree node reference).
@@ -304,10 +440,9 @@ class BalancedBinaryTree {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Tree traversal. Choose DFS for depth exploration, BFS for level-order processing.
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
 
 ### Complexity
 
@@ -318,13 +453,14 @@ class BalancedBinaryTree {
 
 ### Variations
 
-1. What if the tree is not balanced (skewed)? Worst-case complexity?
-1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need to handle both BST and non-BST trees?
-1. Can this be solved with Morris traversal (O(1) space)?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
+
 ## B Inary Tree In Order Traversal Iterative
 
 ### Problem
@@ -341,6 +477,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package tree
 
 class BInaryTreeInOrderTraversalIterative {
+    /**
+    * Solves the BInary Tree In Order Traversal Iterative problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the BInary Tree In Order Traversal Iterative problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the BInary Tree In Order Traversal Iterative problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     /**
     * Solves the BInary Tree In Order Traversal Iterative problem.
     * Takes `root` (binary tree node reference).
@@ -373,10 +530,9 @@ class BInaryTreeInOrderTraversalIterative {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
 
 ### Complexity
 
@@ -387,14 +543,74 @@ class BInaryTreeInOrderTraversalIterative {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
-          while (size-- > 0) {
+
+## Binary Tree Level Order Traversal
+
+### Problem
+
+Solves the Binary Tree Level Order Traversal problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package tree
+
+import java.util.*
+import kotlin.collections.ArrayList
+
+
+class BinaryTreeLevelOrderTraversal {
+    /**
+    * Solves the Binary Tree Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    fun levelOrder(root: TreeNode?): List<List<Int>> {
+        val result: MutableList<List<Int>> = ArrayList()
+        if (root == null)
+            return result
+        val queue: Queue<TreeNode> = LinkedList()
+        queue.add(root)
+
+        while (!queue.isEmpty()) {
+            val lst: MutableList<Int> = ArrayList()
+            var size: Int = queue.size
+
+            while (size-- > 0) {
                 val temp: TreeNode = queue.poll()
                 lst.add(temp.`val`)
 
@@ -410,12 +626,24 @@ class BInaryTreeInOrderTraversalIterative {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -438,6 +666,27 @@ import tree.TreeNode
 import java.util.*
 
 class BinaryTreeLevelOrderTraversal_II {
+    /**
+    * Solves the Binary Tree Level Order Traversal_II problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Level Order Traversal_II problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Level Order Traversal_II problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     /**
     * Solves the Binary Tree Level Order Traversal_II problem.
     * Takes `root` (binary tree node reference).
@@ -472,12 +721,24 @@ class BinaryTreeLevelOrderTraversal_II {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -504,8 +765,50 @@ class BinaryTreeMaximumPathSum {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Binary Tree Maximum Path Sum problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Maximum Path Sum problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Maximum Path Sum problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun maxPathSum(root: TreeNode?): Int {
         var ans = Int.MIN_VALUE
+        /**
+        * Solves the Binary Tree Maximum Path Sum problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Binary Tree Maximum Path Sum problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Binary Tree Maximum Path Sum problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
         /**
         * Solves the Binary Tree Maximum Path Sum problem.
         * Takes `node` (binary tree node reference).
@@ -531,12 +834,24 @@ class BinaryTreeMaximumPathSum {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -563,9 +878,54 @@ class BinaryTreeRightSideView {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Binary Tree Right Side View problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Right Side View problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Right Side View problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun rightSideView(root: TreeNode?): List<Int> {
         val rightSide = mutableListOf<Int>()
 
+        /**
+        * Solves the Binary Tree Right Side View problem.
+        * Takes `node` (binary tree node reference), `level` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param level The integer parameter representing level.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Binary Tree Right Side View problem.
+        * Takes `node` (binary tree node reference), `level` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param level The integer parameter representing level.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Binary Tree Right Side View problem.
+        * Takes `node` (binary tree node reference), `level` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param level The integer parameter representing level.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Binary Tree Right Side View problem.
         * Takes `node` (binary tree node reference), `level` (integer).
@@ -589,12 +949,24 @@ class BinaryTreeRightSideView {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -623,9 +995,54 @@ class BinaryTreeVerticalOrderTraversal {
 * @param root The binary tree node reference (nullable).
 * @return The computed integer result.
 */
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `root` (binary tree node reference).
+*
+* @param root The binary tree node reference (nullable).
+* @return The computed integer result.
+*/
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `root` (binary tree node reference).
+*
+* @param root The binary tree node reference (nullable).
+* @return The computed integer result.
+*/
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `root` (binary tree node reference).
+*
+* @param root The binary tree node reference (nullable).
+* @return The computed integer result.
+*/
 //    fun verticalOrder(root: TreeNode?): List<List<Int>> {
 //        val result = TreeMap<Int, LinkedList<Int>>()
 //
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `node` (binary tree node reference), `verticalIndex` (Int = 0).
+*
+* @param node The binary tree node reference (nullable).
+* @param verticalIndex The Int = 0.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `node` (binary tree node reference), `verticalIndex` (Int = 0).
+*
+* @param node The binary tree node reference (nullable).
+* @param verticalIndex The Int = 0.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Solves the Binary Tree Vertical Order Traversal problem.
+* Takes `node` (binary tree node reference), `verticalIndex` (Int = 0).
+*
+* @param node The binary tree node reference (nullable).
+* @param verticalIndex The Int = 0.
+* @return Unit (no return value, modifies state in-place).
+*/
 /**
 * Solves the Binary Tree Vertical Order Traversal problem.
 * Takes `node` (binary tree node reference), `verticalIndex` (Int = 0).
@@ -659,6 +1076,27 @@ class BinaryTreeVerticalOrderTraversal {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Binary Tree Vertical Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Vertical Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Vertical Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun verticalOrder(root: TreeNode?): List<List<Int>> {
         if (root == null) return emptyList()
 
@@ -685,12 +1123,24 @@ class BinaryTreeVerticalOrderTraversal {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -714,6 +1164,27 @@ import java.util.*
 class BinaryTreeVerticalOrderTraversal_WithoutSorting {
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
+    /**
+    * Solves the Binary Tree Vertical Order Traversal_Without Sorting problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Vertical Order Traversal_Without Sorting problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Vertical Order Traversal_Without Sorting problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     /**
     * Solves the Binary Tree Vertical Order Traversal_Without Sorting problem.
     * Takes `root` (binary tree node reference).
@@ -754,12 +1225,24 @@ class BinaryTreeVerticalOrderTraversal_WithoutSorting {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -783,6 +1266,27 @@ import java.util.*
 class BinaryTreeZigZagLevelOrderTraversal {
     data class IndexedNode(var node: TreeNode?, var index: Int)
 
+    /**
+    * Solves the Binary Tree Zig Zag Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Zig Zag Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Zig Zag Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     /**
     * Solves the Binary Tree Zig Zag Level Order Traversal problem.
     * Takes `root` (binary tree node reference).
@@ -824,12 +1328,24 @@ class BinaryTreeZigZagLevelOrderTraversal {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -849,6 +1365,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package tree
 
 class BoundaryOfBinaryTree {
+    /**
+    * Solves the Boundary Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Boundary Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Boundary Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     /**
     * Solves the Boundary Of Binary Tree problem.
     * Takes `root` (binary tree node reference).
@@ -884,6 +1421,27 @@ class BoundaryOfBinaryTree {
     * @param result The input mutable list of integers.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: add left boundary.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: add left boundary.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: add left boundary.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun addLeftBoundary(node: TreeNode?, result: MutableList<Int>) {
         var current = node
         while (current != null) {
@@ -896,6 +1454,30 @@ class BoundaryOfBinaryTree {
         }
     }
 
+    /**
+    * Helper: add leaves.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @param isRoot A boolean flag: isRoot.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: add leaves.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @param isRoot A boolean flag: isRoot.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: add leaves.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @param isRoot A boolean flag: isRoot.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: add leaves.
     *
@@ -923,6 +1505,27 @@ class BoundaryOfBinaryTree {
     * @param result The input mutable list of integers.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: add right boundary.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: add right boundary.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: add right boundary.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun addRightBoundary(node: TreeNode?, result: MutableList<Int>) {
         var current = node
         while (current != null) {
@@ -937,12 +1540,24 @@ class BoundaryOfBinaryTree {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -976,6 +1591,24 @@ class BSTIterator(root: TreeNode?) {
     * @param node The binary tree node reference (nullable).
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: push all left nodes.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: push all left nodes.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: push all left nodes.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun pushAllLeftNodes(node: TreeNode?) {
         var current = node
         while (current != null) {
@@ -990,6 +1623,21 @@ class BSTIterator(root: TreeNode?) {
     *
     * @return The computed integer result.
     */
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return The computed integer result.
+    */
     fun next(): Int {
         val node = stack.removeFirst()  // Pop the node from the stack
         pushAllLeftNodes(node.right)  // Push the leftmost nodes of the right child, if any
@@ -997,6 +1645,21 @@ class BSTIterator(root: TreeNode?) {
     }
 
     // Returns whether we have a next smallest number
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the BSTIterator problem.
     *
@@ -1015,12 +1678,24 @@ class BSTIterator(root: TreeNode?) {
  */
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1042,6 +1717,27 @@ package tree.bfs
 import tree.TreeNode
 
 class CheckCompletenessOfBinaryTree {
+    /**
+    * Solves the Check Completeness Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Check Completeness Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Check Completeness Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Check Completeness Of Binary Tree problem.
     * Takes `root` (binary tree node reference).
@@ -1076,12 +1772,24 @@ class CheckCompletenessOfBinaryTree {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1111,6 +1819,30 @@ class ClosestBinarySearchTreeValue {
     * @param target The double-precision floating point parameter representing target.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Closest Binary Search Tree Value problem.
+    * Takes `root` (binary tree node reference), `target` (double-precision floating point).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The double-precision floating point parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Closest Binary Search Tree Value problem.
+    * Takes `root` (binary tree node reference), `target` (double-precision floating point).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The double-precision floating point parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Closest Binary Search Tree Value problem.
+    * Takes `root` (binary tree node reference), `target` (double-precision floating point).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The double-precision floating point parameter representing target.
+    * @return The computed integer result.
+    */
     fun closestValue(root: TreeNode?, target: Double): Int {
         var closest = root?.`val` ?: 0
         var current = root
@@ -1132,12 +1864,24 @@ class ClosestBinarySearchTreeValue {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1165,6 +1909,30 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
     * @param postorder The input array of integers.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+    * Takes `inorder` (array of integers), `postorder` (array of integers).
+    *
+    * @param inorder The input array of integers.
+    * @param postorder The input array of integers.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+    * Takes `inorder` (array of integers), `postorder` (array of integers).
+    *
+    * @param inorder The input array of integers.
+    * @param postorder The input array of integers.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+    * Takes `inorder` (array of integers), `postorder` (array of integers).
+    *
+    * @param inorder The input array of integers.
+    * @param postorder The input array of integers.
+    * @return The result, or `null` if not found.
+    */
     fun buildTree(inorder: IntArray, postorder: IntArray): TreeNode? {
         // Build Inverted InOrder Index Map
         val rootIndices = mutableMapOf<Int, Int>()
@@ -1172,6 +1940,30 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
 
         var postIndex = postorder.size - 1
 
+        /**
+        * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+        * Takes `inorder` (array of integers), `postorder` (array of integers).
+        *
+        * @param inorder The input array of integers.
+        * @param postorder The input array of integers.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+        * Takes `inorder` (array of integers), `postorder` (array of integers).
+        *
+        * @param inorder The input array of integers.
+        * @param postorder The input array of integers.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
+        * Takes `inorder` (array of integers), `postorder` (array of integers).
+        *
+        * @param inorder The input array of integers.
+        * @param postorder The input array of integers.
+        * @return The result, or `null` if not found.
+        */
         /**
         * Solves the Construct Binary Tree From Inorder And Post Order Traversal problem.
         * Takes `inorder` (array of integers), `postorder` (array of integers).
@@ -1198,12 +1990,24 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1233,11 +2037,59 @@ class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
     * @param inorder The input array of integers.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
+    * Takes `preorder` (array of integers), `inorder` (array of integers).
+    *
+    * @param preorder The input array of integers.
+    * @param inorder The input array of integers.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
+    * Takes `preorder` (array of integers), `inorder` (array of integers).
+    *
+    * @param preorder The input array of integers.
+    * @param inorder The input array of integers.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
+    * Takes `preorder` (array of integers), `inorder` (array of integers).
+    *
+    * @param preorder The input array of integers.
+    * @param inorder The input array of integers.
+    * @return The result, or `null` if not found.
+    */
     fun buildTree(preorder: IntArray, inorder: IntArray): TreeNode? {
         // Build Inverted InOrder Index Map
         inorder.forEachIndexed { index, value -> rootIndices[value] = index }
         var rootIndex = 0
 
+        /**
+        * Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
+        * Takes `preorder` (array of integers), `inorder` (array of integers).
+        *
+        * @param preorder The input array of integers.
+        * @param inorder The input array of integers.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
+        * Takes `preorder` (array of integers), `inorder` (array of integers).
+        *
+        * @param preorder The input array of integers.
+        * @param inorder The input array of integers.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
+        * Takes `preorder` (array of integers), `inorder` (array of integers).
+        *
+        * @param preorder The input array of integers.
+        * @param inorder The input array of integers.
+        * @return The result, or `null` if not found.
+        */
         /**
         * Solves the Construct Binary Tree From Preorder And In Order Traversal problem.
         * Takes `preorder` (array of integers), `inorder` (array of integers).
@@ -1264,12 +2116,24 @@ class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1296,12 +2160,54 @@ class ConstructBinaryTreeFromString {
     * @param s The input string.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Construct Binary Tree From String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Construct Binary Tree From String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Construct Binary Tree From String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The result, or `null` if not found.
+    */
     fun str2tree(s: String): TreeNode? {
         if (s.isEmpty()) return null
 
         return buildTree(s, 0).first // We are only interested in the tree root, not the index
     }
 
+    /**
+    * Helper: build tree.
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: build tree.
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: build tree.
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @return The computed integer result.
+    */
     /**
     * Helper: build tree.
     *
@@ -1342,12 +2248,24 @@ class ConstructBinaryTreeFromString {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1388,6 +2306,27 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
     * @param root The Node? (nullable).
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Convert BInary Search Tree To Sorted Doubly Linked List problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Convert BInary Search Tree To Sorted Doubly Linked List problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Convert BInary Search Tree To Sorted Doubly Linked List problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun treeToDoublyList(root: Node?): Node? {
         if (root == null) return null
 
@@ -1401,6 +2340,24 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
         return head
     }
 
+    /**
+    * Helper: inorder traversal.
+    *
+    * @param node The Node? (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: inorder traversal.
+    *
+    * @param node The Node? (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: inorder traversal.
+    *
+    * @param node The Node? (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: inorder traversal.
     *
@@ -1429,12 +2386,24 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1461,10 +2430,52 @@ class CountGoodNodeInBInaryTree {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Count Good Node In BInary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Good Node In BInary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Good Node In BInary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun goodNodes(root: TreeNode?): Int {
         return dfs(root, Int.MIN_VALUE)
     }
 
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param maxSoFar The integer parameter representing maxSoFar.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param maxSoFar The integer parameter representing maxSoFar.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param maxSoFar The integer parameter representing maxSoFar.
+    * @return The computed integer result.
+    */
     /**
     * Helper: dfs.
     *
@@ -1483,12 +2494,24 @@ class CountGoodNodeInBInaryTree {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1524,11 +2547,50 @@ class CountNodeEqualsAverage {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun averageOfSubtree(root: TreeNode?): Int {
         postOrder(root)
         return count;
     }
 
+    /**
+    * Helper: post order.
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
+    /**
+    * Helper: post order.
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
+    /**
+    * Helper: post order.
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
     /**
     * Helper: post order.
     *
@@ -1552,12 +2614,24 @@ class CountNodeEqualsAverage {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1582,6 +2656,30 @@ class TreeNode(var `val`: Int) {
 }
 
 class DeleteNodeinABST {
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference), `key` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param key The integer parameter representing key.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference), `key` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param key The integer parameter representing key.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference), `key` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param key The integer parameter representing key.
+    * @return The result, or `null` if not found.
+    */
     /**
     * Solves the Tree Node problem.
     * Takes `root` (binary tree node reference), `key` (integer).
@@ -1617,6 +2715,27 @@ class DeleteNodeinABST {
     * @param node The TreeNode.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `node` (TreeNode).
+    *
+    * @param node The TreeNode.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `node` (TreeNode).
+    *
+    * @param node The TreeNode.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `node` (TreeNode).
+    *
+    * @param node The TreeNode.
+    * @return The computed integer result.
+    */
     fun minValue(node: TreeNode): Int {
         var current = node
         while (current.left != null) {
@@ -1628,12 +2747,24 @@ class DeleteNodeinABST {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1656,6 +2787,27 @@ import tree.TreeNode
 import java.util.*
 
 class FindLargestValueInEachTreeRow {
+    /**
+    * Solves the Find Largest Value In Each Tree Row problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Largest Value In Each Tree Row problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Largest Value In Each Tree Row problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     /**
     * Solves the Find Largest Value In Each Tree Row problem.
     * Takes `root` (binary tree node reference).
@@ -1689,12 +2841,24 @@ class FindLargestValueInEachTreeRow {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1714,6 +2878,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package tree.bst
 
 class InorderSuccessor {
+    /**
+    * Solves the Inorder Successor problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Inorder Successor problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Inorder Successor problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
     /**
     * Solves the Inorder Successor problem.
     * Takes `root` (binary tree node reference), `p` (binary tree node reference).
@@ -1742,12 +2930,24 @@ class InorderSuccessor {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1775,6 +2975,30 @@ class LeafSimilar {
     * @param root2 The binary tree node reference (nullable).
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Leaf Similar problem.
+    * Takes `root1` (binary tree node reference), `root2` (binary tree node reference).
+    *
+    * @param root1 The binary tree node reference (nullable).
+    * @param root2 The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Leaf Similar problem.
+    * Takes `root1` (binary tree node reference), `root2` (binary tree node reference).
+    *
+    * @param root1 The binary tree node reference (nullable).
+    * @param root2 The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Leaf Similar problem.
+    * Takes `root1` (binary tree node reference), `root2` (binary tree node reference).
+    *
+    * @param root1 The binary tree node reference (nullable).
+    * @param root2 The binary tree node reference (nullable).
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun leafSimilar(root1: TreeNode?, root2: TreeNode?): Boolean {
         val leaves1 = mutableListOf<Int>()
         val leaves2 = mutableListOf<Int>()
@@ -1785,6 +3009,30 @@ class LeafSimilar {
         return leaves1 == leaves2
     }
 
+    /**
+    * Solves the Leaf Similar problem.
+    * Takes `node` (binary tree node reference), `leafValues` (mutable list of integers).
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param leafValues The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Leaf Similar problem.
+    * Takes `node` (binary tree node reference), `leafValues` (mutable list of integers).
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param leafValues The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Leaf Similar problem.
+    * Takes `node` (binary tree node reference), `leafValues` (mutable list of integers).
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param leafValues The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Leaf Similar problem.
     * Takes `node` (binary tree node reference), `leafValues` (mutable list of integers).
@@ -1805,12 +3053,24 @@ class LeafSimilar {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1838,8 +3098,50 @@ class LongestUnivaluePath {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Longest Univalue Path problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Univalue Path problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Univalue Path problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun longestUnivaluePath(root: TreeNode?): Int {
         var maxLength = 0
+        /**
+        * Solves the Longest Univalue Path problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Univalue Path problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Univalue Path problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return The computed integer result.
+        */
         /**
         * Solves the Longest Univalue Path problem.
         * Takes `node` (binary tree node reference).
@@ -1871,12 +3173,24 @@ class LongestUnivaluePath {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1905,6 +3219,33 @@ class LowestCommonAncestor {
     * @param q The binary tree node reference (nullable).
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Lowest Common Ancestor problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Lowest Common Ancestor problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Lowest Common Ancestor problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun lowestCommonAncestor(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
         if (root == null || root === p || root === q) return root
 
@@ -1917,12 +3258,24 @@ class LowestCommonAncestor {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1948,6 +3301,30 @@ class LowestCommonAncestor_III {
         var parent: Node? = null
     }
 
+    /**
+    * Solves the Lowest Common Ancestor_III problem.
+    * Takes `p` (Node?), `q` (Node?).
+    *
+    * @param p The Node? (nullable).
+    * @param q The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Lowest Common Ancestor_III problem.
+    * Takes `p` (Node?), `q` (Node?).
+    *
+    * @param p The Node? (nullable).
+    * @param q The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Lowest Common Ancestor_III problem.
+    * Takes `p` (Node?), `q` (Node?).
+    *
+    * @param p The Node? (nullable).
+    * @param q The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     /**
     * Solves the Lowest Common Ancestor_III problem.
     * Takes `p` (Node?), `q` (Node?).
@@ -1984,12 +3361,24 @@ class LowestCommonAncestor_III {
  */
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2016,6 +3405,27 @@ class MaximumDepthOfBinaryTree {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Maximum Depth Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Depth Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Depth Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun maxDepth(root: TreeNode?): Int {
         if (root == null) {
             return 0
@@ -2026,12 +3436,24 @@ class MaximumDepthOfBinaryTree {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -2061,11 +3483,50 @@ class MaximumSumBSTInBinaryTree {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Maximum Sum BSTIn Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Sum BSTIn Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Sum BSTIn Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun maxSumBST(root: TreeNode?): Int {
         dfs(root)
         return maxSum
     }
 
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
     /**
     * Helper: dfs.
     *
@@ -2102,12 +3563,24 @@ class MaximumSumBSTInBinaryTree {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -2131,6 +3604,27 @@ import java.util.*
 class MaximumWidthOfBinaryTree {
     data class Node(var node: TreeNode?, var index: Int)
 
+    /**
+    * Solves the Maximum Width Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Width Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Width Of Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     /**
     * Solves the Maximum Width Of Binary Tree problem.
     * Takes `root` (binary tree node reference).
@@ -2163,12 +3657,24 @@ class MaximumWidthOfBinaryTree {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -2197,6 +3703,33 @@ class MinimumTimeToCollectAllApplesInATree {
     * @param hasApple The input List<Boolean>.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Minimum Time To Collect All Apples In ATree problem.
+    * Takes `n` (integer), `edges` (2D matrix of integers), `hasApple` (List<Boolean>).
+    *
+    * @param n The integer parameter representing n.
+    * @param edges The input 2D matrix of integers.
+    * @param hasApple The input List<Boolean>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Time To Collect All Apples In ATree problem.
+    * Takes `n` (integer), `edges` (2D matrix of integers), `hasApple` (List<Boolean>).
+    *
+    * @param n The integer parameter representing n.
+    * @param edges The input 2D matrix of integers.
+    * @param hasApple The input List<Boolean>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Time To Collect All Apples In ATree problem.
+    * Takes `n` (integer), `edges` (2D matrix of integers), `hasApple` (List<Boolean>).
+    *
+    * @param n The integer parameter representing n.
+    * @param edges The input 2D matrix of integers.
+    * @param hasApple The input List<Boolean>.
+    * @return The computed integer result.
+    */
     fun minTime(n: Int, edges: Array<IntArray>, hasApple: List<Boolean>): Int {
         // Build the graph as a list of lists (adjacency list representation)
         val graph = Array(n) { mutableListOf<Int>() }
@@ -2206,6 +3739,30 @@ class MinimumTimeToCollectAllApplesInATree {
         }
 
         // DFS function to calculate the total time
+        /**
+        * Solves the Minimum Time To Collect All Apples In ATree problem.
+        * Takes `node` (integer), `parent` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @param parent The integer parameter representing parent.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Minimum Time To Collect All Apples In ATree problem.
+        * Takes `node` (integer), `parent` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @param parent The integer parameter representing parent.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Minimum Time To Collect All Apples In ATree problem.
+        * Takes `node` (integer), `parent` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @param parent The integer parameter representing parent.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Minimum Time To Collect All Apples In ATree problem.
         * Takes `node` (integer), `parent` (integer).
@@ -2235,12 +3792,24 @@ class MinimumTimeToCollectAllApplesInATree {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -2268,6 +3837,30 @@ class PathSum {
     * @param targetSum The integer parameter representing targetSum.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Path Sum problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Path Sum problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Path Sum problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun hasPathSum(root: TreeNode?, targetSum: Int): Boolean {
         return when {
             root == null -> false
@@ -2279,12 +3872,24 @@ class PathSum {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2312,9 +3917,60 @@ class PathSum_II {
     * @param targetSum The integer parameter representing targetSum.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Path Sum_II problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Path Sum_II problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Path Sum_II problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
     fun pathSum(root: TreeNode?, targetSum: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+        /**
+        * Solves the Path Sum_II problem.
+        * Takes `node` (binary tree node reference), `currentSum` (integer), `path` (MutableList<Int> = mutableListOf().
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The integer parameter representing currentSum.
+        * @param path The input MutableList<Int> = mutableListOf(.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Path Sum_II problem.
+        * Takes `node` (binary tree node reference), `currentSum` (integer), `path` (MutableList<Int> = mutableListOf().
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The integer parameter representing currentSum.
+        * @param path The input MutableList<Int> = mutableListOf(.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Path Sum_II problem.
+        * Takes `node` (binary tree node reference), `currentSum` (integer), `path` (MutableList<Int> = mutableListOf().
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The integer parameter representing currentSum.
+        * @param path The input MutableList<Int> = mutableListOf(.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Path Sum_II problem.
         * Takes `node` (binary tree node reference), `currentSum` (integer), `path` (MutableList<Int> = mutableListOf().
@@ -2349,12 +4005,24 @@ class PathSum_II {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2383,11 +4051,59 @@ class PathSumIII {
     * @param targetSum The integer parameter representing targetSum.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
     fun pathSum(root: TreeNode?, targetSum: Int): Int {
         if (root == null)
             return 0
 
         // Count paths with targetSum starting from the current node
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Path Sum III problem.
         * Takes `node` (binary tree node reference), `currentSum` (long integer).
@@ -2420,6 +4136,30 @@ class PathSumIII {
     * @param targetSum The integer parameter representing targetSum.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Path Sum III problem.
+    * Takes `root` (binary tree node reference), `targetSum` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param targetSum The integer parameter representing targetSum.
+    * @return The computed integer result.
+    */
     fun pathSum_prefix_sum(root: TreeNode?, targetSum: Int): Int {
         // HashMap to store prefix sums and their frequencies
         val prefixSumCount = HashMap<Long, Int>()
@@ -2427,6 +4167,30 @@ class PathSumIII {
         prefixSumCount[0L] = 1
 
         // Helper function to perform DFS
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Path Sum III problem.
+        * Takes `node` (binary tree node reference), `currentSum` (long integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param currentSum The long integer parameter representing currentSum.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Path Sum III problem.
         * Takes `node` (binary tree node reference), `currentSum` (long integer).
@@ -2463,12 +4227,24 @@ class PathSumIII {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2497,6 +4273,27 @@ class PopulateNextRightPointersInEachNode_II {
     * @param root The Node? (nullable).
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Populate Next Right Pointers In Each Node_II problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Populate Next Right Pointers In Each Node_II problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Populate Next Right Pointers In Each Node_II problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun connect(root: Node?): Node? {
         val queue: Queue<Node> = LinkedList()
         root?.let { queue.add(it) }
@@ -2516,12 +4313,24 @@ class PopulateNextRightPointersInEachNode_II {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -2543,6 +4352,27 @@ package tree
 import java.util.*
 
 class PopulateNextRightPointersInEachNode_II_Constant {
+    /**
+    * Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     /**
     * Solves the Populate Next Right Pointers In Each Node_II_Constant problem.
     * Takes `root` (Node?).
@@ -2586,12 +4416,24 @@ class PopulateNextRightPointersInEachNode_II_Constant {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -2626,6 +4468,27 @@ class PopulatingNextRightPointerInEachNode {
     * @param root The Node? (nullable).
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Node problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `root` (Node?).
+    *
+    * @param root The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun connect(root: Node?): Node? {
         root?.let { queue ->
             val q = LinkedList<Node>().apply { offer(queue) }
@@ -2649,12 +4512,24 @@ class PopulatingNextRightPointerInEachNode {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -2683,8 +4558,56 @@ class RangeSumOfBST {
     * @param high The integer parameter representing high.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Range Sum Of BST problem.
+    * Takes `root` (binary tree node reference), `low` (integer), `high` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param low The integer parameter representing low.
+    * @param high The integer parameter representing high.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Range Sum Of BST problem.
+    * Takes `root` (binary tree node reference), `low` (integer), `high` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param low The integer parameter representing low.
+    * @param high The integer parameter representing high.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Range Sum Of BST problem.
+    * Takes `root` (binary tree node reference), `low` (integer), `high` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param low The integer parameter representing low.
+    * @param high The integer parameter representing high.
+    * @return The computed integer result.
+    */
     fun rangeSumBST(root: TreeNode?, low: Int, high: Int): Int {
         var sum = 0
+        /**
+        * Solves the Range Sum Of BST problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Range Sum Of BST problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Range Sum Of BST problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Range Sum Of BST problem.
         * Takes `node` (binary tree node reference).
@@ -2710,12 +4633,24 @@ class RangeSumOfBST {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -2742,10 +4677,52 @@ class RecoverATreeFromPreOrderTraversal {
     * @param traversal The input string.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Recover ATree From Pre Order Traversal problem.
+    * Takes `traversal` (string).
+    *
+    * @param traversal The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Recover ATree From Pre Order Traversal problem.
+    * Takes `traversal` (string).
+    *
+    * @param traversal The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Recover ATree From Pre Order Traversal problem.
+    * Takes `traversal` (string).
+    *
+    * @param traversal The input string.
+    * @return The result, or `null` if not found.
+    */
     fun recoverFromPreorder(traversal: String): TreeNode? {
         var index = 0 // Global index to track position in the string
 
         // Recursive function to build the tree
+        /**
+        * Solves the Recover ATree From Pre Order Traversal problem.
+        * Takes `depth` (integer).
+        *
+        * @param depth The integer parameter representing depth.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Recover ATree From Pre Order Traversal problem.
+        * Takes `depth` (integer).
+        *
+        * @param depth The integer parameter representing depth.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Recover ATree From Pre Order Traversal problem.
+        * Takes `depth` (integer).
+        *
+        * @param depth The integer parameter representing depth.
+        * @return The result, or `null` if not found.
+        */
         /**
         * Solves the Recover ATree From Pre Order Traversal problem.
         * Takes `depth` (integer).
@@ -2791,12 +4768,24 @@ class RecoverATreeFromPreOrderTraversal {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -2823,12 +4812,54 @@ class RecoverBinarySearchTree {
     * @param root The binary tree node reference (nullable).
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Recover Binary Search Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Recover Binary Search Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Recover Binary Search Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun recoverTree(root: TreeNode?) {
         var first: TreeNode? = null
         var second: TreeNode? = null
         var prev: TreeNode? = null
 
         // Helper function to perform in-order traversal
+        /**
+        * Solves the Recover Binary Search Tree problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Recover Binary Search Tree problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Recover Binary Search Tree problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Recover Binary Search Tree problem.
         * Takes `node` (binary tree node reference).
@@ -2872,12 +4903,24 @@ class RecoverBinarySearchTree {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -2916,6 +4959,27 @@ class Codec() {
     * @param root The binary tree node reference (nullable).
     * @return The resulting string.
     */
+    /**
+    * Solves the Codec problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Codec problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Codec problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The resulting string.
+    */
     fun serialize(root: TreeNode?): String {
         val serializedTree = StringBuilder()
 
@@ -2924,6 +4988,27 @@ class Codec() {
         *
         * @param node The binary tree node reference (nullable).
         * @return Unit (no return value, modifies state in-place).
+        /**
+        * Solves the Codec problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Codec problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Codec problem.
+        * Takes `node` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Codec problem.
         * Takes `node` (binary tree node reference).
@@ -2959,12 +5044,48 @@ class Codec() {
     * @param data The input string.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Codec problem.
+    * Takes `data` (string).
+    *
+    * @param data The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Codec problem.
+    * Takes `data` (string).
+    *
+    * @param data The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Codec problem.
+    * Takes `data` (string).
+    *
+    * @param data The input string.
+    * @return The result, or `null` if not found.
+    */
     fun deserialize(data: String): TreeNode? {
         val nodes = data.split(",").toMutableList()
 
         * Solves the Codec problem.
         *
         * @return The result, or `null` if not found.
+        /**
+        * Solves the Codec problem.
+        *
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Codec problem.
+        *
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Codec problem.
+        *
+        * @return The result, or `null` if not found.
+        */
         /**
         * Solves the Codec problem.
         *
@@ -2994,12 +5115,24 @@ class Codec() {
  * var ans = deser.deserialize(data)
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -3032,9 +5165,51 @@ class SerializeAndDeserializeNArrayTree {
         * @param root The Node? (nullable).
         * @return The resulting string.
         */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `root` (Node?).
+        *
+        * @param root The Node? (nullable).
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `root` (Node?).
+        *
+        * @param root The Node? (nullable).
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `root` (Node?).
+        *
+        * @param root The Node? (nullable).
+        * @return The resulting string.
+        */
         fun serialize(root: Node?): String = when (root) {
             null -> ""
             else -> buildString {
+                /**
+                * Solves the Serialize And Deserialize NArray Tree problem.
+                * Takes `node` (Node?).
+                *
+                * @param node The Node? (nullable).
+                * @return Unit (no return value, modifies state in-place).
+                */
+                /**
+                * Solves the Serialize And Deserialize NArray Tree problem.
+                * Takes `node` (Node?).
+                *
+                * @param node The Node? (nullable).
+                * @return Unit (no return value, modifies state in-place).
+                */
+                /**
+                * Solves the Serialize And Deserialize NArray Tree problem.
+                * Takes `node` (Node?).
+                *
+                * @param node The Node? (nullable).
+                * @return Unit (no return value, modifies state in-place).
+                */
                 /**
                 * Solves the Serialize And Deserialize NArray Tree problem.
                 * Takes `node` (Node?).
@@ -3064,12 +5239,48 @@ class SerializeAndDeserializeNArrayTree {
         * @param data The input string.
         * @return The result, or `null` if not found.
         */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `data` (string).
+        *
+        * @param data The input string.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `data` (string).
+        *
+        * @param data The input string.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `data` (string).
+        *
+        * @param data The input string.
+        * @return The result, or `null` if not found.
+        */
         fun deserialize(data: String): Node? {
             if (data.isEmpty()) return null
 
             val tokens = data.split(",")
             var index = 0
 
+            /**
+            * Solves the Serialize And Deserialize NArray Tree problem.
+            *
+            * @return The result, or `null` if not found.
+            */
+            /**
+            * Solves the Serialize And Deserialize NArray Tree problem.
+            *
+            * @return The result, or `null` if not found.
+            */
+            /**
+            * Solves the Serialize And Deserialize NArray Tree problem.
+            *
+            * @return The result, or `null` if not found.
+            */
             /**
             * Solves the Serialize And Deserialize NArray Tree problem.
             *
@@ -3094,12 +5305,24 @@ class SerializeAndDeserializeNArrayTree {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -3127,6 +5350,30 @@ class StepByStepDirectionsFromANodeToAnother {
     * @param searchKey The integer parameter representing searchKey.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `searchKey` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param searchKey The integer parameter representing searchKey.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `searchKey` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param searchKey The integer parameter representing searchKey.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `searchKey` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param searchKey The integer parameter representing searchKey.
+    * @return The result, or `null` if not found.
+    */
     fun findNode(root: TreeNode?, searchKey: Int): TreeNode? {
         return when {
             root == null -> null
@@ -3135,6 +5382,33 @@ class StepByStepDirectionsFromANodeToAnother {
         }
     }
 
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param p The binary tree node reference (nullable).
+    * @param q The binary tree node reference (nullable).
+    * @return The result, or `null` if not found.
+    */
     /**
     * Solves the Step By Step Directions From ANode To Another problem.
     * Takes `root` (binary tree node reference), `p` (binary tree node reference), `q` (binary tree node reference).
@@ -3154,6 +5428,33 @@ class StepByStepDirectionsFromANodeToAnother {
 
     }
 
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `startValue` (integer), `destValue` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param startValue The integer parameter representing startValue.
+    * @param destValue The integer parameter representing destValue.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `startValue` (integer), `destValue` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param startValue The integer parameter representing startValue.
+    * @param destValue The integer parameter representing destValue.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Step By Step Directions From ANode To Another problem.
+    * Takes `root` (binary tree node reference), `startValue` (integer), `destValue` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param startValue The integer parameter representing startValue.
+    * @param destValue The integer parameter representing destValue.
+    * @return The resulting string.
+    */
     /**
     * Solves the Step By Step Directions From ANode To Another problem.
     * Takes `root` (binary tree node reference), `startValue` (integer), `destValue` (integer).
@@ -3191,6 +5492,30 @@ class StepByStepDirectionsFromANodeToAnother {
     * @param path The input string.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Helper: build path.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param path The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: build path.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param path The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: build path.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param path The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun buildPath(node: TreeNode?, target: TreeNode?, path: StringBuilder): Boolean {
         if (node == null) return false
         if (node === target) return true
@@ -3208,12 +5533,24 @@ class StepByStepDirectionsFromANodeToAnother {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -3240,9 +5577,54 @@ class SumRootToLeafNumbers {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Sum Root To Leaf Numbers problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sum Root To Leaf Numbers problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sum Root To Leaf Numbers problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun sumNumbers(root: TreeNode?): Int {
         var sum = 0
 
+        /**
+        * Solves the Sum Root To Leaf Numbers problem.
+        * Takes `node` (binary tree node reference), `sumSoFar` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param sumSoFar The integer parameter representing sumSoFar.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Sum Root To Leaf Numbers problem.
+        * Takes `node` (binary tree node reference), `sumSoFar` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param sumSoFar The integer parameter representing sumSoFar.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Sum Root To Leaf Numbers problem.
+        * Takes `node` (binary tree node reference), `sumSoFar` (integer).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param sumSoFar The integer parameter representing sumSoFar.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Sum Root To Leaf Numbers problem.
         * Takes `node` (binary tree node reference), `sumSoFar` (integer).
@@ -3269,12 +5651,24 @@ class SumRootToLeafNumbers {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -3298,6 +5692,27 @@ import java.util.*
 class VerticalOrderTraversalOfABinaryTree {
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
+    /**
+    * Solves the Vertical Order Traversal Of ABinary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Vertical Order Traversal Of ABinary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Vertical Order Traversal Of ABinary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     /**
     * Solves the Vertical Order Traversal Of ABinary Tree problem.
     * Takes `root` (binary tree node reference).
@@ -3338,11 +5753,23 @@ class VerticalOrderTraversalOfABinaryTree {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---

@@ -8,6 +8,27 @@ class PartitionEqualSubsetSum {
     * @param nums The input array of integers.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canPartition(nums: IntArray): Boolean {
         val sum = nums.sum()
         if (sum % 2 != 0)   return false
@@ -15,6 +36,30 @@ class PartitionEqualSubsetSum {
         val dp = Array(nums.size) { IntArray(target + 1) { -1 } }
 
 
+        /**
+        * Solves the Partition Equal Subset Sum problem.
+        * Takes `i` (integer), `currentSum` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param currentSum The integer parameter representing currentSum.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Partition Equal Subset Sum problem.
+        * Takes `i` (integer), `currentSum` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param currentSum The integer parameter representing currentSum.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Partition Equal Subset Sum problem.
+        * Takes `i` (integer), `currentSum` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param currentSum The integer parameter representing currentSum.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Partition Equal Subset Sum problem.
         * Takes `i` (integer), `currentSum` (integer).
@@ -35,6 +80,27 @@ class PartitionEqualSubsetSum {
         return dfs(0, 0)
     }
 
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Partition Equal Subset Sum problem.
     * Takes `nums` (array of integers).

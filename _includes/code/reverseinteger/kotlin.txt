@@ -10,6 +10,27 @@ class ReverseInteger {
     * @param x The integer parameter representing x.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Reverse Integer problem.
+    * Takes `x` (integer).
+    *
+    * @param x The integer parameter representing x.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Reverse Integer problem.
+    * Takes `x` (integer).
+    *
+    * @param x The integer parameter representing x.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Reverse Integer problem.
+    * Takes `x` (integer).
+    *
+    * @param x The integer parameter representing x.
+    * @return The computed integer result.
+    */
     fun reverse(x: Int): Int {
         var reversed: Long = 0
         val sign = if(x<0) -1 else 1

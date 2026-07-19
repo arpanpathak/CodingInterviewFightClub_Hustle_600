@@ -12,6 +12,27 @@ class ShortestPathInBinaryMatrix {
     * @param grid The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Shortest Path In Binary Matrix problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Shortest Path In Binary Matrix problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Shortest Path In Binary Matrix problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun shortestPathBinaryMatrix(grid: Array<IntArray>): Int {
         val n = grid.size
         val m = grid[0].size

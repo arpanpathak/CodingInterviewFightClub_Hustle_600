@@ -14,9 +14,51 @@ class SerializeAndDeserializeNArrayTree {
         * @param root The Node? (nullable).
         * @return The resulting string.
         */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `root` (Node?).
+        *
+        * @param root The Node? (nullable).
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `root` (Node?).
+        *
+        * @param root The Node? (nullable).
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `root` (Node?).
+        *
+        * @param root The Node? (nullable).
+        * @return The resulting string.
+        */
         fun serialize(root: Node?): String = when (root) {
             null -> ""
             else -> buildString {
+                /**
+                * Solves the Serialize And Deserialize NArray Tree problem.
+                * Takes `node` (Node?).
+                *
+                * @param node The Node? (nullable).
+                * @return Unit (no return value, modifies state in-place).
+                */
+                /**
+                * Solves the Serialize And Deserialize NArray Tree problem.
+                * Takes `node` (Node?).
+                *
+                * @param node The Node? (nullable).
+                * @return Unit (no return value, modifies state in-place).
+                */
+                /**
+                * Solves the Serialize And Deserialize NArray Tree problem.
+                * Takes `node` (Node?).
+                *
+                * @param node The Node? (nullable).
+                * @return Unit (no return value, modifies state in-place).
+                */
                 /**
                 * Solves the Serialize And Deserialize NArray Tree problem.
                 * Takes `node` (Node?).
@@ -46,12 +88,48 @@ class SerializeAndDeserializeNArrayTree {
         * @param data The input string.
         * @return The result, or `null` if not found.
         */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `data` (string).
+        *
+        * @param data The input string.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `data` (string).
+        *
+        * @param data The input string.
+        * @return The result, or `null` if not found.
+        */
+        /**
+        * Solves the Serialize And Deserialize NArray Tree problem.
+        * Takes `data` (string).
+        *
+        * @param data The input string.
+        * @return The result, or `null` if not found.
+        */
         fun deserialize(data: String): Node? {
             if (data.isEmpty()) return null
 
             val tokens = data.split(",")
             var index = 0
 
+            /**
+            * Solves the Serialize And Deserialize NArray Tree problem.
+            *
+            * @return The result, or `null` if not found.
+            */
+            /**
+            * Solves the Serialize And Deserialize NArray Tree problem.
+            *
+            * @return The result, or `null` if not found.
+            */
+            /**
+            * Solves the Serialize And Deserialize NArray Tree problem.
+            *
+            * @return The result, or `null` if not found.
+            */
             /**
             * Solves the Serialize And Deserialize NArray Tree problem.
             *

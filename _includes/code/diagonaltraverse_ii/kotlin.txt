@@ -12,6 +12,27 @@ class DiagonalTraverse_II {
     * @param nums The input 2D list of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Point problem.
+    * Takes `nums` (2D list of integers).
+    *
+    * @param nums The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Point problem.
+    * Takes `nums` (2D list of integers).
+    *
+    * @param nums The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Point problem.
+    * Takes `nums` (2D list of integers).
+    *
+    * @param nums The input 2D list of integers.
+    * @return The computed integer result.
+    */
     fun findDiagonalOrder(nums: List<List<Int>>): List<Int> {
         val result = mutableListOf<Int>()
         val queue: Queue<Pair<Int, Int>> = LinkedList()

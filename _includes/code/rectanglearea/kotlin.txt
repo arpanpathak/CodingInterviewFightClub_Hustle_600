@@ -17,6 +17,48 @@ class RectangleArea {
     * @param by2 The integer parameter representing by2.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Rectangle Area problem.
+    * Takes `ax1` (integer), `ay1` (integer), `ax2` (integer), `ay2` (integer), `bx1` (integer), `by1` (integer), `bx2` (integer), `by2` (integer).
+    *
+    * @param ax1 The integer parameter representing ax1.
+    * @param ay1 The integer parameter representing ay1.
+    * @param ax2 The integer parameter representing ax2.
+    * @param ay2 The integer parameter representing ay2.
+    * @param bx1 The integer parameter representing bx1.
+    * @param by1 The integer parameter representing by1.
+    * @param bx2 The integer parameter representing bx2.
+    * @param by2 The integer parameter representing by2.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Rectangle Area problem.
+    * Takes `ax1` (integer), `ay1` (integer), `ax2` (integer), `ay2` (integer), `bx1` (integer), `by1` (integer), `bx2` (integer), `by2` (integer).
+    *
+    * @param ax1 The integer parameter representing ax1.
+    * @param ay1 The integer parameter representing ay1.
+    * @param ax2 The integer parameter representing ax2.
+    * @param ay2 The integer parameter representing ay2.
+    * @param bx1 The integer parameter representing bx1.
+    * @param by1 The integer parameter representing by1.
+    * @param bx2 The integer parameter representing bx2.
+    * @param by2 The integer parameter representing by2.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Rectangle Area problem.
+    * Takes `ax1` (integer), `ay1` (integer), `ax2` (integer), `ay2` (integer), `bx1` (integer), `by1` (integer), `bx2` (integer), `by2` (integer).
+    *
+    * @param ax1 The integer parameter representing ax1.
+    * @param ay1 The integer parameter representing ay1.
+    * @param ax2 The integer parameter representing ax2.
+    * @param ay2 The integer parameter representing ay2.
+    * @param bx1 The integer parameter representing bx1.
+    * @param by1 The integer parameter representing by1.
+    * @param bx2 The integer parameter representing bx2.
+    * @param by2 The integer parameter representing by2.
+    * @return The computed integer result.
+    */
     fun computeArea(ax1: Int, ay1: Int, ax2: Int, ay2: Int, bx1: Int, by1: Int, bx2: Int, by2: Int): Int {
         val h1 = abs(ax1 - ax2)
         val w1 = abs(ay1 - ay2)

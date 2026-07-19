@@ -22,6 +22,30 @@ class AutoCompleteSystemWithHeap(sentences: Array<String>, times: IntArray) {
     * @param hotness The integer parameter representing hotness.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Auto Complete System With Heap problem.
+    * Takes `word` (string), `hotness` (integer).
+    *
+    * @param word The input string.
+    * @param hotness The integer parameter representing hotness.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Auto Complete System With Heap problem.
+    * Takes `word` (string), `hotness` (integer).
+    *
+    * @param word The input string.
+    * @param hotness The integer parameter representing hotness.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Auto Complete System With Heap problem.
+    * Takes `word` (string), `hotness` (integer).
+    *
+    * @param word The input string.
+    * @param hotness The integer parameter representing hotness.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun insert(word: String, hotness: Int) {
         var currentNode = root
 
@@ -37,6 +61,27 @@ class AutoCompleteSystemWithHeap(sentences: Array<String>, times: IntArray) {
         }
     }
 
+    /**
+    * Solves the Auto Complete System With Heap problem.
+    * Takes `prefix` (string).
+    *
+    * @param prefix The input string.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Auto Complete System With Heap problem.
+    * Takes `prefix` (string).
+    *
+    * @param prefix The input string.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Auto Complete System With Heap problem.
+    * Takes `prefix` (string).
+    *
+    * @param prefix The input string.
+    * @return The resulting collection (list of strings).
+    */
     /**
     * Solves the Auto Complete System With Heap problem.
     * Takes `prefix` (string).
@@ -60,6 +105,27 @@ class AutoCompleteSystemWithHeap(sentences: Array<String>, times: IntArray) {
         return currentNode.suggestions.take(3)
     }
 
+    /**
+    * Solves the Auto Complete System With Heap problem.
+    * Takes `searchWord` (string).
+    *
+    * @param searchWord The input string.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Auto Complete System With Heap problem.
+    * Takes `searchWord` (string).
+    *
+    * @param searchWord The input string.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Auto Complete System With Heap problem.
+    * Takes `searchWord` (string).
+    *
+    * @param searchWord The input string.
+    * @return The resulting collection (List<List<String>).
+    */
     /**
     * Solves the Auto Complete System With Heap problem.
     * Takes `searchWord` (string).

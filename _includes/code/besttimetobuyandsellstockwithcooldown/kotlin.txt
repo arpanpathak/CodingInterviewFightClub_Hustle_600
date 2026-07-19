@@ -11,10 +11,52 @@ class BestTimeToBuyAndSellStockWithCooldown {
     * @param prices The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Best Time To Buy And Sell Stock With Cooldown problem.
+    * Takes `prices` (array of integers).
+    *
+    * @param prices The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Best Time To Buy And Sell Stock With Cooldown problem.
+    * Takes `prices` (array of integers).
+    *
+    * @param prices The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Best Time To Buy And Sell Stock With Cooldown problem.
+    * Takes `prices` (array of integers).
+    *
+    * @param prices The input array of integers.
+    * @return The computed integer result.
+    */
     fun maxProfit(prices: IntArray): Int {
         return maxProfit(prices, 0)
     }
 
+    /**
+    * Solves the Best Time To Buy And Sell Stock With Cooldown problem.
+    * Takes `prices` (array of integers).
+    *
+    * @param prices The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Best Time To Buy And Sell Stock With Cooldown problem.
+    * Takes `prices` (array of integers).
+    *
+    * @param prices The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Best Time To Buy And Sell Stock With Cooldown problem.
+    * Takes `prices` (array of integers).
+    *
+    * @param prices The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Best Time To Buy And Sell Stock With Cooldown problem.
     * Takes `prices` (array of integers).

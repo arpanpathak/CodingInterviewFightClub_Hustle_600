@@ -9,6 +9,30 @@ class SearchA2dMatrix_II {
     * @param target The integer parameter representing target.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Search A2d Matrix_II problem.
+    * Takes `matrix` (2D matrix of integers), `target` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Search A2d Matrix_II problem.
+    * Takes `matrix` (2D matrix of integers), `target` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Search A2d Matrix_II problem.
+    * Takes `matrix` (2D matrix of integers), `target` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
         var (row, col) = matrix.size - 1 to 0
 

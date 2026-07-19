@@ -12,6 +12,27 @@ class BinaryTreeLevelOrderTraversal {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Binary Tree Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Level Order Traversal problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun levelOrder(root: TreeNode?): List<List<Int>> {
         val result: MutableList<List<Int>> = ArrayList()
         if (root == null)

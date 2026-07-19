@@ -72,6 +72,27 @@ class AlienDictionary {
     * @param words The input Array<String>.
     * @return The resulting string.
     */
+    /**
+    * Solves the Alien Dictionary problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Alien Dictionary problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Alien Dictionary problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
     fun alienOrder(words: Array<String>): String {
         val graph = mutableMapOf<Char, MutableSet<Char>>()
         val visited = mutableMapOf<Char, State>()  // 0 = visiting, 1 = visited, -1 = not visited
@@ -110,6 +131,27 @@ class AlienDictionary {
         * @param node The character.
         * @return `true` if the condition is met, `false` otherwise.
         */
+        /**
+        * Solves the Alien Dictionary problem.
+        * Takes `node` (character).
+        *
+        * @param node The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Alien Dictionary problem.
+        * Takes `node` (character).
+        *
+        * @param node The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Alien Dictionary problem.
+        * Takes `node` (character).
+        *
+        * @param node The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         fun dfs(node: Char): Boolean {
             if (visited[node] == State.VISITING) return false  // Cycle detected
             if (visited[node] == State.VISITED) return true  // Already visited
@@ -134,10 +176,9 @@ class AlienDictionary {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Backtracking / DFS. Explore all possibilities, pruning when constraints are violated.
+**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
 
 ### Complexity
 
@@ -148,13 +189,14 @@ class AlienDictionary {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
+
 ## Alien Dictionary_BFS
 
 ### Problem
@@ -171,6 +213,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package graph.topological_sort
 
 class AlienDictionary_BFS {
+    /**
+    * Solves the Alien Dictionary_BFS problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Alien Dictionary_BFS problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Alien Dictionary_BFS problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
     /**
     * Solves the Alien Dictionary_BFS problem.
     * Takes `words` (Array<String>).
@@ -222,15 +285,9 @@ class AlienDictionary_BFS {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
-
-
-### Pattern Insight
-
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
 
 ### Complexity
 
@@ -241,13 +298,14 @@ class AlienDictionary_BFS {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
+
 ## Apply Substitutions
 
 ### Problem
@@ -272,6 +330,30 @@ class ApplySubstitutions {
     * @param text The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Apply Substitutions problem.
+    * Takes `replacements` (List<List<String>>), `text` (string).
+    *
+    * @param replacements The input List<List<String>>.
+    * @param text The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Apply Substitutions problem.
+    * Takes `replacements` (List<List<String>>), `text` (string).
+    *
+    * @param replacements The input List<List<String>>.
+    * @param text The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Apply Substitutions problem.
+    * Takes `replacements` (List<List<String>>), `text` (string).
+    *
+    * @param replacements The input List<List<String>>.
+    * @param text The input string.
+    * @return The resulting string.
+    */
     fun applySubstitutions(replacements: List<List<String>>, text: String): String {
         val map = mutableMapOf<String, String>()
 
@@ -279,6 +361,27 @@ class ApplySubstitutions {
             map[key] = value
         }
 
+        /**
+        * Solves the Apply Substitutions problem.
+        * Takes `s` (string).
+        *
+        * @param s The input string.
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Apply Substitutions problem.
+        * Takes `s` (string).
+        *
+        * @param s The input string.
+        * @return The resulting string.
+        */
+        /**
+        * Solves the Apply Substitutions problem.
+        * Takes `s` (string).
+        *
+        * @param s The input string.
+        * @return The resulting string.
+        */
         /**
         * Solves the Apply Substitutions problem.
         * Takes `s` (string).
@@ -310,15 +413,9 @@ class ApplySubstitutions {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
-
-
-### Pattern Insight
-
-**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
 
 ### Complexity
 
@@ -329,13 +426,14 @@ class ApplySubstitutions {
 
 ### Variations
 
-1. What if the tree is not balanced (skewed)? Worst-case complexity?
-1. What if you need to do this iteratively (no recursion)?
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
 1. What if the tree is an N-ary tree instead of binary?
-1. What if you need to handle both BST and non-BST trees?
-1. Can this be solved with Morris traversal (O(1) space)?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
+
 ## Bus Routes
 
 ### Problem
@@ -358,6 +456,33 @@ import java.util.*
 class BusRoutes {
     data class Node(val stop: Int, val busCount: Int)
 
+    /**
+    * Solves the Bus Routes problem.
+    * Takes `routes` (2D matrix of integers), `source` (integer), `target` (integer).
+    *
+    * @param routes The input 2D matrix of integers.
+    * @param source The integer parameter representing source.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Bus Routes problem.
+    * Takes `routes` (2D matrix of integers), `source` (integer), `target` (integer).
+    *
+    * @param routes The input 2D matrix of integers.
+    * @param source The integer parameter representing source.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Bus Routes problem.
+    * Takes `routes` (2D matrix of integers), `source` (integer), `target` (integer).
+    *
+    * @param routes The input 2D matrix of integers.
+    * @param source The integer parameter representing source.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Bus Routes problem.
     * Takes `routes` (2D matrix of integers), `source` (integer), `target` (integer).
@@ -414,12 +539,24 @@ class BusRoutes {
 // (1) =>
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -448,6 +585,39 @@ class CheapestFlightsWithinKStops {
     private var graph = mutableMapOf<Int, MutableList<Node>>()
 
     // Solving using Bellman Ford
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Cheapest Flights Within KStops problem.
     * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
@@ -501,6 +671,39 @@ class CheapestFlightsWithinKStops {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun findCheapestPriceBfs(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         flights.forEach { flight ->
@@ -517,6 +720,30 @@ class CheapestFlightsWithinKStops {
     }
 
 
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Cheapest Flights Within KStops problem.
     * Takes `graph` (MutableMap<Int), `src` (integer).
@@ -553,6 +780,36 @@ class CheapestFlightsWithinKStops {
         return dist
     }
 
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `src` (integer), `dest` (integer), `n` (integer), `k` (integer).
+    *
+    * @param src The integer parameter representing src.
+    * @param dest The integer parameter representing dest.
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `src` (integer), `dest` (integer), `n` (integer), `k` (integer).
+    *
+    * @param src The integer parameter representing src.
+    * @param dest The integer parameter representing dest.
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `src` (integer), `dest` (integer), `n` (integer), `k` (integer).
+    *
+    * @param src The integer parameter representing src.
+    * @param dest The integer parameter representing dest.
+    * @param n The integer parameter representing n.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Cheapest Flights Within KStops problem.
     * Takes `src` (integer), `dest` (integer), `n` (integer), `k` (integer).
@@ -603,6 +860,33 @@ class CheapestFlightsWithinKStops {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer), `k` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer), `k` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights Within KStops problem.
+    * Takes `graph` (MutableMap<Int), `src` (integer), `k` (integer).
+    *
+    * @param graph The input MutableMap<Int.
+    * @param src The integer parameter representing src.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun dijkstraWithMaxKStops(graph: MutableMap<Int, MutableList<Node>>, src: Int, k: Int): Map<Int, Int> {
         val pq = PriorityQueue<State>(compareBy { it.cost })
         pq.offer(State(src, 0, 0))
@@ -637,6 +921,24 @@ class CheapestFlightsWithinKStops {
         * @param args The input Array<String>.
         * @return Unit (no return value, modifies state in-place).
         */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun main(args: Array<String>) {
 
         }
@@ -644,12 +946,24 @@ class CheapestFlightsWithinKStops {
 }
 ```
 
+### Pattern Insight
+
+**Heap Pattern.** Maintain dynamic ordering. Min-heap for k-largest, max-heap for k-smallest, dual heaps for median. Each operation O(log k).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if you need k-th smallest instead of largest?
+1. What if elements are added/removed dynamically?
+1. Sorting vs heap — compare O(n log n) vs O(n log k)?
+1. What if k is very large (close to n)? Different approach?
+1. How to handle ties in priority ordering?
 
 ---
 
@@ -677,6 +991,39 @@ class CheapestFlightsWithKStops {
     // Define the State class for priority queue elements
     data class State(val node: Int, val cost: Int, val stops: Int)
 
+    /**
+    * Solves the Cheapest Flights With KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights With KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flights With KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Cheapest Flights With KStops problem.
     * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
@@ -728,12 +1075,24 @@ class CheapestFlightsWithKStops {
 }
 ```
 
+### Pattern Insight
+
+**Heap Pattern.** Maintain dynamic ordering. Min-heap for k-largest, max-heap for k-smallest, dual heaps for median. Each operation O(log k).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n log k) |
 | **Space** | O(k) |
+
+### Variations
+
+1. What if you need k-th smallest instead of largest?
+1. What if elements are added/removed dynamically?
+1. Sorting vs heap — compare O(n log n) vs O(n log k)?
+1. What if k is very large (close to n)? Different approach?
+1. How to handle ties in priority ordering?
 
 ---
 
@@ -757,6 +1116,39 @@ import java.util.*
 class CheapestFlightWithKStops {
     data class Flight(val node: Int, val cost: Int, val stops: Int)
 
+    /**
+    * Solves the Cheapest Flight With KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flight With KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Cheapest Flight With KStops problem.
+    * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @param flights The input 2D matrix of integers.
+    * @param src The integer parameter representing src.
+    * @param dst The integer parameter representing dst.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Cheapest Flight With KStops problem.
     * Takes `n` (integer), `flights` (2D matrix of integers), `src` (integer), `dst` (integer), `k` (integer).
@@ -792,12 +1184,24 @@ class CheapestFlightWithKStops {
 }
 ```
 
+### Pattern Insight
+
+**Heap Pattern.** Maintain dynamic ordering. Min-heap for k-largest, max-heap for k-smallest, dual heaps for median. Each operation O(log k).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n log k) |
 | **Space** | O(k) |
+
+### Variations
+
+1. What if you need k-th smallest instead of largest?
+1. What if elements are added/removed dynamically?
+1. Sorting vs heap — compare O(n log n) vs O(n log k)?
+1. What if k is very large (close to n)? Different approach?
+1. How to handle ties in priority ordering?
 
 ---
 
@@ -828,6 +1232,27 @@ class CloneGraph {
     * @param node The Node? (nullable).
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Node problem.
+    * Takes `node` (Node?).
+    *
+    * @param node The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `node` (Node?).
+    *
+    * @param node The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Node problem.
+    * Takes `node` (Node?).
+    *
+    * @param node The Node? (nullable).
+    * @return The result, or `null` if not found.
+    */
     fun cloneGraph(node: Node?): Node? {
 
         if (node == null) return null
@@ -843,12 +1268,24 @@ class CloneGraph {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -878,8 +1315,47 @@ class CourseSchedule {
     * @param numCourses The integer parameter representing numCourses.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Helper: has cycle.
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: has cycle.
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: has cycle.
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun hasCycle(numCourses: Int): Boolean {
         // Define dfs function inside hasCycle to limit its scope
+        /**
+        * Solves the Course Schedule problem.
+        * Takes `node` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Course Schedule problem.
+        * Takes `node` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Course Schedule problem.
+        * Takes `node` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Course Schedule problem.
         * Takes `node` (integer).
@@ -916,6 +1392,30 @@ class CourseSchedule {
     * @param prerequisites The input 2D matrix of integers.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Course Schedule problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Course Schedule problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Course Schedule problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
         // Reset graph for each invocation to handle multiple calls
         graph = mutableMapOf()
@@ -930,12 +1430,24 @@ class CourseSchedule {
 }
 ```
 
+### Pattern Insight
+
+**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
 
@@ -970,6 +1482,30 @@ class CourseSchedule_II {
     * @param prerequisites The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Course Schedule_II problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Course Schedule_II problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Course Schedule_II problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
         // Initialize graph, status, and result array
         status = Array(numCourses) { NodeStatus.UNVISITED }
@@ -995,8 +1531,47 @@ class CourseSchedule_II {
     * @param numCourses The integer parameter representing numCourses.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Helper: has cycle.
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: has cycle.
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: has cycle.
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     private fun hasCycle(numCourses: Int): Boolean {
         // Nested DFS function for checking cycles and building the result
+        /**
+        * Solves the Course Schedule_II problem.
+        * Takes `node` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Course Schedule_II problem.
+        * Takes `node` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Course Schedule_II problem.
+        * Takes `node` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Course Schedule_II problem.
         * Takes `node` (integer).
@@ -1036,12 +1611,24 @@ class CourseSchedule_II {
 }
 ```
 
+### Pattern Insight
+
+**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
 
@@ -1061,6 +1648,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package graph.topological_sort
 
 class CourseSchedule_II_BFS {
+    /**
+    * Solves the Course Schedule_II_BFS problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Course Schedule_II_BFS problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Course Schedule_II_BFS problem.
+    * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
+    *
+    * @param numCourses The integer parameter representing numCourses.
+    * @param prerequisites The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Course Schedule_II_BFS problem.
     * Takes `numCourses` (integer), `prerequisites` (2D matrix of integers).
@@ -1102,6 +1713,21 @@ class CourseSchedule_II_BFS {
 *
 * @return Unit (no return value, modifies state in-place).
 */
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @return Unit (no return value, modifies state in-place).
+*/
 fun main() {
     val solver = graph.topological_sort.CourseSchedule_II_BFS()
 
@@ -1129,12 +1755,24 @@ fun main() {
 }
 ```
 
+### Pattern Insight
+
+**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
 
@@ -1161,6 +1799,30 @@ class CriticalConnectionsInANetwork {
     private lateinit var low: IntArray
     private lateinit var visited: BooleanArray
 
+    /**
+    * Solves the Critical Connections In ANetwork problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Critical Connections In ANetwork problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Critical Connections In ANetwork problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Critical Connections In ANetwork problem.
     * Takes `n` (integer), `connections` (2D list of integers).
@@ -1200,6 +1862,27 @@ class CriticalConnectionsInANetwork {
     * @param parent The integer parameter representing parent.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The integer parameter representing node.
+    * @param parent The integer parameter representing parent.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The integer parameter representing node.
+    * @param parent The integer parameter representing parent.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The integer parameter representing node.
+    * @param parent The integer parameter representing parent.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun dfs(node: Int, parent: Int) {
         visited[node] = true
         label[node] = depth
@@ -1223,12 +1906,24 @@ class CriticalConnectionsInANetwork {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1256,6 +1951,30 @@ class CriticalConnectionsInANetworkShortCode {
     * @param connections The input 2D list of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Critical Connections In ANetwork Short Code problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Critical Connections In ANetwork Short Code problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Critical Connections In ANetwork Short Code problem.
+    * Takes `n` (integer), `connections` (2D list of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D list of integers.
+    * @return The computed integer result.
+    */
     fun criticalConnections(n: Int, connections: List<List<Int>>): List<List<Int>> {
         val graph = Array(n) { mutableListOf<Int>() }.apply {
             connections.forEach { (u, v) -> this[u].add(v); this[v].add(u) }
@@ -1265,6 +1984,30 @@ class CriticalConnectionsInANetworkShortCode {
         val low = IntArray(n)
         var time = 0
 
+        /**
+        * Solves the Critical Connections In ANetwork Short Code problem.
+        * Takes `node` (integer), `parent` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @param parent The integer parameter representing parent.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Critical Connections In ANetwork Short Code problem.
+        * Takes `node` (integer), `parent` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @param parent The integer parameter representing parent.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Critical Connections In ANetwork Short Code problem.
+        * Takes `node` (integer), `parent` (integer).
+        *
+        * @param node The integer parameter representing node.
+        * @param parent The integer parameter representing parent.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Critical Connections In ANetwork Short Code problem.
         * Takes `node` (integer), `parent` (integer).
@@ -1292,12 +2035,24 @@ class CriticalConnectionsInANetworkShortCode {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1324,9 +2079,51 @@ class FindRedundentConnections {
     * @param edges The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Find Redundent Connections problem.
+    * Takes `edges` (2D matrix of integers).
+    *
+    * @param edges The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Redundent Connections problem.
+    * Takes `edges` (2D matrix of integers).
+    *
+    * @param edges The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Redundent Connections problem.
+    * Takes `edges` (2D matrix of integers).
+    *
+    * @param edges The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun findRedundantConnection(edges: Array<IntArray>): IntArray {
         val parent = IntArray(1001) { it }
 
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Find Redundent Connections problem.
         * Takes `x` (integer).
@@ -1339,6 +2136,30 @@ class FindRedundentConnections {
             return parent[x]
         }
 
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Find Redundent Connections problem.
         * Takes `x` (integer), `y` (integer).
@@ -1364,12 +2185,24 @@ class FindRedundentConnections {
 }
 ```
 
+### Pattern Insight
+
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---
 
@@ -1403,6 +2236,27 @@ class HouseRobber3 {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Tree Node problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun rob(root: TreeNode?): Int {
         fun dfs (node: TreeNode?): IntArray {
             if (node == null)
@@ -1428,12 +2282,24 @@ class HouseRobber3 {
 }
 ```
 
+### Pattern Insight
+
+**Tree Traversal Pattern.** Choose the right traversal: inorder for sorted output (BST), preorder for construction, postorder for bottom-up, level-order for BFS. Recursion is natural; iteration saves stack space.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the tree is skewed (worst-case linked list)?
+1. Can you solve this iteratively without recursion?
+1. What if the tree is an N-ary tree instead of binary?
+1. What if you need O(1) extra space (Morris traversal)?
+1. Can this be parallelized for different subtrees?
 
 ---
 
@@ -1453,6 +2319,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package graph.cycle
 
 class ParallelCourses {
+    /**
+    * Solves the Parallel Courses problem.
+    * Takes `n` (integer), `relations` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param relations The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Parallel Courses problem.
+    * Takes `n` (integer), `relations` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param relations The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Parallel Courses problem.
+    * Takes `n` (integer), `relations` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param relations The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Parallel Courses problem.
     * Takes `n` (integer), `relations` (2D matrix of integers).
@@ -1494,12 +2384,24 @@ class ParallelCourses {
 }
 ```
 
+### Pattern Insight
+
+**Graph Pattern.** BFS for shortest path (unweighted), DFS for connectivity, topological sort for dependencies. Track visited to prevent cycles.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---
 
@@ -1527,6 +2429,30 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
     * @param connections The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+    * Takes `n` (integer), `connections` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+    * Takes `n` (integer), `connections` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+    * Takes `n` (integer), `connections` (2D matrix of integers).
+    *
+    * @param n The integer parameter representing n.
+    * @param connections The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun minReorder(n: Int, connections: Array<IntArray>): Int {
         val graph = Array(n) { mutableListOf<IntArray>() }
 
@@ -1539,6 +2465,27 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
         var changes = 0
         val visited = BooleanArray(n)
 
+        /**
+        * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+        * Takes `city` (integer).
+        *
+        * @param city The integer parameter representing city.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+        * Takes `city` (integer).
+        *
+        * @param city The integer parameter representing city.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
+        * Takes `city` (integer).
+        *
+        * @param city The integer parameter representing city.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Reorder Routes To Make All Paths Lead To City Zero problem.
         * Takes `city` (integer).
@@ -1564,12 +2511,24 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1591,6 +2550,33 @@ package graph
 import java.util.*
 
 class WordLadder {
+    /**
+    * Solves the Word Ladder problem.
+    * Takes `beginWord` (string), `endWord` (string), `wordList` (list of strings).
+    *
+    * @param beginWord The input string.
+    * @param endWord The input string.
+    * @param wordList The input list of strings.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Word Ladder problem.
+    * Takes `beginWord` (string), `endWord` (string), `wordList` (list of strings).
+    *
+    * @param beginWord The input string.
+    * @param endWord The input string.
+    * @param wordList The input list of strings.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Word Ladder problem.
+    * Takes `beginWord` (string), `endWord` (string), `wordList` (list of strings).
+    *
+    * @param beginWord The input string.
+    * @param endWord The input string.
+    * @param wordList The input list of strings.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Word Ladder problem.
     * Takes `beginWord` (string), `endWord` (string), `wordList` (list of strings).
@@ -1634,11 +2620,23 @@ class WordLadder {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the graph is disconnected? Handle multiple components.
+1. What if edges have weights? Does BFS still work?
+1. What if you need the actual path, not just distance?
+1. DFS vs BFS — which is better and why?
+1. What if the graph is too large to fit in memory?
 
 ---

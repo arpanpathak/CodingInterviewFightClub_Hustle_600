@@ -9,6 +9,30 @@ class PartitionToKEqualSumSubsets {
     * @param k The integer parameter representing k.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Partition To KEqual Sum Subsets problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition To KEqual Sum Subsets problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition To KEqual Sum Subsets problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canPartitionKSubsets(nums: IntArray, k: Int): Boolean {
         val totalSum = nums.sum()
         if (totalSum % k !=0) return false
@@ -16,6 +40,33 @@ class PartitionToKEqualSumSubsets {
         val targetSum = totalSum / k
         val used = BooleanArray(nums.size)
 
+        /**
+        * Solves the Partition To KEqual Sum Subsets problem.
+        * Takes `start` (integer), `currentSum` (integer), `remainingSubsets` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param currentSum The integer parameter representing currentSum.
+        * @param remainingSubsets The integer parameter representing remainingSubsets.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Partition To KEqual Sum Subsets problem.
+        * Takes `start` (integer), `currentSum` (integer), `remainingSubsets` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param currentSum The integer parameter representing currentSum.
+        * @param remainingSubsets The integer parameter representing remainingSubsets.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Partition To KEqual Sum Subsets problem.
+        * Takes `start` (integer), `currentSum` (integer), `remainingSubsets` (integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param currentSum The integer parameter representing currentSum.
+        * @param remainingSubsets The integer parameter representing remainingSubsets.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Partition To KEqual Sum Subsets problem.
         * Takes `start` (integer), `currentSum` (integer), `remainingSubsets` (integer).

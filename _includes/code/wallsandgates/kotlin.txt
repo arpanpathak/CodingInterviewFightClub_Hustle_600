@@ -8,6 +8,27 @@ class WallsAndGates {
     * @param rooms The input 2D matrix of integers.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Walls And Gates problem.
+    * Takes `rooms` (2D matrix of integers).
+    *
+    * @param rooms The input 2D matrix of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Walls And Gates problem.
+    * Takes `rooms` (2D matrix of integers).
+    *
+    * @param rooms The input 2D matrix of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Walls And Gates problem.
+    * Takes `rooms` (2D matrix of integers).
+    *
+    * @param rooms The input 2D matrix of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun wallsAndGates(rooms: Array<IntArray>) {
         if (rooms.isEmpty() || rooms[0].isEmpty()) return
 

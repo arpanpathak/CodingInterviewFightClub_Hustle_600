@@ -9,6 +9,30 @@ class KThMissingPositiveNumber {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the KTh Missing Positive Number problem.
+    * Takes `arr` (array of integers), `k` (integer).
+    *
+    * @param arr The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KTh Missing Positive Number problem.
+    * Takes `arr` (array of integers), `k` (integer).
+    *
+    * @param arr The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KTh Missing Positive Number problem.
+    * Takes `arr` (array of integers), `k` (integer).
+    *
+    * @param arr The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun findKthPositive(arr: IntArray, k: Int): Int {
         var (left, right) = 0 to arr.size
 

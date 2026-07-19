@@ -8,6 +8,27 @@ class GoatLatin {
     * @param sentence The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the Goat Latin problem.
+    * Takes `sentence` (string).
+    *
+    * @param sentence The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Goat Latin problem.
+    * Takes `sentence` (string).
+    *
+    * @param sentence The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Goat Latin problem.
+    * Takes `sentence` (string).
+    *
+    * @param sentence The input string.
+    * @return The resulting string.
+    */
     fun toGoatLatin(sentence: String): String {
         // Define a set of vowels for faster lookup
         val vowels = setOf('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')

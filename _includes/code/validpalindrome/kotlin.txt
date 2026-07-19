@@ -8,6 +8,27 @@ class ValidPalindrome {
     * @param s The input string.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Valid Palindrome problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isPalindrome(s: String): Boolean {
         var left = 0
         var right = s.lastIndex

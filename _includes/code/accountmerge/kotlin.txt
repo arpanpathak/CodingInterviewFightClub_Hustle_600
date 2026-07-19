@@ -14,10 +14,52 @@ class AccountMerge {
         * @param x The T.
         * @return Unit (no return value, modifies state in-place).
         */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun add(x: T) {
             nodes.putIfAbsent(x, Node(x, 0))
         }
 
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return The computed result (T).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return The computed result (T).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T).
+        *
+        * @param x The T.
+        * @return The computed result (T).
+        */
         /**
         * Solves the Account Merge problem.
         * Takes `x` (T).
@@ -34,6 +76,30 @@ class AccountMerge {
             return node.parent
         }
 
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T), `y` (T).
+        *
+        * @param x The T.
+        * @param y The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T), `y` (T).
+        *
+        * @param x The T.
+        * @param y The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Account Merge problem.
+        * Takes `x` (T), `y` (T).
+        *
+        * @param x The T.
+        * @param y The T.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Account Merge problem.
         * Takes `x` (T), `y` (T).
@@ -60,6 +126,27 @@ class AccountMerge {
         }
     }
 
+    /**
+    * Solves the Account Merge problem.
+    * Takes `accounts` (List<List<String>>).
+    *
+    * @param accounts The input List<List<String>>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Account Merge problem.
+    * Takes `accounts` (List<List<String>>).
+    *
+    * @param accounts The input List<List<String>>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Account Merge problem.
+    * Takes `accounts` (List<List<String>>).
+    *
+    * @param accounts The input List<List<String>>.
+    * @return The resulting collection (List<List<String>).
+    */
     /**
     * Solves the Account Merge problem.
     * Takes `accounts` (List<List<String>>).

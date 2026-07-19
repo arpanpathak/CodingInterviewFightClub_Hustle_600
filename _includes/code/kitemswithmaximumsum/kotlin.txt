@@ -11,6 +11,36 @@ class KItemsWithMaximumSum {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun kItemsWithMaximumSum(numOnes: Int, numZeros: Int, numNegOnes: Int, k: Int): Int {
         var (K, ones, zeroes, negatives, sum) = listOf( k, numOnes,numZeros, numNegOnes, 0 )
         while (K-- > 0) {
@@ -31,6 +61,36 @@ class KItemsWithMaximumSum {
     }
 
     // Alternative way
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Solves the KItems With Maximum Sum problem.
     * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).

@@ -12,11 +12,47 @@ class DesignAStackWithIncrementOperations(maxSize: Int) {
         * @param x The integer parameter representing x.
         * @return Unit (no return value, modifies state in-place).
         */
+        /**
+        * Solves the Design AStack With Increment Operations problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Design AStack With Increment Operations problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Design AStack With Increment Operations problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return Unit (no return value, modifies state in-place).
+        */
         fun push(x: Int) {
             if (stack.size < maxSize)
                 stack.addLast(x)
         }
 
+        /**
+        * Solves the Design AStack With Increment Operations problem.
+        *
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Design AStack With Increment Operations problem.
+        *
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Design AStack With Increment Operations problem.
+        *
+        * @return The computed integer result.
+        */
         /**
         * Solves the Design AStack With Increment Operations problem.
         *
@@ -36,6 +72,30 @@ class DesignAStackWithIncrementOperations(maxSize: Int) {
             return value
         }
 
+        /**
+        * Solves the Design AStack With Increment Operations problem.
+        * Takes `k` (integer), ``val`` (integer).
+        *
+        * @param k The integer parameter representing k.
+        * @param `val` The integer parameter representing `val`.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Design AStack With Increment Operations problem.
+        * Takes `k` (integer), ``val`` (integer).
+        *
+        * @param k The integer parameter representing k.
+        * @param `val` The integer parameter representing `val`.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Design AStack With Increment Operations problem.
+        * Takes `k` (integer), ``val`` (integer).
+        *
+        * @param k The integer parameter representing k.
+        * @param `val` The integer parameter representing `val`.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Design AStack With Increment Operations problem.
         * Takes `k` (integer), ``val`` (integer).

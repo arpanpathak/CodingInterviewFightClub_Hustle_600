@@ -14,6 +14,33 @@ class TheMaze_III {
     * @param hole The input array of integers.
     * @return The resulting string.
     */
+    /**
+    * Solves the The Maze_III problem.
+    * Takes `maze` (2D matrix of integers), `ball` (array of integers), `hole` (array of integers).
+    *
+    * @param maze The input 2D matrix of integers.
+    * @param ball The input array of integers.
+    * @param hole The input array of integers.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the The Maze_III problem.
+    * Takes `maze` (2D matrix of integers), `ball` (array of integers), `hole` (array of integers).
+    *
+    * @param maze The input 2D matrix of integers.
+    * @param ball The input array of integers.
+    * @param hole The input array of integers.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the The Maze_III problem.
+    * Takes `maze` (2D matrix of integers), `ball` (array of integers), `hole` (array of integers).
+    *
+    * @param maze The input 2D matrix of integers.
+    * @param ball The input array of integers.
+    * @param hole The input array of integers.
+    * @return The resulting string.
+    */
     fun findShortestWay(maze: Array<IntArray>, ball: IntArray, hole: IntArray): String {
         val m = maze.size
         val n = maze[0].size

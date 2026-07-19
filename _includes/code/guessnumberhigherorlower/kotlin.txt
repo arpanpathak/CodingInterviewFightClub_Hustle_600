@@ -13,10 +13,49 @@ package binarysearch
  * @param num The integer parameter representing num.
  * @return The computed integer result.
  */
+ /**
+ * Solves the Solution problem.
+ * Takes `num` (integer).
+ *
+ * @param num The integer parameter representing num.
+ * @return The computed integer result.
+ */
+ /**
+ * Solves the Solution problem.
+ * Takes `num` (integer).
+ *
+ * @param num The integer parameter representing num.
+ * @return The computed integer result.
+ */
+ /**
+ * Solves the Solution problem.
+ * Takes `num` (integer).
+ *
+ * @param num The integer parameter representing num.
+ * @return The computed integer result.
+ */
  * fun guess(num:Int):Int {}
  */
 
 class Solution:GuessGame() {
+    /**
+    * Implements/overrides the base class method.
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Implements/overrides the base class method.
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Implements/overrides the base class method.
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     /**
     * Implements/overrides the base class method.
     *
@@ -55,10 +94,52 @@ open class GuessGame {
     * @param n The integer parameter representing n.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Solution problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Solution problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Solution problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     open fun guessNumber(n: Int): Int {
         TODO("Not yet implemented")
     }
 
+    /**
+    * Solves the Solution problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Solution problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Solution problem.
+    * Takes `num` (integer).
+    *
+    * @param num The integer parameter representing num.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Solution problem.
     * Takes `num` (integer).

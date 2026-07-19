@@ -12,11 +12,53 @@ class DetectSquares() {
     * @param point The input array of integers.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Detect Squares problem.
+    * Takes `point` (array of integers).
+    *
+    * @param point The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Detect Squares problem.
+    * Takes `point` (array of integers).
+    *
+    * @param point The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Detect Squares problem.
+    * Takes `point` (array of integers).
+    *
+    * @param point The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun add(point: IntArray) {
         val key = point[0] to point[1]
         pointCount[key] = pointCount.getOrDefault(key, 0) + 1
     }
 
+    /**
+    * Solves the Detect Squares problem.
+    * Takes `point` (array of integers).
+    *
+    * @param point The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Detect Squares problem.
+    * Takes `point` (array of integers).
+    *
+    * @param point The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Detect Squares problem.
+    * Takes `point` (array of integers).
+    *
+    * @param point The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Detect Squares problem.
     * Takes `point` (array of integers).

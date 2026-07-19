@@ -9,9 +9,66 @@ class ExpressionAndAddOperators {
     * @param target The integer parameter representing target.
     * @return The resulting collection (list of strings).
     */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
     fun addOperators(num: String, target: Int): List<String> {
         val result = mutableListOf<String>()
 
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `index` (integer), `prevOperand` (long integer), `currentOperand` (long integer), `value` (long integer), `expression` (string).
+        *
+        * @param index The integer parameter representing index.
+        * @param prevOperand The long integer parameter representing prevOperand.
+        * @param currentOperand The long integer parameter representing currentOperand.
+        * @param value The long integer parameter representing value.
+        * @param expression The input string.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `index` (integer), `prevOperand` (long integer), `currentOperand` (long integer), `value` (long integer), `expression` (string).
+        *
+        * @param index The integer parameter representing index.
+        * @param prevOperand The long integer parameter representing prevOperand.
+        * @param currentOperand The long integer parameter representing currentOperand.
+        * @param value The long integer parameter representing value.
+        * @param expression The input string.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `index` (integer), `prevOperand` (long integer), `currentOperand` (long integer), `value` (long integer), `expression` (string).
+        *
+        * @param index The integer parameter representing index.
+        * @param prevOperand The long integer parameter representing prevOperand.
+        * @param currentOperand The long integer parameter representing currentOperand.
+        * @param value The long integer parameter representing value.
+        * @param expression The input string.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Expression And Add Operators problem.
         * Takes `index` (integer), `prevOperand` (long integer), `currentOperand` (long integer), `value` (long integer), `expression` (string).
@@ -70,9 +127,63 @@ class ExpressionAndAddOperators {
     * @param target The integer parameter representing target.
     * @return The resulting collection (list of strings).
     */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
+    /**
+    * Solves the Expression And Add Operators problem.
+    * Takes `num` (string), `target` (integer).
+    *
+    * @param num The input string.
+    * @param target The integer parameter representing target.
+    * @return The resulting collection (list of strings).
+    */
     fun addOperators2(num: String, target: Int): List<String> {
         val res = ArrayList<String>()
 
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `start` (integer), `path` (string), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `start` (integer), `path` (string), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Expression And Add Operators problem.
+        * Takes `start` (integer), `path` (string), `sum` (long integer), `prev` (long integer).
+        *
+        * @param start The integer parameter representing start.
+        * @param path The input string.
+        * @param sum The long integer parameter representing sum.
+        * @param prev The long integer parameter representing prev.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Expression And Add Operators problem.
         * Takes `start` (integer), `path` (string), `sum` (long integer), `prev` (long integer).
@@ -119,6 +230,24 @@ class ExpressionAndAddOperators {
 }
 
 
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
 /**
 * Entry point for the program.
 *

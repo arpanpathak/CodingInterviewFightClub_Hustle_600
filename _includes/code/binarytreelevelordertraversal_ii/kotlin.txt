@@ -11,6 +11,27 @@ class BinaryTreeLevelOrderTraversal_II {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Binary Tree Level Order Traversal_II problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Level Order Traversal_II problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Binary Tree Level Order Traversal_II problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun levelOrderBottom(root: TreeNode?): List<List<Int>> {
         val result = LinkedList<List<Int>>()
         val queue = LinkedList<TreeNode>()

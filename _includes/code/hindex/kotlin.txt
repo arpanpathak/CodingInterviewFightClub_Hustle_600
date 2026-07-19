@@ -8,6 +8,27 @@ class HIndex {
     * @param citations The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the HIndex problem.
+    * Takes `citations` (array of integers).
+    *
+    * @param citations The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the HIndex problem.
+    * Takes `citations` (array of integers).
+    *
+    * @param citations The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the HIndex problem.
+    * Takes `citations` (array of integers).
+    *
+    * @param citations The input array of integers.
+    * @return The computed integer result.
+    */
     fun hIndex(citations: IntArray): Int {
         // Step 1: Sort the citations in descending order
         citations.sortDescending()

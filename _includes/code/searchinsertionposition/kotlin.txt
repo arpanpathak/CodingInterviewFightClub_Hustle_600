@@ -9,6 +9,30 @@ class SearchInsertionPosition {
     * @param target The integer parameter representing target.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Search Insertion Position problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Search Insertion Position problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Search Insertion Position problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun searchInsert(nums: IntArray, target: Int): Int {
         var start = 0
         var end = nums.size - 1

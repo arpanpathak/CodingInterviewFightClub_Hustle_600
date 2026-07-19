@@ -9,11 +9,56 @@ class CoinChange {
     * @param amount The integer parameter representing amount.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Coin Change problem.
+    * Takes `coins` (array of integers), `amount` (integer).
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Coin Change problem.
+    * Takes `coins` (array of integers), `amount` (integer).
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Coin Change problem.
+    * Takes `coins` (array of integers), `amount` (integer).
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
     fun coinChange(coins: IntArray, amount: Int): Int {
         val dp = IntArray(amount + 1) { -1 }
         return coinChange(coins, amount, dp).let { if (it != Int.MAX_VALUE) it else -1 }
     }
 
+    /**
+    * Helper: coin change.
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: coin change.
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: coin change.
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
     /**
     * Helper: coin change.
     *

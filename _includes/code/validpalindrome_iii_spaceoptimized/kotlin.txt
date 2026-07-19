@@ -9,6 +9,30 @@ class ValidPalindrome_III_SpaceOptimized {
     * @param k The integer parameter representing k.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Valid Palindrome_III_Space Optimized problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_III_Space Optimized problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Valid Palindrome_III_Space Optimized problem.
+    * Takes `s` (string), `k` (integer).
+    *
+    * @param s The input string.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isValidPalindrome(s: String, k: Int): Boolean {
         val n = s.length
         val dp = IntArray(n) { 1 } // Initialize with 1 because each character is a palindrome of length 1

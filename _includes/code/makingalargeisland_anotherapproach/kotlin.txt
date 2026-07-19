@@ -8,11 +8,59 @@ class MakingALargeIsland_AnotherApproach {
     * @param grid The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Making ALarge Island_Another Approach problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Making ALarge Island_Another Approach problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Making ALarge Island_Another Approach problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun largestIsland(grid: Array<IntArray>): Int {
         val directions = listOf(0 to 1, 0 to -1, 1 to 0, -1 to 0)
         val islandSizes = mutableMapOf<Int, Int>()
         var ( maxArea, islandId) = 0 to 2
 
+        /**
+        * Solves the Making ALarge Island_Another Approach problem.
+        * Takes `r` (integer), `c` (integer), `id` (integer).
+        *
+        * @param r The integer parameter representing r.
+        * @param c The integer parameter representing c.
+        * @param id The integer parameter representing id.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Making ALarge Island_Another Approach problem.
+        * Takes `r` (integer), `c` (integer), `id` (integer).
+        *
+        * @param r The integer parameter representing r.
+        * @param c The integer parameter representing c.
+        * @param id The integer parameter representing id.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Making ALarge Island_Another Approach problem.
+        * Takes `r` (integer), `c` (integer), `id` (integer).
+        *
+        * @param r The integer parameter representing r.
+        * @param c The integer parameter representing c.
+        * @param id The integer parameter representing id.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Making ALarge Island_Another Approach problem.
         * Takes `r` (integer), `c` (integer), `id` (integer).

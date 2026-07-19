@@ -8,6 +8,27 @@ class GroupAnagrams {
     * @param strs The input Array<String>.
     * @return The resulting collection (List<List<String>).
     */
+    /**
+    * Solves the Group Anagrams problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Group Anagrams problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
+    /**
+    * Solves the Group Anagrams problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting collection (List<List<String>).
+    */
     fun groupAnagrams(strs: Array<String>): List<List<String>> {
         val anagramMap = mutableMapOf<List<Int>, MutableList<String>>()  // Using List<Int> as the key
         for (word in strs) {

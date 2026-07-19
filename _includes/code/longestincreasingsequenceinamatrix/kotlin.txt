@@ -10,10 +10,55 @@ class LongestIncreasingSequenceInAMatrix {
     * @param matrix The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Longest Increasing Sequence In AMatrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Increasing Sequence In AMatrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Increasing Sequence In AMatrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun longestIncreasingPath(matrix: Array<IntArray>): Int {
         val (m, n) = matrix.size to matrix[0].size
         val cache = Array(m) { IntArray(n) }
 
+        /**
+        * Solves the Longest Increasing Sequence In AMatrix problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Increasing Sequence In AMatrix problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Increasing Sequence In AMatrix problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Longest Increasing Sequence In AMatrix problem.
         * Takes `i` (integer), `j` (integer).

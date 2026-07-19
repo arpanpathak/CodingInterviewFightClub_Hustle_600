@@ -8,6 +8,27 @@ class NumberOfVisiblePeopleInAQueue {
     * @param heights The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Number Of Visible People In AQueue problem.
+    * Takes `heights` (array of integers).
+    *
+    * @param heights The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Number Of Visible People In AQueue problem.
+    * Takes `heights` (array of integers).
+    *
+    * @param heights The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Number Of Visible People In AQueue problem.
+    * Takes `heights` (array of integers).
+    *
+    * @param heights The input array of integers.
+    * @return The computed integer result.
+    */
     fun canSeePersonsCount(heights: IntArray): IntArray {
         val n = heights.size
         val answer = IntArray(n)

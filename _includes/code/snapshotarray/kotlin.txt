@@ -15,6 +15,30 @@ class SnapshotArray(length: Int) {
     * @param `val` The integer parameter representing `val`.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Snapshot Array problem.
+    * Takes `index` (integer), ``val`` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Snapshot Array problem.
+    * Takes `index` (integer), ``val`` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Snapshot Array problem.
+    * Takes `index` (integer), ``val`` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun set(index: Int, `val`: Int) {
         historyRecords[index][snapId] = `val`
     }
@@ -25,11 +49,50 @@ class SnapshotArray(length: Int) {
     *
     * @return The computed integer result.
     */
+    /**
+    * Solves the Snapshot Array problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Snapshot Array problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Snapshot Array problem.
+    *
+    * @return The computed integer result.
+    */
     fun snap(): Int {
         return snapId++
     }
 
     // Gets the value at the given index for the specific snapId.
+    /**
+    * Solves the Snapshot Array problem.
+    * Takes `index` (integer), `snapId` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param snapId The integer parameter representing snapId.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Snapshot Array problem.
+    * Takes `index` (integer), `snapId` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param snapId The integer parameter representing snapId.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Snapshot Array problem.
+    * Takes `index` (integer), `snapId` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param snapId The integer parameter representing snapId.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Snapshot Array problem.
     * Takes `index` (integer), `snapId` (integer).

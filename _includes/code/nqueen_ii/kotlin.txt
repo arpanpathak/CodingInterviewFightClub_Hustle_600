@@ -10,10 +10,52 @@ class NQueen_II {
     * @param n The integer parameter representing n.
     * @return The computed integer result.
     */
+    /**
+    * Solves the NQueen_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the NQueen_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the NQueen_II problem.
+    * Takes `n` (integer).
+    *
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun totalNQueens(n: Int): Int {
         placed = IntArray(n) { -1 } // Initialize with -1 indicating no queens are placed
         var solutionCount = 0
 
+        /**
+        * Solves the NQueen_II problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the NQueen_II problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the NQueen_II problem.
+        * Takes `row` (integer).
+        *
+        * @param row The integer parameter representing row.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the NQueen_II problem.
         * Takes `row` (integer).
@@ -41,6 +83,27 @@ class NQueen_II {
         return solutionCount
     }
 
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Helper: is safe.
+    *
+    * @param row The integer parameter representing row.
+    * @param col The integer parameter representing col.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Helper: is safe.
     *

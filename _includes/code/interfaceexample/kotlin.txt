@@ -11,8 +11,38 @@ interface Animal: LifeForm {
     *
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Human problem.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Human problem.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Human problem.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun tattiKaro()
 
+    /**
+    * Solves the Human problem.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Human problem.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Human problem.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Human problem.
     *
@@ -29,11 +59,44 @@ class Human(override var age: Int = 0, override val name: String) : Animal {
     *
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Implements/overrides the base class method.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Implements/overrides the base class method.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Implements/overrides the base class method.
+    *
+    * @return Unit (no return value, modifies state in-place).
+    */
     override fun tattiKaro() {
         println("Tatti karke bada sukun")
     }
 }
 
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
+/**
+* Entry point for the program.
+*
+* @param args The input Array<String>.
+* @return Unit (no return value, modifies state in-place).
+*/
 /**
 * Entry point for the program.
 *

@@ -12,10 +12,61 @@ class AllNodesDistanceKinBinaryTree {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the All Nodes Distance Kin Binary Tree problem.
+    * Takes `root` (binary tree node reference), `target` (binary tree node reference), `k` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the All Nodes Distance Kin Binary Tree problem.
+    * Takes `root` (binary tree node reference), `target` (binary tree node reference), `k` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the All Nodes Distance Kin Binary Tree problem.
+    * Takes `root` (binary tree node reference), `target` (binary tree node reference), `k` (integer).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @param target The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun distanceK(root: TreeNode?, target: TreeNode?, k: Int): List<Int> {
         val result = mutableListOf<Int>()
 
         // Helper function to perform DFS and populate parent map, then find target
+        /**
+        * Solves the All Nodes Distance Kin Binary Tree problem.
+        * Takes `node` (binary tree node reference), `parent` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param parent The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the All Nodes Distance Kin Binary Tree problem.
+        * Takes `node` (binary tree node reference), `parent` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param parent The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the All Nodes Distance Kin Binary Tree problem.
+        * Takes `node` (binary tree node reference), `parent` (binary tree node reference).
+        *
+        * @param node The binary tree node reference (nullable).
+        * @param parent The binary tree node reference (nullable).
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the All Nodes Distance Kin Binary Tree problem.
         * Takes `node` (binary tree node reference), `parent` (binary tree node reference).
@@ -38,6 +89,33 @@ class AllNodesDistanceKinBinaryTree {
     }
 
     // Function to collect nodes at distance K from the target node
+    /**
+    * Helper: collect nodes at distance k.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @param visited The input MutableSet<TreeNode>.
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: collect nodes at distance k.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @param visited The input MutableSet<TreeNode>.
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: collect nodes at distance k.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param k The integer parameter representing k.
+    * @param visited The input MutableSet<TreeNode>.
+    * @param result The input mutable list of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: collect nodes at distance k.
     *

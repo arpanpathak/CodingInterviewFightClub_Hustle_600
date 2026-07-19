@@ -8,6 +8,27 @@ class AlienDictionary_BFS {
     * @param words The input Array<String>.
     * @return The resulting string.
     */
+    /**
+    * Solves the Alien Dictionary_BFS problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Alien Dictionary_BFS problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Alien Dictionary_BFS problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
     fun alienOrder(words: Array<String>): String {
         val graph = mutableMapOf<Char, HashSet<Char>>()
         val inDegree = mutableMapOf<Char, Int>()

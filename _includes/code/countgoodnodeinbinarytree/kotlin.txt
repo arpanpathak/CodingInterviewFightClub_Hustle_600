@@ -8,10 +8,52 @@ class CountGoodNodeInBInaryTree {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Count Good Node In BInary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Good Node In BInary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Count Good Node In BInary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun goodNodes(root: TreeNode?): Int {
         return dfs(root, Int.MIN_VALUE)
     }
 
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param maxSoFar The integer parameter representing maxSoFar.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param maxSoFar The integer parameter representing maxSoFar.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @param maxSoFar The integer parameter representing maxSoFar.
+    * @return The computed integer result.
+    */
     /**
     * Helper: dfs.
     *

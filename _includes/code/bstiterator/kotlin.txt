@@ -15,6 +15,24 @@ class BSTIterator(root: TreeNode?) {
     * @param node The binary tree node reference (nullable).
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: push all left nodes.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: push all left nodes.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: push all left nodes.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun pushAllLeftNodes(node: TreeNode?) {
         var current = node
         while (current != null) {
@@ -29,6 +47,21 @@ class BSTIterator(root: TreeNode?) {
     *
     * @return The computed integer result.
     */
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return The computed integer result.
+    */
     fun next(): Int {
         val node = stack.removeFirst()  // Pop the node from the stack
         pushAllLeftNodes(node.right)  // Push the leftmost nodes of the right child, if any
@@ -36,6 +69,21 @@ class BSTIterator(root: TreeNode?) {
     }
 
     // Returns whether we have a next smallest number
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the BSTIterator problem.
+    *
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the BSTIterator problem.
     *

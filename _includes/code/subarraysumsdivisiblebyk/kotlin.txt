@@ -10,6 +10,30 @@ class SubArraySumsDivisibleByK {
     * @param K The integer parameter representing K.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Sub Array Sums Divisible By K problem.
+    * Takes `A` (array of integers), `K` (integer).
+    *
+    * @param A The input array of integers.
+    * @param K The integer parameter representing K.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sub Array Sums Divisible By K problem.
+    * Takes `A` (array of integers), `K` (integer).
+    *
+    * @param A The input array of integers.
+    * @param K The integer parameter representing K.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sub Array Sums Divisible By K problem.
+    * Takes `A` (array of integers), `K` (integer).
+    *
+    * @param A The input array of integers.
+    * @param K The integer parameter representing K.
+    * @return The computed integer result.
+    */
     fun subarraysDivByK(A: IntArray, K: Int): Int {
         var ans = 0
         var sum = 0

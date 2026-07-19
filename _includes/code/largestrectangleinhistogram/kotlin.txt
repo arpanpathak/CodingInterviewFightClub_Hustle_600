@@ -8,6 +8,27 @@ class LargestRectangleInHistogram {
     * @param heights The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Largest Rectangle In Histogram problem.
+    * Takes `heights` (array of integers).
+    *
+    * @param heights The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Largest Rectangle In Histogram problem.
+    * Takes `heights` (array of integers).
+    *
+    * @param heights The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Largest Rectangle In Histogram problem.
+    * Takes `heights` (array of integers).
+    *
+    * @param heights The input array of integers.
+    * @return The computed integer result.
+    */
     fun largestRectangleArea(heights: IntArray): Int {
         val stack = mutableListOf<Int>()
         var maxArea = 0

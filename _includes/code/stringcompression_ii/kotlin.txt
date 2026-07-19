@@ -8,6 +8,27 @@ class StringCompression_II {
     * @param word The input string.
     * @return The resulting string.
     */
+    /**
+    * Solves the String Compression_II problem.
+    * Takes `word` (string).
+    *
+    * @param word The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the String Compression_II problem.
+    * Takes `word` (string).
+    *
+    * @param word The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the String Compression_II problem.
+    * Takes `word` (string).
+    *
+    * @param word The input string.
+    * @return The resulting string.
+    */
     fun compressedString(word: String): String {
         val compressed = StringBuilder()
 

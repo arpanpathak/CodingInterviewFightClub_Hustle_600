@@ -8,12 +8,54 @@ class ConstructBinaryTreeFromString {
     * @param s The input string.
     * @return The result, or `null` if not found.
     */
+    /**
+    * Solves the Construct Binary Tree From String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Construct Binary Tree From String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The result, or `null` if not found.
+    */
+    /**
+    * Solves the Construct Binary Tree From String problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The result, or `null` if not found.
+    */
     fun str2tree(s: String): TreeNode? {
         if (s.isEmpty()) return null
 
         return buildTree(s, 0).first // We are only interested in the tree root, not the index
     }
 
+    /**
+    * Helper: build tree.
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: build tree.
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: build tree.
+    *
+    * @param s The input string.
+    * @param i The integer parameter representing i.
+    * @return The computed integer result.
+    */
     /**
     * Helper: build tree.
     *

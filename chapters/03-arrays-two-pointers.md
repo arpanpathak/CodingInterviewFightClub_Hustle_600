@@ -89,11 +89,62 @@ class `4Sum` {
     * @param target The integer parameter representing target.
     * @return The computed integer result.
     */
+    /**
+    * Solves the 4sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the 4sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the 4sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun fourSum(nums: IntArray, target: Int): List<List<Int>> {
         nums.sort()
         return kSum(nums, target.toLong(), 0, 4)
     }
 
+    /**
+    * Helper: k sum.
+    *
+    * @param nums The input array of integers.
+    * @param target The long integer parameter representing target.
+    * @param start The integer parameter representing start.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: k sum.
+    *
+    * @param nums The input array of integers.
+    * @param target The long integer parameter representing target.
+    * @param start The integer parameter representing start.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: k sum.
+    *
+    * @param nums The input array of integers.
+    * @param target The long integer parameter representing target.
+    * @param start The integer parameter representing start.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Helper: k sum.
     *
@@ -150,6 +201,30 @@ class `4Sum` {
     * @param start The integer parameter representing start.
     * @return The computed integer result.
     */
+    /**
+    * Helper: two sum.
+    *
+    * @param nums The input array of integers.
+    * @param target The long integer parameter representing target.
+    * @param start The integer parameter representing start.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: two sum.
+    *
+    * @param nums The input array of integers.
+    * @param target The long integer parameter representing target.
+    * @param start The integer parameter representing start.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: two sum.
+    *
+    * @param nums The input array of integers.
+    * @param target The long integer parameter representing target.
+    * @param start The integer parameter representing start.
+    * @return The computed integer result.
+    */
     private fun twoSum(
         nums: IntArray,
         target: Long,
@@ -174,10 +249,9 @@ class `4Sum` {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -188,13 +262,14 @@ class `4Sum` {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Add Strings
 
 ### Problem
@@ -211,6 +286,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package math
 
 class AddStrings {
+    /**
+    * Solves the Add Strings problem.
+    * Takes `num1` (string), `num2` (string).
+    *
+    * @param num1 The input string.
+    * @param num2 The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Add Strings problem.
+    * Takes `num1` (string), `num2` (string).
+    *
+    * @param num1 The input string.
+    * @param num2 The input string.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Add Strings problem.
+    * Takes `num1` (string), `num2` (string).
+    *
+    * @param num1 The input string.
+    * @param num2 The input string.
+    * @return The resulting string.
+    */
     /**
     * Solves the Add Strings problem.
     * Takes `num1` (string), `num2` (string).
@@ -242,15 +341,9 @@ class AddStrings {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bit manipulation. Use bitwise operations for fast computation and compact state tracking.
-
-
-### Pattern Insight
-
-Study the code and identify the algorithmic pattern.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -261,13 +354,14 @@ Study the code and identify the algorithmic pattern.
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
+
 ## List Node
 
 ### Problem
@@ -288,6 +382,30 @@ class ListNode(var `val`: Int) {
 }
 
 class AddTwoNumbers {
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
+    /**
+    * Solves the List Node problem.
+    * Takes `l1` (linked list node reference), `l2` (linked list node reference).
+    *
+    * @param l1 The input linked list node reference.
+    * @param l2 The input linked list node reference.
+    * @return The resulting collection (linked list node reference).
+    */
     /**
     * Solves the List Node problem.
     * Takes `l1` (linked list node reference), `l2` (linked list node reference).
@@ -323,10 +441,9 @@ class AddTwoNumbers {
 }
 ```
 
-
 ### Pattern Insight
 
-Study the code and identify the algorithmic pattern.
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
 
 ### Complexity
 
@@ -337,8 +454,14 @@ Study the code and identify the algorithmic pattern.
 
 ### Variations
 
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
+
 ## Can Place Flowers
 
 ### Problem
@@ -355,6 +478,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package array.greedy
 
 class CanPlaceFlowers {
+    /**
+    * Solves the Can Place Flowers problem.
+    * Takes `flowerbed` (array of integers), `n` (integer).
+    *
+    * @param flowerbed The input array of integers.
+    * @param n The integer parameter representing n.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Can Place Flowers problem.
+    * Takes `flowerbed` (array of integers), `n` (integer).
+    *
+    * @param flowerbed The input array of integers.
+    * @param n The integer parameter representing n.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Can Place Flowers problem.
+    * Takes `flowerbed` (array of integers), `n` (integer).
+    *
+    * @param flowerbed The input array of integers.
+    * @param n The integer parameter representing n.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Can Place Flowers problem.
     * Takes `flowerbed` (array of integers), `n` (integer).
@@ -383,6 +530,10 @@ class CanPlaceFlowers {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
@@ -392,19 +543,94 @@ class CanPlaceFlowers {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-xity
+
+## Container With Most Water
+
+### Problem
+
+Solves the Container With Most Water problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array.greedy
+
+class ContainerWithMostWater {
+    /**
+    * Solves the Container With Most Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Container With Most Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Container With Most Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Container With Most Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
+    fun maxArea(height: IntArray): Int {
+        var (start, end) = Pair(0, height.lastIndex)
+        var maxWater = 0
+        while (start < end) {
+            maxWater = maxOf(maxWater, minOf(height[start], height[end]) * (end - start))
+
+            if (height[start] <= height[end]) {
+                start++
+            } else {
+                end--
+            }
+        }
+
+        return maxWater
+    }
+}
+```
+
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
+### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -432,6 +658,30 @@ class ContainsDuplicate_II {
     * @param k The integer parameter representing k.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Contains Duplicate_II problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Contains Duplicate_II problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Contains Duplicate_II problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun containsNearbyDuplicate(nums: IntArray, k: Int): Boolean {
         val map = mutableMapOf<Int, Int>()
         for (i in nums.indices) {
@@ -446,10 +696,9 @@ class ContainsDuplicate_II {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -460,14 +709,60 @@ class ContainsDuplicate_II {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-pOf<Int, Int>()
+
+## Contiguous Array
+
+### Problem
+
+Solves the Contiguous Array problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array.prefixsum
+
+class ContiguousArray {
+    /**
+    * Solves the Contiguous Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Contiguous Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Contiguous Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Contiguous Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    fun findMaxLength(nums: IntArray): Int {
+        val map = mutableMapOf<Int, Int>()
         var sum = 0
         var maxLen = 0
 
@@ -488,10 +783,9 @@ pOf<Int, Int>()
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -502,14 +796,61 @@ pOf<Int, Int>()
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
+## Continuous Subarray Sum
+
+### Problem
+
+Solves the Continuous Subarray Sum problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array.prefixsum
+
+// Pattern https://leetcode.com/problems/continuous-subarray-sum/discuss/5276981/prefix-sum-hashmap-patterns-7-problems
+class ContinuousSubarraySum {
+    /**
+    * Solves the Continuous Subarray Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Continuous Subarray Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Continuous Subarray Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Continuous Subarray Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
     * @return `true` if the condition is met, `false` otherwise.
     */
     fun checkSubarraySum(nums: IntArray, k: Int): Boolean {
@@ -531,10 +872,9 @@ pOf<Int, Int>()
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -545,14 +885,67 @@ pOf<Int, Int>()
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-istOf<Int>()  // List to store the diagonal traversal result
+
+## Diagonal Traverse
+
+### Problem
+
+Solves the Diagonal Traverse problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array
+
+class DiagonalTraverse {
+    // Enum to represent the direction of diagonal traversal: UP or DOWN
+    enum class Direction {
+        UP, DOWN
+    }
+
+    /**
+    * Solves the Diagonal Traverse problem.
+    * Takes `mat` (2D matrix of integers).
+    *
+    * @param mat The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Diagonal Traverse problem.
+    * Takes `mat` (2D matrix of integers).
+    *
+    * @param mat The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Diagonal Traverse problem.
+    * Takes `mat` (2D matrix of integers).
+    *
+    * @param mat The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Diagonal Traverse problem.
+    * Takes `mat` (2D matrix of integers).
+    *
+    * @param mat The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    fun findDiagonalOrder(mat: Array<IntArray>): IntArray {
+        val m = mat.size        // Number of rows in the matrix
+        val n = mat[0].size     // Number of columns in the matrix
+        val result = mutableListOf<Int>()  // List to store the diagonal traversal result
 
         var i = 0  // Row index
         var j = 0  // Column index
@@ -602,12 +995,24 @@ istOf<Int>()  // List to store the diagonal traversal result
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -631,6 +1036,27 @@ import java.util.*
 data class Point(val row: Int, val col: Int)
 
 class DiagonalTraverse_II {
+    /**
+    * Solves the Point problem.
+    * Takes `nums` (2D list of integers).
+    *
+    * @param nums The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Point problem.
+    * Takes `nums` (2D list of integers).
+    *
+    * @param nums The input 2D list of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Point problem.
+    * Takes `nums` (2D list of integers).
+    *
+    * @param nums The input 2D list of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Point problem.
     * Takes `nums` (2D list of integers).
@@ -668,10 +1094,9 @@ class DiagonalTraverse_II {
 }
 ```
 
-
 ### Pattern Insight
 
-Study the code and identify the algorithmic pattern.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -682,9 +1107,105 @@ Study the code and identify the algorithmic pattern.
 
 ### Variations
 
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-)
+
+## Randomized Set
+
+### Problem
+
+Solves the Randomized Set problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package probability
+
+import kotlin.random.Random
+
+class RandomizedSet() {
+    private val list = mutableListOf<Int>()
+    private val map = mutableMapOf<Int, Int>()
+
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    fun insert(`val`: Int): Boolean {
+        if (!map.containsKey(`val`))
+            return false
+        map[`val`] = list.size
+        list.add(`val`)
+        return true
+    }
+
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    * Takes ``val`` (integer).
+    *
+    * @param `val` The integer parameter representing `val`.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    fun remove(`val`: Int): Boolean {
+        if (map.containsKey(`val`))
+            return false
+
+        val index = map[`val`]!!
+        val lastElement = list.last()
         list[index] = lastElement
         map[lastElement] = index
 
@@ -699,6 +1220,21 @@ Study the code and identify the algorithmic pattern.
     *
     * @return The computed integer result.
     */
+    /**
+    * Solves the Randomized Set problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Randomized Set problem.
+    *
+    * @return The computed integer result.
+    */
     fun getRandom(): Int {
         return list[Random.nextInt(list.size)]
     }
@@ -706,12 +1242,24 @@ Study the code and identify the algorithmic pattern.
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -731,6 +1279,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package array.twopointer
 
 class IntervalListIntersection {
+    /**
+    * Solves the Interval List Intersection problem.
+    * Takes `firstList` (2D matrix of integers), `secondList` (2D matrix of integers).
+    *
+    * @param firstList The input 2D matrix of integers.
+    * @param secondList The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Interval List Intersection problem.
+    * Takes `firstList` (2D matrix of integers), `secondList` (2D matrix of integers).
+    *
+    * @param firstList The input 2D matrix of integers.
+    * @param secondList The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Interval List Intersection problem.
+    * Takes `firstList` (2D matrix of integers), `secondList` (2D matrix of integers).
+    *
+    * @param firstList The input 2D matrix of integers.
+    * @param secondList The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Interval List Intersection problem.
     * Takes `firstList` (2D matrix of integers), `secondList` (2D matrix of integers).
@@ -763,12 +1335,24 @@ class IntervalListIntersection {
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -788,6 +1372,36 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package array.greedy
 
 class KItemsWithMaximumSum {
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     /**
     * Solves the KItems With Maximum Sum problem.
     * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
@@ -828,6 +1442,36 @@ class KItemsWithMaximumSum {
     * @param k The integer parameter representing k.
     * @return The computed integer result.
     */
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the KItems With Maximum Sum problem.
+    * Takes `numOnes` (integer), `numZeros` (integer), `numNegOnes` (integer), `k` (integer).
+    *
+    * @param numOnes The integer parameter representing numOnes.
+    * @param numZeros The integer parameter representing numZeros.
+    * @param numNegOnes The integer parameter representing numNegOnes.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
     fun kItemsWithMaximumSumAlternative(numOnes: Int, numZeros: Int, numNegOnes: Int, k: Int): Int {
 
         if(k <= numOnes)
@@ -844,12 +1488,24 @@ class KItemsWithMaximumSum {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -872,6 +1528,21 @@ import linkedlist.ListNode
 import kotlin.random.Random
 
 class LinkedListRandomNode (private val head: ListNode?) {
+    /**
+    * Solves the Linked List Random Node problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Linked List Random Node problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Linked List Random Node problem.
+    *
+    * @return The computed integer result.
+    */
     /**
     * Solves the Linked List Random Node problem.
     *
@@ -900,6 +1571,21 @@ class LinkedListRandomNode (private val head: ListNode?) {
     *
     * @return The computed integer result.
     */
+    /**
+    * Solves the Linked List Random Node problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Linked List Random Node problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Linked List Random Node problem.
+    *
+    * @return The computed integer result.
+    */
     fun getRandom_2(): Int {
         var current = head
         var result = current?.`val` ?: throw IllegalArgumentException("List is empty")
@@ -919,12 +1605,24 @@ class LinkedListRandomNode (private val head: ListNode?) {
 }
 ```
 
+### Pattern Insight
+
+**Linked List Pattern.** Pointer rearrangement. Key techniques: dummy head (simplifies edge cases), slow/fast pointers (cycles, middle), in-place reversal.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the list has a cycle? How does it affect the solution?
+1. What if you cannot use extra memory (O(1) space)?
+1. What if the list is doubly linked? Does it simplify?
+1. Recursive vs iterative approach — tradeoffs?
+1. Can slow/fast pointer technique be applied?
 
 ---
 
@@ -951,6 +1649,27 @@ class MergeIntervals {
     * @param intervals The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Merge Intervals problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Merge Intervals problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Merge Intervals problem.
+    * Takes `intervals` (2D matrix of integers).
+    *
+    * @param intervals The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun merge(intervals: Array<IntArray>): Array<IntArray> {
         // Sort the internals by start
         intervals.sortWith(compareBy { it[0] })
@@ -968,10 +1687,9 @@ class MergeIntervals {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** BFS (Breadth-First Search). Use a queue to explore nodes level by level, guaranteeing shortest path in unweighted graphs.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -982,18 +1700,111 @@ class MergeIntervals {
 
 ### Variations
 
-1. What if the graph is disconnected?
-1. What if edges have weights (non-uniform cost)?
-1. Can this be solved with DFS instead? What's the tradeoff?
-1. What if you need the path, not just the distance/existence?
-1. What if the graph is too large for BFS? Iterative deepening?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-ontentToString())
+
+## Merge Sorted Array
+
+### Problem
+
+Solves the Merge Sorted Array problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array
+
+import binarysearch.FindKClosestElements
+import kotlin.math.max
+
+class MergeSortedArray {
+
+    /**
+    * Solves the Merge Sorted Array problem.
+    * Takes `nums1` (array of integers), `m` (integer), `nums2` (array of integers), `n` (integer).
+    *
+    * @param nums1 The input array of integers.
+    * @param m The integer parameter representing m.
+    * @param nums2 The input array of integers.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Merge Sorted Array problem.
+    * Takes `nums1` (array of integers), `m` (integer), `nums2` (array of integers), `n` (integer).
+    *
+    * @param nums1 The input array of integers.
+    * @param m The integer parameter representing m.
+    * @param nums2 The input array of integers.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Merge Sorted Array problem.
+    * Takes `nums1` (array of integers), `m` (integer), `nums2` (array of integers), `n` (integer).
+    *
+    * @param nums1 The input array of integers.
+    * @param m The integer parameter representing m.
+    * @param nums2 The input array of integers.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Merge Sorted Array problem.
+    * Takes `nums1` (array of integers), `m` (integer), `nums2` (array of integers), `n` (integer).
+    *
+    * @param nums1 The input array of integers.
+    * @param m The integer parameter representing m.
+    * @param nums2 The input array of integers.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
+        var (x, y, ptr) = listOf(m-1, n-1, m + n - 1)
+
+        while (x >=0  && y > 0) {
+            if (nums1[x] > nums2[y] )
+                nums1[ptr--] = nums1[x--]
+            else
+                nums1[ptr--] = nums2[y--]
+        }
+
+        while ( y >= 0) {
+            nums1[ptr--] = nums2[y--]
+        }
+
+        print(nums1.contentToString())
     }
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Entry point for the program.
         *
@@ -1014,12 +1825,24 @@ ontentToString())
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1048,6 +1871,33 @@ class MissingRanges {
     * @param upper The integer parameter representing upper.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Missing Ranges problem.
+    * Takes `nums` (array of integers), `lower` (integer), `upper` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param lower The integer parameter representing lower.
+    * @param upper The integer parameter representing upper.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Missing Ranges problem.
+    * Takes `nums` (array of integers), `lower` (integer), `upper` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param lower The integer parameter representing lower.
+    * @param upper The integer parameter representing upper.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Missing Ranges problem.
+    * Takes `nums` (array of integers), `lower` (integer), `upper` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param lower The integer parameter representing lower.
+    * @param upper The integer parameter representing upper.
+    * @return The computed integer result.
+    */
     fun findMissingRanges(nums: IntArray, lower: Int, upper: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         var currentRangePointer = lower
@@ -1067,10 +1917,9 @@ class MissingRanges {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -1078,6 +1927,14 @@ class MissingRanges {
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1104,6 +1961,27 @@ class MoveZeroes {
     * @param nums The input array of integers.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Move Zeroes problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Move Zeroes problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Move Zeroes problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun moveZeroes(nums: IntArray): Unit {
         var nonZeroPointer = 0
 
@@ -1122,6 +2000,10 @@ class MoveZeroes {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
@@ -1131,14 +2013,96 @@ class MoveZeroes {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-roblem.
+
+## Next Permutation
+
+### Problem
+
+Solves the Next Permutation problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array.Combinatorics
+
+class NextPermutation {
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers), `i` (integer), `j` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers), `i` (integer), `j` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers), `i` (integer), `j` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers), `i` (integer), `j` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    fun swap(nums: IntArray, i: Int, j: Int) {
+        nums[j] = nums[i].also { nums[i] = nums[j] }
+    }
+
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers), `startIndex` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param startIndex The integer parameter representing startIndex.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers), `startIndex` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param startIndex The integer parameter representing startIndex.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers), `startIndex` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param startIndex The integer parameter representing startIndex.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Next Permutation problem.
     * Takes `nums` (array of integers), `startIndex` (integer).
     *
     * @param nums The input array of integers.
@@ -1152,6 +2116,27 @@ roblem.
         }
     }
 
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Next Permutation problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Next Permutation problem.
     * Takes `nums` (array of integers).
@@ -1199,12 +2184,24 @@ roblem.
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1231,6 +2228,27 @@ class PalindromeNumber {
     * @param x The integer parameter representing x.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Palindrome Number problem.
+    * Takes `x` (integer).
+    *
+    * @param x The integer parameter representing x.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Palindrome Number problem.
+    * Takes `x` (integer).
+    *
+    * @param x The integer parameter representing x.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Palindrome Number problem.
+    * Takes `x` (integer).
+    *
+    * @param x The integer parameter representing x.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isPalindrome(x: Int): Boolean {
         var (reduced, sum) = listOf(x, 0, 1)
 
@@ -1243,12 +2261,24 @@ class PalindromeNumber {
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -1275,6 +2305,27 @@ class PlusOne {
     * @param digits The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Plus One problem.
+    * Takes `digits` (array of integers).
+    *
+    * @param digits The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Plus One problem.
+    * Takes `digits` (array of integers).
+    *
+    * @param digits The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Plus One problem.
+    * Takes `digits` (array of integers).
+    *
+    * @param digits The input array of integers.
+    * @return The computed integer result.
+    */
     fun plusOne(digits: IntArray): IntArray {
         for (i in digits.lastIndex downTo 0) {
             if (digits[i] < 9) {
@@ -1289,12 +2340,24 @@ class PlusOne {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1322,6 +2385,30 @@ class RemoveElement {
     * @param `val` The integer parameter representing `val`.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Remove Element problem.
+    * Takes `nums` (array of integers), ``val`` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param `val` The integer parameter representing `val`.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Remove Element problem.
+    * Takes `nums` (array of integers), ``val`` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param `val` The integer parameter representing `val`.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Remove Element problem.
+    * Takes `nums` (array of integers), ``val`` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param `val` The integer parameter representing `val`.
+    * @return The computed integer result.
+    */
     fun removeElement(nums: IntArray, `val`: Int): Int {
         var i = 0
 
@@ -1336,12 +2423,24 @@ class RemoveElement {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1385,6 +2484,10 @@ class ReservoirSampling {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
@@ -1394,18 +2497,95 @@ class ReservoirSampling {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
- 0, n - 1)
+
+## Rotate Array
+
+### Problem
+
+Solves the Rotate Array problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array.twopointer
+
+class RotateArray {
+    /**
+    * Solves the Rotate Array problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Rotate Array problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Rotate Array problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Rotate Array problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    fun rotate(nums: IntArray, k: Int): Unit {
+        val n = nums.size
+        val steps = k % n // In case k is greater than n
+
+        reverse(nums, 0, n - 1)
         reverse(nums, 0, steps - 1)
         reverse(nums, steps, n - 1)
     }
 
+    /**
+    * Helper: reverse.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: reverse.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: reverse.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Helper: reverse.
     *
@@ -1426,10 +2606,9 @@ class ReservoirSampling {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -1440,14 +2619,58 @@ class ReservoirSampling {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-  */
+
+## Rotate Image
+
+### Problem
+
+Solves the Rotate Image problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array
+
+class RotateImage {
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun rotate(matrix: Array<IntArray>): Unit {
         for (i in matrix.indices)
             for (j in i until matrix[i].size) {
@@ -1476,6 +2699,39 @@ class ReservoirSampling {
     * @param n The integer parameter representing n.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers), `i` (integer), `j` (integer), `m` (integer), `n` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param m The integer parameter representing m.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers), `i` (integer), `j` (integer), `m` (integer), `n` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param m The integer parameter representing m.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Rotate Image problem.
+    * Takes `matrix` (2D matrix of integers), `i` (integer), `j` (integer), `m` (integer), `n` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param i The integer parameter representing i.
+    * @param j The integer parameter representing j.
+    * @param m The integer parameter representing m.
+    * @param n The integer parameter representing n.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun swap(matrix: Array<IntArray>, i: Int, j: Int, m: Int, n: Int) {
         matrix[i][j] = matrix[m][n].also { matrix[m][n] = matrix[i][j] }
     }
@@ -1492,10 +2748,9 @@ class ReservoirSampling {
  */
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -1506,14 +2761,61 @@ class ReservoirSampling {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-erwise.
+
+## Search A2d Matrix_II
+
+### Problem
+
+Solves the Search A2d Matrix_II problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array
+
+class SearchA2dMatrix_II {
+    /**
+    * Solves the Search A2d Matrix_II problem.
+    * Takes `matrix` (2D matrix of integers), `target` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Search A2d Matrix_II problem.
+    * Takes `matrix` (2D matrix of integers), `target` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Search A2d Matrix_II problem.
+    * Takes `matrix` (2D matrix of integers), `target` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Search A2d Matrix_II problem.
+    * Takes `matrix` (2D matrix of integers), `target` (integer).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @param target The integer parameter representing target.
+    * @return `true` if the condition is met, `false` otherwise.
     */
     fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
         var (row, col) = matrix.size - 1 to 0
@@ -1531,10 +2833,9 @@ erwise.
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
 
 ### Complexity
 
@@ -1545,14 +2846,73 @@ erwise.
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---
-  -1 to -1, -1 to 1, 1 to -1, 1 to 1 // Diagonal directions
+
+## Shortest Path In Binary Matrix
+
+### Problem
+
+Solves the Shortest Path In Binary Matrix problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array
+
+import java.util.*
+
+class ShortestPathInBinaryMatrix {
+    data class State(val row: Int, val col: Int, val dist: Int)
+
+    /**
+    * Solves the Shortest Path In Binary Matrix problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Shortest Path In Binary Matrix problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Shortest Path In Binary Matrix problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Shortest Path In Binary Matrix problem.
+    * Takes `grid` (2D matrix of integers).
+    *
+    * @param grid The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    fun shortestPathBinaryMatrix(grid: Array<IntArray>): Int {
+        val n = grid.size
+        val m = grid[0].size
+
+        // Early return if start or end is blocked
+        if (grid[0][0] == 1 || grid[n - 1][m - 1] == 1) return -1
+
+        // Directions for 8 neighbors (horizontal, vertical, and diagonal)
+        val directions = arrayOf(
+            -1 to 0, 1 to 0, 0 to -1, 0 to 1,  // Left, right, up, down
+            -1 to -1, -1 to 1, 1 to -1, 1 to 1 // Diagonal directions
         )
 
         val queue = LinkedList<State>()
@@ -1583,12 +2943,24 @@ erwise.
 }
 ```
 
+### Pattern Insight
+
+**Binary Search Pattern.** Find a monotonic predicate that transitions from false to true once. Binary search finds that transition in O(log n) by halving the search space each iteration.
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(V + E) |
 | **Space** | O(V) |
+
+### Variations
+
+1. What if the input is not sorted? Can you sort first?
+1. What if there are duplicates? Handle first vs last occurrence.
+1. What if the search space is values, not array indices?
+1. What if the array is too large to fit in memory?
+1. What if the predicate is not monotonic? Can you binary search?
 
 ---
 
@@ -1615,6 +2987,27 @@ class SignOfTheProductOfAnArray {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Sign Of The Product Of An Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sign Of The Product Of An Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Sign Of The Product Of An Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun arraySign(nums: IntArray): Int {
         var negativeCount = 0
 
@@ -1631,12 +3024,24 @@ class SignOfTheProductOfAnArray {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1663,7 +3068,52 @@ class SortColors {
     * @param nums The input array of integers.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Sort Colors problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sort Colors problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Sort Colors problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun sortColors(nums: IntArray): Unit {
+        /**
+        * Solves the Sort Colors problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Sort Colors problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Sort Colors problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Sort Colors problem.
         * Takes `i` (integer), `j` (integer).
@@ -1690,12 +3140,24 @@ class SortColors {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1715,6 +3177,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package array
 
 class SpiralMatrix {
+    /**
+    * Solves the Spiral Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Spiral Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Spiral Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Spiral Matrix problem.
     * Takes `matrix` (2D matrix of integers).
@@ -1753,12 +3236,24 @@ class SpiralMatrix {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1779,6 +3274,27 @@ package array
 
 class SpiralMatrix_II {
     class Solution {
+        /**
+        * Solves the Spiral Matrix_II problem.
+        * Takes `n` (integer).
+        *
+        * @param n The integer parameter representing n.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Spiral Matrix_II problem.
+        * Takes `n` (integer).
+        *
+        * @param n The integer parameter representing n.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Spiral Matrix_II problem.
+        * Takes `n` (integer).
+        *
+        * @param n The integer parameter representing n.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Spiral Matrix_II problem.
         * Takes `n` (integer).
@@ -1818,12 +3334,24 @@ class SpiralMatrix_II {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1852,6 +3380,27 @@ class SquaresOfASortedArray {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Squares Of ASorted Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Squares Of ASorted Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Squares Of ASorted Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun sortedSquares(nums: IntArray): IntArray {
         val result = IntArray(nums.size)
 
@@ -1869,12 +3418,24 @@ class SquaresOfASortedArray {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1895,6 +3456,27 @@ package array.twopointer
 
 
 class ThreeSum {
+    /**
+    * Solves the Three Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Three Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Three Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Three Sum problem.
     * Takes `nums` (array of integers).
@@ -1939,12 +3521,24 @@ class ThreeSum {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1966,6 +3560,30 @@ package array.twopointer
 import kotlin.math.abs
 
 class ThreeSumClosest {
+    /**
+    * Solves the Three Sum Closest problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Three Sum Closest problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Three Sum Closest problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Three Sum Closest problem.
     * Takes `nums` (array of integers), `target` (integer).
@@ -1999,12 +3617,24 @@ class ThreeSumClosest {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2024,6 +3654,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package array
 
 class ToeplitzMatrix {
+    /**
+    * Solves the Toeplitz Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Toeplitz Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Toeplitz Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     /**
     * Solves the Toeplitz Matrix problem.
     * Takes `matrix` (2D matrix of integers).
@@ -2062,12 +3713,24 @@ class ToeplitzMatrix {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2094,6 +3757,27 @@ class TransposeMatrix {
     * @param matrix The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Transpose Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Transpose Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Transpose Matrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun transpose(matrix: Array<IntArray>): Array<IntArray> {
         val rows = matrix.size
         val cols = matrix[0].size
@@ -2110,12 +3794,24 @@ class TransposeMatrix {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2178,6 +3874,27 @@ class TrappingRainWater {
     * @param height The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Trapping Rain Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Trapping Rain Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Trapping Rain Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
     fun trapConstantSpace(height: IntArray): Int {
         var (left, right, leftMax, rightMax, waterTrapped) = listOf(0, height.lastIndex, 0, 0, 0)
 
@@ -2198,12 +3915,24 @@ class TrappingRainWater {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -2223,6 +3952,30 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package array.twopointer
 
 class TwoSum_II {
+    /**
+    * Solves the Two Sum_II problem.
+    * Takes `numbers` (array of integers), `target` (integer).
+    *
+    * @param numbers The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Two Sum_II problem.
+    * Takes `numbers` (array of integers), `target` (integer).
+    *
+    * @param numbers The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Two Sum_II problem.
+    * Takes `numbers` (array of integers), `target` (integer).
+    *
+    * @param numbers The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Two Sum_II problem.
     * Takes `numbers` (array of integers), `target` (integer).
@@ -2252,11 +4005,23 @@ class TwoSum_II {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---

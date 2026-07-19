@@ -9,6 +9,30 @@ class IsSubsequence {
     * @param t The input string.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Is Subsequence problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Is Subsequence problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Is Subsequence problem.
+    * Takes `s` (string), `t` (string).
+    *
+    * @param s The input string.
+    * @param t The input string.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isSubsequence(s: String, t: String): Boolean {
         var i = 0
         var j = 0

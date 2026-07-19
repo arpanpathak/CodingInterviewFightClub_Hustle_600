@@ -12,6 +12,27 @@ class AlienDictionary {
     * @param words The input Array<String>.
     * @return The resulting string.
     */
+    /**
+    * Solves the Alien Dictionary problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Alien Dictionary problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Alien Dictionary problem.
+    * Takes `words` (Array<String>).
+    *
+    * @param words The input Array<String>.
+    * @return The resulting string.
+    */
     fun alienOrder(words: Array<String>): String {
         val graph = mutableMapOf<Char, MutableSet<Char>>()
         val visited = mutableMapOf<Char, State>()  // 0 = visiting, 1 = visited, -1 = not visited
@@ -43,6 +64,27 @@ class AlienDictionary {
         }
 
         // Step 3: Perform DFS to find topological sort
+        /**
+        * Solves the Alien Dictionary problem.
+        * Takes `node` (character).
+        *
+        * @param node The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Alien Dictionary problem.
+        * Takes `node` (character).
+        *
+        * @param node The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Alien Dictionary problem.
+        * Takes `node` (character).
+        *
+        * @param node The character.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Alien Dictionary problem.
         * Takes `node` (character).

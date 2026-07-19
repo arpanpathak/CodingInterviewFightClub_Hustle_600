@@ -8,6 +8,27 @@ class LongestCommonPrefix {
     * @param strs The input Array<String>.
     * @return The resulting string.
     */
+    /**
+    * Solves the Longest Common Prefix problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Common Prefix problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting string.
+    */
+    /**
+    * Solves the Longest Common Prefix problem.
+    * Takes `strs` (Array<String>).
+    *
+    * @param strs The input Array<String>.
+    * @return The resulting string.
+    */
     fun longestCommonPrefix(strs: Array<String>): String {
         if (strs.isEmpty()) return ""
 

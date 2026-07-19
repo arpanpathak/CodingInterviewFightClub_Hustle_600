@@ -9,6 +9,30 @@ class ZeroArrayTransformation_I {
     * @param queries The input 2D matrix of integers.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Zero Array Transformation_I problem.
+    * Takes `nums` (array of integers), `queries` (2D matrix of integers).
+    *
+    * @param nums The input array of integers.
+    * @param queries The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Zero Array Transformation_I problem.
+    * Takes `nums` (array of integers), `queries` (2D matrix of integers).
+    *
+    * @param nums The input array of integers.
+    * @param queries The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Zero Array Transformation_I problem.
+    * Takes `nums` (array of integers), `queries` (2D matrix of integers).
+    *
+    * @param nums The input array of integers.
+    * @param queries The input 2D matrix of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isZeroArray(nums: IntArray, queries: Array<IntArray>): Boolean {
         val n = nums.size
         val diff = IntArray(n + 1)

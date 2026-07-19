@@ -13,6 +13,21 @@ class NestedInteger {
     *
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Nested Integer problem.
+    *
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Nested Integer problem.
+    *
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Nested Integer problem.
+    *
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun isInteger(): Boolean {
         return true
     }
@@ -22,10 +37,46 @@ class NestedInteger {
     *
     * @return The computed integer result.
     */
+    /**
+    * Solves the Nested Integer problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Nested Integer problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Nested Integer problem.
+    *
+    * @return The computed integer result.
+    */
     fun getInteger(): Int? {
         return 2
     }
 
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `value` (integer).
+    *
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `value` (integer).
+    *
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `value` (integer).
+    *
+    * @param value The integer parameter representing value.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Nested Integer problem.
     * Takes `value` (integer).
@@ -44,9 +95,45 @@ class NestedInteger {
     * @param ni The NestedInteger.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `ni` (NestedInteger).
+    *
+    * @param ni The NestedInteger.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `ni` (NestedInteger).
+    *
+    * @param ni The NestedInteger.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `ni` (NestedInteger).
+    *
+    * @param ni The NestedInteger.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun add(ni: NestedInteger): Unit {
 
     }
+    /**
+    * Solves the Nested Integer problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Nested Integer problem.
+    *
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Nested Integer problem.
+    *
+    * @return The computed integer result.
+    */
     /**
     * Solves the Nested Integer problem.
     *
@@ -66,10 +153,55 @@ class NestedListWeightedSum {
     * @param nestedList The input List<NestedInteger>.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `nestedList` (List<NestedInteger>).
+    *
+    * @param nestedList The input List<NestedInteger>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `nestedList` (List<NestedInteger>).
+    *
+    * @param nestedList The input List<NestedInteger>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `nestedList` (List<NestedInteger>).
+    *
+    * @param nestedList The input List<NestedInteger>.
+    * @return The computed integer result.
+    */
     fun depthSum(nestedList: List<NestedInteger>): Int {
         return dfs(nestedList, 1)
     }
 
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `list` (List<NestedInteger>), `depth` (integer).
+    *
+    * @param list The input List<NestedInteger>.
+    * @param depth The integer parameter representing depth.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `list` (List<NestedInteger>), `depth` (integer).
+    *
+    * @param list The input List<NestedInteger>.
+    * @param depth The integer parameter representing depth.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Nested Integer problem.
+    * Takes `list` (List<NestedInteger>), `depth` (integer).
+    *
+    * @param list The input List<NestedInteger>.
+    * @param depth The integer parameter representing depth.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Nested Integer problem.
     * Takes `list` (List<NestedInteger>), `depth` (integer).

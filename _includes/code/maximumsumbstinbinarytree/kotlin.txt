@@ -11,11 +11,50 @@ class MaximumSumBSTInBinaryTree {
     * @param root The binary tree node reference (nullable).
     * @return The computed integer result.
     */
+    /**
+    * Solves the Maximum Sum BSTIn Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Sum BSTIn Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Sum BSTIn Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed integer result.
+    */
     fun maxSumBST(root: TreeNode?): Int {
         dfs(root)
         return maxSum
     }
 
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
+    /**
+    * Helper: dfs.
+    *
+    * @param node The binary tree node reference (nullable).
+    * @return The computed result (Result).
+    */
     /**
     * Helper: dfs.
     *

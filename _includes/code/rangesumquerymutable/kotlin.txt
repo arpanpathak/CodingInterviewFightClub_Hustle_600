@@ -14,6 +14,27 @@ class RangeSumQueryMutable(nums: IntArray) {
     * @param delta The integer parameter representing delta.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Helper: update bit.
+    *
+    * @param i The integer parameter representing i.
+    * @param delta The integer parameter representing delta.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: update bit.
+    *
+    * @param i The integer parameter representing i.
+    * @param delta The integer parameter representing delta.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Helper: update bit.
+    *
+    * @param i The integer parameter representing i.
+    * @param delta The integer parameter representing delta.
+    * @return Unit (no return value, modifies state in-place).
+    */
     private fun updateBIT(i: Int, delta: Int) {
         var index = i + 1
         while (index <= tree.size - 1) {
@@ -22,6 +43,30 @@ class RangeSumQueryMutable(nums: IntArray) {
         }
     }
 
+    /**
+    * Solves the Range Sum Query Mutable problem.
+    * Takes `index` (integer), ``val`` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Range Sum Query Mutable problem.
+    * Takes `index` (integer), ``val`` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Range Sum Query Mutable problem.
+    * Takes `index` (integer), ``val`` (integer).
+    *
+    * @param index The integer parameter representing index.
+    * @param `val` The integer parameter representing `val`.
+    * @return Unit (no return value, modifies state in-place).
+    */
     /**
     * Solves the Range Sum Query Mutable problem.
     * Takes `index` (integer), ``val`` (integer).
@@ -41,6 +86,24 @@ class RangeSumQueryMutable(nums: IntArray) {
     * @param index The integer parameter representing index.
     * @return The computed integer result.
     */
+    /**
+    * Helper: sum.
+    *
+    * @param index The integer parameter representing index.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: sum.
+    *
+    * @param index The integer parameter representing index.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: sum.
+    *
+    * @param index The integer parameter representing index.
+    * @return The computed integer result.
+    */
     private fun sum(index: Int): Int {
         var i = index + 1
         var result = 0
@@ -51,6 +114,30 @@ class RangeSumQueryMutable(nums: IntArray) {
         return result
     }
 
+    /**
+    * Solves the Range Sum Query Mutable problem.
+    * Takes `left` (integer), `right` (integer).
+    *
+    * @param left The integer parameter representing left.
+    * @param right The integer parameter representing right.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Range Sum Query Mutable problem.
+    * Takes `left` (integer), `right` (integer).
+    *
+    * @param left The integer parameter representing left.
+    * @param right The integer parameter representing right.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Range Sum Query Mutable problem.
+    * Takes `left` (integer), `right` (integer).
+    *
+    * @param left The integer parameter representing left.
+    * @param right The integer parameter representing right.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Range Sum Query Mutable problem.
     * Takes `left` (integer), `right` (integer).

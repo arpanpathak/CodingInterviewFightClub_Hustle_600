@@ -11,6 +11,27 @@ class AverageOfLevelsInBinaryTree {
     * @param root The binary tree node reference (nullable).
     * @return The computed floating-point result.
     */
+    /**
+    * Solves the Average Of Levels In Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Average Of Levels In Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed floating-point result.
+    */
+    /**
+    * Solves the Average Of Levels In Binary Tree problem.
+    * Takes `root` (binary tree node reference).
+    *
+    * @param root The binary tree node reference (nullable).
+    * @return The computed floating-point result.
+    */
     fun averageOfLevels(root: TreeNode?): DoubleArray {
         var result = mutableListOf<Double>()
 

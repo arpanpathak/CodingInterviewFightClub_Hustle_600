@@ -72,10 +72,55 @@ class BurstBaloons {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Burst Baloons problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Burst Baloons problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Burst Baloons problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun maxCoins(nums: IntArray): Int {
         if (nums.isEmpty()) return 0
         val dp = Array(nums.size) { IntArray(nums.size) }
 
+        /**
+        * Solves the Burst Baloons problem.
+        * Takes `l` (integer), `r` (integer).
+        *
+        * @param l The integer parameter representing l.
+        * @param r The integer parameter representing r.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Burst Baloons problem.
+        * Takes `l` (integer), `r` (integer).
+        *
+        * @param l The integer parameter representing l.
+        * @param r The integer parameter representing r.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Burst Baloons problem.
+        * Takes `l` (integer), `r` (integer).
+        *
+        * @param l The integer parameter representing l.
+        * @param r The integer parameter representing r.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Burst Baloons problem.
         * Takes `l` (integer), `r` (integer).
@@ -108,10 +153,9 @@ class BurstBaloons {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Top-down DP with memoization. Cache results of recursive calls to avoid recomputing overlapping subproblems.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -122,13 +166,14 @@ class BurstBaloons {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Closest Subsequence Sum
 
 ### Problem
@@ -147,6 +192,30 @@ package array.Combinatorics
 import kotlin.math.abs
 
 class ClosestSubsequenceSum {
+    /**
+    * Solves the Closest Subsequence Sum problem.
+    * Takes `nums` (array of integers), `goal` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param goal The integer parameter representing goal.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Closest Subsequence Sum problem.
+    * Takes `nums` (array of integers), `goal` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param goal The integer parameter representing goal.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Closest Subsequence Sum problem.
+    * Takes `nums` (array of integers), `goal` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param goal The integer parameter representing goal.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Closest Subsequence Sum problem.
     * Takes `nums` (array of integers), `goal` (integer).
@@ -175,10 +244,9 @@ class ClosestSubsequenceSum {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Study the code's approach — identify the core data structure and traversal method.
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
 
 ### Complexity
 
@@ -189,13 +257,14 @@ class ClosestSubsequenceSum {
 
 ### Variations
 
-1. What if the input size is much larger? Can you optimize?
-1. What if you need O(1) extra space instead of O(n)?
-1. What if there are duplicates or edge cases to handle?
-1. What if the problem constraints change (positive only, sorted, etc.)?
-1. Can this solution be parallelized?
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
+
 ## Maximumproductsubarray
 
 ### Problem
@@ -214,6 +283,27 @@ package dynamic_programming
 import dynamic_programming.MaximumProductSubarray.maxProduct
 
 object MaximumProductSubarray {
+    /**
+    * Solves the Maximum Product Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Product Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Product Subarray problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Maximum Product Subarray problem.
     * Takes `nums` (array of integers).
@@ -266,6 +356,24 @@ object MaximumProductSubarray {
     * @param args The input Array<String>.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Entry point for the program.
+    *
+    * @param args The input Array<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Entry point for the program.
+    *
+    * @param args The input Array<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Entry point for the program.
+    *
+    * @param args The input Array<String>.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun main(args: Array<String>) {
         val tests = listOf(
             intArrayOf(2, 3, -2, 4) to 6,     // Regular case
@@ -284,10 +392,9 @@ object MaximumProductSubarray {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -298,14 +405,130 @@ object MaximumProductSubarray {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-          val mid = (low + high) / 2
+
+## Maximum Profit In Job Scheduling
+
+### Problem
+
+Solves the Maximum Profit In Job Scheduling problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package dynamic_programming
+
+class MaximumProfitInJobScheduling {
+    data class Job(val start: Int, val end: Int, val profit: Int)
+
+    /**
+    * Solves the Maximum Profit In Job Scheduling problem.
+    * Takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers).
+    *
+    * @param startTime The input array of integers.
+    * @param endTime The input array of integers.
+    * @param profit The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Profit In Job Scheduling problem.
+    * Takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers).
+    *
+    * @param startTime The input array of integers.
+    * @param endTime The input array of integers.
+    * @param profit The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Profit In Job Scheduling problem.
+    * Takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers).
+    *
+    * @param startTime The input array of integers.
+    * @param endTime The input array of integers.
+    * @param profit The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Profit In Job Scheduling problem.
+    * Takes `startTime` (array of integers), `endTime` (array of integers), `profit` (array of integers).
+    *
+    * @param startTime The input array of integers.
+    * @param endTime The input array of integers.
+    * @param profit The input array of integers.
+    * @return The computed integer result.
+    */
+    fun jobScheduling(startTime: IntArray, endTime: IntArray, profit: IntArray): Int {
+        // Create a list of jobs and sort them by end time
+        val jobs = startTime.indices.map { Job(startTime[it], endTime[it], profit[it]) }
+            .sortedBy { it.end }
+
+        // Initialize dp array
+        val dp = IntArray(jobs.size)
+        dp[0] = jobs[0].profit
+
+        for (i in 1 until jobs.size) {
+            // Profit if the current job is not included
+            dp[i] = dp[i - 1]
+
+            // Find the last non-overlapping job
+            val prevJobIndex = findLastNonOverlappingJob(jobs, i)
+
+            // Profit if the current job is included
+            val currentProfit = jobs[i].profit + if (prevJobIndex != -1) dp[prevJobIndex] else 0
+
+            // Take the maximum profit between including and excluding the current job
+            dp[i] = maxOf(dp[i], currentProfit)
+        }
+
+        return dp[dp.size - 1]
+    }
+
+    /**
+    * Helper: find last non overlapping job.
+    *
+    * @param jobs The input List<Job>.
+    * @param currentIndex The integer parameter representing currentIndex.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: find last non overlapping job.
+    *
+    * @param jobs The input List<Job>.
+    * @param currentIndex The integer parameter representing currentIndex.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: find last non overlapping job.
+    *
+    * @param jobs The input List<Job>.
+    * @param currentIndex The integer parameter representing currentIndex.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: find last non overlapping job.
+    *
+    * @param jobs The input List<Job>.
+    * @param currentIndex The integer parameter representing currentIndex.
+    * @return The computed integer result.
+    */
+    private fun findLastNonOverlappingJob(jobs: List<Job>, currentIndex: Int): Int {
+        val currentJob = jobs[currentIndex]
+        var low = 0
+        var high = currentIndex - 1
+        var best = -1
+
+        while (low <= high) {
+            val mid = (low + high) / 2
             if (jobs[mid].end <= currentJob.start) {
                 best = mid
                 low = mid + 1  // Search in the right half
@@ -319,12 +542,24 @@ object MaximumProductSubarray {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -351,6 +586,27 @@ class PartitionEqualSubsetSum {
     * @param nums The input array of integers.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canPartition(nums: IntArray): Boolean {
         val sum = nums.sum()
         if (sum % 2 != 0)   return false
@@ -358,6 +614,30 @@ class PartitionEqualSubsetSum {
         val dp = Array(nums.size) { IntArray(target + 1) { -1 } }
 
 
+        /**
+        * Solves the Partition Equal Subset Sum problem.
+        * Takes `i` (integer), `currentSum` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param currentSum The integer parameter representing currentSum.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Partition Equal Subset Sum problem.
+        * Takes `i` (integer), `currentSum` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param currentSum The integer parameter representing currentSum.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Partition Equal Subset Sum problem.
+        * Takes `i` (integer), `currentSum` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param currentSum The integer parameter representing currentSum.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Partition Equal Subset Sum problem.
         * Takes `i` (integer), `currentSum` (integer).
@@ -385,6 +665,27 @@ class PartitionEqualSubsetSum {
     * @param nums The input array of integers.
     * @return `true` if the condition is met, `false` otherwise.
     */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
+    /**
+    * Solves the Partition Equal Subset Sum problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return `true` if the condition is met, `false` otherwise.
+    */
     fun canPartitionBottomUp(nums: IntArray): Boolean {
         val sum = nums.sum()
         if (sum % 2 != 0)   return false
@@ -401,10 +702,9 @@ class PartitionEqualSubsetSum {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Top-down DP with memoization. Cache results of recursive calls to avoid recomputing overlapping subproblems.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -415,13 +715,14 @@ class PartitionEqualSubsetSum {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
+
 ## Super Egg Dropping
 
 ### Problem
@@ -446,6 +747,30 @@ class SuperEggDropping {
     * @param n The integer parameter representing n.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Super Egg Dropping problem.
+    * Takes `k` (integer), `n` (integer).
+    *
+    * @param k The integer parameter representing k.
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Super Egg Dropping problem.
+    * Takes `k` (integer), `n` (integer).
+    *
+    * @param k The integer parameter representing k.
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Super Egg Dropping problem.
+    * Takes `k` (integer), `n` (integer).
+    *
+    * @param k The integer parameter representing k.
+    * @param n The integer parameter representing n.
+    * @return The computed integer result.
+    */
     fun superEggDrop(k: Int, n: Int): Int {
         val dp = Array(k + 1) { IntArray(n + 1) }
         var m = 0
@@ -460,12 +785,24 @@ class SuperEggDropping {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -492,11 +829,53 @@ class HouseRobber {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun rob(nums: IntArray): Int {
         val dp = IntArray(nums.size) { -1 }
         return rob(dp, nums, 0)
     }
 
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the House Robber problem.
     * Takes `nums` (array of integers).
@@ -522,6 +901,27 @@ class HouseRobber {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the House Robber problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun rob_iterative(nums: IntArray): Int {
         if (nums.isEmpty()) return 0
 
@@ -539,10 +939,9 @@ class HouseRobber {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+**Dynamic Programming Pattern.** Define state (changing parameters), transition (how to compute from smaller states), base case. Compute top-down (memoization) or bottom-up (tabulation).
 
 ### Complexity
 
@@ -553,14 +952,91 @@ class HouseRobber {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. Can you optimize space to O(1) (keep only previous row)?
+1. Can you reconstruct the optimal path, not just value?
+1. What if constraints change (unlimited vs limited)?
+1. Is there a greedy solution? When does greedy fail?
+1. What if the input size is too large for the DP table?
 
 ---
-p = IntArray(nums.size)
+
+## House Robber_II
+
+### Problem
+
+Solves the House Robber_II problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array.dp
+
+class HouseRobber_II {
+    /**
+    * Solves the House Robber_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the House Robber_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the House Robber_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the House Robber_II problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    fun rob(nums: IntArray): Int {
+        return when {
+            nums.size == 1 -> nums[0]
+            else -> maxOf(rob(nums, 0 , nums.size ), rob(nums, 1, nums.size - 1))
+        }
+    }
+
+    /**
+     * Recusrive Solution
+     */
+    fun rob(nums: IntArray, start: Int, end: Int): Int {
+        var (include, exclude, max) = Triple(0, 0, 0)
+
+        for (i in start until  end) {
+            max = maxOf(include + nums[i], exclude)
+
+            include = exclude
+            exclude = max
+        }
+
+        return max
+    }
+
+
+    /**
+     * Bottom UP DP
+     */
+    fun robRange(nums: IntArray, start: Int, end: Int): Int {
+        if (nums.isEmpty() || start > end) return 0
+        if (start == end) return nums[start]
+
+        // Initialize an array to store the maximum amount that can be robbed up to each house
+        val dp = IntArray(nums.size)
 
         // Base cases
         dp[start] = nums[start]
@@ -577,12 +1053,24 @@ p = IntArray(nums.size)
 }
 ```
 
+### Pattern Insight
+
+**Dynamic Programming Pattern.** Define state (changing parameters), transition (how to compute from smaller states), base case. Compute top-down (memoization) or bottom-up (tabulation).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. Can you optimize space to O(1) (keep only previous row)?
+1. Can you reconstruct the optimal path, not just value?
+1. What if constraints change (unlimited vs limited)?
+1. Is there a greedy solution? When does greedy fail?
+1. What if the input size is too large for the DP table?
 
 ---
 
@@ -610,11 +1098,56 @@ class CoinChange {
     * @param amount The integer parameter representing amount.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Coin Change problem.
+    * Takes `coins` (array of integers), `amount` (integer).
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Coin Change problem.
+    * Takes `coins` (array of integers), `amount` (integer).
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Coin Change problem.
+    * Takes `coins` (array of integers), `amount` (integer).
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
     fun coinChange(coins: IntArray, amount: Int): Int {
         val dp = IntArray(amount + 1) { -1 }
         return coinChange(coins, amount, dp).let { if (it != Int.MAX_VALUE) it else -1 }
     }
 
+    /**
+    * Helper: coin change.
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: coin change.
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: coin change.
+    *
+    * @param coins The input array of integers.
+    * @param amount The integer parameter representing amount.
+    * @return The computed integer result.
+    */
     /**
     * Helper: coin change.
     *
@@ -643,12 +1176,24 @@ class CoinChange {
 }
 ```
 
+### Pattern Insight
+
+**Dynamic Programming Pattern.** Define state (changing parameters), transition (how to compute from smaller states), base case. Compute top-down (memoization) or bottom-up (tabulation).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. Can you optimize space to O(1) (keep only previous row)?
+1. Can you reconstruct the optimal path, not just value?
+1. What if constraints change (unlimited vs limited)?
+1. Is there a greedy solution? When does greedy fail?
+1. What if the input size is too large for the DP table?
 
 ---
 
@@ -676,11 +1221,56 @@ class CoinChange_II {
     * @param coins The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Coin Change_II problem.
+    * Takes `amount` (integer), `coins` (array of integers).
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Coin Change_II problem.
+    * Takes `amount` (integer), `coins` (array of integers).
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Coin Change_II problem.
+    * Takes `amount` (integer), `coins` (array of integers).
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
     fun change(amount: Int, coins: IntArray): Int {
         val dp = Array(amount + 1) { IntArray(coins.size) { -1 } }
         return change(dp, amount, coins, 0)
     }
 
+    /**
+    * Helper: change.
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: change.
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: change.
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Helper: change.
     *
@@ -702,12 +1292,24 @@ class CoinChange_II {
 }
 ```
 
+### Pattern Insight
+
+**Dynamic Programming Pattern.** Define state (changing parameters), transition (how to compute from smaller states), base case. Compute top-down (memoization) or bottom-up (tabulation).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. Can you optimize space to O(1) (keep only previous row)?
+1. Can you reconstruct the optimal path, not just value?
+1. What if constraints change (unlimited vs limited)?
+1. Is there a greedy solution? When does greedy fail?
+1. What if the input size is too large for the DP table?
 
 ---
 
@@ -735,6 +1337,30 @@ class CoinChange_II_BottomUp {
     * @param coins The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Coin Change_II_Bottom Up problem.
+    * Takes `amount` (integer), `coins` (array of integers).
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Coin Change_II_Bottom Up problem.
+    * Takes `amount` (integer), `coins` (array of integers).
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Coin Change_II_Bottom Up problem.
+    * Takes `amount` (integer), `coins` (array of integers).
+    *
+    * @param amount The integer parameter representing amount.
+    * @param coins The input array of integers.
+    * @return The computed integer result.
+    */
     fun change(amount: Int, coins: IntArray): Int {
         val dp = IntArray(amount + 1) { 0 }
         dp[0] = 1  // Base case: 1 way to make amount 0 (using no coins)
@@ -749,10 +1375,9 @@ class CoinChange_II_BottomUp {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+**Dynamic Programming Pattern.** Define state (changing parameters), transition (how to compute from smaller states), base case. Compute top-down (memoization) or bottom-up (tabulation).
 
 ### Complexity
 
@@ -763,14 +1388,72 @@ class CoinChange_II_BottomUp {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. Can you optimize space to O(1) (keep only previous row)?
+1. Can you reconstruct the optimal path, not just value?
+1. What if constraints change (unlimited vs limited)?
+1. Is there a greedy solution? When does greedy fail?
+1. What if the input size is too large for the DP table?
 
 ---
-t is extending the subsequence with a new larger element.
+
+## Longest Increasing Subsequence
+
+### Problem
+
+Solves the Longest Increasing Subsequence problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package tree.bst
+
+import java.util.*
+
+// Patience sorting algorithm
+class LongestIncreasingSubsequence {
+    /**
+    * Solves the Longest Increasing Subsequence problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Increasing Subsequence problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Increasing Subsequence problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Increasing Subsequence problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    fun lengthOfLIS(nums: IntArray): Int {
+        val tree = TreeSet<Int>()
+        nums.forEach { num ->
+            // Find the smallest element in the tree which is greater than or equal to num
+            tree.ceiling(num)?.also {
+                // If such an element is found, it means num can replace it to potentially
+                // form a new valid increasing subsequence or extend the current one
+                tree.remove(it)
+            }
+            // Add num to the tree. If num is not replacing any element,
+            // it is extending the subsequence with a new larger element.
             tree.add(num)
         }
         // The size of the tree at the end will represent the length of the longest
@@ -780,12 +1463,24 @@ t is extending the subsequence with a new larger element.
 }
 ```
 
+### Pattern Insight
+
+**String Processing Pattern.** Two pointers (palindromes), sliding window (substrings), DP (LCS/edit distance), hashing (pattern matching), trie (prefix search).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n²) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if strings are very long? Can you optimize space?
+1. What if you need to reconstruct the actual subsequence?
+1. What if case sensitivity or Unicode matters?
+1. What if you need to handle 3+ strings simultaneously?
+1. Can you use hashing (Rabin-Karp) for faster matching?
 
 ---
 
@@ -805,6 +1500,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package array.dp
 
 class MaximalSquare {
+    /**
+    * Solves the Maximal Square problem.
+    * Takes `matrix` (Array<CharArray>).
+    *
+    * @param matrix The input Array<CharArray>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximal Square problem.
+    * Takes `matrix` (Array<CharArray>).
+    *
+    * @param matrix The input Array<CharArray>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximal Square problem.
+    * Takes `matrix` (Array<CharArray>).
+    *
+    * @param matrix The input Array<CharArray>.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Maximal Square problem.
     * Takes `matrix` (Array<CharArray>).
@@ -837,12 +1553,24 @@ class MaximalSquare {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -870,6 +1598,27 @@ class MaximumSumSubArray {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Maximum Sum Sub Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Sum Sub Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximum Sum Sub Array problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun maxSubArray(nums: IntArray): Int {
         if (nums.isEmpty())
             return 0
@@ -886,10 +1635,9 @@ class MaximumSumSubArray {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Disjoint Set Union (Union-Find). Track connected components with near-O(1) operations.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -900,14 +1648,59 @@ class MaximumSumSubArray {
 
 ### Variations
 
-1. What if the tree is not balanced (skewed)? Worst-case complexity?
-1. What if you need to do this iteratively (no recursion)?
-1. What if the tree is an N-ary tree instead of binary?
-1. What if you need to handle both BST and non-BST trees?
-1. Can this be solved with Morris traversal (O(1) space)?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-mbingStairs_iterative(cost: IntArray): Int {
+
+## Min Cost Climbing Staris
+
+### Problem
+
+Solves the Min Cost Climbing Staris problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array.dp
+
+class MinCostClimbingStaris {
+    /**
+    * Solves the Min Cost Climbing Staris problem.
+    * Takes `cost` (array of integers).
+    *
+    * @param cost The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Cost Climbing Staris problem.
+    * Takes `cost` (array of integers).
+    *
+    * @param cost The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Cost Climbing Staris problem.
+    * Takes `cost` (array of integers).
+    *
+    * @param cost The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Cost Climbing Staris problem.
+    * Takes `cost` (array of integers).
+    *
+    * @param cost The input array of integers.
+    * @return The computed integer result.
+    */
+    fun minCostClimbingStairs_iterative(cost: IntArray): Int {
         // Handle base cases
         if (cost.size <= 2) return cost.min()
 
@@ -972,6 +1765,30 @@ mbingStairs_iterative(cost: IntArray): Int {
     * @param memo The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Helper: min cost.
+    *
+    * @param cost The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param memo The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: min cost.
+    *
+    * @param cost The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param memo The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: min cost.
+    *
+    * @param cost The input array of integers.
+    * @param i The integer parameter representing i.
+    * @param memo The input array of integers.
+    * @return The computed integer result.
+    */
     private fun minCost(cost: IntArray, i: Int, memo: IntArray): Int {
         // Base cases
         if (i < 0) return 0
@@ -988,10 +1805,9 @@ mbingStairs_iterative(cost: IntArray): Int {
 }
 ```
 
-
 ### Pattern Insight
 
-**Pattern:** Bottom-up DP. Build solutions from smallest subproblems upward using a table.
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
 
 ### Complexity
 
@@ -999,6 +1815,14 @@ mbingStairs_iterative(cost: IntArray): Int {
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1018,6 +1842,27 @@ _Refer to the **Pattern** section above for the general algorithmic pattern._
 package array.dp
 
 class MinimumPathSum {
+    /**
+    * Solves the Minimum Path Sum problem.
+    * Takes `grid` (nullable 2D matrix).
+    *
+    * @param grid The input nullable 2D matrix.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Path Sum problem.
+    * Takes `grid` (nullable 2D matrix).
+    *
+    * @param grid The input nullable 2D matrix.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Path Sum problem.
+    * Takes `grid` (nullable 2D matrix).
+    *
+    * @param grid The input nullable 2D matrix.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Minimum Path Sum problem.
     * Takes `grid` (nullable 2D matrix).
@@ -1046,6 +1891,10 @@ class MinimumPathSum {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
@@ -1055,14 +1904,113 @@ class MinimumPathSum {
 
 ### Variations
 
-1. Can you optimize space by using only the previous row?
-1. What if the input size is too large for 2D DP? Can you reduce dimensions?
-1. Can this be solved greedily instead? When does greedy fail?
-1. What if you need to reconstruct the path, not just the optimal value?
-1. What changes if you can make unlimited vs limited moves/choices?
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
-ainingSplits = dfs(j + 1, splitsLeft - 1)
+
+## Split Array Largest Sum
+
+### Problem
+
+Solves the Split Array Largest Sum problem.
+
+### Why This Approach
+
+_Refer to the **Pattern** section above for the general algorithmic pattern._
+
+### Code
+
+```kotlin
+package array.dp
+
+class SplitArrayLargestSum {
+    /**
+    * Solves the Split Array Largest Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Split Array Largest Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Split Array Largest Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Split Array Largest Sum problem.
+    * Takes `nums` (array of integers), `k` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param k The integer parameter representing k.
+    * @return The computed integer result.
+    */
+    fun splitArray(nums: IntArray, k: Int): Int {
+        val n = nums.size
+        val prefixSum = IntArray(n + 1)
+        for (i in nums.indices) {
+            prefixSum[i + 1] = prefixSum[i] + nums[i]
+        }
+
+        val memo = mutableMapOf<Pair<Int, Int>, Int>()
+
+        /**
+        * Solves the Split Array Largest Sum problem.
+        * Takes `i` (integer), `splitsLeft` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param splitsLeft The integer parameter representing splitsLeft.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Split Array Largest Sum problem.
+        * Takes `i` (integer), `splitsLeft` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param splitsLeft The integer parameter representing splitsLeft.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Split Array Largest Sum problem.
+        * Takes `i` (integer), `splitsLeft` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param splitsLeft The integer parameter representing splitsLeft.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Split Array Largest Sum problem.
+        * Takes `i` (integer), `splitsLeft` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param splitsLeft The integer parameter representing splitsLeft.
+        * @return The computed integer result.
+        */
+        fun dfs(i: Int, splitsLeft: Int): Int {
+            if (splitsLeft == 1) return prefixSum[n] - prefixSum[i] // Last split takes remaining sum
+            if (i == n) return Int.MAX_VALUE
+            if (memo.containsKey(i to splitsLeft)) return memo[i to splitsLeft]!!
+
+            var minLargestSum = Int.MAX_VALUE
+
+            for (j in i until n) {
+                val currentSum = prefixSum[j + 1] - prefixSum[i]
+                val largestInRemainingSplits = dfs(j + 1, splitsLeft - 1)
                 val maxSplitSum = maxOf(currentSum, largestInRemainingSplits)
 
                 minLargestSum = minOf(minLargestSum, maxSplitSum)
@@ -1080,12 +2028,24 @@ ainingSplits = dfs(j + 1, splitsLeft - 1)
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1116,10 +2076,61 @@ class TargetSum {
     * @param target The integer parameter representing target.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Target Sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Target Sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Target Sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun findTargetSumWays(nums: IntArray, target: Int): Int {
         return ways(nums, target, 0, 0)
     }
 
+    /**
+    * Helper: ways.
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @param index The integer parameter representing index.
+    * @param sum The integer parameter representing sum.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: ways.
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @param index The integer parameter representing index.
+    * @param sum The integer parameter representing sum.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: ways.
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @param index The integer parameter representing index.
+    * @param sum The integer parameter representing sum.
+    * @return The computed integer result.
+    */
     /**
     * Helper: ways.
     *
@@ -1168,6 +2179,30 @@ class TargetSum {
     * @param target The integer parameter representing target.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Target Sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Target Sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Target Sum problem.
+    * Takes `nums` (array of integers), `target` (integer).
+    *
+    * @param nums The input array of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun findTargetSumWays_subsetSum(nums: IntArray, target: Int): Int {
         val sumAll = nums.sum()
         // If the target sum is not reachable, return 0
@@ -1190,12 +2225,24 @@ class TargetSum {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1224,10 +2271,55 @@ class LongestIncreasingSequenceInAMatrix {
     * @param matrix The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Longest Increasing Sequence In AMatrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Increasing Sequence In AMatrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Increasing Sequence In AMatrix problem.
+    * Takes `matrix` (2D matrix of integers).
+    *
+    * @param matrix The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun longestIncreasingPath(matrix: Array<IntArray>): Int {
         val (m, n) = matrix.size to matrix[0].size
         val cache = Array(m) { IntArray(n) }
 
+        /**
+        * Solves the Longest Increasing Sequence In AMatrix problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Increasing Sequence In AMatrix problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Longest Increasing Sequence In AMatrix problem.
+        * Takes `i` (integer), `j` (integer).
+        *
+        * @param i The integer parameter representing i.
+        * @param j The integer parameter representing j.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Longest Increasing Sequence In AMatrix problem.
         * Takes `i` (integer), `j` (integer).
@@ -1263,12 +2355,24 @@ class LongestIncreasingSequenceInAMatrix {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1295,6 +2399,27 @@ class MinimumNumberofIncrementsSubarraysFormaTargetArray {
     * @param target The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Minimum Numberof Increments Subarrays Forma Target Array problem.
+    * Takes `target` (array of integers).
+    *
+    * @param target The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Numberof Increments Subarrays Forma Target Array problem.
+    * Takes `target` (array of integers).
+    *
+    * @param target The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Minimum Numberof Increments Subarrays Forma Target Array problem.
+    * Takes `target` (array of integers).
+    *
+    * @param target The input array of integers.
+    * @return The computed integer result.
+    */
     fun minNumberOperations(target: IntArray): Int {
         var operations = target[0]
 
@@ -1307,12 +2432,24 @@ class MinimumNumberofIncrementsSubarraysFormaTargetArray {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n³) |
 | **Space** | O(n²) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---
 
@@ -1334,6 +2471,27 @@ package array.dp
 import kotlin.math.abs
 
 class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
+    /**
+    * Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Partition Array Into Two Array To Minimuze Sum Difference problem.
     * Takes `nums` (array of integers).
@@ -1380,6 +2538,30 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
     * @param end The integer parameter representing end.
     * @return The computed integer result.
     */
+    /**
+    * Helper: generate subsets by size.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: generate subsets by size.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: generate subsets by size.
+    *
+    * @param nums The input array of integers.
+    * @param start The integer parameter representing start.
+    * @param end The integer parameter representing end.
+    * @return The computed integer result.
+    */
     private fun generateSubsetsBySize(nums: IntArray, start: Int, end: Int): Array<MutableList<Int>?> {
         val size = end - start
         val subsets = Array<MutableList<Int>?>(size + 1) { mutableListOf() }
@@ -1406,6 +2588,27 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
     * @param target The integer parameter representing target.
     * @return The computed integer result.
     */
+    /**
+    * Helper: find closest values.
+    *
+    * @param sortedList The input list of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: find closest values.
+    *
+    * @param sortedList The input list of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Helper: find closest values.
+    *
+    * @param sortedList The input list of integers.
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     private fun findClosestValues(sortedList: List<Int>, target: Int): List<Int> {
         val index = sortedList.binarySearch(target)
         if (index >= 0) return listOf(sortedList[index])  // Exact match
@@ -1419,11 +2622,23 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
 }
 ```
 
+### Pattern Insight
+
+**Algorithmic Pattern.** Identify the core operation being optimized. The right data structure can reduce O(n²) brute force to O(n) or O(log n).
+
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
 | **Time** | O(log n) |
 | **Space** | O(1) |
+
+### Variations
+
+1. What if input size is much larger? Optimize time/space.
+1. What if O(1) extra space is required?
+1. What if there are edge cases (empty, single, duplicates)?
+1. What if constraints change (positive, sorted, distinct)?
+1. Can this be solved with a different paradigm?
 
 ---

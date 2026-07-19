@@ -8,6 +8,27 @@ class SetMismatch {
     * @param nums The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Set Mismatch problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Set Mismatch problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Set Mismatch problem.
+    * Takes `nums` (array of integers).
+    *
+    * @param nums The input array of integers.
+    * @return The computed integer result.
+    */
     fun findErrorNums(nums: IntArray): IntArray {
         val seen = mutableSetOf<Int>()
         var duplicate = -1

@@ -8,6 +8,27 @@ class UniqueLength3PalindromicSubsequence {
     * @param s The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Unique Length3Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Unique Length3Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Unique Length3Palindromic Subsequence problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun countPalindromicSubsequence(s: String): Int {
         val charPositions = mutableMapOf<Char, MutableList<Int>>()
 

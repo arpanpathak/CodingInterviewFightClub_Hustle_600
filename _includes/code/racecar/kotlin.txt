@@ -12,8 +12,53 @@ class Racecar {
     * @param target The integer parameter representing target.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     fun racecar(target: Int): Int {
         val dp = mutableMapOf<Pair<Int,Int>, Int>()
+        /**
+        * Solves the Racecar problem.
+        * Takes `pos` (integer), `speed` (integer).
+        *
+        * @param pos The integer parameter representing pos.
+        * @param speed The integer parameter representing speed.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Racecar problem.
+        * Takes `pos` (integer), `speed` (integer).
+        *
+        * @param pos The integer parameter representing pos.
+        * @param speed The integer parameter representing speed.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Racecar problem.
+        * Takes `pos` (integer), `speed` (integer).
+        *
+        * @param pos The integer parameter representing pos.
+        * @param speed The integer parameter representing speed.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Racecar problem.
         * Takes `pos` (integer), `speed` (integer).
@@ -40,6 +85,27 @@ class Racecar {
 
     data class State(val position: Int, val speed: Int, val distance: Int = 0)
 
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Racecar problem.
     * Takes `target` (integer).
@@ -82,6 +148,27 @@ class Racecar {
     }
 
 
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Racecar problem.
+    * Takes `target` (integer).
+    *
+    * @param target The integer parameter representing target.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Racecar problem.
     * Takes `target` (integer).

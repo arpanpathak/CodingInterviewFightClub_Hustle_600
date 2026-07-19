@@ -9,6 +9,30 @@ class FindDifferenceOfTwoArrays {
     * @param nums2 The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Find Difference Of Two Arrays problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Difference Of Two Arrays problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Difference Of Two Arrays problem.
+    * Takes `nums1` (array of integers), `nums2` (array of integers).
+    *
+    * @param nums1 The input array of integers.
+    * @param nums2 The input array of integers.
+    * @return The computed integer result.
+    */
     fun findDifference(nums1: IntArray, nums2: IntArray): List<List<Int>> {
         val set1 = nums1.toSet()
         val set2 = nums2.toSet()

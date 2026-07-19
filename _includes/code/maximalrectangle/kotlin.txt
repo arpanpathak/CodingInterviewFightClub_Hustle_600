@@ -13,6 +13,27 @@ class MaximalRectangle {
     * @param heights The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Maximal Rectangle problem.
+    * Takes `heights` (array of integers).
+    *
+    * @param heights The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximal Rectangle problem.
+    * Takes `heights` (array of integers).
+    *
+    * @param heights The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximal Rectangle problem.
+    * Takes `heights` (array of integers).
+    *
+    * @param heights The input array of integers.
+    * @return The computed integer result.
+    */
     fun largestRectangleArea(heights: IntArray): Int {
         val stack = Stack<Int>()
         var ( maxArea, i ) = listOf(0, 0)
@@ -54,6 +75,27 @@ class MaximalRectangle {
     * @param matrix The input Array<CharArray>.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Maximal Rectangle problem.
+    * Takes `matrix` (Array<CharArray>).
+    *
+    * @param matrix The input Array<CharArray>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximal Rectangle problem.
+    * Takes `matrix` (Array<CharArray>).
+    *
+    * @param matrix The input Array<CharArray>.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Maximal Rectangle problem.
+    * Takes `matrix` (Array<CharArray>).
+    *
+    * @param matrix The input Array<CharArray>.
+    * @return The computed integer result.
+    */
     fun maximalRectangle(matrix: Array<CharArray>): Int {
         if (matrix.isEmpty()) return 0
 
@@ -68,6 +110,24 @@ class MaximalRectangle {
 
     companion object {
         @JvmStatic
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Entry point for the program.
+        *
+        * @param args The input Array<String>.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Entry point for the program.
         *

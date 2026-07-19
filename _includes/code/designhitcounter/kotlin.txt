@@ -12,10 +12,52 @@ class HitCounter() {
     * @param timestamp The integer parameter representing timestamp.
     * @return Unit (no return value, modifies state in-place).
     */
+    /**
+    * Solves the Hit Counter problem.
+    * Takes `timestamp` (integer).
+    *
+    * @param timestamp The integer parameter representing timestamp.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Hit Counter problem.
+    * Takes `timestamp` (integer).
+    *
+    * @param timestamp The integer parameter representing timestamp.
+    * @return Unit (no return value, modifies state in-place).
+    */
+    /**
+    * Solves the Hit Counter problem.
+    * Takes `timestamp` (integer).
+    *
+    * @param timestamp The integer parameter representing timestamp.
+    * @return Unit (no return value, modifies state in-place).
+    */
     fun hit(timestamp: Int) {
         hits.offer(timestamp)
     }
 
+    /**
+    * Solves the Hit Counter problem.
+    * Takes `timestamp` (integer).
+    *
+    * @param timestamp The integer parameter representing timestamp.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Hit Counter problem.
+    * Takes `timestamp` (integer).
+    *
+    * @param timestamp The integer parameter representing timestamp.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Hit Counter problem.
+    * Takes `timestamp` (integer).
+    *
+    * @param timestamp The integer parameter representing timestamp.
+    * @return The computed integer result.
+    */
     /**
     * Solves the Hit Counter problem.
     * Takes `timestamp` (integer).

@@ -8,9 +8,51 @@ class FindRedundentConnections {
     * @param edges The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Find Redundent Connections problem.
+    * Takes `edges` (2D matrix of integers).
+    *
+    * @param edges The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Redundent Connections problem.
+    * Takes `edges` (2D matrix of integers).
+    *
+    * @param edges The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Find Redundent Connections problem.
+    * Takes `edges` (2D matrix of integers).
+    *
+    * @param edges The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun findRedundantConnection(edges: Array<IntArray>): IntArray {
         val parent = IntArray(1001) { it }
 
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @return The computed integer result.
+        */
         /**
         * Solves the Find Redundent Connections problem.
         * Takes `x` (integer).
@@ -23,6 +65,30 @@ class FindRedundentConnections {
             return parent[x]
         }
 
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
+        /**
+        * Solves the Find Redundent Connections problem.
+        * Takes `x` (integer), `y` (integer).
+        *
+        * @param x The integer parameter representing x.
+        * @param y The integer parameter representing y.
+        * @return `true` if the condition is met, `false` otherwise.
+        */
         /**
         * Solves the Find Redundent Connections problem.
         * Takes `x` (integer), `y` (integer).

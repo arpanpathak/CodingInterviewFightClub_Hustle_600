@@ -10,6 +10,27 @@ class SkylineProblem {
     * @param buildings The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Skyline Problem problem.
+    * Takes `buildings` (2D matrix of integers).
+    *
+    * @param buildings The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Skyline Problem problem.
+    * Takes `buildings` (2D matrix of integers).
+    *
+    * @param buildings The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Skyline Problem problem.
+    * Takes `buildings` (2D matrix of integers).
+    *
+    * @param buildings The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun getSkyline(buildings: Array<IntArray>): List<List<Int>> {
         val points = buildings.flatMap {
             listOf(Pair(it[0], -it[2]), Pair(it[1], it[2]))

@@ -8,6 +8,27 @@ class LongestPalindromicSubsequence_BottomUp {
     * @param s The input string.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Longest Palindromic Subsequence_Bottom Up problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Palindromic Subsequence_Bottom Up problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Longest Palindromic Subsequence_Bottom Up problem.
+    * Takes `s` (string).
+    *
+    * @param s The input string.
+    * @return The computed integer result.
+    */
     fun longestPalindromeSubseq(s: String): Int {
         val n = s.length
         val dp = Array(n) { IntArray(n) }

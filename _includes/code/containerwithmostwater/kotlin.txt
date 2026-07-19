@@ -8,6 +8,27 @@ class ContainerWithMostWater {
     * @param height The input array of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Container With Most Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Container With Most Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Container With Most Water problem.
+    * Takes `height` (array of integers).
+    *
+    * @param height The input array of integers.
+    * @return The computed integer result.
+    */
     fun maxArea(height: IntArray): Int {
         var (start, end) = Pair(0, height.lastIndex)
         var maxWater = 0

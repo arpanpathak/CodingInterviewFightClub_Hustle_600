@@ -13,7 +13,52 @@ class MinCostToConnectAllPointsPrims {
     * @param points The input 2D matrix of integers.
     * @return The computed integer result.
     */
+    /**
+    * Solves the Min Cost To Connect All Points Prims problem.
+    * Takes `points` (2D matrix of integers).
+    *
+    * @param points The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Cost To Connect All Points Prims problem.
+    * Takes `points` (2D matrix of integers).
+    *
+    * @param points The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
+    /**
+    * Solves the Min Cost To Connect All Points Prims problem.
+    * Takes `points` (2D matrix of integers).
+    *
+    * @param points The input 2D matrix of integers.
+    * @return The computed integer result.
+    */
     fun minCostConnectPoints(points: Array<IntArray>): Int {
+        /**
+        * Solves the Min Cost To Connect All Points Prims problem.
+        * Takes `from` (integer), `to` (integer).
+        *
+        * @param from The integer parameter representing from.
+        * @param to The integer parameter representing to.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Min Cost To Connect All Points Prims problem.
+        * Takes `from` (integer), `to` (integer).
+        *
+        * @param from The integer parameter representing from.
+        * @param to The integer parameter representing to.
+        * @return Unit (no return value, modifies state in-place).
+        */
+        /**
+        * Solves the Min Cost To Connect All Points Prims problem.
+        * Takes `from` (integer), `to` (integer).
+        *
+        * @param from The integer parameter representing from.
+        * @param to The integer parameter representing to.
+        * @return Unit (no return value, modifies state in-place).
+        */
         /**
         * Solves the Min Cost To Connect All Points Prims problem.
         * Takes `from` (integer), `to` (integer).
