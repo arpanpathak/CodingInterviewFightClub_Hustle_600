@@ -12,27 +12,28 @@ next_chapter:
   title: "Trees - Hierarchical Thinking"
 ---
 
-# Linked Lists: Pointer Manipulation
+# Linked Lists - Pointer Manipulation
+
+This chapter covers problems from the CrackGoogle repository. All source files are linked below.
 
 ## Complete Problem Set (18 problems)
 
-| # | Problem | Pattern | Difficulty | File |
-|---|---------|---------|------------|------|
-| 1 | Reverse Linked List | Iterative | Easy | linkedlist/ReverseLinkedList.kt |
-| 2 | Merge Two Sorted Lists | Merge | Easy | linkedlist/MergeTwoSortedLIst.kt |
-| 3 | Linked List Cycle | Fast & Slow | Easy | linkedlist/LinkedListCycle.kt |
-| 4 | Linked List Cycle II | Find cycle start | Medium | linkedlist/LinkedListCycle_II.kt |
-| 5 | Remove Nth Node From End | Two pointers | Medium | linkedlist/RemoveNthNodeFromEndOfList.kt |
-| 6 | Palindrome Linked List | Reverse half | Easy | linkedlist/PalindromeLinkedList.kt |
-| 7 | Add Two Numbers | Math | Medium | linkedlist/AddTwoNumbers.kt |
-| 8 | Odd Even Linked List | Reorder | Medium | linkedlist/OddEvenLinkedList.kt |
-| 9 | Intersection of Two Lists | Two pointers | Easy | linkedlist/IntersectionOfTwoLinkedList.kt |
-| 10 | Copy List w/ Random Pointer | Hash map | Medium | linkedlist/CopyLinkedListWithRandomPointer.kt |
-| 11 | Delete Middle Node | Fast & slow | Medium | linkedlist/DeleteMiddleNodeOfLinkedList.kt |
-| 12 | Insert into Sorted Circular List | Traversal | Medium | linkedlist/InsertIntoASortedCircularLinkedList.kt |
-| 13 | Reverse Nodes in k-Group | Recursive | Hard | linkedlist/ReverseNodesInKGroups.kt |
-| 14 | Merge k Sorted Lists | Divide & conquer | Hard | linkedlist/MergeKSortedList.kt |
-| 15 | Merge k Sorted Lists (Iterative) | Iterative | Hard | linkedlist/MergeKSortedListIterative.kt |
+| # | Problem | Pattern | File |
+|---|---------|---------|------|
+| 1 | Reverse Linked List | Iterative | linkedlist/ReverseLinkedList.kt |
+| 2 | Merge Two Sorted Lists | Merge | linkedlist/MergeTwoSortedLIst.kt |
+| 3 | Linked List Cycle | Fast & Slow | linkedlist/LinkedListCycle.kt |
+| 4 | Linked List Cycle II | Cycle start | linkedlist/LinkedListCycle_II.kt |
+| 5 | Remove Nth Node From End | Two ptrs | linkedlist/RemoveNthNodeFromEndOfList.kt |
+| 6 | Palindrome Linked List | Reverse half | linkedlist/PalindromeLinkedList.kt |
+| 7 | Add Two Numbers | Math | linkedlist/AddTwoNumbers.kt |
+| 8 | Odd Even Linked List | Reorder | linkedlist/OddEvenLinkedList.kt |
+| 9 | Intersection of Two Lists | Two ptrs | linkedlist/IntersectionOfTwoLinkedList.kt |
+| 10 | Copy List w/ Random | Hash map | linkedlist/CopyLinkedListWithRandomPointer.kt |
+| 11 | Delete Middle Node | Fast & Slow | linkedlist/DeleteMiddleNodeOfLinkedList.kt |
+| 12 | Insert Sorted Circular | Traversal | linkedlist/InsertIntoASortedCircularLinkedList.kt |
+| 13 | Reverse Nodes k-Group | Recursive | linkedlist/ReverseNodesInKGroups.kt |
+| 14 | Merge k Sorted Lists | Divide Conquer | linkedlist/MergeKSortedList.kt |
 
 ### Reverse Linked List
 ```kotlin
@@ -73,23 +74,9 @@ fun hasCycle(head: ListNode?): Boolean {
 }
 ```
 
-### Reverse Nodes in k-Group
-```kotlin
-fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
-    var count = 0; var curr = head
-    while (curr != null && count < k) { curr = curr.next; count++ }
-    if (count < k) return head
-    
-    var prev: ListNode? = null; curr = head; count = 0
-    while (count < k) {
-        val next = curr!!.next; curr.next = prev
-        prev = curr; curr = next; count++
-    }
-    head?.next = reverseKGroup(curr, k)
-    return prev
-}
-```
+
+See the [Master Problem Index](./14-problem-index.md) for the full catalog of all 465+ problems.
 
 ---
 
-> **Next up: [Trees ->](./05-trees.md)**
+> **Next up: [Trees - Hierarchical Thinking ->](/chapters/05-trees.md)**
