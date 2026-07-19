@@ -11,548 +11,1202 @@ next_chapter:
 
 # Binary Search
 
-> **21 problems** — Master the art of divide-and-conquer searching.
-
-Binary search is the most fundamental divide-and-conquer algorithm. Given a **sorted** array, you can find an element in **O(log n)** time by repeatedly cutting the search space in half.
+> **21 problems** — Master the art of divide-and-conquer searching. Binary search finds elements in sorted arrays in O(log n) time.
 
 ## The Pattern
 
-```
-Sorted array + search → Binary Search
-```
-
-### When to Use Binary Search
-- Input is **sorted** (or can be sorted)
-- You need to find an element, boundary, or position
-- You need to **minimize/maximize** a value with a monotonic predicate
-- The search space is **numerical** and you can test a candidate
-
-### Three Templates
-
-| Template | Use Case | Condition |
-|----------|----------|-----------|
-| **Standard** | Find exact target | `while (left <= right)` → return mid |
-| **Left boundary** | Find first occurrence | `while (left < right)` → right = mid |
-| **Right boundary** | Find last occurrence | `while (left < right)` → left = mid + 1 |
-
----
+Sorted array + search → Binary Search. The key insight: find a predicate that splits the search space into 'yes' and 'no', then binary search finds the transition point.
 
 ## Complete Problem Set
 
 | # | Problem | Pattern | Difficulty |
-|---|---------|---------|-----------|
-| 1 | [ApartmentHunting](#apartmenthunting) | Binary search on sorted lists | <span class="badge badge-medium">Medium</span> |
-| 2 | [CapacityToShipPackageWithinDDays](#capacitytoshippackagewithinddays) | Minimize max capacity | <span class="badge badge-medium">Medium</span> |
-| 3 | [ClosestSebsequenceSum](#closestsebsequencesum) | Meet in the middle + binary search | <span class="badge badge-hard">Hard</span> |
-| 4 | [FindFirstAndLastPosition](#findfirstandlastposition) | Left/right boundary search | <span class="badge badge-medium">Medium</span> |
-| 5 | [FindKClosestElements](#findkclosestelements) | Binary search for window start | <span class="badge badge-medium">Medium</span> |
-| 6 | [FindMinimumInRotatedSortedArray](#findminimuminrotatedsortedarray) | Peak/valley in rotated array | <span class="badge badge-medium">Medium</span> |
-| 7 | [FindPeakElement](#findpeakelement) | Local peak search | <span class="badge badge-medium">Medium</span> |
-| 8 | [FindPeakElementBetterSolution](#findpeakelementbettersolution) | Local peak (safe boundaries) | <span class="badge badge-medium">Medium</span> |
-| 9 | [FirstBadVersion](#firstbadversion) | Left boundary (first true) | <span class="badge badge-easy">Easy</span> |
-| 10 | [GuessNumberHigherOrLower](#guessnumberhigherorlower) | Standard binary search | <span class="badge badge-easy">Easy</span> |
-| 11 | [HouseRobber_IV](#houserobber_iv) | Minimize max with binary search | <span class="badge badge-medium">Medium</span> |
-| 12 | [KThMissingPositiveNumber](#kthmissingpositivenumber) | Find k-th missing in sorted array | <span class="badge badge-easy">Easy</span> |
-| 13 | [KokoEatingBanana](#kokoeatingbanana) | Minimize eating speed | <span class="badge badge-medium">Medium</span> |
-| 14 | [MedianOfTwoSortedARrays](#medianoftwosortedarrays) | Partition-based median | <span class="badge badge-hard">Hard</span> |
-| 15 | [RandomPickWithWeight](#randompickwithweight) | Weighted random + prefix sum | <span class="badge badge-medium">Medium</span> |
-| 16 | [SearchA2dMatrix](#searcha2dmatrix) | 2D → 1D index mapping | <span class="badge badge-medium">Medium</span> |
-| 17 | [SearchInRotatedArray_II](#searchinrotatedarray_ii) | Rotated array with duplicates | <span class="badge badge-medium">Medium</span> |
-| 18 | [SearchInRotatedSortedArray](#searchinrotatedsortedarray) | Rotated array search | <span class="badge badge-medium">Medium</span> |
-| 19 | [SearchInsertionPosition](#searchinsertionposition) | Find insert index | <span class="badge badge-easy">Easy</span> |
-| 20 | [SingleElementInASortedArray](#singleelementinasortedarray) | Find unique element | <span class="badge badge-medium">Medium</span> |
-| 21 | [ValleyElement](#valleyelement) | Local valley search | <span class="badge badge-easy">Easy</span> |
+|---|---------|-----------|------------|
+| 1 | [Apartmenthunting](#apartmenthunting) | — | <span class="badge badge-medium">Medium</span> |
+| 2 | [Capacity To Ship Package Within D Days](#capacitytoshippackagewithinddays) | — | <span class="badge badge-medium">Medium</span> |
+| 3 | [Closest Sebsequence Sum](#closestsebsequencesum) | — | <span class="badge badge-medium">Medium</span> |
+| 4 | [Find First And Last Position](#findfirstandlastposition) | — | <span class="badge badge-medium">Medium</span> |
+| 5 | [Find K Closest Elements](#findkclosestelements) | — | <span class="badge badge-medium">Medium</span> |
+| 6 | [Find Minimum In Rotated Sorted Array](#findminimuminrotatedsortedarray) | — | <span class="badge badge-medium">Medium</span> |
+| 7 | [Find Peak Element](#findpeakelement) | — | <span class="badge badge-medium">Medium</span> |
+| 8 | [Find Peak Element Better Solution](#findpeakelementbettersolution) | — | <span class="badge badge-medium">Medium</span> |
+| 9 | [Version Control](#firstbadversion) | — | <span class="badge badge-medium">Medium</span> |
+| 10 | [Solution](#guessnumberhigherorlower) | — | <span class="badge badge-medium">Medium</span> |
+| 11 | [House Robber_IV](#houserobber_iv) | — | <span class="badge badge-medium">Medium</span> |
+| 12 | [K Th Missing Positive Number](#kthmissingpositivenumber) | — | <span class="badge badge-medium">Medium</span> |
+| 13 | [Koko Eating Banana](#kokoeatingbanana) | — | <span class="badge badge-medium">Medium</span> |
+| 14 | [Median Of Two Sorted A Rrays](#medianoftwosortedarrays) | — | <span class="badge badge-medium">Medium</span> |
+| 15 | [Random Pick With Weight](#randompickwithweight) | — | <span class="badge badge-medium">Medium</span> |
+| 16 | [Search A2d Matrix](#searcha2dmatrix) | — | <span class="badge badge-medium">Medium</span> |
+| 17 | [Search In Rotated Array_II](#searchinrotatedarray_ii) | — | <span class="badge badge-medium">Medium</span> |
+| 18 | [Search In Rotated Sorted Array](#searchinrotatedsortedarray) | — | <span class="badge badge-medium">Medium</span> |
+| 19 | [Search Insertion Position](#searchinsertionposition) | — | <span class="badge badge-medium">Medium</span> |
+| 20 | [Single Element In A Sorted Array](#singleelementinasortedarray) | — | <span class="badge badge-medium">Medium</span> |
+| 21 | [Valley Element](#valleyelement) | — | <span class="badge badge-medium">Medium</span> |
 
 ---
 
-## ApartmentHunting
+## Apartmenthunting
 
-**Problem:** Given a list of city blocks (each with map of amenities), find the block that minimizes the maximum distance to any required amenity.
+<span id="apartmenthunting"></span>
 
-**Intuition:** This is not a direct binary search problem — it uses binary search as a helper (`closestDistance`). The core insight: for each block, compute the farthest distance to any required amenity, then pick the block with the smallest such distance. Binary search on sorted amenity position lists gives us O(log k) distance lookup per amenity.
+### Problem
 
-**Pattern:** Binary search on sorted lists + greedy minimization.
+**Apartmenthunting**
 
-**Approach:**
-1. Build a map: amenity → sorted list of blocks where it exists
-2. For each block, compute `maxDistance = max(closestDistance(block, amenityPositions))`
-3. Pick the block with minimum `maxDistance`
-4. `closestDistance` uses binary search to find the nearest block index
+**Function:** `Find Best Block` takes `blocks` (List<Map<string), `Boolean>>` (?), `requirements` (List<string>) and returns **integer**.
+
+**Key logic:**
+- Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
+- Ensure all required amenities are present
+- Return -1 if any required amenity is not present in any block
+- Step 2: Determine the optimal block
+- N * R * Log(K) , K = number of unique amininties present across all the blocks
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+This searches for an exact target value in a sorted structure.
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `amenityMap`, `bestBlock`, `bestMaxDistance`, `maxDistance`, `pos`, `insertPoint`, `leftDistance`, `rightDistance`
+
+**Execution flow:**
+- Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
+- Ensure all required amenities are present
+- Return -1 if any required amenity is not present in any block
+- Step 2: Determine the optimal block
+- N * R * Log(K) , K = number of unique amininties present across all the blocks
+- Check if the current block has the smallest maximum distance
+- Function to find the minimum distance to the closest block with the given amenity
+- Custom Binary Search implementation
+
+### Code
 
 {% include code-tabs-file.html problem="apartmenthunting" %}
 
-**Complexity:**
-- Time: O(B × R × log K) — B blocks, R requirements, K amenity occurrences
-- Space: O(K) for the amenity map
+### Complexity
 
-**Variations:** What if amenities have weights? What if you can walk diagonally?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## CapacityToShipPackageWithinDDays
+## Capacity To Ship Package Within D Days
 
-**Problem:** Ship packages in `weights` within `days` days. Each day you load as many packages as possible without exceeding capacity. Find the minimum capacity that makes it possible.
+<span id="capacitytoshippackagewithinddays"></span>
 
-**Intuition:** This is a classic "minimize X such that predicate holds" — the predicate is `canShip(capacity)` which checks if capacity is sufficient. The search space is `[max(weights), sum(weights)]`. If mid works, try smaller; if not, try larger.
+### Problem
 
-**Pattern:** Binary search on answer (minimization).
+**Capacitytoshippackagewithinddays**
 
-**Approach:**
-1. Define `feasible(capacity)`: simulate loading day by day
-2. Binary search between `max(weights)` and `sum(weights)`
-3. `feasible(mid)` → try smaller: `right = mid`
-4. `!feasible(mid)` → try larger: `left = mid + 1`
+**Function:** `Feasible` takes `weights` (array of integers), `mid` (integer), `days` (integer) and returns **boolean**.
+
+
+
+### Why This Works
+
+The algorithm systematically processes the input to produce the correct result. Each step maintains an invariant that leads to the final correct answer. The data structures used optimize the critical operations to O(1) or O(log n) each.
+
+### Algorithmic Thinking
+
+**Solution Approach:**
+1. The main function `feasible` processes the input
+2. Uses helper functions: shipWithinDays
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `mid`
+
+### Code
 
 {% include code-tabs-file.html problem="capacitytoshippackagewithinddays" %}
 
-**Complexity:**
-- Time: O(N log S) — N packages, S = sum(weights)
-- Space: O(1)
+### Complexity
 
-**Variations:** Ship in exactly K days? Packages with dependencies?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(n²) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+The algorithm processes each element a constant number of times, giving O(n²). The O(1) space comes from the auxiliary data structures used.
 
 ---
 
-## ClosestSebsequenceSum
+## Closest Sebsequence Sum
 
-**Problem:** Given an array `nums` and a `goal`, find the minimum absolute difference between `goal` and any subsequence sum.
+<span id="closestsebsequencesum"></span>
 
-**Intuition:** With n up to 40, we can't enumerate all 2^40 subsets. Use **meet-in-the-middle**: split array in half, enumerate all sums for each half (2^20 ≈ 1M each), then for each sum in left, binary search for `goal - sum` in right's sorted sums.
+### Problem
 
-**Pattern:** Meet-in-the-middle + binary search on sorted sums.
+**Closestsebsequencesum**
 
-**Approach:**
-1. Split array at midpoint
-2. DFS both halves to generate all subset sums
-3. Sort right half sums
-4. For each left sum, binary search for closest complement in right
+**Function:** `Min Abs Difference` takes `nums` (array of integers), `goal` (integer) and returns **integer**.
+
+**Key logic:**
+- exclude
+- include
+- exact match found
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+This searches for an exact target value in a sorted structure.
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `leftSums`, `rightSums`, `n`, `mid`, `minDiff`, `target`, `idx`, `insertPoint`
+
+**Execution flow:**
+- exact match found
+
+### Code
 
 {% include code-tabs-file.html problem="closestsebsequencesum" %}
 
-**Complexity:**
-- Time: O(2^(n/2) log 2^(n/2))
-- Space: O(2^(n/2))
+### Complexity
 
-**Variations:** Exact match? Subsequence closest to target with limited length?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## FindFirstAndLastPosition
+## Find First And Last Position
 
-**Problem:** Find first and last index of `target` in sorted array with duplicates. Return [-1, -1] if not found.
+<span id="findfirstandlastposition"></span>
 
-**Intuition:** Two binary searches — one for left boundary (first occurrence) and one for right boundary (last occurrence). The trick: when `nums[mid] == target`, don't stop — narrow toward one side.
+### Problem
 
-**Pattern:** Left/right boundary binary search.
+**Findfirstandlastposition**
 
-**Approach:**
-1. Binary search for first occurrence: when `nums[mid] == target`, `right = mid - 1`
-2. Binary search for last occurrence: when `nums[mid] == target`, `left = mid + 1`
-3. If first doesn't exist, return [-1, -1]
+**Function:** `Search Range` takes `nums` (array of integers), `target` (integer) and returns **array of integers**.
+
+**Key logic:**
+- Find the first occurrence
+- If the first occurrence is not found, return [-1, -1]
+- Find the last occurrence
+- Adjust the search range based on whether we are looking for the first or last occurrence
+- Move left to find the first occurrence
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+This searches for an exact target value in a sorted structure.
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `result`, `left`, `right`, `result`, `mid`
+
+**Execution flow:**
+- Find the first occurrence
+- If the first occurrence is not found, return [-1, -1]
+- Find the last occurrence
+- Adjust the search range based on whether we are looking for the first or last occurrence
+- Move left to find the first occurrence
+- Move right to find the last occurrence
+
+### Code
 
 {% include code-tabs-file.html problem="findfirstandlastposition" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
 
-**Variations:** Count occurrences of target? First/last position in rotated array?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## FindKClosestElements
+## Find K Closest Elements
 
-**Problem:** Find `k` closest elements to `x` in sorted array `arr`. Return in sorted order.
+<span id="findkclosestelements"></span>
 
-**Intuition:** Instead of finding k closest, find the **start** of the k-element window. The window start `left` must satisfy that `arr[left]` is closer than `arr[left + k]` (otherwise we shift right). Binary search for the optimal `left`.
+### Problem
 
-**Pattern:** Binary search for window position.
+**Findkclosestelements**
 
-**Approach:**
-1. Binary search `left` in `[0, arr.size - k]`
-2. Compare `x - arr[mid]` vs `arr[mid + k] - x`
-3. If `arr[mid]` is closer, move left; else move right
+**Function:** `Find Closest Elements` takes `arr` (Array<integer>), `k` (integer), `x` (integer) and returns **List**.
+
+**Key logic:**
+- Remove the farthest element
+- We could also do
+
+
+
+### Why This Works
+
+BFS works because it explores nodes in order of their distance from the source. The queue ensures that nodes at distance `k` are processed before nodes at distance `k+1`. This guarantees the first time we reach the target, it's via the shortest path.
+
+### Algorithmic Thinking
+
+**BFS (Breadth-First Search) Approach:**
+1. Use a queue to process nodes level by level
+2. Track visited nodes to avoid cycles
+3. BFS guarantees shortest path in unweighted graphs
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `priorityQueue`, `diffA`, `diffB`, `result`, `testClass`
+
+**Execution flow:**
+- Remove the farthest element
+- We could also do
+
+### Code
 
 {% include code-tabs-file.html problem="findkclosestelements" %}
 
-**Complexity:**
-- Time: O(log(n - k) + k)
-- Space: O(k) for result
+### Complexity
 
-**Variations:** What if x is outside array range? What if all elements are equally close?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(n log k) |
+| **Space** | O(k) |
+
+**Analysis:**
+
+Each node and edge is visited at most once, giving O(n log k) for a graph with V vertices and E edges. The O(k) space stores visited tracking and the queue/stack.
 
 ---
 
-## FindMinimumInRotatedSortedArray
+## Find Minimum In Rotated Sorted Array
 
-**Problem:** Find minimum in a rotated sorted array (no duplicates).
+<span id="findminimuminrotatedsortedarray"></span>
 
-**Intuition:** In a rotated sorted array, the minimum is the **pivot point** where order breaks. Compare `nums[mid]` with `nums[right]` — if `nums[mid] > nums[right]`, the pivot is in the right half; otherwise it's in the left.
+### Problem
 
-**Pattern:** Binary search on rotated array (comparison with right boundary).
+**Findminimuminrotatedsortedarray**
 
-**Approach:**
-1. While `left < right`:
-2. `mid = left + (right - left) / 2`
-3. If `nums[mid] > nums[right]`: pivot is on right → `left = mid + 1`
-4. Else: pivot is on left (or at mid) → `right = mid`
+**Function:** `Find Min` takes `nums` (array of integers) and returns **integer**.
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `mid`
+
+### Code
 
 {% include code-tabs-file.html problem="findminimuminrotatedsortedarray" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
 
-**Variations:** Find maximum? Find minimum with duplicates? Count rotations?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## FindPeakElement
+## Find Peak Element
 
-**Problem:** Find a peak element (element greater than its neighbors) in an array. Multiple peaks may exist — return any.
+<span id="findpeakelement"></span>
 
-**Intuition:** On a 1D array, if `nums[mid] < nums[mid + 1]`, there is guaranteed to be a peak on the right side (because the array is bounded). This is a **local** decision that eliminates half the search space.
+### Problem
 
-**Pattern:** Local peak binary search (comparison with next element).
+**Findpeakelement**
 
-**Approach:**
-1. If `nums[mid] < nums[mid + 1]`: peak is on right → `left = mid + 1`
-2. Otherwise: peak is on left (or at mid) → `right = mid`
+**Function:** `Find Peak Element` takes `nums` (array of integers) and returns **integer**.
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `left`, `right`, `mid`
+
+### Code
 
 {% include code-tabs-file.html problem="findpeakelement" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
 
-**Variations:** Find all peaks? Peak in 2D matrix?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## FindPeakElementBetterSolution
+## Find Peak Element Better Solution
 
-**Problem:** Same as above but with safer boundary handling using sentinel values.
+<span id="findpeakelementbettersolution"></span>
 
-**Intuition:** Same logic but explicitly handle edge cases by treating out-of-bounds as `Int.MIN_VALUE`, making the comparison logic uniform.
+### Problem
 
-**Pattern:** Local peak with boundary guards.
+**Findpeakelementbettersolution**
 
-**Approach:** Same as above but check `leftNeighbor` and `rightNeighbor` with safe defaults.
+**Function:** `Find Peak Element` takes `nums` (array of integers) and returns **integer**.
+
+**Key logic:**
+- Safely handle boundaries
+- Found peak
+- Move to the right
+- Move to the left
+- Single peak element when the range narrows down
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `mid`, `leftNeighbor`, `rightNeighbor`
+
+**Execution flow:**
+- Safely handle boundaries
+- Move to the right
+- Move to the left
+- Single peak element when the range narrows down
+
+### Code
 
 {% include code-tabs-file.html problem="findpeakelementbettersolution" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## FirstBadVersion
+## Version Control
 
-**Problem:** You have n versions `[1, n]` and an API `isBadVersion(version)`. Find the first bad version. Minimize API calls.
+<span id="firstbadversion"></span>
 
-**Intuition:** Classic left-boundary binary search. The predicate `isBadVersion(v)` transitions from `false` (good) to `true` (bad) exactly once. Find the first `true`.
+### Problem
 
-**Pattern:** First true in boolean array (left boundary).
+**Firstbadversion**
 
-**Approach:**
-1. Binary search `[1, n]`
-2. If `isBadVersion(mid)`: it could be first → `end = mid`
-3. Else: too early → `start = mid + 1`
+**Function:** `Is Bad Version` takes `mid` (integer) and returns **boolean**.
+
+**Key logic:**
+- Return dummy value
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `start`, `end`, `mid`
+
+**Execution flow:**
+- Return dummy value
+
+### Code
 
 {% include code-tabs-file.html problem="firstbadversion" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
 
-**Variations:** Find last good version? Multiple bad version ranges?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## GuessNumberHigherOrLower
+## Solution
 
-**Problem:** Guess a number between 1 and n using `guess(num)` API that returns -1 (too high), 1 (too low), or 0 (correct).
+<span id="guessnumberhigherorlower"></span>
 
-**Intuition:** Direct binary search on integer range with a comparison API.
+### Problem
 
-**Pattern:** Standard binary search with ternary comparison.
+**Guessnumberhigherorlower**
 
-**Approach:**
-1. Binary search `[1, n]`
-2. Use `guess(mid)` to decide direction
+**Function:** `Guess` takes `num` (integer) and returns **integer**.
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `start`, `end`, `mid`, `distance`
+
+### Code
 
 {% include code-tabs-file.html problem="guessnumberhigherorlower" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## HouseRobber_IV
+## House Robber_IV
 
-**Problem:** Given `nums` representing money in houses (cannot rob adjacent), find the minimum `capability` such that you can rob at least `k` houses without alerting police.
+<span id="houserobber_iv"></span>
 
-**Intuition:** Binary search on the answer (capability). For a given `cap`, check if it's possible to rob `k` houses by taking any house with `nums[i] <= cap` and skipping the next (no adjacent).
+### Problem
 
-**Pattern:** Minimize max with feasibility check (binary search on answer).
+**Houserobber Iv**
 
-**Approach:**
-1. Binary search between `min(nums)` and `max(nums)`
-2. `canRob(cap)`: greedily rob houses with value ≤ cap, skip adjacent
-3. If can rob ≥ k, try smaller cap; else try larger
+**Function:** `Min Capability` takes `nums` (array of integers), `k` (integer) and returns **integer**.
+
+**Key logic:**
+- skip adjacent
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+This uses a **feasibility function** that checks if a candidate value satisfies the constraint, making it a 'minimize/maximize with binary search' pattern.
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `left`, `right`, `robbed`, `i`, `mid`
+
+**Execution flow:**
+- skip adjacent
+
+### Code
 
 {% include code-tabs-file.html problem="houserobber_iv" %}
 
-**Complexity:**
-- Time: O(N log range)
-- Space: O(1)
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## KThMissingPositiveNumber
+## K Th Missing Positive Number
 
-**Problem:** Find the k-th missing positive integer in a strictly increasing sorted array.
+<span id="kthmissingpositivenumber"></span>
 
-**Intuition:** At index `i`, the number of missing values is `arr[i] - (i + 1)`. Binary search to find the index where missing count crosses `k`. The answer is `index + k`.
+### Problem
 
-**Pattern:** Binary search on missing count.
+**Kthmissingpositivenumber**
 
-**Approach:**
-1. Binary search on indices
-2. Count missing at mid: `arr[mid] - (mid + 1)`
-3. If missing < k: need to go right → `left = mid + 1`
-4. Else: go left → `right = mid`
-5. Return `left + k`
+**Function:** `Find Kth Positive` takes `arr` (array of integers), `k` (integer) and returns **integer**.
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `mid`, `missingCount`
+
+### Code
 
 {% include code-tabs-file.html problem="kthmissingpositivenumber" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
 
-**Variations:** Find k-th missing starting from arbitrary `start` value instead of 1?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## KokoEatingBanana
+## Koko Eating Banana
 
-**Problem:** Koko can eat `piles[i]` bananas per hour at speed `k`. She eats one pile at a time, taking `ceil(pile / k)` hours per pile. Find minimum `k` to finish all piles within `h` hours.
+<span id="kokoeatingbanana"></span>
 
-**Intuition:** Binary search on eating speed `k`. `canEat(k)`: sum of `ceil(pile / k)` ≤ h. The predicate is monotonic — if speed `k` works, any speed > k also works.
+### Problem
 
-**Pattern:** Minimize speed with feasibility binary search.
+**Kokoeatingbanana**
 
-**Approach:**
-1. Binary search `k` in `[1, max(piles)]`
-2. `canEat(k)`: compute total hours needed
-3. If feasible, try slower speed → `right = mid`
-4. Else try faster → `left = mid + 1`
+**Function:** `Min Eating Speed` takes `piles` (array of integers), `h` (integer) and returns **integer**.
+
+**Key logic:**
+- Left is the slowest speed, right is the fastest speed
+- Binary search to find the minimum valid eating speed
+- If Koko can eat all bananas at speed `mid`, try slower speeds
+- Otherwise, try faster speeds
+- Helper function to check if Koko can finish all bananas in `h` hours at speed `k`
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `left`, `right`, `mid`, `totalHours`
+
+**Execution flow:**
+- Left is the slowest speed, right is the fastest speed
+- Binary search to find the minimum valid eating speed
+- If Koko can eat all bananas at speed `mid`, try slower speeds
+- Otherwise, try faster speeds
+- Helper function to check if Koko can finish all bananas in `h` hours at speed `k`
+- Add the number of hours it takes to finish this pile at speed `k`
+- Same as Math.ceil(pile / k)
+
+### Code
 
 {% include code-tabs-file.html problem="kokoeatingbanana" %}
 
-**Complexity:**
-- Time: O(N log max(pile))
-- Space: O(1)
+### Complexity
 
-**Variations:** Multiple Kokos? Bananas that spoil after T hours?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## MedianOfTwoSortedARrays
+## Median Of Two Sorted A Rrays
 
-**Problem:** Find median of two sorted arrays in O(log(min(m, n))) time.
+<span id="medianoftwosortedarrays"></span>
 
-**Intuition:** Partition the smaller array at some index. The partition defines how many elements go to the left half of the combined array. We need `leftX <= rightY && leftY <= rightX` for a valid partition. Binary search on the partition position.
+### Problem
 
-**Pattern:** Partition-based binary search on two arrays.
+**Medianoftwosortedarrays**
 
-**Approach:**
-1. Ensure `nums1` is the smaller array
-2. Binary search partition in `nums1`
-3. Compute corresponding partition in `nums2`
-4. Check if `leftX <= rightY && leftY <= rightX`
-5. If valid, compute median based on even/odd total length
+**Function:** `Find Median Sorted Arrays` takes `nums1` (array of integers), `nums2` (array of integers) and returns **double**.
+
+**Key logic:**
+- These are the challenges that I need to somewhoe solve to get
+- Use getOrNull with the Elvis operator to handle boundaries
+- Check if we have found the correct partition
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `m`, `n`, `start`, `end`, `partitionX`, `partitionY`, `leftX`, `rightX`
+
+**Execution flow:**
+- These are the challenges that I need to somewhoe solve to get
+- Use getOrNull with the Elvis operator to handle boundaries
+- Check if we have found the correct partition
+
+### Code
 
 {% include code-tabs-file.html problem="medianoftwosortedarrays" %}
 
-**Complexity:**
-- Time: O(log min(m, n))
-- Space: O(1)
+### Complexity
 
-**Variations:** Find k-th element instead of median? 3+ sorted arrays?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## RandomPickWithWeight
+## Random Pick With Weight
 
-**Problem:** Given weights array `w`, implement `pickIndex()` that returns index with probability proportional to its weight.
+<span id="randompickwithweight"></span>
 
-**Intuition:** Build a prefix sum array. Generate random number in `[0, total)`. Binary search to find the index where prefix sum crosses the random value.
+### Problem
 
-**Pattern:** Weighted random + prefix sum + binary search.
+**Randompickwithweight**
 
-**Approach:**
-1. Build `prefixSum[i] = sum(w[0..i])`
-2. `pickIndex()`: generate `random = rand(total)`, binary search for first `prefixSum[mid] > random`
+**Function:** `Pick Index` takes none and returns **integer**.
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `prefixSum`, `totalSum`, `w`, `randomPick`, `mid`
+
+### Code
 
 {% include code-tabs-file.html problem="randompickwithweight" %}
 
-**Complexity:**
-- Time: O(log n) per pick, O(n) init
-- Space: O(n)
+### Complexity
 
-**Variations:** Dynamic weights that change? Multiple picks without replacement?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## SearchA2dMatrix
+## Search A2d Matrix
 
-**Problem:** Search in a matrix where each row is sorted and first element of each row > last element of previous row. Essentially a sorted 2D array.
+<span id="searcha2dmatrix"></span>
 
-**Intuition:** Flatten the 2D matrix into a sorted 1D array conceptually, without actually creating it. Map 1D index `mid` to 2D coordinates: `row = mid / n`, `col = mid % n`.
+### Problem
 
-**Pattern:** 2D coordinate mapping + binary search.
+**Searcha2Dmatrix**
 
-**Approach:**
-1. Binary search on `[0, m*n - 1]`
-2. Map `mid → matrix[mid / n][mid % n]`
-3. Compare with target
+**Function:** `Search Matrix` takes `matrix` (Array<array of integers>), `target` (integer) and returns **boolean**.
+
+**Key logic:**
+- Convert 1D index to 2D
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+This searches for an exact target value in a sorted structure.
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `mid`, `midValue`
+
+**Execution flow:**
+- Convert 1D index to 2D
+
+### Code
 
 {% include code-tabs-file.html problem="searcha2dmatrix" %}
 
-**Complexity:**
-- Time: O(log(m*n))
-- Space: O(1)
+### Complexity
 
-**Variations:** Matrix where only rows are sorted (not columns)? Search from top-right?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## SearchInRotatedArray_II
+## Search In Rotated Array_II
 
-**Problem:** Search for target in rotated sorted array **with duplicates**. Return true/false.
+<span id="searchinrotatedarray_ii"></span>
 
-**Intuition:** Duplicates break the clean rotation detection. When `nums[left] == nums[mid] == nums[right]`, we can't determine which half is sorted — shrink both sides by 1.
+### Problem
 
-**Pattern:** Rotated array binary search with duplicate handling.
+**Searchinrotatedarray Ii**
 
-**Approach:**
-1. Standard rotated array binary search
-2. Extra case: if `nums[left] == nums[mid] == nums[right]`, increment `left`, decrement `right`
-3. Then determine which half is sorted normally
+**Function:** `Search` takes `nums` (array of integers), `target` (integer) and returns **boolean**.
+
+**Key logic:**
+- Handle duplicates: skip the duplicates
+- Left portion is sorted
+- Target in left portion
+- Target in right portion
+- Right portion is sorted
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+This searches for an exact target value in a sorted structure.
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `left`, `right`, `mid`
+
+**Execution flow:**
+- Handle duplicates: skip the duplicates
+- Left portion is sorted
+- Target in left portion
+- Target in right portion
+- Right portion is sorted
+- Target in right portion
+- Target in left portion
+
+### Code
 
 {% include code-tabs-file.html problem="searchinrotatedarray_ii" %}
 
-**Complexity:**
-- Time: O(log n) average, O(n) worst with many duplicates
-- Space: O(1)
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## SearchInRotatedSortedArray
+## Search In Rotated Sorted Array
 
-**Problem:** Search for target in rotated sorted array (no duplicates). Return index or -1.
+<span id="searchinrotatedsortedarray"></span>
 
-**Intuition:** At any mid, one half is guaranteed to be sorted. Check if target lies in the sorted half; if not, search the other half.
+### Problem
 
-**Pattern:** Rotated array binary search.
+**Searchinrotatedsortedarray**
 
-**Approach:**
-1. Check which half is sorted: `nums[left] <= nums[mid]`
-2. If left half sorted and target in left range → search left
-3. If right half sorted and target in right range → search right
-4. Otherwise search the other half
+**Function:** `Search` takes `nums` (array of integers), `target` (integer) and returns **integer**.
+
+**Key logic:**
+- Determine if Left half is sorted
+- Right half is sorted
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+This searches for an exact target value in a sorted structure.
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `mid`
+
+**Execution flow:**
+- Determine if Left half is sorted
+- Right half is sorted
+
+### Code
 
 {% include code-tabs-file.html problem="searchinrotatedsortedarray" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
 
-**Variations:** Find rotation count? Search with duplicates?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## SearchInsertionPosition
+## Search Insertion Position
 
-**Problem:** Find index where target should be inserted in sorted array. If target exists, return its index.
+<span id="searchinsertionposition"></span>
 
-**Intuition:** Standard lower_bound / first position where `nums[i] >= target`. When the loop exits, `left` is the correct insertion point.
+### Problem
 
-**Pattern:** Lower bound binary search.
+**Searchinsertionposition**
 
-**Approach:**
-1. While `start <= end`:
-2. If `nums[mid] == target`: return mid
-3. If `nums[mid] > target`: search left → `end = mid - 1`
-4. Else: search right → `start = mid + 1`
-5. Return `start` (insertion point)
+**Function:** `Search Insert` takes `nums` (array of integers), `target` (integer) and returns **integer**.
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+This searches for an exact target value in a sorted structure.
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `start`, `end`, `mid`
+
+### Code
 
 {% include code-tabs-file.html problem="searchinsertionposition" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
 
-**Variations:** Insert into range of duplicates (first vs last)?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## SingleElementInASortedArray
+## Single Element In A Sorted Array
 
-**Problem:** Every element appears twice except one that appears once. Find it in O(log n) time.
+<span id="singleelementinasortedarray"></span>
 
-**Intuition:** Before the single element, pairs are at even/odd indices `(0,1)`, `(2,3)`, etc. After it, the pattern flips. Use binary search checking `nums[mid] == nums[mid ^ 1]` (pair check).
+### Problem
 
-**Pattern:** Binary search on pair structure.
+**Singleelementinasortedarray**
 
-**Approach:**
-1. Ensure `mid` is even (for pair checking)
-2. If `nums[mid] == nums[mid + 1]`: pair intact → single is on right → `left = mid + 2`
-3. Else: pair broken → single is on left → `right = mid`
+**Function:** `Single Non Duplicate` takes `nums` (array of integers) and returns **integer**.
+
+**Key logic:**
+- Ensure mid is even for checking pair with the next element
+- Check if the pair is valid
+- Move to the right half
+- Move to the left half
+- low == high will give the unique element
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `low`, `high`, `mid`
+
+**Execution flow:**
+- Ensure mid is even for checking pair with the next element
+- Check if the pair is valid
+- Move to the right half
+- Move to the left half
+- low == high will give the unique element
+
+### Code
 
 {% include code-tabs-file.html problem="singleelementinasortedarray" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
 
-**Variations:** Every element appears k times except one? Unsorted array?
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
-## ValleyElement
+## Valley Element
 
-**Problem:** Find a valley element (element smaller than both neighbors) in an array.
+<span id="valleyelement"></span>
 
-**Intuition:** Mirror of peak finding. If `nums[mid] > nums[mid + 1]`, valley is on the right (because the array must eventually go up since it's bounded). Works like finding a local minimum.
+### Problem
 
-**Pattern:** Local valley binary search.
+**Valleyelement**
 
-**Approach:**
-1. Binary search on `[0, n)`
-2. Compare `nums[mid]` with neighbors (safe boundaries with Int.MAX_VALUE)
-3. If `nums[mid]` is smaller than both: found valley
-4. If `nums[mid] > rightNeighbor`: go right
-5. Else: go left
+**Function:** `Find Valley Element Binary` takes `nums` (array of integers) and returns **integer**.
+
+**Key logic:**
+- Safely handle boundaries
+- Found valley
+- Move to the right
+- Move to the left
+- No valley found (unlikely for a valid array)
+
+
+
+### Why This Works
+
+The algorithm exploits **monotonicity** — the property that once a condition becomes true (or false), it stays that way. Binary search divides the search space in half each iteration, guaranteeing logarithmic time. The correctness follows from the loop invariant: the answer is always within `[left, right]`.
+
+### Algorithmic Thinking
+
+**Binary Search Approach:**
+1. Define the search space and feasibility predicate
+2. Repeatedly halve the search range until finding the optimal value
+3. The predicate must be monotonic for binary search to work
+
+
+### Code Walkthrough
+
+Let's trace through the code to understand how it processes the input:
+
+**Key variables:** `mid`, `leftNeighbor`, `rightNeighbor`
+
+**Execution flow:**
+- Safely handle boundaries
+- Found valley
+- Move to the right
+- Move to the left
+- No valley found (unlikely for a valid array)
+
+### Code
 
 {% include code-tabs-file.html problem="valleyelement" %}
 
-**Complexity:**
-- Time: O(log n)
-- Space: O(1)
+### Complexity
+
+| Metric | Value |
+|--------|-------|
+| **Time** | O(log n) |
+| **Space** | O(1) |
+
+**Analysis:**
+
+Each iteration halves the search space, giving O(log n) time. Only constant extra space is needed beyond the input (O(1)).
 
 ---
 
 ## Key Takeaways
 
-1. **Search for exact value** → Standard binary search
-2. **Search for boundary** → Left/right boundary binary search
-3. **Minimize/Maximize** → Binary search on answer with feasibility predicate
-4. **Not obviously sorted** → The search space can be a **range of values**, not just array indices
-5. **Rotated array** → Compare mid with right boundary to determine sorted half
-6. **Two arrays** → Partition-based binary search
+1. **Core pattern recognition** — Sorted array + search → Binary Search. The key insight: find a predicate that splits the search space into 'yes' and 'no', then binary search finds the transition point.
+2. **Practice systematically** — Work through each problem to internalize the patterns
+3. **Understand why, not just how** — The explanations above focus on the reasoning, not just the code
 
-The common thread: **find a predicate that splits the search space into "yes" and "no"** — then binary search finds the transition point.
+---
