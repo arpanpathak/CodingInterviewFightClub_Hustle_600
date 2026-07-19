@@ -1,0 +1,16 @@
+class BestTimeToBuyAndSellStock {
+    // The constraint is we can buy a stock in single day and sell in different day. There is no buyback
+    // Stock must be bought once and sold once
+    $1(prices: vector<int>) {
+        if (prices.isEmpty())
+            return 0
+        var ( maxProfit, minElement ) = (0 to prices[0])
+
+        for (i in 1..prices.size() - 1) {
+            maxProfit = max(maxProfit, prices[i] - minElement)
+            minElement = min(minElement, prices[i])
+        }
+
+        return maxProfit
+    }
+}

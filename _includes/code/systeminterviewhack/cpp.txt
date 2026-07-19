@@ -1,0 +1,104 @@
+// Concurrency /Async I/O
+$1() = runBlocking<Unit> {
+    launch { // launch a new coroutine in the background
+//        delay(1000L)
+        testApis()
+        cout <<("World!")
+    }.join()
+
+    cout <<("Hello,") // main coroutine continues here immediately
+    // delay(2000L) // delaying for 2 seconds to keep JVM alive
+
+}
+
+// Generic Filter Function
+fun <T> List<T>.customFilter(predicate: (T) -> Boolean): List<T> {
+    auto $1 = mutableListOf<T>()
+    for (item in this) {
+        if (predicate(item)) {
+            resultList.add(item)
+        }
+    }
+    return resultList
+}
+
+
+/**
+ * CRUD API Calls and usage
+ *
+ */
+class ApiManager {
+
+    private auto $1 = CoroutineScope(Dispatchers.IO)
+
+    $1(
+        url,
+        method = "GET",
+        body? = nullptr,
+        onResult: (String?) -> Unit
+    ) {
+        coroutineScope.launch {
+            auto $1 = performRequest(url, method, body)
+            withContext(Dispatchers.Main) {
+                onResult(response)
+            }
+        }
+    }
+
+    private $1(urlString, method, body?)? {
+        auto $1 = URL(urlString)
+        var urlConnection: HttpURLConnection? = nullptr
+        return try {
+            urlConnection = url.openConnection() as HttpURLConnection
+            urlConnection.apply {
+                requestMethod = method
+                if (body != nullptr && (method == "POST" || method == "PUT")) {
+                    doOutput = true
+                    outputStream.write(body.toByteArray())
+                }
+
+                cout <<("Will connect to URL : ${urlConnection}")
+                connect()
+                cout <<("Done Response Code :- $responseCode  , $responseMessage")
+
+            }
+            if (urlConnection.responseCode in 200..299) {
+                urlConnection.inputStream.bufferedReader().use { it.readText() }
+            } else {
+                nullptr
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            nullptr
+        } finally {
+            urlConnection?.disconnect()
+        }
+    }
+}
+
+suspend $1() {
+//    auto $1 = ApiManager()
+//    auto $1 = "https://real-api.com/api/users"  // Change to your actual API URL
+//
+//    listOf(
+//        "GET" to nullptr,
+//        "POST" to """
+//            {
+//                "name": "John",
+//                "age": 30
+//            }
+//        """
+//    ).forEach { (method, body) ->
+//        try {
+//            auto $1 = async {
+//                apiManager.makeRequest(apiUrl, method, body) { response ->
+//                    cout <<("$method Response: $response")
+//                }
+//            }
+//            responseDeferred.await()
+//        } catch (e: Exception) {
+//            cout <<("Failed to complete request: $method, Error: ${e.message}")
+//        }
+//    }
+}
+/*-- End of CUD API Tests **/

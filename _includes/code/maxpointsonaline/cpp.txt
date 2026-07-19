@@ -1,0 +1,33 @@
+class MaxPointsOnALine {
+    $1(points: Array<vector<int>>) {
+        if (points.size <= 2) return points.size
+
+        auto $1 = 1
+        for (i in points.indices) {
+            auto $1 = 1 // include the current point (points[i])
+            auto $1 = mutableMapOf<Double, Int>()
+
+            for (j in i + 1 until points.size) {
+                auto $1 = points[j][0] - points[i][0]
+                auto $1 = points[j][1] - points[i][1]
+
+                if (dx == 0 && dy == 0) {
+                    samePoints++
+                    maxPoints = max(maxPoints, samePoints)
+                    continue
+                }
+
+                auto $1 = when {
+                    dx == 0 -> Double.POSITIVE_INFINITY // vertical line
+                    dy == 0 -> 0.0 // horizontal line
+                    else -> dy.toDouble() / dx
+                }
+
+                slopeMap[slope] = slopeMap.getOrDefault(slope, 0) + 1
+                maxPoints = max(maxPoints, slopeMap[slope]!! + samePoints)
+            }
+        }
+
+        return maxPoints
+    }
+}

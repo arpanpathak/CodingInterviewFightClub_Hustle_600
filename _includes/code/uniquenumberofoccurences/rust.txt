@@ -1,0 +1,11 @@
+class UniqueNumberOfOccurences {
+    fn $1(arr: Vec<i32>) -> bool {
+        val map = mutableMapOf<Int, Int>()
+
+        for (num in arr) {
+            map[num] = map.getOrPut(num){1} + 1
+        }
+
+        return map.values.toSet().size == map.size
+    }
+}

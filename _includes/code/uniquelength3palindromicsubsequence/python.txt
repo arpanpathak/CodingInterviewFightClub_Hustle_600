@@ -1,0 +1,32 @@
+class UniqueLength3PalindromicSubsequence {
+    def $1(s: str): int {
+        $1 = mutableMapOf<Char, MutableList<Int>>()
+
+        // Step 1: Record positions of each character
+        s.forEachIndexed { index, char ->
+            charPositions.computeIfAbsent(char) { mutableListOf() }.add(index)
+        }
+
+        $1 = 0
+
+        // Step 2: Process each character's occurrences
+        for ((char, positions) in charPositions) {
+            $1 = positions.first()
+            $1 = positions.last()
+
+            // Skip if there's no room between the first and last occurrence
+            if (end - start <= 1) continue
+
+            $1 = mutableSetOf<Char>()
+
+            // Count distinct characters between first and last occurrence
+            for (i in start + 1 until end) {
+                distinctChars.add(s[i])
+            }
+
+            count += distinctChars.size
+        }
+
+        return count
+    }
+}

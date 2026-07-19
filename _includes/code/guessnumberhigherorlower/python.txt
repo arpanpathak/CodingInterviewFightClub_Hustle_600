@@ -1,0 +1,32 @@
+/**
+* The API guess is defined in the parent class.
+* @param  num   your guess
+* @return 	     -1 if num is higher than the picked number
+*			      1 if num is lower than the picked number
+*               otherwise return 0
+* fun guess(num:int):int {}
+*/
+class Solution:GuessGame() {
+override fun guessNumber(n:int):int {
+start = 1
+end = n
+while (start <= end) {
+mid = start + (end-start) / 2
+distance = guess(mid)
+when {
+distance == 0 -> return mid
+distance < 0 -> end = mid - 1
+else -> start = mid + 1
+}
+}
+return -1
+}
+}
+open class GuessGame {
+open fun guessNumber(n: int): int {
+TODO("Not yet implemented")
+}
+def guess(mid):
+return 0
+}
+}

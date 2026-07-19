@@ -1,0 +1,53 @@
+class MinCostToConnectAllPointsKruskal {
+    data class Edge(val point1: int, val point2: int, val weight: int)
+
+    data class UnionFindNode(var parent: int, var rank: int)
+
+    $1 = { p1: list[int], p2: list[int] -> abs(p1[0] - p2[0]) + abs(p1[1] - p2[1]) }
+
+    class UnionFind(size: int) {
+        private $1 = Array(size) { UnionFindNode(it, 0) }
+
+        def $1(x: int): int {
+            if (nodes[x].parent != x) {
+                nodes[x].parent = find(nodes[x].parent)
+            }
+            return nodes[x].parent
+        }
+
+        def $1(x: int, y: int) {
+            $1 = find(x)
+            $1 = find(y)
+            if (rootX != rootY) {
+                when {
+                    nodes[rootX].rank > nodes[rootY].rank -> nodes[rootY].parent = rootX
+                    nodes[rootX].rank < nodes[rootY].rank -> nodes[rootX].parent = rootY
+                    else -> {
+                        nodes[rootY].parent = rootX
+                        nodes[rootX].rank += 1
+                    }
+                }
+            }
+        }
+    }
+
+    def $1(points: Array<list[int]>): int {
+        $1 = mutableListOf<Edge>()
+        for (i in points.indices) {
+            for (j in i + 1 until points.size) {
+                edges.add(Edge(i, j, manhattanDistance(points[i], points[j])))
+            }
+        }
+        edges.sortBy { it.weight }
+
+        $1 = UnionFind(points.size)
+        $1 = 0
+        for (edge in edges) {
+            if (uf.find(edge.point1) != uf.find(edge.point2)) {
+                uf.union(edge.point1, edge.point2)
+                cost += edge.weight
+            }
+        }
+        return cost
+    }
+}

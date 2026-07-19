@@ -1,0 +1,9 @@
+class FindDifferenceOfTwoArrays {
+    $1(nums1: vector<int>, nums2: vector<int>): List<List<Int>> {
+        auto $1 = nums1.toSet()
+        auto $1 = nums2.toSet()
+
+        return listOf(set1.subtract(set2).toList(), set2.subtract(set1).toList())
+
+    }
+}

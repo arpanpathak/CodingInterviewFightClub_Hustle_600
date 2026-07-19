@@ -1,0 +1,33 @@
+package microsoft
+
+fun solution(A: Int, B: Int, C: Int, D: Int): Int {
+    val digits = listOf(A, B, C, D)
+    val permutations = mutableSetOf<String>()
+
+    // Generate all permutations of the digits
+    fun generatePermutations(current: List<Int>, remaining: List<Int>) {
+        if (current.size == 4) {
+            permutations.add(current.joinToString(""))
+        } else {
+            for (i in remaining.indices) {
+                generatePermutations(current + remaining[i], remaining.filterIndexed { index, _ -> index != i })
+            }
+        }
+    }
+
+    generatePermutations(emptyList(), digits)
+
+    var validTimes = 0
+
+    // Check each permutation to see if it forms a valid time
+    for (time in permutations) {
+        val hours = time.substring(0, 2).toInt()
+        val minutes = time.substring(2, 4).toInt()
+
+        if (hours in 0..23 && minutes in 0..59) {
+            validTimes++
+        }
+    }
+
+    return validTimes
+}

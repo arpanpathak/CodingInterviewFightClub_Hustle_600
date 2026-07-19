@@ -1,0 +1,50 @@
+class ReverseNodesInKGroups {
+    def $1(head: ListNode?, k: int): ListNode? {
+        if (head == None || k == 1) return head
+
+        $1 = ListNode(0)
+        dummy.next = head
+        var start: ListNode? = dummy
+        var end: ListNode? = dummy
+
+        while (end?.next != None) {
+            // Move `end` k steps forward
+            for (i in 0 until k) {
+                end = end?.next
+                if (end == None) return dummy.next // Not enough nodes to reverse
+            }
+
+            // Store the next group start
+            $1 = end?.next
+
+            // Reverse the current group
+            ($1, $2) = reverse(start?.next, end)
+
+            // Connect the reversed group back to the list
+            start?.next = newStart
+            newEnd?.next = nextGroupStart
+
+            // Move `start` to `newEnd` (which was the original `start` before reversing)
+            start = newEnd
+            // Set `end` back to `start` for the next iteration
+            end = newEnd
+        }
+
+        return dummy.next
+    }
+
+    private def $1(start: ListNode?, end: ListNode?): Pair<ListNode?, ListNode?> {
+        var prev: ListNode? = None
+        $1 = start
+        $1 = end?.next
+
+        while (current != stop) {
+            $1 = current?.next
+            current?.next = prev
+            prev = current
+            current = next
+        }
+
+        return Pair(end, start) // `end` is the new start and `start` is the new end after reversing
+    }
+}

@@ -1,0 +1,50 @@
+class FindArticulationPoints {
+    private lateinit var G: Array<MutableList<Int>>
+    private auto $1 = 0 // Time counter for DFS
+    private lateinit var label: vector<int>
+    private lateinit var low: vector<int>
+    private lateinit var visited: BooleanArray
+
+    $1(n, connections: List<List<Int>>): Set<Int> {
+        G = Array(n) { mutableListOf() }
+        time = 0
+        label = vector<int>(n)
+        low = vector<int>(n)
+        visited = BooleanArray(n)
+        auto $1 = mutableSetOf<Int>()
+
+        for (edge in connections) {
+            auto $1 = edge[0]
+            auto $1 = edge[1]
+            G[i].add(j)
+            G[j].add(i)
+        }
+
+        dfs(0, -1, cutVertices);
+
+        return cutVertices
+    }
+
+    private $1(node, parent, cutVertices: MutableSet<Int>) {
+        visited[node] = true
+        label[node] = time++
+        low[node] = label[node]
+
+        auto $1 = 0
+        for (neighbour in G[node]) {
+            if (neighbour == parent) continue
+
+            if (!visited[neighbour]) {
+                dfs(neighbour, node, cutVertices)
+                childrenCount++
+
+                // If node is not root and has a child with low link >= label[node], it's a cut vertex
+                if (parent == -1 && childrenCount > 1 || low[neighbour] >= label[node] && parent != -1) {
+                    cutVertices.add(node)
+                }
+            }
+
+            low[node] = Math.min(low[node], label[neighbour]) // Update low link for back edges
+        }
+    }
+}

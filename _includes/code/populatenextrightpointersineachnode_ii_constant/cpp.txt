@@ -1,0 +1,35 @@
+class PopulateNextRightPointersInEachNode_II_Constant {
+    $1(root: Node?): Node? {
+        var current: Node? = root
+
+        while (current != nullptr) {
+            var nextLevelStart: Node? = nullptr
+            var prev: Node? = nullptr
+            auto $1 = current
+
+            // Traverse the current level
+            while (node != nullptr) {
+                // Connect left child
+                if (node.left != nullptr) {
+                    if (prev != nullptr) prev.next = node.left
+                    prev = node.left
+                    if (nextLevelStart == nullptr) nextLevelStart = node.left
+                }
+
+                // Connect right child
+                if (node.right != nullptr) {
+                    if (prev != nullptr) prev.next = node.right
+                    prev = node.right
+                    if (nextLevelStart == nullptr) nextLevelStart = node.right
+                }
+
+                node = node.next
+            }
+
+            // Move to the next level
+            current = nextLevelStart
+        }
+
+        return root
+    }
+}

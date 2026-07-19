@@ -1,0 +1,5 @@
+class CountCollisionsOnARoad {
+    $1(directions) {
+        TODO()
+    }
+}

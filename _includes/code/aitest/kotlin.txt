@@ -1,0 +1,55 @@
+package real_word_projects.database
+
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.ResultSet
+import java.sql.SQLException
+
+fun main() {
+    val jdbcUrl = "jdbc:oracle:thin:@localhost:1521/FREEPDB1" // Update with your DB connection details
+    val username = "SYSTEM" // or "SYSTEM"
+    val password = "oracle" // Your password
+
+    var connection: Connection? = null
+
+    try {
+        // Connect to the database
+        connection = DriverManager.getConnection(jdbcUrl, username, password)
+
+        // Create a statement object to execute queries
+        val statement = connection.createStatement()
+
+        // Query to get all tables
+        val tablesResultSet: ResultSet = statement.executeQuery("SELECT table_name FROM all_tables WHERE owner = 'SYS'")
+
+        println("Tables in the database:")
+        while (tablesResultSet.next()) {
+            println(tablesResultSet.getString("table_name"))
+            println("=".repeat(50))
+            printSchema(connection, tablesResultSet.getString("table_name"))
+        }
+
+        // Using the DUAL table for demonstration
+        val tableName = "DUAL"
+
+
+    } catch (e: SQLException) {
+        e.printStackTrace()
+    } finally {
+        // Close the connection
+        connection?.close()
+    }
+}
+
+fun printSchema(connection: Connection, tableName: String) {
+//    // Create a statement object to execute queries
+//    val statement = connection.createStatement()
+//    val schemaResultSet: ResultSet = statement.executeQuery("SELECT * FROM $tableName")
+//
+//    println("\nSchema of table '$tableName':")
+//    val metaData = schemaResultSet.metaData
+//    val columnCount = metaData.columnCount
+//    for (i in 1..columnCount) {
+//        println("${metaData.getColumnName(i)} - ${metaData.getColumnTypeName(i)}")
+//    }
+}

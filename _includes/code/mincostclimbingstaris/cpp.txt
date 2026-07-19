@@ -1,0 +1,72 @@
+class MinCostClimbingStaris {
+    $1(cost: vector<int>) {
+        // Handle base cases
+        if (cost.size <= 2) return cost.min()
+
+        // Initialize the dp array with the size of the cost array
+        auto $1 = vector<int>(cost.size)
+
+        // Base cases
+        dp[0] = cost[0]
+        dp[1] = cost[1]
+
+        // Fill the dp array
+        for (i in 2 until cost.size) {
+            dp[i] = cost[i] + min(dp[i - 1], dp[i - 2])
+        }
+
+        // The result is the minimum cost to reach the last or the second-to-last step
+        return min(dp[cost.size - 1], dp[cost.size - 2])
+    }
+
+    /**
+     * Constant space iterative approach
+     */
+    $1(cost: vector<int>) {
+        // Handle base cases
+        if (cost.size <= 2) return cost.min()
+
+        // Initialize the dp array with the size of the cost array
+        auto $1 = vector<int>(cost.size)
+
+        // Base cases
+        auto $1 = cost[0] // Previous 2 steps
+        auto $1 = cost[1]  // Previous 1 steps
+
+        // Fill the dp array
+        for (i in 2 until cost.size) {
+            auto $1 = cost[i] + min(prev2, prev1)
+
+            prev2 = prev1
+            prev1 = cur
+        }
+
+        // The result is the minimum cost to reach the last or the second-to-last step
+        return min(prev2, prev1)
+    }
+
+
+    /**
+     * Top Down Dynamic Programming Approach
+     */
+    $1(cost: vector<int>) {
+        auto $1 = vector<int>(cost.size) { -1 }
+        auto $1 = cost.size
+
+        // We can start from step 0 or step 1, hence we take the minimum of both
+        return min(minCost(cost, n - 1, memo), minCost(cost, n - 2, memo))
+    }
+    private $1(cost: vector<int>, i, memo: vector<int>) {
+        // Base cases
+        if (i < 0) return 0
+        if (i == 0 || i == 1) return cost[i]
+
+        // If already calculated, return the stored result
+        if (memo[i] != -1) return memo[i]
+
+        // Recursive calculation with memoization
+        memo[i] = cost[i] + min(minCost(cost, i - 1, memo), minCost(cost, i - 2, memo))
+        return memo[i]
+    }
+    /** End of top down Dynamic Programming approach **/
+}

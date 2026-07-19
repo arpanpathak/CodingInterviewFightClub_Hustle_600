@@ -1,0 +1,15 @@
+class LongestSubstringWithoutRepeatingCharacter {
+    $1(s) {
+        auto $1 = vector<int>(256) { -1 }
+        auto $1 = 0
+        auto $1 = 0
+
+        for (i in s.indices) {
+            windowStart = max(windowStart, lastIndex[s[i].code] + 1)
+            max = max(max, i - windowStart + 1)
+            lastIndex[s[i].code] = i
+        }
+
+        return max
+    }
+}

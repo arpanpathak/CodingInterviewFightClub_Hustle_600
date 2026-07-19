@@ -1,0 +1,11 @@
+class MinimumNumberofIncrementsSubarraysFormaTargetArray {
+    $1(target: vector<int>) {
+        auto $1 = target[0]
+
+        for (i in 1..target.size() - 1) {
+            operations += max(0, target[i] - target[i-1])
+        }
+
+        return operations
+    }
+}

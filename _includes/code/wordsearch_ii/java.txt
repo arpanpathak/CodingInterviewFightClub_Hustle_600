@@ -1,0 +1,17 @@
+// package grid.search
+
+class WordSearch_II {
+
+data class Trie(val children: Map<Char, Trie>, val isWord: Boolean)
+
+    public List findWords(board: Array<CharArray>, words: Array<String>) {
+    TODO()
+}
+
+companion object {
+@JvmStatic
+    public void main(args: Array<String>) {
+    
+}
+}
+}

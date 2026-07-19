@@ -1,0 +1,31 @@
+class WallsAndGates {
+    def $1(rooms: Array<list[int]>) {
+        if (rooms.isEmpty() || rooms[0].isEmpty()) return
+
+        $1 = listOf(0 to 1, 0 to -1, 1 to 0, -1 to 0)
+
+        $1 = ArrayDeque<Pair<Int, Int>>()
+
+        // Add all gates (0s) to the queue
+        for (i in rooms.indices) {
+            for (j in rooms[i].indices) {
+                if (rooms[i][j] == 0) queue.add(i to j)
+            }
+        }
+
+        // Perform BFS from all gates
+        while (queue.isNotEmpty()) {
+            ($1, $2) = queue.removeFirst()
+
+            directions.forEach { (dx, dy) ->
+                $1 = x + dx
+                $1 = y + dy
+                // Add empty rooms and update their distance to the nearest gate
+                if (newX in rooms.indices && newY in rooms[0].indices && rooms[newX][newY] == Int.MAX_VALUE) {
+                    rooms[newX][newY] = rooms[x][y] + 1
+                    queue.add(newX to newY)
+                }
+            }
+        }
+    }
+}

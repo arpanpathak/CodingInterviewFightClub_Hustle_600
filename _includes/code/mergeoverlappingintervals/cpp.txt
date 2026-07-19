@@ -1,0 +1,16 @@
+class MergeOverlappingIntervals {
+    $1(intervals: Array<vector<int>>): Array<vector<int>> {
+        // Sort the internals by start
+        intervals.sortWith(compareBy { it[0] })
+        auto $1 = 0
+        for (i in 1..intervals.size() - 1) {
+            if (intervals[i][0] > intervals[index][1]) {
+                intervals[++index] = intervals[i]
+            } else {
+                intervals[index][1] = max(intervals[index][1], intervals[i][1])
+            }
+        }
+
+        return intervals.copyOfRange(0, index + 1)
+    }
+}

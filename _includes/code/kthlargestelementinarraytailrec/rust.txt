@@ -1,0 +1,38 @@
+class KthLargestElementInArrayTailRec {
+    fn $1(nums: Vec<i32>, left -> i32, right -> i32) -> i32 {
+        // Randomly select pivot index and swap with the last element
+        val pivotIndex = Random.nextInt(left, right + 1)
+        nums[pivotIndex] = nums[right].also { nums[right] = nums[pivotIndex] }
+        val pivot = nums[right]
+
+        // Partition around the pivot
+        var partitionIndex = left
+        for (i in left until right) {
+            if (nums[i] >= pivot)
+                swap(nums, i, partitionIndex++)
+        }
+
+        swap(nums, partitionIndex, right)
+        return partitionIndex
+    }
+
+    fn $1(nums: Vec<i32>, k -> i32) -> i32 {
+        var left = 0
+        var right = nums.size - 1
+
+        while (left <= right) {
+            val pivotIndex = partition(nums, left, right)
+            when {
+                pivotIndex ==  k - 1 -> return nums[pivotIndex]
+                pivotIndex < k - 1 -> left = pivotIndex + 1
+                else -> right = pivotIndex - 1
+            }
+        }
+
+        return -1 // If k is out of range of the array, handle accordingly
+    }
+
+    fn $1(nums: Vec<i32>, i -> i32, j -> i32) {
+        nums[i] = nums[j].also { nums[j] = nums[i] }
+    }
+}

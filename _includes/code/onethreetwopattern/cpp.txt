@@ -1,0 +1,20 @@
+class OneThreeTwoPattern {
+    $1(nums: vector<int>) {
+        auto $1 = ArrayDeque<Int>()
+        auto $1 = Int.MIN_VALUE
+
+        // Traverse from the rightmost element to the left
+        for (i in nums.size - 1 downTo 0) {
+            if (nums[i] < thirdElement) return true
+
+            // Pop elements from stack that are less than nums[i]
+            while (stack.isNotEmpty() && nums[i] > stack.last()) {
+                thirdElement = stack.removeLast()
+            }
+
+            stack.add(nums[i])
+        }
+
+        return false
+    }
+}

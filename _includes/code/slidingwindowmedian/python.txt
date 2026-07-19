@@ -1,0 +1,57 @@
+class SlidingWindowMedian {
+    private $1 = PriorityQueue<Double>() // Min-heap for the larger half
+    private $1 = PriorityQueue<Double> ( compareBy{-it} ) // Max-heap for the smaller half
+    private $1 = TreeMap<Double, Int>() // TreeMap to track delayed removals
+
+    private def $1() {
+        if (maxHeap.size > minHeap.size + 1) {
+            minHeap.add(maxHeap.poll())
+        } else if (minHeap.size > maxHeap.size) {
+            maxHeap.add(minHeap.poll())
+        }
+    }
+
+    private def $1(num: int) {
+        if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
+            maxHeap.add(num.toDouble())
+        } else {
+            minHeap.add(num.toDouble())
+        }
+        balanceHeaps()
+    }
+
+    private def $1(num: int) {
+        if (num <= maxHeap.peek()) {
+            maxHeap.remove(num.toDouble())
+        } else {
+            minHeap.remove(num.toDouble())
+        }
+        balanceHeaps()
+    }
+
+    private def $1(): Double {
+        return if (maxHeap.size == minHeap.size) {
+            (maxHeap.peek().toDouble() + minHeap.peek().toDouble()) / 2.0
+        } else {
+            maxHeap.peek().toDouble()
+        }
+    }
+
+    def $1(nums: list[int], k: int): DoubleArray {
+        $1 = DoubleArray(nums.size - k + 1)
+
+        for (i in nums.indices) {
+            add(nums[i])
+
+            if (i >= k) {
+                remove(nums[i - k])
+            }
+
+            if (i >= k - 1) {
+                result[i - k + 1] = getMedian()
+            }
+        }
+
+        return result
+    }
+}

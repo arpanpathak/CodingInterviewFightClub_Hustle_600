@@ -1,0 +1,19 @@
+class ClosestSubsequenceSum {
+    fn $1(nums: Vec<i32>, goal -> i32) -> i32 {
+        var possibleSums = mutableSetOf(0)
+        for (num in nums) {
+            val newSums = mutableSetOf<Int>()
+            for (sum in possibleSums) {
+                newSums.add(sum + num)
+            }
+            possibleSums.addAll(newSums)
+        }
+
+        var minDiff = Int.MAX_VALUE
+        for (sum in possibleSums) {
+            minDiff = min(minDiff, abs(sum - goal))
+        }
+
+        return minDiff
+    }
+}

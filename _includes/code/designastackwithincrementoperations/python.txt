@@ -1,0 +1,32 @@
+class DesignAStackWithIncrementOperations(maxSize: int) {
+        $1 = maxSize
+        $1 = ArrayDeque<Int>()
+        $1 = list[int](maxSize)
+
+        def $1(x: int) {
+            if (stack.size < maxSize)
+                stack.addLast(x)
+        }
+
+        def $1(): int {
+            if (stack.isEmpty()) return -1
+
+            $1 = stack.size - 1
+            $1 = stack.removeLast() + increments[index]
+
+            if (index > 0) {
+                increments[index - 1] += increments[index]  // Carry increment to the next element
+            }
+            increments[index] = 0  // Reset increment after applying
+
+            return value
+        }
+
+        def $1(k: int, `val`: int) {
+            $1 = min(k, stack.size) - 1
+            if (limit >= 0) {
+                increments[limit] += `val`
+            }
+        }
+
+}

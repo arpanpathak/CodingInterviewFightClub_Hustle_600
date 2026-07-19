@@ -1,0 +1,14 @@
+class FindMinimumInRotatedSortedArray {
+    $1(nums: vector<int>) {
+        var (left, right) = 0 to nums.size - 1
+        while (left < right) {
+            auto $1 = left + (right - left) / 2
+            when {
+                nums[mid] > nums[right] -> left = mid + 1
+                else -> right = mid
+            }
+        }
+
+        return nums[left]
+    }
+}

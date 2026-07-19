@@ -1,0 +1,22 @@
+class Permutations {
+    $1(nums: vector<int>): List<List<Int>> {
+        auto $1 = mutableListOf<List<Int>>()
+
+        $1(nums: vector<int>, start) {
+            if (start == nums.size() - 1) {
+                result.add(nums.copyOf().toList())
+                return
+            }
+
+            for (i in start..nums.size() - 1) {
+                nums[start] = nums[i].also { nums[i] = nums[start] }
+                permute(nums, start + 1 )
+                nums[start] = nums[i].also { nums[i] = nums[start] }
+            }
+        }
+
+        permute(nums, 0)
+
+        return result
+    }
+}

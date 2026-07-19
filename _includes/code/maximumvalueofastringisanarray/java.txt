@@ -1,0 +1,8 @@
+class MaximumValueOfAStringIsAnArray {
+    public static void $1(strs: Array<String>) {
+        return strs.maxOf {
+            val numericValue = it.toIntOrNull()
+            numericValue?: it.length
+        }
+    }
+}

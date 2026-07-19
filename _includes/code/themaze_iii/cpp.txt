@@ -1,0 +1,59 @@
+class TheMaze_III {
+    data class State(val dist, val x, val y)
+
+    $1(maze: Array<vector<int>>, ball: vector<int>, hole: vector<int>) {
+        auto $1 = maze.size
+        auto $1 = maze[0].size
+        auto $1 = listOf(
+            Triple(1, 0, "d"),
+            Triple(0, -1, "l"),
+            Triple(0, 1, "r"),
+            Triple(-1, 0, "u")
+        )
+
+        auto $1 = Array(m) { vector<int>(n) { Int.MAX_VALUE } }
+        auto $1 = Array(m) { Array(n) { "" } }
+        auto $1 = PriorityQueue<State>(compareBy { it.dist })
+
+        distance[ball[0]][ball[1]] = 0
+        path[ball[0]][ball[1]] = ""
+        pq.offer(State(0, ball[0], ball[1]))
+
+        while (pq.isNotEmpty()) {
+            val (d, x, y) = pq.poll()
+
+            if (x == hole[0] && y == hole[1]) {
+                return path[x][y]
+            }
+
+            if (d > distance[x][y]) continue
+
+            for ((dx, dy, dir) in directions) {
+                auto $1 = x
+                auto $1 = y
+                auto $1 = 0
+
+                while (nx + dx in 0 until m && ny + dy in 0 until n && maze[nx + dx][ny + dy] == 0) {
+                    nx += dx
+                    ny += dy
+                    steps++
+                    if (nx == hole[0] && ny == hole[1]) break
+                }
+
+                auto $1 = d + steps
+                auto $1 = path[x][y] + dir
+
+                if (newDist < distance[nx][ny]) {
+                    distance[nx][ny] = newDist
+                    path[nx][ny] = newPath
+                    pq.offer(State(newDist, nx, ny))
+                } else if (newDist == distance[nx][ny] && newPath < path[nx][ny]) {
+                    path[nx][ny] = newPath
+                    pq.offer(State(newDist, nx, ny))
+                }
+            }
+        }
+
+        return "impossible"
+    }
+}

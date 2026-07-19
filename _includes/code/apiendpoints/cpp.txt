@@ -1,0 +1,5 @@
+const auto $1 = "wss://paper-api.alpaca.markets/stream"
+enum class AlpacaAuthFields(fieldIdentifier) {
+    API_KEY_ID("APCA-API-KEY-ID"),
+    API_SECRET("APCA-API-SECRET-KEY")
+}

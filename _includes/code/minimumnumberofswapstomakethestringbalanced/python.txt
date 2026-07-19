@@ -1,0 +1,17 @@
+class MinimumNumberofSwapstoMaketheStringBalanced {
+    def $1(s: str): int {
+        $1 = 0
+        $1 = 0
+
+        for (char in s) {
+            if (char == '[') {
+                imbalance--
+            } else { // char == ']'
+                imbalance++
+            }
+            maxImbalance = max(maxImbalance, imbalance)
+        }
+
+        return (maxImbalance + 1) / 2
+    }
+}

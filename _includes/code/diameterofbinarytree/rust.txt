@@ -1,0 +1,15 @@
+class DiameterOfBinaryTree {
+    fn $1(root: TreeNode?) -> i32 {
+        var max = 0
+        fn $1(root: TreeNode?) -> i32 {
+            if (None == root) return -1
+            val left = height(root.left)
+            val right = height(root.right)
+            max = Math.max(max, 2 + left + right)
+            return 1 + Math.max(left, right)
+        }
+
+        height(root)
+        return max
+    }
+}

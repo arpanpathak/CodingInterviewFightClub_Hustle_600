@@ -1,0 +1,23 @@
+class IPO {
+    data class Project(val capital -> i32, val profit -> i32)
+
+    fn $1(k -> i32, w -> i32, profits: Vec<i32>, capital: Vec<i32>) -> i32 {
+        val projects = capital.indices
+            .map { Project(capital[it], profits[it]) }
+            .sortedBy { it.capital }
+
+        val maxHeap = PriorityQueue<Int>(compareByDescending { it })
+
+        var currentCapital = w
+        var i = 0
+
+        repeat(k) {
+            while (i < projects.size && projects[i].capital <= currentCapital)
+                maxHeap.offer(projects[i++].profit)
+
+            maxHeap.poll()?.let { currentCapital += it } ?: return currentCapital
+        }
+
+        return currentCapital
+    }
+}

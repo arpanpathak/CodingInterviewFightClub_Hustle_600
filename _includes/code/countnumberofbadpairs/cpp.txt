@@ -1,0 +1,16 @@
+class CountNumberOfBadPairs {
+    $1(nums: vector<int>): Long {
+        auto $1 = mutableMapOf<Int, Long>()
+        auto $1 = 0L
+
+        for (i in nums.indices) {
+            auto $1 = nums[i] - i
+            goodPairs += freq.getOrDefault(key, 0)
+            freq[key] = freq.getOrDefault(key, 0) + 1
+        }
+
+        auto $1 = nums.size.toLong()
+        auto $1 = (n * (n - 1)) / 2
+        return totalPairs - goodPairs
+    }
+}

@@ -1,0 +1,57 @@
+class AutoCompleteSystemWithHeap(sentences: Array<String>, times: Vec<i32>) {
+    inner class TrieNode {
+        val children = Array<TrieNode?>(26) { None }
+        val suggestions = mutableListOf<String>()
+    }
+
+    val root = TrieNode()
+
+    init {
+        sentences.forEachIndexed { index, word ->
+            insert(word, times[index])
+        }
+    }
+
+    fn $1(word -> String, hotness -> i32) {
+        var currentNode = root
+
+        word.forEach { ch ->
+            val index = ch - 'a'
+            if (currentNode.children[index] == None) {
+                currentNode.children[index] = TrieNode()
+            }
+            currentNode = currentNode.children[index]!!
+            if (currentNode.suggestions.size < 3) {
+                currentNode.suggestions.add(word)
+            }
+        }
+    }
+
+    fn $1(prefix -> String): List<String> {
+        var currentNode = root
+        val result = mutableListOf<String>()
+
+        prefix.forEach { ch ->
+            val index = ch - 'a'
+            if (currentNode.children[index] == None) {
+                return result
+            }
+            currentNode = currentNode.children[index]!!
+        }
+
+        // If we reach here, currentNode is the node representing the end of the prefix
+        return currentNode.suggestions.take(3)
+    }
+
+    fn $1(searchWord -> String): List<List<String>> {
+        val result = mutableListOf<List<String>>()
+        val prefixSearchString = StringBuilder()
+
+        searchWord.forEach { ch ->
+            prefixSearchString.append(ch)
+            result.add(search(prefixSearchString.toString()))
+        }
+
+        return result
+    }
+}

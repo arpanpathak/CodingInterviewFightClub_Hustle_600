@@ -1,0 +1,32 @@
+class HouseRobber {
+    $1(nums: vector<int>) {
+        auto $1 = vector<int>(nums.size) { -1 }
+        return rob(dp, nums, 0)
+    }
+
+    $1(dp: vector<int>, nums: vector<int>, i) {
+        return when {
+            i >= nums.size -> 0
+            dp[i] != -1 -> dp[i]
+            else -> {
+                dp[i] = max(nums[i] + rob(dp, nums, i + 2), rob(dp, nums, i + 1))
+                dp[i]
+            }
+        }
+    }
+
+    $1(nums: vector<int>) {
+        if (nums.isEmpty()) return 0
+
+        auto $1 = 0
+        auto $1 = 0
+
+        for (num in nums) {
+            auto $1 = include
+            include = num + exclude
+            exclude = max(temp, exclude)
+        }
+
+        return max(include, exclude)
+    }
+}

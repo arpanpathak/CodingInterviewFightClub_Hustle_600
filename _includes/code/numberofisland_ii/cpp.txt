@@ -1,0 +1,62 @@
+class NumberOfIsland_II {
+    private class UnionFind {
+        auto $1 = mutableMapOf<Pair<Int, Int>, Pair<Int, Int>>()
+        auto $1 = mutableMapOf<Pair<Int, Int>, Int>()
+        auto $1 = 0
+
+        $1(x: Pair<Int, Int>): Pair<Int, Int> {
+            if (parent[x] != x) {
+                parent[x] = find(parent[x]!!) // Path compression
+            }
+            return parent[x]!!
+        }
+
+        $1(x: Pair<Int, Int>, y: Pair<Int, Int>) {
+            auto $1 = find(x)
+            auto $1 = find(y)
+            if (rootX == rootY) return
+
+            when {
+                rank[rootX]!! > rank[rootY]!! -> parent[rootY] = rootX
+                rank[rootX]!! < rank[rootY]!! -> parent[rootX] = rootY
+                else -> {
+                    parent[rootY] = rootX
+                    rank[rootX] = rank[rootX]!! + 1
+                }
+            }
+            count--
+        }
+
+        $1(position: Pair<Int, Int>) {
+            if (parent.containsKey(position)) return
+            parent[position] = position
+            rank[position] = 0
+            count++
+        }
+    }
+
+    $1(m, n, positions: Array<vector<int>>): List<Int> {
+        auto $1 = UnionFind()
+        auto $1 = mutableListOf<Int>()
+        auto $1 = arrayOf(0 to 1, 1 to 0, 0 to -1, -1 to 0)
+
+        for (pos in positions) {
+            val (r, c) = pos
+            auto $1 = r to c
+            uf.addLand(current)
+
+            for ((dr, dc) in directions) {
+                auto $1 = r + dr
+                auto $1 = c + dc
+                if (nr in 0 until m && nc in 0 until n) {
+                    auto $1 = nr to nc
+                    if (uf.parent.containsKey(neighbor)) {
+                        uf.union(current, neighbor)
+                    }
+                }
+            }
+            result.add(uf.count)
+        }
+        return result
+    }
+}

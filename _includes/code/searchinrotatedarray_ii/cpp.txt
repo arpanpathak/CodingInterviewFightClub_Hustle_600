@@ -1,0 +1,39 @@
+class SearchInRotatedArray_II {
+    $1(nums: vector<int>, target) {
+        auto $1 = 0
+        auto $1 = nums.size() - 1
+
+        while (left <= right) {
+            auto $1 = left + (right - left) / 2
+
+            when {
+                nums[mid] == target -> return true
+
+                // Handle duplicates: skip the duplicates
+                nums[left] == nums[mid] && nums[mid] == nums[right] -> {
+                    left++
+                    right--
+                }
+
+                // Left portion is sorted
+                nums[left] <= nums[mid] -> {
+                    if (nums[left] <= target && target < nums[mid]) {
+                        right = mid - 1 // Target in left portion
+                    } else {
+                        left = mid + 1 // Target in right portion
+                    }
+                }
+
+                // Right portion is sorted
+                else -> {
+                    if (nums[mid] < target && target <= nums[right]) {
+                        left = mid + 1 // Target in right portion
+                    } else {
+                        right = mid - 1 // Target in left portion
+                    }
+                }
+            }
+        }
+        return false
+    }
+}

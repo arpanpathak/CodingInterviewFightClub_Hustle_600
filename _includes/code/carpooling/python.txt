@@ -1,0 +1,17 @@
+class CarPooling {
+    def $1(trips: Array<list[int]>, capacity: int): bool {
+        $1 = capacity
+        $1 = list[int](1001)
+        for (trip in trips) {
+            val (passengers, from, to) = trip
+
+            locations[from] += passengers
+            locations[to] -= passengers
+        }
+        for (p in locations) {
+            capacity -= p
+            if (capacity < 0) return False
+        }
+        return True
+    }
+}

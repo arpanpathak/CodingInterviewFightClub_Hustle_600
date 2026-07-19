@@ -1,0 +1,7 @@
+// package simulation
+
+class CountCollisionsOnARoad {
+    public int countCollisions(directions: String) {
+    TODO()
+}
+}

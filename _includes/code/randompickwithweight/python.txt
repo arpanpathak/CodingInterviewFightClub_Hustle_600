@@ -1,0 +1,28 @@
+class RandomPickWithWeight (w: list[int]) {
+    private $1 = list[int](w.size){ 0 }
+    private val totalSum: int
+    private val w: list[int] = w
+    init {
+        for (i in w.indices) {
+            prefixSum[i] = if(i > 0) prefixSum[i-1] + w[i] else w[i]
+        }
+
+        totalSum = prefixSum.last()
+    }
+
+    def $1(): int {
+        $1 = Random.nextInt(totalSum)
+        var (start, end) = 0 to w.size
+
+        while (start < end) {
+            $1 = start + (end - start)/2
+
+            when {
+                prefixSum[mid] > randomPick -> end = mid
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
+}

@@ -1,0 +1,40 @@
+class SlidingPuzzle {
+    $1(board: Array<vector<int>>) {
+        auto $1 = "123450"
+        auto $1 = board.flatMap { it.asIterable() }.joinToString("")
+        if (start == target) return 0
+
+        auto $1 = listOf(1 to 0, -1 to 0, 0 to 1, 0 to -1)
+
+        auto $1 = mutableSetOf<String>()
+        val queue: Queue<Pair<String, Int>> = LinkedList()
+        queue.offer(start to 0)
+        visited.add(start)
+
+        while (queue.isNotEmpty()) {
+            val (current, moves) = queue.poll()
+            if (current == target) return moves
+
+            auto $1 = current.indexOf('0')
+            auto $1 = zeroPos / 3
+            auto $1 = zeroPos % 3
+
+            for ((dr, dc) in dirs) {
+                auto $1 = row + dr
+                auto $1 = col + dc
+                if (newRow in 0..1 && newCol in 0..2) {
+                    auto $1 = newRow * 3 + newCol
+                    auto $1 = current.toCharArray()
+                    chars[zeroPos] = chars[newPos]
+                    chars[newPos] = '0'
+                    auto $1 = String(chars)
+                    if (!visited.contains(nextState)) {
+                        visited.add(nextState)
+                        queue.offer(nextState to moves + 1)
+                    }
+                }
+            }
+        }
+        return -1
+    }
+}

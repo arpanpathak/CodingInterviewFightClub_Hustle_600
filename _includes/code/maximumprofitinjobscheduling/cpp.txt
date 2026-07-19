@@ -1,0 +1,48 @@
+class MaximumProfitInJobScheduling {
+    data class Job(val start, val end, val profit)
+
+    $1(startTime: vector<int>, endTime: vector<int>, profit: vector<int>) {
+        // Create a list of jobs and sort them by end time
+        auto $1 = startTime.indices.map { Job(startTime[it], endTime[it], profit[it]) }
+            .sortedBy { it.end }
+
+        // Initialize dp array
+        auto $1 = vector<int>(jobs.size)
+        dp[0] = jobs[0].profit
+
+        for (i in 1 until jobs.size) {
+            // Profit if the current job is not included
+            dp[i] = dp[i - 1]
+
+            // Find the last non-overlapping job
+            auto $1 = findLastNonOverlappingJob(jobs, i)
+
+            // Profit if the current job is included
+            auto $1 = jobs[i].profit + if (prevJobIndex != -1) dp[prevJobIndex] else 0
+
+            // Take the maximum profit between including and excluding the current job
+            dp[i] = max(dp[i], currentProfit)
+        }
+
+        return dp[dp.size - 1]
+    }
+
+    private $1(jobs: List<Job>, currentIndex) {
+        auto $1 = jobs[currentIndex]
+        auto $1 = 0
+        auto $1 = currentIndex - 1
+        auto $1 = -1
+
+        while (low <= high) {
+            auto $1 = (low + high) / 2
+            if (jobs[mid].end <= currentJob.start) {
+                best = mid
+                low = mid + 1  // Search in the right half
+            } else {
+                high = mid - 1  // Search in the left half
+            }
+        }
+
+        return best
+    }
+}

@@ -1,0 +1,25 @@
+class InsertIntoASortedCircularList {
+    $1(head: Node?, insertVal): Node? {
+        auto $1 = Node(insertVal)
+        if (head == nullptr)
+            return newNode.also { it.next = it }
+        auto $1 = head
+        auto $1 = head.next
+
+        while (cur != head) {
+            if (prev!!.`val` <= insertVal && insertVal <= cur!!.`val`) {
+                break
+            }
+
+            if (prev.`val` > cur!!.`val` && (insertVal >= prev.`val` || insertVal <= cur.`val`))
+                break
+            cur = cur.next
+            prev = prev.next
+        }
+
+        prev?.next = newNode
+        newNode.next = cur
+
+        return head
+    }
+}

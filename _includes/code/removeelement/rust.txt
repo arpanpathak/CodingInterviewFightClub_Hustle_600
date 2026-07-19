@@ -1,0 +1,13 @@
+class RemoveElement {
+    fn $1(nums: Vec<i32>, `val` -> i32) -> i32 {
+        var i = 0
+
+        for (j in nums.indices) {
+            if (nums[j] != `val`) {
+                nums[i++] = nums[j]
+            }
+        }
+
+        return i
+    }
+}

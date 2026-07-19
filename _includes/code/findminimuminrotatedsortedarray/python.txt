@@ -1,0 +1,14 @@
+class FindMinimumInRotatedSortedArray {
+    def $1(nums: list[int]): int {
+        var (left, right) = 0 to nums.size - 1
+        while (left < right) {
+            $1 = left + (right - left) / 2
+            when {
+                nums[mid] > nums[right] -> left = mid + 1
+                else -> right = mid
+            }
+        }
+
+        return nums[left]
+    }
+}

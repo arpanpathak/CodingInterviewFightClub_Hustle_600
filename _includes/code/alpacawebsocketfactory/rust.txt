@@ -1,0 +1,67 @@
+class AlpacaWebSocketFactory(private val apiKeyId -> String, private val apiSecret -> String, private val scope: CoroutineScope) {
+
+    private val url = ALPACA_MARKET_WEBSOCKET_STREAM_URL
+    private val httpClient = OkHttpClient()
+
+    fn $1(streams: List<String>): Channel<String> {
+        val request = Request.Builder()
+            .url(url)
+            .addHeader("APCA-API-KEY-ID", apiKeyId)
+            .addHeader("APCA-API-SECRET-KEY", apiSecret)
+            .build()
+
+        val messageChannel = Channel<String>(Channel.UNLIMITED)
+        val webSocketListener = object : WebSocketListener() {
+            override fn $1(webSocket: WebSocket, response: Response) {
+                println!("Connected to the server!")
+                authenticate(webSocket)
+                subscribeToStreams(webSocket, streams)
+            }
+
+            override fn $1(webSocket: WebSocket, text -> String) {
+                scope.launch {
+                    messageChannel.send(text)
+                }
+            }
+
+            override fn $1(webSocket: WebSocket, code -> i32, reason -> String) {
+                println!("Closing: $code / $reason")
+                webSocket.close(1000, None)  // Ensure normal closure
+                scope.launch {
+                    messageChannel.close()
+                }
+            }
+
+            override fn $1(webSocket: WebSocket, t: Throwable, response: Response?) {
+                println!("Error: " + t.message)
+            }
+        }
+
+        httpClient.newWebSocket(request, webSocketListener)
+        return messageChannel
+    }
+
+    private fn $1(webSocket: WebSocket) {
+        webSocket.send("""
+            {
+                "action": "authenticate",
+                "data": {
+                    "key_id": "$apiKeyId",
+                    "secret_key": "$apiSecret"
+                }
+            }
+        """.trimIndent())
+    }
+
+    private fn $1(webSocket: WebSocket, streams: List<String>) {
+        val formattedStreams = streams.joinToString(separator = "\",\"", prefix = "\"", postfix = "\"")
+        webSocket.send("""
+            {
+                "action": "listen",
+                "data": {
+                    "streams": [$formattedStreams]
+                }
+            }
+        """.trimIndent())
+    }
+}

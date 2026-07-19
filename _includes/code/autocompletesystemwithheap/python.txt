@@ -1,0 +1,57 @@
+class AutoCompleteSystemWithHeap(sentences: Array<String>, times: list[int]) {
+    inner class TrieNode {
+        $1 = Array<TrieNode?>(26) { None }
+        $1 = mutableListOf<String>()
+    }
+
+    $1 = TrieNode()
+
+    init {
+        sentences.forEachIndexed { index, word ->
+            insert(word, times[index])
+        }
+    }
+
+    def $1(word: str, hotness: int) {
+        $1 = root
+
+        word.forEach { ch ->
+            $1 = ch - 'a'
+            if (currentNode.children[index] == None) {
+                currentNode.children[index] = TrieNode()
+            }
+            currentNode = currentNode.children[index]!!
+            if (currentNode.suggestions.size < 3) {
+                currentNode.suggestions.add(word)
+            }
+        }
+    }
+
+    def $1(prefix: str): List<String> {
+        $1 = root
+        $1 = mutableListOf<String>()
+
+        prefix.forEach { ch ->
+            $1 = ch - 'a'
+            if (currentNode.children[index] == None) {
+                return result
+            }
+            currentNode = currentNode.children[index]!!
+        }
+
+        // If we reach here, currentNode is the node representing the end of the prefix
+        return currentNode.suggestions.take(3)
+    }
+
+    def $1(searchWord: str): List<List<String>> {
+        $1 = mutableListOf<List<String>>()
+        $1 = StringBuilder()
+
+        searchWord.forEach { ch ->
+            prefixSearchString.append(ch)
+            result.add(search(prefixSearchString.toString()))
+        }
+
+        return result
+    }
+}

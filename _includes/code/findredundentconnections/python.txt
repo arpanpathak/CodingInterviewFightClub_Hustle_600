@@ -1,0 +1,24 @@
+class FindRedundentConnections {
+    def $1(edges: Array<list[int]>): list[int] {
+        $1 = list[int](1001) { it }
+
+        def $1(x: int): int {
+            if (parent[x] != x) parent[x] = find(parent[x])
+            return parent[x]
+        }
+
+        def $1(x: int, y: int): bool {
+            $1 = find(x)
+            $1 = find(y)
+            if (rootX == rootY) return False
+            parent[rootY] = rootX
+            return True
+        }
+
+        for ((u, v) in edges) {
+            if (!union(u, v)) return intArrayOf(u, v)
+        }
+        return intArrayOf()
+    }
+
+}

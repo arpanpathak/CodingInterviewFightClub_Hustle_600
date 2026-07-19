@@ -1,0 +1,19 @@
+class ProductOfArrayExceptSelf {
+    $1(nums: vector<int>): vector<int>? {
+        auto $1 = 0
+        auto $1 = 1
+        auto $1 = nums.size
+        auto $1 = vector<int>(N)
+        for (num in nums) {
+            if (num == 0) zeroes++ else product *= num
+        }
+        for (i in 0 until N) {
+            productArray[i]  = when {
+                nums[i] == 0 && zeroes == 1 -> product
+                nums[i] == 0 || zeroes >= 1 -> 0
+                else -> product / nums[i]
+            }
+        }
+        return productArray
+    }
+}

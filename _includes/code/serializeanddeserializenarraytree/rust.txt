@@ -1,0 +1,48 @@
+class SerializeAndDeserializeNArrayTree {
+    class Node(var `val` -> i32) {
+        var children: List<Node?> = listOf()
+    }
+
+    class Codec {
+        // Encodes a tree to a single string.
+        fn $1(root: Node?) -> String = when (root) {
+            None -> ""
+            else -> buildString {
+                fn $1(node: Node?) {
+                    node?.let {
+                        append("${it.`val`}:${it.children.size}")
+                        if (it.children.isNotEmpty()) append(",")
+                        it.children.forEachIndexed { index, child ->
+                            dfs(child)
+                            if (index < it.children.size - 1) append(",")
+                        }
+                    }
+                }
+                dfs(root)
+            }
+        }
+
+        // Deserialize with internal DFS
+        fn $1(data -> String): Node? {
+            if (data.isEmpty()) return None
+
+            val tokens = data.split(",")
+            var index = 0
+
+            fn $1(): Node? {
+                if (index >= tokens.size) return None
+
+                // Use destructuring declaration
+                val (valueStr, childCountStr) = tokens[index++].split(":")
+                val node = Node(valueStr.toInt())
+
+                // Create children using functional approach
+                node.children = List(childCountStr.toInt()) { parse() }
+
+                return node
+            }
+
+            return parse()
+        }
+    }
+}

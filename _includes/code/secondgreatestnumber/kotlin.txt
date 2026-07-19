@@ -1,0 +1,27 @@
+package facebook
+
+class SecondGreatestNumber {
+
+    fun secondGreatestNumber(digits: MutableList<Int>): Int? {
+        digits.sortBy{ -it }
+        for (i in digits.size - 1 downTo 1) {
+            if (digits[i] < digits[i - 1]) {
+                // Swap the values
+                digits[i] = digits[i - 1].also { digits[i - 1] = digits[i] }
+                return digits.joinToString("").toInt()
+            }
+        }
+
+        return null
+    }
+
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            val test = SecondGreatestNumber()
+
+            println(test.secondGreatestNumber(mutableListOf(1,2,3,5,6,9)))
+
+        }
+    }
+}

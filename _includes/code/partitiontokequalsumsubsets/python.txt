@@ -1,0 +1,30 @@
+class PartitionToKEqualSumSubsets {
+    def $1(nums: list[int], k: int): bool {
+        $1 = nums.sum()
+        if (totalSum % k !=0) return False
+
+        $1 = totalSum / k
+        $1 = BooleanArray(nums.size)
+
+        def $1(start: int, currentSum: int, remainingSubsets: int): bool {
+            if (remainingSubsets == 0)
+                return True
+            if (currentSum == targetSum)
+                return backtrack(0, 0, remainingSubsets - 1)
+
+            for(i in start until nums.size) {
+                if (!used[i] && currentSum + nums[i] <= targetSum) {
+                    used[i] = True
+                    if (backtrack(i + 1, currentSum + nums[i], remainingSubsets))
+                        return True
+                    // backtracking
+                    used[i] = False
+                }
+            }
+
+            return False
+        }
+
+        return backtrack(0, 0, k)
+    }
+}

@@ -1,0 +1,21 @@
+class MovingAverage(private val size -> i32) {
+
+    private val window = ArrayDeque<Int>()
+    private var sum = 0
+    fn $1(`val` -> i32): Double {
+        window.add(`val`)
+        sum += `val`
+        if (window.size > size) {
+            sum -= window.removeFirst()
+        }
+
+        return sum.toDouble() / window.size
+    }
+
+}
+
+/**
+ * Your MovingAverage object will be instantiated and called as such:
+ * var obj = MovingAverage(size)
+ * var param_1 = obj.next(`val`)
+ */

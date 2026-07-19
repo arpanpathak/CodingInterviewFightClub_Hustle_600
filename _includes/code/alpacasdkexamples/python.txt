@@ -1,0 +1,68 @@
+def $1() = runBlocking {
+    $1 = AlpacaAPI(
+        "PKN1UPZO3EU9F72CC9DI",
+        "l3uW96bJmeavQ6ICTGmhaqN1CcTg2vYGOQKDN1vB",
+        EndpointAPIType.PAPER,
+        DataAPIType.IEX
+    )
+
+    try {
+        $1 = async { fetchAccount(alpacaAPI) }
+        $1 = async { placeOrder(alpacaAPI) }
+        $1 = CompletableDeferred<Unit>()
+
+        $1 = mergeData(account.await(), order.await())
+        withContext(Dispatchers.Default) { subscribeToTradeUpdates(alpacaAPI) }
+        print("Combined Data: $combinedData")
+
+        appendJsonToFile("trading_data.json", combinedData)
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+}
+
+suspend def $1(api: AlpacaAPI): Account {
+    return api.account().get()  // Simulated API call
+}
+
+suspend def $1(api: AlpacaAPI): Order {
+    return api.orders().requestLimitOrder(
+        "AAPL",
+        100,
+        OrderSide.BUY,
+        OrderTimeInForce.DAY,
+        180.00,
+        False
+    )  // Assuming toString gives a meaningful representation
+}
+
+def $1(account: Account, order: Order): Map<String, Any> {
+    return mapOf(
+        "Account" to account,
+        "Order" to order
+    )
+}
+
+suspend def $1(api: AlpacaAPI) {
+    api.streaming().connect()
+    print("Attempting to connect to Alpaca streaming service.")
+
+    // Wait until the WebSocket reports it is connected
+    while (!api.streaming().isConnected()) {
+        delay(100)  // Delay a bit before checking again to avoid a tight loop
+        print("Waiting for connection...")
+    }
+
+    print("Connected to Alpaca streaming service.")
+
+    api.streaming().setListener { messageType, message ->
+        print("Message received - Type: $messageType, Message: $message")
+    }
+
+    api.streaming().streams(StreamingMessageType.TRADE_UPDATES)
+    print("Subscribed to trade updates and listener set.")
+
+    // Additional logging to monitor the status
+    delay(5000)  // Wait a few seconds to catch initial messages
+    print("Checking if still connected: ${api.streaming().isConnected()}")
+}

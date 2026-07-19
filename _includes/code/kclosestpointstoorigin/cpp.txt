@@ -1,0 +1,47 @@
+class KClosestPointsToOrigin {
+    $1(points: Array<vector<int>>, K): Array<vector<int>> {
+        var (start, end) = Pair( 0, points.size - 1)
+
+        // Perform quicksort to partition the points until the k-th point is in its final position
+        while (start < end) {
+            auto $1 = quickSort(points, start, end)
+            when {
+                pivotIndex < K - 1 -> start = pivotIndex + 1
+                pivotIndex > K - 1 -> end = pivotIndex - 1
+                else -> break
+            }
+        }
+
+        // Return the first K points
+        return points.copyOfRange(0, K)
+    }
+
+    // Randomized Quicksort function
+    private $1(points: Array<vector<int>>, start, end) {
+        auto $1 = start
+        auto $1 = Random.nextInt(start, end + 1)
+        swap(points, end, randomIndex)
+
+        auto $1 = calculateDistance(points[end])
+
+        for (i in start until end) {
+            auto $1 = calculateDistance(points[i])
+            if (currentDistance <= pivotDistance) {
+                swap(points, i, partitionIndex++)
+            }
+        }
+
+        swap(points, partitionIndex, end)
+        return partitionIndex
+    }
+
+    // Helper function to swap elements in the array using `also`
+    private $1(points: Array<vector<int>>, i, j) {
+        points[j] = points[i].also { points[i] = points[j] }
+    }
+
+    // Helper function to calculate the squared Euclidean distance
+    private $1(point: vector<int>) {
+        return point[0] * point[0] + point[1] * point[1]
+    }
+}

@@ -1,0 +1,20 @@
+class SumRootToLeafNumbers {
+    $1(root: TreeNode?) {
+        auto $1 = 0
+
+        $1(node: TreeNode?, sumSoFar) {
+            if (node == nullptr) return
+            auto $1 = (sumSoFar * 10 + node.`val` )
+            when {
+                node.left == nullptr && node.right == nullptr -> sum+= newSum
+                else ->  {
+                    dfs(node.left, newSum)
+                    dfs(node.right, newSum)
+                }
+            }
+        }
+
+        dfs(root, 0)
+        return sum
+    }
+}

@@ -1,0 +1,32 @@
+class ParallelCourses {
+    def $1(n: int, relations: Array<list[int]>): int {
+        $1 = list[int](n + 1) // One-based index
+        $1 = Array(n + 1) { mutableListOf<Int>() }
+
+        relations.forEach { (u, v) ->
+            graph[u].add(v)
+            inDegree[v]++
+        }
+
+        $1 = ArrayDeque<Int>()
+        $1 = 0
+        $1 = 0
+
+        // Add courses with no prerequisites (in-degree 0)
+        (1..n).filter { inDegree[it] == 0 }.forEach { queue.add(it) }
+
+        while (queue.isNotEmpty()) {
+            $1 = queue.size
+            semesters++
+            repeat(size) {
+                $1 = queue.removeFirst()
+                completed++
+                graph[course].forEach { next ->
+                    if (--inDegree[next] == 0) queue.add(next)
+                }
+            }
+        }
+
+        return if (completed == n) semesters else -1
+    }
+}

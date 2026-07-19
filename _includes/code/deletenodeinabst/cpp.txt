@@ -1,0 +1,35 @@
+class TreeNode(var `val`) {
+    var left: TreeNode? = nullptr
+    var right: TreeNode? = nullptr
+}
+
+class DeleteNodeinABST {
+    $1(root: TreeNode?, key): TreeNode? {
+        when {
+            root == nullptr -> return nullptr
+            key < root.`val` -> root.left = deleteNode(root.left, key)
+            key > root.`val` -> root.right = deleteNode(root.right, key)
+            else -> {
+                when {
+                    root.left == nullptr -> return root.right
+                    root.right == nullptr -> return root.left
+                    else -> {
+                        root.`val` = minValue(root.right!!)
+                        root.right = deleteNode(root.right, root.`val`)
+                    }
+                }
+            }
+        }
+
+        return root
+    }
+
+    $1(node: TreeNode) {
+        auto $1 = node
+        while (current.left != nullptr) {
+            current = current.left!!
+        }
+
+        return current.`val`
+    }
+}

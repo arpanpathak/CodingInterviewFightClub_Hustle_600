@@ -1,0 +1,20 @@
+class CombinationSum {
+    $1(candidates: vector<int>, target): List<List<Int>> {
+        auto $1 = mutableListOf<List<Int>>()
+
+        $1(current: MutableList<Int>, start, remaining) {
+            when {
+                remaining == 0 -> result.add(ArrayList(current))
+                remaining > 0 && start < candidates.size -> {
+                    current.add(candidates[start])
+                    findCombinations(current, start, remaining - candidates[start]) // Include current candidate
+                    current.removeLast();
+                    findCombinations(current, start + 1, remaining) // Exclude and move to next
+                }
+            }
+        }
+
+        findCombinations(mutableListOf(), 0, target)
+        return result
+    }
+}

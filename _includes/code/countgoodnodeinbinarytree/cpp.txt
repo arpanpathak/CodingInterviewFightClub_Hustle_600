@@ -1,0 +1,14 @@
+class CountGoodNodeInBInaryTree {
+    $1(root: TreeNode?) {
+        return dfs(root, Int.MIN_VALUE)
+    }
+
+    private $1(node: TreeNode?, maxSoFar) {
+        node ?: return 0
+        
+        auto $1 = max(maxSoFar, node.`val`)
+        auto $1 = if (node.`val` >= maxSoFar) 1 else 0
+
+        return good + dfs(node.left, newMax) + dfs(node.right, newMax)
+    }
+}

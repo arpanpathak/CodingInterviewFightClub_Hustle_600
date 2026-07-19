@@ -1,0 +1,17 @@
+class MaximumAverageSubarray_I {
+    $1(nums: vector<int>, k): Double {
+        auto $1 = 0.0
+        auto $1 = Double.NEGATIVE_INFINITY
+
+        for (i in 0 until nums.size) {
+            windowSum += nums[i]
+
+            if (i >= k - 1) {
+                maxAverage = max(maxAverage, windowSum / k)
+                windowSum -= nums[i - k + 1]
+            }
+        }
+
+        return maxAverage
+    }
+}

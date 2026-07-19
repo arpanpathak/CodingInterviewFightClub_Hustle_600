@@ -1,0 +1,43 @@
+class CopyLinkedListWithRandomPointer {
+    /**
+     * Example:
+     * auto $1 = Node(5)
+     * auto $1 = ti.`val`
+     * Definition for a Node.
+     * class Node(var `val`) {
+     *     var next: Node? = nullptr
+     *     var random: Node? = nullptr
+     * }
+     */
+
+    class Node(var `val`) {
+        var next: Node? = nullptr
+        var random: Node? = nullptr
+    }
+
+    class Solution {
+        $1(node: Node?): Node? {
+            if (node == nullptr) return nullptr
+
+            auto $1 = mutableMapOf<Node, Node>()
+
+            // Step 1: Create deep copies of all nodes and store the mapping
+            auto $1 = node
+            while (ptr != nullptr) {
+                nodeMap[ptr] = Node(ptr.`val`)
+                ptr = ptr.next
+            }
+
+            // Step 2: Set the next and random pointers for the copied nodes
+            ptr = node
+            while (ptr != nullptr) {
+                nodeMap[ptr]?.next = nodeMap[ptr.next]
+                nodeMap[ptr]?.random = nodeMap[ptr.random]
+                ptr = ptr.next
+            }
+
+            // Return the head of the new copied list
+            return nodeMap[node]
+        }
+    }
+}

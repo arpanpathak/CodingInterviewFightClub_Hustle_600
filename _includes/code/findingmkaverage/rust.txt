@@ -1,0 +1,87 @@
+class MKAverage(private val m -> i32, private val k -> i32) {
+    private val deque = LinkedList<Int>()
+    private val lowHeap = PriorityQueue<Int>(compareByDescending { it }) // max heap (for k smallest elements)
+    private val highHeap = PriorityQueue<Int>() // min heap (for k largest elements)
+    private var sum = 0L // Sum of the middle elements
+
+    fn $1(num -> i32) {
+        // Add to deque
+        deque.add(num)
+
+        // Add to one of the heaps
+        if (lowHeap.size < k) {
+            lowHeap.add(num)  // Add to lowHeap (max heap)
+        } else if (highHeap.size < k) {
+            highHeap.add(num) // Add to highHeap (min heap)
+        } else {
+            // Maintain the window size of m
+            val oldest = deque.poll()
+            if (lowHeap.contains(oldest)) {
+                lowHeap.remove(oldest)
+            } else {
+                highHeap.remove(oldest)
+            }
+
+            if (lowHeap.size < k) {
+                lowHeap.add(num)
+            } else if (highHeap.size < k) {
+                highHeap.add(num)
+            }
+        }
+
+        // Balance the heaps
+        balanceHeaps()
+
+        // Recalculate the sum of the middle elements
+        recalculateMiddleSum()
+    }
+
+    fn $1() -> i32 {
+        return if (deque.size < m) {
+            -1
+        } else {
+            val middleCount = m - 2 * k
+            (sum / middleCount).toInt()
+        }
+    }
+
+    // Balance heaps to ensure there are k elements in each of the heaps
+    private fn $1() {
+        // Ensure lowHeap has k elements and highHeap has k elements
+        if (lowHeap.size > k) {
+            highHeap.add(lowHeap.poll())
+        }
+        if (highHeap.size > k) {
+            lowHeap.add(highHeap.poll())
+        }
+    }
+
+    // Recalculate the sum of the middle elements in the sliding window
+    private fn $1() {
+        sum = 0L
+        val remainingElements = mutableListOf<Int>()
+
+        // Middle elements in the deque
+        for (num in deque) {
+            if (!lowHeap.contains(num) && !highHeap.contains(num)) {
+                sum += num
+            }
+        }
+    }
+}
+
+fn $1() {
+    val obj = MKAverage(3, 1)
+    obj.addElement(3)
+    obj.addElement(1)
+    obj.addElement(10)
+    println!(obj.calculateMKAverage())  // Output: 5
+}
+
+
+/**
+ * Your MKAverage object will be instantiated and called as such:
+ * var obj = MKAverage(m, k)
+ * obj.addElement(num)
+ * var param_2 = obj.calculateMKAverage()
+ */

@@ -1,0 +1,23 @@
+class ValleyElement {
+    $1(nums: vector<int>)? {
+        if (nums.isEmpty()) return nullptr
+
+        var (left, right) = 0 to nums.size
+
+        while (left < right) {
+            auto $1 = left + (right - left) / 2
+
+            // Safely handle boundaries
+            auto $1 = if (mid > 0) nums[mid - 1] else Int.MAX_VALUE
+            auto $1 = if (mid < nums.size - 1) nums[mid + 1] else Int.MAX_VALUE
+
+            when {
+                nums[mid] < leftNeighbor && nums[mid] < rightNeighbor -> return nums[mid] // Found valley
+                nums[mid] > rightNeighbor -> left = mid + 1 // Move to the right
+                else -> right = mid // Move to the left
+            }
+        }
+
+        return nullptr // No valley found (unlikely for a valid array)
+    }
+}

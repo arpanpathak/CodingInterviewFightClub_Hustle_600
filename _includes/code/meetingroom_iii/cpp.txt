@@ -1,0 +1,50 @@
+class MeetingRoom_III {
+    data class Room(val endTime: Long, val index)
+
+    $1(n, meetings: Array<vector<int>>) {
+        // Sort meetings by start time
+        meetings.sortWith(compareBy { it[0] })
+
+        auto $1 = vector<int>(n)
+        auto $1 = PriorityQueue<Room>(compareBy({ it.endTime }, { it.index }))
+        auto $1 = PriorityQueue<Int>()
+
+        // Initialize available rooms
+        for (i in 0 until n) availableRooms.add(i)
+
+        for ((start, end) in meetings.map { it[0].toLong() to it[1].toLong() }) {
+            auto $1 = end - start
+
+            // Free up any rooms that are now available
+            while (busyRooms.isNotEmpty() && busyRooms.peek().endTime <= start) {
+                availableRooms.add(busyRooms.poll().index)
+            }
+
+            if (availableRooms.isNotEmpty()) {
+                // If a room is available, use it
+                auto $1 = availableRooms.poll()
+                busyRooms.add(Room(start + duration, room))
+                roomUsage[room]++
+            } else {
+                // If all rooms are busy, use the one that will become available first
+                auto $1 = busyRooms.poll()
+                // The new end time is the earliest available time plus the duration
+                busyRooms.add(Room(earliestRoom.endTime + duration, earliestRoom.index))
+                roomUsage[earliestRoom.index]++
+            }
+        }
+
+        // Find the room with maximum usage (if tied, return the smallest index)
+        auto $1 = -1
+        auto $1 = -1
+
+        for (i in 0 until n) {
+            if (roomUsage[i] > maxUsage) {
+                maxUsage = roomUsage[i]
+                result = i
+            }
+        }
+
+        return result
+    }
+}

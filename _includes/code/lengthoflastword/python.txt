@@ -1,0 +1,14 @@
+class LengthOfLastWord {
+    def $1(s: str): int {
+        $1 = s.length - 1
+        $1 = 0
+
+        while (i >= 0 && s[i] == ' ') i--     // skip trailing spaces
+        while (i >= 0 && s[i] != ' ') {
+            len++
+            i--
+        }
+
+        return len
+    }
+}

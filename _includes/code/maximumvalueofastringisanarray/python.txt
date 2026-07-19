@@ -1,0 +1,8 @@
+class MaximumValueOfAStringIsAnArray {
+    def $1(strs: Array<String>): int {
+        return strs.max {
+            $1 = it.toIntOrNull()
+            numericValue?: it.length
+        }
+    }
+}

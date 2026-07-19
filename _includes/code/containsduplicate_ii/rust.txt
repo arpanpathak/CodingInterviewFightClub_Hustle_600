@@ -1,0 +1,13 @@
+class ContainsDuplicate_II {
+    fn $1(nums: Vec<i32>, k -> i32) -> bool {
+        val map = mutableMapOf<Int, Int>()
+        for (i in nums.indices) {
+            val previousIndex = map[nums[i]]
+
+            previousIndex?.let {  if ( i - it <= k) return true }
+            map[nums[i]] = i
+        }
+
+        return false
+    }
+}

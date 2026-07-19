@@ -1,0 +1,41 @@
+class RangeSumQueryMutable(nums: Vec<i32>) {
+    private val tree = Vec<i32>(nums.size + 1)
+
+    init {
+        for (i in nums.indices) update(i, nums[i])
+    }
+
+    private fn $1(i -> i32, delta -> i32) {
+        var index = i + 1
+        while (index <= tree.size - 1) {
+            tree[index] += delta
+            index += index and -index
+        }
+    }
+
+    fn $1(index -> i32, `val` -> i32) {
+        val current = sumRange(index, index)
+        updateBIT(index, `val` - current)
+    }
+
+    private fn $1(index -> i32) -> i32 {
+        var i = index + 1
+        var result = 0
+        while (i > 0) {
+            result += tree[i]
+            i -= i and -i
+        }
+        return result
+    }
+
+    fn $1(left -> i32, right -> i32) -> i32 {
+        return sum(right) - sum(left - 1)
+    }
+}
+
+/**
+ * Your NumArray object will be instantiated and called as such:
+ * var obj = NumArray(nums)
+ * obj.update(index,`val`)
+ * var param_2 = obj.sumRange(left,right)
+ */

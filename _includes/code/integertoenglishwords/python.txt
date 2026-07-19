@@ -1,0 +1,37 @@
+class IntegerToEnglishWords {
+    class Solution {
+        private $1 = arrayOf(
+            "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"
+        )
+        private $1 = arrayOf(
+            "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"
+        )
+        private $1 = arrayOf("", "Thousand", "Million", "Billion")
+
+        def $1(num: int): str {
+            if (num == 0) return "Zero"
+
+            $1 = num
+            $1 = StringBuilder()
+            $1 = 0
+
+            while (n > 0) {
+                if (n % 1000 != 0) {
+                    result.insert(0, "${dfs(n % 1000)} ${thousands[i]} ")
+                }
+                n /= 1000
+                i++
+            }
+
+            return result.toString().trim()
+        }
+
+        private def $1(num: int): str {
+            if (num == 0) return ""
+            if (num < 20) return lessThan20[num]
+            if (num < 100) return "${tens[num / 10]} ${lessThan20[num % 10]}".trim()
+            return "${lessThan20[num / 100]} Hundred ${dfs(num % 100)}".trim()
+        }
+    }
+
+}

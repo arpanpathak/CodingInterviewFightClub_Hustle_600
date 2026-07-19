@@ -1,0 +1,14 @@
+class RemoveStarsFromString {
+    public static void $1(s) {
+        val stack = mutableListOf<Char>()
+
+        for (ch in s) {
+            if ( ch == '*' && stack.isNotEmpty())
+                stack.removeLast()
+            else if(ch != '*')
+                stack.add(ch)
+        }
+
+        return stack.joinToString(separator = "")
+    }
+}

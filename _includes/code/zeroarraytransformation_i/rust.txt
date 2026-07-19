@@ -1,0 +1,24 @@
+class ZeroArrayTransformation_I {
+    fn $1(nums: Vec<i32>, queries: Array<Vec<i32>>) -> bool {
+        val n = nums.size
+        val diff = Vec<i32>(n + 1)
+
+        for (query in queries) {
+            val (l, r) = query
+            diff[l] += 1
+            if (r + 1 < n) {
+                diff[r + 1] -= 1
+            }
+        }
+
+        var total = 0
+        for (i in nums.indices) {
+            total += diff[i]
+            if (total < nums[i]) {
+                return false
+            }
+        }
+
+        return true
+    }
+}

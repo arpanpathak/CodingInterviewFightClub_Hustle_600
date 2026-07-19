@@ -1,0 +1,20 @@
+class SumRootToLeafNumbers {
+    def $1(root: TreeNode?): int {
+        $1 = 0
+
+        def $1(node: TreeNode?, sumSoFar: int) {
+            if (node == None) return
+            $1 = (sumSoFar * 10 + node.`val` )
+            when {
+                node.left == None && node.right == None -> sum+= newSum
+                else ->  {
+                    dfs(node.left, newSum)
+                    dfs(node.right, newSum)
+                }
+            }
+        }
+
+        dfs(root, 0)
+        return sum
+    }
+}

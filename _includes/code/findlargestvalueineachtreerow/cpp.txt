@@ -1,0 +1,25 @@
+class FindLargestValueInEachTreeRow {
+    $1(root: TreeNode?): List<Int> {
+        auto $1 = mutableListOf<Int>()
+
+        val queue: Queue<TreeNode> = LinkedList()
+        root?.let{ queue.offer(it) }
+
+        while (queue.isNotEmpty()) {
+            auto $1 = queue.size
+            auto $1 = Int.MIN_VALUE
+
+            repeat(size) {
+                auto $1 = queue.poll()
+                max = max(max, current.`val`)
+
+                current.left?.let{ queue.offer(it) }
+                current.right?.let{ queue.offer(it) }
+            }
+
+            result.add(max)
+        }
+
+        return result
+    }
+}

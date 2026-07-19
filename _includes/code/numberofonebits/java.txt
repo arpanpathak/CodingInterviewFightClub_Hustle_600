@@ -1,0 +1,13 @@
+class NumberOfOneBits {
+    public static void $1(n) {
+        var number = n
+        var count = 0
+
+        while (number > 0) {
+            number = number and (number - 1)
+            count++
+        }
+
+        return count
+    }
+}

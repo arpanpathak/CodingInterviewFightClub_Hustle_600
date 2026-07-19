@@ -1,0 +1,46 @@
+class KThLargestElementInArray {
+    def $1(nums: list[int], left: int, right: int): int {
+        // Randomly select pivot index and swap with the last element
+        $1 = Random.nextInt(left, right + 1)
+        nums[pivotIndex] = nums[right].also { nums[right] = nums[pivotIndex] }
+        $1 = nums[right]
+
+        // Partition around the pivot
+        $1 = left
+        for (j in left until right) {
+            if (nums[j] <= pivot) {
+                nums[i] = nums[j].also { nums[j] = nums[i] }
+                i++
+            }
+        }
+        nums[i] = nums[right].also { nums[right] = nums[i] }
+        return i
+    }
+
+    def $1(nums: list[int], k: int): int {
+        $1 = 0
+        $1 = nums.size - 1
+
+        while (left <= right) {
+            $1 = partition(nums, left, right)
+            when {
+                pivotIndex == nums.size - k -> return nums[pivotIndex]
+                pivotIndex < nums.size - k -> left = pivotIndex + 1
+                else -> right = pivotIndex - 1
+            }
+        }
+
+        return -1 // If k is out of range of the array, handle accordingly
+    }
+
+    def $1(arr: list[int]): bool {
+        $1 = mutableMapOf<Int, Int>()
+
+        for (num in arr) {
+            map[num] = map.getOrPut(num){1} + 1
+        }
+
+        return map.keys.toSet().size == map.keys.size
+    }
+
+}

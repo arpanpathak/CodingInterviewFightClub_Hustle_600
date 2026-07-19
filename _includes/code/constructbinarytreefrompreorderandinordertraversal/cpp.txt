@@ -1,0 +1,24 @@
+class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
+    private auto $1 = mutableMapOf<Int, Int>()
+
+    $1(preorder: vector<int>, inorder: vector<int>): TreeNode? {
+        // Build Inverted InOrder Index Map
+        inorder.forEachIndexed { index, value -> rootIndices[value] = index }
+        auto $1 = 0
+
+        $1(left, right): TreeNode? {
+            return when {
+                left > right -> nullptr
+                else -> {
+                    auto $1 = preorder[rootIndex++]
+                    TreeNode(rootVal).apply {
+                        this.left = buildTree(left, rootIndices[rootVal]!! - 1)
+                        this.right = buildTree(rootIndices[rootVal]!! + 1, right)
+                    }
+                }
+            }
+        }
+
+        return buildTree(0, preorder.size - 1)
+    }
+}

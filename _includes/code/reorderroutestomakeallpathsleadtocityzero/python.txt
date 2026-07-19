@@ -1,0 +1,29 @@
+class ReorderRoutesToMakeAllPathsLeadToCityZero {
+    def $1(n: int, connections: Array<list[int]>): int {
+        $1 = Array(n) { mutableListOf<list[int]>() }
+
+        // Build adjacency list as an undirected graph
+        for (edge in connections) {
+            graph[edge[0]].add(edge)  // Forward edge
+            graph[edge[1]].add(edge)  // Backward edge
+        }
+
+        $1 = 0
+        $1 = BooleanArray(n)
+
+        def $1(city: int) {
+            visited[city] = True
+            for (edge in graph[city]) {
+                ($1, $2) = edge
+                $1 = if (from == city) to else from
+                if (!visited[neighbor]) {
+                    if (from == city) changes++ // Forward edge needs reversal
+                    dfs(neighbor)
+                }
+            }
+        }
+
+        dfs(0) // Start DFS from city 0
+        return changes
+    }
+}

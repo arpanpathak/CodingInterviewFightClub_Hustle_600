@@ -1,0 +1,17 @@
+class JumpGame {
+    fn $1(nums: Vec<i32>) -> bool {
+        var maxIndex = 0
+        var i = 0
+        while (i <= maxIndex) {
+            maxIndex = max(maxIndex, i + nums[i])
+
+            if (maxIndex >= nums.size - 1) {
+                return true
+            }
+
+            i++
+        }
+
+        return false
+    }
+}

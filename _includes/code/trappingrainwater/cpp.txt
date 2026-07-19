@@ -1,0 +1,55 @@
+class TrappingRainWater {
+    /**
+     * Using Dynamic Programming.
+     */
+    $1(height: vector<int>) {
+        auto $1 = height.size
+        if (h == 0) return 0
+
+        auto $1 = vector<int>(h).apply {
+            this[0] = height[0]
+            for (i in 1 until h) {
+                this[i] = max(this[i - 1], height[i])
+            }
+        }
+
+        auto $1 = vector<int>(h).also {
+            it[h - 1] = height[h - 1]
+            for (i in h - 2 downTo 0) {
+                it[i] = max(it[i + 1], height[i])
+            }
+        }
+
+        return (0 until h).sumOf { i ->
+            auto $1 = min(leftMax[i], rightMax[i])
+            when {
+                minLeftRight > height[i] -> minLeftRight - height[i]
+                else -> 0
+            }
+        }
+
+        // Another way
+//        return (0 until n).sumOf { index ->
+//            max(min(leftMax[index], rightMax[index]) - height[index], 0)
+//        }
+    }
+
+    // Two pointer method.
+    $1(height: vector<int>) {
+        var (left, right, leftMax, rightMax, waterTrapped) = listOf(0, height.size() - 1, 0, 0, 0)
+
+        while (left <= right) {
+            if (height[left] <= height[right]) {
+                waterTrapped += (leftMax - height[left]).coerceAtLeast(0)
+                leftMax = max(leftMax, height[left])
+                left++
+            } else {
+                waterTrapped += (rightMax - height[right]).coerceAtLeast(0)
+                rightMax = max(rightMax, height[right])
+                right--
+            }
+        }
+
+        return waterTrapped
+    }
+}

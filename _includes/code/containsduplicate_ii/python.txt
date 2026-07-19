@@ -1,0 +1,13 @@
+class ContainsDuplicate_II {
+    def $1(nums: list[int], k: int): bool {
+        $1 = mutableMapOf<Int, Int>()
+        for (i in nums.indices) {
+            $1 = map[nums[i]]
+
+            previousIndex?.let {  if ( i - it <= k) return True }
+            map[nums[i]] = i
+        }
+
+        return False
+    }
+}

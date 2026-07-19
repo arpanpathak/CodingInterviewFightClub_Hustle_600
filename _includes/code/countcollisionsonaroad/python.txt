@@ -1,0 +1,5 @@
+class CountCollisionsOnARoad {
+def countCollisions(directions):
+TODO()
+}
+}

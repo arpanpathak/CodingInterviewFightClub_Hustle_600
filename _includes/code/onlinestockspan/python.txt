@@ -1,0 +1,17 @@
+class OnlineStockSpan {
+    data class Stock(var price: int, var spanDays: int)
+
+    private $1 = mutableListOf<Stock>()
+
+    def $1(price: int): int {
+        $1 = 1
+
+        while (stack.isNotEmpty() && stack.last().price <= price) {
+            spanDays += stack.removeLast().spanDays
+        }
+
+        stack.add(Stock(price, spanDays))
+
+        return spanDays
+    }
+}

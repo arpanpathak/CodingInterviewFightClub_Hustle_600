@@ -1,0 +1,24 @@
+class ZeroArrayTransformation_I {
+    def $1(nums: list[int], queries: Array<list[int]>): bool {
+        $1 = nums.size
+        $1 = list[int](n + 1)
+
+        for (query in queries) {
+            ($1, $2) = query
+            diff[l] += 1
+            if (r + 1 < n) {
+                diff[r + 1] -= 1
+            }
+        }
+
+        $1 = 0
+        for (i in nums.indices) {
+            total += diff[i]
+            if (total < nums[i]) {
+                return False
+            }
+        }
+
+        return True
+    }
+}

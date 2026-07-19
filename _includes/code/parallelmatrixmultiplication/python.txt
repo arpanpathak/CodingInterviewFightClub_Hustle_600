@@ -1,0 +1,59 @@
+def $1(size: int): Array<list[int]> =
+    Array(size) { list[int](size) { Random.nextInt(100) } }
+
+/**
+ * @param a
+ */
+def $1(a: Array<list[int]>, b: Array<list[int]>): Array<list[int]> {
+    $1 = Array(a.size) { list[int](b[0].size) }
+    for (i in a.indices) {
+        for (j in b[0].indices) {
+            for (k in b.indices) {
+                result[i][j] += a[i][k] * b[k][j]
+            }
+        }
+    }
+    return result
+}
+
+suspend def $1(a: Array<list[int]>, b: Array<list[int]>): Array<list[int]> = coroutineScope {
+    $1 = Array(a.size) { list[int](b[0].size) }
+    $1 = Runtime.getRuntime().availableProcessors()
+    $1 = (a.size + numCoroutines - 1) / numCoroutines
+
+    $1 = List(numCoroutines) { idx ->
+        async(Dispatchers.Default) {
+            $1 = idx * chunkSize
+            $1 = min(startRow + chunkSize, a.size)
+            for (i in startRow until endRow) {
+                for (j in b[0].indices) {
+                    for (k in b.indices) {
+                        result[i][j] += a[i][k] * b[k][j]
+                    }
+                }
+            }
+        }
+    }
+    jobs.awaitAll()
+    result
+}
+
+def $1() {
+    $1 = 2000
+    $1 = generateRandomMatrix(size)
+    $1 = generateRandomMatrix(size)
+
+    $1 = measureTimeMillis {
+        $1 = matrixMultiplySequential(a, b)
+        print("Sequential result sample: ${result[0][0]}")
+    }
+    print("Time taken (Sequential): $timeSequential ms")
+
+    $1 = measureTimeMillis {
+        runBlocking {
+            $1 = matrixMultiplyParallel(a, b)
+            print("Parallel result sample: ${result[0][0]}")
+        }
+    }
+    print("Time taken (Parallel): $timeParallel ms")
+}

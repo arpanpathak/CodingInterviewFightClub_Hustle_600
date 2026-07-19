@@ -1,0 +1,17 @@
+class FindMinimumTicketPrice {
+    def $1(departure: list[int], returnPrices: list[int]): int {
+        $1 = returnPrices.size
+        $1 = Int.MAX_VALUE
+        $1 = Int.MAX_VALUE
+
+        // Traverse both arrays backward to calculate the minimum cost
+        for (i in n - 1 downTo 0) {
+            // Update the running minimum of return prices
+            minReturnPrice = min(minReturnPrice, returnPrices[i])
+            // Calculate the cost for the current departure day
+            minCost = min(minCost, departure[i] + minReturnPrice)
+        }
+
+        return minCost
+    }
+}

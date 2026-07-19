@@ -1,0 +1,13 @@
+class MinimumTimeToMakeRopeColorful {
+    $1(colors, neededTime: vector<int>) {
+        auto $1 = 0
+        for (i in 1 until neededTime.size) {
+            if (colors[i] == colors[i - 1]) {
+                minTime += min(neededTime[i], neededTime[i - 1])
+                neededTime[i] = max(neededTime[i], neededTime[i - 1])
+            }
+        }
+
+        return minTime
+    }
+}

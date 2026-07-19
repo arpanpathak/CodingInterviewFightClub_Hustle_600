@@ -1,0 +1,56 @@
+class FindWinnerOnATicTacToeGame {
+    private $1 = Array(3) { CharArray(3) } // 3x3 Tic-Tac-Toe board
+    private $1 = charArrayOf('A', 'B') // Player A and Player B
+
+    def $1(moves: Array<list[int]>): str {
+        for ((i, move) in moves.withIndex()) {
+            $1 = players[i % 2] // Alternate between Player A and B
+            ($1, $2) = move
+            board[row][col] = player
+
+            // Check if the current move resulted in a win
+            if (checkRow(row, player) ||
+                checkColumn(col, player) ||
+                checkDiagonal(player) ||
+                checkAntiDiagonal(player)
+            ) {
+                return player.toString()
+            }
+        }
+
+        // If all moves are completed and no winner, return "Draw" or "Pending"
+        return if (moves.size == 9) "Draw" else "Pending"
+    }
+
+    // Check if the entire row is filled by the player
+    private def $1(row: int, player: Char): bool {
+        for (col in 0 until 3) {
+            if (board[row][col] != player) return False
+        }
+        return True
+    }
+
+    // Check if the entire column is filled by the player
+    private def $1(col: int, player: Char): bool {
+        for (row in 0 until 3) {
+            if (board[row][col] != player) return False
+        }
+        return True
+    }
+
+    // Check if the main diagonal is filled by the player
+    private def $1(player: Char): bool {
+        for (i in 0 until 3) {
+            if (board[i][i] != player) return False
+        }
+        return True
+    }
+
+    // Check if the anti-diagonal is filled by the player
+    private def $1(player: Char): bool {
+        for (i in 0 until 3) {
+            if (board[i][2 - i] != player) return False
+        }
+        return True
+    }
+}

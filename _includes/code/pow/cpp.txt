@@ -1,0 +1,35 @@
+class pow {
+    $1(x: Double, n): Double {
+        $1(x: Double, n: Long): Double {
+            if (n == 0L) return 1.0
+
+            auto $1 = pow(x, n/2)
+            return when(n % 2) {
+                0L -> half * half
+                else -> x * half * half
+            }
+        }
+        return if (n >=0) pow(x, n.toLong()) else 1 / pow(x, n.toLong())
+    }
+
+    $1(x: Double, n): Double {
+        auto $1 = x
+        auto $1 = n.toLong()
+        auto $1 = 1.0
+
+        if (exponent < 0) {
+            base = 1 / base
+            exponent = -exponent
+        }
+
+        while (exponent > 0) {
+            if (exponent % 2 == 1L) {
+                result *= base
+            }
+            base *= base
+            exponent /= 2
+        }
+
+        return result
+    }
+}

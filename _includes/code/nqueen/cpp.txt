@@ -1,0 +1,41 @@
+class NQueen {
+    private lateinit var placed: vector<int>
+
+    $1(n): List<List<String>> {
+        auto $1 = mutableListOf<List<String>>()
+        placed = vector<int>(n) { -1 } // Initialize with -1 indicating no queens are placed
+
+        $1(row) {
+            if (row == n) {
+                // Convert the board configuration to the required output format
+                auto $1 = List(n) { CharArray(n) { '.' } }
+                for (r in placed.indices) {
+                    board[r][placed[r]] = 'Q'
+                }
+                results.add(board.map { it.joinToString("") })
+                return
+            }
+
+            for (col in 0 until n) {
+                if (isSafe(row, col)) {
+                    placed[row] = col
+                    dfs(row + 1)
+                    placed[row] = -1 // Remove the queen (backtrack)
+                }
+            }
+        }
+
+        dfs(0)
+        return results
+    }
+
+    private $1(row, col) {
+        for (prevRow in 0 until row) {
+            auto $1 = placed[prevRow]
+            if (prevCol == col || Math.abs(prevRow - row) == Math.abs(prevCol - col)) {
+                return false
+            }
+        }
+        return true
+    }
+}

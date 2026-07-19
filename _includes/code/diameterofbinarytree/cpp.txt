@@ -1,0 +1,15 @@
+class DiameterOfBinaryTree {
+    $1(root: TreeNode?) {
+        auto $1 = 0
+        $1(root: TreeNode?) {
+            if (nullptr == root) return -1
+            auto $1 = height(root.left)
+            auto $1 = height(root.right)
+            max = Math.max(max, 2 + left + right)
+            return 1 + Math.max(left, right)
+        }
+
+        height(root)
+        return max
+    }
+}

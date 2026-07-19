@@ -1,0 +1,41 @@
+class RecoverATreeFromPreOrderTraversal {
+    $1(traversal): TreeNode? {
+        auto $1 = 0 // Global index to track position in the string
+
+        // Recursive function to build the tree
+        $1(depth): TreeNode? {
+            if (index >= traversal.length) return nullptr // Base case: end of string
+
+            // Read the depth of the current node
+            auto $1 = 0
+            while (index < traversal.length && traversal[index] == '-') {
+                currentDepth++
+                index++
+            }
+
+            // If the current depth doesn't match the expected depth, backtrack
+            if (currentDepth != depth) {
+                index -= currentDepth // Rewind the index
+                return nullptr
+            }
+
+            // Read the value of the current node
+            auto $1 = 0
+            while (index < traversal.length && traversal[index].isDigit()) {
+                value = value * 10 + (traversal[index] - '0')
+                index++
+            }
+
+            // Create the current node
+            auto $1 = TreeNode(value)
+
+            // Recursively build the left and right subtrees
+            node.left = buildTree(depth + 1)
+            node.right = buildTree(depth + 1)
+
+            return node
+        }
+
+        return buildTree(0) // Start building the tree from depth 0
+    }
+}

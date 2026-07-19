@@ -1,0 +1,17 @@
+class FindMinimumTicketPrice {
+    $1(departure: vector<int>, returnPrices: vector<int>) {
+        auto $1 = returnPrices.size
+        auto $1 = Int.MAX_VALUE
+        auto $1 = Int.MAX_VALUE
+
+        // Traverse both arrays backward to calculate the minimum cost
+        for (i in n - 1 downTo 0) {
+            // Update the running minimum of return prices
+            minReturnPrice = min(minReturnPrice, returnPrices[i])
+            // Calculate the cost for the current departure day
+            minCost = min(minCost, departure[i] + minReturnPrice)
+        }
+
+        return minCost
+    }
+}

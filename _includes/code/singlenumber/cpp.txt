@@ -1,0 +1,7 @@
+class SingleNumber {
+    $1(nums: vector<int>) {
+        auto $1 = 0
+        nums.forEach { xorSum = xorSum xor it}
+        return xorSum
+    }
+}

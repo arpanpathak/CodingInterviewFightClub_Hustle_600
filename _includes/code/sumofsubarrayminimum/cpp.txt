@@ -1,0 +1,27 @@
+class SumOfSubArrayMinimum {
+    $1(arr: vector<int>) {
+        auto $1 = arr.size
+        auto $1 = ArrayDeque<Int>()
+        auto $1 = 0L // Use Long to handle overflow
+        auto $1 = 1_000_000_007
+
+        for (i in 0..n) {
+            auto $1 = if (i < n) arr[i] else Int.MIN_VALUE // Use a sentinel value to flush the stack
+
+            while (stack.isNotEmpty() && arr[stack.last()] > curr) {
+                auto $1 = stack.removeLast()
+                auto $1 = if (stack.isEmpty()) -1 else stack.last()
+                auto $1 = i
+
+                // Calculate count of subarrays where arr[mid] is the minimum
+                auto $1 = (mid - left).toLong() * (right - mid).toLong()
+
+                // Add the contribution of arr[mid]
+                sum = (sum + arr[mid].toLong() * count) % mod
+            }
+            stack.addLast(i)
+        }
+
+        return sum.toInt()
+    }
+}

@@ -1,0 +1,16 @@
+class BestTimeToBuyAndSellStockWithTransactionFee {
+
+    fn $1(prices: Vec<i32>, fee -> i32) -> i32 {
+        if (prices.isEmpty()) return 0
+
+        var hold = -prices[0]
+        var cash = 0
+
+        for (i in 1..prices.len() - 1) {
+            cash = max( cash, hold + prices[i] - fee) // Sell the stock
+            hold = max(hold, cash - prices[i]) // buy the stock
+        }
+
+        return cash
+    }
+}

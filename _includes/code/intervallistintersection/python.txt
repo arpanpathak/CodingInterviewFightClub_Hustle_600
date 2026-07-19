@@ -1,0 +1,23 @@
+class IntervalListIntersection {
+    def $1(firstList: Array<list[int]>, secondList: Array<list[int]>): Array<list[int]> {
+        $1 = mutableListOf<list[int]>()
+
+        var (i, j) = 0 to 0
+
+        while (i < firstList.size && j < secondList.size) {
+            ($1, $2) = firstList[i]
+            ($1, $2) = secondList[j]
+
+            $1 = max(start1, start2)
+            $1 = min(end1, end2)
+
+            if (startMax <= endMin) {
+                result.add(intArrayOf(startMax, endMin))
+            }
+
+            if (end1 < end2) i++ else j++
+        }
+
+        return result.toTypedArray()
+    }
+}

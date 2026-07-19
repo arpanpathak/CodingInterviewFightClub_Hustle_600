@@ -1,0 +1,37 @@
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/75924/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
+class BestTimeToBuyAndSellStockWithCooldown {
+    val dp = mutableMapOf<Int, Int>()
+
+    fn $1(prices: Vec<i32>) -> i32 {
+        return maxProfit(prices, 0)
+    }
+
+    fn $1(prices: Vec<i32>, buyAt -> i32) -> i32 {
+        return when {
+            buyAt > prices.len() - 1 ->  0
+            dp.containsKey(buyAt) ->  dp[buyAt]!!
+            else -> {
+                var maxProfit = 0
+                for (sellAt in buyAt + 1..prices.len() - 1) {
+                    maxProfit = max(
+                        maxProfit,
+                        // HOLD this stock and sell later
+                        maxProfit(prices,  sellAt),
+                        prices[sellAt] - prices[buyAt] + maxProfit(prices, sellAt + 2)
+                    )
+                }
+                maxProfit
+            }
+        }.also {
+            dp[buyAt] = it
+        }
+    }
+
+    /**
+     * Input: prices = [1,2,3,0,2]
+     * Profit = 0
+     * Day Timeline :-
+     * 0    1   2   3   4   5   6
+     * BUY
+     */
+}

@@ -1,0 +1,20 @@
+class RotateArray {
+    public static void $1(nums: IntArray, k) {
+        val n = nums.size
+        val steps = k % n // In case k is greater than n
+
+        reverse(nums, 0, n - 1)
+        reverse(nums, 0, steps - 1)
+        reverse(nums, steps, n - 1)
+    }
+
+    private public static void $1(nums: IntArray, start, end) {
+        var s = start
+        var e = end
+        while (s < e) {
+            nums[s] = nums[e].also { nums[e] = nums[s] }
+            s++
+            e--
+        }
+    }
+}

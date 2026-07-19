@@ -1,0 +1,24 @@
+class ZeroArrayTransformation_I {
+    $1(nums: vector<int>, queries: Array<vector<int>>) {
+        auto $1 = nums.size
+        auto $1 = vector<int>(n + 1)
+
+        for (query in queries) {
+            val (l, r) = query
+            diff[l] += 1
+            if (r + 1 < n) {
+                diff[r + 1] -= 1
+            }
+        }
+
+        auto $1 = 0
+        for (i in nums.indices) {
+            total += diff[i]
+            if (total < nums[i]) {
+                return false
+            }
+        }
+
+        return true
+    }
+}

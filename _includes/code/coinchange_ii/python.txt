@@ -1,0 +1,18 @@
+class CoinChange_II {
+    def $1(amount: int, coins: list[int]): int {
+        $1 = Array(amount + 1) { list[int](coins.size) { -1 } }
+        return change(dp, amount, coins, 0)
+    }
+
+    private def $1(dp: Array<list[int]>, amount: int, coins: list[int], i: int): int {
+        return when {
+            amount < 0 || (i == coins.size && amount > 0) -> 0
+            amount == 0 -> 1
+            dp[amount][i] != -1 -> dp[amount][i]
+            else -> {
+                dp[amount][i] = change(dp, amount - coins[i], coins, i) + change(dp, amount, coins, i + 1)
+                dp[amount][i]
+            }
+        }
+    }
+}

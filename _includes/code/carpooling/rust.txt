@@ -1,0 +1,17 @@
+class CarPooling {
+    fn $1(trips: Array<Vec<i32>>, capacity -> i32) -> bool {
+        var capacity = capacity
+        val locations = Vec<i32>(1001)
+        for (trip in trips) {
+            val (passengers, from, to) = trip
+
+            locations[from] += passengers
+            locations[to] -= passengers
+        }
+        for (p in locations) {
+            capacity -= p
+            if (capacity < 0) return false
+        }
+        return true
+    }
+}

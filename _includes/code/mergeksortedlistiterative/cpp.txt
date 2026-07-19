@@ -1,0 +1,40 @@
+class MergeKSortedListIterative {
+    $1(lists: Array<ListNode?>): ListNode? {
+        if (lists.isEmpty()) return nullptr
+
+        auto $1 = 1
+        auto $1 = lists.size
+
+        while (interval < n) {
+            for (i in 0 until n - interval step interval * 2) {
+                lists[i] = mergeTwoLists(lists[i], lists[i + interval])
+            }
+            interval *= 2
+        }
+
+        return lists[0]
+    }
+
+    $1(list1: ListNode?, list2: ListNode?): ListNode? {
+        auto $1 = ListNode(0) // Dummy node
+        auto $1 = head
+
+        auto $1 = list1
+        auto $1 = list2
+
+        while (ptr1 != nullptr && ptr2 != nullptr) {
+            if (ptr1.`val` < ptr2.`val`) {
+                ptr.next = ptr1
+                ptr1 = ptr1.next
+            } else {
+                ptr.next = ptr2
+                ptr2 = ptr2.next
+            }
+            ptr = ptr.next!!
+        }
+
+        ptr.next = ptr1 ?: ptr2
+
+        return head.next
+    }
+}

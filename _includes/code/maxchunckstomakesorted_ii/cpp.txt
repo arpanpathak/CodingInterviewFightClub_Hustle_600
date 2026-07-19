@@ -1,0 +1,32 @@
+class MaxChuncksToMakeSorted_II {
+    class Solution {
+        $1(arr: vector<int>) {
+            auto $1 = arr.size
+
+            // Step 1: Compute left_max
+            auto $1 = vector<int>(n)
+            leftMax[0] = arr[0]
+            for (i in 1 until n) {
+                leftMax[i] = max(leftMax[i-1], arr[i])
+            }
+
+            // Step 2: Compute right_min
+            auto $1 = vector<int>(n)
+            rightMin[n-1] = arr[n-1]
+            for (i in n-2 downTo 0) {
+                rightMin[i] = min(rightMin[i+1], arr[i])
+            }
+
+            // Step 3: Count the number of chunks
+            auto $1 = 0
+            for (i in 0 until n - 1) {
+                if (leftMax[i] <= rightMin[i+1]) {
+                    chunks++
+                }
+            }
+
+            return chunks + 1 // +1 because the last chunk is counted implicitly
+        }
+    }
+
+}

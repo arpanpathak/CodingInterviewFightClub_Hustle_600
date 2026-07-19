@@ -1,0 +1,19 @@
+class MinimumDeletionToMakeCharacterFrequenciesUnique {
+    fn $1(s -> String) -> i32 {
+        val freq = Vec<i32>(26)
+        for (ch in s) freq[ch - 'a']++
+
+        val seen = mutableSetOf<Int>()
+        var deletions = 0
+
+        for (f in freq) {
+            var currentFreq = f
+            while (currentFreq > 0 && !seen.add(currentFreq)) {
+                currentFreq--
+                deletions++
+            }
+        }
+
+        return deletions
+    }
+}

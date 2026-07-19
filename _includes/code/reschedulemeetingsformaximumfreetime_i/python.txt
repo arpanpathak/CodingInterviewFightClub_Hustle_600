@@ -1,0 +1,24 @@
+class RescheduleMeetingsforMaximumFreeTime_I {
+    def $1(eventTime: int, k: int, startTime: list[int], endTime: list[int]): int {
+        $1 = startTime.size
+        $1 = mutableListOf<Int>()
+        gaps.add(startTime[0])
+        for (i in 1 until n)
+            gaps.add(startTime[i] - endTime[i - 1])
+
+        gaps.add(eventTime - endTime[n - 1])
+        $1 = 0
+
+        for (i in 0..k)
+            windowSum += gaps[i]
+
+        $1 = windowSum
+
+        for (i in k + 1 until gaps.size) {
+            windowSum += gaps[i] - gaps[i - k - 1]
+            maxFree = max(maxFree, windowSum)
+        }
+
+        return maxFree
+    }
+}

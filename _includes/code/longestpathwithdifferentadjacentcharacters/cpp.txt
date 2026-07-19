@@ -1,0 +1,27 @@
+class LongestPathWithDifferentAdjacentCharacters {
+    $1(parent: vector<int>, s) {
+        auto $1 = Array(parent.size) { mutableListOf<Int>() }
+        for (i in 1 until parent.size) {
+            children[parent[i]].add(i)
+        }
+
+        auto $1 = 1
+
+        $1(node) {
+            auto $1 = 1 // At least the node itself
+
+            for (child in children[node]) {
+                auto $1 = dfs(child)
+                if (s[child] != s[node]) {
+                    maxLength = max(maxLength, maxDepth + childDepth)
+                    maxDepth = max(maxDepth, childDepth + 1)
+                }
+            }
+
+            return maxDepth
+        }
+
+        dfs(0)
+        return maxLength
+    }
+}

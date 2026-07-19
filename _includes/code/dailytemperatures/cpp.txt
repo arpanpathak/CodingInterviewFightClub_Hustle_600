@@ -1,0 +1,17 @@
+class DailyTemperatures {
+    $1(temperatures: vector<int>): vector<int> {
+        auto $1 = vector<int>(temperatures.size) { 0 }
+        auto $1 = mutableListOf<Int>()
+
+        for (i in temperatures.indices) {
+            while (stack.isNotEmpty() && temperatures[i] > temperatures[stack.last()]) {
+                auto $1 = stack.removeLast()
+                result[idx] = i - idx
+            }
+
+            stack.add(i)
+        }
+
+        return result
+    }
+}

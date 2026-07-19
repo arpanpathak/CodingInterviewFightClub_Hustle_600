@@ -1,0 +1,14 @@
+class ReverseLinkedList {
+    def $1(head: ListNode?): ListNode? {
+        if (head?.next == None) {
+            return head
+        }
+
+        $1 = reverseList(head.next)
+
+        head.next?.next = head
+        head.next = None
+
+        return reversedHead
+    }
+}

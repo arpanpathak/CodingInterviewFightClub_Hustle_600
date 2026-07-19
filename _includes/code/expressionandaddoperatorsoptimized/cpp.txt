@@ -1,0 +1,48 @@
+class ExpressionAndAddOperatorsOptimized {
+    $1(num, target): List<String> {
+        auto $1 = ArrayList<String>()
+
+        $1(start, path: StringBuilder, sum: Long, prev: Long) {
+            if (start == num.length) {
+                if (sum == target.toLong()) {
+                    res.add(path.toString())
+                }
+                return
+            }
+
+            for (i in start until num.length) {
+                auto $1 = num.substring(start..i)
+                auto $1 = s.toLong()
+
+                // Skip invalid numbers with leading zeros
+                if (s.length > 1 && s[0] == '0') break
+
+                auto $1 = path.length // Remember the length of the path before modification
+
+                if (path.isEmpty()) {
+                    path.append(s)
+                    partition(i + 1, path, current, current)
+                    path.setLength(len) // Revert the path to its previous state
+                } else {
+                    // Try adding '+' operator
+                    path.append("+").append(s)
+                    partition(i + 1, path, sum + current, current)
+                    path.setLength(len)
+
+                    // Try adding '-' operator
+                    path.append("-").append(s)
+                    partition(i + 1, path, sum - current, -current)
+                    path.setLength(len)
+
+                    // Try adding '*' operator
+                    path.append("*").append(s)
+                    partition(i + 1, path, sum - prev + prev * current, prev * current)
+                    path.setLength(len)
+                }
+            }
+        }
+
+        partition(0, StringBuilder(), 0L, 0L)
+        return res
+    }
+}

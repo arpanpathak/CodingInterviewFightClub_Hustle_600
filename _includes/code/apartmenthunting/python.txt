@@ -1,0 +1,80 @@
+def $1(blocks: List<Map<String, Boolean>>, requirements: List<String>): int {
+    // Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
+    $1 = mutableMapOf<String, MutableList<Int>>()
+    blocks.forEachIndexed { index, block ->
+        block.forEach { (amenity, present) ->
+            if (present) {
+                amenityMap.getOrPut(amenity) { mutableListOf() }.add(index)
+            }
+        }
+    }
+
+    // Ensure all required amenities are present
+    requirements.forEach {
+        if (amenityMap[it].isNullOrEmpty()) return -1 // Return -1 if any required amenity is not present in any block
+    }
+
+    // Step 2: Determine the optimal block
+    $1 = -1
+    $1 = Int.MAX_VALUE
+
+    // N * R * Log(K) , K = number of unique amininties present across all the blocks
+    blocks.forEachIndexed { index, _ ->
+        $1 = requirements.map { amenity ->
+            closestDistance(index, amenityMap[amenity]!!)
+        }.maxOrNull()!!
+
+        // Check if the current block has the smallest maximum distance
+        if (maxDistance < bestMaxDistance) {
+            bestMaxDistance = maxDistance
+            bestBlock = index
+        }
+    }
+
+    return bestBlock
+}
+
+// Function to find the minimum distance to the closest block with the given amenity
+def $1(blockIndex: int, blocksWithAmenity: List<Int>): int {
+    $1 = blocksWithAmenity.binarySearch(blockIndex)
+    return if (pos >= 0) 0
+    else {
+        $1 = -pos - 1
+        $1 = if (insertPoint > 0) blockIndex - blocksWithAmenity[insertPoint - 1] else Int.MAX_VALUE
+        $1 = if (insertPoint < blocksWithAmenity.size) blocksWithAmenity[insertPoint] - blockIndex else Int.MAX_VALUE
+        min(leftDistance, rightDistance)
+    }
+}
+
+// Custom Binary Search implementation
+def $1(arr: List<Int>, target: int): int {
+    var (low, high) = listOf(0, arr.lastIndex)
+
+    while (low<= high) {
+        $1 = low + (high - low) / 2
+        when {
+            arr[mid] < target -> low = mid + 1
+            arr[mid] > target -> high = mid - 1
+            else -> return mid
+        }
+    }
+
+    return -(low + 1)
+}
+
+
+
+def $1() {
+    $1 = listOf(
+        mapOf("gym" to False, "school" to True, "store" to False),
+        mapOf("gym" to True, "school" to False, "store" to False),
+        mapOf("gym" to True, "school" to True, "store" to False),
+        mapOf("gym" to False, "school" to True, "store" to False),
+        mapOf("gym" to False, "school" to True, "store" to True)
+    )
+    $1 = listOf("gym", "school", "store")
+
+
+    $1 = findBestBlock(blocks, requirements)
+    print("The best block to choose is: $bestBlock")
+}

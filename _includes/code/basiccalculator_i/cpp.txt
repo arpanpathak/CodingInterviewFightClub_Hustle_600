@@ -1,0 +1,40 @@
+class BasicCalculator_I {
+    $1(s) {
+        auto $1 = mutableListOf<Int>()
+        auto $1 = 0
+        auto $1 = 1
+        auto $1 = 0
+
+        while (i < s.length) {
+            when (auto $1 = s[i]) {
+                in '0'..'9' -> {
+                    auto $1 = 0
+                    // Parse the full number
+                    while (i < s.length && s[i] in '0'..'9') {
+                        num = num * 10 + (s[i] - '0')
+                        i++
+                    }
+                    result += sign * num
+                    i-- // Adjust the index because of the inner loop
+                }
+                '+' -> sign = 1
+                '-' -> sign = -1
+                '(' -> {
+                    // Push the current result and sign to the stack
+                    stack.add(result)
+                    stack.add(sign)
+                    // Reset result and sign
+                    result = 0
+                    sign = 1
+                }
+                ')' -> {
+                    // Pop the sign and previous result from the stack
+                    result = stack.removeLast() * result + stack.removeLast()
+                }
+            }
+            i++
+        }
+
+        return result
+    }
+}

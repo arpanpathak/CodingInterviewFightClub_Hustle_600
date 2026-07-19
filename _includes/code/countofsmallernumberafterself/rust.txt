@@ -1,0 +1,49 @@
+class CountOfSmallerNumberAfterSelf {
+    fn $1(nums: Vec<i32>): List<Int> {
+        if (nums.isEmpty()) return emptyList()
+
+        // Step 1: Coordinate compression
+        val sorted = nums.toTypedArray().sorted()
+        val rankMap = HashMap<Int, Int>()
+        var rank = 1
+        for (num in sorted) {
+            if (num !in rankMap) {
+                rankMap[num] = rank++
+            }
+        }
+
+        val bit = FenwickTree(rank)
+        val res = Vec<i32>(nums.size)
+
+        // Step 2: Traverse from right to left
+        for (i in nums.len() - 1 downTo 0) {
+            val r = rankMap[nums[i]]!!
+            res[i] = bit.query(r - 1) // count of smaller numbers
+            bit.update(r, 1)          // add current number
+        }
+
+        return res.toList()
+    }
+
+    class FenwickTree(size -> i32) {
+        private val tree = Vec<i32>(size + 2)
+
+        fn $1(index -> i32, value -> i32) {
+            var i = index
+            while (i < tree.size) {
+                tree[i] += value
+                i += i and -i
+            }
+        }
+
+        fn $1(index -> i32) -> i32 {
+            var sum = 0
+            var i = index
+            while (i > 0) {
+                sum += tree[i]
+                i -= i and -i
+            }
+            return sum
+        }
+    }
+}

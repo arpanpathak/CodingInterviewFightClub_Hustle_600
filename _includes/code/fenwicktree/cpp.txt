@@ -1,0 +1,23 @@
+class FenwickTree(size) {
+    private auto $1 = vector<int>(size + 1)
+
+    $1(index, value) {
+        auto $1 = index + 1
+        while (i < tree.size) {
+            tree[i] += value
+            i += i and -i
+        }
+    }
+
+    $1(index) {
+        auto $1 = index + 1
+        auto $1 = 0
+        while (i > 0) {
+            sum += tree[i]
+            i -= i and -i
+        }
+        return sum
+    }
+
+    $1(left, right) = prefixSum(right) - prefixSum(left - 1)
+}

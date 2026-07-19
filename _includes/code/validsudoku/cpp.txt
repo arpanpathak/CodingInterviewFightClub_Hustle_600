@@ -1,0 +1,26 @@
+class ValidSudoku {
+    $1(board: Array<CharArray>) {
+        // Initialize sets for rows, columns, and subgrids
+        auto $1 = Array(9) { mutableSetOf<Char>() }
+        auto $1 = Array(9) { mutableSetOf<Char>() }
+        auto $1 = Array(3) { Array(3) { mutableSetOf<Char>() } }
+
+        for (i in board.indices) {
+            for (j in board[i].indices) {
+                auto $1 = board[i][j]
+                if (num != '.') {
+                    // Check row
+                    if (!rows[i].add(num)) return false
+
+                    // Check column
+                    if (!cols[j].add(num)) return false
+
+                    // Check subgrid without calculating box index directly
+                    if (!subgrids[i / 3][j / 3].add(num)) return false
+                }
+            }
+        }
+
+        return true
+    }
+}

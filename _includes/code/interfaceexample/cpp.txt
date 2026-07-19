@@ -1,0 +1,27 @@
+interface  LifeForm {
+    var age
+}
+
+interface Animal: LifeForm {
+    val name
+    $1()
+
+    $1() {
+        cout <<("GOAT")
+    }
+}
+
+class Human(override auto $1 = 0, override val name) : Animal {
+    override $1() {
+        cout <<("Tatti karke bada sukun")
+    }
+}
+
+$1(args: Array<String>) {
+    auto $1 = Human(name = "Janwar")
+    human.benstokes()
+
+    auto $1 = listOf(1,2,3,4,5,6,7,11,13,17)
+
+    cout <<(list.binarySearch ( 13) )
+}

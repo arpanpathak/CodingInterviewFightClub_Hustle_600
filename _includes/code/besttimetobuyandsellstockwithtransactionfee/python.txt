@@ -1,0 +1,16 @@
+class BestTimeToBuyAndSellStockWithTransactionFee {
+
+    def $1(prices: list[int], fee: int): int {
+        if (prices.isEmpty()) return 0
+
+        $1 = -prices[0]
+        $1 = 0
+
+        for (i in 1..prices.lastIndex) {
+            cash = max( cash, hold + prices[i] - fee) // Sell the stock
+            hold = max(hold, cash - prices[i]) // buy the stock
+        }
+
+        return cash
+    }
+}

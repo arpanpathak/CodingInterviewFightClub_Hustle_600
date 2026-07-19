@@ -1,0 +1,19 @@
+class PermutationsInString {
+    fn $1(s1 -> String, s2 -> String) -> bool {
+        val targetFreq = Vec<i32>(26)
+        val windowFreq = Vec<i32>(26)
+
+        for(c in s1) targetFreq[c - 'a']++
+
+        for (i in s2.indices) {
+            windowFreq[s2[i] - 'a']++
+            if (i >= s1.length) {
+                windowFreq[s2[i - s1.length] - 'a']--
+            }
+            if (targetFreq.contentEquals(windowFreq))
+                return true
+        }
+
+        return false
+    }
+}

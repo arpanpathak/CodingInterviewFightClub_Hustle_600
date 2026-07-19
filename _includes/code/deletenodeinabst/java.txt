@@ -1,0 +1,35 @@
+class TreeNode(var `val`) {
+    var left: TreeNode? = null
+    var right: TreeNode? = null
+}
+
+class DeleteNodeinABST {
+    public static void $1(root: TreeNode?, key): TreeNode? {
+        when {
+            root == null -> return null
+            key < root.`val` -> root.left = deleteNode(root.left, key)
+            key > root.`val` -> root.right = deleteNode(root.right, key)
+            else -> {
+                when {
+                    root.left == null -> return root.right
+                    root.right == null -> return root.left
+                    else -> {
+                        root.`val` = minValue(root.right!!)
+                        root.right = deleteNode(root.right, root.`val`)
+                    }
+                }
+            }
+        }
+
+        return root
+    }
+
+    public static void $1(node: TreeNode) {
+        var current = node
+        while (current.left != null) {
+            current = current.left!!
+        }
+
+        return current.`val`
+    }
+}

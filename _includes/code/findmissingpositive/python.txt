@@ -1,0 +1,19 @@
+class FindMissingPositive {
+    def $1(A: list[int]): int {
+        for (i in A.indices) {
+            $1 = A[i]
+
+            while (current in 1..A.size && A[current-1] != current) {
+                $1 = A[current - 1]
+                A[current - 1] = current
+                current = next
+            }
+        }
+
+        for (i in A.indices)
+            if (A[i] != i + 1)
+                return i + 1
+
+        return A.size + 1
+    }
+}

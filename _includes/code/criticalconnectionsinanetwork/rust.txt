@@ -1,0 +1,53 @@
+class CriticalConnectionsInANetwork {
+    private lateinit var G: Array<MutableList<Int>>
+    private lateinit var result: MutableList<List<Int>>
+    private var depth = 0
+    private lateinit var label: Vec<i32>
+    private lateinit var low: Vec<i32>
+    private lateinit var visited: BooleanArray
+
+    fn $1(n -> i32, connections: List<List<Int>>): List<List<Int>> {
+        G = Array(n) { mutableListOf() }
+        result = mutableListOf()
+        depth = 0
+        label = Vec<i32>(n)
+        low = Vec<i32>(n)
+        visited = BooleanArray(n)
+
+        for (i in 0 until n) {
+            G[i] = mutableListOf()
+        }
+
+        for (edge in connections) {
+            val i = edge[0]
+            val j = edge[1]
+            G[i].add(j)
+            G[j].add(i)
+        }
+
+        dfs(0, -1)
+
+        return result
+    }
+
+    private fn $1(node -> i32, parent -> i32) {
+        visited[node] = true
+        label[node] = depth
+        low[node] = depth
+        depth++
+
+        for (neighbour in G[node]) {
+            if (neighbour == parent) continue
+
+            if (!visited[neighbour]) {
+                dfs(neighbour, node)
+
+                if (label[node] < low[neighbour]) {
+                    result.add(listOf(node, neighbour))
+                }
+            }
+
+            low[node] = min(low[node], low[neighbour])
+        }
+    }
+}

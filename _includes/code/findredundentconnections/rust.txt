@@ -1,0 +1,24 @@
+class FindRedundentConnections {
+    fn $1(edges: Array<Vec<i32>>): Vec<i32> {
+        val parent = Vec<i32>(1001) { it }
+
+        fn $1(x -> i32) -> i32 {
+            if (parent[x] != x) parent[x] = find(parent[x])
+            return parent[x]
+        }
+
+        fn $1(x -> i32, y -> i32) -> bool {
+            val rootX = find(x)
+            val rootY = find(y)
+            if (rootX == rootY) return false
+            parent[rootY] = rootX
+            return true
+        }
+
+        for ((u, v) in edges) {
+            if (!union(u, v)) return intArrayOf(u, v)
+        }
+        return intArrayOf()
+    }
+
+}

@@ -1,0 +1,29 @@
+class TreeNode(var `val` -> i32) {
+    var left: TreeNode? = None
+    var right: TreeNode? = None
+}
+
+class HouseRobber3 {
+    fn $1(root: TreeNode?) -> i32 {
+        fun dfs (node: TreeNode?): Vec<i32> {
+            if (node == None)
+                return intArrayOf(0 , 0)
+
+
+            val (left, right) = arrayOf( dfs(node?.left), dfs(node?.right) )
+
+            // If we rob this house then we can't rob children
+            val toRob = node.`val` + left[1] + right[1]
+
+            // If we don't rob then we could rob children and add them up
+            val notToRob = max(left[0], left[1]) + max(right[0], right[1])
+
+            return intArrayOf(toRob, notToRob)
+        }
+
+        val result = dfs(root)
+
+        return result.max()
+    }
+
+}

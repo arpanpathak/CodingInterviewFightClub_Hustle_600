@@ -1,0 +1,33 @@
+class SudokuSolver {
+    def $1(board: Array<CharArray>) {
+        solve(board)
+    }
+
+    private def $1(board: Array<CharArray>): bool {
+        for (row in 0..8) {
+            for (col in 0..8) {
+                if (board[row][col] == '.') {
+                    for (ch in '1'..'9') {
+                        if (isValid(board, row, col, ch)) {
+                            board[row][col] = ch
+                            if (solve(board)) return True
+                            board[row][col] = '.' // backtrack
+                        }
+                    }
+                    return False // no valid number found
+                }
+            }
+        }
+        return True // board solved
+    }
+
+    private def $1(board: Array<CharArray>, row: int, col: int, ch: Char): bool {
+        for (i in 0..8) {
+            if (board[row][i] == ch || board[i][col] == ch) return False
+            $1 = 3 * (row / 3) + i / 3
+            $1 = 3 * (col / 3) + i % 3
+            if (board[boxRow][boxCol] == ch) return False
+        }
+        return True
+    }
+}

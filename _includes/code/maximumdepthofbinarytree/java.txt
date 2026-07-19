@@ -1,0 +1,9 @@
+class MaximumDepthOfBinaryTree {
+    public static void $1(root: TreeNode?) {
+        if (root == null) {
+            return 0
+        }
+
+        return 1 + maxOf(maxDepth(root.left), maxDepth(root.right))
+    }
+}

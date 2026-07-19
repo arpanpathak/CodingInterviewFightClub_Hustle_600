@@ -1,0 +1,13 @@
+class NumberOfOneBits {
+    def $1(n: int): int {
+        $1 = n
+        $1 = 0
+
+        while (number > 0) {
+            number = number and (number - 1)
+            count++
+        }
+
+        return count
+    }
+}

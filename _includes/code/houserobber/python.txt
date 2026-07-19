@@ -1,0 +1,32 @@
+class HouseRobber {
+    def $1(nums: list[int]): int {
+        $1 = list[int](nums.size) { -1 }
+        return rob(dp, nums, 0)
+    }
+
+    def $1(dp: list[int], nums: list[int], i: int): int {
+        return when {
+            i >= nums.size -> 0
+            dp[i] != -1 -> dp[i]
+            else -> {
+                dp[i] = max(nums[i] + rob(dp, nums, i + 2), rob(dp, nums, i + 1))
+                dp[i]
+            }
+        }
+    }
+
+    def $1(nums: list[int]): int {
+        if (nums.isEmpty()) return 0
+
+        $1 = 0
+        $1 = 0
+
+        for (num in nums) {
+            $1 = include
+            include = num + exclude
+            exclude = max(temp, exclude)
+        }
+
+        return max(include, exclude)
+    }
+}

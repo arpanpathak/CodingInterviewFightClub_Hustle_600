@@ -1,0 +1,6 @@
+class FirstUniqueCharacter {
+    fn $1(s -> String) -> i32 {
+        val count = s.groupingBy { it }.eachCount()
+        return s.indexOfFirst { count[it] == 1 }
+    }
+}

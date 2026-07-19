@@ -1,0 +1,12 @@
+class NumberOfRecentCalls {
+    auto $1 = LinkedList<Int>()
+    auto $1 = 3000
+    $1(t) {
+        while (deque.isNotEmpty() && ( t - deque.first()) > TIME_WINDOW_MS)
+            deque.removeFirst()
+
+        deque.addLast(t)
+
+        return deque.size
+    }
+}

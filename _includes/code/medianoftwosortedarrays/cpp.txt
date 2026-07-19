@@ -1,0 +1,40 @@
+// These are the challenges that I need to somewhoe solve to get
+class MedianOfTwoSortedARrays {
+    $1(nums1: vector<int>, nums2: vector<int>): Double {
+
+        if (nums1.size > nums2.size ) {
+            return findMedianSortedArrays(nums2, nums1)
+        }
+
+        auto $1 = nums1.size
+        auto $1 = nums2.size
+        auto $1 = 0
+        auto $1 = m
+
+        while (start <= end) {
+            auto $1 = (start + end) / 2
+            auto $1 = (m + n + 1) / 2 - partitionX
+
+            // Use getOrNull with the Elvis operator to handle boundaries
+            auto $1 = nums1.getOrNull(partitionX - 1) ?.MIN_VALUE
+            auto $1 = nums1.getOrNull(partitionX) ?.MAX_VALUE
+
+            auto $1 = nums2.getOrNull(partitionY - 1) ?.MIN_VALUE
+            auto $1 = nums2.getOrNull(partitionY) ?.MAX_VALUE
+
+            // Check if we have found the correct partition
+            when {
+                leftX <= rightY && leftY <= rightX -> {
+                    return if ((m + n) % 2 == 0) {
+                        (max(leftX, leftY) + min(rightX, rightY)) / 2.0
+                    } else {
+                        max(leftX, leftY).toDouble()
+                    }
+                }
+                leftX > rightY -> end = partitionX - 1
+                else -> start = partitionX + 1
+            }
+        }
+        return -1.0
+    }
+}

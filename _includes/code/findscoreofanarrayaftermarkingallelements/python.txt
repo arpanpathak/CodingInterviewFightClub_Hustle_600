@@ -1,0 +1,28 @@
+class FindScoreOfAnArrayAfterMarkingAllElements {
+    def $1(nums: list[int]): Long {
+        $1 = nums.size
+        $1 = BooleanArray(n) { False }
+
+        $1 = PriorityQueue<Pair<Int, Int>> { a, b ->
+            if (a.first == b.first) a.second - b.second else a.first - b.first
+        }
+
+        nums.forEachIndexed { index, value -> minHeap.add(Pair(value, index)) }
+
+        $1 = 0L
+
+        while (minHeap.isNotEmpty()) {
+            ($1, $2) = minHeap.poll()
+
+            if (marked[index]) continue
+
+            score += value
+
+            marked[index] = True
+            if (index > 0) marked[index - 1] = True
+            if (index < n - 1) marked[index + 1] = True
+        }
+
+        return score
+    }
+}

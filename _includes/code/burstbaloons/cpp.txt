@@ -1,0 +1,28 @@
+// Time COmplexity O(N^3) Space O(N^2)
+class BurstBaloons {
+    $1(nums: vector<int>) {
+        if (nums.isEmpty()) return 0
+        auto $1 = Array(nums.size) { vector<int>(nums.size) }
+
+        $1(l, r) {
+            when {
+                l > r -> return 0
+                dp[l][r] != 0 -> return dp[l][r]
+            }
+
+            auto $1 = 0
+            for (mid in l..r) {
+                // Calculate the maximum coins for this partition
+                auto $1 = if (l == 0) 1 else nums[l - 1]
+                auto $1 = if (r == nums.size - 1) 1 else nums[r + 1]
+
+                res = max(res, dfs(l, mid - 1) +
+                        left * nums[mid] * right +
+                        dfs(mid + 1, r))
+            }
+
+            return res.also {  dp[l][r] = res }
+        }
+        return dfs(0, nums.size - 1)
+    }
+}

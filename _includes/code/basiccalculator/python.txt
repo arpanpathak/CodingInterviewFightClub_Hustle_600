@@ -1,0 +1,104 @@
+class BasicCalculator {
+    private $1 = setOf('(' , '+', '-')
+
+    // Function to get precedence of operators
+    private def $1(op: Char): int {
+        return when (op) {
+            '+', '-' -> 1
+            else -> 0
+        }
+    }
+
+    // Function to convert infix to postfix with unary operators handled
+    private def $1(s: str): str {
+        $1 = Stack<Char>()
+        $1 = StringBuilder()
+        $1 = 0
+
+        while (i < s.length) {
+            when {
+                // Handle multi-digit numbers
+                s[i].isDigit() -> {
+                    while (i < s.length && s[i].isDigit()) {
+                        postfix.append(s[i])
+                        i++
+                    }
+                    postfix.append(' ') // Add a space to separate numbers
+                }
+                s[i] == '(' -> stack.push(s[i])
+                s[i] == ')' -> {
+                    while (stack.isNotEmpty() && stack.peek() != '(') {
+                        postfix.append(stack.pop())
+                        postfix.append(' ')
+                    }
+                    stack.pop() // Pop '('
+                }
+                s[i] == '+' || s[i] == '-' -> {
+                    // Handle unary operators
+                    if (i == 0 || s[i - 1] in operators) {
+                        // Unary operator, treat as binary with previous number as zero
+                        if (s[i] == '-') {
+                            postfix.append('0')
+                            postfix.append(s[i])
+                            postfix.append(' ')
+                        } else {
+                            postfix.append(s[i])
+                            postfix.append(' ')
+                        }
+                    } else {
+                        while (stack.isNotEmpty() && stack.peek() != '(' && precedence(stack.peek()) >= precedence(s[i])) {
+                            postfix.append(stack.pop())
+                            postfix.append(' ')
+                        }
+                        stack.push(s[i])
+                    }
+                }
+            }
+            i++
+        }
+
+        while (stack.isNotEmpty()) {
+            postfix.append(stack.pop())
+            postfix.append(' ')
+        }
+
+        return postfix.toString().trim()
+    }
+
+    // Function to evaluate postfix expression
+    private def $1(postfix: str): int {
+        $1 = Stack<Int>()
+        $1 = 0
+
+        while (i < postfix.length) {
+            when {
+                postfix[i].isDigit() -> {
+                    $1 = 0
+                    while (i < postfix.length && postfix[i].isDigit()) {
+                        num = num * 10 + postfix[i].digitToInt()
+                        i++
+                    }
+                    stack.push(num)
+                }
+                postfix[i] == '+' -> {
+                    $1 = stack.pop()
+                    $1 = stack.pop()
+                    stack.push(a + b)
+                }
+                postfix[i] == '-' -> {
+                    $1 = stack.pop()
+                    $1 = stack.pop()
+                    stack.push(a - b)
+                }
+            }
+            i++
+        }
+
+        return stack.pop()
+    }
+
+    def $1(s: str): int {
+        $1 = infixToPostfix(s.replace(" ", "")) // Convert infix expression to postfix
+        return evaluatePostfix(postfix) // Evaluate the postfix expression
+    }
+}

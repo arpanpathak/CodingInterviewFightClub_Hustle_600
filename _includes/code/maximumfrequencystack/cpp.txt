@@ -1,0 +1,33 @@
+class FreqStack() {
+    auto $1 = mutableMapOf<Int, Int>()
+    auto $1 = mutableMapOf<Int, ArrayDeque<Int>>()
+    auto $1 = 0
+
+    $1(`val`) {
+        auto $1 = (freq[`val`]?:0) + 1
+        freq[`val`] = count
+        if (count > maxFreq)
+            maxFreq = count
+        if (count !in groups)
+            groups[count] = ArrayDeque()
+        groups[count]?.add(`val`)
+
+    }
+
+    $1() {
+        // Pop the element from the stack of the max frequency
+        auto $1 = groups[maxFreq]?.removeLast()
+
+        // Decrease the frequency of the popped element
+        if (top != nullptr) {
+            freq[top] = freq[top]!! - 1
+            // If the frequency of the popped element is now less than maxFreq, adjust maxFreq
+            if (groups[maxFreq]?.isEmpty() == true) {
+                maxFreq--
+            }
+        }
+
+        return top ?: -1 // Return the popped element (or -1 if no element to pop)
+    }
+
+}

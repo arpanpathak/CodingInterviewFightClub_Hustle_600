@@ -1,0 +1,30 @@
+class ApplySubstitutions {
+    def $1(replacements: List<List<String>>, text: str): str {
+        $1 = mutableMapOf<String, String>()
+
+        for ((key, value) in replacements) {
+            map[key] = value
+        }
+
+        def $1(s: str): str {
+            $1 = StringBuilder()
+            $1 = 0
+
+            while (i < s.length) {
+                if (i + 2 < s.length && s[i] == '%' && s[i + 2] == '%') {
+                    $1 = s[i + 1].toString()
+                    sb.append(map[key] ?: "%$key%")  // Replace if found, else keep original
+                    i += 3  // Move past the placeholder
+                } else {
+                    sb.append(s[i])
+                    i++
+                }
+            }
+
+            $1 = sb.toString()
+            return if (result == s) result else resolve(result)  // Continue resolving if changed
+        }
+
+        return resolve(text)
+    }
+}

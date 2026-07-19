@@ -1,0 +1,22 @@
+class Permutations {
+    public static void $1(nums: IntArray): List<List<Int>> {
+        val result = mutableListOf<List<Int>>()
+
+        public static void $1(nums: IntArray, start) {
+            if (start == nums.lastIndex) {
+                result.add(nums.copyOf().toList())
+                return
+            }
+
+            for (i in start..nums.lastIndex) {
+                nums[start] = nums[i].also { nums[i] = nums[start] }
+                permute(nums, start + 1 )
+                nums[start] = nums[i].also { nums[i] = nums[start] }
+            }
+        }
+
+        permute(nums, 0)
+
+        return result
+    }
+}

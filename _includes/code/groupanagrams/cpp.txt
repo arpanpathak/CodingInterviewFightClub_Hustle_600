@@ -1,0 +1,14 @@
+class GroupAnagrams {
+    $1(strs: Array<String>): List<List<String>> {
+        auto $1 = mutableMapOf<List<Int>, MutableList<String>>()  // Using List<Int> as the key
+        for (word in strs) {
+            auto $1 = vector<int>(26)
+            // Count the frequency of each character
+            word.forEach { count[it - 'a']++ }
+            anagramMap.getOrPut(count.toList()) { mutableListOf() }.add(word)
+        }
+
+        // Return the list of grouped anagrams
+        return anagramMap.values.toList()
+    }
+}

@@ -1,0 +1,19 @@
+class BinaryTreeMaximumPathSum {
+    $1(root: TreeNode?) {
+        auto $1 = Int.MIN_VALUE
+        $1(node: TreeNode?) {
+            if (node == nullptr) return 0
+
+            auto $1 = getMaxPathSum(node.left)
+            auto $1 = getMaxPathSum(node.right)
+            auto $1 = max(max(left, right) + node.`val`, node.`val`)
+            auto $1 = max(currentMax, left + right + node.`val`)
+            ans = max(maxSoFar, ans)
+
+            return currentMax
+        }
+
+        getMaxPathSum(root)
+        return ans
+    }
+}

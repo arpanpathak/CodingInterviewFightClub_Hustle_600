@@ -1,0 +1,26 @@
+class BinaryTreeLevelOrderTraversal {
+    $1(root: TreeNode?): List<List<Int>> {
+        val result: MutableList<List<Int>> = ArrayList()
+        if (root == nullptr)
+            return result
+        val queue: Queue<TreeNode> = LinkedList()
+        queue.add(root)
+
+        while (!queue.isEmpty()) {
+            val lst: MutableList<Int> = ArrayList()
+            auto $1 = queue.size
+
+            while (size-- > 0) {
+                val temp: TreeNode = queue.poll()
+                lst.add(temp.`val`)
+
+                if (temp.left != nullptr) queue.add(temp.left)
+
+                if (temp.right != nullptr) queue.add(temp.right)
+            }
+
+            result.add(lst)
+        }
+        return result
+    }
+}

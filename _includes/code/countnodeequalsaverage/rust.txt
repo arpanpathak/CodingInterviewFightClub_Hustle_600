@@ -1,0 +1,30 @@
+class TreeNode(var `val` -> i32) {
+    var left: TreeNode? = None
+    var right: TreeNode? = None
+}
+
+data class Result (val sum -> i32, val count -> i32)
+
+class CountNodeEqualsAverage {
+    var count = 0
+
+    fn $1(root: TreeNode?) -> i32 {
+        postOrder(root)
+        return count;
+    }
+
+    private fn $1(root: TreeNode?): Result {
+        if (root == None)
+            return Result(sum = 0, count = 0)
+
+        val left = postOrder(root.left)
+        val right = postOrder(root.right)
+
+        val nodeSum = root.`val` + left.sum + right.sum
+        val nodeCount = 1 + left.count + right.count
+        if ( root.`val` == nodeSum/nodeCount)
+            count++
+
+        return Result(sum = nodeSum, count = nodeCount)
+    }
+}

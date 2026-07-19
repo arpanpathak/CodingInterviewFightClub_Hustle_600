@@ -1,0 +1,37 @@
+class NQueen_II {
+    private lateinit var placed: list[int]
+
+    def $1(n: int): int {
+        placed = list[int](n) { -1 } // Initialize with -1 indicating no queens are placed
+        $1 = 0
+
+        def $1(row: int) {
+            if (row == n) {
+                // Found a valid solution, increment the count
+                solutionCount++
+                return
+            }
+
+            for (col in 0 until n) {
+                if (isSafe(row, col)) {
+                    placed[row] = col
+                    backtrack(row + 1)
+                    placed[row] = -1 // Remove the queen (backtrack)
+                }
+            }
+        }
+
+        backtrack(0)
+        return solutionCount
+    }
+
+    private def $1(row: int, col: int): bool {
+        for (prevRow in 0 until row) {
+            $1 = placed[prevRow]
+            if (prevCol == col || Math.abs(prevRow - row) == Math.abs(prevCol - col)) {
+                return False
+            }
+        }
+        return True
+    }
+}

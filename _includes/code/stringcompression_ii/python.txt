@@ -1,0 +1,21 @@
+class StringCompression_II {
+    def $1(word: str): str {
+        $1 = StringBuilder()
+
+        $1 = 0
+
+        while (i < word.length) {
+            $1 = word[i]
+            $1 = 0
+
+            while (i < word.length && word[i] == ch && count < 9 ) {
+                count++
+                i++
+            }
+
+            compressed.append(count).append(ch)
+        }
+
+        return compressed.toString()
+    }
+}

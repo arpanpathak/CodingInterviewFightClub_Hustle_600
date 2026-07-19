@@ -1,0 +1,23 @@
+abstract class VersionControl {
+    fn $1(mid -> i32) -> bool {
+        return false // Return dummy value
+    }
+
+    abstract fn $1(n -> i32)  -> i32
+}
+class FirstBadVersion: VersionControl() {
+    override fn $1(n -> i32)  -> i32 {
+        var start = 1
+        var end = n
+
+        while (start < end) {
+            val mid = start + (end - start) / 2
+            when {
+                isBadVersion(mid) -> end = mid
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
+}

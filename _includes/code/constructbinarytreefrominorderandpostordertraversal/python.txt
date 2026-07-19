@@ -1,0 +1,24 @@
+class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
+    def $1(inorder: list[int], postorder: list[int]): TreeNode? {
+        // Build Inverted InOrder Index Map
+        $1 = mutableMapOf<Int, Int>()
+        inorder.forEachIndexed { index, value -> rootIndices[value] = index }
+
+        $1 = postorder.size - 1
+
+        def $1(left: int, right: int): TreeNode? {
+            return when {
+                left > right -> None
+                else -> {
+                    $1 = postorder[postIndex--]
+                    TreeNode(rootVal).apply {
+                        this.right = buildTree(rootIndices[rootVal]!! + 1, right)  // Build right subtree first
+                        this.left = buildTree(left, rootIndices[rootVal]!! - 1)    // Build left subtree
+                    }
+                }
+            }
+        }
+
+        return buildTree(0, inorder.size - 1)
+    }
+}

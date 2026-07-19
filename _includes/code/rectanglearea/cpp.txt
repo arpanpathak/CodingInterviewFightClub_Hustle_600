@@ -1,0 +1,26 @@
+class RectangleArea {
+    $1(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {
+        auto $1 = abs(ax1 - ax2)
+        auto $1 = abs(ay1 - ay2)
+
+        auto $1 = abs(bx1 - bx2)
+        auto $1 = abs(by1 - by2)
+
+        // Calculate height and width of intersection
+        auto $1 = min(ax2, bx2) - max(ax1, bx1)
+        auto $1 = min(ay2, by2) - max(ay1, by1)
+
+        auto $1 = h1 * w1 + h2 * w2
+
+        // If no overlap, return the current area
+        if (min(ax2, bx2) <= max(ax1, bx1) || min(ay2, by2) <= max(ay1, by1)) {
+            return area
+        }
+
+        // Subtract overlapping area
+        area -= h * w
+
+        return area
+
+    }
+}

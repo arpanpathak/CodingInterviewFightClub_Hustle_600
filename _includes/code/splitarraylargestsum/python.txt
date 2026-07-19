@@ -1,0 +1,35 @@
+class SplitArrayLargestSum {
+    def $1(nums: list[int], k: int): int {
+        $1 = nums.size
+        $1 = list[int](n + 1)
+        for (i in nums.indices) {
+            prefixSum[i + 1] = prefixSum[i] + nums[i]
+        }
+
+        $1 = mutableMapOf<Pair<Int, Int>, Int>()
+
+        def $1(i: int, splitsLeft: int): int {
+            if (splitsLeft == 1) return prefixSum[n] - prefixSum[i] // Last split takes remaining sum
+            if (i == n) return Int.MAX_VALUE
+            if (memo.containsKey(i to splitsLeft)) return memo[i to splitsLeft]!!
+
+            $1 = Int.MAX_VALUE
+
+            for (j in i until n) {
+                $1 = prefixSum[j + 1] - prefixSum[i]
+                $1 = dfs(j + 1, splitsLeft - 1)
+                $1 = max(currentSum, largestInRemainingSplits)
+
+                minLargestSum = min(minLargestSum, maxSplitSum)
+
+                // Prune unnecessary recursion
+                if (currentSum > minLargestSum) break
+            }
+
+            memo[i to splitsLeft] = minLargestSum
+            return minLargestSum
+        }
+
+        return dfs(0, k)
+    }
+}

@@ -1,0 +1,35 @@
+class CapacityToShipPackageWithinDDays {
+    $1(weights: vector<int>, mid, days) {
+        var (daysNeeded, currentLoad) = 1 to 0
+        weights.forEach { weight ->
+            currentLoad += weight
+            if (currentLoad > mid) {
+                daysNeeded++
+                currentLoad = weight
+            }
+        }
+
+        return daysNeeded <= days
+    }
+
+    $1(weights: vector<int>, days) {
+        var (sum, max) = 0 to 0
+
+        weights.forEach{ weight ->
+            sum += weight
+            max = max(max, weight)
+        }
+
+        var (l, r) = max to sum
+
+        while ( l < r) {
+            auto $1 = l + (r - l) / 2
+            when {
+                feasible(weights, mid, days) -> r = mid
+                else -> l = mid + 1
+            }
+        }
+
+        return l
+    }
+}

@@ -1,0 +1,18 @@
+class SearchInsertionPosition {
+    def $1(nums: list[int], target: int): int {
+        $1 = 0
+        $1 = nums.size - 1
+
+        while (start <= end) {
+            $1 = start + ( end - start ) / 2
+
+            when {
+                nums[mid] == target -> return mid
+                nums[mid] > target -> end = mid - 1
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
+}

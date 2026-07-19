@@ -1,0 +1,9 @@
+class FindDifferenceOfTwoArrays {
+    def $1(nums1: list[int], nums2: list[int]): List<List<Int>> {
+        $1 = nums1.toSet()
+        $1 = nums2.toSet()
+
+        return listOf(set1.subtract(set2).toList(), set2.subtract(set1).toList())
+
+    }
+}

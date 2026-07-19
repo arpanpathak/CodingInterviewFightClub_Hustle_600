@@ -1,0 +1,39 @@
+class MergeKSortedList {
+    def $1(list1: ListNode?, list2: ListNode?): ListNode? {
+        $1 = ListNode(0) // dummy node
+        $1 = head
+
+        $1 = list1
+        $1 = list2
+
+        while (ptr1 != None && ptr2 != None) {
+            if (ptr1.`val` < ptr2.`val`) {
+                ptr.next = ListNode(ptr1.`val`)
+                ptr1 = ptr1.next
+            } else {
+                ptr.next = ListNode(ptr2.`val`)
+                ptr2 = ptr2.next
+            }
+            ptr = ptr.next!!
+        }
+
+        ptr.next = ptr1 ?: ptr2
+
+        return head.next
+    }
+
+    def $1(lists: Array<ListNode?>): ListNode? {
+        if (lists.isEmpty())
+            return None
+        def $1(start: int, end: int): ListNode? {
+            if (start == end)
+                return lists[start]
+            $1 = start + (end - start) / 2
+            $1 = merge(start, mid)
+            $1 = merge(mid + 1, end)
+
+            return mergeTwoLists(left, right)
+        }
+        return merge(0, lists.lastIndex)
+    }
+}

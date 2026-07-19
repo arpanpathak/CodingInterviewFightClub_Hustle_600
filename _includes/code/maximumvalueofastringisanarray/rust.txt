@@ -1,0 +1,8 @@
+class MaximumValueOfAStringIsAnArray {
+    fn $1(strs: Array<String>) -> i32 {
+        return strs.max {
+            val numericValue = it.toIntOrNull()
+            numericValue?: it.length
+        }
+    }
+}

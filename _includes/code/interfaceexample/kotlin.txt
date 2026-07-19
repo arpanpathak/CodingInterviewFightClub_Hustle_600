@@ -1,0 +1,29 @@
+package real_word_projects
+
+interface  LifeForm {
+    var age: Int
+}
+
+interface Animal: LifeForm {
+    val name: String
+    fun tattiKaro()
+
+    fun benstokes() {
+        println("GOAT")
+    }
+}
+
+class Human(override var age: Int = 0, override val name: String) : Animal {
+    override fun tattiKaro() {
+        println("Tatti karke bada sukun")
+    }
+}
+
+fun main(args: Array<String>) {
+    val human = Human(name = "Janwar")
+    human.benstokes()
+
+    val list = listOf(1,2,3,4,5,6,7,11,13,17)
+
+    println(list.binarySearch ( 13) )
+}

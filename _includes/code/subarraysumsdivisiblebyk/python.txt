@@ -1,0 +1,17 @@
+class SubArraySumsDivisibleByK {
+    def $1(A: list[int], K: int): int {
+        $1 = 0
+        $1 = 0
+        $1 = mutableMapOf<Int, Int>()
+        hm[0] = 1
+
+        for (num in A) {
+            sum += num
+            $1 = Math.floorMod(sum, K)
+            ans += hm.getOrDefault(rem, 0)
+            hm[rem] = hm.getOrDefault(rem, 0) + 1
+        }
+
+        return ans
+    }
+}

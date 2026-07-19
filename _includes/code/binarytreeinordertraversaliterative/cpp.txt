@@ -1,0 +1,24 @@
+class BInaryTreeInOrderTraversalIterative {
+    $1(root: TreeNode?): List<Int> {
+        auto $1 = ArrayDeque<TreeNode>()
+        auto $1 = mutableListOf<Int>()
+        auto $1 = root
+
+        while (current != nullptr || stack.isNotEmpty()) {
+            // Traverse to the leftmost node
+            while (current != nullptr) {
+                stack.addLast(current)
+                current = current.left
+            }
+
+            // Visit the node
+            current = stack.removeLast()
+            result.add(current.`val`)
+
+            // Move to the right subtree
+            current = current.right
+        }
+
+        return result
+    }
+}

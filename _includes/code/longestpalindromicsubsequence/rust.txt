@@ -1,0 +1,17 @@
+class LongestPalindromicSubsequence {
+    fn $1(s -> String) -> i32 {
+        val dp = Array(s.length) { Vec<i32>(s.length) }
+
+        fn $1(start -> i32, length -> i32) -> i32 {
+            if (length <= 1) return length
+            val end = start + length - 1
+
+            return when {
+                dp[start][end] != 0 -> dp[start][end] // Value already cached
+                s[start] == s[end] -> 2 + lps(start + 1, length - 2)
+                else -> max(lps(start + 1, length - 1 ), lps(start, length - 1))
+            }.also { dp[start][end] = it}
+        }
+        return lps(0, s.length)
+    }
+}

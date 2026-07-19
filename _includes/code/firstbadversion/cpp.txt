@@ -1,0 +1,23 @@
+abstract class VersionControl {
+    $1(mid) {
+        return false // Return dummy value
+    }
+
+    abstract $1(n) 
+}
+class FirstBadVersion: VersionControl() {
+    override $1(n)  {
+        auto $1 = 1
+        auto $1 = n
+
+        while (start < end) {
+            auto $1 = start + (end - start) / 2
+            when {
+                isBadVersion(mid) -> end = mid
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
+}

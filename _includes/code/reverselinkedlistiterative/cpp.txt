@@ -1,0 +1,13 @@
+class ReverseLinkedListIterative {
+    $1(head: ListNode?): ListNode? {
+        var prev: ListNode? = nullptr
+        auto $1 = head
+        while (current != nullptr) {
+            auto $1 = current.next
+            current.next = prev
+            prev = current
+            current = nextTemp
+        }
+        return prev
+    }
+}

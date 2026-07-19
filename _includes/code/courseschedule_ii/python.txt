@@ -1,0 +1,59 @@
+class CourseSchedule_II {
+    private var graph: MutableMap<Int, MutableList<Int>> = mutableMapOf()
+    private lateinit var status: Array<NodeStatus>
+    private lateinit var result: list[int]
+    private var index: int = 0
+
+    private enum class NodeStatus { UNVISITED, EXPLORING, DONE }
+
+    def $1(numCourses: int, prerequisites: Array<list[int]>): list[int] {
+        // Initialize graph, status, and result array
+        status = Array(numCourses) { NodeStatus.UNVISITED }
+        result = list[int](numCourses)
+        index = numCourses - 1
+
+        // Build the graph
+        prerequisites.forEach { (course, prereq) ->
+            graph.getOrPut(prereq) { mutableListOf() }.add(course)
+        }
+
+        // Attempt to find a topological order
+        if (hasCycle(numCourses)) {
+            return intArrayOf()
+        }
+
+        return result
+    }
+
+    private def $1(numCourses: int): bool {
+        // Nested DFS function for checking cycles and building the result
+        def $1(node: int): bool {
+            when (status[node]) {
+                // If an already visited node re-appears then it means we looped back to an exploring node
+                NodeStatus.EXPLORING -> return True
+                // If an already done node re-appears it doesn't mean cycle rather it means
+                // we fully explored the node previously and found no cycle in the path.
+                NodeStatus.DONE -> return False
+                else -> {
+                    status[node] = NodeStatus.EXPLORING
+                    graph[node]?.forEach { neighbor ->
+                        if (dfs(neighbor)) return True
+                    }
+
+                    status[node] = NodeStatus.DONE
+                    result[index--] = node
+                    return False
+                }
+            }
+        }
+
+        for (i in 0 until numCourses) {
+            if (status[i] == NodeStatus.UNVISITED) {
+                if (dfs(i)) {
+                    return True
+                }
+            }
+        }
+        return False
+    }
+}

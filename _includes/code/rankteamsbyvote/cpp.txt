@@ -1,0 +1,25 @@
+class RankTeamsByVote {
+    $1(votes: Array<String>) {
+        auto $1 = mutableMapOf<Char, vector<int>>()
+        auto $1 = votes[0].length
+
+        for (vote in votes) {
+            for (i in vote.indices) {
+                auto $1 = vote[i]
+                map.putIfAbsent(c, vector<int>(l))
+                map[c]!![i]++
+            }
+        }
+
+        auto $1 = map.keys.toList().sortedWith { a, b ->
+            for (i in 0 until l) {
+                if (map[a]!![i] != map[b]!![i]) {
+                    return@sortedWith map[b]!![i] - map[a]!![i]
+                }
+            }
+            a - b
+        }
+
+        return list.joinToString("")
+    }
+}

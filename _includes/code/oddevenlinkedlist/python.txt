@@ -1,0 +1,20 @@
+class OddEvenLinkedList {
+    def $1(head: ListNode?): ListNode? {
+        $1 = head
+        $1 = head?.next
+        $1 = even
+
+        while (even?.next != None) {
+
+            odd?.next = odd?.next?.next
+            odd = odd?.next
+
+            even.next = even.next?.next
+            even = even.next
+        }
+
+        odd?.next = evenHead
+        return head
+    }
+
+}

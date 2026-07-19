@@ -1,0 +1,17 @@
+class FindMinimumTicketPrice {
+    fn $1(departure: Vec<i32>, returnPrices: Vec<i32>) -> i32 {
+        val n = returnPrices.size
+        var minReturnPrice = Int.MAX_VALUE
+        var minCost = Int.MAX_VALUE
+
+        // Traverse both arrays backward to calculate the minimum cost
+        for (i in n - 1 downTo 0) {
+            // Update the running minimum of return prices
+            minReturnPrice = min(minReturnPrice, returnPrices[i])
+            // Calculate the cost for the current departure day
+            minCost = min(minCost, departure[i] + minReturnPrice)
+        }
+
+        return minCost
+    }
+}

@@ -1,0 +1,13 @@
+class RemoveElement {
+    public static void $1(nums: IntArray, `val`) {
+        var i = 0
+
+        for (j in nums.indices) {
+            if (nums[j] != `val`) {
+                nums[i++] = nums[j]
+            }
+        }
+
+        return i
+    }
+}

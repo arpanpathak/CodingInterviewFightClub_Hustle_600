@@ -1,0 +1,35 @@
+class LinkedListCycle {
+    def $1(head: ListNode?): bool {
+        if (head == None || head.next == None) return False
+
+        $1 = head
+        $1 = head.next
+
+        while (slow != fast ) {
+            if (fast == None || fast.next == None)
+                return False
+
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+
+        return True
+    }
+
+    // Better version
+    def $1(head: ListNode?): bool {
+        $1 = head
+        $1 = head
+
+        while (fast != None && fast.next != None) {
+            slow = slow?.next
+            fast = fast.next?.next
+
+            if (slow == fast) {
+                return True
+            }
+        }
+
+        return False
+    }
+}

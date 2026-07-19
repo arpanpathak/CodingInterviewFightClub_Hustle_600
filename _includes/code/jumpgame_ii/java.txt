@@ -1,0 +1,16 @@
+class JumpGame_II {
+    public static void $1(nums: IntArray) {
+        var (jumps, currentEnd, farthest) = listOf(0, 0, 0)
+
+        for (i in 0 until nums.lastIndex) {
+            farthest = maxOf(farthest, i + nums[i])
+
+            if ( i >= currentEnd) {
+                jumps++
+                currentEnd = farthest
+            }
+        }
+
+        return jumps
+    }
+}

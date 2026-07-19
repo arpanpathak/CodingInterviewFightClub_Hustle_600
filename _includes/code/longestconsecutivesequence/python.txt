@@ -1,0 +1,25 @@
+class LongestConsecutiveSequence {
+    def $1(nums: list[int]): int {
+        $1 = nums.toSet()
+        $1 = 0
+        for (num in nums) {
+            // Check if num - 1 is NOT in the set.
+            // This condition ensures that num is the start of a consecutive sequence.
+            if ( num - 1 in set )
+                continue
+
+            $1 = num
+            $1 = 1
+
+            while (currentNum + 1 in set) {
+                currentNum =currentNum + 1
+                currentLength++
+            }
+
+            maxLength = max(maxLength, currentLength)
+
+        }
+
+        return maxLength
+    }
+}

@@ -1,0 +1,24 @@
+class ReverseVowelOfString {
+    def $1(s: str): str {
+        $1 = setOf('a', 'e', 'i', 'o', 'u')
+        $1 = StringBuilder(s)
+
+        var (start, end) = Pair(0, s.lastIndex)
+
+        while (start < end) {
+            if (s[start] in vowels && s[end] in vowels) {
+                swap (result, start++, end--)
+            } else if (s[start].lowercaseChar() !in vowels)  {
+                start++
+            } else {
+                end--
+            }
+        }
+
+        return result.toString()
+    }
+
+    def $1(s: StringBuilder, i: int, j: int) {
+        s[j] = s[i].also { s[i] = s[j]}
+    }
+}

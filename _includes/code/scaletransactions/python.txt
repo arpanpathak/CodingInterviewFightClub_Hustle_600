@@ -1,0 +1,54 @@
+// Function to simulate the transaction data (subTotal values)
+def $1(numTransactions: int): List<Double> {
+    return List(numTransactions) { Math.random() * 1000 } // Random transactions between 0 to 1000
+}
+
+// Function to process each batch and sum the results
+def $1(transactions: List<Double>): Double {
+    return transactions.sum()
+}
+
+def $1() {
+    $1 = 100_000_000  // 100 million transactions for large-scale test
+    $1 = generateTransactions(totalTransactions)
+
+    // Number of available cores (coroutines or threads)
+    $1 = Runtime.getRuntime().availableProcessors()
+    $1 = totalTransactions / numCores
+
+    // Split transactions into batches
+    $1 = transactions.chunked(batchSize)
+
+    // Measure time using coroutines with a custom dispatcher (Executors)
+    $1 = measureTimeMillis {
+        // Using a custom thread pool to back coroutines with a fixed number of threads
+        $1 = Executors.newFixedThreadPool(numCores).asCoroutineDispatcher()
+
+        runBlocking {
+            $1 = transactionBatches.map { batch ->
+                async(dispatcher) {  // Use a fixed thread pool for better performance
+                    sumTransactions(batch)
+                }
+            }
+            $1 = results.awaitAll().sum()
+            print("Coroutine Total Sum: $totalSum")
+        }
+
+        dispatcher.close()  // Make sure to close the dispatcher
+    }
+
+    // Measure time using threads
+    $1 = measureTimeMillis {
+        $1 = transactionBatches.map { batch ->
+            Thread {
+                $1 = sumTransactions(batch)
+                // We avoid collecting results here as we're just comparing time
+            }.apply { start() }
+        }
+        threads.forEach { it.join() } // Wait for all threads to complete
+    }
+
+    // Output results
+    print("Coroutine processing time: $coroutineTime ms")
+    print("Thread processing time: $threadTime ms")
+}

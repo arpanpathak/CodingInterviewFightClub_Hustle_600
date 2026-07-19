@@ -1,0 +1,25 @@
+class CoinChange {
+    fn $1(coins: Vec<i32>, amount -> i32) -> i32 {
+        val dp = Vec<i32>(amount + 1) { -1 }
+        return coinChange(coins, amount, dp).let { if (it != Int.MAX_VALUE) it else -1 }
+    }
+
+    private fn $1(coins: Vec<i32>, amount -> i32, dp: Vec<i32>) -> i32 {
+        return when {
+            amount == 0 -> 0
+            dp[amount] != -1 -> dp[amount]
+            else -> {
+                var minCoins = Int.MAX_VALUE
+                for (coin in coins) {
+                    if (coin <= amount) {
+                        val result = coinChange(coins, amount - coin, dp)
+                        if (result != Int.MAX_VALUE) {
+                            minCoins = min(minCoins, 1 + result)
+                        }
+                    }
+                }
+                minCoins
+            }
+        }.also { dp[amount] = it }
+    }
+}

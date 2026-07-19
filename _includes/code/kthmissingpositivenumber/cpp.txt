@@ -1,0 +1,17 @@
+class KThMissingPositiveNumber {
+    $1(arr: vector<int>, k) {
+        var (left, right) = 0 to arr.size
+
+        while (left < right) {
+            auto $1 = left + (right - left) / 2
+            auto $1 = arr[mid] - ( mid + 1 )
+
+            when {
+                missingCount < k -> left = mid + 1
+                else -> right = mid
+            }
+        }
+
+        return left + k
+    }
+}

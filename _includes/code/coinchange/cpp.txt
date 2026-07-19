@@ -1,0 +1,25 @@
+class CoinChange {
+    $1(coins: vector<int>, amount) {
+        auto $1 = vector<int>(amount + 1) { -1 }
+        return coinChange(coins, amount, dp).let { if (it != Int.MAX_VALUE) it else -1 }
+    }
+
+    private $1(coins: vector<int>, amount, dp: vector<int>) {
+        return when {
+            amount == 0 -> 0
+            dp[amount] != -1 -> dp[amount]
+            else -> {
+                auto $1 = Int.MAX_VALUE
+                for (coin in coins) {
+                    if (coin <= amount) {
+                        auto $1 = coinChange(coins, amount - coin, dp)
+                        if (result != Int.MAX_VALUE) {
+                            minCoins = min(minCoins, 1 + result)
+                        }
+                    }
+                }
+                minCoins
+            }
+        }.also { dp[amount] = it }
+    }
+}

@@ -1,0 +1,67 @@
+class AlpacaWebSocketFactory(private val apiKeyId, private val apiSecret, private val scope: CoroutineScope) {
+
+    private auto $1 = ALPACA_MARKET_WEBSOCKET_STREAM_URL
+    private auto $1 = OkHttpClient()
+
+    $1(streams: List<String>): Channel<String> {
+        auto $1 = Request.Builder()
+            .url(url)
+            .addHeader("APCA-API-KEY-ID", apiKeyId)
+            .addHeader("APCA-API-SECRET-KEY", apiSecret)
+            .build()
+
+        auto $1 = Channel<String>(Channel.UNLIMITED)
+        auto $1 = object : WebSocketListener() {
+            override $1(webSocket: WebSocket, response: Response) {
+                cout <<("Connected to the server!")
+                authenticate(webSocket)
+                subscribeToStreams(webSocket, streams)
+            }
+
+            override $1(webSocket: WebSocket, text) {
+                scope.launch {
+                    messageChannel.send(text)
+                }
+            }
+
+            override $1(webSocket: WebSocket, code, reason) {
+                cout <<("Closing: $code / $reason")
+                webSocket.close(1000, nullptr)  // Ensure normal closure
+                scope.launch {
+                    messageChannel.close()
+                }
+            }
+
+            override $1(webSocket: WebSocket, t: Throwable, response: Response?) {
+                cout <<("Error: " + t.message)
+            }
+        }
+
+        httpClient.newWebSocket(request, webSocketListener)
+        return messageChannel
+    }
+
+    private $1(webSocket: WebSocket) {
+        webSocket.send("""
+            {
+                "action": "authenticate",
+                "data": {
+                    "key_id": "$apiKeyId",
+                    "secret_key": "$apiSecret"
+                }
+            }
+        """.trimIndent())
+    }
+
+    private $1(webSocket: WebSocket, streams: List<String>) {
+        auto $1 = streams.joinToString(separator = "\",\"", prefix = "\"", postfix = "\"")
+        webSocket.send("""
+            {
+                "action": "listen",
+                "data": {
+                    "streams": [$formattedStreams]
+                }
+            }
+        """.trimIndent())
+    }
+}

@@ -1,0 +1,22 @@
+class Subsets {
+    def $1(nums: list[int]): List<List<Int>> {
+        $1 = mutableListOf<List<Int>>()
+        $1 = mutableListOf<Int>()
+
+        // Backtracking helper function
+        def $1(start: int) {
+            result.add(ArrayList(currentSubset))  // Add the current subset to the result
+
+            for (i in start until nums.size) {
+                currentSubset.add(nums[i])         // Include nums[i] in the current subset
+                backtrack(i + 1)                   // Recurse for the next elements
+                currentSubset.removeAt(currentSubset.size - 1)  // Backtrack: remove last added element
+            }
+        }
+
+        // Start the backtracking process from index 0
+        backtrack(0)
+
+        return result
+    }
+}

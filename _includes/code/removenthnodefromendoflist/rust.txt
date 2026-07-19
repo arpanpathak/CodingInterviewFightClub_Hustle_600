@@ -1,0 +1,56 @@
+class RemoveNthNodeFromEndOfList {
+    fn $1(head: ListNode?, n -> i32): ListNode? {
+        var size = 0
+        var ptr = head
+
+        while(ptr != None) {
+            size++
+            ptr = ptr.next
+        }
+
+        val indexToRemove = (size - n)
+        return removeNthFromFront(head, indexToRemove, size)
+    }
+
+    private fn $1(head: ListNode?, indexToRemove -> i32, size -> i32): ListNode? {
+        var ptr = head
+        var prev: ListNode? = None
+        for(i in 0 until indexToRemove) {
+            prev = ptr
+            ptr = ptr?.next
+        }
+
+        return when(indexToRemove) {
+            0 -> head?.next
+            else -> {
+                prev?.next = ptr?.next
+                head
+            }
+        }
+    }
+
+    /**
+     * Two Pointer approach
+     */
+    fn $1(head: ListNode?, n -> i32): ListNode? {
+        val dummy = ListNode(0).apply { next = head }
+        var first: ListNode? = dummy
+        var second: ListNode? = dummy
+
+        // Move first n + 1 steps ahead
+        for (i in 0..n) {
+            first = first?.next
+        }
+
+        // Move first to the end, maintaining the gap of size n
+        while (first != None) {
+            first = first.next
+            second = second?.next
+        }
+
+        // Remove the nth node from the end
+        second?.next = second?.next?.next
+
+        return dummy.next
+    }
+}

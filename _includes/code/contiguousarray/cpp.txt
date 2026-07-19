@@ -1,0 +1,21 @@
+class ContiguousArray {
+    $1(nums: vector<int>) {
+        auto $1 = mutableMapOf<Int, Int>()
+        auto $1 = 0
+        auto $1 = 0
+
+        map[0] = -1
+
+        for (i in nums.indices) {
+            sum += if (nums[i] == 0) -1 else 1
+
+            if (map.containsKey(sum)) {
+                maxLen = max(maxLen, i - map[sum]!!)
+            } else {
+                map[sum] = i
+            }
+        }
+
+        return maxLen
+    }
+}

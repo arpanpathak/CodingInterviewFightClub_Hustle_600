@@ -1,0 +1,32 @@
+class HouseRobber {
+    fn $1(nums: Vec<i32>) -> i32 {
+        val dp = Vec<i32>(nums.size) { -1 }
+        return rob(dp, nums, 0)
+    }
+
+    fn $1(dp: Vec<i32>, nums: Vec<i32>, i -> i32) -> i32 {
+        return when {
+            i >= nums.size -> 0
+            dp[i] != -1 -> dp[i]
+            else -> {
+                dp[i] = max(nums[i] + rob(dp, nums, i + 2), rob(dp, nums, i + 1))
+                dp[i]
+            }
+        }
+    }
+
+    fn $1(nums: Vec<i32>) -> i32 {
+        if (nums.isEmpty()) return 0
+
+        var include = 0
+        var exclude = 0
+
+        for (num in nums) {
+            val temp = include
+            include = num + exclude
+            exclude = max(temp, exclude)
+        }
+
+        return max(include, exclude)
+    }
+}

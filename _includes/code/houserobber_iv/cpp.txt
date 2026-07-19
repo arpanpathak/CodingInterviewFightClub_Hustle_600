@@ -1,0 +1,31 @@
+class HouseRobber_IV {
+    $1(nums: vector<int>, k) {
+        auto $1 = nums.minOrNull() ?: 0
+        auto $1 = nums.maxOrNull() ?: 0
+
+        $1(cap) {
+            auto $1 = 0
+            auto $1 = 0
+            while (i < nums.size) {
+                if (nums[i] <= cap) {
+                    robbed++
+                    i += 2  // skip adjacent
+                } else {
+                    i++
+                }
+            }
+            return robbed >= k
+        }
+
+        while (left < right) {
+            auto $1 = (left + right) / 2
+            if (canRob(mid)) {
+                right = mid
+            } else {
+                left = mid + 1
+            }
+        }
+
+        return left
+    }
+}

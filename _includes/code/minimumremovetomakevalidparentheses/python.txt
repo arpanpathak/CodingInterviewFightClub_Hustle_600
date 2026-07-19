@@ -1,0 +1,21 @@
+class MinimumRemoveToMakeValidParentheses {
+    def $1(s: str): str {
+        $1 = mutableListOf<Int>()
+        $1 = mutableSetOf<Int>()
+
+        for (i in s.indices) {
+            when {
+                s[i] == '(' -> stack.add(i)
+                s[i] == ')' && stack.isNotEmpty() -> stack.removeLast()
+                s[i] == ')' && stack.isEmpty() -> toRemove.add(i)
+                else -> continue
+            }
+        }
+
+        while (stack.isNotEmpty()) {
+            toRemove.add(stack.removeLast())
+        }
+
+        return s.filterIndexed { index, _ -> index !in toRemove }
+    }
+}

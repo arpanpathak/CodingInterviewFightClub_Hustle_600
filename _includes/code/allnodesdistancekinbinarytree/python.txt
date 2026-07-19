@@ -1,0 +1,35 @@
+class AllNodesDistanceKinBinaryTree {
+    $1 = mutableMapOf<TreeNode, TreeNode?>()  // To store parent references
+
+    def $1(root: TreeNode?, target: TreeNode?, k: int): List<Int> {
+        $1 = mutableListOf<Int>()
+
+        // Helper function to perform DFS and populate parent map, then find target
+        def $1(node: TreeNode?, parent: TreeNode?) {
+            if (node == None) return
+            parentMap[node] = parent
+            if (node == target) collectNodesAtDistanceK(node, k, mutableSetOf(), result)
+            dfs(node.left, node)
+            dfs(node.right, node)
+        }
+
+        // Start DFS from the root to populate parentMap and find the target
+        dfs(root, None)
+        return result
+    }
+
+    // Function to collect nodes at distance K from the target node
+    private def $1(node: TreeNode?, k: int, visited: MutableSet<TreeNode>, result: MutableList<Int>) {
+        if (node == None || visited.contains(node)) return
+        visited.add(node)
+
+        when (k) {
+            0 -> result.add(node.`val`)  // If distance is 0, add node's value to result
+            else -> {
+                collectNodesAtDistanceK(node.left, k - 1, visited, result)
+                collectNodesAtDistanceK(node.right, k - 1, visited, result)
+                collectNodesAtDistanceK(parentMap[node], k - 1, visited, result)  // Explore parent node
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+class MedianFromRunningStream {
+    private $1 = PriorityQueue<Int>() // Min-heap for the larger half
+    private $1 = PriorityQueue<Int>(compareBy() { -it }) // Max-heap for the smaller half
+
+
+    def $1(num: int) {
+        minHeap.offer(num)
+        maxHeap.offer(minHeap.poll())
+
+        if (minHeap.size < maxHeap.size) {
+            minHeap.offer(maxHeap.poll())
+        }
+    }
+
+    def $1(): Double {
+        return if (minHeap.size > maxHeap.size) {
+            minHeap.peek().toDouble()
+        } else {
+            (minHeap.peek() + maxHeap.peek()) / 2.0
+        }
+    }
+}

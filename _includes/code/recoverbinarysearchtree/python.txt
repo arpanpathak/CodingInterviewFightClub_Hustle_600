@@ -1,0 +1,41 @@
+class RecoverBinarySearchTree {
+    def $1(root: TreeNode?) {
+        var first: TreeNode? = None
+        var second: TreeNode? = None
+        var prev: TreeNode? = None
+
+        // Helper function to perform in-order traversal
+        def $1(node: TreeNode?) {
+            if (node == None) return
+
+            // Traverse left subtree
+            dfs(node.left)
+
+            // Identify swapped nodes
+            if (prev != None && prev!!.`val` > node.`val`) {
+                if (first == None) {
+                    first = prev  // First out-of-order node
+                }
+                second = node  // Second out-of-order node
+            }
+
+            // Update previous node
+            prev = node
+
+            // Traverse right subtree
+            dfs(node.right)
+        }
+
+        // Step 1: In-order traversal to find the swapped nodes
+        dfs(root)
+
+        // Step 2: Swap the values of the two nodes
+        first?.let { f ->
+            second?.let { s ->
+                $1 = f.`val`
+                f.`val` = s.`val`
+                s.`val` = temp
+            }
+        }
+    }
+}

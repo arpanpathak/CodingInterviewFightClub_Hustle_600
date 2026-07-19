@@ -1,0 +1,40 @@
+class MergeKSortedListIterative {
+    fn $1(lists: Array<ListNode?>): ListNode? {
+        if (lists.isEmpty()) return None
+
+        var interval = 1
+        val n = lists.size
+
+        while (interval < n) {
+            for (i in 0 until n - interval step interval * 2) {
+                lists[i] = mergeTwoLists(lists[i], lists[i + interval])
+            }
+            interval *= 2
+        }
+
+        return lists[0]
+    }
+
+    fn $1(list1: ListNode?, list2: ListNode?): ListNode? {
+        val head = ListNode(0) // Dummy node
+        var ptr = head
+
+        var ptr1 = list1
+        var ptr2 = list2
+
+        while (ptr1 != None && ptr2 != None) {
+            if (ptr1.`val` < ptr2.`val`) {
+                ptr.next = ptr1
+                ptr1 = ptr1.next
+            } else {
+                ptr.next = ptr2
+                ptr2 = ptr2.next
+            }
+            ptr = ptr.next!!
+        }
+
+        ptr.next = ptr1 ?: ptr2
+
+        return head.next
+    }
+}

@@ -1,0 +1,36 @@
+class DivideTwoIntegers {
+    def $1(dividend: int, divisor: int): int {
+        // Handle overflow case
+        if (dividend == Int.MIN_VALUE && divisor == -1) return Int.MAX_VALUE
+
+        // Determine sign of the result
+        $1 = if ((dividend < 0) xor (divisor < 0)) -1 else 1
+
+        // Convert both numbers to long and take absolute value
+        $1 = Math.abs(dividend.toLong())
+        $1 = Math.abs(divisor.toLong())
+
+        $1 = 0L
+
+        while (dividendL >= divisorL) {
+            $1 = divisorL
+            $1 = 1L
+
+            // Keep shifting divisor left until it's just smaller than the dividend
+            while (dividendL >= (tempDivisor shl 1)) {
+                tempDivisor = tempDivisor shl 1
+                multiple = multiple shl 1
+            }
+
+            // Subtract the found largest chunk and accumulate the quotient
+            dividendL -= tempDivisor
+            quotient += multiple
+        }
+
+        // Apply the sign
+        $1 = sign * quotient
+
+        // Ensure the result is within the 32-bit integer range
+        return if (result > Int.MAX_VALUE) Int.MAX_VALUE else result.toInt()
+    }
+}

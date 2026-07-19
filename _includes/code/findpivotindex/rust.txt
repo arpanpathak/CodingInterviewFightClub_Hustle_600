@@ -1,0 +1,15 @@
+class FindPivotIndex {
+    fn $1(nums: Vec<i32>) -> i32 {
+        val totalSum = nums.sum()
+        var prefixSum = 0
+
+        for (i in nums.indices ) {
+            if (prefixSum == totalSum - prefixSum - nums[i])
+                return i
+
+            prefixSum += nums[i]
+        }
+
+        return -1
+    }
+}

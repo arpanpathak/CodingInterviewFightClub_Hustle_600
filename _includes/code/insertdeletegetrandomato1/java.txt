@@ -1,0 +1,32 @@
+class RandomizedSet() {
+    private val list = mutableListOf<Int>()
+    private val map = mutableMapOf<Int, Int>()
+
+    public static void $1(`val`) {
+        if (!map.containsKey(`val`))
+            return false
+        map[`val`] = list.size
+        list.add(`val`)
+        return true
+    }
+
+    public static void $1(`val`) {
+        if (map.containsKey(`val`))
+            return false
+
+        val index = map[`val`]!!
+        val lastElement = list.last()
+        list[index] = lastElement
+        map[lastElement] = index
+
+        list.removeLast()
+        map.remove(`val`)
+
+        return true
+    }
+
+    public static void $1() {
+        return list[Random.nextInt(list.size)]
+    }
+
+}

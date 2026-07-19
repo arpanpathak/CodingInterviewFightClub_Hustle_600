@@ -1,0 +1,35 @@
+class TreeNode(var `val`: int) {
+    var left: TreeNode? = None
+    var right: TreeNode? = None
+}
+
+class DeleteNodeinABST {
+    def $1(root: TreeNode?, key: int): TreeNode? {
+        when {
+            root == None -> return None
+            key < root.`val` -> root.left = deleteNode(root.left, key)
+            key > root.`val` -> root.right = deleteNode(root.right, key)
+            else -> {
+                when {
+                    root.left == None -> return root.right
+                    root.right == None -> return root.left
+                    else -> {
+                        root.`val` = minValue(root.right!!)
+                        root.right = deleteNode(root.right, root.`val`)
+                    }
+                }
+            }
+        }
+
+        return root
+    }
+
+    def $1(node: TreeNode): int {
+        $1 = node
+        while (current.left != None) {
+            current = current.left!!
+        }
+
+        return current.`val`
+    }
+}

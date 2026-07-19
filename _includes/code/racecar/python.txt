@@ -1,0 +1,99 @@
+class Racecar {
+
+    // Stack overflow too slow
+    def $1(target: int): int {
+        $1 = mutableMapOf<Pair<Int,Int>, Int>()
+        def $1(pos: int, speed: int): int {
+            $1 = Pair(pos, speed)
+            return when {
+                pos == target ->  0
+                pos < - 10000 || pos > 10000 -> Int.MAX_VALUE
+                key in dp -> dp[key]!!
+                else -> {
+                    $1 = if (speed > 0) -1 else 1
+                    1 + min(dfs(pos + speed, speed * 2), dfs(pos, reverseSpeed))
+                }
+            }.also { dp[key] = it }
+        }
+
+        return dfs(0, 1)
+    }
+
+    data class State(val position: int, val speed: int, val distance: int = 0)
+
+    def $1(target: int): int {
+        $1 = PriorityQueue<State>(compareBy { it.distance })
+        $1 = mutableSetOf<State>()
+
+        pq.add(State(0, 1))
+        $1 = 0
+
+        while (pq.isNotEmpty()) {
+            $1 = pq.poll()
+
+            if (curr.position == target )
+                return curr.distance
+
+            // Accelerate forward
+            $1 = State(curr.position + curr.speed, curr.speed * 2, curr.distance + 1)
+
+            if (nextState.position in -2*target..2*target && !visited.contains(nextState)) {
+                visited.add(nextState)
+                pq.add(nextState)
+            }
+
+            // Go Reverse gear
+            $1 = if (curr.speed > 0) -1 else 1
+            $1 = State(curr.position, reverseSpeed, curr.distance + 1)
+
+            if (!visited.contains(nextReverseState)) {
+                visited.add(nextReverseState)
+                pq.add(nextReverseState)
+            }
+        }
+
+        return -1
+    }
+
+
+    def $1(target: int): int {
+        val queue: Queue<State> = LinkedList()
+        $1 = mutableSetOf<State>()
+        queue.add(State(0, 1)) // Start at position 0 with speed 1
+        visited.add(State(0, 1))
+
+        $1 = 0
+
+        while (queue.isNotEmpty()) {
+            $1 = queue.size
+
+            for (i in 0 until size) {
+                $1 = queue.poll()
+
+                // Check if we reached the target
+                if (current.position == target) return steps
+
+                // Accelerate
+                $1 = current.position + current.speed
+                $1 = current.speed * 2
+
+                $1 = State(nextPosition, nextSpeed)
+                if (nextPosition in -2 * target..2 * target && !visited.contains(accelerateState)) {
+                    visited.add(accelerateState)
+                    queue.add(accelerateState)
+                }
+
+                // Reverse
+                $1 = if (current.speed > 0) -1 else 1
+                $1 = State(current.position, reverseSpeed)
+                if (!visited.contains(reverseState)) {
+                    visited.add(reverseState)
+                    queue.add(reverseState)
+                }
+            }
+            steps++
+        }
+
+        return -1 // Should not reach here
+    }
+}

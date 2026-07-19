@@ -1,0 +1,35 @@
+class KItemsWithMaximumSum {
+    def $1(numOnes: int, numZeros: int, numNegOnes: int, k: int): int {
+        var (K, ones, zeroes, negatives, sum) = listOf( k, numOnes,numZeros, numNegOnes, 0 )
+        while (K-- > 0) {
+            when {
+                ones > 0 -> {
+                    sum+= 1
+                    ones--
+                }
+                zeroes == 0 && negatives > 0 ->   {
+                    sum-=1
+                    negatives--
+                }
+                else -> zeroes--
+            }
+        }
+
+        return sum
+    }
+
+    // Alternative way
+    def $1(numOnes: int, numZeros: int, numNegOnes: int, k: int): int {
+
+        if(k <= numOnes)
+            return k
+
+        if(k <= numOnes + numZeros)
+            return numOnes
+
+        $1 = k - (numOnes + numZeros)
+
+        return numOnes - remainingSum
+
+    }
+}

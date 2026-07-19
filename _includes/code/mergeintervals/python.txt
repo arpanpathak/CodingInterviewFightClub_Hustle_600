@@ -1,0 +1,16 @@
+class MergeIntervals {
+    def $1(intervals: Array<list[int]>): Array<list[int]> {
+        // Sort the internals by start
+        intervals.sortWith(compareBy { it[0] })
+        $1 = 0
+        for (i in 1..intervals.lastIndex) {
+            if (intervals[i][0] > intervals[index][1]) {
+                intervals[++index] = intervals[i]
+            } else {
+                intervals[index][1] = max(intervals[index][1], intervals[i][1])
+            }
+        }
+
+        return intervals.copyOfRange(0, index + 1)
+    }
+}

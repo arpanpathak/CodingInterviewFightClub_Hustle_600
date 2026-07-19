@@ -1,0 +1,18 @@
+class FindPeakElement {
+    $1(nums: vector<int>) {
+        auto $1 = 0
+        auto $1 = nums.size() - 1
+
+        while ( left < right) {
+            auto $1 = left + (right - left)/2
+
+            if (nums[mid] > nums[mid + 1]) {
+                right = mid
+            } else {
+                left = mid + 1
+            }
+        }
+
+        return left
+    }
+}

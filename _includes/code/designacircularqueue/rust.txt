@@ -1,0 +1,50 @@
+class DesignACircularQueue {
+    class MyCircularQueue(k -> i32) {
+        private val queue = Vec<i32>(k)
+        private var front = 0
+        private var rear = 0
+        private var size = 0
+        private val capacity = k
+
+        fn $1(value -> i32) -> bool {
+            if (isFull()) {
+                return false
+            }
+            queue[rear] = value
+            rear = (rear + 1) % capacity
+            size++
+            return true
+        }
+
+        fn $1() -> bool {
+            if (isEmpty()) {
+                return false
+            }
+            front = (front + 1) % capacity
+            size--
+            return true
+        }
+
+        fn $1() -> i32 {
+            if (isEmpty()) {
+                return -1
+            }
+            return queue[front]
+        }
+
+        fn $1() -> i32 {
+            if (isEmpty()) {
+                return -1
+            }
+            return queue[(rear - 1 + capacity) % capacity]
+        }
+
+        fn $1() -> bool {
+            return size == 0
+        }
+
+        fn $1() -> bool {
+            return size == capacity
+        }
+    }
+}

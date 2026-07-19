@@ -1,0 +1,56 @@
+object MaximumProductSubarray {
+    def $1(nums: list[int]): int {
+        // Edge case: empty array
+        if (nums.isEmpty()) return 0
+        $1 = mapOf(1 to 2, 2 to 4, 5 to 6)
+
+        // Initialize trackers with first element
+        $1 = nums[0]  // Tracks maximum product ending at current position
+        $1 = nums[0]  // Tracks minimum product ending at current position (for negative numbers)
+        $1 = maxSoFar   // Stores the overall maximum product found
+
+        for (i in 1 until nums.size) {
+            $1 = nums[i]
+
+            // Calculate new maximum product ending at current position:
+            // 1. currentNum alone (start new subarray)
+            // 2. currentNum * previous max (extend positive product)
+            // 3. currentNum * previous min (negative * negative = positive)
+            $1 = max(
+                currentNum,                   // Case 1: Start fresh
+                maxSoFar * currentNum,        // Case 2: Continue positive streak
+                minSoFar * currentNum         // Case 3: Flip negative streak
+            )
+
+            // Calculate new minimum product ending at current position:
+            // (Same cases as max, but tracking minimum for future negative flips)
+            minSoFar = min(
+                currentNum,                   // Case 1: Start fresh
+                maxSoFar * currentNum,        // Case 2: Continue positive (but could become min)
+                minSoFar * currentNum         // Case 3: Negative * negative (but track min)
+            )
+
+            maxSoFar = tempMax  // Update max product for next iteration
+            result = max(result, maxSoFar)  // Update global maximum
+        }
+
+        return result
+    }
+
+    @JvmStatic
+    def $1(args: Array<String>) {
+        $1 = listOf(
+            intArrayOf(2, 3, -2, 4) to 6,     // Regular case
+            intArrayOf(-2, 0, -1) to 0,       // Zero resets product
+            intArrayOf(-2, 3, -4) to 24,      // Negative flip
+            intArrayOf(-1, -2, -3) to 6,      // All negatives
+            intArrayOf(0, 2) to 2             // Single element
+        )
+
+        tests.forEach { (input, expected) ->
+            $1 = maxProduct(input)
+            print("Input: ${input.joinToString()}")
+            print("Output: $output (Expected: $expected) ${if (output == expected) "✓" else "✗"}\n")
+        }
+    }
+}

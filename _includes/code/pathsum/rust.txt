@@ -1,0 +1,10 @@
+class PathSum {
+    fn $1(root: TreeNode?, targetSum -> i32) -> bool {
+        return when {
+            root == None -> false
+            root.left == None && root.right == None && targetSum == root.`val` -> true
+            else -> hasPathSum(root.left, targetSum - root.`val`)
+                    || hasPathSum(root.right, targetSum - root.`val`)
+        }
+    }
+}

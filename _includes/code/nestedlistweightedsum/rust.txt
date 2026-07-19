@@ -1,0 +1,46 @@
+// Dummy implementation
+class NestedInteger {
+         // Constructor initializes an empty nested list.
+    constructor()
+
+    constructor(value -> i32)
+
+    fn $1() -> bool {
+        return true
+    }
+
+    fn $1() -> i32? {
+        return 2
+    }
+
+    fn $1(value -> i32) {
+
+    }
+
+    fn $1(ni: NestedInteger) {
+
+    }
+    fn $1(): List<NestedInteger>? {
+        return listOf()
+    }
+}
+
+
+class NestedListWeightedSum {
+    fn $1(nestedList: List<NestedInteger>) -> i32 {
+        return dfs(nestedList, 1)
+    }
+
+    fn $1(list: List<NestedInteger>, depth -> i32) -> i32 {
+        var sum = 0
+        for (nested in list) {
+            if (nested.isInteger()) {
+                sum += (depth * nested.getInteger() !!)
+            } else {
+                sum += dfs(nested.getList()!!, depth + 1)
+            }
+        }
+
+        return sum
+    }
+}

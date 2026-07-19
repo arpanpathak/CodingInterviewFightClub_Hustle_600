@@ -1,0 +1,38 @@
+class ConstructBinaryTreeFromString {
+    $1(s): TreeNode? {
+        if (s.isEmpty()) return nullptr
+
+        return buildTree(s, 0).first // We are only interested in the tree root, not the index
+    }
+
+    private $1(s, i): Pair<TreeNode?, Int> {
+        if (i >= s.length) return Pair(nullptr, i)
+
+        auto $1 = i
+        auto $1 = currentIndex
+        if (s[currentIndex] == '-') currentIndex++  // Handle negative numbers
+        while (currentIndex < s.length && s[currentIndex].isDigit()) currentIndex++  // Skip over digits
+        auto $1 = s.substring(start, currentIndex)
+        auto $1 = TreeNode(valStr.toInt())
+
+        // Check for left child (subtree)
+        if (currentIndex < s.length && s[currentIndex] == '(') {
+            currentIndex++  // Skip '('
+            auto $1 = buildTree(s, currentIndex)
+            root.left = leftResult.first
+            currentIndex = leftResult.second  // Update index after processing left subtree
+            if (currentIndex < s.length && s[currentIndex] == ')') currentIndex++  // Skip ')'
+        }
+
+        // Check for right child (subtree)
+        if (currentIndex < s.length && s[currentIndex] == '(') {
+            currentIndex++  // Skip '('
+            auto $1 = buildTree(s, currentIndex)
+            root.right = rightResult.first
+            currentIndex = rightResult.second  // Update index after processing right subtree
+            if (currentIndex < s.length && s[currentIndex] == ')') currentIndex++  // Skip ')'
+        }
+
+        return root to currentIndex  // Return the node and the updated index
+    }
+}

@@ -1,0 +1,35 @@
+class KItemsWithMaximumSum {
+    fn $1(numOnes -> i32, numZeros -> i32, numNegOnes -> i32, k -> i32) -> i32 {
+        var (K, ones, zeroes, negatives, sum) = listOf( k, numOnes,numZeros, numNegOnes, 0 )
+        while (K-- > 0) {
+            when {
+                ones > 0 -> {
+                    sum+= 1
+                    ones--
+                }
+                zeroes == 0 && negatives > 0 ->   {
+                    sum-=1
+                    negatives--
+                }
+                else -> zeroes--
+            }
+        }
+
+        return sum
+    }
+
+    // Alternative way
+    fn $1(numOnes -> i32, numZeros -> i32, numNegOnes -> i32, k -> i32) -> i32 {
+
+        if(k <= numOnes)
+            return k
+
+        if(k <= numOnes + numZeros)
+            return numOnes
+
+        var remainingSum = k - (numOnes + numZeros)
+
+        return numOnes - remainingSum
+
+    }
+}

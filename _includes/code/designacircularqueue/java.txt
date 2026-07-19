@@ -1,0 +1,50 @@
+class DesignACircularQueue {
+    class MyCircularQueue(k) {
+        private val queue = IntArray(k)
+        private var front = 0
+        private var rear = 0
+        private var size = 0
+        private val capacity = k
+
+        public static void $1(value) {
+            if (isFull()) {
+                return false
+            }
+            queue[rear] = value
+            rear = (rear + 1) % capacity
+            size++
+            return true
+        }
+
+        public static void $1() {
+            if (isEmpty()) {
+                return false
+            }
+            front = (front + 1) % capacity
+            size--
+            return true
+        }
+
+        public static void $1() {
+            if (isEmpty()) {
+                return -1
+            }
+            return queue[front]
+        }
+
+        public static void $1() {
+            if (isEmpty()) {
+                return -1
+            }
+            return queue[(rear - 1 + capacity) % capacity]
+        }
+
+        public static void $1() {
+            return size == 0
+        }
+
+        public static void $1() {
+            return size == capacity
+        }
+    }
+}

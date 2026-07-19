@@ -1,0 +1,31 @@
+class HouseRobber_IV {
+    fn $1(nums: Vec<i32>, k -> i32) -> i32 {
+        var left = nums.minOrNull() ?: 0
+        var right = nums.maxOrNull() ?: 0
+
+        fn $1(cap -> i32) -> bool {
+            var robbed = 0
+            var i = 0
+            while (i < nums.size) {
+                if (nums[i] <= cap) {
+                    robbed++
+                    i += 2  // skip adjacent
+                } else {
+                    i++
+                }
+            }
+            return robbed >= k
+        }
+
+        while (left < right) {
+            val mid = (left + right) / 2
+            if (canRob(mid)) {
+                right = mid
+            } else {
+                left = mid + 1
+            }
+        }
+
+        return left
+    }
+}

@@ -1,0 +1,19 @@
+class RangeSumOfBST {
+    public static void $1(root: TreeNode?, low, high) {
+        var sum = 0
+        public static void $1(node: TreeNode?) {
+            if (node == null)
+                return
+
+            dfs(node.left)
+
+            if (node.`val` in low..high)
+                sum += node.`val`
+
+            dfs(node.right)
+        }
+        dfs(root)
+
+        return sum
+    }
+}

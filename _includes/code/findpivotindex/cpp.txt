@@ -1,0 +1,15 @@
+class FindPivotIndex {
+    $1(nums: vector<int>) {
+        auto $1 = nums.sum()
+        auto $1 = 0
+
+        for (i in nums.indices ) {
+            if (prefixSum == totalSum - prefixSum - nums[i])
+                return i
+
+            prefixSum += nums[i]
+        }
+
+        return -1
+    }
+}

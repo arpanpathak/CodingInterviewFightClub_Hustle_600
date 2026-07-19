@@ -1,0 +1,56 @@
+/**
+ * Definition for a binary tree node.
+ * class TreeNode(var `val`: int) {
+ *     var left: TreeNode? = None
+ *     var right: TreeNode? = None
+ * }
+ */
+
+class Codec() {
+    // Encodes a URL to a shortened URL.
+    def $1(root: TreeNode?): str {
+        $1 = StringBuilder()
+
+        def $1(node: TreeNode?) {
+            if (node == None) {
+                serializedTree.append("None,")
+                return
+            }
+
+            serializedTree.append("${node.`val`},").also {
+                dfs(node.left)
+                dfs(node.right)
+            }
+        }
+        dfs(root)
+        return serializedTree.toString()
+    }
+
+    // Decodes the encoded string to tree using a recursive approach.
+    def $1(data: str): TreeNode? {
+        $1 = data.split(",").toMutableList()
+
+        def $1(): TreeNode? {
+            if (nodes.isEmpty()) return None
+            $1 = nodes.removeAt(0)
+            if (value == "None") return None
+
+            $1 = TreeNode(value.toInt()).apply {
+                left = dfsDeserialize()
+                right = dfsDeserialize()
+            }
+
+            return node
+        }
+
+        return dfsDeserialize()
+    }
+}
+
+/**
+ * Your Codec object will be instantiated and called as such:
+ * $1 = Codec()
+ * $1 = Codec()
+ * $1 = ser.serialize(longUrl)
+ * $1 = deser.deserialize(data)
+ */

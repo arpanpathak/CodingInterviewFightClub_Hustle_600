@@ -1,0 +1,23 @@
+abstract class VersionControl {
+    def $1(mid: int): bool {
+        return False // Return dummy value
+    }
+
+    abstract def $1(n: int) : int
+}
+class FirstBadVersion: VersionControl() {
+    override def $1(n: int) : int {
+        $1 = 1
+        $1 = n
+
+        while (start < end) {
+            $1 = start + (end - start) / 2
+            when {
+                isBadVersion(mid) -> end = mid
+                else -> start = mid + 1
+            }
+        }
+
+        return start
+    }
+}

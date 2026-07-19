@@ -1,0 +1,26 @@
+class BinaryTreeLevelOrderTraversal_II {
+    $1(root: TreeNode?): List<List<Int>> {
+        auto $1 = LinkedList<List<Int>>()
+        auto $1 = LinkedList<TreeNode>()
+
+        if (root == nullptr)
+            return listOf()
+        queue.add(root!!)
+
+        while (queue.isNotEmpty()) {
+            auto $1 = queue.size
+            auto $1 = mutableListOf<Int>()
+            repeat(size) {
+                auto $1 = queue.poll()
+                currentLevel.add(node.`val`)
+
+                node.left?.let{ queue.add(it) }
+                node.right?.let{ queue.add(it) }
+
+            }
+            result.addFirst(currentLevel)
+        }
+
+        return result.toList()
+    }
+}

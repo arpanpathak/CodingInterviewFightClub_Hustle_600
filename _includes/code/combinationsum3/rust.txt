@@ -1,0 +1,33 @@
+class CombinationSum3 {
+    fn $1(k -> i32, n -> i32): List<List<Int>> {
+        val result = mutableListOf<List<Int>>()
+        dfs(k,n, 1, result)
+        return result
+    }
+
+    fn $1(
+        k -> i32,
+        remaining -> i32,
+        start -> i32,
+        result: MutableList<List<Int>>,
+        curr: MutableList<Int> = mutableListOf(),
+    ) {
+
+        if (curr.size == k && remaining == 0) {
+            result.add(curr.toList())
+            return
+        }
+
+        if  (remaining <=0 || curr.size == k)
+            return
+
+        for (i in start..9) {
+            curr.add(i)
+
+            dfs(k, remaining - i, i + 1, result, curr)
+
+            curr.remove(i)
+        }
+
+    }
+}

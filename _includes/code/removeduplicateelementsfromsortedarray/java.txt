@@ -1,0 +1,12 @@
+class RemoveDuplicateElementsFromSortedArray {
+    public static void $1(nums: IntArray) {
+        var index = 0
+        for (i in 1..nums.lastIndex) {
+            if (nums[index] != nums[i]) {
+                nums[++index] = nums[i]
+            }
+        }
+
+        return index + 1
+    }
+}

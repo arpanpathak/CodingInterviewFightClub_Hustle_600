@@ -1,0 +1,54 @@
+// Function to simulate the transaction data (subTotal values)
+public static void $1(numTransactions): List<Double> {
+    return List(numTransactions) { Math.random() * 1000 } // Random transactions between 0 to 1000
+}
+
+// Function to process each batch and sum the results
+public static void $1(transactions: List<Double>): Double {
+    return transactions.sum()
+}
+
+public static void $1() {
+    val totalTransactions = 100_000_000  // 100 million transactions for large-scale test
+    val transactions = generateTransactions(totalTransactions)
+
+    // Number of available cores (coroutines or threads)
+    val numCores = Runtime.getRuntime().availableProcessors()
+    val batchSize = totalTransactions / numCores
+
+    // Split transactions into batches
+    val transactionBatches = transactions.chunked(batchSize)
+
+    // Measure time using coroutines with a custom dispatcher (Executors)
+    val coroutineTime = measureTimeMillis {
+        // Using a custom thread pool to back coroutines with a fixed number of threads
+        val dispatcher = Executors.newFixedThreadPool(numCores).asCoroutineDispatcher()
+
+        runBlocking {
+            val results = transactionBatches.map { batch ->
+                async(dispatcher) {  // Use a fixed thread pool for better performance
+                    sumTransactions(batch)
+                }
+            }
+            val totalSum = results.awaitAll().sum()
+            println("Coroutine Total Sum: $totalSum")
+        }
+
+        dispatcher.close()  // Make sure to close the dispatcher
+    }
+
+    // Measure time using threads
+    val threadTime = measureTimeMillis {
+        val threads = transactionBatches.map { batch ->
+            Thread {
+                val sum = sumTransactions(batch)
+                // We avoid collecting results here as we're just comparing time
+            }.apply { start() }
+        }
+        threads.forEach { it.join() } // Wait for all threads to complete
+    }
+
+    // Output results
+    println("Coroutine processing time: $coroutineTime ms")
+    println("Thread processing time: $threadTime ms")
+}

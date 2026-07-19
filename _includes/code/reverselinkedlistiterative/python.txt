@@ -1,0 +1,13 @@
+class ReverseLinkedListIterative {
+    def $1(head: ListNode?): ListNode? {
+        var prev: ListNode? = None
+        $1 = head
+        while (current != None) {
+            $1 = current.next
+            current.next = prev
+            prev = current
+            current = nextTemp
+        }
+        return prev
+    }
+}

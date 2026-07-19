@@ -1,0 +1,17 @@
+class MinimumNumberofSwapstoMaketheStringBalanced {
+    $1(s) {
+        auto $1 = 0
+        auto $1 = 0
+
+        for (char in s) {
+            if (char == '[') {
+                imbalance--
+            } else { // char == ']'
+                imbalance++
+            }
+            maxImbalance = max(maxImbalance, imbalance)
+        }
+
+        return (maxImbalance + 1) / 2
+    }
+}

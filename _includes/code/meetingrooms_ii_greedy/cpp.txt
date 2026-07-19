@@ -1,0 +1,17 @@
+class MeetingRooms_II_greedy {
+    $1(intervals: Array<vector<int>>) {
+        intervals.sortBy { it[0] }
+
+        auto $1 = PriorityQueue<Int>()
+
+        for ((start, end) in intervals) {
+            // If the current meeting starts after the earliest ending meeting, reuse the room
+            if ( heap.isNotEmpty() && start >= heap.peek()) {
+                heap.poll()
+            }
+            heap.offer(end)
+        }
+
+        return heap.size
+    }
+}

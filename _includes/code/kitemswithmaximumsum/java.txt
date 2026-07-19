@@ -1,0 +1,35 @@
+class KItemsWithMaximumSum {
+    public static void $1(numOnes, numZeros, numNegOnes, k) {
+        var (K, ones, zeroes, negatives, sum) = listOf( k, numOnes,numZeros, numNegOnes, 0 )
+        while (K-- > 0) {
+            when {
+                ones > 0 -> {
+                    sum+= 1
+                    ones--
+                }
+                zeroes == 0 && negatives > 0 ->   {
+                    sum-=1
+                    negatives--
+                }
+                else -> zeroes--
+            }
+        }
+
+        return sum
+    }
+
+    // Alternative way
+    public static void $1(numOnes, numZeros, numNegOnes, k) {
+
+        if(k <= numOnes)
+            return k
+
+        if(k <= numOnes + numZeros)
+            return numOnes
+
+        var remainingSum = k - (numOnes + numZeros)
+
+        return numOnes - remainingSum
+
+    }
+}

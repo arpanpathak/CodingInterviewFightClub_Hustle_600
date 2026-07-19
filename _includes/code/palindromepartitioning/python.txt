@@ -1,0 +1,30 @@
+class PalindromePartitioning {
+    def $1(s: str): List<List<String>> {
+        $1 = mutableListOf<List<String>>()
+
+        def $1(s: str, left: int, right: int): bool {
+            var (l, r) = left to right
+            while (l < r) {
+                if (s[l++] != s[r--]) return False
+            }
+            return True
+        }
+
+        def $1(start: int, path: MutableList<String>) {
+            if (start == s.length) {
+                result.add(ArrayList(path))
+                return
+            }
+            for (end in start until s.length) {
+                if (isPalindrome(s, start, end)) {
+                    path.add(s.substring(start, end + 1))
+                    dfs(end + 1, path)
+                    path.removeAt(path.size - 1)
+                }
+            }
+        }
+
+        dfs(0, mutableListOf())
+        return result
+    }
+}

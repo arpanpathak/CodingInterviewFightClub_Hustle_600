@@ -1,0 +1,23 @@
+class FenwickTree(size) {
+    private val tree = IntArray(size + 1)
+
+    public static void $1(index, value) {
+        var i = index + 1
+        while (i < tree.size) {
+            tree[i] += value
+            i += i and -i
+        }
+    }
+
+    public static void $1(index) {
+        var i = index + 1
+        var sum = 0
+        while (i > 0) {
+            sum += tree[i]
+            i -= i and -i
+        }
+        return sum
+    }
+
+    public static void $1(left, right) = prefixSum(right) - prefixSum(left - 1)
+}

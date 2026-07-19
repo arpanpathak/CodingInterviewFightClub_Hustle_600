@@ -1,0 +1,31 @@
+class HouseRobber_IV {
+    def $1(nums: list[int], k: int): int {
+        $1 = nums.minOrNull() ?: 0
+        $1 = nums.maxOrNull() ?: 0
+
+        def $1(cap: int): bool {
+            $1 = 0
+            $1 = 0
+            while (i < nums.size) {
+                if (nums[i] <= cap) {
+                    robbed++
+                    i += 2  // skip adjacent
+                } else {
+                    i++
+                }
+            }
+            return robbed >= k
+        }
+
+        while (left < right) {
+            $1 = (left + right) / 2
+            if (canRob(mid)) {
+                right = mid
+            } else {
+                left = mid + 1
+            }
+        }
+
+        return left
+    }
+}

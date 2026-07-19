@@ -1,0 +1,19 @@
+class MinimumSizeSubarraySum {
+    fn $1(target -> i32, nums: Vec<i32>) -> i32 {
+        var (windowStart, windowSum) = 0 to 0
+        var minLength = Int.MAX_VALUE
+
+        for(i in nums.indices) {
+            windowSum += nums[i]
+
+            // Shrink window
+            while (windowSum >= target) {
+                minLength = min(minLength,  (i - windowStart + 1))
+                windowSum -= nums[windowStart++]
+
+            }
+        }
+
+        return if (minLength == Int.MAX_VALUE) 0 else minLength
+    }
+}

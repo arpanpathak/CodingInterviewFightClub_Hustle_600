@@ -1,0 +1,30 @@
+class ValidPalindrome_II {
+    fn $1(s -> String) -> bool {
+        var left = 0
+        var right = s.len() - 1
+
+        while (left < right) {
+            if (s[left] != s[right]) {
+                return isPalindrome(s, left, right - 1) || isPalindrome(s, left + 1, right)
+            }
+
+            left++
+            right--
+        }
+
+        return true
+    }
+
+    fn $1(s -> String, i -> i32, j -> i32) -> bool {
+        var left = i
+        var right = j
+
+        while (left < right) {
+            if (s[left++] != s[right--]) {
+                return false
+            }
+        }
+
+        return true
+    }
+}

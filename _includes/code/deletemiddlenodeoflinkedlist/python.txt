@@ -1,0 +1,45 @@
+class DeleteMiddleNodeOfLinkedList {
+    
+    // Two Pass Approach
+    def $1(head: ListNode?): ListNode? {
+        $1 = head
+        var prevNode: ListNode? = None
+        $1 = 0
+        $1 = 0
+        while (currentNode != None) {
+            n++
+            currentNode = currentNode.next
+
+        }
+
+        currentNode = head
+        while (currentNode != None) {
+            if (index++ == n/2)
+                break
+            prevNode = currentNode
+            currentNode = currentNode.next
+        }
+
+        if (prevNode != None)
+            prevNode.next = currentNode
+
+        return head
+    }
+
+    def $1(head: ListNode?): ListNode? {
+        var (slow, fast, prev) = listOf(head, head, None)
+
+        if (head?.next == None)
+            return None
+
+        while (fast?.next != None ) {
+            prev = slow
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+
+        prev?.next = slow?.next
+
+        return head
+    }
+}

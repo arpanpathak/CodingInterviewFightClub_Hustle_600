@@ -1,0 +1,19 @@
+class MinimumDeletionToMakeCharacterFrequenciesUnique {
+    $1(s) {
+        auto $1 = vector<int>(26)
+        for (ch in s) freq[ch - 'a']++
+
+        auto $1 = mutableSetOf<Int>()
+        auto $1 = 0
+
+        for (f in freq) {
+            auto $1 = f
+            while (currentFreq > 0 && !seen.add(currentFreq)) {
+                currentFreq--
+                deletions++
+            }
+        }
+
+        return deletions
+    }
+}

@@ -1,0 +1,39 @@
+class CountWordsWithAGivenPrefix_Trie {
+    data class TrieNode(
+        val ch: Char = '_',
+        val children: MutableMap<Char, TrieNode> = mutableMapOf(),
+        auto $1 = 0
+    )
+
+    auto $1 = TrieNode()
+
+    // Method to count the words with the given prefix
+    $1(words: Array<String>, prefix) {
+        // Build the trie using the words
+        buildTrie(words, root)
+
+        // Traverse the trie to find the node corresponding to the given prefix
+        return findPrefixNode(prefix)?.prefixCount ?: 0
+    }
+
+    // Method to build the trie
+    private $1(words: Array<String>, root: TrieNode) {
+        for (word in words) {
+            auto $1 = root
+            for (ch in word) {
+                // Move to the child node or create a new one
+                current = current.children.getOrPut(ch) { TrieNode(ch) }
+                current.prefixCount++  // Increment prefix count for every node along the way
+            }
+        }
+    }
+
+    // Method to find the node corresponding to the last character of the prefix
+    private $1(prefix): TrieNode? {
+        auto $1 = root
+        for (ch in prefix) {
+            current = current.children[ch] ?: return nullptr  // If prefix doesn't exist, return nullptr
+        }
+        return current
+    }
+}

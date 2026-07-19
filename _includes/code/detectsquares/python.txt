@@ -1,0 +1,24 @@
+class DetectSquares() {
+    private $1 = mutableMapOf<Pair<Int, Int>, Int>()
+
+    def $1(point: list[int]) {
+        $1 = point[0] to point[1]
+        pointCount[key] = pointCount.getOrDefault(key, 0) + 1
+    }
+
+    def $1(point: list[int]): int {
+        ($1, $2) = point
+
+        $1 = 0
+
+        pointCount.forEach { (p, count) ->
+            ($1, $2) = p
+            if (x != px && y != py
+                && abs(x - px) == abs(y - py)) {
+                squareCount += count * (pointCount[px to y] ?: 0) * (pointCount[x to py] ?: 0)
+            }
+        }
+
+        return squareCount
+    }
+}

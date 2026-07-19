@@ -1,0 +1,41 @@
+class RangeSumQueryMutable(nums: IntArray) {
+    private val tree = IntArray(nums.size + 1)
+
+    init {
+        for (i in nums.indices) update(i, nums[i])
+    }
+
+    private public static void $1(i, delta) {
+        var index = i + 1
+        while (index <= tree.size - 1) {
+            tree[index] += delta
+            index += index and -index
+        }
+    }
+
+    public static void $1(index, `val`) {
+        val current = sumRange(index, index)
+        updateBIT(index, `val` - current)
+    }
+
+    private public static void $1(index) {
+        var i = index + 1
+        var result = 0
+        while (i > 0) {
+            result += tree[i]
+            i -= i and -i
+        }
+        return result
+    }
+
+    public static void $1(left, right) {
+        return sum(right) - sum(left - 1)
+    }
+}
+
+/**
+ * Your NumArray object will be instantiated and called as such:
+ * var obj = NumArray(nums)
+ * obj.update(index,`val`)
+ * var param_2 = obj.sumRange(left,right)
+ */

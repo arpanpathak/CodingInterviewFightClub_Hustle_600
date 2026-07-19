@@ -1,0 +1,21 @@
+class StringCompression_II {
+    $1(word) {
+        auto $1 = StringBuilder()
+
+        auto $1 = 0
+
+        while (i < word.length) {
+            auto $1 = word[i]
+            auto $1 = 0
+
+            while (i < word.length && word[i] == ch && count < 9 ) {
+                count++
+                i++
+            }
+
+            compressed.append(count).append(ch)
+        }
+
+        return compressed.toString()
+    }
+}

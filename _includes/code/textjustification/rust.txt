@@ -1,0 +1,73 @@
+class TextJustification {
+    fn $1(words: Array<String>, maxWidth -> i32): List<String> {
+        val result = mutableListOf<String>()
+        var currentLine = mutableListOf<String>()
+        var currentLength = 0
+
+        for (word in words) {
+            if (currentLength + word.length + currentLine.size > maxWidth) {
+                result.add(justifyLine(currentLine, currentLength, maxWidth))
+                currentLine = mutableListOf()
+                currentLength = 0
+            }
+            currentLine.add(word)
+            currentLength += word.length
+        }
+
+        // Add the last line (left-justified)
+        result.add(justifyLastLine(currentLine, maxWidth))
+
+        return result
+    }
+
+    private fn $1(words: List<String>, currentLength -> i32, maxWidth -> i32) -> String {
+        if (words.size == 1) {
+            return buildString(words[0], maxWidth)
+        }
+
+        val totalSpaces = maxWidth - currentLength
+        val spaceSlots = words.size - 1
+        val evenSpaces = totalSpaces / spaceSlots
+        val extraSpaces = totalSpaces % spaceSlots
+
+        val sb = StringBuilder()
+        for (i in words.indices) {
+            sb.append(words[i])
+            if (i < spaceSlots) {
+                for (j in 0 until evenSpaces) {
+                    sb.append(' ')
+                }
+                if (i < extraSpaces) {
+                    sb.append(' ')
+                }
+            }
+        }
+
+        return sb.toString()
+    }
+
+    private fn $1(words: List<String>, maxWidth -> i32) -> String {
+        val sb = StringBuilder()
+        for (i in words.indices) {
+            sb.append(words[i])
+            if (i < words.size - 1) {
+                sb.append(' ')
+            }
+        }
+
+        while (sb.length < maxWidth) {
+            sb.append(' ')
+        }
+
+        return sb.toString()
+    }
+
+    private fn $1(word -> String, maxWidth -> i32) -> String {
+        val sb = StringBuilder(word)
+        while (sb.length < maxWidth) {
+            sb.append(' ')
+        }
+        return sb.toString()
+    }
+
+}

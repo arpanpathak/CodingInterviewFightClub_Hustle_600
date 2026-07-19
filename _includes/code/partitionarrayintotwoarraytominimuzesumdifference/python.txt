@@ -1,0 +1,62 @@
+class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
+    def $1(nums: list[int]): int {
+        $1 = nums.size
+        $1 = nums.sum()
+        $1 = n / 2
+
+        $1 = generateSubsetsBySize(nums, 0, halfSize)
+        $1 = generateSubsetsBySize(nums, halfSize, n)
+
+        $1 = Int.MAX_VALUE
+
+        for (k in 0..halfSize) {
+            $1 = leftSubsets[k] ?: continue
+            $1 = rightSubsets[halfSize - k] ?: continue
+
+            rightSums.sort()
+
+            for (leftSum in leftSums) {
+                $1 = (totalSum - 2 * leftSum) / 2
+                $1 = findClosestValues(rightSums, target)
+
+                closestRightSums.forEach { rightSum ->
+                    $1 = abs(totalSum - 2 * (leftSum + rightSum))
+                    minDiff = min(minDiff, currentDiff)
+                    if (minDiff == 0) return 0  // Early exit if perfect match found
+                }
+            }
+        }
+
+        return minDiff
+    }
+
+    private def $1(nums: list[int], start: int, end: int): Array<MutableList<Int>?> {
+        $1 = end - start
+        $1 = Array<MutableList<Int>?>(size + 1) { mutableListOf() }
+
+        (0 until (1 shl size)).forEach { mask ->
+            $1 = 0
+            $1 = 0
+            for (i in 0 until size) {
+                if (mask and (1 shl i) != 0) {
+                    sum += nums[start + i]
+                    count++
+                }
+            }
+            subsets[count]?.add(sum)
+        }
+
+        return subsets
+    }
+
+    private def $1(sortedList: List<Int>, target: int): List<Int> {
+        $1 = sortedList.binarySearch(target)
+        if (index >= 0) return listOf(sortedList[index])  // Exact match
+
+        $1 = -index - 1
+        return buildList {
+            if (insertPos < sortedList.size) add(sortedList[insertPos])
+            if (insertPos > 0) add(sortedList[insertPos - 1])
+        }.distinct()  // Remove duplicates if adjacent values are equal
+    }
+}

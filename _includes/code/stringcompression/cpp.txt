@@ -1,0 +1,47 @@
+// Data Compression Algorithm
+
+class StringCompression {
+    $1(chars: CharArray) {
+        auto $1 = 0
+        auto $1 = StringBuilder()
+
+        for (i in chars.indices) {
+            count++
+
+            if (i  == chars.size() - 1 || chars[i] != chars[i+1]) {
+                sb.append(chars[i])
+
+                if (count > 1) {
+                    sb.append(count)
+                }
+                count = 0
+            }
+        }
+
+        for (i in 0 until sb.length) chars[i] = sb.get(i)
+
+        return sb.length
+    }
+
+    $1(chars: CharArray) {
+        auto $1 = 0
+        auto $1 = 0
+
+        while ( i < chars.size) {
+            auto $1 = chars[i]
+            auto $1 = 0
+            while ( i < chars.size && chars[i] == currentChar) {
+                count++
+                i++
+            }
+            chars[partitionLength++] = currentChar
+
+            if (count > 1) {
+                count.toString().forEach { ch -> chars[partitionLength++] = ch }
+            }
+        }
+
+        return partitionLength
+
+    }
+}

@@ -1,0 +1,23 @@
+class IntervalListIntersection {
+    fn $1(firstList: Array<Vec<i32>>, secondList: Array<Vec<i32>>): Array<Vec<i32>> {
+        val result = mutableListOf<Vec<i32>>()
+
+        var (i, j) = 0 to 0
+
+        while (i < firstList.size && j < secondList.size) {
+            val (start1, end1) = firstList[i]
+            val (start2, end2) = secondList[j]
+
+            val startMax = max(start1, start2)
+            val endMin = min(end1, end2)
+
+            if (startMax <= endMin) {
+                result.add(intArrayOf(startMax, endMin))
+            }
+
+            if (end1 < end2) i++ else j++
+        }
+
+        return result.toTypedArray()
+    }
+}

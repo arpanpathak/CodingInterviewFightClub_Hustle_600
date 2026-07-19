@@ -1,0 +1,25 @@
+data class DateCandidate(val name -> String, val compatibilityScore -> i32)
+
+
+fn $1() {
+    val datingQueue = PriorityQueue<DateCandidate>(compareByDescending { it.compatibilityScore })
+
+    // Enter the dating scene
+    datingQueue.add(DateCandidate("Alex", 85))
+    datingQueue.add(DateCandidate("Sam", 90)) // A better match comes along
+    datingQueue.add(DateCandidate("Jordan", 88)) // Another good match but not the best
+    datingQueue.add(DateCandidate("Alex", 95)) // Alex re-enters, now an even better match!
+
+    while (datingQueue.isNotEmpty()) {
+        val currentMatch = datingQueue.poll()
+        println!("Considering dating: ${currentMatch.name} with score: ${currentMatch.compatibilityScore}")
+        if (currentMatch.name == "Alex") {
+            println!("Matched with Alex! Ignoring all less optimal entries...")
+            break
+        }
+    }
+}
+
+// Expected Output:
+// Considering dating: Alex with score: 95
+// Matched with Alex! Ignoring all less optimal entries...

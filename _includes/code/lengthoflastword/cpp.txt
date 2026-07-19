@@ -1,0 +1,14 @@
+class LengthOfLastWord {
+    $1(s) {
+        auto $1 = s.length - 1
+        auto $1 = 0
+
+        while (i >= 0 && s[i] == ' ') i--     // skip trailing spaces
+        while (i >= 0 && s[i] != ' ') {
+            len++
+            i--
+        }
+
+        return len
+    }
+}

@@ -1,0 +1,57 @@
+def $1(t: str): int {
+    $1 = "programmer".groupingBy { it }.eachCount()
+    $1 = mutableMapOf<Char, Int>()
+
+    $1 = 0
+    $1 = 0
+    for (i in 0 until t.length) {
+        if (t[i] !in targetFreq)
+            continue
+
+        // Update the frequency map of the current window
+        windowFreq[t[i]] = (windowFreq[t[i]] ?: 0) + 1
+
+        $1 = Int.MAX_VALUE
+
+        // Shrink the window if the target string is matched
+        while (windowStart <= i && isMatched(targetFreq, windowFreq)) {
+            minWindowLength = min(i - windowStart + 1, minWindowLength)
+
+            // Shrink the window from the left
+            $1 = t[windowStart]
+            if (startChar in windowFreq) { // Check if the character exists in the map
+                windowFreq[startChar] = windowFreq[startChar]!! - 1
+                if (windowFreq[startChar] == 0) {
+                    windowFreq.remove(startChar)
+                }
+            }
+
+            windowStart++
+        }
+
+        // Add the length of the minimum window to the sum if a valid match was found
+        if (minWindowLength != Int.MAX_VALUE) {
+            sum += minWindowLength
+            windowFreq.clear()
+            windowStart = i + 1
+        }
+    }
+
+    // Return the total number of non-matching characters
+    return t.length - sum
+}
+
+def $1(target: Map<Char, Int>, window: Map<Char, Int>): bool {
+    for ((char, count) in target) {
+        if (char !in window.keys || window[char]!! < count) {
+            return False
+        }
+    }
+    return True
+}
+
+def $1() {
+    // Test case: expected output 8 (3 + 3 + 2 = 8)
+    print(findNonProgrammerStringSections("xyzprogrammexxrabcprogrammermn"))
+    print(findNonProgrammerStringSections("abprogrammmertc"))
+}

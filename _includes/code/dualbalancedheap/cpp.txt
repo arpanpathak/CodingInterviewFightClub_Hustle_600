@@ -1,0 +1,44 @@
+class DualBalancedHeap<T : Comparable<T>> {
+    private auto $1 = PriorityQueue<T>() // Min-heap for the larger half
+    private auto $1 = PriorityQueue<T>(compareByDescending { it }) // Max-heap for the smaller half
+
+    private $1() {
+        if (maxHeap.size > minHeap.size + 1) {
+            minHeap.add(maxHeap.poll())
+        } else if (minHeap.size > maxHeap.size) {
+            maxHeap.add(minHeap.poll())
+        }
+    }
+
+    $1(num: T) {
+        if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
+            maxHeap.add(num)
+        } else {
+            minHeap.add(num)
+        }
+        balanceHeaps()
+    }
+
+    $1(num: T) {
+        if (maxHeap.contains(num)) {
+            maxHeap.remove(num)
+        } else {
+            minHeap.remove(num)
+        }
+        balanceHeaps()
+    }
+
+    $1(): T? {
+        return if (maxHeap.size == minHeap.size) {
+            // Handling generic types requires a custom approach for averaging or choosing one of the elements.
+            maxHeap.peek()
+        // Simplification: you may need to define how to combine two elements for real applications.
+        } else {
+            maxHeap.peek()
+        }
+    }
+
+    $1() {
+        return maxHeap.size + minHeap.size
+    }
+}

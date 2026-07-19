@@ -1,0 +1,17 @@
+class BinaryTreeRightSideView {
+    def $1(root: TreeNode?): List<Int> {
+        $1 = mutableListOf<Int>()
+
+        def $1(node: TreeNode?, level: int) {
+            when {
+                node == None -> return
+                level == rightSide.size -> rightSide.add(node.`val`)
+            }
+
+            dfs(node?.right, level + 1)
+            dfs(node?.left, level + 1)
+        }
+        dfs(root, 0)
+        return rightSide
+    }
+}

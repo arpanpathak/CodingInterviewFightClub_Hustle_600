@@ -1,0 +1,15 @@
+class FindPivotIndex {
+    def $1(nums: list[int]): int {
+        $1 = nums.sum()
+        $1 = 0
+
+        for (i in nums.indices ) {
+            if (prefixSum == totalSum - prefixSum - nums[i])
+                return i
+
+            prefixSum += nums[i]
+        }
+
+        return -1
+    }
+}
