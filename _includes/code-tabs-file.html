@@ -1,21 +1,28 @@
 {% comment %}
   Code display with Jekyll syntax highlighting (rouge).
-  Currently only Kotlin is clean — other langs had $1 corruption from previous AI.
+  Supports all 5 languages: Kotlin, Java, Python, Rust, C++.
+  Usage: {% include code-tabs-file.html problem="problem-key" %}
 {% endcomment %}
 
 {% assign problem_key = include.problem %}
-{% capture include_path %}code/{{ problem_key }}/kotlin.txt{% endcapture %}
-{% capture code %}{% include {{ include_path }} %}{% endcapture %}
+
+{% capture kotlin_code %}{% include code/{{ problem_key }}/kotlin.txt %}{% endcapture %}
+{% capture java_code %}{% include code/{{ problem_key }}/java.txt %}{% endcapture %}
+{% capture python_code %}{% include code/{{ problem_key }}/python.txt %}{% endcapture %}
+{% capture rust_code %}{% include code/{{ problem_key }}/rust.txt %}{% endcapture %}
+{% capture cpp_code %}{% include code/{{ problem_key }}/cpp.txt %}{% endcapture %}
 
 <div class="code-tabs">
   <div class="tab-nav">
-    <button class="tab-btn active" data-lang="kotlin">
-      <span class="lang-icon">🟣</span> Kotlin
-    </button>
+    <button class="tab-btn active" data-lang="kotlin"><span class="lang-icon">🟣</span> Kotlin</button>
+    {% if java_code.size > 5 %}<button class="tab-btn" data-lang="java"><span class="lang-icon">🟠</span> Java</button>{% endif %}
+    {% if python_code.size > 5 %}<button class="tab-btn" data-lang="python"><span class="lang-icon">🔵</span> Python</button>{% endif %}
+    {% if rust_code.size > 5 %}<button class="tab-btn" data-lang="rust"><span class="lang-icon">🦀</span> Rust</button>{% endif %}
+    {% if cpp_code.size > 5 %}<button class="tab-btn" data-lang="cpp"><span class="lang-icon">⚙️</span> C++</button>{% endif %}
   </div>
-  <div class="tab-content active" data-lang="kotlin">
-    <div class="code-block">
-      {% highlight kotlin %}{{ code }}{% endhighlight %}
-    </div>
-  </div>
+  <div class="tab-content active" data-lang="kotlin"><div class="code-block">{% highlight kotlin %}{{ kotlin_code }}{% endhighlight %}</div></div>
+  {% if java_code.size > 5 %}<div class="tab-content" data-lang="java"><div class="code-block">{% highlight java %}{{ java_code }}{% endhighlight %}</div></div>{% endif %}
+  {% if python_code.size > 5 %}<div class="tab-content" data-lang="python"><div class="code-block">{% highlight python %}{{ python_code }}{% endhighlight %}</div></div>{% endif %}
+  {% if rust_code.size > 5 %}<div class="tab-content" data-lang="rust"><div class="code-block">{% highlight rust %}{{ rust_code }}{% endhighlight %}</div></div>{% endif %}
+  {% if cpp_code.size > 5 %}<div class="tab-content" data-lang="cpp"><div class="code-block">{% highlight cpp %}{{ cpp_code }}{% endhighlight %}</div></div>{% endif %}
 </div>
