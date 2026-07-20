@@ -1,6 +1,14 @@
 package string
 
 class CountWordsWithAGivenPrefix {
+
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param words list of strings/words to process
+ * @param prefix the prefix parameter — a string value used in the computation
+ * @return the total count/number of matching elements
+ */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         var count = 0
 

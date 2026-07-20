@@ -13,6 +13,12 @@ class LFUCache(capacity: Int) {
         lists[1] = LinkedHashSet()
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param key the target value to search for or match against
+ * @return the computed integer result
+ */
     fun get(key: Int): Int {
         if (!vals.containsKey(key))
             return -1
@@ -33,6 +39,13 @@ class LFUCache(capacity: Int) {
         return vals[key]!!
     }
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param key the target value to search for or match against
+ * @param value the target value to search for or match against
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun put(key: Int, value: Int) {
         if (MAX_SIZE <= 0)
             return ;

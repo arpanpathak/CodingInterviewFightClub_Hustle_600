@@ -3,6 +3,13 @@ package stack
 import javax.swing.text.html.HTML.Tag.S
 
 class MinimumRemoveToMakeValidParentheses {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param s the input string to process
+ * @return the computed string result
+ */
     fun minRemoveToMakeValid(s: String): String {
         val stack = mutableListOf<Int>()
         val toRemove = mutableSetOf<Int>()

@@ -7,6 +7,13 @@ class LowestCommonAncestor_III {
         var parent: Node? = null
     }
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param p the search pattern or criteria to match
+ * @param q the q parameter — a tree/graph node used in the computation
+ * @return the resulting tree/graph node
+ */
     fun lowestCommonAncestor(p: Node?, q: Node?): Node? {
         var parent1 = p
         var parent2 = q

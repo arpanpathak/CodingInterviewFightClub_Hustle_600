@@ -3,6 +3,13 @@ package array.hashtable
 import javax.swing.UIManager.put
 
 class ValidSudoku {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param board the 2D matrix/grid to traverse or process
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun isValidSudoku(board: Array<CharArray>): Boolean {
         // Initialize sets for rows, columns, and subgrids
         val rows = Array(9) { mutableSetOf<Char>() }

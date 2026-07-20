@@ -1,6 +1,14 @@
 package math
 
 class AddStrings {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num1 the num1 parameter — a string value used in the computation
+ * @param num2 the num2 parameter — a string value used in the computation
+ * @return the computed string result
+ */
     fun addStrings(num1: String, num2: String): String {
         val sb = StringBuilder()
         var (i, j) = num1.length - 1 to num2.length - 1

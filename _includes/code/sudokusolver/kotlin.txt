@@ -1,10 +1,23 @@
 package backtracking
 
 class SudokuSolver {
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param board the 2D matrix/grid to traverse or process
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun solveSudoku(board: Array<CharArray>) {
         solve(board)
     }
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param board the 2D matrix/grid to traverse or process
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     private fun solve(board: Array<CharArray>): Boolean {
         for (row in 0..8) {
             for (col in 0..8) {
@@ -23,6 +36,15 @@ class SudokuSolver {
         return true // board solved
     }
 
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param board the 2D matrix/grid to traverse or process
+ * @param row the row parameter — a integer value used in the computation
+ * @param col the col parameter — a integer value used in the computation
+ * @param ch the ch parameter — a input parameter of type Char used in the computation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     private fun isValid(board: Array<CharArray>, row: Int, col: Int, ch: Char): Boolean {
         for (i in 0..8) {
             if (board[row][i] == ch || board[i][col] == ch) return false

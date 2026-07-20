@@ -1,6 +1,13 @@
 package array.dp
 
 class MinimumPathSum {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @return the minimum value found in the input
+ */
     fun minPathSum(grid: Array<IntArray>?): Int {
         if (grid.isNullOrEmpty()) return 0
 

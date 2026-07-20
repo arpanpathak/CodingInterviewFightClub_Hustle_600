@@ -4,6 +4,12 @@ import kotlinx.coroutines.*
 import kotlin.random.Random
 import kotlin.system.measureTimeMillis
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param size the size/dimension parameter for the algorithm
+ * @return a list/collection of result elements
+ */
 fun generateRandomMatrix(size: Int): Array<IntArray> =
     Array(size) { IntArray(size) { Random.nextInt(100) } }
 
@@ -22,6 +28,13 @@ fun matrixMultiplySequential(a: Array<IntArray>, b: Array<IntArray>): Array<IntA
     return result
 }
 
+/**
+ * matrix Multiply Parallel — executes the core logic of this algorithm on the provided input.
+ *
+ * @param a the first input array for comparison/merging
+ * @param b the second input array for comparison/merging
+ * @return a list/collection of result elements
+ */
 suspend fun matrixMultiplyParallel(a: Array<IntArray>, b: Array<IntArray>): Array<IntArray> = coroutineScope {
     val result = Array(a.size) { IntArray(b[0].size) }
     val numCoroutines = Runtime.getRuntime().availableProcessors()
@@ -44,6 +57,11 @@ suspend fun matrixMultiplyParallel(a: Array<IntArray>, b: Array<IntArray>): Arra
     result
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val size = 2000
     val a = generateRandomMatrix(size)

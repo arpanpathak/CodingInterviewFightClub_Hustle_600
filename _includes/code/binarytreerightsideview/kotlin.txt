@@ -1,9 +1,23 @@
 package tree
 
 class BinaryTreeRightSideView {
+
+/**
+ * right Side View — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun rightSideView(root: TreeNode?): List<Int> {
         val rightSide = mutableListOf<Int>()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param level the level parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?, level: Int) {
             when {
                 node == null -> return

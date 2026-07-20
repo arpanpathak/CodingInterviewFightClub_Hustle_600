@@ -9,6 +9,12 @@ class DesignAddAndSearchWordDataStructure {
 
         private val root = TrieNode()
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param word the word parameter — a string value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun addWord(word: String) {
             var current = root
             for (ch in word) {
@@ -17,7 +23,21 @@ class DesignAddAndSearchWordDataStructure {
             current.isEnd = true
         }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param word the word parameter — a string value used in the computation
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
         fun search(word: String): Boolean {
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param index the index position in the collection
+ * @param node the root/head node of the data structure
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
             fun dfs(index: Int, node: TrieNode): Boolean {
                 when {
                     index == word.length -> return node.isEnd

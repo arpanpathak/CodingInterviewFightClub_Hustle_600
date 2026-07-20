@@ -1,6 +1,14 @@
 package string
 
 class MergeStringAlternatively {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param word1 the word1 parameter — a string value used in the computation
+ * @param word2 the word2 parameter — a string value used in the computation
+ * @return the computed string result
+ */
     fun mergeAlternately(word1: String, word2: String): String {
         val mergedString = StringBuilder()
 

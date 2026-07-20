@@ -1,6 +1,14 @@
 package string.sorting
 
 class CustomSortString {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param order the order parameter — a string value used in the computation
+ * @param s the input string to process
+ * @return the computed string result
+ */
     fun customSortString(order: String, s: String): String {
         val orderMap = mutableMapOf<Char, Int>()
         order.forEachIndexed{ index, ch -> orderMap[ch] = index }

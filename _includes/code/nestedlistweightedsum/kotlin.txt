@@ -8,21 +8,49 @@ class NestedInteger {
 
     constructor(value: Int)
 
+/**
+ * is Integer — executes the core logic of this algorithm on the provided input.
+ *
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isInteger(): Boolean {
         return true
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed result of type Int?
+ */
     fun getInteger(): Int? {
         return 2
     }
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param value the target value to search for or match against
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun setInteger(value: Int): Unit {
 
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param ni the ni parameter — a input parameter of type NestedInteger used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun add(ni: NestedInteger): Unit {
 
     }
+
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return a list/collection of result elements
+ */
     fun getList(): List<NestedInteger>? {
         return listOf()
     }
@@ -30,10 +58,24 @@ class NestedInteger {
 
 
 class NestedListWeightedSum {
+
+/**
+ * depth Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nestedList the nestedList parameter — a list of integers used in the computation
+ * @return the computed sum/total value
+ */
     fun depthSum(nestedList: List<NestedInteger>): Int {
         return dfs(nestedList, 1)
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param list the list parameter — a list of integers used in the computation
+ * @param depth the depth parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun dfs(list: List<NestedInteger>, depth: Int): Int {
         var sum = 0
         for (nested in list) {

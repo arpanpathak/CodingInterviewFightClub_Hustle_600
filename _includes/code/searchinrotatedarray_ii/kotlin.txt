@@ -1,6 +1,14 @@
 package binarysearch
 
 class SearchInRotatedArray_II {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun search(nums: IntArray, target: Int): Boolean {
         var left = 0
         var right = nums.lastIndex

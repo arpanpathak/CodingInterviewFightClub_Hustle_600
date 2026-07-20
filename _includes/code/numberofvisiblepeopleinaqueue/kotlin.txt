@@ -1,6 +1,13 @@
 package stack
 
 class NumberOfVisiblePeopleInAQueue {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param heights the heights parameter — a array of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun canSeePersonsCount(heights: IntArray): IntArray {
         val n = heights.size
         val answer = IntArray(n)

@@ -2,6 +2,14 @@ package binarysearch
 
 // These are the challenges that I need to somewhoe solve to get
 class MedianOfTwoSortedARrays {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums1 the first input array for comparison/merging
+ * @param nums2 the second input array for comparison/merging
+ * @return the computed result of type Double
+ */
     fun findMedianSortedArrays(nums1: IntArray, nums2: IntArray): Double {
 
         if (nums1.size > nums2.size ) {

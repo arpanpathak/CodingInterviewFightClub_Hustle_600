@@ -1,6 +1,13 @@
 package greedy
 
 class MeetingRooms_II {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param intervals the intervals parameter — a array of integers used in the computation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun canAttendMeetings(intervals: Array<IntArray>): Boolean {
         intervals.sortBy { it[0] }  // Sort by the start time of each interval
 

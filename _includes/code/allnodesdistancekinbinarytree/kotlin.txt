@@ -3,10 +3,26 @@ package tree
 class AllNodesDistanceKinBinaryTree {
     val parentMap = mutableMapOf<TreeNode, TreeNode?>()  // To store parent references
 
+/**
+ * distance K — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param target the target value to search for or match against
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun distanceK(root: TreeNode?, target: TreeNode?, k: Int): List<Int> {
         val result = mutableListOf<Int>()
 
         // Helper function to perform DFS and populate parent map, then find target
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param parent the parent parameter — a tree/graph node used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?, parent: TreeNode?) {
             if (node == null) return
             parentMap[node] = parent
@@ -21,6 +37,16 @@ class AllNodesDistanceKinBinaryTree {
     }
 
     // Function to collect nodes at distance K from the target node
+
+/**
+ * collect Nodes At Distance K — executes the core logic of this algorithm on the provided input.
+ *
+ * @param node the root/head node of the data structure
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param visited the visited parameter — a set of elements used in the computation
+ * @param result the result parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun collectNodesAtDistanceK(node: TreeNode?, k: Int, visited: MutableSet<TreeNode>, result: MutableList<Int>) {
         if (node == null || visited.contains(node)) return
         visited.add(node)

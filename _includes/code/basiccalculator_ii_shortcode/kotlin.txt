@@ -1,6 +1,13 @@
 package math.stack
 
 class BasicCalculator_II_ShortCode {
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun calculate(s: String): Int {
         var (currentNumber, result, lastNumber) = listOf(0, 0, 0)
         var operator = '+'

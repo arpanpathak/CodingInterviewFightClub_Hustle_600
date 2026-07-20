@@ -6,6 +6,13 @@ import kotlin.random.Random
 class TopKFrequentElements {
     private val map = HashMap<Int, Int>()
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun topKFrequent(nums: IntArray, k: Int): IntArray {
         nums.forEach { map[it] = map.getOrPut(it) { 0 } + 1 }
 
@@ -26,6 +33,15 @@ class TopKFrequentElements {
     }
 
     // Randomized Quick Partition...
+
+/**
+ * partition — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param end the right/ending boundary of the search range (inclusive)
+ * @return the computed integer result
+ */
     private fun partition(nums: IntArray, start: Int, end: Int): Int {
         val randomIndex = Random.nextInt(start, end + 1)
         swap(nums, randomIndex, end)  // Swap pivot with the end
@@ -42,6 +58,14 @@ class TopKFrequentElements {
         return partitionIndex
     }
 
+/**
+ * swap — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun swap(nums: IntArray, i: Int, j: Int) {
        nums[i] = nums[j].also { nums[i] = it }
     }

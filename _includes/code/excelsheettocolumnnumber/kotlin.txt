@@ -1,6 +1,13 @@
 package string
 
 class ExcelSheetToColumnNumber {
+
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param columnTitle the columnTitle parameter — a string value used in the computation
+ * @return the total count/number of matching elements
+ */
     fun titleToNumber(columnTitle: String): Int {
         var base = 1
         var sum = 0

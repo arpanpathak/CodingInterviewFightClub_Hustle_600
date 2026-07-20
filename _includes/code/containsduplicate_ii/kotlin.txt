@@ -1,6 +1,14 @@
 package array.hashtable
 
 class ContainsDuplicate_II {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun containsNearbyDuplicate(nums: IntArray, k: Int): Boolean {
         val map = mutableMapOf<Int, Int>()
         for (i in nums.indices) {

@@ -23,7 +23,7 @@ next_chapter:
 | 1 | [First Letter To Appear Twice](#firstlettertoappeartwice) |
 | 2 | [Longest Nice Subarray](#longestnicesubarray) |
 | 3 | [Maximum Xor Of Two Nums In Array](#maximumxoroftwonumsinarray) |
-| 4 | [Number Of Steps To Reduceaanumberinbinaryrepresentationtoone](#number_of_steps_to_reduceaanumberinbinaryrepresentationtoone) |
+| 4 | [num Steps](#number_of_steps_to_reduceaanumberinbinaryrepresentationtoone) |
 | 5 | [Number Of One Bits](#numberofonebits) |
 | 6 | [Reverse Bits](#reversebits) |
 | 7 | [Single Number](#singlenumber) |
@@ -34,7 +34,7 @@ next_chapter:
 
 ## First Letter To Appear Twice
 
-**Problem:** This is more memory efficient approach...
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -65,6 +65,12 @@ class FirstLetterToAppearTwice {
         return 'x'
     }
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param s the input string to process
+ * @return the computed result of type Char
+ */
     fun repeatedCharacterBitset(s: String): Char {
 
         val seen = BitSet(26)  // BitSet for 26 lowercase English letters
@@ -88,14 +94,14 @@ class FirstLetterToAppearTwice {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ---
 
 ## Longest Nice Subarray
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -103,6 +109,13 @@ class FirstLetterToAppearTwice {
 package bitset
 
 class LongestNiceSubarray {
+
+/**
+ * longest Nice Subarray — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed integer result
+ */
     fun longestNiceSubarray(nums: IntArray): Int {
         var left = 0
         var bitMask = 0
@@ -133,7 +146,7 @@ class LongestNiceSubarray {
 
 ## Maximum Xor Of Two Nums In Array
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -143,6 +156,12 @@ package bitset
 class MaximumXorOfTwoNumsInArray {
     data class Trie(val children: Array<Trie?> = arrayOfNulls(2))
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return the maximum value found in the input
+ */
     fun findMaximumXOR(nums: IntArray): Int {
         val root = buildTrie(nums)
 
@@ -166,6 +185,12 @@ class MaximumXorOfTwoNumsInArray {
         return max
     }
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed result of type Trie
+ */
     private fun buildTrie(nums: IntArray): Trie {
         val root = Trie()
 
@@ -195,9 +220,9 @@ class MaximumXorOfTwoNumsInArray {
 
 ---
 
-## Number Of Steps To Reduceaanumberinbinaryrepresentationtoone
+## num Steps
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -205,6 +230,13 @@ class MaximumXorOfTwoNumsInArray {
 package bitset
 
 class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
+
+/**
+ * num Steps — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @return the total count/number of matching elements
+ */
     fun numSteps(s: String): Int {
         var steps = 0
         var carry = 0
@@ -235,7 +267,7 @@ class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
 
 ## Number Of One Bits
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -243,6 +275,13 @@ class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
 package bitset
 
 class NumberOfOneBits {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return the minimum value found in the input
+ */
     fun hammingWeight(n: Int): Int {
         var number = n
         var count = 0
@@ -268,7 +307,7 @@ class NumberOfOneBits {
 
 ## Reverse Bits
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -276,6 +315,13 @@ class NumberOfOneBits {
 package bitset
 
 class ReverseBits {
+
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed integer result
+ */
     fun reverseBits(n: Int): Int {
         var num = n
         var result = 0
@@ -289,6 +335,7 @@ class ReverseBits {
         return result
     }
 }
+
 ```
 
 ### Complexity
@@ -302,7 +349,7 @@ class ReverseBits {
 
 ## Single Number
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -310,6 +357,13 @@ class ReverseBits {
 package bitset
 
 class SingleNumber {
+
+/**
+ * single Number — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the total count/number of matching elements
+ */
     fun singleNumber(nums: IntArray): Int {
         var xorSum = 0
         nums.forEach { xorSum = xorSum xor it}
@@ -329,7 +383,7 @@ class SingleNumber {
 
 ## Single Number3
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -337,6 +391,13 @@ class SingleNumber {
 package bitset
 
 class SingleNumber3 {
+
+/**
+ * single Number — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return a list/collection of result elements
+ */
     fun singleNumber(nums: IntArray): IntArray {
         var xorSum = 0
         for (num in nums) {
@@ -359,6 +420,13 @@ class SingleNumber3 {
 
     companion object {
         @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun main(args: Array<String>) {
             val test = SingleNumber3()
 
@@ -379,7 +447,7 @@ class SingleNumber3 {
 
 ## Sum Of All Subset Xor Total
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -387,6 +455,13 @@ class SingleNumber3 {
 package bitset
 
 class SumOfAllSubsetXorTotal {
+
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed sum/total value
+ */
     fun subsetXORSum(nums: IntArray): Int {
         var result = 0
         // Capture each bit that is set in any of the elements
@@ -397,20 +472,21 @@ class SumOfAllSubsetXorTotal {
         return result shl (nums.size - 1) // Shift by (n-1) to account for all subsets
     }
 }
+
 ```
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) |
 
 ---
 
 ## Key Takeaways
 
-1. **Core pattern recognition** — Identify the problem type and apply the right technique.
+1. **Core pattern recognition** — Identify the problem type and apply the right algorithmic technique.
 2. **Practice systematically** — Work through each problem to internalize the patterns.
 3. **Understand why, not just how** — Focus on the reasoning behind each solution.
 

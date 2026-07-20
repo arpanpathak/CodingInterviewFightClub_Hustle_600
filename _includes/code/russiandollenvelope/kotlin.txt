@@ -3,6 +3,13 @@ package sorting
 import java.util.*
 
 class RussianDollEnvelope {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param envelopes the envelopes parameter — a array of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxEnvelopes(envelopes: Array<IntArray>): Int {
         // Step 1: Sort envelopes by width ascending and height descending
         envelopes.sortWith { a, b ->

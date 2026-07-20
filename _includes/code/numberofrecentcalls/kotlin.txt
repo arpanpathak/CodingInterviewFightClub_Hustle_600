@@ -5,6 +5,13 @@ import java.util.LinkedList
 class NumberOfRecentCalls {
     val deque = LinkedList<Int>()
     val TIME_WINDOW_MS = 3000
+
+/**
+ * ping — executes the core logic of this algorithm on the provided input.
+ *
+ * @param t the t parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun ping(t: Int): Int {
         while (deque.isNotEmpty() && ( t - deque.first()) > TIME_WINDOW_MS)
             deque.removeFirst()

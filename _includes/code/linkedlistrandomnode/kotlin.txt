@@ -4,6 +4,12 @@ import linkedlist.ListNode
 import kotlin.random.Random
 
 class LinkedListRandomNode (private val head: ListNode?) {
+
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed integer result
+ */
     fun getRandom(): Int {
         var (count, result) = 0 to 0
         var ptr = head
@@ -22,6 +28,12 @@ class LinkedListRandomNode (private val head: ListNode?) {
     }
 
     // Another possible solution
+
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed integer result
+ */
     fun getRandom_2(): Int {
         var current = head
         var result = current?.`val` ?: throw IllegalArgumentException("List is empty")

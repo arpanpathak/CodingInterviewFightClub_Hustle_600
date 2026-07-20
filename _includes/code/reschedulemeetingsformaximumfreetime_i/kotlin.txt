@@ -1,6 +1,16 @@
 package greedy
 
 class RescheduleMeetingsforMaximumFreeTime_I {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param eventTime the eventTime parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param startTime the startTime parameter — a array of integers used in the computation
+ * @param endTime the endTime parameter — a array of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxFreeTime(eventTime: Int, k: Int, startTime: IntArray, endTime: IntArray): Int {
         val n = startTime.size
         val gaps = mutableListOf<Int>()

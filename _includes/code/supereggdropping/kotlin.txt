@@ -1,6 +1,14 @@
 package dynamic_programming
 
 class SuperEggDropping {
+
+/**
+ * super Egg Drop — executes the core logic of this algorithm on the provided input.
+ *
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed integer result
+ */
     fun superEggDrop(k: Int, n: Int): Int {
         val dp = Array(k + 1) { IntArray(n + 1) }
         var m = 0

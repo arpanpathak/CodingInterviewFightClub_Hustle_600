@@ -6,6 +6,14 @@ class TreeNode(var `val`: Int) {
 }
 
 class DeleteNodeinABST {
+
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param root the root/head node of the data structure
+ * @param key the target value to search for or match against
+ * @return the resulting tree/graph node
+ */
     fun deleteNode(root: TreeNode?, key: Int): TreeNode? {
         when {
             root == null -> return null
@@ -26,6 +34,12 @@ class DeleteNodeinABST {
         return root
     }
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param node the root/head node of the data structure
+ * @return the minimum value found in the input
+ */
     fun minValue(node: TreeNode): Int {
         var current = node
         while (current.left != null) {

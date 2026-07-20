@@ -3,6 +3,13 @@ package greedy
 import java.util.*
 
 class MeetingRooms_II_greedy {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param intervals the intervals parameter — a array of integers used in the computation
+ * @return the minimum value found in the input
+ */
     fun minMeetingRooms(intervals: Array<IntArray>): Int {
         intervals.sortBy { it[0] }
 

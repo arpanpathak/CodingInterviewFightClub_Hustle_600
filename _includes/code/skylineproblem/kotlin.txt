@@ -3,6 +3,13 @@ package tree.bst
 import java.util.*
 
 class SkylineProblem {
+
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param buildings list of block/building records to evaluate
+ * @return a list/collection of result elements
+ */
     fun getSkyline(buildings: Array<IntArray>): List<List<Int>> {
         val points = buildings.flatMap {
             listOf(Pair(it[0], -it[2]), Pair(it[1], it[2]))

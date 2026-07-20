@@ -3,11 +3,25 @@ package stack
 import kotlin.collections.ArrayDeque
 
 class SumOfSubArrayRanges {
+
+/**
+ * sub Array Ranges — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed result of type Long
+ */
     fun subArrayRanges(nums: IntArray): Long {
         val n = nums.size
         var answer: Long = 0
 
         // Helper function to calculate the sum of all minimums or maximums
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param comparator the comparator parameter — a input parameter of type (Int used in the computation
+ * @return the computed result of type Long
+ */
         fun calculateSum(comparator: (Int, Int) -> Boolean): Long {
             val stack = ArrayDeque<Int>()
             var sum: Long = 0

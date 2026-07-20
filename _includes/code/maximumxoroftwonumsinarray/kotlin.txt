@@ -3,6 +3,12 @@ package bitset
 class MaximumXorOfTwoNumsInArray {
     data class Trie(val children: Array<Trie?> = arrayOfNulls(2))
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return the maximum value found in the input
+ */
     fun findMaximumXOR(nums: IntArray): Int {
         val root = buildTrie(nums)
 
@@ -26,6 +32,12 @@ class MaximumXorOfTwoNumsInArray {
         return max
     }
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed result of type Trie
+ */
     private fun buildTrie(nums: IntArray): Trie {
         val root = Trie()
 

@@ -1,6 +1,13 @@
 package string.hashtable
 
 class UniqueLength3PalindromicSubsequence {
+
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param s the input string to process
+ * @return the total count/number of matching elements
+ */
     fun countPalindromicSubsequence(s: String): Int {
         val charPositions = mutableMapOf<Char, MutableList<Int>>()
 

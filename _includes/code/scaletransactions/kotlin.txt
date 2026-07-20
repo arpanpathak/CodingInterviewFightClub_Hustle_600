@@ -3,15 +3,34 @@ import kotlin.system.measureTimeMillis
 import java.util.concurrent.Executors
 
 // Function to simulate the transaction data (subTotal values)
+
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param numTransactions the numTransactions parameter — a integer value used in the computation
+ * @return a list/collection of result elements
+ */
 fun generateTransactions(numTransactions: Int): List<Double> {
     return List(numTransactions) { Math.random() * 1000 } // Random transactions between 0 to 1000
 }
 
 // Function to process each batch and sum the results
+
+/**
+ * sum Transactions — executes the core logic of this algorithm on the provided input.
+ *
+ * @param transactions the transactions parameter — a list of elements used in the computation
+ * @return the computed result of type Double
+ */
 fun sumTransactions(transactions: List<Double>): Double {
     return transactions.sum()
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val totalTransactions = 100_000_000  // 100 million transactions for large-scale test
     val transactions = generateTransactions(totalTransactions)

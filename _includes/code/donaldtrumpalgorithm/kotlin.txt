@@ -4,6 +4,14 @@ class DonaldTrumpAlgorithm {
     enum class ParentStatus { CITIZEN, LEGAL_VISA, ILLEGAL }
     enum class CitizenshipStatus { CITIZEN, NOT_A_CITIZEN }
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param fatherStatus the fatherStatus parameter — a input parameter of type ParentStatus used in the computation
+ * @param motherStatus the motherStatus parameter — a input parameter of type ParentStatus used in the computation
+ * @param bornInUsa the bornInUsa parameter — a boolean flag used in the computation
+ * @return the computed result of type Citizenship Status =         if (born In Usa)
+ */
     fun determineChildCitizenship(fatherStatus: ParentStatus, motherStatus: ParentStatus, bornInUsa: Boolean): CitizenshipStatus =
         if (bornInUsa) {
             when {
@@ -12,6 +20,11 @@ class DonaldTrumpAlgorithm {
             }
         } else CitizenshipStatus.NOT_A_CITIZEN
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun main() {
         // Test cases
         val testCases = listOf(

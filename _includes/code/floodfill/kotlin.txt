@@ -1,10 +1,27 @@
 package grid
 
 class FloodFill {
+
+/**
+ * flood Fill — executes the core logic of this algorithm on the provided input.
+ *
+ * @param image the image parameter — a array of integers used in the computation
+ * @param sr the sr parameter — a integer value used in the computation
+ * @param sc the sc parameter — a integer value used in the computation
+ * @param color the color parameter — a integer value used in the computation
+ * @return a list/collection of result elements
+ */
     fun floodFill(image: Array<IntArray>, sr: Int, sc: Int, color: Int): Array<IntArray> {
         val initialColor = image[sr][sc]
         if (initialColor == color) return image // Avoid infinite recursion
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @param col the col parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(row: Int, col: Int) {
             if (row !in 0 until image.size || col !in 0 until image[0].size || image[row][col] != initialColor)
                 return

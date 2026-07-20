@@ -15,6 +15,12 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
     private var head: Node? = null
     private var tail: Node? = null
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param root the root/head node of the data structure
+ * @return the resulting tree/graph node
+ */
     fun treeToDoublyList(root: Node?): Node? {
         if (root == null) return null
 
@@ -28,6 +34,12 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
         return head
     }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun inorderTraversal(node: Node?) {
         if (node == null) return
 

@@ -5,6 +5,13 @@ import java.util.*
 class MeetingRoom_III {
     data class Room(val endTime: Long, val index: Int)
 
+/**
+ * most Booked — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param meetings the meetings parameter — a array of integers used in the computation
+ * @return the computed integer result
+ */
     fun mostBooked(n: Int, meetings: Array<IntArray>): Int {
         // Sort meetings by start time
         meetings.sortWith(compareBy { it[0] })

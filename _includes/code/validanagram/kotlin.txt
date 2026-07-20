@@ -1,6 +1,14 @@
 package string
 
 class ValidAnagram {
+
+/**
+ * is Anagram — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @param t the t parameter — a string value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isAnagram(s: String, t: String): Boolean {
         if (s.length != t.length) return false
 

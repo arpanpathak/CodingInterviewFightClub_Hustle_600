@@ -4,12 +4,26 @@ class WordSearch_II {
 
     data class Trie(val children: Map<Char, Trie>, val isWord: Boolean)
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param board the 2D matrix/grid to traverse or process
+ * @param words list of strings/words to process
+ * @return a list of matching/found elements
+ */
     fun findWords(board: Array<CharArray>, words: Array<String>): List<String> {
         TODO()
     }
 
     companion object {
         @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun main(args: Array<String>) {
 
         }

@@ -18,16 +18,34 @@ class RequestBuilder {
     private var body: RequestBody? = null
     private val headers = mutableMapOf<String, String>()
 
+/**
+ * headers — executes the core logic of this algorithm on the provided input.
+ *
+ * @param vararg headers the vararg headers parameter — a pair of values used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun headers(vararg headers: Pair<String, String>) {
         headers.forEach {
             this.headers[it.first] = it.second
         }
     }
 
+/**
+ * body — executes the core logic of this algorithm on the provided input.
+ *
+ * @param content the content parameter — a string value used in the computation
+ * @param contentType the contentType parameter — a string value used in the computation
+ * @return the computed result of type Request = Request.Builder()         .url(url)         .method(method, body)         .apply
+ */
     fun body(content: String, contentType: String = "application/json") {
         body = content.toRequestBody(contentType.toMediaType())
     }
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @return the computed result of type Request = Request.Builder()         .url(url)         .method(method, body)         .apply
+ */
     fun build(): Request = Request.Builder()
         .url(url)
         .method(method, body)
@@ -37,6 +55,12 @@ class RequestBuilder {
         .build()
 }
 
+/**
+ * Ok Http Client.execute Async — executes the core logic of this algorithm on the provided input.
+ *
+ * @param block the block parameter — a input parameter of type RequestBuilder.( used in the computation
+ * @return the computed result of type Response
+ */
 suspend fun OkHttpClient.executeAsync(block: RequestBuilder.() -> Unit): Response {
     val requestBuilder = RequestBuilder().apply(block)
     val request = requestBuilder.build()
@@ -45,6 +69,11 @@ suspend fun OkHttpClient.executeAsync(block: RequestBuilder.() -> Unit): Respons
     }
 }
 
+/**
+ * Response.pretty Print Json — executes the core logic of this algorithm on the provided input.
+ *
+ * @return the computed string result
+ */
 fun Response.prettyPrintJson(): String {
     this.body?.string()?.let { json ->
         val jsonElement = JsonParser.parseString(json)
@@ -53,6 +82,11 @@ fun Response.prettyPrintJson(): String {
     return "No content to display"
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 suspend fun main() {
     val client = OkHttpClient()
 

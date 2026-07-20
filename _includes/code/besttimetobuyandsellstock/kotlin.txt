@@ -3,6 +3,13 @@ package stock_market.dp
 class BestTimeToBuyAndSellStock {
     // The constraint is we can buy a stock in single day and sell in different day. There is no buyback
     // Stock must be bought once and sold once
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param prices the prices parameter — a array of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxProfit(prices: IntArray): Int {
         if (prices.isEmpty())
             return 0

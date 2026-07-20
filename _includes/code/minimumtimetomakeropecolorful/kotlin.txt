@@ -1,6 +1,14 @@
 package greedy
 
 class MinimumTimeToMakeRopeColorful {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param colors the colors parameter — a string value used in the computation
+ * @param neededTime the neededTime parameter — a array of integers used in the computation
+ * @return the minimum value found in the input
+ */
     fun minCost(colors: String, neededTime: IntArray): Int {
         var minTime = 0
         for (i in 1 until neededTime.size) {

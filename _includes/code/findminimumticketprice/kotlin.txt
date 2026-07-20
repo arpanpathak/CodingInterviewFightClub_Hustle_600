@@ -1,6 +1,14 @@
 package facebook
 
 class FindMinimumTicketPrice {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param departure the departure parameter — a array of integers used in the computation
+ * @param returnPrices the returnPrices parameter — a array of integers used in the computation
+ * @return the minimum value found in the input
+ */
     fun findMinimumTicketCost(departure: IntArray, returnPrices: IntArray): Int {
         val n = returnPrices.size
         var minReturnPrice = Int.MAX_VALUE

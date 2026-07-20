@@ -1,6 +1,13 @@
 package math
 
 class PlusOne {
+
+/**
+ * plus One — executes the core logic of this algorithm on the provided input.
+ *
+ * @param digits the digits parameter — a array of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun plusOne(digits: IntArray): IntArray {
         for (i in digits.lastIndex downTo 0) {
             if (digits[i] < 9) {

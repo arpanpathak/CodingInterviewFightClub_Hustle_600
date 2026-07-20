@@ -8,6 +8,12 @@ class ConsistentHash<T : Node>(
     private val ring: SortedMap<Long, T> = TreeMap()
     private val dataStore: MutableMap<String, MutableMap<String, Any>> = HashMap()
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun addNode(node: T) {
         val primaryHash = node.id.hashCode().toLong()
         ring[primaryHash] = node
@@ -21,6 +27,12 @@ class ConsistentHash<T : Node>(
         dataStore[node.id] = HashMap()
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun removeNode(node: T) {
         ring.entries.removeAll { it.value.id == node.id }
         dataStore.remove(node.id)
@@ -29,17 +41,36 @@ class ConsistentHash<T : Node>(
         println("Warning: Data from ${node.id} is now unavailable!")
     }
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param key the target value to search for or match against
+ * @param value the target value to search for or match against
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun put(key: String, value: Any): Boolean {
         val node = getNode(key) ?: return false
         dataStore[node.id]?.put(key, value)
         return true
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param key the target value to search for or match against
+ * @return the computed result of type Any?
+ */
     fun get(key: String): Any? {
         val node = getNode(key) ?: return null
         return dataStore[node.id]?.get(key)
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param key the target value to search for or match against
+ * @return the computed result of type T?
+ */
     fun getNode(key: String): T? {
         if (ring.isEmpty()) return null
         val hash = key.hashCode().toLong()
@@ -47,6 +78,12 @@ class ConsistentHash<T : Node>(
         return if (tailMap.isEmpty()) ring[ring.firstKey()] else ring[tailMap.firstKey()]
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param key the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun getReplicas(key: String): List<T> {
         if (ring.isEmpty()) return emptyList()
         val hash = key.hashCode().toLong()
@@ -66,6 +103,11 @@ interface Node {
 
 data class Server(override val id: String) : Node
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val ring = ConsistentHash<Server>(replicas = 2)
 

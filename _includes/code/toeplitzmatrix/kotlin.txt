@@ -1,6 +1,13 @@
 package array
 
 class ToeplitzMatrix {
+
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isToeplitzMatrix(matrix: Array<IntArray>): Boolean {
         val m = matrix.size
         val n = matrix[0].size

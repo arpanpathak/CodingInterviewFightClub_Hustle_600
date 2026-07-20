@@ -1,9 +1,26 @@
 package array.Combinatorics
 
 class Combinations {
+
+/**
+ * combine — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun combine(n: Int, k: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+/**
+ * combine — executes the core logic of this algorithm on the provided input.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param n the size/dimension parameter for the algorithm
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param current the current parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun combine(start: Int, n: Int, k: Int, current: MutableList<Int> = mutableListOf()) {
             if (current.size == k) {
                 result.add(current.toList())

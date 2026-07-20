@@ -3,6 +3,15 @@ package graph
 import java.util.*
 
 class WordLadder {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param beginWord the beginWord parameter — a string value used in the computation
+ * @param endWord the endWord parameter — a string value used in the computation
+ * @param wordList the wordList parameter — a list of strings used in the computation
+ * @return the computed integer result
+ */
     fun ladderLength(beginWord: String, endWord: String, wordList: List<String>): Int {
         if (endWord !in wordList) return 0 // if end word is not word bank then it's not possible
 

@@ -4,6 +4,12 @@ class ProductOfLastKNumbers {
     private val numbers = mutableListOf<Int>()
     private val prefixProducts = mutableListOf(1)
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun add(num: Int) {
         numbers.add(num)
         // Reset the prefix product list if the current number is 0
@@ -16,6 +22,12 @@ class ProductOfLastKNumbers {
         }
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun getProduct(k: Int): Int {
         val n = prefixProducts.size - 1  // The size of the prefixProducts list is n + 1
         if (k > n) return 0

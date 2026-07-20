@@ -2,10 +2,24 @@ package array.dp
 
 // Time COmplexity O(N^3) Space O(N^2)
 class BurstBaloons {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the maximum value found in the input
+ */
     fun maxCoins(nums: IntArray): Int {
         if (nums.isEmpty()) return 0
         val dp = Array(nums.size) { IntArray(nums.size) }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param l the l parameter — a integer value used in the computation
+ * @param r the r parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
         fun dfs(l: Int, r: Int): Int {
             when {
                 l > r -> return 0

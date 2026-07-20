@@ -14,7 +14,7 @@ next_chapter:
 
 # Linked Lists
 
-> **16 problems** — **Linked Lists** are about pointer rearrangement. Key patterns: slow/fast pointers for cycle detection, dummy heads for edge cases, recursion for reversal, and in-place merging.
+> **14 problems** — **Linked Lists** are about pointer rearrangement. Key patterns: slow/fast pointers for cycle detection, dummy heads for edge cases, recursion for reversal, and in-place merging.
 
 ## Complete Problem Set
 
@@ -39,7 +39,7 @@ next_chapter:
 
 ## List Node
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -51,6 +51,14 @@ class ListNode(var `val`: Int) {
 }
 
 class AddTwoNumbers {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param l1 the l1 parameter — a tree/graph node used in the computation
+ * @param l2 the l2 parameter — a tree/graph node used in the computation
+ * @return a list/collection of result elements
+ */
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         var carry = 0
         val head = ListNode(0)
@@ -83,13 +91,13 @@ class AddTwoNumbers {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Copy Linked List With Random Pointer
 
-**Problem:** Example:
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -114,6 +122,13 @@ class CopyLinkedListWithRandomPointer {
     }
 
     class Solution {
+
+/**
+ * copy Random List — executes the core logic of this algorithm on the provided input.
+ *
+ * @param node the root/head node of the data structure
+ * @return the resulting tree/graph node
+ */
         fun copyRandomList(node: Node?): Node? {
             if (node == null) return null
 
@@ -152,7 +167,7 @@ class CopyLinkedListWithRandomPointer {
 
 ## Delete Middle Node Of Linked List
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -162,6 +177,13 @@ package linkedlist
 class DeleteMiddleNodeOfLinkedList {
     
     // Two Pass Approach
+
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param head the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun deleteMiddle(head: ListNode?): ListNode? {
         var currentNode = head
         var prevNode: ListNode? = null
@@ -187,6 +209,12 @@ class DeleteMiddleNodeOfLinkedList {
         return head
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param head the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun deleteMiddleTwoPointer(head: ListNode?): ListNode? {
         var (slow, fast, prev) = listOf(head, head, null)
 
@@ -211,13 +239,13 @@ class DeleteMiddleNodeOfLinkedList {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(h) where h = tree height |
+| **Space** | O(1) |
 
 ---
 
 ## Node
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -229,6 +257,14 @@ class Node(var `val`: Int) {
 }
 
 class InsertIntoASortedCircularLinkedList {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param head the root/head node of the data structure
+ * @param insertVal the insertVal parameter — a integer value used in the computation
+ * @return the resulting tree/graph node
+ */
     fun insert(head: Node?, insertVal: Int): Node? {
         val newNode = Node(insertVal)
         if (head == null) return newNode.apply { next = newNode }
@@ -255,6 +291,7 @@ class InsertIntoASortedCircularLinkedList {
         return head
     }
 }
+
 ```
 
 ### Complexity
@@ -268,7 +305,7 @@ class InsertIntoASortedCircularLinkedList {
 
 ## Intersection Of Two Linked List
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -276,6 +313,14 @@ class InsertIntoASortedCircularLinkedList {
 package linkedlist
 
 class IntersectionOfTwoLinkedList {
+
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param headA the headA parameter — a tree/graph node used in the computation
+ * @param headB the headB parameter — a tree/graph node used in the computation
+ * @return a list/collection of result elements
+ */
     fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
         if (headA == null || headB == null) return null
 
@@ -291,6 +336,7 @@ class IntersectionOfTwoLinkedList {
         return pA // This will return the intersection node, or null if no intersection.
     }
 }
+
 ```
 
 ### Complexity
@@ -304,7 +350,7 @@ class IntersectionOfTwoLinkedList {
 
 ## Linked List Cycle
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -312,6 +358,13 @@ class IntersectionOfTwoLinkedList {
 package linkedlist
 
 class LinkedListCycle {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param head the root/head node of the data structure
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun hasCycle(head: ListNode?): Boolean {
         if (head == null || head.next == null) return false
 
@@ -330,6 +383,13 @@ class LinkedListCycle {
     }
 
     // Better version
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param head the root/head node of the data structure
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun hasCycle2(head: ListNode?): Boolean {
         var slow = head
         var fast = head
@@ -359,7 +419,7 @@ class LinkedListCycle {
 
 ## Linked List Cycle_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -367,6 +427,13 @@ class LinkedListCycle {
 package linkedlist
 
 class LinkedListCycle_II {
+
+/**
+ * detect Cycle — executes the core logic of this algorithm on the provided input.
+ *
+ * @param head the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun detectCycle(head: ListNode?): ListNode? {
         var slow = head
         var fast = head
@@ -390,6 +457,7 @@ class LinkedListCycle_II {
         return null  // No cycle
     }
 }
+
 ```
 
 ### Complexity
@@ -403,7 +471,7 @@ class LinkedListCycle_II {
 
 ## Merge K Sorted List
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -411,6 +479,14 @@ class LinkedListCycle_II {
 package linkedlist
 
 class MergeKSortedList {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param list1 the list1 parameter — a tree/graph node used in the computation
+ * @param list2 the list2 parameter — a tree/graph node used in the computation
+ * @return a list/collection of result elements
+ */
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         val head = ListNode(0) // dummy node
         var ptr = head
@@ -434,9 +510,23 @@ class MergeKSortedList {
         return head.next
     }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param lists the lists parameter — a array of elements used in the computation
+ * @return a list/collection of result elements
+ */
     fun mergeKLists(lists: Array<ListNode?>): ListNode? {
         if (lists.isEmpty())
             return null
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param end the right/ending boundary of the search range (inclusive)
+ * @return a list/collection of result elements
+ */
         fun merge(start: Int, end: Int): ListNode? {
             if (start == end)
                 return lists[start]
@@ -462,7 +552,7 @@ class MergeKSortedList {
 
 ## Merge Two Sorted L Ist
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -470,6 +560,14 @@ class MergeKSortedList {
 package linkedlist
 
 class MergeTwoSortedLIst {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param list1 the list1 parameter — a tree/graph node used in the computation
+ * @param list2 the list2 parameter — a tree/graph node used in the computation
+ * @return a list/collection of result elements
+ */
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         val head = ListNode(0) // dummy node
         var ptr = head
@@ -506,7 +604,7 @@ class MergeTwoSortedLIst {
 
 ## Odd Even Linked List
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -514,6 +612,13 @@ class MergeTwoSortedLIst {
 package linkedlist
 
 class OddEvenLinkedList {
+
+/**
+ * odd Even List — executes the core logic of this algorithm on the provided input.
+ *
+ * @param head the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun oddEvenList(head: ListNode?): ListNode? {
         var odd = head
         var even = head?.next
@@ -546,7 +651,7 @@ class OddEvenLinkedList {
 
 ## Palindrome Linked List
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -555,6 +660,13 @@ package linkedlist
 
 class PalindromeLinkedList {
     class Solution {
+
+/**
+ * is Palindrome — executes the core logic of this algorithm on the provided input.
+ *
+ * @param head the root/head node of the data structure
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun isPalindrome(head: ListNode?): Boolean {
             if (head?.next == null) return true // Edge case: empty or single node
 
@@ -585,6 +697,12 @@ class PalindromeLinkedList {
             return true
         }
 
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param head the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
         private fun reverseList(head: ListNode?): ListNode? {
             var prev: ListNode? = null
             var curr = head
@@ -598,6 +716,7 @@ class PalindromeLinkedList {
         }
     }
 }
+
 ```
 
 ### Complexity
@@ -611,7 +730,7 @@ class PalindromeLinkedList {
 
 ## Remove Nth Node From End Of List
 
-**Problem:** Two Pointer approach
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -619,6 +738,14 @@ class PalindromeLinkedList {
 package linkedlist
 
 class RemoveNthNodeFromEndOfList {
+
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param head the root/head node of the data structure
+ * @param n the size/dimension parameter for the algorithm
+ * @return a list/collection of result elements
+ */
     fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
         var size = 0
         var ptr = head
@@ -632,6 +759,14 @@ class RemoveNthNodeFromEndOfList {
         return removeNthFromFront(head, indexToRemove, size)
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param head the root/head node of the data structure
+ * @param indexToRemove the indexToRemove parameter — a integer value used in the computation
+ * @param size the size/dimension parameter for the algorithm
+ * @return a list/collection of result elements
+ */
     private fun removeNthFromFront(head: ListNode?, indexToRemove: Int, size: Int): ListNode? {
         var ptr = head
         var prev: ListNode? = null
@@ -681,13 +816,13 @@ class RemoveNthNodeFromEndOfList {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(h) where h = tree height |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Reverse Linked List
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -695,6 +830,13 @@ class RemoveNthNodeFromEndOfList {
 package linkedlist
 
 class ReverseLinkedList {
+
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param head the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun reverseList(head: ListNode?): ListNode? {
         if (head?.next == null) {
             return head
@@ -721,7 +863,7 @@ class ReverseLinkedList {
 
 ## Reverse Nodes In K Groups
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -729,6 +871,14 @@ class ReverseLinkedList {
 package linkedlist
 
 class ReverseNodesInKGroups {
+
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param head the root/head node of the data structure
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
         if (head == null || k == 1) return head
 
@@ -763,6 +913,13 @@ class ReverseNodesInKGroups {
         return dummy.next
     }
 
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param end the right/ending boundary of the search range (inclusive)
+ * @return a list/collection of result elements
+ */
     private fun reverse(start: ListNode?, end: ListNode?): Pair<ListNode?, ListNode?> {
         var prev: ListNode? = null
         var current = start
@@ -785,13 +942,13 @@ class ReverseNodesInKGroups {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(h) where h = tree height |
+| **Space** | O(1) |
 
 ---
 
 ## Key Takeaways
 
-1. **Core pattern recognition** — Identify the problem type and apply the right technique.
+1. **Core pattern recognition** — Identify the problem type and apply the right algorithmic technique.
 2. **Practice systematically** — Work through each problem to internalize the patterns.
 3. **Understand why, not just how** — Focus on the reasoning behind each solution.
 

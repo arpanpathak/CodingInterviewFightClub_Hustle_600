@@ -1,6 +1,13 @@
 package array.prefixsum
 
 class FIndTheHighestAltitute {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param gain the gain parameter — a array of integers used in the computation
+ * @return the computed integer result
+ */
     fun largestAltitude(gain: IntArray): Int {
         var (currentAltitude, highestAltitude) = Pair(0, 0)
 

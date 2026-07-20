@@ -1,6 +1,14 @@
 package array.dp
 
 class SplitArrayLargestSum {
+
+/**
+ * split Array — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun splitArray(nums: IntArray, k: Int): Int {
         val n = nums.size
         val prefixSum = IntArray(n + 1)
@@ -10,6 +18,13 @@ class SplitArrayLargestSum {
 
         val memo = mutableMapOf<Pair<Int, Int>, Int>()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param i the index position in the collection
+ * @param splitsLeft the splitsLeft parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
         fun dfs(i: Int, splitsLeft: Int): Int {
             if (splitsLeft == 1) return prefixSum[n] - prefixSum[i] // Last split takes remaining sum
             if (i == n) return Int.MAX_VALUE

@@ -2,6 +2,13 @@ package array.dp
 
 class MaximumSumSubArray {
     // Kaden's Algorithm Dynamic Programming
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the maximum value found in the input
+ */
     fun maxSubArray(nums: IntArray): Int {
         if (nums.isEmpty())
             return 0

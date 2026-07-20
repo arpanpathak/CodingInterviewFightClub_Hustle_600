@@ -1,6 +1,13 @@
 package array.greedy
 
 class NonOverlappingIntervals {
+
+/**
+ * erase Overlap Intervals — executes the core logic of this algorithm on the provided input.
+ *
+ * @param intervals the intervals parameter — a array of integers used in the computation
+ * @return the computed integer result
+ */
     fun eraseOverlapIntervals(intervals: Array<IntArray>): Int {
         intervals.sortWith(compareBy { it[0] })
 

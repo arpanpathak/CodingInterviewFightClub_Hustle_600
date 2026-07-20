@@ -1,6 +1,14 @@
 package array
 
 class RemoveElement {
+
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param nums the input array of numbers to process
+ * @param `val` the `val` parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun removeElement(nums: IntArray, `val`: Int): Int {
         var i = 0
 

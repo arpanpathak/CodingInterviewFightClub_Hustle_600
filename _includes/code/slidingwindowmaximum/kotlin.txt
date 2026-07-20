@@ -1,6 +1,14 @@
 package sliding_window
 
 class SlidingWindowMaximum {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun maxSlidingWindow(nums: IntArray, k: Int): IntArray {
         if (nums.isEmpty()) return intArrayOf()
 

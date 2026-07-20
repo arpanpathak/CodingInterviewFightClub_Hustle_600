@@ -1,6 +1,13 @@
 package array.cycle
 
 class FindTheDuplicateNumber {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed integer result
+ */
     fun findDuplicate(nums: IntArray): Int {
         var slow = nums[0]
         var fast = nums[0]

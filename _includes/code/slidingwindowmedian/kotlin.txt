@@ -7,6 +7,11 @@ class SlidingWindowMedian {
     private val maxHeap = PriorityQueue<Double> ( compareBy{-it} ) // Max-heap for the smaller half
     private val delayedRemoval = TreeMap<Double, Int>() // TreeMap to track delayed removals
 
+/**
+ * balance Heaps — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun balanceHeaps() {
         if (maxHeap.size > minHeap.size + 1) {
             minHeap.add(maxHeap.poll())
@@ -15,6 +20,12 @@ class SlidingWindowMedian {
         }
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun add(num: Int) {
         if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
             maxHeap.add(num.toDouble())
@@ -24,6 +35,12 @@ class SlidingWindowMedian {
         balanceHeaps()
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param num the num parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun remove(num: Int) {
         if (num <= maxHeap.peek()) {
             maxHeap.remove(num.toDouble())
@@ -33,6 +50,11 @@ class SlidingWindowMedian {
         balanceHeaps()
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed result of type Double
+ */
     private fun getMedian(): Double {
         return if (maxHeap.size == minHeap.size) {
             (maxHeap.peek().toDouble() + minHeap.peek().toDouble()) / 2.0
@@ -41,6 +63,13 @@ class SlidingWindowMedian {
         }
     }
 
+/**
+ * median Sliding Window — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun medianSlidingWindow(nums: IntArray, k: Int): DoubleArray {
         val result = DoubleArray(nums.size - k + 1)
 

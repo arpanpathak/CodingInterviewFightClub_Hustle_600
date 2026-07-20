@@ -1,6 +1,14 @@
 package sliding_window
 
 class LongestRepeatingCharacterReplacement {
+
+/**
+ * character Replacement — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun characterReplacement(s: String, k: Int): Int {
         val count = IntArray(26)
         var maxLength = 0

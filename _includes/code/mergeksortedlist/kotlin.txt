@@ -1,6 +1,14 @@
 package linkedlist
 
 class MergeKSortedList {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param list1 the list1 parameter — a tree/graph node used in the computation
+ * @param list2 the list2 parameter — a tree/graph node used in the computation
+ * @return a list/collection of result elements
+ */
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         val head = ListNode(0) // dummy node
         var ptr = head
@@ -24,9 +32,23 @@ class MergeKSortedList {
         return head.next
     }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param lists the lists parameter — a array of elements used in the computation
+ * @return a list/collection of result elements
+ */
     fun mergeKLists(lists: Array<ListNode?>): ListNode? {
         if (lists.isEmpty())
             return null
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param end the right/ending boundary of the search range (inclusive)
+ * @return a list/collection of result elements
+ */
         fun merge(start: Int, end: Int): ListNode? {
             if (start == end)
                 return lists[start]

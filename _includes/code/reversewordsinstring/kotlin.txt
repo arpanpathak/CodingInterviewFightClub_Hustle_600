@@ -1,6 +1,13 @@
 package string
 
 class ReverseWordsInString {
+
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param s the input string to process
+ * @return the computed string result
+ */
     fun reverseWords(s: String): String {
         val words = s.split(" ").filter { it.isNotEmpty() }.toMutableList()
 
@@ -17,6 +24,14 @@ class ReverseWordsInString {
 
     }
 
+/**
+ * swap — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun swap(nums: MutableList<String>, i: Int, j: Int) {
         nums[j] = nums[i].also { nums[i] = nums[j] }
     }

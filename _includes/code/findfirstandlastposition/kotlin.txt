@@ -2,6 +2,13 @@ package binarysearch
 
 class FindFirstAndLastPosition {
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return a list of matching/found elements
+ */
     fun searchRange(nums: IntArray, target: Int): IntArray {
         val result = intArrayOf(-1, -1)
 
@@ -17,6 +24,14 @@ class FindFirstAndLastPosition {
         return result
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @param findFirst the findFirst parameter — a boolean flag used in the computation
+ * @return the computed integer result
+ */
     private fun binarySearch(nums: IntArray, target: Int, findFirst: Boolean): Int {
         var left = 0
         var right = nums.lastIndex

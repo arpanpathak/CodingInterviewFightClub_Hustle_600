@@ -1,9 +1,23 @@
 package string.dynamic_programming
 
 class LongestPalindromicSubsequence {
+
+/**
+ * longest Palindrome Subseq — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun longestPalindromeSubseq(s: String): Int {
         val dp = Array(s.length) { IntArray(s.length) }
 
+/**
+ * lps — executes the core logic of this algorithm on the provided input.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param length the size/dimension parameter for the algorithm
+ * @return the computed integer result
+ */
         fun lps(start: Int, length: Int): Int {
             if (length <= 1) return length
             val end = start + length - 1

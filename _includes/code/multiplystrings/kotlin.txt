@@ -1,6 +1,14 @@
 package math
 
 class MultiplyStrings {
+
+/**
+ * multiply — executes the core logic of this algorithm on the provided input.
+ *
+ * @param num1 the num1 parameter — a string value used in the computation
+ * @param num2 the num2 parameter — a string value used in the computation
+ * @return the computed string result
+ */
     fun multiply(num1: String, num2: String): String {
         if (num1 == "0" || num2 == "0") return "0"
 

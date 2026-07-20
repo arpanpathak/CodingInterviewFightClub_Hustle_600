@@ -28,7 +28,7 @@ next_chapter:
 
 ## Account Merge
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -42,10 +42,22 @@ class AccountMerge {
 
         private val nodes = mutableMapOf<T, Node<T>>()
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param x the target value to search for or match against
+ * @return the computed result of type T
+ */
         fun add(x: T) {
             nodes.putIfAbsent(x, Node(x, 0))
         }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param x the target value to search for or match against
+ * @return the computed result of type T
+ */
         fun find(x: T): T {
             val node = nodes[x] ?: throw IllegalAccessException("Value $x not found")
 
@@ -55,6 +67,13 @@ class AccountMerge {
             return node.parent
         }
 
+/**
+ * union — executes the core logic of this algorithm on the provided input.
+ *
+ * @param x the target value to search for or match against
+ * @param y the y parameter — a input parameter of type T used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun union(x: T, y: T) {
             val rootX = find(x)
             val rootY = find(y)
@@ -73,6 +92,12 @@ class AccountMerge {
         }
     }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param accounts the accounts parameter — a list of strings used in the computation
+ * @return a list/collection of result elements
+ */
     fun accountsMerge(accounts: List<List<String>>): List<List<String>> {
         val emailToName = mutableMapOf<String, String>()
         val uf = UnionFind<String>()
@@ -114,7 +139,7 @@ class AccountMerge {
 
 ## Number Of Island_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -127,6 +152,12 @@ class NumberOfIsland_II {
         val rank = mutableMapOf<Pair<Int, Int>, Int>()
         var count = 0
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param x the target value to search for or match against
+ * @return the computed result of type Pair<Int, Int>
+ */
         fun find(x: Pair<Int, Int>): Pair<Int, Int> {
             if (parent[x] != x) {
                 parent[x] = find(parent[x]!!) // Path compression
@@ -134,6 +165,13 @@ class NumberOfIsland_II {
             return parent[x]!!
         }
 
+/**
+ * union — executes the core logic of this algorithm on the provided input.
+ *
+ * @param x the target value to search for or match against
+ * @param y the y parameter — a pair of values used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun union(x: Pair<Int, Int>, y: Pair<Int, Int>) {
             val rootX = find(x)
             val rootY = find(y)
@@ -150,6 +188,12 @@ class NumberOfIsland_II {
             count--
         }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param position the index position in the collection
+ * @return a list/collection of result elements
+ */
         fun addLand(position: Pair<Int, Int>) {
             if (parent.containsKey(position)) return
             parent[position] = position
@@ -158,6 +202,14 @@ class NumberOfIsland_II {
         }
     }
 
+/**
+ * num Islands2 — executes the core logic of this algorithm on the provided input.
+ *
+ * @param m the m parameter — a integer value used in the computation
+ * @param n the size/dimension parameter for the algorithm
+ * @param positions the positions parameter — a array of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun numIslands2(m: Int, n: Int, positions: Array<IntArray>): List<Int> {
         val uf = UnionFind()
         val result = mutableListOf<Int>()
@@ -183,6 +235,7 @@ class NumberOfIsland_II {
         return result
     }
 }
+
 ```
 
 ### Complexity
@@ -196,7 +249,7 @@ class NumberOfIsland_II {
 
 ## Union Find
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -208,10 +261,22 @@ class UnionFind<T> {
 
     private val nodes = mutableMapOf<T, Node<T>>()
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param x the target value to search for or match against
+ * @return the computed result of type T
+ */
     fun add(x: T) {
         nodes.putIfAbsent(x, Node(x, 0))
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param x the target value to search for or match against
+ * @return the computed result of type T
+ */
     fun find(x: T): T {
         val node = nodes[x] ?: throw IllegalAccessException("Value $x not found")
 
@@ -221,6 +286,13 @@ class UnionFind<T> {
         return node.parent
     }
 
+/**
+ * union — executes the core logic of this algorithm on the provided input.
+ *
+ * @param x the target value to search for or match against
+ * @param y the y parameter — a input parameter of type T used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun union(x: T, y: T) {
         val rootX = find(x)
         val rootY = find(y)
@@ -238,20 +310,21 @@ class UnionFind<T> {
         }
     }
 }
+
 ```
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ---
 
 ## Key Takeaways
 
-1. **Core pattern recognition** — Identify the problem type and apply the right technique.
+1. **Core pattern recognition** — Identify the problem type and apply the right algorithmic technique.
 2. **Practice systematically** — Work through each problem to internalize the patterns.
 3. **Understand why, not just how** — Focus on the reasoning behind each solution.
 

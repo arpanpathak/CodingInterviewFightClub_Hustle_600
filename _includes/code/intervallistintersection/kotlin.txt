@@ -1,6 +1,14 @@
 package array.twopointer
 
 class IntervalListIntersection {
+
+/**
+ * interval Intersection — executes the core logic of this algorithm on the provided input.
+ *
+ * @param firstList the firstList parameter — a array of integers used in the computation
+ * @param secondList the secondList parameter — a array of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun intervalIntersection(firstList: Array<IntArray>, secondList: Array<IntArray>): Array<IntArray> {
         val result = mutableListOf<IntArray>()
 

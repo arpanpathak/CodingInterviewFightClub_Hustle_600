@@ -1,6 +1,14 @@
 package array.prefixsum
 
 class SubArraySumEqualsToK {
+
+/**
+ * subarray Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed sum/total value
+ */
     fun subarraySum(nums: IntArray, k: Int): Int {
         val preSumFreq = mutableMapOf<Int, Int>()
         preSumFreq[0] = 1 // covers the case where sum - k = 0, meaning the current sub-array is valid

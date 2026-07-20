@@ -1,9 +1,23 @@
 package tree
 
 class SumRootToLeafNumbers {
+
+/**
+ * sum Numbers — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the total count/number of matching elements
+ */
     fun sumNumbers(root: TreeNode?): Int {
         var sum = 0
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param sumSoFar the sumSoFar parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?, sumSoFar: Int) {
             if (node == null) return
             val newSum = (sumSoFar * 10 + node.`val` )

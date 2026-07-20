@@ -14,7 +14,7 @@ next_chapter:
 
 # Heaps & Priority Queues
 
-> **11 problems** — **Heaps/Priority Queues** maintain min/max of a dynamic set. Use min-heap for k-largest, max-heap for k-smallest, dual-heaps for median tracking.
+> **10 problems** — **Heaps/Priority Queues** maintain min/max of a dynamic set. Use min-heap for k-largest, max-heap for k-smallest, dual-heaps for median tracking.
 
 ## Complete Problem Set
 
@@ -35,7 +35,7 @@ next_chapter:
 
 ## Dual Balanced Heap
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -48,6 +48,11 @@ class DualBalancedHeap<T : Comparable<T>> {
     private val minHeap = PriorityQueue<T>() // Min-heap for the larger half
     private val maxHeap = PriorityQueue<T>(compareByDescending { it }) // Max-heap for the smaller half
 
+/**
+ * balance Heaps — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun balanceHeaps() {
         if (maxHeap.size > minHeap.size + 1) {
             minHeap.add(maxHeap.poll())
@@ -56,6 +61,12 @@ class DualBalancedHeap<T : Comparable<T>> {
         }
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a input parameter of type T used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun add(num: T) {
         if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
             maxHeap.add(num)
@@ -65,6 +76,12 @@ class DualBalancedHeap<T : Comparable<T>> {
         balanceHeaps()
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param num the num parameter — a input parameter of type T used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun remove(num: T) {
         if (maxHeap.contains(num)) {
             maxHeap.remove(num)
@@ -74,6 +91,11 @@ class DualBalancedHeap<T : Comparable<T>> {
         balanceHeaps()
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed result of type T?
+ */
     fun getMedian(): T? {
         return if (maxHeap.size == minHeap.size) {
             // Handling generic types requires a custom approach for averaging or choosing one of the elements.
@@ -84,10 +106,16 @@ class DualBalancedHeap<T : Comparable<T>> {
         }
     }
 
+/**
+ * size — executes the core logic of this algorithm on the provided input.
+ *
+ * @return the total count/number of matching elements
+ */
     fun size(): Int {
         return maxHeap.size + minHeap.size
     }
 }
+
 ```
 
 ### Complexity
@@ -101,7 +129,7 @@ class DualBalancedHeap<T : Comparable<T>> {
 
 ## MK Average
 
-**Problem:** Your MKAverage object will be instantiated and called as such:
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -116,6 +144,12 @@ class MKAverage(private val m: Int, private val k: Int) {
     private val highHeap = PriorityQueue<Int>() // min heap (for k largest elements)
     private var sum = 0L // Sum of the middle elements
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun addElement(num: Int) {
         // Add to deque
         deque.add(num)
@@ -148,6 +182,11 @@ class MKAverage(private val m: Int, private val k: Int) {
         recalculateMiddleSum()
     }
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @return the computed integer result
+ */
     fun calculateMKAverage(): Int {
         return if (deque.size < m) {
             -1
@@ -158,6 +197,12 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Balance heaps to ensure there are k elements in each of the heaps
+
+/**
+ * balance Heaps — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun balanceHeaps() {
         // Ensure lowHeap has k elements and highHeap has k elements
         if (lowHeap.size > k) {
@@ -169,6 +214,12 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Recalculate the sum of the middle elements in the sliding window
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun recalculateMiddleSum() {
         sum = 0L
         val remainingElements = mutableListOf<Int>()
@@ -182,6 +233,11 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val obj = MKAverage(3, 1)
     obj.addElement(3)
@@ -203,14 +259,14 @@ fun main() {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
-| **Space** | O(1) |
+| **Time** | O(n log k) |
+| **Space** | O(k) |
 
 ---
 
 ## Find K Closest Elements
 
-**Problem:** Solving using Max Heap. O ( N log K + K log K )
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -259,6 +315,13 @@ class FindKClosestElements {
 
         companion object {
             @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
             fun main(args: Array<String>) {
                 val testClass = FindKClosestElements()
 
@@ -280,7 +343,7 @@ class FindKClosestElements {
 
 ## Find Score Of An Array After Marking All Elements
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -290,6 +353,13 @@ package heap
 import java.util.*
 
 class FindScoreOfAnArrayAfterMarkingAllElements {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed result of type Long
+ */
     fun findScore(nums: IntArray): Long {
         val n = nums.size
         val marked = BooleanArray(n) { false }
@@ -323,14 +393,14 @@ class FindScoreOfAnArrayAfterMarkingAllElements {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
-| **Space** | O(1) |
+| **Time** | O(n log k) |
+| **Space** | O(k) |
 
 ---
 
 ## IPO
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -342,6 +412,15 @@ import java.util.*
 class IPO {
     data class Project(val capital: Int, val profit: Int)
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param w the w parameter — a integer value used in the computation
+ * @param profits the profits parameter — a array of integers used in the computation
+ * @param capital the capital parameter — a array of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun findMaximizedCapital(k: Int, w: Int, profits: IntArray, capital: IntArray): Int {
         val projects = capital.indices
             .map { Project(capital[it], profits[it]) }
@@ -375,7 +454,7 @@ class IPO {
 
 ## Longest Happy String
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -385,6 +464,15 @@ package heap
 import java.util.*
 
 class LongestHappyString {
+
+/**
+ * longest Diverse String — executes the core logic of this algorithm on the provided input.
+ *
+ * @param a the first input array for comparison/merging
+ * @param b the second input array for comparison/merging
+ * @param c the c parameter — a integer value used in the computation
+ * @return the computed string result
+ */
     fun longestDiverseString(a: Int, b: Int, c: Int): String {
         // Use a priority queue to always get the character with highest remaining count
         val pq = PriorityQueue<Pair<Char, Int>> { p1, p2 -> p2.second - p1.second }
@@ -443,20 +531,21 @@ class LongestHappyString {
         }
     }
 }
+
 ```
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) or O(n²) |
-| **Space** | O(1) or O(n) |
+| **Time** | O(n log k) |
+| **Space** | O(k) |
 
 ---
 
 ## Meeting Room_III
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -468,6 +557,13 @@ import java.util.*
 class MeetingRoom_III {
     data class Room(val endTime: Long, val index: Int)
 
+/**
+ * most Booked — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param meetings the meetings parameter — a array of integers used in the computation
+ * @return the computed integer result
+ */
     fun mostBooked(n: Int, meetings: Array<IntArray>): Int {
         // Sort meetings by start time
         meetings.sortWith(compareBy { it[0] })
@@ -515,20 +611,21 @@ class MeetingRoom_III {
         return result
     }
 }
+
 ```
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(n log k) |
+| **Space** | O(k) |
 
 ---
 
 ## Single Threaded CPU
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -540,6 +637,12 @@ import java.util.*
 class SingleThreadedCPU {
     data class Task(val enqueueTime: Int, val processingTime: Int, val index: Int)
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param tasks the tasks parameter — a array of integers used in the computation
+ * @return the sorted/reordered list of elements
+ */
     fun getOrder(tasks: Array<IntArray>): IntArray {
         val allTasks = tasks.mapIndexed { i, (enq, proc) -> Task(enq, proc, i) }
             .sortedBy { it.enqueueTime }
@@ -573,14 +676,14 @@ class SingleThreadedCPU {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(n log k) |
+| **Space** | O(k) |
 
 ---
 
 ## Sliding Window Median
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -594,6 +697,11 @@ class SlidingWindowMedian {
     private val maxHeap = PriorityQueue<Double> ( compareBy{-it} ) // Max-heap for the smaller half
     private val delayedRemoval = TreeMap<Double, Int>() // TreeMap to track delayed removals
 
+/**
+ * balance Heaps — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun balanceHeaps() {
         if (maxHeap.size > minHeap.size + 1) {
             minHeap.add(maxHeap.poll())
@@ -602,6 +710,12 @@ class SlidingWindowMedian {
         }
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun add(num: Int) {
         if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
             maxHeap.add(num.toDouble())
@@ -611,6 +725,12 @@ class SlidingWindowMedian {
         balanceHeaps()
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param num the num parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun remove(num: Int) {
         if (num <= maxHeap.peek()) {
             maxHeap.remove(num.toDouble())
@@ -620,6 +740,11 @@ class SlidingWindowMedian {
         balanceHeaps()
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed result of type Double
+ */
     private fun getMedian(): Double {
         return if (maxHeap.size == minHeap.size) {
             (maxHeap.peek().toDouble() + minHeap.peek().toDouble()) / 2.0
@@ -628,6 +753,13 @@ class SlidingWindowMedian {
         }
     }
 
+/**
+ * median Sliding Window — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun medianSlidingWindow(nums: IntArray, k: Int): DoubleArray {
         val result = DoubleArray(nums.size - k + 1)
 
@@ -646,20 +778,21 @@ class SlidingWindowMedian {
         return result
     }
 }
+
 ```
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(n log k) |
+| **Space** | O(k) |
 
 ---
 
 ## Top K Frequent Elements
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -672,6 +805,13 @@ import kotlin.random.Random
 class TopKFrequentElements {
     private val map = HashMap<Int, Int>()
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun topKFrequent(nums: IntArray, k: Int): IntArray {
         nums.forEach { map[it] = map.getOrPut(it) { 0 } + 1 }
 
@@ -692,6 +832,15 @@ class TopKFrequentElements {
     }
 
     // Randomized Quick Partition...
+
+/**
+ * partition — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param end the right/ending boundary of the search range (inclusive)
+ * @return the computed integer result
+ */
     private fun partition(nums: IntArray, start: Int, end: Int): Int {
         val randomIndex = Random.nextInt(start, end + 1)
         swap(nums, randomIndex, end)  // Swap pivot with the end
@@ -708,6 +857,14 @@ class TopKFrequentElements {
         return partitionIndex
     }
 
+/**
+ * swap — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun swap(nums: IntArray, i: Int, j: Int) {
        nums[i] = nums[j].also { nums[i] = it }
     }
@@ -725,7 +882,7 @@ class TopKFrequentElements {
 
 ## Key Takeaways
 
-1. **Core pattern recognition** — Identify the problem type and apply the right technique.
+1. **Core pattern recognition** — Identify the problem type and apply the right algorithmic technique.
 2. **Practice systematically** — Work through each problem to internalize the patterns.
 3. **Understand why, not just how** — Focus on the reasoning behind each solution.
 

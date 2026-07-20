@@ -18,6 +18,13 @@ class CopyLinkedListWithRandomPointer {
     }
 
     class Solution {
+
+/**
+ * copy Random List — executes the core logic of this algorithm on the provided input.
+ *
+ * @param node the root/head node of the data structure
+ * @return the resulting tree/graph node
+ */
         fun copyRandomList(node: Node?): Node? {
             if (node == null) return null
 

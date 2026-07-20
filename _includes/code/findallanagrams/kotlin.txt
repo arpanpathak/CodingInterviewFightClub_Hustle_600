@@ -1,6 +1,14 @@
 package string.sliding_window
 
 class FindAllAnagrams {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param s the input string to process
+ * @param p the search pattern or criteria to match
+ * @return a list of matching/found elements
+ */
     fun findAnagrams(s: String, p: String): List<Int> {
         val result = mutableListOf<Int>()
         if (s.length < p.length) return result

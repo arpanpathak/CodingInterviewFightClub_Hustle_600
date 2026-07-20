@@ -1,6 +1,14 @@
 package microsoft
 
 class Toast {
+
+/**
+ * solution — executes the core logic of this algorithm on the provided input.
+ *
+ * @param A the first input array for comparison/merging
+ * @param S the input string to process
+ * @return the computed integer result
+ */
     fun solution(A: Array<String>, S: String): Int {
         // Create a frequency map for the characters in S
         val sCharCount = mutableMapOf<Char, Int>()

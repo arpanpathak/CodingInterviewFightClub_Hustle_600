@@ -1,8 +1,22 @@
 package backtracking
 
 class Strobogrammatic_Number_II {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return a list of matching/found elements
+ */
     fun findStrobogrammatic(n: Int): List<String> {
         val pairs = listOf("0" to "0", "1" to "1", "6" to "9", "8" to "8", "9" to "6")
+
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param currentLength the currentLength parameter — a integer value used in the computation
+ * @return a list/collection of result elements
+ */
         fun generateStrobogrammatic(currentLength: Int): List<String> {
             if (currentLength == 0) return listOf("")
             if (currentLength == 1) return listOf("0", "1", "8")

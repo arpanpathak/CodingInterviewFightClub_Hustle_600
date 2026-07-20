@@ -2,6 +2,13 @@ package string
 
 // Cantor’s Diagonalization Trick
 class FindUniqueBinaryString {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed string result
+ */
     fun findDifferentBinaryString(nums: Array<String>): String {
         val n = nums.size
         val sb = StringBuilder()

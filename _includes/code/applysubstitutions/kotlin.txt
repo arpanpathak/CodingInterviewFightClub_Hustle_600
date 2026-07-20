@@ -1,6 +1,14 @@
 package string
 
 class ApplySubstitutions {
+
+/**
+ * apply Substitutions — executes the core logic of this algorithm on the provided input.
+ *
+ * @param replacements the replacements parameter — a list of strings used in the computation
+ * @param text the input string to process
+ * @return the computed string result
+ */
     fun applySubstitutions(replacements: List<List<String>>, text: String): String {
         val map = mutableMapOf<String, String>()
 
@@ -8,6 +16,12 @@ class ApplySubstitutions {
             map[key] = value
         }
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param s the input string to process
+ * @return the computed string result
+ */
         fun resolve(s: String): String {
             val sb = StringBuilder()
             var i = 0

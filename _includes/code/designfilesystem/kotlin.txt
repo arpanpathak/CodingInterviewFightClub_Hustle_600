@@ -3,6 +3,13 @@ package hashtable
 class FileSystem() {
     private val fileSystem = mutableMapOf<String, Int>()
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param path the path parameter — a string value used in the computation
+ * @param value the target value to search for or match against
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun createPath(path: String, value: Int): Boolean {
 
         if (path in fileSystem || path == "/") {
@@ -18,6 +25,12 @@ class FileSystem() {
         return true
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param path the path parameter — a string value used in the computation
+ * @return the computed integer result
+ */
     fun get(path: String): Int {
         return fileSystem[path] ?: -1
     }

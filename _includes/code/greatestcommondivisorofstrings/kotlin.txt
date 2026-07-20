@@ -1,6 +1,14 @@
 package string
 
 class GreatestCommonDivisorOfStrings {
+
+/**
+ * gcd — executes the core logic of this algorithm on the provided input.
+ *
+ * @param a the first input array for comparison/merging
+ * @param b the second input array for comparison/merging
+ * @return the computed integer result
+ */
     fun gcd(a: Int, b: Int): Int {
         return when {
             a == b -> a
@@ -9,6 +17,13 @@ class GreatestCommonDivisorOfStrings {
         }
     }
 
+/**
+ * gcd Of Strings — executes the core logic of this algorithm on the provided input.
+ *
+ * @param str1 the str1 parameter — a string value used in the computation
+ * @param str2 the str2 parameter — a string value used in the computation
+ * @return the computed string result
+ */
     fun gcdOfStrings(str1: String, str2: String): String {
         // Dhoyasha Foggy I didn't understand.
         if ((str1 + str2) != (str2 + str1))

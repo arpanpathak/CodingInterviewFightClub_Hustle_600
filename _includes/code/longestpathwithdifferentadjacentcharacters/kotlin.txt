@@ -1,6 +1,14 @@
 package tree
 
 class LongestPathWithDifferentAdjacentCharacters {
+
+/**
+ * longest Path — executes the core logic of this algorithm on the provided input.
+ *
+ * @param parent the parent parameter — a array of integers used in the computation
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun longestPath(parent: IntArray, s: String): Int {
         val children = Array(parent.size) { mutableListOf<Int>() }
         for (i in 1 until parent.size) {
@@ -9,6 +17,12 @@ class LongestPathWithDifferentAdjacentCharacters {
 
         var maxLength = 1
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return the computed integer result
+ */
         fun dfs(node: Int): Int {
             var maxDepth = 1 // At least the node itself
 

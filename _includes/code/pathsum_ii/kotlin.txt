@@ -1,9 +1,25 @@
 package tree
 
 class PathSum_II {
+
+/**
+ * path Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param targetSum the targetSum parameter — a integer value used in the computation
+ * @return a list/collection of result elements
+ */
     fun pathSum(root: TreeNode?, targetSum: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param currentSum the currentSum parameter — a integer value used in the computation
+ * @param path the path parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?, currentSum: Int, path: MutableList<Int> = mutableListOf()) {
             if (node == null) return
 

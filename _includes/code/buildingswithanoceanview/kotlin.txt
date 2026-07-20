@@ -1,6 +1,13 @@
 package stack
 
 class BuildingsWithAnOceanView {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param heights the heights parameter — a array of integers used in the computation
+ * @return a list of matching/found elements
+ */
     fun findBuildings(heights: IntArray): IntArray {
         val result = mutableListOf<Int>()
 

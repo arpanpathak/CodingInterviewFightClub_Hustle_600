@@ -7,10 +7,23 @@ class TreeNode(var `val`: Int) {
 
 class BinarySearchTreeToGreaterSumTree {
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param root the root/head node of the data structure
+ * @return the resulting tree/graph node
+ */
     fun bstToGst(root: TreeNode?): TreeNode? {
         var sum = 0
 
         // Helper function to perform reverse in-order traversal
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs (node: TreeNode?) {
             if (node == null)
                 return

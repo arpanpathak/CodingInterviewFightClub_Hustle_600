@@ -1,6 +1,13 @@
 package linkedlist
 
 class OddEvenLinkedList {
+
+/**
+ * odd Even List — executes the core logic of this algorithm on the provided input.
+ *
+ * @param head the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun oddEvenList(head: ListNode?): ListNode? {
         var odd = head
         var even = head?.next

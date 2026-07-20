@@ -1,11 +1,26 @@
 package array.dp
 
 class HouseRobber {
+
+/**
+ * rob — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed integer result
+ */
     fun rob(nums: IntArray): Int {
         val dp = IntArray(nums.size) { -1 }
         return rob(dp, nums, 0)
     }
 
+/**
+ * rob — executes the core logic of this algorithm on the provided input.
+ *
+ * @param dp the dp parameter — a array of integers used in the computation
+ * @param nums the input array of numbers to process
+ * @param i the index position in the collection
+ * @return the computed integer result
+ */
     fun rob(dp: IntArray, nums: IntArray, i: Int): Int {
         return when {
             i >= nums.size -> 0
@@ -17,6 +32,12 @@ class HouseRobber {
         }
     }
 
+/**
+ * rob_iterative — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed integer result
+ */
     fun rob_iterative(nums: IntArray): Int {
         if (nums.isEmpty()) return 0
 

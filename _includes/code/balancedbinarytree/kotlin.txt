@@ -3,7 +3,21 @@ package tree
 import kotlin.math.abs
 
 class BalancedBinaryTree {
+
+/**
+ * is Balanced — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isBalanced(root: TreeNode?): Boolean {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param node the root/head node of the data structure
+ * @return the computed integer result
+ */
         fun checkHeight(node: TreeNode?): Int {
             if (node == null) return 0
 

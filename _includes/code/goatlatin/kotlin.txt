@@ -1,6 +1,13 @@
 package string
 
 class GoatLatin {
+
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param sentence the sentence parameter — a string value used in the computation
+ * @return the computed string result
+ */
     fun toGoatLatin(sentence: String): String {
         // Define a set of vowels for faster lookup
         val vowels = setOf('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')

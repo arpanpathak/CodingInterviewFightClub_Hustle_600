@@ -3,6 +3,14 @@ package quicksort
 import kotlin.random.Random
 
 class KClosestPointsToOrigin {
+
+/**
+ * k Closest — executes the core logic of this algorithm on the provided input.
+ *
+ * @param points the points parameter — a array of integers used in the computation
+ * @param K the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun kClosest(points: Array<IntArray>, K: Int): Array<IntArray> {
         var (start, end) = Pair( 0, points.size - 1)
 
@@ -21,6 +29,15 @@ class KClosestPointsToOrigin {
     }
 
     // Randomized Quicksort function
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param points the points parameter — a array of integers used in the computation
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param end the right/ending boundary of the search range (inclusive)
+ * @return the computed integer result
+ */
     private fun quickSort(points: Array<IntArray>, start: Int, end: Int): Int {
         var partitionIndex = start
         val randomIndex = Random.nextInt(start, end + 1)
@@ -40,11 +57,27 @@ class KClosestPointsToOrigin {
     }
 
     // Helper function to swap elements in the array using `also`
+
+/**
+ * swap — executes the core logic of this algorithm on the provided input.
+ *
+ * @param points the points parameter — a array of integers used in the computation
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun swap(points: Array<IntArray>, i: Int, j: Int) {
         points[j] = points[i].also { points[i] = points[j] }
     }
 
     // Helper function to calculate the squared Euclidean distance
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param point the point parameter — a array of integers used in the computation
+ * @return the computed integer result
+ */
     private fun calculateDistance(point: IntArray): Int {
         return point[0] * point[0] + point[1] * point[1]
     }

@@ -1,6 +1,13 @@
 package sorting
 
 class LargestNumber {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed string result
+ */
     fun largestNumber(nums: IntArray): String {
         val strNums = nums.map { it.toString() }.toTypedArray()
         strNums.sortWith { a, b -> (b + a).compareTo(a + b) }

@@ -1,6 +1,13 @@
 package stack
 
 class RemoveDuplicateLetters {
+
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param s the input string to process
+ * @return the computed string result
+ */
     fun removeDuplicateLetters(s: String): String {
         val lastIndex = IntArray(26) {-1}
         val inStack = BooleanArray(26)

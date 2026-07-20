@@ -1,6 +1,13 @@
 package backtracking
 
 class SudokuSolverSet {
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param board the 2D matrix/grid to traverse or process
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun solveSudoku(board: Array<CharArray>) {
         val seen = mutableSetOf<String>()
 
@@ -14,12 +21,25 @@ class SudokuSolverSet {
             }
         }
 
+/**
+ * is Safe — executes the core logic of this algorithm on the provided input.
+ *
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @param c the c parameter — a input parameter of type Char used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun isSafe(i: Int, j: Int, c: Char): Boolean {
             return "$c row $i" !in seen &&
                     "$c col $j" !in seen &&
                     "$c block ${i / 3}${j / 3}" !in seen
         }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun dfs(): Boolean {
             for (i in 0..8) {
                 for (j in 0..8) {
@@ -41,12 +61,30 @@ class SudokuSolverSet {
         dfs()
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @param c the c parameter — a input parameter of type Char used in the computation
+ * @param seen the seen parameter — a set of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun addToSet(i: Int, j: Int, c: Char, seen: MutableSet<String>) {
         seen.add("$c row $i")
         seen.add("$c col $j")
         seen.add("$c block ${i / 3}${j / 3}")
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @param c the c parameter — a input parameter of type Char used in the computation
+ * @param seen the seen parameter — a set of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun removeFromSet(i: Int, j: Int, c: Char, seen: MutableSet<String>) {
         seen.remove("$c row $i")
         seen.remove("$c col $j")

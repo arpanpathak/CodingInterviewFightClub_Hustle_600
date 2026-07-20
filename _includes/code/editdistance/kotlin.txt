@@ -3,10 +3,26 @@ package string.dynamic_programming
 class EditDistance {
     private var dp = mutableMapOf<String,Int>()
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param word1 the word1 parameter — a string value used in the computation
+ * @param word2 the word2 parameter — a string value used in the computation
+ * @return the minimum value found in the input
+ */
     fun minDistance(word1: String, word2: String): Int {
         return minDistance(word1, word2, word1.length, word2.length)
     }
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param word1 the word1 parameter — a string value used in the computation
+ * @param word2 the word2 parameter — a string value used in the computation
+ * @param m the m parameter — a integer value used in the computation
+ * @param n the size/dimension parameter for the algorithm
+ * @return the minimum value found in the input
+ */
     fun minDistance(word1: String, word2: String, m: Int, n: Int): Int {
         val state = "$m.$n"
 
@@ -26,6 +42,13 @@ class EditDistance {
 
     companion object {
         @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun main(args: Array<String>) {
         }
     }

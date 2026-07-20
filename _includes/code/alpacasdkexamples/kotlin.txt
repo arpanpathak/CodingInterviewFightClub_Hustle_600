@@ -16,6 +16,11 @@ import net.jacobpeterson.alpaca.model.endpoint.streaming.enums.StreamingMessageT
 import net.jacobpeterson.alpaca.model.properties.DataAPIType
 import net.jacobpeterson.alpaca.model.properties.EndpointAPIType
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() = runBlocking {
     val alpacaAPI = AlpacaAPI(
         "PKN1UPZO3EU9F72CC9DI",
@@ -39,10 +44,22 @@ fun main() = runBlocking {
     }
 }
 
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param api the api parameter — a input parameter of type AlpacaAPI used in the computation
+ * @return the computed result of type Account
+ */
 suspend fun fetchAccount(api: AlpacaAPI): Account {
     return api.account().get()  // Simulated API call
 }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param api the api parameter — a input parameter of type AlpacaAPI used in the computation
+ * @return the computed result of type Order
+ */
 suspend fun placeOrder(api: AlpacaAPI): Order {
     return api.orders().requestLimitOrder(
         "AAPL",
@@ -54,6 +71,13 @@ suspend fun placeOrder(api: AlpacaAPI): Order {
     )  // Assuming toString gives a meaningful representation
 }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param account the account parameter — a input parameter of type Account used in the computation
+ * @param order the order parameter — a input parameter of type Order used in the computation
+ * @return a mapping/dictionary of computed key-value pairs
+ */
 fun mergeData(account: Account, order: Order): Map<String, Any> {
     return mapOf(
         "Account" to account,
@@ -61,6 +85,12 @@ fun mergeData(account: Account, order: Order): Map<String, Any> {
     )
 }
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param api the api parameter — a input parameter of type AlpacaAPI used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
 suspend fun subscribeToTradeUpdates(api: AlpacaAPI) {
     api.streaming().connect()
     println("Attempting to connect to Alpaca streaming service.")

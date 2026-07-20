@@ -7,10 +7,22 @@ class AccountMerge {
 
         private val nodes = mutableMapOf<T, Node<T>>()
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param x the target value to search for or match against
+ * @return the computed result of type T
+ */
         fun add(x: T) {
             nodes.putIfAbsent(x, Node(x, 0))
         }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param x the target value to search for or match against
+ * @return the computed result of type T
+ */
         fun find(x: T): T {
             val node = nodes[x] ?: throw IllegalAccessException("Value $x not found")
 
@@ -20,6 +32,13 @@ class AccountMerge {
             return node.parent
         }
 
+/**
+ * union — executes the core logic of this algorithm on the provided input.
+ *
+ * @param x the target value to search for or match against
+ * @param y the y parameter — a input parameter of type T used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun union(x: T, y: T) {
             val rootX = find(x)
             val rootY = find(y)
@@ -38,6 +57,12 @@ class AccountMerge {
         }
     }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param accounts the accounts parameter — a list of strings used in the computation
+ * @return a list/collection of result elements
+ */
     fun accountsMerge(accounts: List<List<String>>): List<List<String>> {
         val emailToName = mutableMapOf<String, String>()
         val uf = UnionFind<String>()

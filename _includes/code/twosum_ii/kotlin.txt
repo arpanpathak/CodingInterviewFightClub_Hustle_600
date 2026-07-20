@@ -1,6 +1,14 @@
 package array.twopointer
 
 class TwoSum_II {
+
+/**
+ * two Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param numbers the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun twoSum(numbers: IntArray, target: Int): IntArray {
         var start = 0
         var end = numbers.lastIndex

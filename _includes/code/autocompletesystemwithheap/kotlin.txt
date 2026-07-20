@@ -14,6 +14,13 @@ class AutoCompleteSystemWithHeap(sentences: Array<String>, times: IntArray) {
         }
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param word the word parameter — a string value used in the computation
+ * @param hotness the hotness parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun insert(word: String, hotness: Int) {
         var currentNode = root
 
@@ -29,6 +36,12 @@ class AutoCompleteSystemWithHeap(sentences: Array<String>, times: IntArray) {
         }
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param prefix the prefix parameter — a string value used in the computation
+ * @return a list of matching/found elements
+ */
     fun search(prefix: String): List<String> {
         var currentNode = root
         val result = mutableListOf<String>()
@@ -45,6 +58,12 @@ class AutoCompleteSystemWithHeap(sentences: Array<String>, times: IntArray) {
         return currentNode.suggestions.take(3)
     }
 
+/**
+ * suggested Products — executes the core logic of this algorithm on the provided input.
+ *
+ * @param searchWord the searchWord parameter — a string value used in the computation
+ * @return a list/collection of result elements
+ */
     fun suggestedProducts(searchWord: String): List<List<String>> {
         val result = mutableListOf<List<String>>()
         val prefixSearchString = StringBuilder()

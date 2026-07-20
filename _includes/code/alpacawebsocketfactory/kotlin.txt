@@ -14,6 +14,12 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
     private val url = ALPACA_MARKET_WEBSOCKET_STREAM_URL
     private val httpClient = OkHttpClient()
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param streams the streams parameter — a list of strings used in the computation
+ * @return the computed string result
+ */
     fun createWebSocket(streams: List<String>): Channel<String> {
         val request = Request.Builder()
             .url(url)
@@ -23,18 +29,41 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
 
         val messageChannel = Channel<String>(Channel.UNLIMITED)
         val webSocketListener = object : WebSocketListener() {
+
+/**
+ * on Open — executes the core logic of this algorithm on the provided input.
+ *
+ * @param webSocket the webSocket parameter — a input parameter of type WebSocket used in the computation
+ * @param response the response parameter — a input parameter of type Response used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
             override fun onOpen(webSocket: WebSocket, response: Response) {
                 println("Connected to the server!")
                 authenticate(webSocket)
                 subscribeToStreams(webSocket, streams)
             }
 
+/**
+ * on Message — executes the core logic of this algorithm on the provided input.
+ *
+ * @param webSocket the webSocket parameter — a input parameter of type WebSocket used in the computation
+ * @param text the input string to process
+ * @return Unit (nothing) — this function operates via side effects
+ */
             override fun onMessage(webSocket: WebSocket, text: String) {
                 scope.launch {
                     messageChannel.send(text)
                 }
             }
 
+/**
+ * on Closing — executes the core logic of this algorithm on the provided input.
+ *
+ * @param webSocket the webSocket parameter — a input parameter of type WebSocket used in the computation
+ * @param code the code parameter — a integer value used in the computation
+ * @param reason the reason parameter — a string value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
             override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
                 println("Closing: $code / $reason")
                 webSocket.close(1000, null)  // Ensure normal closure
@@ -43,6 +72,14 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
                 }
             }
 
+/**
+ * on Failure — executes the core logic of this algorithm on the provided input.
+ *
+ * @param webSocket the webSocket parameter — a input parameter of type WebSocket used in the computation
+ * @param t the t parameter — a input parameter of type Throwable used in the computation
+ * @param response the response parameter — a input parameter of type Response? used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
             override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
                 println("Error: " + t.message)
             }
@@ -52,6 +89,12 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
         return messageChannel
     }
 
+/**
+ * authenticate — executes the core logic of this algorithm on the provided input.
+ *
+ * @param webSocket the webSocket parameter — a input parameter of type WebSocket used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun authenticate(webSocket: WebSocket) {
         webSocket.send("""
             {
@@ -64,6 +107,13 @@ class AlpacaWebSocketFactory(private val apiKeyId: String, private val apiSecret
         """.trimIndent())
     }
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param webSocket the webSocket parameter — a input parameter of type WebSocket used in the computation
+ * @param streams the streams parameter — a list of strings used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun subscribeToStreams(webSocket: WebSocket, streams: List<String>) {
         val formattedStreams = streams.joinToString(separator = "\",\"", prefix = "\"", postfix = "\"")
         webSocket.send("""

@@ -1,6 +1,14 @@
 package sliding_window
 
 class MaximumAverageSubarray_I {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed result of type Double
+ */
     fun findMaxAverage(nums: IntArray, k: Int): Double {
         var windowSum = 0.0
         var maxAverage = Double.NEGATIVE_INFINITY

@@ -7,6 +7,13 @@ class FindArticulationPoints {
     private lateinit var low: IntArray
     private lateinit var visited: BooleanArray
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param connections the connections parameter — a list of integers used in the computation
+ * @return a set of unique result elements
+ */
     fun findCutVertices(n: Int, connections: List<List<Int>>): Set<Int> {
         G = Array(n) { mutableListOf() }
         time = 0
@@ -27,6 +34,14 @@ class FindArticulationPoints {
         return cutVertices
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param parent the parent parameter — a integer value used in the computation
+ * @param cutVertices the cutVertices parameter — a set of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun dfs(node: Int, parent: Int, cutVertices: MutableSet<Int>) {
         visited[node] = true
         label[node] = time++

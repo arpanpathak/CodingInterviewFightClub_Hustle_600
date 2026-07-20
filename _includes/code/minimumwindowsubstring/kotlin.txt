@@ -1,6 +1,14 @@
 package string.sliding_window
 
 class MinimumWindowSubstring {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param s the input string to process
+ * @param t the t parameter — a string value used in the computation
+ * @return the computed string result
+ */
     fun minWindow(s: String, t: String): String {
         // Return early if either string is empty
         if (s.isEmpty() || t.isEmpty()) return ""

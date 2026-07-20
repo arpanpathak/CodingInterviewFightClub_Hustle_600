@@ -1,6 +1,13 @@
 package math.dp
 
 class PascalsTriangle {
+
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param numRows the numRows parameter — a integer value used in the computation
+ * @return a list/collection of result elements
+ */
     fun generate(numRows: Int): List<List<Int>> {
         val result = MutableList(numRows) { MutableList(it + 1) { 1 } }
 

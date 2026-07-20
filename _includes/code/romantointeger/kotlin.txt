@@ -1,6 +1,13 @@
 package hashtable
 
 class RomanToInteger {
+
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun romanToInt(s: String): Int {
         val romanMap = mapOf(
             'I' to 1,

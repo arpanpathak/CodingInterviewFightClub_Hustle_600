@@ -7,9 +7,23 @@ class SerializeAndDeserializeNArrayTree {
 
     class Codec {
         // Encodes a tree to a single string.
+
+/**
+ * serialize — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed string result
+ */
         fun serialize(root: Node?): String = when (root) {
             null -> ""
             else -> buildString {
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
                 fun dfs(node: Node?) {
                     node?.let {
                         append("${it.`val`}:${it.children.size}")
@@ -25,12 +39,24 @@ class SerializeAndDeserializeNArrayTree {
         }
 
         // Deserialize with internal DFS
+
+/**
+ * deserialize — executes the core logic of this algorithm on the provided input.
+ *
+ * @param data the input array of numbers to process
+ * @return the resulting tree/graph node
+ */
         fun deserialize(data: String): Node? {
             if (data.isEmpty()) return null
 
             val tokens = data.split(",")
             var index = 0
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @return the resulting tree/graph node
+ */
             fun parse(): Node? {
                 if (index >= tokens.size) return null
 

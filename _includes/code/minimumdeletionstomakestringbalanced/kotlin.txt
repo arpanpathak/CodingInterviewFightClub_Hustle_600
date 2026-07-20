@@ -1,6 +1,13 @@
 package stack
 
 class MinimumDeletionsToMakeStringBalanced {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param s the input string to process
+ * @return the minimum value found in the input
+ */
     fun minimumDeletions(s: String): Int {
         val stack = ArrayDeque<Char>()
         var deletions = 0

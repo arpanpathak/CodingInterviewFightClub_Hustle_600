@@ -5,6 +5,13 @@ class CountWordsWithAGivenPrefix_Trie_FP {
 
     private val root = TrieNode()
 
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param words list of strings/words to process
+ * @param prefix the prefix parameter — a string value used in the computation
+ * @return the total count/number of matching elements
+ */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         words.forEach { word ->
             word.fold(root) { node, ch ->
@@ -14,5 +21,11 @@ class CountWordsWithAGivenPrefix_Trie_FP {
         return prefixSearch(prefix)?.prefixCount ?: 0
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param prefix the prefix parameter — a string value used in the computation
+ * @return the resulting tree/graph node
+ */
     private fun prefixSearch(prefix: String): TrieNode? = prefix.fold(root) { node, ch -> node.children[ch] ?: return null }
 }

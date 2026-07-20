@@ -1,6 +1,13 @@
 package string
 
 class IsomorphicString {
+
+/**
+ * encode — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @return the computed string result
+ */
     fun encode(s: String): String {
         val map = mutableMapOf<Char, Int>()
         val sb = StringBuilder()
@@ -14,6 +21,13 @@ class IsomorphicString {
         return sb.toString()
     }
 
+/**
+ * is Isomorphic — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @param t the t parameter — a string value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isIsomorphic(s: String, t: String): Boolean {
         return encode(s) == encode(t)
     }

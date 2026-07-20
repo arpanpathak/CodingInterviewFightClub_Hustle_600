@@ -1,5 +1,12 @@
 package binarysearch
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param blocks list of block/building records to evaluate
+ * @param requirements list of required criteria/amenities to satisfy
+ * @return the computed integer result
+ */
 fun findBestBlock(blocks: List<Map<String, Boolean>>, requirements: List<String>): Int {
     // Step 1: Create a HashMap where each key is an amenity and each value is a sorted list of blocks where the amenity is present
     val amenityMap = mutableMapOf<String, MutableList<Int>>()
@@ -37,6 +44,14 @@ fun findBestBlock(blocks: List<Map<String, Boolean>>, requirements: List<String>
 }
 
 // Function to find the minimum distance to the closest block with the given amenity
+
+/**
+ * closest Distance — executes the core logic of this algorithm on the provided input.
+ *
+ * @param blockIndex the blockIndex parameter — a integer value used in the computation
+ * @param blocksWithAmenity the blocksWithAmenity parameter — a list of integers used in the computation
+ * @return the computed integer result
+ */
 fun closestDistance(blockIndex: Int, blocksWithAmenity: List<Int>): Int {
     val pos = blocksWithAmenity.binarySearch(blockIndex)
     return if (pos >= 0) 0
@@ -49,6 +64,14 @@ fun closestDistance(blockIndex: Int, blocksWithAmenity: List<Int>): Int {
 }
 
 // Custom Binary Search implementation
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param arr the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return the computed integer result
+ */
 fun binarySearch(arr: List<Int>, target: Int): Int {
     var (low, high) = listOf(0, arr.lastIndex)
 
@@ -66,6 +89,11 @@ fun binarySearch(arr: List<Int>, target: Int): Int {
 
 
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val blocks = listOf(
         mapOf("gym" to false, "school" to true, "store" to false),

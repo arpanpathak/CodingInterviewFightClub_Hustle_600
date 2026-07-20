@@ -1,6 +1,13 @@
 package array.prefixsum
 
 class `Minimum NumberofOperationstoMoveAllBallstoEachBox` {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param boxes the boxes parameter — a string value used in the computation
+ * @return a list/collection of result elements
+ */
     fun minOperations(boxes: String): IntArray {
         val n = boxes.length
         val result = IntArray(n) { 0 }

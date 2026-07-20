@@ -1,5 +1,10 @@
 package grid.dynamic_programming
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     println("Isn't it cool Kotlin doesn't even require a main class ? ")
 }

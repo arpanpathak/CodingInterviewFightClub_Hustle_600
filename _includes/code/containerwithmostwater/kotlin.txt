@@ -1,6 +1,13 @@
 package array.greedy
 
 class ContainerWithMostWater {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param height the height parameter — a array of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxArea(height: IntArray): Int {
         var (start, end) = Pair(0, height.lastIndex)
         var maxWater = 0

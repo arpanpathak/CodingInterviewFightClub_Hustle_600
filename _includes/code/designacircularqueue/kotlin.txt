@@ -8,6 +8,12 @@ class DesignACircularQueue {
         private var size = 0
         private val capacity = k
 
+/**
+ * en Queue — executes the core logic of this algorithm on the provided input.
+ *
+ * @param value the target value to search for or match against
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun enQueue(value: Int): Boolean {
             if (isFull()) {
                 return false
@@ -18,6 +24,11 @@ class DesignACircularQueue {
             return true
         }
 
+/**
+ * de Queue — executes the core logic of this algorithm on the provided input.
+ *
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun deQueue(): Boolean {
             if (isEmpty()) {
                 return false
@@ -27,6 +38,11 @@ class DesignACircularQueue {
             return true
         }
 
+/**
+ * Front — executes the core logic of this algorithm on the provided input.
+ *
+ * @return the computed integer result
+ */
         fun Front(): Int {
             if (isEmpty()) {
                 return -1
@@ -34,6 +50,11 @@ class DesignACircularQueue {
             return queue[front]
         }
 
+/**
+ * Rear — executes the core logic of this algorithm on the provided input.
+ *
+ * @return the computed integer result
+ */
         fun Rear(): Int {
             if (isEmpty()) {
                 return -1
@@ -41,10 +62,20 @@ class DesignACircularQueue {
             return queue[(rear - 1 + capacity) % capacity]
         }
 
+/**
+ * is Empty — executes the core logic of this algorithm on the provided input.
+ *
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun isEmpty(): Boolean {
             return size == 0
         }
 
+/**
+ * is Full — executes the core logic of this algorithm on the provided input.
+ *
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun isFull(): Boolean {
             return size == capacity
         }

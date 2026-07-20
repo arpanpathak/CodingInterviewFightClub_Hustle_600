@@ -1,6 +1,14 @@
 package math
 
 class DivideTwoIntegers {
+
+/**
+ * divide — executes the core logic of this algorithm on the provided input.
+ *
+ * @param dividend the dividend parameter — a integer value used in the computation
+ * @param divisor the divisor parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun divide(dividend: Int, divisor: Int): Int {
         // Handle overflow case
         if (dividend == Int.MIN_VALUE && divisor == -1) return Int.MAX_VALUE

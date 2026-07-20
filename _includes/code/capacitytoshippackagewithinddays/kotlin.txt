@@ -1,6 +1,15 @@
 package binarysearch
 
 class CapacityToShipPackageWithinDDays {
+
+/**
+ * Determines whether a valid solution exists for the given constraints.
+ *
+ * @param weights array of weight values used in the computation
+ * @param mid the midpoint index used for partitioning
+ * @param days the time/resource constraint for the operation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun feasible(weights: IntArray, mid:Int, days: Int): Boolean {
         var (daysNeeded, currentLoad) = 1 to 0
         weights.forEach { weight ->
@@ -14,6 +23,13 @@ class CapacityToShipPackageWithinDDays {
         return daysNeeded <= days
     }
 
+/**
+ * ship Within Days — executes the core logic of this algorithm on the provided input.
+ *
+ * @param weights array of weight values used in the computation
+ * @param days the time/resource constraint for the operation
+ * @return the computed integer result
+ */
     fun shipWithinDays(weights: IntArray, days: Int): Int {
         var (sum, max) = 0 to 0
 

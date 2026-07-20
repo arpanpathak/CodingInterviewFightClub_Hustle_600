@@ -3,6 +3,14 @@ package dynamic_programming
 class MaximumProfitInJobScheduling {
     data class Job(val start: Int, val end: Int, val profit: Int)
 
+/**
+ * job Scheduling — executes the core logic of this algorithm on the provided input.
+ *
+ * @param startTime the startTime parameter — a array of integers used in the computation
+ * @param endTime the endTime parameter — a array of integers used in the computation
+ * @param profit the profit parameter — a array of integers used in the computation
+ * @return the computed integer result
+ */
     fun jobScheduling(startTime: IntArray, endTime: IntArray, profit: IntArray): Int {
         // Create a list of jobs and sort them by end time
         val jobs = startTime.indices.map { Job(startTime[it], endTime[it], profit[it]) }
@@ -29,6 +37,13 @@ class MaximumProfitInJobScheduling {
         return dp[dp.size - 1]
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param jobs the jobs parameter — a list of elements used in the computation
+ * @param currentIndex the currentIndex parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     private fun findLastNonOverlappingJob(jobs: List<Job>, currentIndex: Int): Int {
         val currentJob = jobs[currentIndex]
         var low = 0

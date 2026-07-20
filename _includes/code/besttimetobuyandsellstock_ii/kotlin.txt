@@ -1,6 +1,13 @@
 package stock_market.greedy
 
 class BestTimeToBuyAndSellStock_II {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param prices the prices parameter — a array of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxProfit(prices: IntArray): Int {
         var maxProfit = 0
         for (i in 1..prices.lastIndex) {

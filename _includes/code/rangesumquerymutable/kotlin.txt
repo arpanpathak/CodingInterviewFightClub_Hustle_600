@@ -7,6 +7,13 @@ class RangeSumQueryMutable(nums: IntArray) {
         for (i in nums.indices) update(i, nums[i])
     }
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param i the index position in the collection
+ * @param delta the delta parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun updateBIT(i: Int, delta: Int) {
         var index = i + 1
         while (index <= tree.size - 1) {
@@ -15,11 +22,24 @@ class RangeSumQueryMutable(nums: IntArray) {
         }
     }
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param index the index position in the collection
+ * @param `val` the `val` parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun update(index: Int, `val`: Int) {
         val current = sumRange(index, index)
         updateBIT(index, `val` - current)
     }
 
+/**
+ * sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param index the index position in the collection
+ * @return the computed sum/total value
+ */
     private fun sum(index: Int): Int {
         var i = index + 1
         var result = 0
@@ -30,6 +50,13 @@ class RangeSumQueryMutable(nums: IntArray) {
         return result
     }
 
+/**
+ * sum Range — executes the core logic of this algorithm on the provided input.
+ *
+ * @param left the left/starting boundary of the search range (inclusive)
+ * @param right the right/ending boundary of the search range (inclusive)
+ * @return the computed sum/total value
+ */
     fun sumRange(left: Int, right: Int): Int {
         return sum(right) - sum(left - 1)
     }

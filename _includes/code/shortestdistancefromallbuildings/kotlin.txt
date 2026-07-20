@@ -5,6 +5,12 @@ import oracle.net.aso.c
 class ShortestDistanceFromAllBuildings {
     private val directions = listOf(0 to 1, 1 to 0, 0 to -1, -1 to 0)
 
+/**
+ * shortest Distance — executes the core logic of this algorithm on the provided input.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @return the computed integer result
+ */
     fun shortestDistance(grid: Array<IntArray>): Int {
         val rows = grid.size
         val cols = grid[0].size
@@ -25,6 +31,16 @@ class ShortestDistanceFromAllBuildings {
         return if (minDistance == Int.MAX_VALUE) -1 else minDistance
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @param startRow the startRow parameter — a integer value used in the computation
+ * @param startCol the startCol parameter — a integer value used in the computation
+ * @param totalDistance the totalDistance parameter — a array of integers used in the computation
+ * @param emptyLandValue the emptyLandValue parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     private fun bfs(
         grid: Array<IntArray>,
         startRow: Int,

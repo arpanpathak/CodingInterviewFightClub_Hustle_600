@@ -1,10 +1,26 @@
 package array.Combinatorics
 
 class NextPermutation {
+
+/**
+ * swap — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun swap(nums: IntArray, i: Int, j: Int) {
         nums[j] = nums[i].also { nums[i] = nums[j] }
     }
 
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param nums the input array of numbers to process
+ * @param startIndex the startIndex parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun reverse(nums: IntArray, startIndex: Int) {
         var (left, right) = Pair(startIndex, nums.lastIndex)
         while(left < right) {
@@ -12,6 +28,12 @@ class NextPermutation {
         }
     }
 
+/**
+ * next Permutation — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun nextPermutation(nums: IntArray): Boolean {
         var index = nums.lastIndex - 1
 

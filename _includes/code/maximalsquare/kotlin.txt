@@ -1,6 +1,13 @@
 package array.dp
 
 class MaximalSquare {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @return the maximum value found in the input
+ */
     fun maximalSquare(matrix: Array<CharArray>): Int {
         if (matrix.isEmpty() || matrix[0].isEmpty()) return 0
         val m = matrix.size

@@ -1,6 +1,13 @@
 package array.hashtable
 
 class RankTransformOfAnArray {
+
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param arr the input array of numbers to process
+ * @return a list/collection of result elements
+ */
     fun arrayRankTransform(arr: IntArray): IntArray {
         // Step 1: Sort the array and remove duplicates
         val sortedArr = arr.sorted()

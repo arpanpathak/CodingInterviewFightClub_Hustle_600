@@ -8,6 +8,13 @@ class CriticalConnectionsInANetwork {
     private lateinit var low: IntArray
     private lateinit var visited: BooleanArray
 
+/**
+ * critical Connections — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param connections the connections parameter — a list of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun criticalConnections(n: Int, connections: List<List<Int>>): List<List<Int>> {
         G = Array(n) { mutableListOf() }
         result = mutableListOf()
@@ -32,6 +39,13 @@ class CriticalConnectionsInANetwork {
         return result
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param parent the parent parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun dfs(node: Int, parent: Int) {
         visited[node] = true
         label[node] = depth

@@ -1,6 +1,14 @@
 package string.dynamic_programming
 
 class ShortestCommonSupersequence {
+
+/**
+ * shortest Common Supersequence — executes the core logic of this algorithm on the provided input.
+ *
+ * @param X the target value to search for or match against
+ * @param Y the Y parameter — a string value used in the computation
+ * @return the computed string result
+ */
     fun shortestCommonSupersequence(X: String, Y: String): String? {
         val (m, n) = X.length to Y.length
         val dp = Array(m + 1) { IntArray(n + 1) }

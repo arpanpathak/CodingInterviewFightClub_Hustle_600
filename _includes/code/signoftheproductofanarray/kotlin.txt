@@ -1,6 +1,13 @@
 package array
 
 class SignOfTheProductOfAnArray {
+
+/**
+ * array Sign — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed integer result
+ */
     fun arraySign(nums: IntArray): Int {
         var negativeCount = 0
 

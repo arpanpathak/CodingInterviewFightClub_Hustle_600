@@ -1,6 +1,13 @@
 package math
 
 class StringtoIntegerAtoi {
+
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun myAtoi(s: String): Int {
         var sign = 1
         var number = 0

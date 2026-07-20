@@ -1,8 +1,22 @@
 package tree
 
 class BinaryTreeMaximumPathSum {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the maximum value found in the input
+ */
     fun maxPathSum(root: TreeNode?): Int {
         var ans = Int.MIN_VALUE
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param node the root/head node of the data structure
+ * @return the maximum value found in the input
+ */
         fun getMaxPathSum(node: TreeNode?): Int {
             if (node == null) return 0
 

@@ -10,6 +10,14 @@ class CountWordsWithAGivenPrefix_Trie {
     var root = TrieNode()
 
     // Method to count the words with the given prefix
+
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param words list of strings/words to process
+ * @param prefix the prefix parameter — a string value used in the computation
+ * @return the total count/number of matching elements
+ */
     fun prefixCount(words: Array<String>, prefix: String): Int {
         // Build the trie using the words
         buildTrie(words, root)
@@ -19,6 +27,14 @@ class CountWordsWithAGivenPrefix_Trie {
     }
 
     // Method to build the trie
+
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param words list of strings/words to process
+ * @param root the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun buildTrie(words: Array<String>, root: TrieNode) {
         for (word in words) {
             var current = root
@@ -31,6 +47,13 @@ class CountWordsWithAGivenPrefix_Trie {
     }
 
     // Method to find the node corresponding to the last character of the prefix
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param prefix the prefix parameter — a string value used in the computation
+ * @return the resulting tree/graph node
+ */
     private fun findPrefixNode(prefix: String): TrieNode? {
         var current = root
         for (ch in prefix) {

@@ -8,6 +8,12 @@ class MKAverage(private val m: Int, private val k: Int) {
     private val highHeap = PriorityQueue<Int>() // min heap (for k largest elements)
     private var sum = 0L // Sum of the middle elements
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun addElement(num: Int) {
         // Add to deque
         deque.add(num)
@@ -40,6 +46,11 @@ class MKAverage(private val m: Int, private val k: Int) {
         recalculateMiddleSum()
     }
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @return the computed integer result
+ */
     fun calculateMKAverage(): Int {
         return if (deque.size < m) {
             -1
@@ -50,6 +61,12 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Balance heaps to ensure there are k elements in each of the heaps
+
+/**
+ * balance Heaps — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun balanceHeaps() {
         // Ensure lowHeap has k elements and highHeap has k elements
         if (lowHeap.size > k) {
@@ -61,6 +78,12 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 
     // Recalculate the sum of the middle elements in the sliding window
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun recalculateMiddleSum() {
         sum = 0L
         val remainingElements = mutableListOf<Int>()
@@ -74,6 +97,11 @@ class MKAverage(private val m: Int, private val k: Int) {
     }
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val obj = MKAverage(3, 1)
     obj.addElement(3)

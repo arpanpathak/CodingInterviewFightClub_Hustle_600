@@ -3,6 +3,13 @@ package stack
 import oracle.net.aso.b.i
 
 class SmallestSubsequenceOfDistinctCharacters {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param s the input string to process
+ * @return the computed string result
+ */
     fun smallestSubsequence(s: String): String {
         val lastIndex = IntArray(26) {-1}
         val inStack = BooleanArray(26)

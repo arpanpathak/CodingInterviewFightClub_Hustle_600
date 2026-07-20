@@ -1,6 +1,14 @@
 package simulation
 
 class TextJustification {
+
+/**
+ * full Justify — executes the core logic of this algorithm on the provided input.
+ *
+ * @param words list of strings/words to process
+ * @param maxWidth the maxWidth parameter — a integer value used in the computation
+ * @return a list/collection of result elements
+ */
     fun fullJustify(words: Array<String>, maxWidth: Int): List<String> {
         val result = mutableListOf<String>()
         var currentLine = mutableListOf<String>()
@@ -22,6 +30,14 @@ class TextJustification {
         return result
     }
 
+/**
+ * justify Line — executes the core logic of this algorithm on the provided input.
+ *
+ * @param words list of strings/words to process
+ * @param currentLength the currentLength parameter — a integer value used in the computation
+ * @param maxWidth the maxWidth parameter — a integer value used in the computation
+ * @return the computed string result
+ */
     private fun justifyLine(words: List<String>, currentLength: Int, maxWidth: Int): String {
         if (words.size == 1) {
             return buildString(words[0], maxWidth)
@@ -48,6 +64,13 @@ class TextJustification {
         return sb.toString()
     }
 
+/**
+ * justify Last Line — executes the core logic of this algorithm on the provided input.
+ *
+ * @param words list of strings/words to process
+ * @param maxWidth the maxWidth parameter — a integer value used in the computation
+ * @return the computed string result
+ */
     private fun justifyLastLine(words: List<String>, maxWidth: Int): String {
         val sb = StringBuilder()
         for (i in words.indices) {
@@ -64,6 +87,13 @@ class TextJustification {
         return sb.toString()
     }
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param word the word parameter — a string value used in the computation
+ * @param maxWidth the maxWidth parameter — a integer value used in the computation
+ * @return the computed string result
+ */
     private fun buildString(word: String, maxWidth: Int): String {
         val sb = StringBuilder(word)
         while (sb.length < maxWidth) {

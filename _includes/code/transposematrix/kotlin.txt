@@ -1,6 +1,13 @@
 package array
 
 class TransposeMatrix {
+
+/**
+ * transpose — executes the core logic of this algorithm on the provided input.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @return a list/collection of result elements
+ */
     fun transpose(matrix: Array<IntArray>): Array<IntArray> {
         val rows = matrix.size
         val cols = matrix[0].size

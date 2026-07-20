@@ -14,6 +14,11 @@ class RandomPickWithWeight (w: IntArray) {
         totalSum = prefixSum.last()
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed index/position in the array
+ */
     fun pickIndex(): Int {
         val randomPick = Random.nextInt(totalSum)
         var (start, end) = 0 to w.size

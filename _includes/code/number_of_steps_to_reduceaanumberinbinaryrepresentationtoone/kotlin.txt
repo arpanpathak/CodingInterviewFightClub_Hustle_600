@@ -1,6 +1,13 @@
 package bitset
 
 class `Number of Steps to ReduceaANumberInBinaryRepresentationtoOne` {
+
+/**
+ * num Steps — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @return the total count/number of matching elements
+ */
     fun numSteps(s: String): Int {
         var steps = 0
         var carry = 0

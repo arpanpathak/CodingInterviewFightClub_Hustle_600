@@ -1,6 +1,13 @@
 package greedy
 
 class JumpGame {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun canJump(nums: IntArray): Boolean {
         var maxIndex = 0
         var i = 0

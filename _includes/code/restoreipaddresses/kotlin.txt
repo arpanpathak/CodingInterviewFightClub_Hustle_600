@@ -1,9 +1,23 @@
 package backtracking
 
 class RestoreIPAddresses {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param s the input string to process
+ * @return a list/collection of result elements
+ */
     fun restoreIpAddresses(s: String): List<String> {
         val result = mutableListOf<String>()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param i the index position in the collection
+ * @param path the path parameter — a list of strings used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(i: Int, path: MutableList<String>) {
             if (path.size == 4) {
                 if (i == s.length) {

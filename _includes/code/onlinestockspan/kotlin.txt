@@ -5,6 +5,12 @@ class OnlineStockSpan {
 
     private val stack = mutableListOf<Stock>()
 
+/**
+ * next — executes the core logic of this algorithm on the provided input.
+ *
+ * @param price the price parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun next(price: Int): Int {
         var spanDays = 1
 

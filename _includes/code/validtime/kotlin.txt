@@ -1,10 +1,27 @@
 package microsoft
 
+/**
+ * solution — executes the core logic of this algorithm on the provided input.
+ *
+ * @param A the first input array for comparison/merging
+ * @param B the second input array for comparison/merging
+ * @param C the C parameter — a integer value used in the computation
+ * @param D the D parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
 fun solution(A: Int, B: Int, C: Int, D: Int): Int {
     val digits = listOf(A, B, C, D)
     val permutations = mutableSetOf<String>()
 
     // Generate all permutations of the digits
+
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param current the current parameter — a list of integers used in the computation
+ * @param remaining the remaining parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun generatePermutations(current: List<Int>, remaining: List<Int>) {
         if (current.size == 4) {
             permutations.add(current.joinToString(""))

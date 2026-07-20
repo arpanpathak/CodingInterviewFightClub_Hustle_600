@@ -1,6 +1,16 @@
 package greedy
 
 class MInimumCostHomecomingOfARobot {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param startPos the startPos parameter — a array of integers used in the computation
+ * @param homePos the homePos parameter — a array of integers used in the computation
+ * @param rowCosts the rowCosts parameter — a array of integers used in the computation
+ * @param colCosts the colCosts parameter — a array of integers used in the computation
+ * @return the minimum value found in the input
+ */
     fun minCost(startPos: IntArray, homePos: IntArray, rowCosts: IntArray, colCosts: IntArray): Int {
         var totalCost = 0
 

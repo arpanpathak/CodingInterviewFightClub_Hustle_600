@@ -1,10 +1,24 @@
 package tree
 
 class RecoverATreeFromPreOrderTraversal {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param traversal the traversal parameter — a string value used in the computation
+ * @return the resulting tree/graph node
+ */
     fun recoverFromPreorder(traversal: String): TreeNode? {
         var index = 0 // Global index to track position in the string
 
         // Recursive function to build the tree
+
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param depth the depth parameter — a integer value used in the computation
+ * @return the resulting tree/graph node
+ */
         fun buildTree(depth: Int): TreeNode? {
             if (index >= traversal.length) return null // Base case: end of string
 

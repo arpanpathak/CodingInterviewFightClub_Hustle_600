@@ -6,6 +6,12 @@ class CherryPickup {
     private lateinit var grid: Array<IntArray>
     private var n: Int = 0
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @return the computed integer result
+ */
     fun cherryPickup(grid: Array<IntArray>): Int {
         this.grid = grid
         n = grid.size
@@ -13,6 +19,14 @@ class CherryPickup {
         return maxOf(0, dfs(0, 0, 0))
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @param col1 the col1 parameter — a integer value used in the computation
+ * @param col2 the col2 parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     private fun dfs(row: Int, col1: Int, col2: Int): Int {
         val row2 = row + col1 - col2
         val state = Triple(row, col1, col2)
@@ -40,14 +54,37 @@ class CherryPickup {
 //    private fun isInvalidPosition(row: Int, row2: Int, col1: Int, col2: Int) =
 //        row >= n || row2 >= n || col1 >= n || col2 >= n || grid[row][col1] == -1 || grid[row2][col2] == -1
 
+/**
+ * is Invalid Position — executes the core logic of this algorithm on the provided input.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @param row2 the row2 parameter — a integer value used in the computation
+ * @param col1 the col1 parameter — a integer value used in the computation
+ * @param col2 the col2 parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun isInvalidPosition(row: Int, row2: Int, col1: Int, col2: Int) =
         listOf(row, row2, col1, col2).any { it >= n } || grid[row][col1] == -1 || grid[row2][col2] == -1
 
+/**
+ * is Final Position — executes the core logic of this algorithm on the provided input.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @param col1 the col1 parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun isFinalPosition(row: Int, col1: Int) =
         row == n - 1 && col1 == n - 1
 
     companion object {
         @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun main(args: Array<String>) {
 
         }

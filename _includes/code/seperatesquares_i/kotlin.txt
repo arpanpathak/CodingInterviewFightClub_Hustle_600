@@ -1,6 +1,13 @@
 package math.geometry.binarysearch
 
 class SeperateSquares_I {
+
+/**
+ * separate Squares — executes the core logic of this algorithm on the provided input.
+ *
+ * @param squares the squares parameter — a array of integers used in the computation
+ * @return the computed result of type Double
+ */
     fun separateSquares(squares: Array<IntArray>): Double {
         var (low, high, totalArea) = listOf(Double.MAX_VALUE, Double.MAX_VALUE, 0.0)
 
@@ -11,6 +18,12 @@ class SeperateSquares_I {
             totalArea += side * side
         }
 
+/**
+ * area Below — executes the core logic of this algorithm on the provided input.
+ *
+ * @param yLine the yLine parameter — a input parameter of type Double used in the computation
+ * @return the computed result of type Double
+ */
         fun areaBelow(yLine: Double): Double {
             var area = 0.0
             for ((_,y,l) in squares) {

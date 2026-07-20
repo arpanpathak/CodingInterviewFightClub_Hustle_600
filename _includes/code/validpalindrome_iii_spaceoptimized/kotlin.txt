@@ -1,6 +1,14 @@
 package string.dynamic_programming
 
 class ValidPalindrome_III_SpaceOptimized {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param s the input string to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun isValidPalindrome(s: String, k: Int): Boolean {
         val n = s.length
         val dp = IntArray(n) { 1 } // Initialize with 1 because each character is a palindrome of length 1

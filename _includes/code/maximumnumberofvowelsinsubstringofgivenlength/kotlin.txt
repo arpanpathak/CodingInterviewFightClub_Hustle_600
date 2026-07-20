@@ -1,6 +1,14 @@
 package string.sliding_window
 
 class MaximumNumberofVowelsinSubstringofGivenLength {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param s the input string to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the maximum value found in the input
+ */
     fun maxVowels(s: String, k: Int): Int {
         var (vowelWindowCount, maxCount) = Pair(0,0)
         val vowels = setOf('a', 'e', 'i', 'o', 'u')

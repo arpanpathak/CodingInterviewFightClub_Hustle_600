@@ -7,6 +7,14 @@ class DesignANumberContainerSystem {
     private val indexToNumber: MutableMap<Int, Int> = mutableMapOf()
 
     // Change the number at the given index
+
+/**
+ * change — executes the core logic of this algorithm on the provided input.
+ *
+ * @param index the index position in the collection
+ * @param number the number parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun change(index: Int, number: Int) {
         // If the index was previously associated with a number, remove it from that number's set
         indexToNumber[index]?.let { previousNumber ->
@@ -21,6 +29,13 @@ class DesignANumberContainerSystem {
     }
 
     // Find the smallest index where the given number is stored
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param number the number parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun find(number: Int): Int {
         val indices = numberToIndices[number]
         // If no index contains the number, return -1

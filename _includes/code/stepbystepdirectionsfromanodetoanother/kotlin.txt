@@ -1,6 +1,14 @@
 package tree
 
 class StepByStepDirectionsFromANodeToAnother {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param root the root/head node of the data structure
+ * @param searchKey the searchKey parameter — a integer value used in the computation
+ * @return the resulting tree/graph node
+ */
     fun findNode(root: TreeNode?, searchKey: Int): TreeNode? {
         return when {
             root == null -> null
@@ -9,6 +17,14 @@ class StepByStepDirectionsFromANodeToAnother {
         }
     }
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param root the root/head node of the data structure
+ * @param p the search pattern or criteria to match
+ * @param q the q parameter — a tree/graph node used in the computation
+ * @return the resulting tree/graph node
+ */
     fun lowestCommonAncestor(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
         if (root == null || root === p || root === q) return root
 
@@ -19,6 +35,14 @@ class StepByStepDirectionsFromANodeToAnother {
 
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param root the root/head node of the data structure
+ * @param startValue the startValue parameter — a integer value used in the computation
+ * @param destValue the destValue parameter — a integer value used in the computation
+ * @return the computed string result
+ */
     fun getDirections(root: TreeNode?, startValue: Int, destValue: Int): String {
         val sourceNode = findNode(root, startValue)
         val destNode = findNode(root, destValue)
@@ -39,6 +63,14 @@ class StepByStepDirectionsFromANodeToAnother {
         return "$upMoves${destPath.toString()}"
     }
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param node the root/head node of the data structure
+ * @param target the target value to search for or match against
+ * @param path the path parameter — a input parameter of type StringBuilder used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     private fun buildPath(node: TreeNode?, target: TreeNode?, path: StringBuilder): Boolean {
         if (node == null) return false
         if (node === target) return true

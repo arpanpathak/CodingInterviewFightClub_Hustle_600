@@ -4,6 +4,13 @@ class LongestCommonSubsequence {
     companion object {
         private lateinit var M: Array<IntArray>
 
+/**
+ * lcs — executes the core logic of this algorithm on the provided input.
+ *
+ * @param str1 the str1 parameter — a string value used in the computation
+ * @param str2 the str2 parameter — a string value used in the computation
+ * @return the computed integer result
+ */
         fun lcs(str1: String, str2: String): Int {
             M = Array(str1.length + 1) { IntArray(str2.length + 1) }
             for (i in 1..str1.length) {
@@ -18,6 +25,14 @@ class LongestCommonSubsequence {
             return M[str1.length][str2.length]
         }
 
+/**
+ * print LCS — executes the core logic of this algorithm on the provided input.
+ *
+ * @param str the input string to process
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun printLCS(str: String, i: Int, j: Int) {
             if (i <= 0 || j <= 0) return
             if (M[i][j] != M[i][j - 1] && M[i][j] != M[i - 1][j] && M[i][j] == M[i - 1][j - 1] + 1) {
@@ -31,6 +46,13 @@ class LongestCommonSubsequence {
         }
 
         @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun main(args: Array<String>) {
             println(lcs("abcxgzggmn", "acttvvmnvt"))
             printLCS("acttvvmnvt", "abcxgzggmn".length, "acttvvmnvt".length) // Print in reverse order

@@ -5,6 +5,14 @@ class Node(var `val`: Int) {
 }
 
 class InsertIntoASortedCircularLinkedList {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param head the root/head node of the data structure
+ * @param insertVal the insertVal parameter — a integer value used in the computation
+ * @return the resulting tree/graph node
+ */
     fun insert(head: Node?, insertVal: Int): Node? {
         val newNode = Node(insertVal)
         if (head == null) return newNode.apply { next = newNode }

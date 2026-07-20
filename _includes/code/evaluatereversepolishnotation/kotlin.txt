@@ -3,6 +3,12 @@ package stack
 class EvaluateReversePolishNotation {
     private val SYMBOLS = setOf("+", "-", "*", "/")
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param tokens the tokens parameter — a array of elements used in the computation
+ * @return the computed integer result
+ */
     fun evalRPN(tokens: Array<String>): Int {
         val stack = mutableListOf<Int>()
         for (token in tokens) {
@@ -16,6 +22,14 @@ class EvaluateReversePolishNotation {
         return stack.removeLast()
     }
 
+/**
+ * operate — executes the core logic of this algorithm on the provided input.
+ *
+ * @param symbol the symbol parameter — a input parameter of type Char used in the computation
+ * @param a the first input array for comparison/merging
+ * @param b the second input array for comparison/merging
+ * @return the computed integer result
+ */
     fun operate(symbol: Char, a: Int, b: Int): Int {
         return when(symbol) {
             '+' -> a + b

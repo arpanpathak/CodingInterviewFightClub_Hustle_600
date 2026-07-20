@@ -3,6 +3,13 @@ package grid
 import java.util.*
 
 class RottingOranges {
+
+/**
+ * oranges Rotting — executes the core logic of this algorithm on the provided input.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @return the computed integer result
+ */
     fun orangesRotting(grid: Array<IntArray>): Int {
         val (rows, cols) = grid.size to grid[0].size
         val directions = arrayOf(Pair(0, 1), Pair(1, 0), Pair(0, -1), Pair(-1, 0))  // Directions

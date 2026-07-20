@@ -1,6 +1,14 @@
 package linkedlist
 
 class ReverseNodesInKGroups {
+
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param head the root/head node of the data structure
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
         if (head == null || k == 1) return head
 
@@ -35,6 +43,13 @@ class ReverseNodesInKGroups {
         return dummy.next
     }
 
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param end the right/ending boundary of the search range (inclusive)
+ * @return a list/collection of result elements
+ */
     private fun reverse(start: ListNode?, end: ListNode?): Pair<ListNode?, ListNode?> {
         var prev: ListNode? = null
         var current = start

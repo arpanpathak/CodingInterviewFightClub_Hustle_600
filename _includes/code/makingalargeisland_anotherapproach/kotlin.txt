@@ -1,11 +1,26 @@
 package grid
 
 class MakingALargeIsland_AnotherApproach {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @return the computed integer result
+ */
     fun largestIsland(grid: Array<IntArray>): Int {
         val directions = listOf(0 to 1, 0 to -1, 1 to 0, -1 to 0)
         val islandSizes = mutableMapOf<Int, Int>()
         var ( maxArea, islandId) = 0 to 2
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param r the r parameter — a integer value used in the computation
+ * @param c the c parameter — a integer value used in the computation
+ * @param id the id parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
         fun dfs(r: Int, c: Int, id: Int): Int {
             if (r !in grid.indices || c !in grid[0].indices || grid[r][c] != 1) return 0
             grid[r][c] = id

@@ -16,6 +16,12 @@ class RandomPickIndex(nums: IntArray) {
         }
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param target the target value to search for or match against
+ * @return the computed integer result
+ */
     fun pick(target: Int): Int {
         // Randomly pick an index from the stored indices
         val indices = targetIndices[target] ?: return -1  // If target not found, return -1

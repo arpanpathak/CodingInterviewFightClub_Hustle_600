@@ -1,6 +1,13 @@
 package string
 
 class StringCompression_II {
+
+/**
+ * compressed String — executes the core logic of this algorithm on the provided input.
+ *
+ * @param word the word parameter — a string value used in the computation
+ * @return the computed string result
+ */
     fun compressedString(word: String): String {
         val compressed = StringBuilder()
 

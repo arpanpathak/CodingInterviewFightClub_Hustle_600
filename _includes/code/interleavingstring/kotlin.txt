@@ -1,11 +1,27 @@
 package string.dynamic_programming
 
 class InterleavingString {
+
+/**
+ * is Interleave — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s1 the s1 parameter — a string value used in the computation
+ * @param s2 the s2 parameter — a string value used in the computation
+ * @param s3 the s3 parameter — a string value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isInterleave(s1: String, s2: String, s3: String): Boolean {
         if (s1.length + s2.length != s3.length) return false
 
         val memo = mutableMapOf<Pair<Int, Int>, Boolean>()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun dfs(i: Int, j: Int): Boolean {
             if (i == s1.length && j == s2.length) return true
             if (memo.containsKey(i to j)) return memo[i to j]!!

@@ -5,6 +5,12 @@ import java.util.*
 class SingleThreadedCPU {
     data class Task(val enqueueTime: Int, val processingTime: Int, val index: Int)
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param tasks the tasks parameter — a array of integers used in the computation
+ * @return the sorted/reordered list of elements
+ */
     fun getOrder(tasks: Array<IntArray>): IntArray {
         val allTasks = tasks.mapIndexed { i, (enq, proc) -> Task(enq, proc, i) }
             .sortedBy { it.enqueueTime }

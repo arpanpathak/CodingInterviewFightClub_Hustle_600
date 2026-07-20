@@ -1,6 +1,14 @@
 package binarysearch
 
 class SearchInsertionPosition {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return the computed index/position in the array
+ */
     fun searchInsert(nums: IntArray, target: Int): Int {
         var start = 0
         var end = nums.size - 1

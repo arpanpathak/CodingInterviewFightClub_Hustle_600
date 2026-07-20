@@ -12,6 +12,13 @@ object RealtimeMarketData {
     const val API_SECRET = "Secret"
 
     @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return the computed result of type Unit = run Blocking
+ */
     fun main(args: Array<String>): Unit = runBlocking {
 
         lateinit var messageChannel: Channel<String>

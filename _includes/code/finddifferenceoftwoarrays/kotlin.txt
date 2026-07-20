@@ -1,6 +1,14 @@
 package array.hashtable
 
 class FindDifferenceOfTwoArrays {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums1 the first input array for comparison/merging
+ * @param nums2 the second input array for comparison/merging
+ * @return a list of matching/found elements
+ */
     fun findDifference(nums1: IntArray, nums2: IntArray): List<List<Int>> {
         val set1 = nums1.toSet()
         val set2 = nums2.toSet()

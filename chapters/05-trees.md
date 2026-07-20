@@ -14,7 +14,7 @@ next_chapter:
 
 # Trees
 
-> **46 problems** — **Trees** are recursive data structures. Master DFS (pre/in/post-order), BFS (level-order), and BST properties (inorder traversal gives sorted order).
+> **44 problems** — **Trees** are recursive data structures. Master DFS (pre/in/post-order), BFS (level-order), and BST properties (inorder traversal gives sorted order).
 
 ## Complete Problem Set
 
@@ -69,7 +69,7 @@ next_chapter:
 
 ## All Nodes Distance Kin Binary Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -79,10 +79,26 @@ package tree
 class AllNodesDistanceKinBinaryTree {
     val parentMap = mutableMapOf<TreeNode, TreeNode?>()  // To store parent references
 
+/**
+ * distance K — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param target the target value to search for or match against
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun distanceK(root: TreeNode?, target: TreeNode?, k: Int): List<Int> {
         val result = mutableListOf<Int>()
 
         // Helper function to perform DFS and populate parent map, then find target
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param parent the parent parameter — a tree/graph node used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?, parent: TreeNode?) {
             if (node == null) return
             parentMap[node] = parent
@@ -97,6 +113,16 @@ class AllNodesDistanceKinBinaryTree {
     }
 
     // Function to collect nodes at distance K from the target node
+
+/**
+ * collect Nodes At Distance K — executes the core logic of this algorithm on the provided input.
+ *
+ * @param node the root/head node of the data structure
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param visited the visited parameter — a set of elements used in the computation
+ * @param result the result parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun collectNodesAtDistanceK(node: TreeNode?, k: Int, visited: MutableSet<TreeNode>, result: MutableList<Int>) {
         if (node == null || visited.contains(node)) return
         visited.add(node)
@@ -124,7 +150,7 @@ class AllNodesDistanceKinBinaryTree {
 
 ## Average Of Levels In Binary Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -135,6 +161,13 @@ import tree.TreeNode
 import java.util.*
 
 class AverageOfLevelsInBinaryTree {
+
+/**
+ * average Of Levels — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun averageOfLevels(root: TreeNode?): DoubleArray {
         var result = mutableListOf<Double>()
 
@@ -173,7 +206,7 @@ class AverageOfLevelsInBinaryTree {
 
 ## Balanced Binary Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -183,7 +216,21 @@ package tree
 import kotlin.math.abs
 
 class BalancedBinaryTree {
+
+/**
+ * is Balanced — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isBalanced(root: TreeNode?): Boolean {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param node the root/head node of the data structure
+ * @return the computed integer result
+ */
         fun checkHeight(node: TreeNode?): Int {
             if (node == null) return 0
 
@@ -215,7 +262,7 @@ class BalancedBinaryTree {
 
 ## B Inary Tree In Order Traversal Iterative
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -223,6 +270,13 @@ class BalancedBinaryTree {
 package tree
 
 class BInaryTreeInOrderTraversalIterative {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @return the sorted/reordered list of elements
+ */
     fun inorderTraversal(root: TreeNode?): List<Int> {
         val stack = ArrayDeque<TreeNode>()
         val result = mutableListOf<Int>()
@@ -246,6 +300,7 @@ class BInaryTreeInOrderTraversalIterative {
         return result
     }
 }
+
 ```
 
 ### Complexity
@@ -259,7 +314,7 @@ class BInaryTreeInOrderTraversalIterative {
 
 ## Binary Tree Level Order Traversal
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -271,6 +326,13 @@ import kotlin.collections.ArrayList
 
 
 class BinaryTreeLevelOrderTraversal {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @return the sorted/reordered list of elements
+ */
     fun levelOrder(root: TreeNode?): List<List<Int>> {
         val result: MutableList<List<Int>> = ArrayList()
         if (root == null)
@@ -309,7 +371,7 @@ class BinaryTreeLevelOrderTraversal {
 
 ## Binary Tree Level Order Traversal_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -320,6 +382,13 @@ import tree.TreeNode
 import java.util.*
 
 class BinaryTreeLevelOrderTraversal_II {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @return the sorted/reordered list of elements
+ */
     fun levelOrderBottom(root: TreeNode?): List<List<Int>> {
         val result = LinkedList<List<Int>>()
         val queue = LinkedList<TreeNode>()
@@ -358,7 +427,7 @@ class BinaryTreeLevelOrderTraversal_II {
 
 ## Binary Tree Maximum Path Sum
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -366,8 +435,22 @@ class BinaryTreeLevelOrderTraversal_II {
 package tree
 
 class BinaryTreeMaximumPathSum {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the maximum value found in the input
+ */
     fun maxPathSum(root: TreeNode?): Int {
         var ans = Int.MIN_VALUE
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param node the root/head node of the data structure
+ * @return the maximum value found in the input
+ */
         fun getMaxPathSum(node: TreeNode?): Int {
             if (node == null) return 0
 
@@ -397,7 +480,7 @@ class BinaryTreeMaximumPathSum {
 
 ## Binary Tree Right Side View
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -405,9 +488,23 @@ class BinaryTreeMaximumPathSum {
 package tree
 
 class BinaryTreeRightSideView {
+
+/**
+ * right Side View — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun rightSideView(root: TreeNode?): List<Int> {
         val rightSide = mutableListOf<Int>()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param level the level parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?, level: Int) {
             when {
                 node == null -> return
@@ -421,6 +518,7 @@ class BinaryTreeRightSideView {
         return rightSide
     }
 }
+
 ```
 
 ### Complexity
@@ -434,7 +532,7 @@ class BinaryTreeRightSideView {
 
 ## Binary Tree Vertical Order Traversal
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -465,6 +563,12 @@ class BinaryTreeVerticalOrderTraversal {
     // Define a data class for holding a node and its vertical index
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @return the sorted/reordered list of elements
+ */
     fun verticalOrder(root: TreeNode?): List<List<Int>> {
         if (root == null) return emptyList()
 
@@ -502,7 +606,7 @@ class BinaryTreeVerticalOrderTraversal {
 
 ## Binary Tree Vertical Order Traversal_Without Sorting
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -514,6 +618,12 @@ import java.util.*
 class BinaryTreeVerticalOrderTraversal_WithoutSorting {
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @return the sorted/reordered list of elements
+ */
     fun verticalOrder(root: TreeNode?): List<List<Int>> {
         if (root == null) return emptyList()
 
@@ -558,7 +668,7 @@ class BinaryTreeVerticalOrderTraversal_WithoutSorting {
 
 ## Binary Tree Zig Zag Level Order Traversal
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -570,6 +680,12 @@ import java.util.*
 class BinaryTreeZigZagLevelOrderTraversal {
     data class IndexedNode(var node: TreeNode?, var index: Int)
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @return the sorted/reordered list of elements
+ */
     fun zigzagLevelOrder(root: TreeNode?): List<List<Int>> {
         val result = mutableListOf<MutableList<Int>>()
         if (root == null) return result
@@ -615,7 +731,7 @@ class BinaryTreeZigZagLevelOrderTraversal {
 
 ## Boundary Of Binary Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -623,6 +739,13 @@ class BinaryTreeZigZagLevelOrderTraversal {
 package tree
 
 class BoundaryOfBinaryTree {
+
+/**
+ * boundary Of Binary Tree — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun boundaryOfBinaryTree(root: TreeNode?): List<Int> {
         val result = mutableListOf<Int>()
         if (root == null) return result
@@ -644,6 +767,13 @@ class BoundaryOfBinaryTree {
         return result
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param node the root/head node of the data structure
+ * @param result the result parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun addLeftBoundary(node: TreeNode?, result: MutableList<Int>) {
         var current = node
         while (current != null) {
@@ -656,6 +786,14 @@ class BoundaryOfBinaryTree {
         }
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param node the root/head node of the data structure
+ * @param result the result parameter — a list of integers used in the computation
+ * @param isRoot the isRoot parameter — a boolean flag used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun addLeaves(node: TreeNode?, result: MutableList<Int>, isRoot: Boolean) {
         if (node == null) return
         // If it's a leaf node and it's not the root, add it to the result
@@ -668,6 +806,13 @@ class BoundaryOfBinaryTree {
         addLeaves(node.right, result, isRoot = false)
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param node the root/head node of the data structure
+ * @param result the result parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun addRightBoundary(node: TreeNode?, result: MutableList<Int>) {
         var current = node
         while (current != null) {
@@ -680,6 +825,7 @@ class BoundaryOfBinaryTree {
         }
     }
 }
+
 ```
 
 ### Complexity
@@ -693,7 +839,7 @@ class BoundaryOfBinaryTree {
 
 ## BST Iterator
 
-**Problem:** Your BSTIterator object will be instantiated and called as such:
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -709,6 +855,13 @@ class BSTIterator(root: TreeNode?) {
     }
 
     // Push all the left nodes of a given node to the stack
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun pushAllLeftNodes(node: TreeNode?) {
         var current = node
         while (current != null) {
@@ -718,6 +871,12 @@ class BSTIterator(root: TreeNode?) {
     }
 
     // Returns the next smallest number
+
+/**
+ * next — executes the core logic of this algorithm on the provided input.
+ *
+ * @return the computed integer result
+ */
     fun next(): Int {
         val node = stack.removeFirst()  // Pop the node from the stack
         pushAllLeftNodes(node.right)  // Push the leftmost nodes of the right child, if any
@@ -725,6 +884,12 @@ class BSTIterator(root: TreeNode?) {
     }
 
     // Returns whether we have a next smallest number
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun hasNext(): Boolean {
         return stack.isNotEmpty()  // If the stack is not empty, there are more nodes to visit
     }
@@ -749,7 +914,7 @@ class BSTIterator(root: TreeNode?) {
 
 ## Check Completeness Of Binary Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -759,6 +924,13 @@ package tree.bfs
 import tree.TreeNode
 
 class CheckCompletenessOfBinaryTree {
+
+/**
+ * is Complete Tree — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isCompleteTree(root: TreeNode?): Boolean {
         if (root == null) return true // Edge case: An empty tree is considered complete
 
@@ -797,7 +969,7 @@ class CheckCompletenessOfBinaryTree {
 
 ## Closest Binary Search Tree Value
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -807,6 +979,14 @@ package tree.bst
 import kotlin.math.abs
 
 class ClosestBinarySearchTreeValue {
+
+/**
+ * closest Value — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param target the target value to search for or match against
+ * @return the computed integer result
+ */
     fun closestValue(root: TreeNode?, target: Double): Int {
         var closest = root?.`val` ?: 0
         var current = root
@@ -839,7 +1019,7 @@ class ClosestBinarySearchTreeValue {
 
 ## Construct Binary Tree From Inorder And Post Order Traversal
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -847,6 +1027,14 @@ class ClosestBinarySearchTreeValue {
 package tree
 
 class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
+
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param inorder the inorder parameter — a array of integers used in the computation
+ * @param postorder the postorder parameter — a array of integers used in the computation
+ * @return the resulting tree/graph node
+ */
     fun buildTree(inorder: IntArray, postorder: IntArray): TreeNode? {
         // Build Inverted InOrder Index Map
         val rootIndices = mutableMapOf<Int, Int>()
@@ -854,6 +1042,13 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
 
         var postIndex = postorder.size - 1
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param left the left/starting boundary of the search range (inclusive)
+ * @param right the right/ending boundary of the search range (inclusive)
+ * @return the resulting tree/graph node
+ */
         fun buildTree(left: Int, right: Int): TreeNode? {
             return when {
                 left > right -> null
@@ -870,6 +1065,7 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
         return buildTree(0, inorder.size - 1)
     }
 }
+
 ```
 
 ### Complexity
@@ -883,7 +1079,7 @@ class ConstructBinaryTreeFromInorderAndPostOrderTraversal {
 
 ## Construct Binary Tree From Preorder And In Order Traversal
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -893,11 +1089,25 @@ package tree
 class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
     private val rootIndices = mutableMapOf<Int, Int>()
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param preorder the preorder parameter — a array of integers used in the computation
+ * @param inorder the inorder parameter — a array of integers used in the computation
+ * @return the resulting tree/graph node
+ */
     fun buildTree(preorder: IntArray, inorder: IntArray): TreeNode? {
         // Build Inverted InOrder Index Map
         inorder.forEachIndexed { index, value -> rootIndices[value] = index }
         var rootIndex = 0
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param left the left/starting boundary of the search range (inclusive)
+ * @param right the right/ending boundary of the search range (inclusive)
+ * @return the resulting tree/graph node
+ */
         fun buildTree(left: Int, right: Int): TreeNode? {
             return when {
                 left > right -> null
@@ -914,6 +1124,7 @@ class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
         return buildTree(0, preorder.size - 1)
     }
 }
+
 ```
 
 ### Complexity
@@ -927,7 +1138,7 @@ class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
 
 ## Construct Binary Tree From String
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -935,12 +1146,26 @@ class ConstructBinaryTreeFromPreorderAndInOrderTraversal {
 package tree
 
 class ConstructBinaryTreeFromString {
+
+/**
+ * str2tree — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @return the resulting tree/graph node
+ */
     fun str2tree(s: String): TreeNode? {
         if (s.isEmpty()) return null
 
         return buildTree(s, 0).first // We are only interested in the tree root, not the index
     }
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param s the input string to process
+ * @param i the index position in the collection
+ * @return the resulting tree/graph node
+ */
     private fun buildTree(s: String, i: Int): Pair<TreeNode?, Int> {
         if (i >= s.length) return Pair(null, i)
 
@@ -972,6 +1197,7 @@ class ConstructBinaryTreeFromString {
         return root to currentIndex  // Return the node and the updated index
     }
 }
+
 ```
 
 ### Complexity
@@ -985,7 +1211,7 @@ class ConstructBinaryTreeFromString {
 
 ## Convert B Inary Search Tree To Sorted Doubly Linked List
 
-**Problem:** Definition for a Node.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1007,6 +1233,12 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
     private var head: Node? = null
     private var tail: Node? = null
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param root the root/head node of the data structure
+ * @return the resulting tree/graph node
+ */
     fun treeToDoublyList(root: Node?): Node? {
         if (root == null) return null
 
@@ -1020,6 +1252,12 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
         return head
     }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun inorderTraversal(node: Node?) {
         if (node == null) return
 
@@ -1053,7 +1291,7 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
 
 ## Count Good Node In B Inary Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1061,10 +1299,24 @@ class ConvertBInarySearchTreeToSortedDoublyLinkedList {
 package tree
 
 class CountGoodNodeInBInaryTree {
+
+/**
+ * good Nodes — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed integer result
+ */
     fun goodNodes(root: TreeNode?): Int {
         return dfs(root, Int.MIN_VALUE)
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param maxSoFar the maxSoFar parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     private fun dfs(node: TreeNode?, maxSoFar: Int): Int {
         node ?: return 0
         
@@ -1087,7 +1339,7 @@ class CountGoodNodeInBInaryTree {
 
 ## Tree Node
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1104,11 +1356,23 @@ data class Result (val sum: Int, val count: Int)
 class CountNodeEqualsAverage {
     var count = 0
 
+/**
+ * average Of Subtree — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed integer result
+ */
     fun averageOfSubtree(root: TreeNode?): Int {
         postOrder(root)
         return count;
     }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed result of type Result
+ */
     private fun postOrder(root: TreeNode?): Result {
         if (root == null)
             return Result(sum = 0, count = 0)
@@ -1131,13 +1395,13 @@ class CountNodeEqualsAverage {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(h) where h = tree height |
+| **Space** | O(1) |
 
 ---
 
 ## Tree Node
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1150,6 +1414,14 @@ class TreeNode(var `val`: Int) {
 }
 
 class DeleteNodeinABST {
+
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param root the root/head node of the data structure
+ * @param key the target value to search for or match against
+ * @return the resulting tree/graph node
+ */
     fun deleteNode(root: TreeNode?, key: Int): TreeNode? {
         when {
             root == null -> return null
@@ -1170,6 +1442,12 @@ class DeleteNodeinABST {
         return root
     }
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param node the root/head node of the data structure
+ * @return the minimum value found in the input
+ */
     fun minValue(node: TreeNode): Int {
         var current = node
         while (current.left != null) {
@@ -1192,7 +1470,7 @@ class DeleteNodeinABST {
 
 ## Find Largest Value In Each Tree Row
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1203,6 +1481,13 @@ import tree.TreeNode
 import java.util.*
 
 class FindLargestValueInEachTreeRow {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param root the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun largestValues(root: TreeNode?): List<Int> {
         val result = mutableListOf<Int>()
 
@@ -1227,20 +1512,21 @@ class FindLargestValueInEachTreeRow {
         return result
     }
 }
+
 ```
 
 ### Complexity
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
-| **Space** | O(1) |
+| **Time** | O(n) |
+| **Space** | O(h) where h = tree height |
 
 ---
 
 ## Inorder Successor
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1248,6 +1534,14 @@ class FindLargestValueInEachTreeRow {
 package tree.bst
 
 class InorderSuccessor {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @param p the search pattern or criteria to match
+ * @return the resulting tree/graph node
+ */
     fun inorderSuccessor(root: TreeNode?, p: TreeNode?): TreeNode? {
         var successor: TreeNode? = null
         var current = root
@@ -1273,13 +1567,13 @@ class InorderSuccessor {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(h) where h = tree height |
 
 ---
 
 ## Leaf Similar
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1287,6 +1581,14 @@ class InorderSuccessor {
 package tree
 
 class LeafSimilar {
+
+/**
+ * leaf Similar — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root1 the root1 parameter — a tree/graph node used in the computation
+ * @param root2 the root2 parameter — a tree/graph node used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun leafSimilar(root1: TreeNode?, root2: TreeNode?): Boolean {
         val leaves1 = mutableListOf<Int>()
         val leaves2 = mutableListOf<Int>()
@@ -1297,6 +1599,13 @@ class LeafSimilar {
         return leaves1 == leaves2
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param leafValues the leafValues parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun dfs(node: TreeNode?, leafValues: MutableList<Int>) {
         if (node != null) {
             if (node.left == null && node.right == null) {
@@ -1307,6 +1616,7 @@ class LeafSimilar {
         }
     }
 }
+
 ```
 
 ### Complexity
@@ -1320,7 +1630,7 @@ class LeafSimilar {
 
 ## Longest Univalue Path
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1329,8 +1639,21 @@ package tree
 
 class LongestUnivaluePath {
 
+/**
+ * longest Univalue Path — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed integer result
+ */
     fun longestUnivaluePath(root: TreeNode?): Int {
         var maxLength = 0
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return the computed integer result
+ */
         fun dfs(node: TreeNode?): Int {
             if (node == null) return 0
 
@@ -1366,7 +1689,7 @@ class LongestUnivaluePath {
 
 ## Lowest Common Ancestor
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1374,6 +1697,15 @@ class LongestUnivaluePath {
 package tree
 
 class LowestCommonAncestor {
+
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param root the root/head node of the data structure
+ * @param p the search pattern or criteria to match
+ * @param q the q parameter — a tree/graph node used in the computation
+ * @return the resulting tree/graph node
+ */
     fun lowestCommonAncestor(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
         if (root == null || root === p || root === q) return root
 
@@ -1391,13 +1723,13 @@ class LowestCommonAncestor {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(h) where h = tree height |
 
 ---
 
 ## Lowest Common Ancestor_III
 
-**Problem:** 1 <- r
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1411,6 +1743,13 @@ class LowestCommonAncestor_III {
         var parent: Node? = null
     }
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param p the search pattern or criteria to match
+ * @param q the q parameter — a tree/graph node used in the computation
+ * @return the resulting tree/graph node
+ */
     fun lowestCommonAncestor(p: Node?, q: Node?): Node? {
         var parent1 = p
         var parent2 = q
@@ -1444,13 +1783,13 @@ class LowestCommonAncestor_III {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(h) where h = tree height |
 
 ---
 
 ## Maximum Depth Of Binary Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1458,6 +1797,13 @@ class LowestCommonAncestor_III {
 package tree
 
 class MaximumDepthOfBinaryTree {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the maximum value found in the input
+ */
     fun maxDepth(root: TreeNode?): Int {
         if (root == null) {
             return 0
@@ -1479,7 +1825,7 @@ class MaximumDepthOfBinaryTree {
 
 ## Maximum Sum BST In Binary Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1490,11 +1836,23 @@ class MaximumSumBSTInBinaryTree {
     data class Result(val isBST: Boolean, val sum: Int, val min: Int, val max: Int)
     private var maxSum = 0
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the maximum value found in the input
+ */
     fun maxSumBST(root: TreeNode?): Int {
         dfs(root)
         return maxSum
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return the computed result of type Result
+ */
     private fun dfs(node: TreeNode?): Result {
         // Base case: if the node is null, it's trivially a BST with sum = 0
         if (node == null) {
@@ -1523,6 +1881,7 @@ class MaximumSumBSTInBinaryTree {
         return Result(false, sum=0, min=0, max=0)
     }
 }
+
 ```
 
 ### Complexity
@@ -1536,7 +1895,7 @@ class MaximumSumBSTInBinaryTree {
 
 ## Maximum Width Of Binary Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1548,6 +1907,12 @@ import java.util.*
 class MaximumWidthOfBinaryTree {
     data class Node(var node: TreeNode?, var index: Int)
 
+/**
+ * width Of Binary Tree — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed integer result
+ */
     fun widthOfBinaryTree(root: TreeNode?): Int {
         val queue: Queue<Node> = LinkedList<Node>()
         var max = 0
@@ -1584,7 +1949,7 @@ class MaximumWidthOfBinaryTree {
 
 ## Minimum Time To Collect All Apples In A Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1592,6 +1957,15 @@ class MaximumWidthOfBinaryTree {
 package tree
 
 class MinimumTimeToCollectAllApplesInATree {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param edges the graph edges represented as connections between nodes
+ * @param hasApple the hasApple parameter — a list of elements used in the computation
+ * @return the minimum value found in the input
+ */
     fun minTime(n: Int, edges: Array<IntArray>, hasApple: List<Boolean>): Int {
         // Build the graph as a list of lists (adjacency list representation)
         val graph = Array(n) { mutableListOf<Int>() }
@@ -1601,6 +1975,14 @@ class MinimumTimeToCollectAllApplesInATree {
         }
 
         // DFS function to calculate the total time
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param parent the parent parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
         fun dfs(node: Int, parent: Int): Int {
             var totalTime = 0
             // Use forEach to iterate over each neighbor
@@ -1633,7 +2015,7 @@ class MinimumTimeToCollectAllApplesInATree {
 
 ## Path Sum
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1641,6 +2023,14 @@ class MinimumTimeToCollectAllApplesInATree {
 package tree
 
 class PathSum {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param root the root/head node of the data structure
+ * @param targetSum the targetSum parameter — a integer value used in the computation
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun hasPathSum(root: TreeNode?, targetSum: Int): Boolean {
         return when {
             root == null -> false
@@ -1657,13 +2047,13 @@ class PathSum {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(h) where h = tree height |
 
 ---
 
 ## Path Sum_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1671,9 +2061,25 @@ class PathSum {
 package tree
 
 class PathSum_II {
+
+/**
+ * path Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param targetSum the targetSum parameter — a integer value used in the computation
+ * @return a list/collection of result elements
+ */
     fun pathSum(root: TreeNode?, targetSum: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param currentSum the currentSum parameter — a integer value used in the computation
+ * @param path the path parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?, currentSum: Int, path: MutableList<Int> = mutableListOf()) {
             if (node == null) return
 
@@ -1704,13 +2110,13 @@ class PathSum_II {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(h) where h = tree height |
 
 ---
 
 ## Path Sum III
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1719,11 +2125,27 @@ package tree
 
 class PathSumIII {
     // O(N^2) solution
+
+/**
+ * path Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param targetSum the targetSum parameter — a integer value used in the computation
+ * @return the computed sum/total value
+ */
     fun pathSum(root: TreeNode?, targetSum: Int): Int {
         if (root == null)
             return 0
 
         // Count paths with targetSum starting from the current node
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param currentSum the currentSum parameter — a input parameter of type Long used in the computation
+ * @return the computed integer result
+ */
         fun dfs(node: TreeNode?, currentSum: Long): Int {
             if (node == null)
                 return 0
@@ -1740,6 +2162,14 @@ class PathSumIII {
 
 
     // Revisit I didn't understand
+
+/**
+ * path Sum_prefix_sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param targetSum the targetSum parameter — a integer value used in the computation
+ * @return the computed sum/total value
+ */
     fun pathSum_prefix_sum(root: TreeNode?, targetSum: Int): Int {
         // HashMap to store prefix sums and their frequencies
         val prefixSumCount = HashMap<Long, Int>()
@@ -1747,6 +2177,14 @@ class PathSumIII {
         prefixSumCount[0L] = 1
 
         // Helper function to perform DFS
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param currentSum the currentSum parameter — a input parameter of type Long used in the computation
+ * @return the computed integer result
+ */
         fun dfs(node: TreeNode?, currentSum: Long): Int {
             if (node == null) return 0
 
@@ -1773,6 +2211,7 @@ class PathSumIII {
         return dfs(root, 0L)
     }
 }
+
 ```
 
 ### Complexity
@@ -1780,13 +2219,13 @@ class PathSumIII {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(h) where h = tree height |
 
 ---
 
 ## Populate Next Right Pointers In Each Node_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1796,6 +2235,13 @@ package tree
 import java.util.*
 
 class PopulateNextRightPointersInEachNode_II {
+
+/**
+ * connect — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the resulting tree/graph node
+ */
     fun connect(root: Node?): Node? {
         val queue: Queue<Node> = LinkedList()
         root?.let { queue.add(it) }
@@ -1820,13 +2266,13 @@ class PopulateNextRightPointersInEachNode_II {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(h) where h = tree height |
+| **Space** | O(1) |
 
 ---
 
 ## Range Sum Of BST
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1834,8 +2280,24 @@ class PopulateNextRightPointersInEachNode_II {
 package graph.bst
 
 class RangeSumOfBST {
+
+/**
+ * range Sum BST — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param low the left/starting boundary of the search range (inclusive)
+ * @param high the right/ending boundary of the search range (inclusive)
+ * @return the computed sum/total value
+ */
     fun rangeSumBST(root: TreeNode?, low: Int, high: Int): Int {
         var sum = 0
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?) {
             if (node == null)
                 return
@@ -1865,7 +2327,7 @@ class RangeSumOfBST {
 
 ## Recover A Tree From Pre Order Traversal
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1873,10 +2335,24 @@ class RangeSumOfBST {
 package tree
 
 class RecoverATreeFromPreOrderTraversal {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param traversal the traversal parameter — a string value used in the computation
+ * @return the resulting tree/graph node
+ */
     fun recoverFromPreorder(traversal: String): TreeNode? {
         var index = 0 // Global index to track position in the string
 
         // Recursive function to build the tree
+
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param depth the depth parameter — a integer value used in the computation
+ * @return the resulting tree/graph node
+ */
         fun buildTree(depth: Int): TreeNode? {
             if (index >= traversal.length) return null // Base case: end of string
 
@@ -1913,6 +2389,7 @@ class RecoverATreeFromPreOrderTraversal {
         return buildTree(0) // Start building the tree from depth 0
     }
 }
+
 ```
 
 ### Complexity
@@ -1926,7 +2403,7 @@ class RecoverATreeFromPreOrderTraversal {
 
 ## Recover Binary Search Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1934,12 +2411,26 @@ class RecoverATreeFromPreOrderTraversal {
 package tree.bst
 
 class RecoverBinarySearchTree {
+
+/**
+ * recover Tree — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun recoverTree(root: TreeNode?) {
         var first: TreeNode? = null
         var second: TreeNode? = null
         var prev: TreeNode? = null
 
         // Helper function to perform in-order traversal
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?) {
             if (node == null) return
 
@@ -1987,7 +2478,7 @@ class RecoverBinarySearchTree {
 
 ## Codec
 
-**Problem:** Definition for a binary tree node.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -2004,9 +2495,22 @@ package tree
 
 class Codec() {
     // Encodes a URL to a shortened URL.
+
+/**
+ * serialize — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed string result
+ */
     fun serialize(root: TreeNode?): String {
         val serializedTree = StringBuilder()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?) {
             if (node == null) {
                 serializedTree.append("null,")
@@ -2023,9 +2527,21 @@ class Codec() {
     }
 
     // Decodes the encoded string to tree using a recursive approach.
+
+/**
+ * deserialize — executes the core logic of this algorithm on the provided input.
+ *
+ * @param data the input array of numbers to process
+ * @return the resulting tree/graph node
+ */
     fun deserialize(data: String): TreeNode? {
         val nodes = data.split(",").toMutableList()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @return the resulting tree/graph node
+ */
         fun dfsDeserialize(): TreeNode? {
             if (nodes.isEmpty()) return null
             val value = nodes.removeAt(0)
@@ -2063,7 +2579,7 @@ class Codec() {
 
 ## Serialize And Deserialize N Array Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -2077,9 +2593,23 @@ class SerializeAndDeserializeNArrayTree {
 
     class Codec {
         // Encodes a tree to a single string.
+
+/**
+ * serialize — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed string result
+ */
         fun serialize(root: Node?): String = when (root) {
             null -> ""
             else -> buildString {
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
                 fun dfs(node: Node?) {
                     node?.let {
                         append("${it.`val`}:${it.children.size}")
@@ -2095,12 +2625,24 @@ class SerializeAndDeserializeNArrayTree {
         }
 
         // Deserialize with internal DFS
+
+/**
+ * deserialize — executes the core logic of this algorithm on the provided input.
+ *
+ * @param data the input array of numbers to process
+ * @return the resulting tree/graph node
+ */
         fun deserialize(data: String): Node? {
             if (data.isEmpty()) return null
 
             val tokens = data.split(",")
             var index = 0
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @return the resulting tree/graph node
+ */
             fun parse(): Node? {
                 if (index >= tokens.size) return null
 
@@ -2118,6 +2660,7 @@ class SerializeAndDeserializeNArrayTree {
         }
     }
 }
+
 ```
 
 ### Complexity
@@ -2131,7 +2674,7 @@ class SerializeAndDeserializeNArrayTree {
 
 ## Step By Step Directions From A Node To Another
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -2139,6 +2682,14 @@ class SerializeAndDeserializeNArrayTree {
 package tree
 
 class StepByStepDirectionsFromANodeToAnother {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param root the root/head node of the data structure
+ * @param searchKey the searchKey parameter — a integer value used in the computation
+ * @return the resulting tree/graph node
+ */
     fun findNode(root: TreeNode?, searchKey: Int): TreeNode? {
         return when {
             root == null -> null
@@ -2147,6 +2698,14 @@ class StepByStepDirectionsFromANodeToAnother {
         }
     }
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param root the root/head node of the data structure
+ * @param p the search pattern or criteria to match
+ * @param q the q parameter — a tree/graph node used in the computation
+ * @return the resulting tree/graph node
+ */
     fun lowestCommonAncestor(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
         if (root == null || root === p || root === q) return root
 
@@ -2157,6 +2716,14 @@ class StepByStepDirectionsFromANodeToAnother {
 
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param root the root/head node of the data structure
+ * @param startValue the startValue parameter — a integer value used in the computation
+ * @param destValue the destValue parameter — a integer value used in the computation
+ * @return the computed string result
+ */
     fun getDirections(root: TreeNode?, startValue: Int, destValue: Int): String {
         val sourceNode = findNode(root, startValue)
         val destNode = findNode(root, destValue)
@@ -2177,6 +2744,14 @@ class StepByStepDirectionsFromANodeToAnother {
         return "$upMoves${destPath.toString()}"
     }
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param node the root/head node of the data structure
+ * @param target the target value to search for or match against
+ * @param path the path parameter — a input parameter of type StringBuilder used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     private fun buildPath(node: TreeNode?, target: TreeNode?, path: StringBuilder): Boolean {
         if (node == null) return false
         if (node === target) return true
@@ -2192,6 +2767,7 @@ class StepByStepDirectionsFromANodeToAnother {
         return false
     }
 }
+
 ```
 
 ### Complexity
@@ -2199,13 +2775,13 @@ class StepByStepDirectionsFromANodeToAnother {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(h) where h = tree height |
+| **Space** | O(1) |
 
 ---
 
 ## Sum Root To Leaf Numbers
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -2213,9 +2789,23 @@ class StepByStepDirectionsFromANodeToAnother {
 package tree
 
 class SumRootToLeafNumbers {
+
+/**
+ * sum Numbers — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the total count/number of matching elements
+ */
     fun sumNumbers(root: TreeNode?): Int {
         var sum = 0
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param sumSoFar the sumSoFar parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?, sumSoFar: Int) {
             if (node == null) return
             val newSum = (sumSoFar * 10 + node.`val` )
@@ -2232,6 +2822,7 @@ class SumRootToLeafNumbers {
         return sum
     }
 }
+
 ```
 
 ### Complexity
@@ -2245,7 +2836,7 @@ class SumRootToLeafNumbers {
 
 ## Vertical Order Traversal Of A Binary Tree
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -2257,6 +2848,12 @@ import java.util.*
 class VerticalOrderTraversalOfABinaryTree {
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
+/**
+ * vertical Traversal — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun verticalTraversal(root: TreeNode?): List<List<Int>> {
         if (root == null) return emptyList()
 
@@ -2301,7 +2898,7 @@ class VerticalOrderTraversalOfABinaryTree {
 
 ## Key Takeaways
 
-1. **Core pattern recognition** — Identify the problem type and apply the right technique.
+1. **Core pattern recognition** — Identify the problem type and apply the right algorithmic technique.
 2. **Practice systematically** — Work through each problem to internalize the patterns.
 3. **Understand why, not just how** — Focus on the reasoning behind each solution.
 

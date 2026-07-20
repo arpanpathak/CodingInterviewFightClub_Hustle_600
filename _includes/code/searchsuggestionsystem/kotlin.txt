@@ -13,6 +13,12 @@ class Trie {
 
     val root = TrieNode()
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param word the word parameter — a string value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun insert(word: String) {
         var currentNode = root
 
@@ -21,6 +27,12 @@ class Trie {
         currentNode.isWord = true
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param word the word parameter — a string value used in the computation
+ * @return a list of matching/found elements
+ */
     fun search(word: String): List<String> {
         val results = mutableListOf<String>()
         var currentNode = root
@@ -33,6 +45,14 @@ class Trie {
         return results
     }
 
+/**
+ * collect Words — executes the core logic of this algorithm on the provided input.
+ *
+ * @param node the root/head node of the data structure
+ * @param prefix the prefix parameter — a string value used in the computation
+ * @param results the results parameter — a list of strings used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun collectWords(node: TrieNode?, prefix: String, results: MutableList<String>) {
         if (node == null)
             return
@@ -46,6 +66,14 @@ class Trie {
 }
 
 class SearchSuggestionSystem {
+
+/**
+ * suggested Products — executes the core logic of this algorithm on the provided input.
+ *
+ * @param products the products parameter — a array of elements used in the computation
+ * @param searchWord the searchWord parameter — a string value used in the computation
+ * @return a list/collection of result elements
+ */
     fun suggestedProducts(products: Array<String>, searchWord: String): List<List<String>> {
         val trie = Trie()
         val result = mutableListOf<List<String>>()

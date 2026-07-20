@@ -5,6 +5,11 @@ import java.sql.DriverManager
 import java.sql.ResultSet
 import java.sql.SQLException
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val jdbcUrl = "jdbc:oracle:thin:@localhost:1521/FREEPDB1" // Update with your DB connection details
     val username = "SYSTEM" // or "SYSTEM"
@@ -41,6 +46,13 @@ fun main() {
     }
 }
 
+/**
+ * print Schema — executes the core logic of this algorithm on the provided input.
+ *
+ * @param connection the connection parameter — a input parameter of type Connection used in the computation
+ * @param tableName the tableName parameter — a string value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun printSchema(connection: Connection, tableName: String) {
 //    // Create a statement object to execute queries
 //    val statement = connection.createStatement()

@@ -1,11 +1,28 @@
 package array.twopointer
 
 class `4Sum` {
+
+/**
+ * four Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun fourSum(nums: IntArray, target: Int): List<List<Int>> {
         nums.sort()
         return kSum(nums, target.toLong(), 0, 4)
     }
 
+/**
+ * k Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     private fun kSum(
         nums: IntArray,
         target: Long,
@@ -45,6 +62,14 @@ class `4Sum` {
         return res
     }
 
+/**
+ * two Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @return a list/collection of result elements
+ */
     private fun twoSum(
         nums: IntArray,
         target: Long,

@@ -1,6 +1,13 @@
 package stack
 
 class MinimumAddtoMakeParenthesesValid {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param s the input string to process
+ * @return the minimum value found in the input
+ */
     fun minAddToMakeValid(s: String): Int {
         var minCount = 0
         val stack = mutableListOf<Char>()

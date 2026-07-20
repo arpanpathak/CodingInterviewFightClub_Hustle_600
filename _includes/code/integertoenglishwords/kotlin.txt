@@ -10,6 +10,12 @@ class IntegerToEnglishWords {
         )
         private val thousands = arrayOf("", "Thousand", "Million", "Billion")
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param num the num parameter — a integer value used in the computation
+ * @return the computed string result
+ */
         fun numberToWords(num: Int): String {
             if (num == 0) return "Zero"
 
@@ -28,6 +34,12 @@ class IntegerToEnglishWords {
             return result.toString().trim()
         }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param num the num parameter — a integer value used in the computation
+ * @return the computed string result
+ */
         private fun dfs(num: Int): String {
             if (num == 0) return ""
             if (num < 20) return lessThan20[num]

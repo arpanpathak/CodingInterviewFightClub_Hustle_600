@@ -6,7 +6,22 @@ import kotlin.math.abs
 // Better for Dense Graph
 class MinCostToConnectAllPointsPrims {
     data class Node(val dest: Int, val weight: Int)
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param points the points parameter — a array of integers used in the computation
+ * @return the minimum value found in the input
+ */
     fun minCostConnectPoints(points: Array<IntArray>): Int {
+
+/**
+ * dist — executes the core logic of this algorithm on the provided input.
+ *
+ * @param from the from parameter — a integer value used in the computation
+ * @param to the to parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dist(from: Int, to: Int) =
             abs(points[from][0] - points[to][0]) + abs(points[from][1] - points[to][1])
 

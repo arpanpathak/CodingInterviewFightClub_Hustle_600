@@ -4,6 +4,13 @@ import tree.TreeNode
 import java.util.*
 
 class FindLargestValueInEachTreeRow {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param root the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun largestValues(root: TreeNode?): List<Int> {
         val result = mutableListOf<Int>()
 

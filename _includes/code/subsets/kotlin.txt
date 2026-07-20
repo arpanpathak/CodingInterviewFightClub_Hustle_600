@@ -1,11 +1,25 @@
 package array.Combinatorics
 
 class Subsets {
+
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param nums the input array of numbers to process
+ * @return a list/collection of result elements
+ */
     fun subsets(nums: IntArray): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         val currentSubset = mutableListOf<Int>()
 
         // Backtracking helper function
+
+/**
+ * backtrack — executes the core logic of this algorithm on the provided input.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun backtrack(start: Int) {
             result.add(ArrayList(currentSubset))  // Add the current subset to the result
 

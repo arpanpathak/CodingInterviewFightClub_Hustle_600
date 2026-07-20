@@ -7,6 +7,14 @@ import java.util.*
 class BusRoutes {
     data class Node(val stop: Int, val busCount: Int)
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param routes the routes parameter — a array of integers used in the computation
+ * @param source the source parameter — a integer value used in the computation
+ * @param target the target value to search for or match against
+ * @return the total count/number of matching elements
+ */
     fun numBusesToDestination(routes: Array<IntArray>, source: Int, target: Int): Int {
         if (source == target) return 0
 

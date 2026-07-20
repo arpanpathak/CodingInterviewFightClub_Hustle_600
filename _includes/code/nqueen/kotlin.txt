@@ -5,10 +5,22 @@ import javax.swing.text.html.HTML.Attribute.N
 class NQueen {
     private lateinit var placed: IntArray
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return a list/collection of result elements
+ */
     fun solveNQueens(n: Int): List<List<String>> {
         val results = mutableListOf<List<String>>()
         placed = IntArray(n) { -1 } // Initialize with -1 indicating no queens are placed
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(row: Int) {
             if (row == n) {
                 // Convert the board configuration to the required output format
@@ -33,6 +45,13 @@ class NQueen {
         return results
     }
 
+/**
+ * is Safe — executes the core logic of this algorithm on the provided input.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @param col the col parameter — a integer value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     private fun isSafe(row: Int, col: Int): Boolean {
         for (prevRow in 0 until row) {
             val prevCol = placed[prevRow]

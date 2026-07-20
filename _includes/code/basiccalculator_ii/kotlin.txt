@@ -1,6 +1,13 @@
 package math.stack
 
 class BasicCalculator_II {
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun calculate(s: String): Int {
         val stack = mutableListOf<Int>()
         var currentNumber = 0
@@ -28,6 +35,13 @@ class BasicCalculator_II {
     }
 
     // O(1) Space solution
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun calculate_o1(s: String): Int {
         var currentNumber = 0
         var result = 0

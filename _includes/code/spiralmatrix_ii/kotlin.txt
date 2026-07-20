@@ -2,6 +2,13 @@ package array
 
 class SpiralMatrix_II {
     class Solution {
+
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return a list/collection of result elements
+ */
         fun generateMatrix(n: Int): Array<IntArray> {
             val matrix = Array(n) { IntArray(n) }
             var (top, bottom, left, right, num) = arrayOf(0, n - 1, 0, n - 1, 1)

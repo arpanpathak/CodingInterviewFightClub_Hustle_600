@@ -4,6 +4,13 @@ import tree.TreeNode
 import java.util.*
 
 class BinaryTreeLevelOrderTraversal_II {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @return the sorted/reordered list of elements
+ */
     fun levelOrderBottom(root: TreeNode?): List<List<Int>> {
         val result = LinkedList<List<Int>>()
         val queue = LinkedList<TreeNode>()

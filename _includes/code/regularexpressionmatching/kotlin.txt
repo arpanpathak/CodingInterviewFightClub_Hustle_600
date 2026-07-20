@@ -3,10 +3,26 @@ package string.dynamic_programming
 class RegularExpressionMatching {
     val dp = mutableMapOf<String, Boolean>()
 
+/**
+ * is Match — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @param p the search pattern or criteria to match
+ * @return `true` if the inputs match/are equal, `false` otherwise
+ */
     fun isMatch(s: String, p: String): Boolean {
         return dfs(s, p, 0, 0)
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param s the input string to process
+ * @param p the search pattern or criteria to match
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun dfs(s: String, p: String, i: Int, j: Int ): Boolean {
         val state = "$i.$j"
         return when {

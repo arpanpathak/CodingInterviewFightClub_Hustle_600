@@ -8,6 +8,13 @@ class CourseSchedule_II {
 
     private enum class NodeStatus { UNVISITED, EXPLORING, DONE }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param numCourses the numCourses parameter — a integer value used in the computation
+ * @param prerequisites the prerequisites parameter — a array of integers used in the computation
+ * @return the sorted/reordered list of elements
+ */
     fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
         // Initialize graph, status, and result array
         status = Array(numCourses) { NodeStatus.UNVISITED }
@@ -27,8 +34,21 @@ class CourseSchedule_II {
         return result
     }
 
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param numCourses the numCourses parameter — a integer value used in the computation
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     private fun hasCycle(numCourses: Int): Boolean {
         // Nested DFS function for checking cycles and building the result
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun dfs(node: Int): Boolean {
             when (status[node]) {
                 // If an already visited node re-appears then it means we looped back to an exploring node

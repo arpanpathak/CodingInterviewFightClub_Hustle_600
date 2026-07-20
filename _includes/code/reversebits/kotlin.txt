@@ -1,6 +1,13 @@
 package bitset
 
 class ReverseBits {
+
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed integer result
+ */
     fun reverseBits(n: Int): Int {
         var num = n
         var result = 0

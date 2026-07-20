@@ -3,6 +3,15 @@ package quicksort
 import kotlin.random.Random
 
 class KthLargestElementInArrayTailRec {
+
+/**
+ * partition — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param left the left/starting boundary of the search range (inclusive)
+ * @param right the right/ending boundary of the search range (inclusive)
+ * @return the computed integer result
+ */
     fun partition(nums: IntArray, left: Int, right: Int): Int {
         // Randomly select pivot index and swap with the last element
         val pivotIndex = Random.nextInt(left, right + 1)
@@ -20,6 +29,13 @@ class KthLargestElementInArrayTailRec {
         return partitionIndex
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun findKthLargest(nums: IntArray, k: Int): Int {
         var left = 0
         var right = nums.size - 1
@@ -36,6 +52,14 @@ class KthLargestElementInArrayTailRec {
         return -1 // If k is out of range of the array, handle accordingly
     }
 
+/**
+ * swap — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun swap(nums: IntArray, i: Int, j: Int) {
         nums[i] = nums[j].also { nums[j] = nums[i] }
     }

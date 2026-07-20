@@ -1,10 +1,26 @@
 package array.backtracking
 
 class CombinationSum_II {
+
+/**
+ * combination Sum2 — executes the core logic of this algorithm on the provided input.
+ *
+ * @param candidates the candidates parameter — a array of integers used in the computation
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun combinationSum2(candidates: IntArray, target: Int): List<List<Int>> {
         val results = mutableListOf<List<Int>>()
         candidates.sort()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param index the index position in the collection
+ * @param target the target value to search for or match against
+ * @param curr the curr parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(index: Int, target: Int, curr: MutableList<Int>) {
             if (target == 0) {
                 results.add(ArrayList(curr))

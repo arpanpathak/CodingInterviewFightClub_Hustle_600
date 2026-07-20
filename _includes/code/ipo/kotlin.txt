@@ -5,6 +5,15 @@ import java.util.*
 class IPO {
     data class Project(val capital: Int, val profit: Int)
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param w the w parameter — a integer value used in the computation
+ * @param profits the profits parameter — a array of integers used in the computation
+ * @param capital the capital parameter — a array of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun findMaximizedCapital(k: Int, w: Int, profits: IntArray, capital: IntArray): Int {
         val projects = capital.indices
             .map { Project(capital[it], profits[it]) }

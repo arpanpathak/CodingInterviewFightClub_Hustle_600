@@ -1,6 +1,13 @@
 package simulation
 
 class CountCollisionsOnARoad {
+
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param directions the directions parameter — a string value used in the computation
+ * @return the total count/number of matching elements
+ */
     fun countCollisions(directions: String): Int {
         TODO()
     }

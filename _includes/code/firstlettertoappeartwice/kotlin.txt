@@ -24,6 +24,12 @@ class FirstLetterToAppearTwice {
         return 'x'
     }
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param s the input string to process
+ * @return the computed result of type Char
+ */
     fun repeatedCharacterBitset(s: String): Char {
 
         val seen = BitSet(26)  // BitSet for 26 lowercase English letters

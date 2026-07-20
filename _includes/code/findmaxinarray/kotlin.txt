@@ -5,6 +5,13 @@ import kotlin.system.measureTimeMillis
 import kotlin.random.Random
 
 // Non-parallel function to find the maximum value in the entire array
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param array the input array of numbers to process
+ * @return the maximum value found in the input
+ */
 fun findMaxNonParallel(array: IntArray): Int {
     var max = array[0]
     for (num in array) {
@@ -16,6 +23,15 @@ fun findMaxNonParallel(array: IntArray): Int {
 }
 
 // Function to find the maximum in a part of the array (used in the parallel approach)
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param array the input array of numbers to process
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param end the right/ending boundary of the search range (inclusive)
+ * @return the maximum value found in the input
+ */
 suspend fun findMaxInSegment(array: IntArray, start: Int, end: Int): Int {
     var max = array[start]
     for (i in start + 1 until end) {
@@ -27,6 +43,14 @@ suspend fun findMaxInSegment(array: IntArray, start: Int, end: Int): Int {
 }
 
 // Parallel function to find the maximum using coroutines
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param array the input array of numbers to process
+ * @param numCoroutines the numCoroutines parameter — a integer value used in the computation
+ * @return the computed result of type Int = coroutine Scope
+ */
 suspend fun findMaxParallel(array: IntArray, numCoroutines: Int = Runtime.getRuntime().availableProcessors()): Int = coroutineScope {
     val segmentSize = array.size / numCoroutines
     val deferredResults = (0 until numCoroutines).map { index ->
@@ -39,6 +63,11 @@ suspend fun findMaxParallel(array: IntArray, numCoroutines: Int = Runtime.getRun
     deferredResults.awaitAll().maxOrNull() ?: Int.MIN_VALUE
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     // Generate a large array with random values
     val size = 1_000_000

@@ -4,10 +4,23 @@ package stock_market.dp
 class BestTimeToBuyAndSellStockWithCooldown {
     val dp = mutableMapOf<Int, Int>()
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param prices the prices parameter — a array of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxProfit(prices: IntArray): Int {
         return maxProfit(prices, 0)
     }
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param prices the prices parameter — a array of integers used in the computation
+ * @param buyAt the buyAt parameter — a integer value used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxProfit(prices: IntArray, buyAt: Int): Int {
         return when {
             buyAt > prices.lastIndex ->  0

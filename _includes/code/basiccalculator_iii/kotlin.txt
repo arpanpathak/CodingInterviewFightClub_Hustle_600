@@ -1,9 +1,21 @@
 package math.stack
 
 class BasicCalculator_III {
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun calculate1(s: String): Int {
         var index = 0
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @return the computed integer result
+ */
         fun evaluate(): Int {
             val stack = ArrayDeque<Int>()
             var num = 0
@@ -42,9 +54,20 @@ class BasicCalculator_III {
         return evaluate()
     }
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun calculate(s: String): Int {
         var index = 0
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @return the computed integer result
+ */
         fun evaluate(): Int {
             var total = 0
             var current = 0

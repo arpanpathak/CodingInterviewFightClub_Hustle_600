@@ -1,6 +1,15 @@
 package array
 
 class MissingRanges {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param lower the lower parameter — a integer value used in the computation
+ * @param upper the upper parameter — a integer value used in the computation
+ * @return a list of matching/found elements
+ */
     fun findMissingRanges(nums: IntArray, lower: Int, upper: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         var currentRangePointer = lower

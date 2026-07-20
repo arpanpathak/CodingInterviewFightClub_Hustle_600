@@ -14,13 +14,13 @@ next_chapter:
 
 # Arrays & Two Pointers
 
-> **38+ problems** — **Two Pointers** create an O(n) pass where a brute force would be O(n²). The pointers track a window, boundary, or comparison pair through the array.
+> **38 problems** — **Two Pointers** create an O(n) pass where a brute force would be O(n²). The pointers track a window, boundary, or comparison pair through the array.
 
 ## Complete Problem Set
 
 | # | Problem |
 |---|---------|
-| 1 | [4sum](#4sum) |
+| 1 | [four Sum](#4sum) |
 | 2 | [Add Strings](#addstrings) |
 | 3 | [List Node](#addtwonumbers) |
 | 4 | [Can Place Flowers](#canplaceflowers) |
@@ -61,9 +61,9 @@ next_chapter:
 
 ---
 
-## 4sum
+## four Sum
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -71,11 +71,28 @@ next_chapter:
 package array.twopointer
 
 class `4Sum` {
+
+/**
+ * four Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun fourSum(nums: IntArray, target: Int): List<List<Int>> {
         nums.sort()
         return kSum(nums, target.toLong(), 0, 4)
     }
 
+/**
+ * k Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     private fun kSum(
         nums: IntArray,
         target: Long,
@@ -115,6 +132,14 @@ class `4Sum` {
         return res
     }
 
+/**
+ * two Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @return a list/collection of result elements
+ */
     private fun twoSum(
         nums: IntArray,
         target: Long,
@@ -150,7 +175,7 @@ class `4Sum` {
 
 ## Add Strings
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -158,6 +183,14 @@ class `4Sum` {
 package math
 
 class AddStrings {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num1 the num1 parameter — a string value used in the computation
+ * @param num2 the num2 parameter — a string value used in the computation
+ * @return the computed string result
+ */
     fun addStrings(num1: String, num2: String): String {
         val sb = StringBuilder()
         var (i, j) = num1.length - 1 to num2.length - 1
@@ -192,7 +225,7 @@ class AddStrings {
 
 ## List Node
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -204,6 +237,14 @@ class ListNode(var `val`: Int) {
 }
 
 class AddTwoNumbers {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param l1 the l1 parameter — a tree/graph node used in the computation
+ * @param l2 the l2 parameter — a tree/graph node used in the computation
+ * @return a list/collection of result elements
+ */
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         var carry = 0
         val head = ListNode(0)
@@ -236,13 +277,13 @@ class AddTwoNumbers {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Can Place Flowers
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -250,6 +291,14 @@ class AddTwoNumbers {
 package array.greedy
 
 class CanPlaceFlowers {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param flowerbed the flowerbed parameter — a array of integers used in the computation
+ * @param n the size/dimension parameter for the algorithm
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun canPlaceFlowers(flowerbed: IntArray, n: Int): Boolean {
         var flowers = 0
         for (i in 0 until flowerbed.size) {
@@ -281,7 +330,7 @@ class CanPlaceFlowers {
 
 ## Container With Most Water
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -289,6 +338,13 @@ class CanPlaceFlowers {
 package array.greedy
 
 class ContainerWithMostWater {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param height the height parameter — a array of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxArea(height: IntArray): Int {
         var (start, end) = Pair(0, height.lastIndex)
         var maxWater = 0
@@ -318,7 +374,7 @@ class ContainerWithMostWater {
 
 ## Contains Duplicate_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -326,6 +382,14 @@ class ContainerWithMostWater {
 package array.hashtable
 
 class ContainsDuplicate_II {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun containsNearbyDuplicate(nums: IntArray, k: Int): Boolean {
         val map = mutableMapOf<Int, Int>()
         for (i in nums.indices) {
@@ -351,7 +415,7 @@ class ContainsDuplicate_II {
 
 ## Contiguous Array
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -359,6 +423,13 @@ class ContainsDuplicate_II {
 package array.prefixsum
 
 class ContiguousArray {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return the maximum value found in the input
+ */
     fun findMaxLength(nums: IntArray): Int {
         val map = mutableMapOf<Int, Int>()
         var sum = 0
@@ -392,7 +463,7 @@ class ContiguousArray {
 
 ## Continuous Subarray Sum
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -401,6 +472,14 @@ package array.prefixsum
 
 // Pattern https://leetcode.com/problems/continuous-subarray-sum/discuss/5276981/prefix-sum-hashmap-patterns-7-problems
 class ContinuousSubarraySum {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun checkSubarraySum(nums: IntArray, k: Int): Boolean {
         val sumsSet: HashSet<Int> = HashSet(nums.size)
         var sum = 0
@@ -431,7 +510,7 @@ class ContinuousSubarraySum {
 
 ## Diagonal Traverse
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -444,6 +523,12 @@ class DiagonalTraverse {
         UP, DOWN
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param mat the mat parameter — a array of integers used in the computation
+ * @return the sorted/reordered list of elements
+ */
     fun findDiagonalOrder(mat: Array<IntArray>): IntArray {
         val m = mat.size        // Number of rows in the matrix
         val n = mat[0].size     // Number of columns in the matrix
@@ -502,13 +587,13 @@ class DiagonalTraverse {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Point
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -520,6 +605,13 @@ import java.util.*
 data class Point(val row: Int, val col: Int)
 
 class DiagonalTraverse_II {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return the sorted/reordered list of elements
+ */
     fun findDiagonalOrder(nums: List<List<Int>>): List<Int> {
         val result = mutableListOf<Int>()
         val queue: Queue<Pair<Int, Int>> = LinkedList()
@@ -548,6 +640,7 @@ class DiagonalTraverse_II {
         return result
     }
 }
+
 ```
 
 ### Complexity
@@ -555,13 +648,13 @@ class DiagonalTraverse_II {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Randomized Set
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -574,6 +667,12 @@ class RandomizedSet() {
     private val list = mutableListOf<Int>()
     private val map = mutableMapOf<Int, Int>()
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param `val` the `val` parameter — a integer value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun insert(`val`: Int): Boolean {
         if (!map.containsKey(`val`))
             return false
@@ -582,6 +681,12 @@ class RandomizedSet() {
         return true
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param `val` the `val` parameter — a integer value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun remove(`val`: Int): Boolean {
         if (map.containsKey(`val`))
             return false
@@ -597,6 +702,11 @@ class RandomizedSet() {
         return true
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed integer result
+ */
     fun getRandom(): Int {
         return list[Random.nextInt(list.size)]
     }
@@ -615,7 +725,7 @@ class RandomizedSet() {
 
 ## Interval List Intersection
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -623,6 +733,14 @@ class RandomizedSet() {
 package array.twopointer
 
 class IntervalListIntersection {
+
+/**
+ * interval Intersection — executes the core logic of this algorithm on the provided input.
+ *
+ * @param firstList the firstList parameter — a array of integers used in the computation
+ * @param secondList the secondList parameter — a array of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun intervalIntersection(firstList: Array<IntArray>, secondList: Array<IntArray>): Array<IntArray> {
         val result = mutableListOf<IntArray>()
 
@@ -658,7 +776,7 @@ class IntervalListIntersection {
 
 ## K Items With Maximum Sum
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -666,6 +784,16 @@ class IntervalListIntersection {
 package array.greedy
 
 class KItemsWithMaximumSum {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param numOnes the numOnes parameter — a integer value used in the computation
+ * @param numZeros the numZeros parameter — a integer value used in the computation
+ * @param numNegOnes the numNegOnes parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the maximum value found in the input
+ */
     fun kItemsWithMaximumSum(numOnes: Int, numZeros: Int, numNegOnes: Int, k: Int): Int {
         var (K, ones, zeroes, negatives, sum) = listOf( k, numOnes,numZeros, numNegOnes, 0 )
         while (K-- > 0) {
@@ -686,6 +814,16 @@ class KItemsWithMaximumSum {
     }
 
     // Alternative way
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param numOnes the numOnes parameter — a integer value used in the computation
+ * @param numZeros the numZeros parameter — a integer value used in the computation
+ * @param numNegOnes the numNegOnes parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the maximum value found in the input
+ */
     fun kItemsWithMaximumSumAlternative(numOnes: Int, numZeros: Int, numNegOnes: Int, k: Int): Int {
 
         if(k <= numOnes)
@@ -713,7 +851,7 @@ class KItemsWithMaximumSum {
 
 ## Linked List Random Node
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -724,6 +862,12 @@ import linkedlist.ListNode
 import kotlin.random.Random
 
 class LinkedListRandomNode (private val head: ListNode?) {
+
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed integer result
+ */
     fun getRandom(): Int {
         var (count, result) = 0 to 0
         var ptr = head
@@ -742,6 +886,12 @@ class LinkedListRandomNode (private val head: ListNode?) {
     }
 
     // Another possible solution
+
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed integer result
+ */
     fun getRandom_2(): Int {
         var current = head
         var result = current?.`val` ?: throw IllegalArgumentException("List is empty")
@@ -766,13 +916,13 @@ class LinkedListRandomNode (private val head: ListNode?) {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(h) where h = tree height |
+| **Space** | O(1) |
 
 ---
 
 ## Merge Intervals
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -780,6 +930,13 @@ class LinkedListRandomNode (private val head: ListNode?) {
 package array
 
 class MergeIntervals {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param intervals the intervals parameter — a array of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun merge(intervals: Array<IntArray>): Array<IntArray> {
         // Sort the internals by start
         intervals.sortWith(compareBy { it[0] })
@@ -808,7 +965,7 @@ class MergeIntervals {
 
 ## Merge Sorted Array
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -820,6 +977,15 @@ import kotlin.math.max
 
 class MergeSortedArray {
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param nums1 the first input array for comparison/merging
+ * @param m the m parameter — a integer value used in the computation
+ * @param nums2 the second input array for comparison/merging
+ * @param n the size/dimension parameter for the algorithm
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
         var (x, y, ptr) = listOf(m-1, n-1, m + n - 1)
 
@@ -839,6 +1005,13 @@ class MergeSortedArray {
 
     companion object {
         @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun main(args: Array<String>) {
             val testClass = MergeSortedArray()
 
@@ -864,7 +1037,7 @@ class MergeSortedArray {
 
 ## Missing Ranges
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -872,6 +1045,15 @@ class MergeSortedArray {
 package array
 
 class MissingRanges {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param lower the lower parameter — a integer value used in the computation
+ * @param upper the upper parameter — a integer value used in the computation
+ * @return a list of matching/found elements
+ */
     fun findMissingRanges(nums: IntArray, lower: Int, upper: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         var currentRangePointer = lower
@@ -902,7 +1084,7 @@ class MissingRanges {
 
 ## Move Zeroes
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -910,6 +1092,13 @@ class MissingRanges {
 package array
 
 class MoveZeroes {
+
+/**
+ * move Zeroes — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun moveZeroes(nums: IntArray): Unit {
         var nonZeroPointer = 0
 
@@ -933,13 +1122,13 @@ class MoveZeroes {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Next Permutation
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -947,10 +1136,26 @@ class MoveZeroes {
 package array.Combinatorics
 
 class NextPermutation {
+
+/**
+ * swap — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun swap(nums: IntArray, i: Int, j: Int) {
         nums[j] = nums[i].also { nums[i] = nums[j] }
     }
 
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param nums the input array of numbers to process
+ * @param startIndex the startIndex parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun reverse(nums: IntArray, startIndex: Int) {
         var (left, right) = Pair(startIndex, nums.lastIndex)
         while(left < right) {
@@ -958,6 +1163,12 @@ class NextPermutation {
         }
     }
 
+/**
+ * next Permutation — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun nextPermutation(nums: IntArray): Boolean {
         var index = nums.lastIndex - 1
 
@@ -1009,7 +1220,7 @@ class NextPermutation {
 
 ## Palindrome Number
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1017,6 +1228,13 @@ class NextPermutation {
 package numbers
 
 class PalindromeNumber {
+
+/**
+ * is Palindrome — executes the core logic of this algorithm on the provided input.
+ *
+ * @param x the target value to search for or match against
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isPalindrome(x: Int): Boolean {
         var (reduced, sum) = listOf(x, 0, 1)
 
@@ -1027,6 +1245,7 @@ class PalindromeNumber {
         return sum == x
     }
 }
+
 ```
 
 ### Complexity
@@ -1040,7 +1259,7 @@ class PalindromeNumber {
 
 ## Plus One
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1048,6 +1267,13 @@ class PalindromeNumber {
 package math
 
 class PlusOne {
+
+/**
+ * plus One — executes the core logic of this algorithm on the provided input.
+ *
+ * @param digits the digits parameter — a array of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun plusOne(digits: IntArray): IntArray {
         for (i in digits.lastIndex downTo 0) {
             if (digits[i] < 9) {
@@ -1060,6 +1286,7 @@ class PlusOne {
         return intArrayOf(1) + digits
     }
 }
+
 ```
 
 ### Complexity
@@ -1073,7 +1300,7 @@ class PlusOne {
 
 ## Remove Element
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1081,6 +1308,14 @@ class PlusOne {
 package array
 
 class RemoveElement {
+
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param nums the input array of numbers to process
+ * @param `val` the `val` parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun removeElement(nums: IntArray, `val`: Int): Int {
         var i = 0
 
@@ -1100,13 +1335,13 @@ class RemoveElement {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Reservoir Sampling
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1149,7 +1384,7 @@ class ReservoirSampling {
 
 ## Rotate Array
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1157,6 +1392,14 @@ class ReservoirSampling {
 package array.twopointer
 
 class RotateArray {
+
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun rotate(nums: IntArray, k: Int): Unit {
         val n = nums.size
         val steps = k % n // In case k is greater than n
@@ -1166,6 +1409,14 @@ class RotateArray {
         reverse(nums, steps, n - 1)
     }
 
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param nums the input array of numbers to process
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param end the right/ending boundary of the search range (inclusive)
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun reverse(nums: IntArray, start: Int, end: Int): Unit {
         var s = start
         var e = end
@@ -1183,13 +1434,13 @@ class RotateArray {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Rotate Image
 
-**Problem:** 1,2,3
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1197,6 +1448,13 @@ class RotateArray {
 package array
 
 class RotateImage {
+
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun rotate(matrix: Array<IntArray>): Unit {
         for (i in matrix.indices)
             for (j in i until matrix[i].size) {
@@ -1214,6 +1472,16 @@ class RotateImage {
         }
     }
 
+/**
+ * swap — executes the core logic of this algorithm on the provided input.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @param m the m parameter — a integer value used in the computation
+ * @param n the size/dimension parameter for the algorithm
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun swap(matrix: Array<IntArray>, i: Int, j: Int, m: Int, n: Int) {
         matrix[i][j] = matrix[m][n].also { matrix[m][n] = matrix[i][j] }
     }
@@ -1228,6 +1496,8 @@ class RotateImage {
  * 2,5,8
  * 3,6,9
  */
+
+
 ```
 
 ### Complexity
@@ -1235,13 +1505,13 @@ class RotateImage {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Search A2d Matrix_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1249,6 +1519,14 @@ class RotateImage {
 package array
 
 class SearchA2dMatrix_II {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @param target the target value to search for or match against
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
         var (row, col) = matrix.size - 1 to 0
 
@@ -1263,6 +1541,7 @@ class SearchA2dMatrix_II {
         return false
     }
 }
+
 ```
 
 ### Complexity
@@ -1276,7 +1555,7 @@ class SearchA2dMatrix_II {
 
 ## Shortest Path In Binary Matrix
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1288,6 +1567,12 @@ import java.util.*
 class ShortestPathInBinaryMatrix {
     data class State(val row: Int, val col: Int, val dist: Int)
 
+/**
+ * shortest Path Binary Matrix — executes the core logic of this algorithm on the provided input.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @return the computed integer result
+ */
     fun shortestPathBinaryMatrix(grid: Array<IntArray>): Int {
         val n = grid.size
         val m = grid[0].size
@@ -1327,6 +1612,7 @@ class ShortestPathInBinaryMatrix {
         return -1  // No path found
     }
 }
+
 ```
 
 ### Complexity
@@ -1340,7 +1626,7 @@ class ShortestPathInBinaryMatrix {
 
 ## Sign Of The Product Of An Array
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1348,6 +1634,13 @@ class ShortestPathInBinaryMatrix {
 package array
 
 class SignOfTheProductOfAnArray {
+
+/**
+ * array Sign — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed integer result
+ */
     fun arraySign(nums: IntArray): Int {
         var negativeCount = 0
 
@@ -1362,6 +1655,7 @@ class SignOfTheProductOfAnArray {
         }
     }
 }
+
 ```
 
 ### Complexity
@@ -1375,7 +1669,7 @@ class SignOfTheProductOfAnArray {
 
 ## Sort Colors
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1383,7 +1677,22 @@ class SignOfTheProductOfAnArray {
 package array.sorting
 
 class SortColors {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param nums the input array of numbers to process
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun sortColors(nums: IntArray): Unit {
+
+/**
+ * swap — executes the core logic of this algorithm on the provided input.
+ *
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun swap(i: Int, j: Int) {
             nums[i] = nums[j].also { nums[j] = nums[i] }
         }
@@ -1400,6 +1709,7 @@ class SortColors {
         }
     }
 }
+
 ```
 
 ### Complexity
@@ -1413,7 +1723,7 @@ class SortColors {
 
 ## Spiral Matrix
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1421,6 +1731,13 @@ class SortColors {
 package array
 
 class SpiralMatrix {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @return the sorted/reordered list of elements
+ */
     fun spiralOrder(matrix: Array<IntArray>): List<Int> {
         if (matrix.isEmpty()) return emptyList()
 
@@ -1457,13 +1774,13 @@ class SpiralMatrix {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Spiral Matrix_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1472,6 +1789,13 @@ package array
 
 class SpiralMatrix_II {
     class Solution {
+
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return a list/collection of result elements
+ */
         fun generateMatrix(n: Int): Array<IntArray> {
             val matrix = Array(n) { IntArray(n) }
             var (top, bottom, left, right, num) = arrayOf(0, n - 1, 0, n - 1, 1)
@@ -1502,6 +1826,7 @@ class SpiralMatrix_II {
         }
     }
 }
+
 ```
 
 ### Complexity
@@ -1509,13 +1834,13 @@ class SpiralMatrix_II {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Squares Of A Sorted Array
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1525,6 +1850,13 @@ package array.sorting
 import kotlin.math.abs
 
 class SquaresOfASortedArray {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param nums the input array of numbers to process
+ * @return the sorted/reordered list of elements
+ */
     fun sortedSquares(nums: IntArray): IntArray {
         val result = IntArray(nums.size)
 
@@ -1540,6 +1872,7 @@ class SquaresOfASortedArray {
         return result
     }
 }
+
 ```
 
 ### Complexity
@@ -1553,7 +1886,7 @@ class SquaresOfASortedArray {
 
 ## Three Sum
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1562,6 +1895,13 @@ package array.twopointer
 
 
 class ThreeSum {
+
+/**
+ * three Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return a list/collection of result elements
+ */
     fun threeSum(nums: IntArray): List<List<Int>> {
         val result = mutableSetOf<List<Int>>()
         nums.sort()
@@ -1597,6 +1937,7 @@ class ThreeSum {
 
     // This can be done using set too . Reducing it to 2 sum problem.
 }
+
 ```
 
 ### Complexity
@@ -1604,13 +1945,13 @@ class ThreeSum {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Three Sum Closest
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1620,6 +1961,14 @@ package array.twopointer
 import kotlin.math.abs
 
 class ThreeSumClosest {
+
+/**
+ * three Sum Closest — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return the computed sum/total value
+ */
     fun threeSumClosest(nums: IntArray, target: Int): Int {
         nums.sort()
         var closestSum = nums[0] + nums[1] + nums[2]
@@ -1643,6 +1992,7 @@ class ThreeSumClosest {
         return closestSum
     }
 }
+
 ```
 
 ### Complexity
@@ -1650,13 +2000,13 @@ class ThreeSumClosest {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Toeplitz Matrix
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1664,6 +2014,13 @@ class ThreeSumClosest {
 package array
 
 class ToeplitzMatrix {
+
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isToeplitzMatrix(matrix: Array<IntArray>): Boolean {
         val m = matrix.size
         val n = matrix[0].size
@@ -1706,7 +2063,7 @@ class ToeplitzMatrix {
 
 ## Transpose Matrix
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1714,6 +2071,13 @@ class ToeplitzMatrix {
 package array
 
 class TransposeMatrix {
+
+/**
+ * transpose — executes the core logic of this algorithm on the provided input.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @return a list/collection of result elements
+ */
     fun transpose(matrix: Array<IntArray>): Array<IntArray> {
         val rows = matrix.size
         val cols = matrix[0].size
@@ -1741,7 +2105,7 @@ class TransposeMatrix {
 
 ## Trapping Rain Water
 
-**Problem:** Using Dynamic Programming.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1785,6 +2149,13 @@ class TrappingRainWater {
     }
 
     // Two pointer method.
+
+/**
+ * trap Constant Space — executes the core logic of this algorithm on the provided input.
+ *
+ * @param height the height parameter — a array of integers used in the computation
+ * @return the computed integer result
+ */
     fun trapConstantSpace(height: IntArray): Int {
         var (left, right, leftMax, rightMax, waterTrapped) = listOf(0, height.lastIndex, 0, 0, 0)
 
@@ -1816,7 +2187,7 @@ class TrappingRainWater {
 
 ## Two Sum_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1824,6 +2195,14 @@ class TrappingRainWater {
 package array.twopointer
 
 class TwoSum_II {
+
+/**
+ * two Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param numbers the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun twoSum(numbers: IntArray, target: Int): IntArray {
         var start = 0
         var end = numbers.lastIndex
@@ -1850,13 +2229,13 @@ class TwoSum_II {
 | Metric | Value |
 |--------|-------|
 | **Time** | O(n) |
-| **Space** | O(1) |
+| **Space** | O(1) or O(n) |
 
 ---
 
 ## Key Takeaways
 
-1. **Core pattern recognition** — Identify the problem type and apply the right technique.
+1. **Core pattern recognition** — Identify the problem type and apply the right algorithmic technique.
 2. **Practice systematically** — Work through each problem to internalize the patterns.
 3. **Understand why, not just how** — Focus on the reasoning behind each solution.
 

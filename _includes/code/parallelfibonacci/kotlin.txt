@@ -8,6 +8,13 @@ import kotlin.system.measureTimeMillis
 val memo = ConcurrentHashMap<Int, Long>()
 
 // Iterative method to calculate Fibonacci numbers
+
+/**
+ * fibonacci Iterative — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed result of type Long
+ */
 fun fibonacciIterative(n: Int): Long {
     if (n <= 1) return n.toLong()
     var a = 0L
@@ -21,6 +28,13 @@ fun fibonacciIterative(n: Int): Long {
 }
 
 // Parallel recursive Fibonacci function using coroutines
+
+/**
+ * fibonacci Parallel — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed result of type Long
+ */
 suspend fun fibonacciParallel(n: Int): Long {
     if (n <= 1) return n.toLong()
     memo[n]?.let { return it }
@@ -37,6 +51,11 @@ suspend fun fibonacciParallel(n: Int): Long {
     return result
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() = runBlocking {
     val n = 100
 

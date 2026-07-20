@@ -1,6 +1,13 @@
 package string
 
 class LengthOfLastWord {
+
+/**
+ * length Of Last Word — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun lengthOfLastWord(s: String): Int {
         var i = s.length - 1
         var len = 0

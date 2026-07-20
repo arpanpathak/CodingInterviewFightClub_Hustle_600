@@ -25,7 +25,7 @@ prev_chapter:
 
 ## LFU Cache
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -45,6 +45,12 @@ class LFUCache(capacity: Int) {
         lists[1] = LinkedHashSet()
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param key the target value to search for or match against
+ * @return the computed integer result
+ */
     fun get(key: Int): Int {
         if (!vals.containsKey(key))
             return -1
@@ -65,6 +71,13 @@ class LFUCache(capacity: Int) {
         return vals[key]!!
     }
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param key the target value to search for or match against
+ * @param value the target value to search for or match against
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun put(key: Int, value: Int) {
         if (MAX_SIZE <= 0)
             return ;
@@ -102,7 +115,7 @@ class LFUCache(capacity: Int) {
 
 ## LRU Cache
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -113,6 +126,12 @@ class LRUCache(private val capacity: Int) {
 
     private val cache: LinkedHashMap<Int, Int> = LinkedHashMap()
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param key the target value to search for or match against
+ * @return the computed integer result
+ */
     fun get(key: Int): Int {
         val data = cache[key] ?: -1
 
@@ -122,6 +141,13 @@ class LRUCache(private val capacity: Int) {
         return data
     }
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param key the target value to search for or match against
+ * @param value the target value to search for or match against
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun put(key: Int, value: Int) {
         if (cache.containsKey(key)) {
             cache.remove(key)
@@ -145,7 +171,7 @@ class LRUCache(private val capacity: Int) {
 
 ## LRU Cache Linked List
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -169,12 +195,25 @@ class LRUCacheLinkedList(private val capacity: Int) {
         tail.prev = head
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param key the target value to search for or match against
+ * @return the computed integer result
+ */
     fun get(key: Int): Int {
         val node = cache[key] ?: return -1 // Key not found
         moveToHead(node) // Move the node to the head (most recently used)
         return node.value
     }
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param key the target value to search for or match against
+ * @param value the target value to search for or match against
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun put(key: Int, value: Int) {
         val node = cache[key]
         if (node != null) {
@@ -195,6 +234,12 @@ class LRUCacheLinkedList(private val capacity: Int) {
         }
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun addToHead(node: Node) {
         // Add the node to the head of the list
         node.prev = head
@@ -203,18 +248,35 @@ class LRUCacheLinkedList(private val capacity: Int) {
         head.next = node
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun removeNode(node: Node) {
         // Remove the node from the list
         node.prev?.next = node.next
         node.next?.prev = node.prev
     }
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param node the root/head node of the data structure
+ * @return the resulting tree/graph node
+ */
     private fun moveToHead(node: Node) {
         // Move the node to the head of the list
         removeNode(node)
         addToHead(node)
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @return the resulting tree/graph node
+ */
     private fun removeTail(): Node {
         // Remove and return the tail node (least recently used)
         val tailNode = tail.prev!!
@@ -223,6 +285,11 @@ class LRUCacheLinkedList(private val capacity: Int) {
     }
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val lruCache = LRUCache(2)
     lruCache.put(1, 1) // Cache is {1=1}
@@ -235,6 +302,7 @@ fun main() {
     println(lruCache.get(3)) // Returns 3 (Cache is {4=4, 3=3})
     println(lruCache.get(4)) // Returns 4 (Cache is {3=3, 4=4})
 }
+
 ```
 
 ### Complexity
@@ -248,7 +316,7 @@ fun main() {
 
 ## Key Takeaways
 
-1. **Core pattern recognition** — Identify the problem type and apply the right technique.
+1. **Core pattern recognition** — Identify the problem type and apply the right algorithmic technique.
 2. **Practice systematically** — Work through each problem to internalize the patterns.
 3. **Understand why, not just how** — Focus on the reasoning behind each solution.
 

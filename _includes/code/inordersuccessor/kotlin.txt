@@ -1,6 +1,14 @@
 package tree.bst
 
 class InorderSuccessor {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @param p the search pattern or criteria to match
+ * @return the resulting tree/graph node
+ */
     fun inorderSuccessor(root: TreeNode?, p: TreeNode?): TreeNode? {
         var successor: TreeNode? = null
         var current = root

@@ -1,6 +1,13 @@
 package linkedlist
 
 class ReverseLinkedList {
+
+/**
+ * Reverses or rearranges the input elements in place.
+ *
+ * @param head the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun reverseList(head: ListNode?): ListNode? {
         if (head?.next == null) {
             return head

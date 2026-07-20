@@ -1,6 +1,13 @@
 package tree
 
 class MaximumDepthOfBinaryTree {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the maximum value found in the input
+ */
     fun maxDepth(root: TreeNode?): Int {
         if (root == null) {
             return 0

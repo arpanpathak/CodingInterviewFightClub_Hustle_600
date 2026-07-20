@@ -1,6 +1,13 @@
 package math.geometry
 
 class MaxPointsOnALine {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param points the points parameter — a array of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxPoints(points: Array<IntArray>): Int {
         if (points.size <= 2) return points.size
 

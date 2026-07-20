@@ -3,6 +3,20 @@ package math.geometry
 import kotlin.math.abs
 
 class RectangleArea {
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param ax1 the ax1 parameter — a integer value used in the computation
+ * @param ay1 the ay1 parameter — a integer value used in the computation
+ * @param ax2 the ax2 parameter — a integer value used in the computation
+ * @param ay2 the ay2 parameter — a integer value used in the computation
+ * @param bx1 the bx1 parameter — a integer value used in the computation
+ * @param by1 the by1 parameter — a integer value used in the computation
+ * @param bx2 the bx2 parameter — a integer value used in the computation
+ * @param by2 the by2 parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun computeArea(ax1: Int, ay1: Int, ax2: Int, ay2: Int, bx1: Int, by1: Int, bx2: Int, by2: Int): Int {
         val h1 = abs(ax1 - ax2)
         val w1 = abs(ay1 - ay2)

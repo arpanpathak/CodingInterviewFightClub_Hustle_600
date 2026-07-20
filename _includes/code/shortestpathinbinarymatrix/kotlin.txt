@@ -5,6 +5,12 @@ import java.util.*
 class ShortestPathInBinaryMatrix {
     data class State(val row: Int, val col: Int, val dist: Int)
 
+/**
+ * shortest Path Binary Matrix — executes the core logic of this algorithm on the provided input.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @return the computed integer result
+ */
     fun shortestPathBinaryMatrix(grid: Array<IntArray>): Int {
         val n = grid.size
         val m = grid[0].size

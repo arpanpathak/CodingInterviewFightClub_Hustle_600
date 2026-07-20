@@ -4,6 +4,12 @@ class FindWinnerOnATicTacToeGame {
     private val board = Array(3) { CharArray(3) } // 3x3 Tic-Tac-Toe board
     private val players = charArrayOf('A', 'B') // Player A and Player B
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param moves the moves parameter — a array of integers used in the computation
+ * @return the computed string result
+ */
     fun tictactoe(moves: Array<IntArray>): String {
         for ((i, move) in moves.withIndex()) {
             val player = players[i % 2] // Alternate between Player A and B
@@ -25,6 +31,14 @@ class FindWinnerOnATicTacToeGame {
     }
 
     // Check if the entire row is filled by the player
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @param player the player parameter — a input parameter of type Char used in the computation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     private fun checkRow(row: Int, player: Char): Boolean {
         for (col in 0 until 3) {
             if (board[row][col] != player) return false
@@ -33,6 +47,14 @@ class FindWinnerOnATicTacToeGame {
     }
 
     // Check if the entire column is filled by the player
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param col the col parameter — a integer value used in the computation
+ * @param player the player parameter — a input parameter of type Char used in the computation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     private fun checkColumn(col: Int, player: Char): Boolean {
         for (row in 0 until 3) {
             if (board[row][col] != player) return false
@@ -41,6 +63,13 @@ class FindWinnerOnATicTacToeGame {
     }
 
     // Check if the main diagonal is filled by the player
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param player the player parameter — a input parameter of type Char used in the computation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     private fun checkDiagonal(player: Char): Boolean {
         for (i in 0 until 3) {
             if (board[i][i] != player) return false
@@ -49,6 +78,13 @@ class FindWinnerOnATicTacToeGame {
     }
 
     // Check if the anti-diagonal is filled by the player
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param player the player parameter — a input parameter of type Char used in the computation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     private fun checkAntiDiagonal(player: Char): Boolean {
         for (i in 0 until 3) {
             if (board[i][2 - i] != player) return false

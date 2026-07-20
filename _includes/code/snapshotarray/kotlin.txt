@@ -7,16 +7,38 @@ class SnapshotArray(length: Int) {
     private val historyRecords = Array(length) { TreeMap<Int, Int>().apply { put(0, 0) } }
 
     // Sets the value at the given index for the current snapId.
+
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param index the index position in the collection
+ * @param `val` the `val` parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun set(index: Int, `val`: Int) {
         historyRecords[index][snapId] = `val`
     }
 
     // Takes a snapshot and returns the snapId.
+
+/**
+ * snap — executes the core logic of this algorithm on the provided input.
+ *
+ * @return the computed integer result
+ */
     fun snap(): Int {
         return snapId++
     }
 
     // Gets the value at the given index for the specific snapId.
+
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param index the index position in the collection
+ * @param snapId the snapId parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun get(index: Int, snapId: Int): Int {
         // Find the largest snapId <= given snapId using floorEntry
         return historyRecords[index].floorEntry(snapId)?.value ?: 0

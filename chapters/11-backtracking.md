@@ -14,7 +14,7 @@ next_chapter:
 
 # Backtracking
 
-> **15 problems** — **Backtracking** = DFS on decision tree + pruning. Generate candidates, explore valid ones, backtrack when stuck. Essential for constraint satisfaction problems.
+> **14 problems** — **Backtracking** = DFS on decision tree + pruning. Generate candidates, explore valid ones, backtrack when stuck. Essential for constraint satisfaction problems.
 
 ## Complete Problem Set
 
@@ -39,7 +39,7 @@ next_chapter:
 
 ## Combinations
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -47,9 +47,26 @@ next_chapter:
 package array.Combinatorics
 
 class Combinations {
+
+/**
+ * combine — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun combine(n: Int, k: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+/**
+ * combine — executes the core logic of this algorithm on the provided input.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param n the size/dimension parameter for the algorithm
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param current the current parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun combine(start: Int, n: Int, k: Int, current: MutableList<Int> = mutableListOf()) {
             if (current.size == k) {
                 result.add(current.toList())
@@ -75,14 +92,14 @@ class Combinations {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) |
 
 ---
 
 ## Combination Sum
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -90,9 +107,25 @@ class Combinations {
 package array.backtracking
 
 class CombinationSum {
+
+/**
+ * combination Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param candidates the candidates parameter — a array of integers used in the computation
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param current the current parameter — a list of integers used in the computation
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param remaining the remaining parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun findCombinations(current: MutableList<Int>, start: Int, remaining: Int) {
             when {
                 remaining == 0 -> result.add(ArrayList(current))
@@ -115,14 +148,14 @@ class CombinationSum {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) |
 
 ---
 
 ## Combination Sum_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -130,10 +163,26 @@ class CombinationSum {
 package array.backtracking
 
 class CombinationSum_II {
+
+/**
+ * combination Sum2 — executes the core logic of this algorithm on the provided input.
+ *
+ * @param candidates the candidates parameter — a array of integers used in the computation
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun combinationSum2(candidates: IntArray, target: Int): List<List<Int>> {
         val results = mutableListOf<List<Int>>()
         candidates.sort()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param index the index position in the collection
+ * @param target the target value to search for or match against
+ * @param curr the curr parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(index: Int, target: Int, curr: MutableList<Int>) {
             if (target == 0) {
                 results.add(ArrayList(curr))
@@ -160,14 +209,14 @@ class CombinationSum_II {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) |
 
 ---
 
 ## Combination Sum3
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -175,12 +224,30 @@ class CombinationSum_II {
 package array.backtracking
 
 class CombinationSum3 {
+
+/**
+ * combination Sum3 — executes the core logic of this algorithm on the provided input.
+ *
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param n the size/dimension parameter for the algorithm
+ * @return a list/collection of result elements
+ */
     fun combinationSum3(k: Int, n: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         dfs(k,n, 1, result)
         return result
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param remaining the remaining parameter — a integer value used in the computation
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param result the result parameter — a list of integers used in the computation
+ * @param curr the curr parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun dfs(
         k: Int,
         remaining: Int,
@@ -213,14 +280,14 @@ class CombinationSum3 {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) |
 
 ---
 
 ## Expression And Add Operators
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -228,9 +295,27 @@ class CombinationSum3 {
 package backtracking
 
 class ExpressionAndAddOperators {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a string value used in the computation
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun addOperators(num: String, target: Int): List<String> {
         val result = mutableListOf<String>()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param index the index position in the collection
+ * @param prevOperand the prevOperand parameter — a input parameter of type Long used in the computation
+ * @param currentOperand the currentOperand parameter — a input parameter of type Long used in the computation
+ * @param value the target value to search for or match against
+ * @param expression the expression parameter — a string value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(index: Int, prevOperand: Long, currentOperand: Long, value: Long, expression: String) {
             if (index == num.length) {
                 if (value == target.toLong() && currentOperand == 0L) {
@@ -270,9 +355,26 @@ class ExpressionAndAddOperators {
     }
 
     // ANother leetcode solution https://leetcode.com/problems/expression-add-operators/discuss/951147/Kotlin-C%2B%2B%3A-O(n4n)-time-and-O(n)-time-with-backtracking
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a string value used in the computation
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun addOperators2(num: String, target: Int): List<String> {
         val res = ArrayList<String>()
 
+/**
+ * partition — executes the core logic of this algorithm on the provided input.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param path the path parameter — a string value used in the computation
+ * @param sum the target amount/sum to achieve
+ * @param prev the prev parameter — a input parameter of type Long used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun partition(start: Int, path: String, sum: Long, prev: Long) {
             if (start == num.length) {
                 if (sum == target.toLong()) {
@@ -309,6 +411,12 @@ class ExpressionAndAddOperators {
 }
 
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main(args: Array<String>) {
     val test = ExpressionAndAddOperators()
 
@@ -320,14 +428,14 @@ fun main(args: Array<String>) {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) |
 
 ---
 
 ## Expression And Add Operators Optimized
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -335,9 +443,26 @@ fun main(args: Array<String>) {
 package backtracking
 
 class ExpressionAndAddOperatorsOptimized {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a string value used in the computation
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun addOperators(num: String, target: Int): List<String> {
         val res = ArrayList<String>()
 
+/**
+ * partition — executes the core logic of this algorithm on the provided input.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param path the path parameter — a input parameter of type StringBuilder used in the computation
+ * @param sum the target amount/sum to achieve
+ * @param prev the prev parameter — a input parameter of type Long used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun partition(start: Int, path: StringBuilder, sum: Long, prev: Long) {
             if (start == num.length) {
                 if (sum == target.toLong()) {
@@ -388,14 +513,14 @@ class ExpressionAndAddOperatorsOptimized {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) |
 
 ---
 
 ## N Queen
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -407,10 +532,22 @@ import javax.swing.text.html.HTML.Attribute.N
 class NQueen {
     private lateinit var placed: IntArray
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return a list/collection of result elements
+ */
     fun solveNQueens(n: Int): List<List<String>> {
         val results = mutableListOf<List<String>>()
         placed = IntArray(n) { -1 } // Initialize with -1 indicating no queens are placed
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(row: Int) {
             if (row == n) {
                 // Convert the board configuration to the required output format
@@ -435,6 +572,13 @@ class NQueen {
         return results
     }
 
+/**
+ * is Safe — executes the core logic of this algorithm on the provided input.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @param col the col parameter — a integer value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     private fun isSafe(row: Int, col: Int): Boolean {
         for (prevRow in 0 until row) {
             val prevCol = placed[prevRow]
@@ -458,7 +602,7 @@ class NQueen {
 
 ## N Queen_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -468,10 +612,22 @@ package backtracking
 class NQueen_II {
     private lateinit var placed: IntArray
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed sum/total value
+ */
     fun totalNQueens(n: Int): Int {
         placed = IntArray(n) { -1 } // Initialize with -1 indicating no queens are placed
         var solutionCount = 0
 
+/**
+ * backtrack — executes the core logic of this algorithm on the provided input.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun backtrack(row: Int) {
             if (row == n) {
                 // Found a valid solution, increment the count
@@ -492,6 +648,13 @@ class NQueen_II {
         return solutionCount
     }
 
+/**
+ * is Safe — executes the core logic of this algorithm on the provided input.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @param col the col parameter — a integer value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     private fun isSafe(row: Int, col: Int): Boolean {
         for (prevRow in 0 until row) {
             val prevCol = placed[prevRow]
@@ -515,7 +678,7 @@ class NQueen_II {
 
 ## Palindrome Partitioning
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -523,9 +686,24 @@ class NQueen_II {
 package backtracking
 
 class PalindromePartitioning {
+
+/**
+ * partition — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @return a list/collection of result elements
+ */
     fun partition(s: String): List<List<String>> {
         val result = mutableListOf<List<String>>()
 
+/**
+ * is Palindrome — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @param left the left/starting boundary of the search range (inclusive)
+ * @param right the right/ending boundary of the search range (inclusive)
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun isPalindrome(s: String, left: Int, right: Int): Boolean {
             var (l, r) = left to right
             while (l < r) {
@@ -534,6 +712,13 @@ class PalindromePartitioning {
             return true
         }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param path the path parameter — a list of strings used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(start: Int, path: MutableList<String>) {
             if (start == s.length) {
                 result.add(ArrayList(path))
@@ -552,6 +737,7 @@ class PalindromePartitioning {
         return result
     }
 }
+
 ```
 
 ### Complexity
@@ -565,7 +751,7 @@ class PalindromePartitioning {
 
 ## Partition To K Equal Sum Subsets
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -573,6 +759,14 @@ class PalindromePartitioning {
 package backtracking
 
 class PartitionToKEqualSumSubsets {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun canPartitionKSubsets(nums: IntArray, k: Int): Boolean {
         val totalSum = nums.sum()
         if (totalSum % k !=0) return false
@@ -580,6 +774,14 @@ class PartitionToKEqualSumSubsets {
         val targetSum = totalSum / k
         val used = BooleanArray(nums.size)
 
+/**
+ * backtrack — executes the core logic of this algorithm on the provided input.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param currentSum the currentSum parameter — a integer value used in the computation
+ * @param remainingSubsets the remainingSubsets parameter — a integer value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun backtrack(start: Int, currentSum: Int, remainingSubsets: Int): Boolean {
             if (remainingSubsets == 0)
                 return true
@@ -608,14 +810,14 @@ class PartitionToKEqualSumSubsets {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) or O(n) |
-| **Space** | O(n) or O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) |
 
 ---
 
 ## Restore IP Addresses
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -623,9 +825,23 @@ class PartitionToKEqualSumSubsets {
 package backtracking
 
 class RestoreIPAddresses {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param s the input string to process
+ * @return a list/collection of result elements
+ */
     fun restoreIpAddresses(s: String): List<String> {
         val result = mutableListOf<String>()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param i the index position in the collection
+ * @param path the path parameter — a list of strings used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(i: Int, path: MutableList<String>) {
             if (path.size == 4) {
                 if (i == s.length) {
@@ -663,7 +879,7 @@ class RestoreIPAddresses {
 
 ## Subsets
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -671,11 +887,25 @@ class RestoreIPAddresses {
 package array.Combinatorics
 
 class Subsets {
+
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param nums the input array of numbers to process
+ * @return a list/collection of result elements
+ */
     fun subsets(nums: IntArray): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         val currentSubset = mutableListOf<Int>()
 
         // Backtracking helper function
+
+/**
+ * backtrack — executes the core logic of this algorithm on the provided input.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun backtrack(start: Int) {
             result.add(ArrayList(currentSubset))  // Add the current subset to the result
 
@@ -698,14 +928,14 @@ class Subsets {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(branches^depth) |
+| **Space** | O(depth) |
 
 ---
 
 ## Sudoku Solver
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -713,10 +943,23 @@ class Subsets {
 package backtracking
 
 class SudokuSolver {
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param board the 2D matrix/grid to traverse or process
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun solveSudoku(board: Array<CharArray>) {
         solve(board)
     }
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param board the 2D matrix/grid to traverse or process
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     private fun solve(board: Array<CharArray>): Boolean {
         for (row in 0..8) {
             for (col in 0..8) {
@@ -735,6 +978,15 @@ class SudokuSolver {
         return true // board solved
     }
 
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param board the 2D matrix/grid to traverse or process
+ * @param row the row parameter — a integer value used in the computation
+ * @param col the col parameter — a integer value used in the computation
+ * @param ch the ch parameter — a input parameter of type Char used in the computation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     private fun isValid(board: Array<CharArray>, row: Int, col: Int, ch: Char): Boolean {
         for (i in 0..8) {
             if (board[row][i] == ch || board[i][col] == ch) return false
@@ -758,7 +1010,7 @@ class SudokuSolver {
 
 ## Sudoku Solver Set
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -766,6 +1018,13 @@ class SudokuSolver {
 package backtracking
 
 class SudokuSolverSet {
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param board the 2D matrix/grid to traverse or process
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun solveSudoku(board: Array<CharArray>) {
         val seen = mutableSetOf<String>()
 
@@ -779,12 +1038,25 @@ class SudokuSolverSet {
             }
         }
 
+/**
+ * is Safe — executes the core logic of this algorithm on the provided input.
+ *
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @param c the c parameter — a input parameter of type Char used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun isSafe(i: Int, j: Int, c: Char): Boolean {
             return "$c row $i" !in seen &&
                     "$c col $j" !in seen &&
                     "$c block ${i / 3}${j / 3}" !in seen
         }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun dfs(): Boolean {
             for (i in 0..8) {
                 for (j in 0..8) {
@@ -806,18 +1078,37 @@ class SudokuSolverSet {
         dfs()
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @param c the c parameter — a input parameter of type Char used in the computation
+ * @param seen the seen parameter — a set of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun addToSet(i: Int, j: Int, c: Char, seen: MutableSet<String>) {
         seen.add("$c row $i")
         seen.add("$c col $j")
         seen.add("$c block ${i / 3}${j / 3}")
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @param c the c parameter — a input parameter of type Char used in the computation
+ * @param seen the seen parameter — a set of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun removeFromSet(i: Int, j: Int, c: Char, seen: MutableSet<String>) {
         seen.remove("$c row $i")
         seen.remove("$c col $j")
         seen.remove("$c block ${i / 3}${j / 3}")
     }
 }
+
 ```
 
 ### Complexity
@@ -831,7 +1122,7 @@ class SudokuSolverSet {
 
 ## Key Takeaways
 
-1. **Core pattern recognition** — Identify the problem type and apply the right technique.
+1. **Core pattern recognition** — Identify the problem type and apply the right algorithmic technique.
 2. **Practice systematically** — Work through each problem to internalize the patterns.
 3. **Understand why, not just how** — Focus on the reasoning behind each solution.
 

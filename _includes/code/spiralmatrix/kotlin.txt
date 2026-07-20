@@ -1,6 +1,13 @@
 package array
 
 class SpiralMatrix {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @return the sorted/reordered list of elements
+ */
     fun spiralOrder(matrix: Array<IntArray>): List<Int> {
         if (matrix.isEmpty()) return emptyList()
 

@@ -1,10 +1,25 @@
 package hashtable
 
 class WorkBreak_II {
+
+/**
+ * word Break — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @param wordDict the wordDict parameter — a list of strings used in the computation
+ * @return a list/collection of result elements
+ */
     fun wordBreak(s: String, wordDict: List<String?>?): List<String> {
         val set = wordDict?.toSet() ?: emptySet()
         val result = mutableListOf<String>()
 
+/**
+ * permute — executes the core logic of this algorithm on the provided input.
+ *
+ * @param i the index position in the collection
+ * @param current the current parameter — a input parameter of type StringBuilder used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun permute(i: Int, current: StringBuilder) {
             if (i == s.length) {
                 result.add(current.toString().trim())

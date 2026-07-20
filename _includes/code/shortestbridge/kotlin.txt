@@ -1,12 +1,27 @@
 package grid
 
 class ShortestBridge {
+
+/**
+ * shortest Bridge — executes the core logic of this algorithm on the provided input.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @return the computed integer result
+ */
     fun shortestBridge(grid: Array<IntArray>): Int {
         val directions = listOf(0 to 1, 1 to 0, 0 to -1, -1 to 0)
         val queue = ArrayDeque<Pair<Int, Int>>()
         val n = grid.size
 
         // Helper function to perform DFS
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param x the target value to search for or match against
+ * @param y the y parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(x: Int, y: Int) {
             if (x !in 0 until n || y !in 0 until n || grid[x][y] != 1) return
             grid[x][y] = 2 // Mark as visited

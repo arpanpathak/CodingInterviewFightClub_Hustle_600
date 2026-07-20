@@ -3,6 +3,13 @@ package greedy
 import kotlin.math.ceil
 
 class MinimumReplacementToSortTheArray {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed result of type Long
+ */
     fun minimumReplacement(nums: IntArray): Long {
         var answer = 0L
         val n = nums.size

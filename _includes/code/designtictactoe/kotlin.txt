@@ -7,6 +7,15 @@ class TicTacToe(n: Int) {
     private var antiDiagonal = 0
 
     // Method to make a move and check for a winner
+
+/**
+ * move — executes the core logic of this algorithm on the provided input.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @param col the col parameter — a integer value used in the computation
+ * @param player the player parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun move(row: Int, col: Int, player: Int): Int {
         val mark = if (player == 1) 1 else -1
 

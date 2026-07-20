@@ -1,10 +1,24 @@
 package grid
 
 class MaximumNumberOfFishInAGrid {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @return the maximum value found in the input
+ */
     fun findMaxFish(grid: Array<IntArray>): Int {
         val directions = arrayOf(1 to 0, 0 to 1, -1 to 0, 0 to -1)
         var maxFishes = 0
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param row the row parameter — a integer value used in the computation
+ * @param col the col parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
         fun bfs(row: Int, col: Int): Int {
             val queue = ArrayDeque<Pair<Int, Int>>()
             queue.add(Pair(row, col))

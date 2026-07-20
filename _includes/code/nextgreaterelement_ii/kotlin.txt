@@ -1,6 +1,13 @@
 package stack
 
 class NextGreaterElement_II {
+
+/**
+ * next Greater Elements — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return a list/collection of result elements
+ */
     fun nextGreaterElements(nums: IntArray): IntArray {
         val n = nums.size
         val result = IntArray(n) { -1 }  // Initialize all elements as -1

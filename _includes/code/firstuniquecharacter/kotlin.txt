@@ -1,6 +1,13 @@
 package hashtable
 
 class FirstUniqueCharacter {
+
+/**
+ * first Uniq Char — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @return the computed integer result
+ */
     fun firstUniqChar(s: String): Int {
         val count = s.groupingBy { it }.eachCount()
         return s.indexOfFirst { count[it] == 1 }

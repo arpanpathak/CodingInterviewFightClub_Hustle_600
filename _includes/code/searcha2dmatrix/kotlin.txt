@@ -1,6 +1,14 @@
 package binarysearch
 
 class SearchA2dMatrix {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param matrix the 2D matrix/grid to traverse or process
+ * @param target the target value to search for or match against
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
         if (matrix.isEmpty() || matrix[0].isEmpty()) return false
 

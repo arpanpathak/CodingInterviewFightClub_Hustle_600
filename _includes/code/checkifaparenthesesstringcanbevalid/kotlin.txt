@@ -1,6 +1,14 @@
 package string
 
 class CheckifaParenthesesStringCanBeValid {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param s the input string to process
+ * @param locked the locked parameter — a string value used in the computation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun canBeValid(s: String, locked: String): Boolean {
         // Odd number of brackets
         if (s.length % 2 !=0) return false

@@ -1,12 +1,30 @@
 package array.backtracking
 
 class CombinationSum3 {
+
+/**
+ * combination Sum3 — executes the core logic of this algorithm on the provided input.
+ *
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param n the size/dimension parameter for the algorithm
+ * @return a list/collection of result elements
+ */
     fun combinationSum3(k: Int, n: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
         dfs(k,n, 1, result)
         return result
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param remaining the remaining parameter — a integer value used in the computation
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param result the result parameter — a list of integers used in the computation
+ * @param curr the curr parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun dfs(
         k: Int,
         remaining: Int,

@@ -1,6 +1,14 @@
 package binarysearch
 
 class KThMissingPositiveNumber {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param arr the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun findKthPositive(arr: IntArray, k: Int): Int {
         var (left, right) = 0 to arr.size
 

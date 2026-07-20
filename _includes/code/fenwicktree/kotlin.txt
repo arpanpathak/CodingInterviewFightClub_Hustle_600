@@ -3,6 +3,13 @@ package tree.fenwick
 class FenwickTree(size: Int) {
     private val tree = IntArray(size + 1)
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param index the index position in the collection
+ * @param value the target value to search for or match against
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun update(index: Int, value: Int) {
         var i = index + 1
         while (i < tree.size) {
@@ -11,6 +18,12 @@ class FenwickTree(size: Int) {
         }
     }
 
+/**
+ * prefix Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param index the index position in the collection
+ * @return the computed sum/total value
+ */
     fun prefixSum(index: Int): Int {
         var i = index + 1
         var sum = 0
@@ -21,6 +34,13 @@ class FenwickTree(size: Int) {
         return sum
     }
 
+/**
+ * range Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param left the left/starting boundary of the search range (inclusive)
+ * @param right the right/ending boundary of the search range (inclusive)
+ * @return the computed result of type Int = prefix Sum(right) - prefix Sum(left - 1) }
+ */
     fun rangeSum(left: Int, right: Int): Int = prefixSum(right) - prefixSum(left - 1)
 }
 

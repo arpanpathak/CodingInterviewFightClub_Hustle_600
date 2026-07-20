@@ -1,6 +1,13 @@
 package sorting
 
 class RankTeamsByVote {
+
+/**
+ * rank Teams — executes the core logic of this algorithm on the provided input.
+ *
+ * @param votes the votes parameter — a array of elements used in the computation
+ * @return the computed string result
+ */
     fun rankTeams(votes: Array<String>): String {
         val map = mutableMapOf<Char, IntArray>()
         val l = votes[0].length

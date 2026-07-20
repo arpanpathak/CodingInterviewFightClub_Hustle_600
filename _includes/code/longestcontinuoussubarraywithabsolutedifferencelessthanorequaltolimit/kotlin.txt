@@ -1,6 +1,14 @@
 package sliding_window
 
 class LongestContinuousSubarrayWithAbsoluteDifferenceLessThanOrEqualToLimit {
+
+/**
+ * longest Subarray — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param limit the time/resource constraint for the operation
+ * @return the computed integer result
+ */
     fun longestSubarray(nums: IntArray, limit: Int): Int {
         val maxQueue = ArrayDeque<Int>()
         val minQueue = ArrayDeque<Int>()

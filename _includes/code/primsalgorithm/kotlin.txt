@@ -7,11 +7,25 @@ data class Node(val dest: Int, val weight: Int, val src: Int? = null)
 class Graph {
     private val graph = mutableMapOf<Int, MutableList<Node>>()
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param source the source parameter — a integer value used in the computation
+ * @param dest the dest parameter — a integer value used in the computation
+ * @param weight array of weight values used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun addEdge(source: Int, dest: Int, weight: Int) {
         graph.computeIfAbsent(source) { mutableListOf() }.add(Node(dest, weight))
         graph.computeIfAbsent(dest) { mutableListOf() }.add(Node(source, weight)) // For undirected graph
     }
 
+/**
+ * prims Algorithm — executes the core logic of this algorithm on the provided input.
+ *
+ * @param startVertex the startVertex parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun primsAlgorithm(startVertex: Int): Int {
         val minHeap = PriorityQueue<Node>(compareBy { it.weight })
         val inMST = mutableSetOf<Int>()
@@ -48,6 +62,11 @@ class Graph {
     }
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val graph = Graph()
     graph.addEdge(0, 1, 10)

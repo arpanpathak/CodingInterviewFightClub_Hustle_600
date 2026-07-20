@@ -1,9 +1,25 @@
 package array.backtracking
 
 class CombinationSum {
+
+/**
+ * combination Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param candidates the candidates parameter — a array of integers used in the computation
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
         val result = mutableListOf<List<Int>>()
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param current the current parameter — a list of integers used in the computation
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param remaining the remaining parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun findCombinations(current: MutableList<Int>, start: Int, remaining: Int) {
             when {
                 remaining == 0 -> result.add(ArrayList(current))

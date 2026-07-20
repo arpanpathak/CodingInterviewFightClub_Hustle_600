@@ -4,11 +4,23 @@ class MaximumSumBSTInBinaryTree {
     data class Result(val isBST: Boolean, val sum: Int, val min: Int, val max: Int)
     private var maxSum = 0
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the maximum value found in the input
+ */
     fun maxSumBST(root: TreeNode?): Int {
         dfs(root)
         return maxSum
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return the computed result of type Result
+ */
     private fun dfs(node: TreeNode?): Result {
         // Base case: if the node is null, it's trivially a BST with sum = 0
         if (node == null) {

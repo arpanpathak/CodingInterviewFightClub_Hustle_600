@@ -1,6 +1,13 @@
 package string
 
 class LongestCommonPrefix {
+
+/**
+ * longest Common Prefix — executes the core logic of this algorithm on the provided input.
+ *
+ * @param strs the strs parameter — a array of elements used in the computation
+ * @return the computed string result
+ */
     fun longestCommonPrefix(strs: Array<String>): String {
         if (strs.isEmpty()) return ""
 

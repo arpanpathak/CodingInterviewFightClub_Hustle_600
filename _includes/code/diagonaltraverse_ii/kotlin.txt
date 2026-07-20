@@ -5,6 +5,13 @@ import java.util.*
 data class Point(val row: Int, val col: Int)
 
 class DiagonalTraverse_II {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return the sorted/reordered list of elements
+ */
     fun findDiagonalOrder(nums: List<List<Int>>): List<Int> {
         val result = mutableListOf<Int>()
         val queue: Queue<Pair<Int, Int>> = LinkedList()

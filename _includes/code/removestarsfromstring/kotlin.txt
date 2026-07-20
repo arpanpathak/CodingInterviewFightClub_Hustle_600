@@ -1,6 +1,13 @@
 package stack
 
 class RemoveStarsFromString {
+
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param s the input string to process
+ * @return the computed string result
+ */
     fun removeStars(s: String): String {
         val stack = mutableListOf<Char>()
 

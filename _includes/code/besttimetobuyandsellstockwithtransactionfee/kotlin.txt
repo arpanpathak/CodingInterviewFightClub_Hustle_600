@@ -2,6 +2,13 @@ package stock_market.dp
 
 class BestTimeToBuyAndSellStockWithTransactionFee {
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param prices the prices parameter — a array of integers used in the computation
+ * @param fee the fee parameter — a integer value used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxProfit(prices: IntArray, fee: Int): Int {
         if (prices.isEmpty()) return 0
 

@@ -3,6 +3,17 @@ package sorting
 import oracle.net.aso.j
 
 class MergeSort {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param A the first input array for comparison/merging
+ * @param L the L parameter — a array of integers used in the computation
+ * @param leftCount the leftCount parameter — a integer value used in the computation
+ * @param R the R parameter — a array of integers used in the computation
+ * @param rightCount the rightCount parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun merge(A: IntArray, L: IntArray, leftCount: Int, R: IntArray, rightCount: Int) {
         var (i, j, k) = listOf(0, 0, 0)
 
@@ -14,6 +25,13 @@ class MergeSort {
         while (j < rightCount) A[k++] = R[j++]
     }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param arr the input array of numbers to process
+ * @param n the size/dimension parameter for the algorithm
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun merge_sort(arr: IntArray, n: Int) {
         if (n < 2) return
         val mid = n / 2

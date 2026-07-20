@@ -1,6 +1,13 @@
 package binarysearch
 
 class FindMinimumInRotatedSortedArray {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return the minimum value found in the input
+ */
     fun findMin(nums: IntArray): Int {
         var (left, right) = 0 to nums.size - 1
         while (left < right) {

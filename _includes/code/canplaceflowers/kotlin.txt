@@ -1,6 +1,14 @@
 package array.greedy
 
 class CanPlaceFlowers {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param flowerbed the flowerbed parameter — a array of integers used in the computation
+ * @param n the size/dimension parameter for the algorithm
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun canPlaceFlowers(flowerbed: IntArray, n: Int): Boolean {
         var flowers = 0
         for (i in 0 until flowerbed.size) {

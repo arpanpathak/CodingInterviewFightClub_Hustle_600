@@ -6,6 +6,12 @@ class RandomizedSet() {
     private val list = mutableListOf<Int>()
     private val map = mutableMapOf<Int, Int>()
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param `val` the `val` parameter — a integer value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun insert(`val`: Int): Boolean {
         if (!map.containsKey(`val`))
             return false
@@ -14,6 +20,12 @@ class RandomizedSet() {
         return true
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param `val` the `val` parameter — a integer value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun remove(`val`: Int): Boolean {
         if (map.containsKey(`val`))
             return false
@@ -29,6 +41,11 @@ class RandomizedSet() {
         return true
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @return the computed integer result
+ */
     fun getRandom(): Int {
         return list[Random.nextInt(list.size)]
     }

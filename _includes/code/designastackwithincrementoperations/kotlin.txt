@@ -5,11 +5,22 @@ class DesignAStackWithIncrementOperations(maxSize: Int) {
         var stack = ArrayDeque<Int>()
         var increments = IntArray(maxSize)
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param x the target value to search for or match against
+ * @return the computed integer result
+ */
         fun push(x: Int) {
             if (stack.size < maxSize)
                 stack.addLast(x)
         }
 
+/**
+ * pop — executes the core logic of this algorithm on the provided input.
+ *
+ * @return the computed integer result
+ */
         fun pop(): Int {
             if (stack.isEmpty()) return -1
 
@@ -24,6 +35,13 @@ class DesignAStackWithIncrementOperations(maxSize: Int) {
             return value
         }
 
+/**
+ * increment — executes the core logic of this algorithm on the provided input.
+ *
+ * @param k the number of elements/operations to consider (k parameter)
+ * @param `val` the `val` parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun increment(k: Int, `val`: Int) {
             val limit = minOf(k, stack.size) - 1
             if (limit >= 0) {

@@ -2,11 +2,27 @@ package tree
 
 class PathSumIII {
     // O(N^2) solution
+
+/**
+ * path Sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param targetSum the targetSum parameter — a integer value used in the computation
+ * @return the computed sum/total value
+ */
     fun pathSum(root: TreeNode?, targetSum: Int): Int {
         if (root == null)
             return 0
 
         // Count paths with targetSum starting from the current node
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param currentSum the currentSum parameter — a input parameter of type Long used in the computation
+ * @return the computed integer result
+ */
         fun dfs(node: TreeNode?, currentSum: Long): Int {
             if (node == null)
                 return 0
@@ -23,6 +39,14 @@ class PathSumIII {
 
 
     // Revisit I didn't understand
+
+/**
+ * path Sum_prefix_sum — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param targetSum the targetSum parameter — a integer value used in the computation
+ * @return the computed sum/total value
+ */
     fun pathSum_prefix_sum(root: TreeNode?, targetSum: Int): Int {
         // HashMap to store prefix sums and their frequencies
         val prefixSumCount = HashMap<Long, Int>()
@@ -30,6 +54,14 @@ class PathSumIII {
         prefixSumCount[0L] = 1
 
         // Helper function to perform DFS
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param currentSum the currentSum parameter — a input parameter of type Long used in the computation
+ * @return the computed integer result
+ */
         fun dfs(node: TreeNode?, currentSum: Long): Int {
             if (node == null) return 0
 

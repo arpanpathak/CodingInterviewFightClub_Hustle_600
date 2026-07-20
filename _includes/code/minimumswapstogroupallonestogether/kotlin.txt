@@ -1,6 +1,13 @@
 package sliding_window
 
 class MinimumSwapsToGroupAllOnesTogether {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param data the input array of numbers to process
+ * @return the minimum value found in the input
+ */
     fun minSwaps(data: IntArray): Int {
         val totalOnes = data.count { it == 1 }
 

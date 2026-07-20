@@ -1,10 +1,25 @@
 package string
 
 class MaximumLengthofaConcatenatedStringwithUniqueCharacters {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param arr the input array of numbers to process
+ * @return the maximum value found in the input
+ */
     fun maxLength(arr: List<String>): Int {
         var maxLen = 0
         val uniqueStrings = arr.filter { it.toCharArray().toSet().size == it.length }
 
+/**
+ * backtrack — executes the core logic of this algorithm on the provided input.
+ *
+ * @param index the index position in the collection
+ * @param currentMask the currentMask parameter — a integer value used in the computation
+ * @param currentLength the currentLength parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun backtrack(index: Int, currentMask: Int, currentLength: Int) {
             if (index == uniqueStrings.size) {
                 if (currentLength > maxLen) {

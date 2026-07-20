@@ -1,5 +1,11 @@
 package sliding_window
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param t the t parameter — a string value used in the computation
+ * @return the computed integer result
+ */
 fun findNonProgrammerStringSections(t: String): Int {
     val targetFreq = "programmer".groupingBy { it }.eachCount()
     val windowFreq = mutableMapOf<Char, Int>()
@@ -43,6 +49,13 @@ fun findNonProgrammerStringSections(t: String): Int {
     return t.length - sum
 }
 
+/**
+ * is Matched — executes the core logic of this algorithm on the provided input.
+ *
+ * @param target the target value to search for or match against
+ * @param window the window parameter — a key-value mapping used in the computation
+ * @return `true` if the inputs match/are equal, `false` otherwise
+ */
 fun isMatched(target: Map<Char, Int>, window: Map<Char, Int>): Boolean {
     for ((char, count) in target) {
         if (char !in window.keys || window[char]!! < count) {
@@ -52,6 +65,11 @@ fun isMatched(target: Map<Char, Int>, window: Map<Char, Int>): Boolean {
     return true
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     // Test case: expected output 8 (3 + 3 + 2 = 8)
     println(findNonProgrammerStringSections("xyzprogrammexxrabcprogrammermn"))

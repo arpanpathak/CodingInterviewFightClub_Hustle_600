@@ -1,6 +1,13 @@
 package stack
 
 class OneThreeTwoPattern {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun find132pattern(nums: IntArray): Boolean {
         val stack = ArrayDeque<Int>()
         var thirdElement = Int.MIN_VALUE

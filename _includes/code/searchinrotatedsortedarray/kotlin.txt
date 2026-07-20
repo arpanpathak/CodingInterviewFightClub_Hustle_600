@@ -1,6 +1,14 @@
 package binarysearch
 
 class SearchInRotatedSortedArray {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return the computed integer result
+ */
     fun search(nums: IntArray, target: Int): Int {
         var (start, end) = listOf(0, nums.lastIndex)
 

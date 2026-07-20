@@ -1,6 +1,13 @@
 package grid
 
 class PacificAtlanticWaterFlow {
+
+/**
+ * pacific Atlantic — executes the core logic of this algorithm on the provided input.
+ *
+ * @param heights the heights parameter — a array of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun pacificAtlantic(heights: Array<IntArray>): List<List<Int>> {
         TODO()
     }

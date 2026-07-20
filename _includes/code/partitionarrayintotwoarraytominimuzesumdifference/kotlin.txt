@@ -3,6 +3,13 @@ package array.dp
 import kotlin.math.abs
 
 class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the minimum value found in the input
+ */
     fun minimumDifference(nums: IntArray): Int {
         val n = nums.size
         val totalSum = nums.sum()
@@ -34,6 +41,14 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
         return minDiff
     }
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param nums the input array of numbers to process
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param end the right/ending boundary of the search range (inclusive)
+ * @return a list/collection of result elements
+ */
     private fun generateSubsetsBySize(nums: IntArray, start: Int, end: Int): Array<MutableList<Int>?> {
         val size = end - start
         val subsets = Array<MutableList<Int>?>(size + 1) { mutableListOf() }
@@ -53,6 +68,13 @@ class PartitionArrayIntoTwoArrayToMinimuzeSumDifference {
         return subsets
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param sortedList the sortedList parameter — a list of integers used in the computation
+ * @param target the target value to search for or match against
+ * @return a list of matching/found elements
+ */
     private fun findClosestValues(sortedList: List<Int>, target: Int): List<Int> {
         val index = sortedList.binarySearch(target)
         if (index >= 0) return listOf(sortedList[index])  // Exact match

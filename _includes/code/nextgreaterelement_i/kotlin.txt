@@ -1,6 +1,14 @@
 package stack
 
 class NextGreaterElement_I {
+
+/**
+ * next Greater Element — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums1 the first input array for comparison/merging
+ * @param nums2 the second input array for comparison/merging
+ * @return a list/collection of result elements
+ */
     fun nextGreaterElement(nums1: IntArray, nums2: IntArray): IntArray {
         val stack = ArrayDeque<Int>() // Stack to keep track of elements in nums2
         val nextGreaterMap = mutableMapOf<Int, Int>() // Map to store the next greater element for each element in nums2

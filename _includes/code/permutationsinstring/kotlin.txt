@@ -1,6 +1,14 @@
 package string.hashtable
 
 class PermutationsInString {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param s1 the s1 parameter — a string value used in the computation
+ * @param s2 the s2 parameter — a string value used in the computation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun checkInclusion(s1: String, s2: String): Boolean {
         val targetFreq = IntArray(26)
         val windowFreq = IntArray(26)

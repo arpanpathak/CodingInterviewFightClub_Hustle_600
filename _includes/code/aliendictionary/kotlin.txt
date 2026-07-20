@@ -5,6 +5,12 @@ class AlienDictionary {
         NOT_VISITED, VISITING, VISITED
     }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param words list of strings/words to process
+ * @return the computed string result
+ */
     fun alienOrder(words: Array<String>): String {
         val graph = mutableMapOf<Char, MutableSet<Char>>()
         val visited = mutableMapOf<Char, State>()  // 0 = visiting, 1 = visited, -1 = not visited
@@ -36,6 +42,13 @@ class AlienDictionary {
         }
 
         // Step 3: Perform DFS to find topological sort
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun dfs(node: Char): Boolean {
             if (visited[node] == State.VISITING) return false  // Cycle detected
             if (visited[node] == State.VISITED) return true  // Already visited

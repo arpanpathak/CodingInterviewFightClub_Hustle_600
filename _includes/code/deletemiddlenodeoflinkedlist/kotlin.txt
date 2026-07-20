@@ -3,6 +3,13 @@ package linkedlist
 class DeleteMiddleNodeOfLinkedList {
     
     // Two Pass Approach
+
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param head the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun deleteMiddle(head: ListNode?): ListNode? {
         var currentNode = head
         var prevNode: ListNode? = null
@@ -28,6 +35,12 @@ class DeleteMiddleNodeOfLinkedList {
         return head
     }
 
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param head the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun deleteMiddleTwoPointer(head: ListNode?): ListNode? {
         var (slow, fast, prev) = listOf(head, head, null)
 

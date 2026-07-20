@@ -1,6 +1,14 @@
 package linkedlist
 
 class IntersectionOfTwoLinkedList {
+
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param headA the headA parameter — a tree/graph node used in the computation
+ * @param headB the headB parameter — a tree/graph node used in the computation
+ * @return a list/collection of result elements
+ */
     fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
         if (headA == null || headB == null) return null
 

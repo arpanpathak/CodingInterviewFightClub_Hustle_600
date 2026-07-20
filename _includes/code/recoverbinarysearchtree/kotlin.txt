@@ -1,12 +1,26 @@
 package tree.bst
 
 class RecoverBinarySearchTree {
+
+/**
+ * recover Tree — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun recoverTree(root: TreeNode?) {
         var first: TreeNode? = null
         var second: TreeNode? = null
         var prev: TreeNode? = null
 
         // Helper function to perform in-order traversal
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: TreeNode?) {
             if (node == null) return
 

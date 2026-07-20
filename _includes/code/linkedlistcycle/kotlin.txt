@@ -1,6 +1,13 @@
 package linkedlist
 
 class LinkedListCycle {
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param head the root/head node of the data structure
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun hasCycle(head: ListNode?): Boolean {
         if (head == null || head.next == null) return false
 
@@ -19,6 +26,13 @@ class LinkedListCycle {
     }
 
     // Better version
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param head the root/head node of the data structure
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     fun hasCycle2(head: ListNode?): Boolean {
         var slow = head
         var fast = head

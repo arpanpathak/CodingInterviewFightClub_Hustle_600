@@ -1,6 +1,14 @@
 package sliding_window
 
 class MaxConsecutiveOnes_III {
+
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun longestOnes(nums: IntArray, k: Int): Int {
         var left = 0
         var K = k
@@ -19,6 +27,14 @@ class MaxConsecutiveOnes_III {
     }
 
     // Another intuitive solution using while loop
+
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun longestOnes1(nums: IntArray, k: Int): Int {
         var left = 0
         var remainingK = k

@@ -1,6 +1,14 @@
 package graph.topological_sort
 
 class CourseSchedule_II_BFS {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param numCourses the numCourses parameter — a integer value used in the computation
+ * @param prerequisites the prerequisites parameter — a array of integers used in the computation
+ * @return the sorted/reordered list of elements
+ */
     fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
         val graph = Array<MutableList<Int>>(numCourses) { mutableListOf() }
         val inDegree = IntArray(numCourses)
@@ -29,6 +37,11 @@ class CourseSchedule_II_BFS {
     }
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val solver = graph.topological_sort.CourseSchedule_II_BFS()
 

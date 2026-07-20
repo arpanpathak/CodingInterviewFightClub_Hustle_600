@@ -1,10 +1,24 @@
 package binarysearch
 
 class HouseRobber_IV {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the minimum value found in the input
+ */
     fun minCapability(nums: IntArray, k: Int): Int {
         var left = nums.minOrNull() ?: 0
         var right = nums.maxOrNull() ?: 0
 
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param cap the maximum capacity constraint
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
         fun canRob(cap: Int): Boolean {
             var robbed = 0
             var i = 0

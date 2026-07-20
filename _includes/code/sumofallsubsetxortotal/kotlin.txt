@@ -1,6 +1,13 @@
 package bitset
 
 class SumOfAllSubsetXorTotal {
+
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed sum/total value
+ */
     fun subsetXORSum(nums: IntArray): Int {
         var result = 0
         // Capture each bit that is set in any of the elements

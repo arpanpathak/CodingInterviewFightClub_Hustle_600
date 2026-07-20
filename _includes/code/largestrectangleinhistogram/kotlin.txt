@@ -1,6 +1,13 @@
 package stack
 
 class LargestRectangleInHistogram {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param heights the heights parameter — a array of integers used in the computation
+ * @return the computed integer result
+ */
     fun largestRectangleArea(heights: IntArray): Int {
         val stack = mutableListOf<Int>()
         var maxArea = 0

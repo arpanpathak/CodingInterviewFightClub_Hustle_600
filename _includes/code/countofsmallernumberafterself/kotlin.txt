@@ -1,6 +1,13 @@
 package tree.fenwick
 
 class CountOfSmallerNumberAfterSelf {
+
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param nums the input array of numbers to process
+ * @return a list/collection of result elements
+ */
     fun countSmaller(nums: IntArray): List<Int> {
         if (nums.isEmpty()) return emptyList()
 
@@ -30,6 +37,13 @@ class CountOfSmallerNumberAfterSelf {
     class FenwickTree(size: Int) {
         private val tree = IntArray(size + 2)
 
+/**
+ * Updates the data structure with the provided value at the specified location.
+ *
+ * @param index the index position in the collection
+ * @param value the target value to search for or match against
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun update(index: Int, value: Int) {
             var i = index
             while (i < tree.size) {
@@ -38,6 +52,12 @@ class CountOfSmallerNumberAfterSelf {
             }
         }
 
+/**
+ * query — executes the core logic of this algorithm on the provided input.
+ *
+ * @param index the index position in the collection
+ * @return the computed integer result
+ */
         fun query(index: Int): Int {
             var sum = 0
             var i = index

@@ -1,6 +1,13 @@
 package sliding_window
 
 class MaximumErasureValue {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the maximum value found in the input
+ */
     fun maximumUniqueSubarray(nums: IntArray): Int {
         val set = mutableSetOf<Int>()
         var ( windowSum, windowStart, maxSum) = listOf( 0, 0, 0)

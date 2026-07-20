@@ -1,6 +1,14 @@
 package simulation
 
 class CarPooling {
+
+/**
+ * car Pooling — executes the core logic of this algorithm on the provided input.
+ *
+ * @param trips the trips parameter — a array of integers used in the computation
+ * @param capacity the maximum capacity constraint
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun carPooling(trips: Array<IntArray>, capacity: Int): Boolean {
         var capacity = capacity
         val locations = IntArray(1001)

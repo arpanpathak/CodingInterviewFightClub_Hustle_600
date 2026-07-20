@@ -1,6 +1,13 @@
 package string
 
 class MaximumValueOfAStringIsAnArray {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param strs the strs parameter — a array of elements used in the computation
+ * @return the maximum value found in the input
+ */
     fun maximumValue(strs: Array<String>): Int {
         return strs.maxOf {
             val numericValue = it.toIntOrNull()

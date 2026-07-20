@@ -5,9 +5,21 @@ class DiameterOfNArrayTree {
         val children: List<Node?> = listOf()
     }
 
+/**
+ * diameter — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed integer result
+ */
     fun diameter(root: Node?): Int {
         var maxDiameter = 0
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return the computed integer result
+ */
         fun dfs(node: Node?): Int {
             if (node == null) return 0
             var maxDepth = 0

@@ -3,10 +3,23 @@ package hashtable
 class WorlBreak_I_DP {
     enum class State { UNVISITED, FOUND, NOT_FOUND }
 
+/**
+ * word Break — executes the core logic of this algorithm on the provided input.
+ *
+ * @param s the input string to process
+ * @param wordDict the wordDict parameter — a list of strings used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun wordBreak(s: String, wordDict: List<String>): Boolean {
         val set = wordDict.toHashSet()
         val dp = Array(s.length + 1) { State.UNVISITED }
 
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param i the index position in the collection
+ * @return the computed result of type State
+ */
         fun canPartition(i: Int): State {
             val currentState = dp[i]
             when  {

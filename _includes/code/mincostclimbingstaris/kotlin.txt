@@ -1,6 +1,13 @@
 package array.dp
 
 class MinCostClimbingStaris {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param cost the cost parameter — a array of integers used in the computation
+ * @return the minimum value found in the input
+ */
     fun minCostClimbingStairs_iterative(cost: IntArray): Int {
         // Handle base cases
         if (cost.size <= 2) return cost.min()
@@ -58,6 +65,15 @@ class MinCostClimbingStaris {
         // We can start from step 0 or step 1, hence we take the minimum of both
         return minOf(minCost(cost, n - 1, memo), minCost(cost, n - 2, memo))
     }
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param cost the cost parameter — a array of integers used in the computation
+ * @param i the index position in the collection
+ * @param memo the memo parameter — a array of integers used in the computation
+ * @return the minimum value found in the input
+ */
     private fun minCost(cost: IntArray, i: Int, memo: IntArray): Int {
         // Base cases
         if (i < 0) return 0

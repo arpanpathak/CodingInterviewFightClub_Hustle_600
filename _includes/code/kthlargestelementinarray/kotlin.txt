@@ -3,6 +3,15 @@ package quicksort
 import kotlin.random.Random
 
 class KThLargestElementInArray {
+
+/**
+ * partition — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param left the left/starting boundary of the search range (inclusive)
+ * @param right the right/ending boundary of the search range (inclusive)
+ * @return the computed integer result
+ */
     fun partition(nums: IntArray, left: Int, right: Int): Int {
         // Randomly select pivot index and swap with the last element
         val pivotIndex = Random.nextInt(left, right + 1)
@@ -21,6 +30,13 @@ class KThLargestElementInArray {
         return i
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun findKthLargest(nums: IntArray, k: Int): Int {
         var left = 0
         var right = nums.size - 1
@@ -37,6 +53,12 @@ class KThLargestElementInArray {
         return -1 // If k is out of range of the array, handle accordingly
     }
 
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param arr the input array of numbers to process
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun uniqueOccurrences(arr: IntArray): Boolean {
         val map = mutableMapOf<Int, Int>()
 

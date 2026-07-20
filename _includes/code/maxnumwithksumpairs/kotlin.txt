@@ -1,6 +1,14 @@
 package array.hashtable
 
 class MaxNUmWithKSumPairs {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the maximum value found in the input
+ */
     fun maxOperations(nums: IntArray, k: Int): Int {
         val map = mutableMapOf<Int, Int>()
         var count = 0

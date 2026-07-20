@@ -1,6 +1,14 @@
 package sliding_window
 
 class MinimumSizeSubarraySum {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param target the target value to search for or match against
+ * @param nums the input array of numbers to process
+ * @return the minimum value found in the input
+ */
     fun minSubArrayLen(target: Int, nums: IntArray): Int {
         var (windowStart, windowSum) = 0 to 0
         var minLength = Int.MAX_VALUE

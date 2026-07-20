@@ -3,6 +3,13 @@ package array.sorting
 import kotlin.math.abs
 
 class SquaresOfASortedArray {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param nums the input array of numbers to process
+ * @return the sorted/reordered list of elements
+ */
     fun sortedSquares(nums: IntArray): IntArray {
         val result = IntArray(nums.size)
 

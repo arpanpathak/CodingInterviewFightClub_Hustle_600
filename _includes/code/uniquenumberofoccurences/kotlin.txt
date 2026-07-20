@@ -1,6 +1,13 @@
 package array.hashtable
 
 class UniqueNumberOfOccurences {
+
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param arr the input array of numbers to process
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun uniqueOccurrences(arr: IntArray): Boolean {
         val map = mutableMapOf<Int, Int>()
 

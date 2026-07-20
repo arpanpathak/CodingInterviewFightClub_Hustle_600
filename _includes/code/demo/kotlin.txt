@@ -1,6 +1,12 @@
 package microsoft
 
 
+/**
+ * solution — executes the core logic of this algorithm on the provided input.
+ *
+ * @param A the first input array for comparison/merging
+ * @return the computed integer result
+ */
 fun solution(A: IntArray): Int {
     // Implement your solution here
     var max = A.max()

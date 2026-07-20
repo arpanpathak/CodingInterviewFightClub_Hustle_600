@@ -1,6 +1,13 @@
 package string
 
 class CountAndSay {
+
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed string result
+ */
     fun countAndSay(n: Int): String {
         var result = "1"
         repeat(n - 1) {

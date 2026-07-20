@@ -1,6 +1,13 @@
 package string.dynamic_programming
 
 class LongestStringChain {
+
+/**
+ * longest Str Chain — executes the core logic of this algorithm on the provided input.
+ *
+ * @param words list of strings/words to process
+ * @return the computed integer result
+ */
     fun longestStrChain(words: Array<String>): Int {
         words.sortBy { it.length }  // Sort words by length
         val dp = mutableMapOf<String, Int>()

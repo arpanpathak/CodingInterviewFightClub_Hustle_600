@@ -1,6 +1,13 @@
 package binarysearch
 
 abstract class VersionControl {
+
+/**
+ * is Bad Version — executes the core logic of this algorithm on the provided input.
+ *
+ * @param mid the midpoint index used for partitioning
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun isBadVersion(mid: Int): Boolean {
         return false // Return dummy value
     }
@@ -8,6 +15,13 @@ abstract class VersionControl {
     abstract fun firstBadVersion(n: Int) : Int
 }
 class FirstBadVersion: VersionControl() {
+
+/**
+ * first Bad Version — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed integer result
+ */
     override fun firstBadVersion(n: Int) : Int {
         var start = 1
         var end = n

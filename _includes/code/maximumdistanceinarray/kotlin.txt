@@ -3,6 +3,13 @@ package array.greedy
 import kotlin.math.abs
 
 class MaximumDistanceInArray {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param arrays the arrays parameter — a list of integers used in the computation
+ * @return the maximum value found in the input
+ */
     fun maxDistance(arrays: List<List<Int>>): Int {
         var (max, min, maxDistance) = Triple( arrays[0].first(), arrays[0].last(), 0)
 
@@ -20,6 +27,13 @@ class MaximumDistanceInArray {
 
     companion object {
         @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun main(args: Array<String>) {
             val test = MaximumDistanceInArray()
 

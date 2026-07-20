@@ -4,6 +4,13 @@ import java.util.*
 
 // Patience sorting algorithm
 class LongestIncreasingSubsequence {
+
+/**
+ * length Of LIS — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed integer result
+ */
     fun lengthOfLIS(nums: IntArray): Int {
         val tree = TreeSet<Int>()
         nums.forEach { num ->

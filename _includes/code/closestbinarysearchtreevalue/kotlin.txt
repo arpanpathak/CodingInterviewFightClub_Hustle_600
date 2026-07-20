@@ -3,6 +3,14 @@ package tree.bst
 import kotlin.math.abs
 
 class ClosestBinarySearchTreeValue {
+
+/**
+ * closest Value — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @param target the target value to search for or match against
+ * @return the computed integer result
+ */
     fun closestValue(root: TreeNode?, target: Double): Int {
         var closest = root?.`val` ?: 0
         var current = root

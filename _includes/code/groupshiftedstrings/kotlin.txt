@@ -1,6 +1,13 @@
 package string.hashtable
 
 class GroupShiftedStrings {
+
+/**
+ * group Strings — executes the core logic of this algorithm on the provided input.
+ *
+ * @param strings the strings parameter — a array of elements used in the computation
+ * @return a list/collection of result elements
+ */
     fun groupStrings(strings: Array<String>): List<List<String>> {
         val map = mutableMapOf<String, MutableList<String>>()
 
@@ -12,6 +19,12 @@ class GroupShiftedStrings {
         return map.values.toList()
     }
 
+/**
+ * Retrieves and returns the requested element or value from the data structure.
+ *
+ * @param str the input string to process
+ * @return the computed string result
+ */
     private fun getKey(str: String): String {
         return buildString {
             for (i in 1 until str.length) {

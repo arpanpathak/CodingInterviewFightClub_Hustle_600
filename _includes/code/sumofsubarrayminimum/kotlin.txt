@@ -1,6 +1,13 @@
 package stack
 
 class SumOfSubArrayMinimum {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param arr the input array of numbers to process
+ * @return the minimum value found in the input
+ */
     fun sumSubarrayMins(arr: IntArray): Int {
         val n = arr.size
         val stack = ArrayDeque<Int>()

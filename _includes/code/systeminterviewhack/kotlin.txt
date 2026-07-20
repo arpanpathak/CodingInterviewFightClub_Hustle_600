@@ -12,6 +12,12 @@ import java.net.URL
 
 
 // Concurrency /Async I/O
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() = runBlocking<Unit> {
     launch { // launch a new coroutine in the background
 //        delay(1000L)
@@ -44,6 +50,15 @@ class ApiManager {
 
     private val coroutineScope = CoroutineScope(Dispatchers.IO)
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @param url the url parameter — a string value used in the computation
+ * @param method the method parameter — a string value used in the computation
+ * @param body the body parameter — a input parameter of type String? used in the computation
+ * @param onResult the onResult parameter — a input parameter of type (String? used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun makeRequest(
         url: String,
         method: String = "GET",
@@ -58,6 +73,14 @@ class ApiManager {
         }
     }
 
+/**
+ * perform Request — executes the core logic of this algorithm on the provided input.
+ *
+ * @param urlString the urlString parameter — a string value used in the computation
+ * @param method the method parameter — a string value used in the computation
+ * @param body the body parameter — a input parameter of type String? used in the computation
+ * @return the computed string result
+ */
     private fun performRequest(urlString: String, method: String, body: String?): String? {
         val url = URL(urlString)
         var urlConnection: HttpURLConnection? = null
@@ -89,6 +112,11 @@ class ApiManager {
     }
 }
 
+/**
+ * test Apis — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 suspend fun testApis() {
 //    val apiManager = ApiManager()
 //    val apiUrl = "https://real-api.com/api/users"  // Change to your actual API URL

@@ -5,6 +5,12 @@ import java.util.*
 class BinaryTreeVerticalOrderTraversal_WithoutSorting {
     data class VerticalIndex(val node: TreeNode, val verticalIndex: Int)
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @return the sorted/reordered list of elements
+ */
     fun verticalOrder(root: TreeNode?): List<List<Int>> {
         if (root == null) return emptyList()
 

@@ -1,6 +1,15 @@
 package tree
 
 class MinimumTimeToCollectAllApplesInATree {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param edges the graph edges represented as connections between nodes
+ * @param hasApple the hasApple parameter — a list of elements used in the computation
+ * @return the minimum value found in the input
+ */
     fun minTime(n: Int, edges: Array<IntArray>, hasApple: List<Boolean>): Int {
         // Build the graph as a list of lists (adjacency list representation)
         val graph = Array(n) { mutableListOf<Int>() }
@@ -10,6 +19,14 @@ class MinimumTimeToCollectAllApplesInATree {
         }
 
         // DFS function to calculate the total time
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param parent the parent parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
         fun dfs(node: Int, parent: Int): Int {
             var totalTime = 0
             // Use forEach to iterate over each neighbor

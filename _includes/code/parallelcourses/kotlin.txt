@@ -1,6 +1,14 @@
 package graph.cycle
 
 class ParallelCourses {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param relations the relations parameter — a array of integers used in the computation
+ * @return the minimum value found in the input
+ */
     fun minimumSemesters(n: Int, relations: Array<IntArray>): Int {
         val inDegree = IntArray(n + 1) // One-based index
         val graph = Array(n + 1) { mutableListOf<Int>() }

@@ -1,6 +1,13 @@
 package array.twopointer
 
 class RemoveDuplicateElementsFromSortedArray_II {
+
+/**
+ * Removes specified elements from the collection and returns the result.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed integer result
+ */
     fun removeDuplicates(nums: IntArray): Int {
         var index = 0
         var count = 1

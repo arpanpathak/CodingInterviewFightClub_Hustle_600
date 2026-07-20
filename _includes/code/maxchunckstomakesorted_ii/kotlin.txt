@@ -2,6 +2,13 @@ package greedy
 
 class MaxChuncksToMakeSorted_II {
     class Solution {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param arr the input array of numbers to process
+ * @return the maximum value found in the input
+ */
         fun maxChunksToSorted(arr: IntArray): Int {
             val n = arr.size
 

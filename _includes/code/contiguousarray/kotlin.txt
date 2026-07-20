@@ -1,6 +1,13 @@
 package array.prefixsum
 
 class ContiguousArray {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return the maximum value found in the input
+ */
     fun findMaxLength(nums: IntArray): Int {
         val map = mutableMapOf<Int, Int>()
         var sum = 0

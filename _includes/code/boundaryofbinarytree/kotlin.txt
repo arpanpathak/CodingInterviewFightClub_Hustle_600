@@ -1,6 +1,13 @@
 package tree
 
 class BoundaryOfBinaryTree {
+
+/**
+ * boundary Of Binary Tree — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
     fun boundaryOfBinaryTree(root: TreeNode?): List<Int> {
         val result = mutableListOf<Int>()
         if (root == null) return result
@@ -22,6 +29,13 @@ class BoundaryOfBinaryTree {
         return result
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param node the root/head node of the data structure
+ * @param result the result parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun addLeftBoundary(node: TreeNode?, result: MutableList<Int>) {
         var current = node
         while (current != null) {
@@ -34,6 +48,14 @@ class BoundaryOfBinaryTree {
         }
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param node the root/head node of the data structure
+ * @param result the result parameter — a list of integers used in the computation
+ * @param isRoot the isRoot parameter — a boolean flag used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun addLeaves(node: TreeNode?, result: MutableList<Int>, isRoot: Boolean) {
         if (node == null) return
         // If it's a leaf node and it's not the root, add it to the result
@@ -46,6 +68,13 @@ class BoundaryOfBinaryTree {
         addLeaves(node.right, result, isRoot = false)
     }
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param node the root/head node of the data structure
+ * @param result the result parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun addRightBoundary(node: TreeNode?, result: MutableList<Int>) {
         var current = node
         while (current != null) {

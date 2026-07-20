@@ -10,6 +10,17 @@ class CheapestFlightsWithinKStops {
     private var graph = mutableMapOf<Int, MutableList<Node>>()
 
     // Solving using Bellman Ford
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param flights the flights parameter — a array of integers used in the computation
+ * @param src the src parameter — a integer value used in the computation
+ * @param dst the dst parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         flights.forEach { flight ->
@@ -41,6 +52,16 @@ class CheapestFlightsWithinKStops {
         return if (cheapest == Int.MAX_VALUE) -1 else cheapest
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param flights the flights parameter — a array of integers used in the computation
+ * @param src the src parameter — a integer value used in the computation
+ * @param dst the dst parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun findCheapestPriceBfs(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         flights.forEach { flight ->
@@ -57,6 +78,13 @@ class CheapestFlightsWithinKStops {
     }
 
 
+/**
+ * dijkstra — executes the core logic of this algorithm on the provided input.
+ *
+ * @param graph the graph edges represented as connections between nodes
+ * @param src the src parameter — a integer value used in the computation
+ * @return a mapping/dictionary of computed key-value pairs
+ */
     fun dijkstra(graph: MutableMap<Int, MutableList<Node>>, src: Int): Map<Int, Int> {
         val dist = mutableMapOf<Int, Int>().apply {
             graph.keys.forEach { this[it] = Int.MAX_VALUE }
@@ -85,6 +113,15 @@ class CheapestFlightsWithinKStops {
         return dist
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param src the src parameter — a integer value used in the computation
+ * @param dest the dest parameter — a integer value used in the computation
+ * @param n the size/dimension parameter for the algorithm
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun bfs(src: Int, dest: Int, n: Int, k: Int ): IntArray {
         // To track the minimum cost to reach each destination
         val minCost = IntArray(n) { Int.MAX_VALUE }
@@ -116,6 +153,14 @@ class CheapestFlightsWithinKStops {
     // Solve using Dijkstra
     data class State(val node: Int, val cost: Int, val stops: Int)
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param graph the graph edges represented as connections between nodes
+ * @param src the src parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a mapping/dictionary of computed key-value pairs
+ */
     fun dijkstraWithMaxKStops(graph: MutableMap<Int, MutableList<Node>>, src: Int, k: Int): Map<Int, Int> {
         val pq = PriorityQueue<State>(compareBy { it.cost })
         pq.offer(State(src, 0, 0))
@@ -144,6 +189,13 @@ class CheapestFlightsWithinKStops {
 
     companion object {
         @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun main(args: Array<String>) {
 
         }

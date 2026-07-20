@@ -1,6 +1,13 @@
 package array
 
 class MergeIntervals {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param intervals the intervals parameter — a array of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun merge(intervals: Array<IntArray>): Array<IntArray> {
         // Sort the internals by start
         intervals.sortWith(compareBy { it[0] })

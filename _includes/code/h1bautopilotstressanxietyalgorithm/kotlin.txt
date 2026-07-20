@@ -10,6 +10,11 @@ const val MANDATORY_DAILY_SLEEPING_HOURS = 8L
 var windowStart = Instant.now()
 var windowEnd = windowStart.plus(Duration.ofDays(DAYS_TO_SURVIVE)) // 60 days window
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun autoPilot() {
     while (true) {
         // Generate a random event using when
@@ -24,6 +29,12 @@ fun autoPilot() {
     }
 }
 
+/**
+ * daily Trigger Of Anxiety — executes the core logic of this algorithm on the provided input.
+ *
+ * @param uncertainEvent the uncertainEvent parameter — a input parameter of type EventType used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun dailyTriggerOfAnxiety(uncertainEvent: EventType) {
     val now = Instant.now()
     println("Uncertain event happened : $uncertainEvent")
@@ -40,6 +51,11 @@ fun dailyTriggerOfAnxiety(uncertainEvent: EventType) {
     }
 }
 
+/**
+ * Builds and returns a new data structure from the given input parameters.
+ *
+ * @return the computed result of type Event Type
+ */
 fun generateRandomEvent(): EventType {
     return when (Random.nextBoolean()) {
         true -> EventType.PROMOTED_TO_CUSTOMER
@@ -48,6 +64,12 @@ fun generateRandomEvent(): EventType {
 }
 
 // Start the autopilot
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     autoPilot()
 }

@@ -1,6 +1,13 @@
 package math
 
 class MinimumMovesToEqualArrayElements {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param nums the input array of numbers to process
+ * @return the minimum value found in the input
+ */
     fun minMoves(nums: IntArray): Int {
         val min = nums.minOrNull() ?: 0
         return nums.sumOf { it - min }

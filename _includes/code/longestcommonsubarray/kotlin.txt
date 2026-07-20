@@ -3,10 +3,27 @@ package array.dp
 class LongestCommonSubarray {
     val memo = mutableMapOf<String, Int>()
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums1 the first input array for comparison/merging
+ * @param nums2 the second input array for comparison/merging
+ * @return the computed integer result
+ */
     fun findLength(nums1: IntArray, nums2: IntArray): Int {
         return dp(nums1, nums2, nums1.lastIndex, nums2.lastIndex, Int.MIN_VALUE)
     }
 
+/**
+ * dp — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums1 the first input array for comparison/merging
+ * @param nums2 the second input array for comparison/merging
+ * @param i the index position in the collection
+ * @param j the index position in the collection
+ * @param max the max parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     fun dp(nums1: IntArray, nums2: IntArray, i: Int, j: Int, max: Int): Int {
         if (i == 0 || j == 0)
             return max
@@ -22,6 +39,13 @@ class LongestCommonSubarray {
         return maxSoFar
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums1 the first input array for comparison/merging
+ * @param nums2 the second input array for comparison/merging
+ * @return the computed integer result
+ */
     fun findLength_tabular(nums1: IntArray, nums2: IntArray): Int {
         val m = nums1.size
         val n = nums2.size

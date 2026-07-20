@@ -4,10 +4,26 @@ package array.dp
 class TargetSum {
     private val dp = mutableMapOf<String, Int>()
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return the computed sum/total value
+ */
     fun findTargetSumWays(nums: IntArray, target: Int): Int {
         return ways(nums, target, 0, 0)
     }
 
+/**
+ * ways — executes the core logic of this algorithm on the provided input.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @param index the index position in the collection
+ * @param sum the target amount/sum to achieve
+ * @return the computed integer result
+ */
     private fun ways(nums: IntArray, target: Int, index: Int, sum: Int): Int {
         val state = "$index $sum"
         return when {
@@ -39,6 +55,14 @@ class TargetSum {
      * @param target The target sum to achieve.
      * @return The number of ways to achieve the target sum using plus or minus signs.
      */
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @param target the target value to search for or match against
+ * @return the computed sum/total value
+ */
     fun findTargetSumWays_subsetSum(nums: IntArray, target: Int): Int {
         val sumAll = nums.sum()
         // If the target sum is not reachable, return 0

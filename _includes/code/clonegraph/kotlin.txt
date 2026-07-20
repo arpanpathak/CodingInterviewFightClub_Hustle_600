@@ -5,6 +5,12 @@ data class Node(val `val`: Int, val neighbors: MutableList<Node?> = mutableListO
 class CloneGraph {
     val map = mutableMapOf<Node, Node>()
 
+/**
+ * clone Graph — executes the core logic of this algorithm on the provided input.
+ *
+ * @param node the root/head node of the data structure
+ * @return the resulting tree/graph node
+ */
     fun cloneGraph(node: Node?): Node? {
 
         if (node == null) return null

@@ -1,10 +1,24 @@
 package tree
 
 class CountGoodNodeInBInaryTree {
+
+/**
+ * good Nodes — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed integer result
+ */
     fun goodNodes(root: TreeNode?): Int {
         return dfs(root, Int.MIN_VALUE)
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param maxSoFar the maxSoFar parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
     private fun dfs(node: TreeNode?, maxSoFar: Int): Int {
         node ?: return 0
         

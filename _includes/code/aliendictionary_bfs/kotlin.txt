@@ -1,6 +1,13 @@
 package graph.topological_sort
 
 class AlienDictionary_BFS {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param words list of strings/words to process
+ * @return the computed string result
+ */
     fun alienOrder(words: Array<String>): String {
         val graph = mutableMapOf<Char, HashSet<Char>>()
         val inDegree = mutableMapOf<Char, Int>()

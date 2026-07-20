@@ -5,11 +5,23 @@ import kotlin.math.abs
 class DetectSquares() {
     private val pointCount = mutableMapOf<Pair<Int, Int>, Int>()
 
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param point the point parameter — a array of integers used in the computation
+ * @return the computed integer result
+ */
     fun add(point: IntArray) {
         val key = point[0] to point[1]
         pointCount[key] = pointCount.getOrDefault(key, 0) + 1
     }
 
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param point the point parameter — a array of integers used in the computation
+ * @return the total count/number of matching elements
+ */
     fun count(point: IntArray): Int {
         val (x, y) = point
 

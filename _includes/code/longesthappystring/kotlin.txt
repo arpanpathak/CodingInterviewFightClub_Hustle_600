@@ -3,6 +3,15 @@ package heap
 import java.util.*
 
 class LongestHappyString {
+
+/**
+ * longest Diverse String — executes the core logic of this algorithm on the provided input.
+ *
+ * @param a the first input array for comparison/merging
+ * @param b the second input array for comparison/merging
+ * @param c the c parameter — a integer value used in the computation
+ * @return the computed string result
+ */
     fun longestDiverseString(a: Int, b: Int, c: Int): String {
         // Use a priority queue to always get the character with highest remaining count
         val pq = PriorityQueue<Pair<Char, Int>> { p1, p2 -> p2.second - p1.second }

@@ -1,6 +1,13 @@
 package array.hashtable
 
 class SetMismatch {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param nums the input array of numbers to process
+ * @return a list of matching/found elements
+ */
     fun findErrorNums(nums: IntArray): IntArray {
         val seen = mutableSetOf<Int>()
         var duplicate = -1

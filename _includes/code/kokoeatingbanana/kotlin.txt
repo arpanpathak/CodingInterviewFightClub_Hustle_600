@@ -30,6 +30,14 @@ class KokoEatingBanana {
      * Time  Complexity: O(n log m) where n = piles.size, m = max(piles)
      * Space Complexity: O(1)
      */
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param piles array of pile sizes representing grouped quantities
+ * @param h the time/resource constraint for the operation
+ * @return the minimum value found in the input
+ */
     fun minEatingSpeed(piles: IntArray, h: Int): Int {
         // ── Step 1: Define binary search bounds ──
         // Left: slowest possible speed (1 banana/hour)
@@ -84,6 +92,15 @@ class KokoEatingBanana {
      * @param k     Eating speed in bananas per hour
      * @return      True if total hours needed <= h
      */
+
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param piles array of pile sizes representing grouped quantities
+ * @param h the time/resource constraint for the operation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     private fun canEatAllBananas(piles: IntArray, h: Int, k: Int): Boolean {
         var totalHours = 0
         for (pile in piles) {

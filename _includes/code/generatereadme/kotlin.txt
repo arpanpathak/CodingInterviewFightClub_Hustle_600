@@ -1,6 +1,11 @@
 
 import java.io.File
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     // Define the directory of the GitHub project
     val projectDir = File("/Users/arpanpathak/Projects/data_science/CrackGoogle/src/main/kotlin")
@@ -20,6 +25,14 @@ fun main() {
     content.append("## Files and Directories\n\n")
 
     // Recursively list all files and directories
+
+/**
+ * list Files — executes the core logic of this algorithm on the provided input.
+ *
+ * @param dir the dir parameter — a input parameter of type File used in the computation
+ * @param indent the indent parameter — a string value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun listFiles(dir: File, indent: String = "") {
         val files = dir.listFiles()?.sorted() ?: return
         for (file in files) {

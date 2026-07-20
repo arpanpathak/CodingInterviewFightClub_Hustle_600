@@ -1,6 +1,14 @@
 package tree
 
 class LeafSimilar {
+
+/**
+ * leaf Similar — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root1 the root1 parameter — a tree/graph node used in the computation
+ * @param root2 the root2 parameter — a tree/graph node used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
     fun leafSimilar(root1: TreeNode?, root2: TreeNode?): Boolean {
         val leaves1 = mutableListOf<Int>()
         val leaves2 = mutableListOf<Int>()
@@ -11,6 +19,13 @@ class LeafSimilar {
         return leaves1 == leaves2
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param leafValues the leafValues parameter — a list of integers used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     fun dfs(node: TreeNode?, leafValues: MutableList<Int>) {
         if (node != null) {
             if (node.left == null && node.right == null) {

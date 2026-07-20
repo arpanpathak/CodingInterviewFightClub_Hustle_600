@@ -5,6 +5,14 @@ import java.util.*
 class TheMaze_III {
     data class State(val dist: Int, val x: Int, val y: Int)
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param maze the maze parameter — a array of integers used in the computation
+ * @param ball the ball parameter — a array of integers used in the computation
+ * @param hole the hole parameter — a array of integers used in the computation
+ * @return the computed string result
+ */
     fun findShortestWay(maze: Array<IntArray>, ball: IntArray, hole: IntArray): String {
         val m = maze.size
         val n = maze[0].size

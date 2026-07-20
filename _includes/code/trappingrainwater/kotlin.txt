@@ -37,6 +37,13 @@ class TrappingRainWater {
     }
 
     // Two pointer method.
+
+/**
+ * trap Constant Space — executes the core logic of this algorithm on the provided input.
+ *
+ * @param height the height parameter — a array of integers used in the computation
+ * @return the computed integer result
+ */
     fun trapConstantSpace(height: IntArray): Int {
         var (left, right, leftMax, rightMax, waterTrapped) = listOf(0, height.lastIndex, 0, 0, 0)
 

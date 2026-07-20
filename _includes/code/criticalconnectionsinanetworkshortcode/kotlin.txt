@@ -1,6 +1,14 @@
 package graph.articulation_point
 
 class CriticalConnectionsInANetworkShortCode {
+
+/**
+ * critical Connections — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param connections the connections parameter — a list of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun criticalConnections(n: Int, connections: List<List<Int>>): List<List<Int>> {
         val graph = Array(n) { mutableListOf<Int>() }.apply {
             connections.forEach { (u, v) -> this[u].add(v); this[v].add(u) }
@@ -10,6 +18,13 @@ class CriticalConnectionsInANetworkShortCode {
         val low = IntArray(n)
         var time = 0
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param parent the parent parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: Int, parent: Int) {
             labels[node] = time.also { low[node] = it; time++ }
             graph[node].forEach { neighbour ->

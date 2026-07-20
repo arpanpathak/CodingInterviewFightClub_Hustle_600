@@ -1,6 +1,13 @@
 package hashtable
 
 class CountNumberOfBadPairs {
+
+/**
+ * Counts the number of elements matching the specified criteria.
+ *
+ * @param nums the input array of numbers to process
+ * @return the computed result of type Long
+ */
     fun countBadPairs(nums: IntArray): Long {
         val freq = mutableMapOf<Int, Long>()
         var goodPairs = 0L

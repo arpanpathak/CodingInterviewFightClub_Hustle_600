@@ -1,6 +1,13 @@
 package tree
 
 class BInaryTreeInOrderTraversalIterative {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param root the root/head node of the data structure
+ * @return the sorted/reordered list of elements
+ */
     fun inorderTraversal(root: TreeNode?): List<Int> {
         val stack = ArrayDeque<TreeNode>()
         val result = mutableListOf<Int>()

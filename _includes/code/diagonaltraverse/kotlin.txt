@@ -6,6 +6,12 @@ class DiagonalTraverse {
         UP, DOWN
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param mat the mat parameter — a array of integers used in the computation
+ * @return the sorted/reordered list of elements
+ */
     fun findDiagonalOrder(mat: Array<IntArray>): IntArray {
         val m = mat.size        // Number of rows in the matrix
         val n = mat[0].size     // Number of columns in the matrix

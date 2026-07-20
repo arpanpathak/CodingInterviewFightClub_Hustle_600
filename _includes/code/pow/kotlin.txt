@@ -1,7 +1,23 @@
 package math
 
 class pow {
+
+/**
+ * my Pow — executes the core logic of this algorithm on the provided input.
+ *
+ * @param x the target value to search for or match against
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed result of type Double
+ */
     fun myPow(x: Double, n: Int): Double {
+
+/**
+ * pow — executes the core logic of this algorithm on the provided input.
+ *
+ * @param x the target value to search for or match against
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed result of type Double
+ */
         fun pow(x: Double, n: Long): Double {
             if (n == 0L) return 1.0
 
@@ -14,6 +30,13 @@ class pow {
         return if (n >=0) pow(x, n.toLong()) else 1 / pow(x, n.toLong())
     }
 
+/**
+ * my Pow Iterative — executes the core logic of this algorithm on the provided input.
+ *
+ * @param x the target value to search for or match against
+ * @param n the size/dimension parameter for the algorithm
+ * @return the computed result of type Double
+ */
     fun myPowIterative(x: Double, n: Int): Double {
         var base = x
         var exponent = n.toLong()

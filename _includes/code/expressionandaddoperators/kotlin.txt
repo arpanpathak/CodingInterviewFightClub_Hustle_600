@@ -1,9 +1,27 @@
 package backtracking
 
 class ExpressionAndAddOperators {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a string value used in the computation
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun addOperators(num: String, target: Int): List<String> {
         val result = mutableListOf<String>()
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param index the index position in the collection
+ * @param prevOperand the prevOperand parameter — a input parameter of type Long used in the computation
+ * @param currentOperand the currentOperand parameter — a input parameter of type Long used in the computation
+ * @param value the target value to search for or match against
+ * @param expression the expression parameter — a string value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(index: Int, prevOperand: Long, currentOperand: Long, value: Long, expression: String) {
             if (index == num.length) {
                 if (value == target.toLong() && currentOperand == 0L) {
@@ -43,9 +61,26 @@ class ExpressionAndAddOperators {
     }
 
     // ANother leetcode solution https://leetcode.com/problems/expression-add-operators/discuss/951147/Kotlin-C%2B%2B%3A-O(n4n)-time-and-O(n)-time-with-backtracking
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param num the num parameter — a string value used in the computation
+ * @param target the target value to search for or match against
+ * @return a list/collection of result elements
+ */
     fun addOperators2(num: String, target: Int): List<String> {
         val res = ArrayList<String>()
 
+/**
+ * partition — executes the core logic of this algorithm on the provided input.
+ *
+ * @param start the left/starting boundary of the search range (inclusive)
+ * @param path the path parameter — a string value used in the computation
+ * @param sum the target amount/sum to achieve
+ * @param prev the prev parameter — a input parameter of type Long used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun partition(start: Int, path: String, sum: Long, prev: Long) {
             if (start == num.length) {
                 if (sum == target.toLong()) {
@@ -82,6 +117,12 @@ class ExpressionAndAddOperators {
 }
 
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main(args: Array<String>) {
     val test = ExpressionAndAddOperators()
 

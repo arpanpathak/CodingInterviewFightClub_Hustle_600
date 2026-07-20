@@ -43,7 +43,7 @@ next_chapter:
 
 ## Alien Dictionary
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -55,6 +55,12 @@ class AlienDictionary {
         NOT_VISITED, VISITING, VISITED
     }
 
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param words list of strings/words to process
+ * @return the computed string result
+ */
     fun alienOrder(words: Array<String>): String {
         val graph = mutableMapOf<Char, MutableSet<Char>>()
         val visited = mutableMapOf<Char, State>()  // 0 = visiting, 1 = visited, -1 = not visited
@@ -86,6 +92,13 @@ class AlienDictionary {
         }
 
         // Step 3: Perform DFS to find topological sort
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun dfs(node: Char): Boolean {
             if (visited[node] == State.VISITING) return false  // Cycle detected
             if (visited[node] == State.VISITED) return true  // Already visited
@@ -121,7 +134,7 @@ class AlienDictionary {
 
 ## Alien Dictionary_BFS
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -129,6 +142,13 @@ class AlienDictionary {
 package graph.topological_sort
 
 class AlienDictionary_BFS {
+
+/**
+ * Sorts or reorders the input elements according to the specified criteria.
+ *
+ * @param words list of strings/words to process
+ * @return the computed string result
+ */
     fun alienOrder(words: Array<String>): String {
         val graph = mutableMapOf<Char, HashSet<Char>>()
         val inDegree = mutableMapOf<Char, Int>()
@@ -184,7 +204,7 @@ class AlienDictionary_BFS {
 
 ## Apply Substitutions
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -192,6 +212,14 @@ class AlienDictionary_BFS {
 package string
 
 class ApplySubstitutions {
+
+/**
+ * apply Substitutions — executes the core logic of this algorithm on the provided input.
+ *
+ * @param replacements the replacements parameter — a list of strings used in the computation
+ * @param text the input string to process
+ * @return the computed string result
+ */
     fun applySubstitutions(replacements: List<List<String>>, text: String): String {
         val map = mutableMapOf<String, String>()
 
@@ -199,6 +227,12 @@ class ApplySubstitutions {
             map[key] = value
         }
 
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param s the input string to process
+ * @return the computed string result
+ */
         fun resolve(s: String): String {
             val sb = StringBuilder()
             var i = 0
@@ -221,6 +255,7 @@ class ApplySubstitutions {
         return resolve(text)
     }
 }
+
 ```
 
 ### Complexity
@@ -234,7 +269,7 @@ class ApplySubstitutions {
 
 ## Bus Routes
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -248,6 +283,14 @@ import java.util.*
 class BusRoutes {
     data class Node(val stop: Int, val busCount: Int)
 
+/**
+ * Converts/transforms the input from one representation to another.
+ *
+ * @param routes the routes parameter — a array of integers used in the computation
+ * @param source the source parameter — a integer value used in the computation
+ * @param target the target value to search for or match against
+ * @return the total count/number of matching elements
+ */
     fun numBusesToDestination(routes: Array<IntArray>, source: Int, target: Int): Int {
         if (source == target) return 0
 
@@ -306,7 +349,7 @@ class BusRoutes {
 
 ## Cheapest Flights Within K Stops
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -323,6 +366,17 @@ class CheapestFlightsWithinKStops {
     private var graph = mutableMapOf<Int, MutableList<Node>>()
 
     // Solving using Bellman Ford
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param flights the flights parameter — a array of integers used in the computation
+ * @param src the src parameter — a integer value used in the computation
+ * @param dst the dst parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         flights.forEach { flight ->
@@ -354,6 +408,16 @@ class CheapestFlightsWithinKStops {
         return if (cheapest == Int.MAX_VALUE) -1 else cheapest
     }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param flights the flights parameter — a array of integers used in the computation
+ * @param src the src parameter — a integer value used in the computation
+ * @param dst the dst parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun findCheapestPriceBfs(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         flights.forEach { flight ->
@@ -370,6 +434,13 @@ class CheapestFlightsWithinKStops {
     }
 
 
+/**
+ * dijkstra — executes the core logic of this algorithm on the provided input.
+ *
+ * @param graph the graph edges represented as connections between nodes
+ * @param src the src parameter — a integer value used in the computation
+ * @return a mapping/dictionary of computed key-value pairs
+ */
     fun dijkstra(graph: MutableMap<Int, MutableList<Node>>, src: Int): Map<Int, Int> {
         val dist = mutableMapOf<Int, Int>().apply {
             graph.keys.forEach { this[it] = Int.MAX_VALUE }
@@ -398,6 +469,15 @@ class CheapestFlightsWithinKStops {
         return dist
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param src the src parameter — a integer value used in the computation
+ * @param dest the dest parameter — a integer value used in the computation
+ * @param n the size/dimension parameter for the algorithm
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a list/collection of result elements
+ */
     fun bfs(src: Int, dest: Int, n: Int, k: Int ): IntArray {
         // To track the minimum cost to reach each destination
         val minCost = IntArray(n) { Int.MAX_VALUE }
@@ -429,6 +509,14 @@ class CheapestFlightsWithinKStops {
     // Solve using Dijkstra
     data class State(val node: Int, val cost: Int, val stops: Int)
 
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param graph the graph edges represented as connections between nodes
+ * @param src the src parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return a mapping/dictionary of computed key-value pairs
+ */
     fun dijkstraWithMaxKStops(graph: MutableMap<Int, MutableList<Node>>, src: Int, k: Int): Map<Int, Int> {
         val pq = PriorityQueue<State>(compareBy { it.cost })
         pq.offer(State(src, 0, 0))
@@ -457,6 +545,13 @@ class CheapestFlightsWithinKStops {
 
     companion object {
         @JvmStatic
+
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @param args the args parameter — a array of elements used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun main(args: Array<String>) {
 
         }
@@ -475,7 +570,7 @@ class CheapestFlightsWithinKStops {
 
 ## Cheapest Flights With K Stops
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -491,6 +586,16 @@ class CheapestFlightsWithKStops {
     // Define the State class for priority queue elements
     data class State(val node: Int, val cost: Int, val stops: Int)
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param flights the flights parameter — a array of integers used in the computation
+ * @param src the src parameter — a integer value used in the computation
+ * @param dst the dst parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         // Build the graph from the input flights
         val graph = mutableMapOf<Int, MutableList<Node>>()
@@ -529,6 +634,8 @@ class CheapestFlightsWithKStops {
         return -1
     }
 }
+
+
 ```
 
 ### Complexity
@@ -542,7 +649,7 @@ class CheapestFlightsWithKStops {
 
 ## Cheapest Flight With K Stops
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -554,6 +661,16 @@ import java.util.*
 class CheapestFlightWithKStops {
     data class Flight(val node: Int, val cost: Int, val stops: Int)
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param flights the flights parameter — a array of integers used in the computation
+ * @param src the src parameter — a integer value used in the computation
+ * @param dst the dst parameter — a integer value used in the computation
+ * @param k the number of elements/operations to consider (k parameter)
+ * @return the computed integer result
+ */
     fun findCheapestPrice(n: Int, flights: Array<IntArray>, src: Int, dst: Int, k: Int): Int {
         val graph = flights.groupBy({ it[0] }) { Flight(it[1], it[2], 0) }
         val pq = PriorityQueue<Flight>(compareBy { it.cost })
@@ -576,6 +693,7 @@ class CheapestFlightWithKStops {
         return -1
     }
 }
+
 ```
 
 ### Complexity
@@ -589,7 +707,7 @@ class CheapestFlightWithKStops {
 
 ## Node
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -601,6 +719,12 @@ data class Node(val `val`: Int, val neighbors: MutableList<Node?> = mutableListO
 class CloneGraph {
     val map = mutableMapOf<Node, Node>()
 
+/**
+ * clone Graph — executes the core logic of this algorithm on the provided input.
+ *
+ * @param node the root/head node of the data structure
+ * @return the resulting tree/graph node
+ */
     fun cloneGraph(node: Node?): Node? {
 
         if (node == null) return null
@@ -627,7 +751,7 @@ class CloneGraph {
 
 ## Course Schedule
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -639,8 +763,21 @@ class CourseSchedule {
     private lateinit var status: Array<NodeStatus>
     private enum class NodeStatus { UNVISITED, EXPLORING, DONE }
 
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param numCourses the numCourses parameter — a integer value used in the computation
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     private fun hasCycle(numCourses: Int): Boolean {
         // Define dfs function inside hasCycle to limit its scope
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return the resulting tree/graph node
+ */
         fun dfs(node: Int): Boolean = when (status[node]) {
             NodeStatus.EXPLORING -> true
             NodeStatus.DONE -> false
@@ -662,6 +799,13 @@ class CourseSchedule {
         return false
     }
 
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param numCourses the numCourses parameter — a integer value used in the computation
+ * @param prerequisites the prerequisites parameter — a array of integers used in the computation
+ * @return `true` if the condition/constraint is satisfied, `false` otherwise
+ */
     fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
         // Reset graph for each invocation to handle multiple calls
         graph = mutableMapOf()
@@ -687,7 +831,7 @@ class CourseSchedule {
 
 ## Course Schedule_II
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -702,6 +846,13 @@ class CourseSchedule_II {
 
     private enum class NodeStatus { UNVISITED, EXPLORING, DONE }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param numCourses the numCourses parameter — a integer value used in the computation
+ * @param prerequisites the prerequisites parameter — a array of integers used in the computation
+ * @return the sorted/reordered list of elements
+ */
     fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
         // Initialize graph, status, and result array
         status = Array(numCourses) { NodeStatus.UNVISITED }
@@ -721,8 +872,21 @@ class CourseSchedule_II {
         return result
     }
 
+/**
+ * Checks whether the specified condition holds true for the given input.
+ *
+ * @param numCourses the numCourses parameter — a integer value used in the computation
+ * @return `true` if the target element/value exists, `false` otherwise
+ */
     private fun hasCycle(numCourses: Int): Boolean {
         // Nested DFS function for checking cycles and building the result
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun dfs(node: Int): Boolean {
             when (status[node]) {
                 // If an already visited node re-appears then it means we looped back to an exploring node
@@ -766,7 +930,7 @@ class CourseSchedule_II {
 
 ## Course Schedule_II_BFS
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -774,6 +938,14 @@ class CourseSchedule_II {
 package graph.topological_sort
 
 class CourseSchedule_II_BFS {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param numCourses the numCourses parameter — a integer value used in the computation
+ * @param prerequisites the prerequisites parameter — a array of integers used in the computation
+ * @return the sorted/reordered list of elements
+ */
     fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
         val graph = Array<MutableList<Int>>(numCourses) { mutableListOf() }
         val inDegree = IntArray(numCourses)
@@ -802,6 +974,11 @@ class CourseSchedule_II_BFS {
     }
 }
 
+/**
+ * main — executes the core logic of this algorithm on the provided input.
+ *
+ * @return Unit (nothing) — this function operates via side effects
+ */
 fun main() {
     val solver = graph.topological_sort.CourseSchedule_II_BFS()
 
@@ -827,6 +1004,7 @@ fun main() {
 
     println("All tests passed.")
 }
+
 ```
 
 ### Complexity
@@ -840,7 +1018,7 @@ fun main() {
 
 ## Critical Connections In A Network
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -855,6 +1033,13 @@ class CriticalConnectionsInANetwork {
     private lateinit var low: IntArray
     private lateinit var visited: BooleanArray
 
+/**
+ * critical Connections — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param connections the connections parameter — a list of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun criticalConnections(n: Int, connections: List<List<Int>>): List<List<Int>> {
         G = Array(n) { mutableListOf() }
         result = mutableListOf()
@@ -879,6 +1064,13 @@ class CriticalConnectionsInANetwork {
         return result
     }
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param parent the parent parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
     private fun dfs(node: Int, parent: Int) {
         visited[node] = true
         label[node] = depth
@@ -906,14 +1098,14 @@ class CriticalConnectionsInANetwork {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
 ---
 
 ## Critical Connections In A Network Short Code
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -921,6 +1113,14 @@ class CriticalConnectionsInANetwork {
 package graph.articulation_point
 
 class CriticalConnectionsInANetworkShortCode {
+
+/**
+ * critical Connections — executes the core logic of this algorithm on the provided input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param connections the connections parameter — a list of integers used in the computation
+ * @return a list/collection of result elements
+ */
     fun criticalConnections(n: Int, connections: List<List<Int>>): List<List<Int>> {
         val graph = Array(n) { mutableListOf<Int>() }.apply {
             connections.forEach { (u, v) -> this[u].add(v); this[v].add(u) }
@@ -930,6 +1130,13 @@ class CriticalConnectionsInANetworkShortCode {
         val low = IntArray(n)
         var time = 0
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @param parent the parent parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(node: Int, parent: Int) {
             labels[node] = time.also { low[node] = it; time++ }
             graph[node].forEach { neighbour ->
@@ -953,14 +1160,14 @@ class CriticalConnectionsInANetworkShortCode {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
 ---
 
 ## Find Redundent Connections
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -968,14 +1175,34 @@ class CriticalConnectionsInANetworkShortCode {
 package graph.mst
 
 class FindRedundentConnections {
+
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param edges the graph edges represented as connections between nodes
+ * @return a list of matching/found elements
+ */
     fun findRedundantConnection(edges: Array<IntArray>): IntArray {
         val parent = IntArray(1001) { it }
 
+/**
+ * Searches for and returns the target element/position using an efficient algorithm.
+ *
+ * @param x the target value to search for or match against
+ * @return the computed integer result
+ */
         fun find(x: Int): Int {
             if (parent[x] != x) parent[x] = find(parent[x])
             return parent[x]
         }
 
+/**
+ * union — executes the core logic of this algorithm on the provided input.
+ *
+ * @param x the target value to search for or match against
+ * @param y the y parameter — a integer value used in the computation
+ * @return `true` if the operation succeeds / condition holds, `false` otherwise
+ */
         fun union(x: Int, y: Int): Boolean {
             val rootX = find(x)
             val rootY = find(y)
@@ -997,14 +1224,14 @@ class FindRedundentConnections {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(log n) |
+| **Time** | O(n) |
 | **Space** | O(1) |
 
 ---
 
 ## Tree Node
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1019,7 +1246,21 @@ class TreeNode(var `val`: Int) {
 }
 
 class HouseRobber3 {
+
+/**
+ * rob — executes the core logic of this algorithm on the provided input.
+ *
+ * @param root the root/head node of the data structure
+ * @return the computed integer result
+ */
     fun rob(root: TreeNode?): Int {
+
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param node the root/head node of the data structure
+ * @return a list/collection of result elements
+ */
         fun dfs (node: TreeNode?): IntArray {
             if (node == null)
                 return intArrayOf(0 , 0)
@@ -1048,14 +1289,14 @@ class HouseRobber3 {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n²) or O(n) |
-| **Space** | O(n) or O(1) |
+| **Time** | O(n²) or O(n × m) |
+| **Space** | O(n) or O(n²) |
 
 ---
 
 ## Parallel Courses
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1063,6 +1304,14 @@ class HouseRobber3 {
 package graph.cycle
 
 class ParallelCourses {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param relations the relations parameter — a array of integers used in the computation
+ * @return the minimum value found in the input
+ */
     fun minimumSemesters(n: Int, relations: Array<IntArray>): Int {
         val inDegree = IntArray(n + 1) // One-based index
         val graph = Array(n + 1) { mutableListOf<Int>() }
@@ -1094,6 +1343,7 @@ class ParallelCourses {
         return if (completed == n) semesters else -1
     }
 }
+
 ```
 
 ### Complexity
@@ -1107,7 +1357,7 @@ class ParallelCourses {
 
 ## Reorder Routes To Make All Paths Lead To City Zero
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1115,6 +1365,14 @@ class ParallelCourses {
 package graph
 
 class ReorderRoutesToMakeAllPathsLeadToCityZero {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param n the size/dimension parameter for the algorithm
+ * @param connections the connections parameter — a array of integers used in the computation
+ * @return the minimum value found in the input
+ */
     fun minReorder(n: Int, connections: Array<IntArray>): Int {
         val graph = Array(n) { mutableListOf<IntArray>() }
 
@@ -1127,6 +1385,12 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
         var changes = 0
         val visited = BooleanArray(n)
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param city the city parameter — a integer value used in the computation
+ * @return Unit (nothing) — this function operates via side effects
+ */
         fun dfs(city: Int) {
             visited[city] = true
             for (edge in graph[city]) {
@@ -1156,7 +1420,7 @@ class ReorderRoutesToMakeAllPathsLeadToCityZero {
 
 ## Word Ladder
 
-**Problem:** Solve this classic algorithmic challenge efficiently.
+**Problem:** Solve this algorithmic challenge efficiently using the appropriate data structures and algorithms.
 
 ### Code
 
@@ -1166,6 +1430,15 @@ package graph
 import java.util.*
 
 class WordLadder {
+
+/**
+ * Inserts the specified element into the data structure.
+ *
+ * @param beginWord the beginWord parameter — a string value used in the computation
+ * @param endWord the endWord parameter — a string value used in the computation
+ * @param wordList the wordList parameter — a list of strings used in the computation
+ * @return the computed integer result
+ */
     fun ladderLength(beginWord: String, endWord: String, wordList: List<String>): Int {
         if (endWord !in wordList) return 0 // if end word is not word bank then it's not possible
 
@@ -1204,14 +1477,14 @@ class WordLadder {
 
 | Metric | Value |
 |--------|-------|
-| **Time** | O(n) |
-| **Space** | O(1) |
+| **Time** | O(V + E) |
+| **Space** | O(V) |
 
 ---
 
 ## Key Takeaways
 
-1. **Core pattern recognition** — Identify the problem type and apply the right technique.
+1. **Core pattern recognition** — Identify the problem type and apply the right algorithmic technique.
 2. **Practice systematically** — Work through each problem to internalize the patterns.
 3. **Understand why, not just how** — Focus on the reasoning behind each solution.
 

@@ -1,6 +1,13 @@
 package grid
 
 class MakingALargeIsland {
+
+/**
+ * Computes and returns the optimal/aggregate value from the given input.
+ *
+ * @param grid the 2D matrix/grid to traverse or process
+ * @return the computed integer result
+ */
     fun largestIsland(grid: Array<IntArray>): Int {
         val n = grid.size
         val directions = listOf(0 to 1, 0 to -1, 1 to 0, -1 to 0) // Dx, Dy
@@ -8,6 +15,14 @@ class MakingALargeIsland {
         var maxArea = 0
         var islandId = 2
 
+/**
+ * Traverses the graph/tree structure using the specified strategy.
+ *
+ * @param r the r parameter — a integer value used in the computation
+ * @param c the c parameter — a integer value used in the computation
+ * @param id the id parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
         fun dfs(r: Int, c: Int, id: Int): Int {
             if (r !in grid.indices || c !in grid[0].indices || grid[r][c] != 1) return 0
             grid[r][c] = id
@@ -30,6 +45,14 @@ class MakingALargeIsland {
         }
 
         // Second pass: check conversion of 0s to 1s
+
+/**
+ * Performs the core computation/algorithm and returns the result.
+ *
+ * @param r the r parameter — a integer value used in the computation
+ * @param c the c parameter — a integer value used in the computation
+ * @return the computed integer result
+ */
         fun calculatePotentialArea(r: Int, c: Int): Int {
             val uniqueIslands = mutableSetOf<Int>()
             var potentialSize = 1
